@@ -2,6 +2,7 @@
 @import './prism.css';
 @import './markdown-it.css';
 @import './type.css';
+@import './helpers.css';
 
 :root {
   --lightgray: #e0e0e0;
@@ -59,7 +60,6 @@ body {
 #SiteFooter {
   background: var(--dark);
   color: var(--text-alt);
-  margin-top: 4rem;
 }
 
 .SiteFooter__content {
@@ -115,4 +115,27 @@ body {
 
 .Article__header h1 {
   margin-top: 1rem;
+}
+
+.Bio {
+  background: var(--gray300);
+}
+
+.Bio__content {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 8rem 1fr;
+}
+
+.Bio__content img {
+  border-radius: 16rem;
+  margin: 0 auto;
+  max-width: 8rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 44rem) {
+  .Bio__content {
+    grid-template-columns: initial;
+  }
 }

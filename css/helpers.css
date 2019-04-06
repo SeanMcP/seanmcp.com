@@ -1,0 +1,7 @@
+.--clear-child-margins > *:first-child {
+  margin-top: 0;
+}
+
+.--clear-child-margins > *:last-child {
+  margin-bottom: 0 !important;
+}
