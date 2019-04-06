@@ -1,0 +1,19 @@
+<ol reversed class="ArticlesList">
+    {% for article in articleslist | reverse %}
+        <li class="ArticleList__item{% if article.url == url %} ArticleList__item-active{% endif %}">
+            <a href="{{ article.url | url }}" class="ArticleList__link">
+                {% if article.data.title %}{{ article.data.title }}
+                {% else %}
+                    <code>{{ article.url }}</code>
+                {% endif %}
+            </a>
+            <time class="ArticleList__date" datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }}</time>
+            {% for tag in article.data.tags %}
+                {%- if tag != "articles" -%}
+                    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+                    <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+                {%- endif -%}
+            {% endfor %}
+        </li>
+    {% endfor %}
+</ol>

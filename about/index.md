@@ -1,10 +1,10 @@
 ---
-layout: layouts/post.njk
+layout: article
 title: About Me
 tags:
   - nav
 navtitle: About
-templateClass: tmpl-post
+templateClass: Page
 ---
 
 I am a person that writes stuff.

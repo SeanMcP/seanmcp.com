@@ -6,16 +6,16 @@ pagination:
   filter:
     - all
     - nav
-    - post
-    - posts
+    - article
+    - articles
 layout: layouts/home.njk
 renderData:
   title: Tagged “{{ tag }}”
 permalink: /tags/{{ tag }}/
 ---
-<h1>Tagged “{{ tag }}”</h1>
+<h2>Tagged “{{ tag }}”</h2>
 
-{% set postslist = collections[ tag ] %}
-{% include "postslist.njk" %}
+{% set articleslist = collections[tag] %}
+{% include "articles-list.njk" %}
 
 <p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
