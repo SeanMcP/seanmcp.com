@@ -11,12 +11,14 @@ templateClass: ArticleTemplate
         </header>
         {{ content | safe }}
         <footer class="Article__footer">
-            {% for tag in tags %}
+            {# {% set tags = article.data.tags %} #}
+            {% include "components/TagList.njk" %}
+            {# {% for tag in tags %}
                 {%- if tag != "articles" -%}
                     {% set tagUrl %}/tags/{{ tag }}/{% endset %}
                 Category: <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
                 {%- endif -%}
-            {% endfor %}
+            {% endfor %} #}
         </footer>
     </article>
 </div>

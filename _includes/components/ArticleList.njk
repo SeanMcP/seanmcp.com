@@ -15,20 +15,8 @@
                 <div class="ArticleList__date">
                     <time datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }}</time>
                 </div>
-                <div class="ArticleList__tags">
-                    {% for tag in article.data.tags %}
-                        {%- if tag != "articles" -%}
-                            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-                            <a href="{{ tagUrl | url }}" class="Tag Tag--{{ tag }}">
-                                {% set iconClassName %}{{ tag | tagIcon }}{% endset %}
-                                {% if iconClassName %}
-                                    <i class="{{ iconClassName }}"></i>
-                                {% endif %}
-                                <span>{{ tag | capitalize }}</span>
-                            </a>
-                        {%- endif -%}
-                    {% endfor %}
-                </div>
+                {% set tags = article.data.tags %}
+                {% include "components/TagList.njk" %}
             </div>
         </li>
     {% endfor %}
