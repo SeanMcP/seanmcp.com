@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: layouts/home.njk
 title: About Me
 tags:
   - nav
