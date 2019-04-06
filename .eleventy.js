@@ -9,6 +9,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true)
 
   eleventyConfig.addLayoutAlias('article', 'layouts/article.njk')
+  eleventyConfig.addLayoutAlias('page', 'layouts/page.njk')
 
   eleventyConfig.addFilter('readableDate', dateObj => {
     return DateTime.fromJSDate(dateObj, {

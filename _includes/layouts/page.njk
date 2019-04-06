@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+templateClass: Page
+---
+<div class="ContentContainer">
+    <div class="Page__content --clear-child-margins">
+        {%- if title -%}
+            <h1>{{ title }}</h1>
+        {%- endif -%}
+        {{ content | safe }}
+    </div>
+</div>
