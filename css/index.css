@@ -140,50 +140,104 @@ body {
   }
 }
 
+.ArticleList {
+  list-style: none;
+  padding: 0;
+}
+
+.ArticleList__item {
+  display: grid;
+  grid-gap: 0.5rem;
+}
+
+.ArticleList__item {
+  margin-bottom: 2rem;
+}
+
+.ArticleList__meta {
+  align-items: center;
+  display: flex;
+}
+
+@media screen and (max-width: 44rem) {
+  .ArticleList__meta {
+    display: grid;
+    grid-gap: 0.5rem;
+  }
+
+  .ArticleList__date::after {
+    display: none;
+  }
+}
+
+.ArticleList__link {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ArticleList__link:hover,
+.ArticleList__link:focus {
+  text-decoration: underline;
+}
+
+.ArticleList__description {
+  border-bottom: 1px solid var(--gray300);
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.ArticleList__date::after {
+  content: ' in';
+  margin-right: 0.25rem;
+}
+
 .Tag {
   --border-color: rgba(0, 0, 0, 0.125);
   border: 1px solid var(--border-color);
   border-bottom-width: 2px;
   border-radius: 0.25rem;
+  color: var(--gray900);
   display: inline-block;
-  font-size: 0.875rem;
   padding: 0.125rem 0.25rem;
   text-decoration: none;
 }
 
-.Tag:hover span,
-.Tag:focus span {
-  text-decoration: underline;
+.Tag:hover,
+.Tag:focus {
+  background: var(--amber900);
+  color: white;
 }
 
 .Tag + .Tag {
   margin-left: 0.25rem;
 }
 
-.Tag.Tag--a11y,
-.Tag.Tag--accessibility {
+.Tag.Tag--a11y:hover,
+.Tag.Tag--accessibility:hover {
   background: #155196;
   color: #fff;
 }
 
-.Tag.Tag--js,
-.Tag.Tag--javascript {
+.Tag.Tag--js:hover,
+.Tag.Tag--javascript:hover {
   background: #f0db4f;
   color: #323330;
 }
 
-.Tag.Tag--python {
+.Tag.Tag--python:hover {
   background: #356a97;
   color: #f7d74e;
 }
 
-.Tag.Tag--react {
+.Tag.Tag--react:hover {
   background: #282c34;
   color: #61dafb;
 }
 
-.Tag.Tag--ux,
-.Tag.Tag--user-experience {
+.Tag.Tag--ux:hover,
+.Tag.Tag--user-experience:hover {
   background: #d700bf;
   color: #ffffff;
 }

@@ -14,7 +14,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('readableDate', dateObj => {
     return DateTime.fromJSDate(dateObj, {
       zone: 'utc'
-    }).toFormat('LLL d, yyyy')
+    }).toFormat('DD')
   })
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
@@ -63,6 +63,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('capitalize', string => {
     switch (string) {
+      case 'js':
+        return 'JS'
       case 'javascript':
         return 'JavaScript'
       case 'ux':
