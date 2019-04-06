@@ -50,12 +50,17 @@ module.exports = function(eleventyConfig) {
     permalinkSymbol: '#'
   }
 
-  eleventyConfig.setLibrary(
-    'md',
-    markdownIt(mdiOptions)
-      .use(require('markdown-it-anchor'), mdiAnchorOptions)
-      .use(require('markdown-it-footnote'))
-  )
+  const mdi = markdownIt(mdiOptions)
+    .use(require('markdown-it-anchor'), mdiAnchorOptions)
+    .use(require('markdown-it-footnote'))
+
+  mdi.renderer.rules.footnote_block_open = () =>
+    `<section class="Footnotes">
+        <h5>Footnotes</h5>
+        <ol>
+    `
+
+  eleventyConfig.setLibrary('md', mdi)
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {

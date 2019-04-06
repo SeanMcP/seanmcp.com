@@ -17,13 +17,16 @@ a[href].DirectLink:focus:visited,
   color: #aaa;
 }
 
-hr.footnotes-sep {
-  background: var(--gray300);
-  border: 0;
-  height: 1px;
-  margin: 2rem 0;
+.Footnotes {
+  border-top: 1px solid var(--gray300);
+  margin: 4rem 0 0;
+  padding: 1rem 0;
 }
 
-ol.footnotes-list {
+.Footnotes h5 {
+  margin-top: 0;
+}
+
+.Footnotes ol {
   padding-left: 0;
 }
