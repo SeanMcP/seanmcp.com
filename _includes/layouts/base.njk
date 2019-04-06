@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ renderData.title or title or metadata.title }}</title>
+        <title>{{ renderData.title or title or metadata.title }} - SeanMcP.com</title>
         <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
         <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
         <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
@@ -13,7 +13,7 @@
         {% set navItems = collections.nav %}
         {% include "components/Header.njk" %}
 
-        <main id="SiteMain" {% if templateClass %} class="{{ templateClass }}"{% endif %}>
+        <main id="main" role="main" class="SiteMain {% if templateClass %}{{ templateClass }}{% endif %}">
             {{ content | safe }}
         </main>
 

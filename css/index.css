@@ -47,7 +47,7 @@ body {
   min-height: 100vh;
 }
 
-#SiteMain {
+.SiteMain {
   flex: 1;
 }
 
@@ -57,7 +57,7 @@ body {
   padding: 2rem;
 }
 
-#SiteFooter {
+.SiteFooter {
   background: var(--dark);
   color: var(--text-alt);
 }
