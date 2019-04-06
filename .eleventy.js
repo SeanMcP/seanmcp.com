@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight)
   eleventyConfig.setDataDeepMerge(true)
 
+  eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
   eleventyConfig.addLayoutAlias('article', 'layouts/article.njk')
   eleventyConfig.addLayoutAlias('page', 'layouts/page.njk')
 
