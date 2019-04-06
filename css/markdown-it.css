@@ -1,18 +1,29 @@
 /* Direct Links / Markdown Headers */
-.direct-link {
+.DirectLink {
   text-decoration: none;
   font-style: normal;
   margin-left: 0.1em;
 }
 
-a[href].direct-link,
-a[href].direct-link:visited {
+a[href].DirectLink,
+a[href].DirectLink:visited {
   color: transparent;
 }
 
-a[href].direct-link:focus,
-a[href].direct-link:focus:visited,
-:hover > a[href].direct-link,
-:hover > a[href].direct-link:visited {
+a[href].DirectLink:focus,
+a[href].DirectLink:focus:visited,
+:hover > a[href].DirectLink,
+:hover > a[href].DirectLink:visited {
   color: #aaa;
+}
+
+hr.footnotes-sep {
+  background: var(--gray300);
+  border: 0;
+  height: 1px;
+  margin: 2rem 0;
+}
+
+ol.footnotes-list {
+  padding-left: 0;
 }

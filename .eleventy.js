@@ -38,22 +38,23 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('css')
 
   /* Markdown Plugins */
-  let markdownIt = require('markdown-it')
-  let markdownItAnchor = require('markdown-it-anchor')
-  let options = {
+  const markdownIt = require('markdown-it')
+  const mdiOptions = {
     html: true,
     breaks: true,
     linkify: true
   }
-  let opts = {
+  const mdiAnchorOptions = {
     permalink: true,
-    permalinkClass: 'direct-link',
+    permalinkClass: 'DirectLink',
     permalinkSymbol: '#'
   }
 
   eleventyConfig.setLibrary(
     'md',
-    markdownIt(options).use(markdownItAnchor, opts)
+    markdownIt(mdiOptions)
+      .use(require('markdown-it-anchor'), mdiAnchorOptions)
+      .use(require('markdown-it-footnote'))
   )
 
   eleventyConfig.setBrowserSyncConfig({
