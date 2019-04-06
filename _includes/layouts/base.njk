@@ -10,18 +10,8 @@
         <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     </head>
     <body>
-        <header id="SiteHeader">
-            <div class="ContentContainer">
-                <p class="SiteHeader__home">
-                    <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-                </p>
-                <nav id="SiteNav">
-                    {%- for nav in collections.nav | reverse -%}
-                        <a class="SiteNav__item{% if nav.url == page.url %} SiteNav__item--active{% endif %}" href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>
-                    {%- endfor -%}
-                </nav>
-            </div>
-        </header>
+        {% set navItems = collections.nav %}
+        {% include "components/Header.njk" %}
 
         <main id="SiteMain" {% if templateClass %} class="{{ templateClass }}"{% endif %}>
             {{ content | safe }}
