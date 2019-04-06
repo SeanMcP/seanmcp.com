@@ -4,15 +4,19 @@ templateClass: ArticleTemplate
 ---
 
 <div class="ContentContainer">
-    <h2>{{ title }}</h2>
-    <date>{{ date | readableDate }}</date>
-    {{ content | safe }}
-    <footer class="Article__footer">
-        {% for tag in tags %}
-            {%- if tag != "articles" -%}
-                {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+    <article class="Article">
+        <header class="Article__header">
+            <date>{{ date | readableDate }}</date>
+            <h1>{{ title }}</h1>
+        </header>
+        {{ content | safe }}
+        <footer class="Article__footer">
+            {% for tag in tags %}
+                {%- if tag != "articles" -%}
+                    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
                 Category: <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
-            {%- endif -%}
-        {% endfor %}
-    </footer>
+                {%- endif -%}
+            {% endfor %}
+        </footer>
+    </article>
 </div>

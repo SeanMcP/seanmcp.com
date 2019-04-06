@@ -13,7 +13,7 @@ renderData:
   title: Tagged “{{ tag }}”
 permalink: /tags/{{ tag }}/
 ---
-<h2>Tagged “{{ tag }}”</h2>
+<h1>Articles tagged “{{ tag }}”</h1>
 
 {% set articleslist = collections[tag] %}
 {% include "components/articles-list.njk" %}

@@ -12,9 +12,9 @@
     <body>
         <header id="SiteHeader">
             <div class="ContentContainer">
-                <h1 class="SiteHeader__home">
+                <p class="SiteHeader__home">
                     <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-                </h1>
+                </p>
                 <nav id="SiteNav">
                     {%- for nav in collections.nav | reverse -%}
                         <a class="SiteNav__item{% if nav.url == page.url %} SiteNav__item--active{% endif %}" href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>
