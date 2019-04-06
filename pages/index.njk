@@ -5,7 +5,7 @@ permalink: /
 
 <h2>Recent Articles</h2>
 
-{% set articleslist = collections.articles | head(-4) %}
-{% include "components/articles-list.njk" %}
+{% set articles = collections.articles | head(-4) %}
+{% include "components/ArticlesList.njk" %}
 
 <p>More articles can be found in <a href="{{ '/articles/' | url }}">the archive</a>.</p>

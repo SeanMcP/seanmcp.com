@@ -1,5 +1,5 @@
 <ol reversed class="ArticlesList">
-    {% for article in articleslist | reverse %}
+    {% for article in articles | reverse %}
         <li class="ArticleList__item{% if article.url == url %} ArticleList__item-active{% endif %}">
             <a href="{{ article.url | url }}" class="ArticleList__link">
                 {% if article.data.title %}{{ article.data.title }}

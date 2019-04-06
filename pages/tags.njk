@@ -15,7 +15,7 @@ permalink: /tags/{{ tag }}/
 ---
 <h1>Articles tagged “{{ tag }}”</h1>
 
-{% set articleslist = collections[tag] %}
-{% include "components/articles-list.njk" %}
+{% set articles = collections[tag] %}
+{% include "components/ArticlesList.njk" %}
 
 <p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
