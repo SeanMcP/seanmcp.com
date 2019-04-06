@@ -2,6 +2,17 @@
 layout: layouts/base.njk
 templateClass: ArticleTemplate
 ---
-<h2>{{ title }}</h2>
 
-{{ content | safe }}
+<div class="ContentContainer">
+    <h2>{{ title }}</h2>
+    <date>{{ date | readableDate }}</date>
+    {{ content | safe }}
+    <footer class="Article__footer">
+        {% for tag in tags %}
+            {%- if tag != "articles" -%}
+                {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+                Category: <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+            {%- endif -%}
+        {% endfor %}
+    </footer>
+</div>
