@@ -11,6 +11,8 @@ templateClass: ArticleTemplate
         </header>
         {{ content | safe }}
         <footer class="Article__footer">
+            {% set url = page.url | url | absoluteUrl(metadata.url) %}
+            {% include "components/SocialShare.njk" %}
             {% include "components/TagList.njk" %}
         </footer>
     </article>
