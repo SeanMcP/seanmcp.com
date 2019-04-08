@@ -287,3 +287,64 @@ a:hover::after {
 .Tag.Tag--ux:hover {
   color: #ffffff;
 }
+
+.SocialShare {
+  align-items: center;
+  display: flex;
+}
+
+.SocialShare a {
+  text-decoration: none;
+}
+
+.SocialLink {
+  --size: 48px;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom-width: 2px;
+  border-radius: var(--size);
+  color: var(--text);
+  display: flex;
+  height: var(--size);
+  justify-content: center;
+  margin-left: 0.5rem;
+  position: relative;
+  text-decoration: none;
+  width: var(--size);
+}
+
+.SocialLink > * {
+  position: absolute;
+}
+
+.SocialLink__label {
+  font-size: 0.875rem;
+  opacity: 0;
+}
+
+.SocialLink:hover {
+  background: var(--amber900);
+  color: white;
+}
+
+.SocialLink--twitter:hover {
+  background: #1da1f2;
+}
+
+.SocialLink--reddit:hover {
+  background: #ff4500;
+}
+
+.SocialLink--linkedin:hover {
+  background: #0077b5;
+}
+
+.SocialLink--facebook:hover {
+  background: #4267b2;
+}
+
+.SocialLink:hover .SocialLink__label {
+  color: var(--text);
+  opacity: 1;
+  top: 105%;
+}
