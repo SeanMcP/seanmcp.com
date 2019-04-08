@@ -15,6 +15,7 @@
   --text-alt: var(--gray100);
   --site-width: 40rem;
   --mobile: 42rem;
+  --transparent-border: rgba(0, 0, 0, 0.125);
 }
 
 * {
@@ -33,7 +34,8 @@ body {
 }
 
 pre,
-code {
+code,
+kbd {
   font-family: Menlo, Monaco, Consolas, 'Andale Mono WT', 'Andale Mono',
     'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
     'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
@@ -45,6 +47,38 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+kbd {
+  border: 1px solid var(--transparent-border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  padding: 0 3px;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a, a::after {
+  transition: all 85ms ease-out;
+}
+
+a::after {
+  background: yellow;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 .SiteMain {
@@ -177,10 +211,10 @@ body {
   text-decoration: none;
 }
 
-.ArticleList__link:hover,
+/* .ArticleList__link:hover,
 .ArticleList__link:focus {
   text-decoration: underline;
-}
+} */
 
 .ArticleList__description {
   border-bottom: 1px solid var(--gray300);
@@ -194,19 +228,20 @@ body {
 }
 
 .Tag {
-  --border-color: rgba(0, 0, 0, 0.125);
+  --border-color: var(--transparent-border);
   border: 1px solid var(--border-color);
-  border-bottom-width: 2px;
-  border-radius: 0.25rem;
   color: var(--gray900);
   display: inline-block;
   padding: 0.125rem 0.25rem;
   text-decoration: none;
 }
 
+.Tag::after {
+  background: var(--amber900);
+}
+
 .Tag:hover,
 .Tag:focus {
-  background: var(--amber900);
   color: white;
 }
 
@@ -214,30 +249,41 @@ body {
   margin-left: 0.25rem;
 }
 
-.Tag.Tag--a11y:hover,
-.Tag.Tag--accessibility:hover {
+.Tag.Tag--a11y::after {
   background: #155196;
+}
+.Tag.Tag--a11y:hover {
   color: #fff;
 }
 
-.Tag.Tag--js:hover,
-.Tag.Tag--javascript:hover {
+.Tag.Tag--javascript::after {
   background: #f0db4f;
+}
+
+.Tag.Tag--javascript:hover {
   color: #323330;
 }
 
-.Tag.Tag--python:hover {
+.Tag.Tag--python::after {
   background: #356a97;
+}
+
+.Tag.Tag--python:hover {
   color: #f7d74e;
 }
 
-.Tag.Tag--react:hover {
+.Tag.Tag--react::after {
   background: #282c34;
+}
+
+.Tag.Tag--react:hover {
   color: #61dafb;
 }
 
-.Tag.Tag--ux:hover,
-.Tag.Tag--user-experience:hover {
+.Tag.Tag--ux::after {
   background: #d700bf;
+}
+
+.Tag.Tag--ux:hover {
   color: #ffffff;
 }
