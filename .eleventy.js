@@ -85,7 +85,9 @@ module.exports = function(eleventyConfig) {
   const mdiOptions = {
     html: true,
     breaks: true,
-    linkify: true
+    linkify: true,
+    typographer:  true,
+    quotes: '“”‘’'
   }
   const mdiAnchorOptions = {
     permalink: true,

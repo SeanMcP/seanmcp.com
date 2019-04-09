@@ -135,7 +135,7 @@ pre[class*="language-"] > code[class*="language-"] {
 .DirectLink {
   text-decoration: none;
   font-style: normal;
-  margin-left: 0.1em;
+  margin-left: 0.125em;
 }
 
 a[href].DirectLink,
@@ -147,7 +147,11 @@ a[href].DirectLink:focus,
 a[href].DirectLink:focus:visited,
 :hover > a[href].DirectLink,
 :hover > a[href].DirectLink:visited {
-  color: #aaa;
+  color: var(--gray600);
+}
+
+a[href].DirectLink:hover {
+  color: var(--amber900);
 }
 
 .Footnotes {
