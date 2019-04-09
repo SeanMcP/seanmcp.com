@@ -19,8 +19,8 @@ a[href].DirectLink:focus:visited,
 
 .Footnotes {
   border-top: 1px solid var(--gray300);
-  margin: 4rem 0 0;
-  padding: 1rem 0;
+  margin: 2rem 0 0;
+  padding: 2rem 0 0;
 }
 
 .Footnotes h5 {

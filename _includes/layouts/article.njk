@@ -9,11 +9,16 @@ templateClass: ArticleTemplate
             <date>{{ date | readableDate }}</date>
             <h1>{{ title }}</h1>
         </header>
-        {{ content | safe }}
+        <div class="Article__content">
+            {{ content | safe }}
+        </div>
         <footer class="Article__footer">
             {% set url = page.url | url | absoluteUrl(metadata.url) %}
             {% include "components/SocialShare.njk" %}
-            {% include "components/TagList.njk" %}
+            <div class="Article__tags">
+                <span class="Article__tags_title">Read more:</span>
+                {% include "components/TagList.njk" %}
+            </div>
         </footer>
     </article>
 </div>

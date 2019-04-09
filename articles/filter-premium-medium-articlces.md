@@ -48,6 +48,8 @@ $$('span.svgIcon--star').forEach(star => {
 })
 ```
 
+I had never used the `closest` method before and was glad to find it. As always, [I read up about it on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest) before using it.
+
 We've selected the correct parent element; now we need to hide it.
 
 ## Hiding an element
