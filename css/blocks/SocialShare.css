@@ -1,0 +1,51 @@
+.SocialShare__title {
+  font-weight: bold;
+}
+
+.SocialShare ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 44rem) {
+  .SocialShare ul {
+    margin-top: 0.5rem;
+  }
+
+  .SocialShare li:not(:last-of-type) {
+    margin-bottom: 0.5rem;
+  }
+
+  .SocialShare a {
+    border: 1px solid var(--transparent-border);
+    border-radius: 2px;
+    display: block;
+    padding: 0.25rem;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .SocialShare a:hover,
+  .SocialShare a:focus {
+    background: var(--amber900);
+    color: white;
+  }
+}
+
+@media screen and (min-width: 44rem) {
+  .SocialShare,
+  .SocialShare ul {
+    align-items: center;
+    display: flex;
+  }
+
+  .SocialShare li,
+  .SocialShare li::after {
+    margin-left: 0.5rem;
+  }
+
+  .SocialShare li:not(:last-of-type)::after {
+    content: '//';
+  }
+}

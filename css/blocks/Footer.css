@@ -1,0 +1,51 @@
+.Footer {
+  background: var(--dark);
+  color: var(--text-alt);
+}
+
+.Footer__content {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 44rem) {
+  .Footer__content {
+    grid-template-columns: initial;
+  }
+}
+
+.Footer__block-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+}
+
+.Footer__block nav a {
+  align-items: center;
+  color: var(--text-alt);
+  display: flex;
+  text-decoration: none;
+}
+.Footer__block nav a:hover,
+.Footer__block nav a:focus {
+  text-decoration: underline;
+}
+
+.Footer__block nav a svg {
+  margin-right: 0.5rem;
+}
+
+.Footer__block p {
+  margin: 0;
+}
+
+.SDG blockquote {
+  margin: 0;
+}
+
+.SDG cite {
+  display: block;
+  margin-top: 0.5rem;
+}

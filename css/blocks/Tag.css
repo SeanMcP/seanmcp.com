@@ -1,0 +1,50 @@
+.Tag {
+  --border-color: var(--transparent-border);
+  border: 1px solid var(--border-color);
+  border-left-width: 0.25rem;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: var(--font-small);
+  padding: 0.125rem 0.25rem;
+  text-decoration: none;
+}
+
+.Tag,
+.Tag:visited {
+  color: var(--gray900);
+}
+
+.Tag:hover,
+.Tag:focus {
+  background: var(--amber900);
+  color: white;
+}
+
+.Tag + .Tag {
+  margin-left: 0.25rem;
+}
+
+.Tag.Tag--a11y:hover {
+  background: #155196;
+  color: #fff;
+}
+
+.Tag.Tag--javascript:hover {
+  background: #f0db4f;
+  color: #323330;
+}
+
+.Tag.Tag--python:hover {
+  background: #356a97;
+  color: #f7d74e;
+}
+
+.Tag.Tag--react:hover {
+  background: #282c34;
+  color: #61dafb;
+}
+
+.Tag.Tag--ux:hover {
+  background: #d700bf;
+  color: #ffffff;
+}

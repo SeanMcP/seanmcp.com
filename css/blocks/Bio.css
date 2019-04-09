@@ -1,0 +1,22 @@
+.Bio {
+  background: var(--gray300);
+}
+
+.Bio__content {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 8rem 1fr;
+}
+
+.Bio__content img {
+  border-radius: 16rem;
+  margin: 0 auto;
+  max-width: 8rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 44rem) {
+  .Bio__content {
+    grid-template-columns: initial;
+  }
+}
