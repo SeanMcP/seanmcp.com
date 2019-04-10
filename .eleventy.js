@@ -51,6 +51,9 @@ module.exports = function(eleventyConfig) {
       case 'react':
         icon += 'fab fa-react'
         break
+      case 'scripting':
+        icon += 'fas fa-terminal'
+        break
       case 'ux':
       case 'user-experience':
         icon += 'fas fa-user'

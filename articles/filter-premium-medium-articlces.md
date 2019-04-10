@@ -90,3 +90,9 @@ Unless you **need** to remove and element from the DOM, the simpler solution is 
 Chrome has a handy feature in the "Sources" tab called snippets. Here you can save bits of code for use later.
 
 I created a snippet title "Medium" and saved the above code. Now when I want to filter out premium articles, I just need to run that snippet with <kbd>command</kbd> + <kbd>enter</kbd>.
+
+## Read on
+
+Now the next time I want to find an article to read on Medium, I can run the snippet and filter out premium articles.
+
+For a more reusable solution, we could turn this snippet into a browser extension, but that's the topic of another article.
