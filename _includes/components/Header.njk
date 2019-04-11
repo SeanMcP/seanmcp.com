@@ -3,7 +3,7 @@
         <div class="Header__content">
             <a href="{{ '/' | url }}">{{ metadata.title }}</a>
             <nav class="Nav">
-                {%- for nav in navItems | reverse -%}
+                {%- for nav in navItems -%}
                     <a class="Nav__item{% if nav.url == page.url %} Nav__item--active{% endif %}" href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>
                 {%- endfor -%}
             </nav>
