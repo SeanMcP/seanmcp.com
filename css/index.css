@@ -10,6 +10,7 @@
 
 /* Block-level styles */
 @import 'blocks/Header.css';
+@import 'blocks/Nav.css';
 @import 'blocks/Footer.css';
 @import 'blocks/Article.css';
 @import 'blocks/ArticleList.css';

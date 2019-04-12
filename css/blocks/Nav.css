@@ -1,0 +1,12 @@
+.Nav__item, .Nav__item:active, .Nav__item:hover, .Nav__item:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.Nav__item:not(:last-of-type) {
+    margin-right: 0.5rem;
+}
+
+.Nav__item:hover, .Nav__item:focus, .Nav__item--active {
+    text-decoration: underline !important;
+}

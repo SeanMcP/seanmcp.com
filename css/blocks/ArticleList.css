@@ -8,7 +8,7 @@
   grid-gap: 0.5rem;
 }
 
-.ArticleList__item {
+.ArticleList__item:not(:last-of-type) {
   margin-bottom: 2rem;
 }
 
@@ -17,7 +17,7 @@
   display: flex;
 }
 
-@media screen and (max-width: 44rem) {
+@media screen and (max-width: 42rem) {
   .ArticleList__meta {
     display: grid;
     grid-gap: 0.5rem;

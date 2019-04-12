@@ -1,4 +1,20 @@
-.Header__content {
-    align-items: center;
-    display: flex;
+.Header {
+    background-color: var(--blue900);
+    background-image: url('../az-subtle.png');
+}
+
+.Header__logo {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.Header__logo, .Header__logo:visited {
+    color: white;
+}
+
+.Header__logo:active, .Header__logo:focus {
+    color: var(--amber600);
 }
