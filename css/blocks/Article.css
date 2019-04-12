@@ -26,3 +26,13 @@
   font-weight: bold;
   margin-right: 0.5rem;
 }
+
+@media screen and (max-width: 44rem) {
+  .Article__tags {
+    align-items: flex-start;
+  }
+
+  .Article__tags_title {
+    padding: 0.125rem 0;
+  }
+}

@@ -3,7 +3,7 @@
     background-image: url('../az-subtle.png');
 }
 
-.Header__logo {
+a.Header__logo {
     display: block;
     font-size: 1.5rem;
     font-weight: bold;
@@ -11,10 +11,10 @@
     text-decoration: none;
 }
 
-.Header__logo, .Header__logo:visited {
+a.Header__logo, a.Header__logo:visited {
     color: white;
 }
 
-.Header__logo:active, .Header__logo:focus {
+a.Header__logo:hover, a.Header__logo:focus {
     color: var(--amber600);
 }

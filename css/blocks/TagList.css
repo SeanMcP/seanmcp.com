@@ -1,0 +1,14 @@
+@media screen and (max-width: 44rem) {
+    .TagList {
+        flex-direction: column;
+    }
+
+    .Tag {
+        display: block;
+    }
+
+    .Tag + .Tag {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
