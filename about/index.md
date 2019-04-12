@@ -7,6 +7,8 @@ navtitle: About
 templateClass: Page
 ---
 
+<!-- ![A photo of Sean McPherson in a blue and white gingham button down standing in front of a muted brick wall](/img/seanmcp-headshot-2017.jpg) -->
+
 Born and raised in State College, Pennsylvania, I graduated from Edinboro University with a degree in Middle-level Education. After working for three years as a teacher in Pennsylvania and Georgia, I decided to switch careers.
 
 I enrolled in The Iron Yard, a coding bootcamp in Atlanta, and—after a four-month whirlwind—graduated with a certificate in Front-end Engineering with React. In God's providence, I was given a software developer position at TSYS Digital Innovation and haven't looked back since.
