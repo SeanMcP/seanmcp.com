@@ -1,27 +1,27 @@
 {
-  "name": "eleventy-base-blog",
+  "name": "11ty-blog",
   "version": "5.0.0",
-  "description": "A starter repository for a blog web site using the Eleventy static site generator.",
+  "description": "A simple blog using Eleventy",
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve",
+    "start": "eleventy --serve --port=8088",
     "watch": "eleventy --watch",
     "debug": "DEBUG=* eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/11ty/eleventy-base-blog.git"
+    "url": "git://github.com/seanmcp/11ty-blog.git"
   },
   "author": {
-    "name": "Zach Leatherman",
-    "email": "zachleatherman@gmail.com",
-    "url": "https://zachleat.com/"
+    "name": "Sean McPherson",
+    "email": "seanmcp25@gmail.com",
+    "url": "https://seanmcp.com/"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/11ty/eleventy-base-blog/issues"
+    "url": "https://github.com/seanmcp/11ty-blog/issues"
   },
-  "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+  "homepage": "https://github.com/seanmcp/11ty-blog#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.1",
     "@11ty/eleventy-plugin-rss": "^1.0.6",
