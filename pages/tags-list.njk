@@ -3,7 +3,6 @@ permalink: /tags/
 layout: page
 title: Tags
 ---
-{% for tag in collections.tagList %}
-    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-    <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
-{% endfor %}
+
+{% set tags = collections.tagList %}
+{% include "components/TagList.njk" %}
