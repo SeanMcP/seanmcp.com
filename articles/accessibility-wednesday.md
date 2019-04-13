@@ -1,6 +1,6 @@
 ---
 title: Accessibility Wednesday
-details: Learning and sharing about accessibility for everyone
+description: Learning and sharing about accessibility for everyone
 date: 2019-02-06
 tags: 
     - a11y
