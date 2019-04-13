@@ -38,6 +38,7 @@
 }
 
 .Footer__block p {
+  line-height: 1rem;
   margin: 0;
 }
 

@@ -2,20 +2,12 @@
   margin-top: 1rem;
 }
 
-.Article__header date {
-  background: var(--dark);
-  color: var(--text-alt);
-  font-size: 0.875rem;
-  padding: 0.125rem 0.25rem;
-  text-transform: uppercase;
-}
-
 .Article__content {
   padding-bottom: 2rem;
 }
 
 .Article__footer {
-  border-top: 1px solid var(--transparent-border);
+  border-top: 2px solid var(--transparent-border);
   padding-top: 2rem;
 }
 

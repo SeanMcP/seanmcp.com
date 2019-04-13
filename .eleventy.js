@@ -34,37 +34,6 @@ module.exports = function(eleventyConfig) {
     return array.slice(0, n)
   })
 
-  eleventyConfig.addFilter('tagIcon', tag => {
-    let icon = ''
-    switch (tag.toLowerCase()) {
-      case 'a11y':
-      case 'accessibility':
-        icon += 'fab fa-accessible-icon'
-        break
-      case 'js':
-      case 'javascript':
-        icon += 'fab fa-js-square'
-        break
-      case 'python':
-        icon += 'fab fa-python'
-        break
-      case 'react':
-        icon += 'fab fa-react'
-        break
-      case 'scripting':
-        icon += 'fas fa-terminal'
-        break
-      case 'ux':
-      case 'user-experience':
-        icon += 'fas fa-user'
-        break
-    }
-    if (icon) {
-      return icon + ' fa-fw'
-    }
-    return ''
-  })
-
   eleventyConfig.addFilter('capitalize', string => {
     switch (string) {
       case 'js':

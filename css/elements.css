@@ -39,14 +39,14 @@ code:not([class]) {
 
 kbd {
   background: var(--gray50);
-  border: 1px solid var(--gray400);
+  border: 2px solid var(--gray400);
   border-radius: 4px;
-  border-bottom-width: 2px;
+  border-bottom-width: 4px;
 }
 
 a {
   color: var(--blue800);
-  text-decoration: none;
+  text-decoration: underline solid var(--gray300);
 }
 
 a:hover,
@@ -60,5 +60,5 @@ a:active {
 }
 
 a:visited {
-  color: var(--purple800);
+  color: var(--blue900);
 }

@@ -3,10 +3,6 @@
         {%- if tag != "articles" -%}
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
             <a href="{{ tagUrl | url }}" class="Tag Tag--{{ tag }}">
-                {% set iconClassName %}{{ tag | tagIcon }}{% endset %}
-                {% if iconClassName %}
-                    <i class="{{ iconClassName }}"></i>
-                {% endif %}
                 <span>{{ tag | capitalize }}</span>
             </a>
         {%- endif -%}

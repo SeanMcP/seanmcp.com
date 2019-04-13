@@ -12,6 +12,10 @@
   margin-bottom: 0;
 }
 
+.SocialShare__divider {
+  color: var(--gray300);
+}
+
 @media screen and (max-width: 44rem) {
   .SocialShare ul {
     margin-top: 0.5rem;
@@ -21,8 +25,12 @@
     margin-bottom: 0.5rem;
   }
 
+  .SocialShare__divider {
+    display: none;
+  }
+
   .SocialShare a {
-    border: 1px solid var(--transparent-border);
+    border: 2px solid var(--transparent-border);
     display: block;
     padding: 0.25rem;
     text-align: center;
@@ -46,9 +54,5 @@
   .SocialShare li,
   .SocialShare li::after {
     margin-left: 0.5rem;
-  }
-
-  .SocialShare li:not(:last-of-type)::after {
-    content: '//';
   }
 }

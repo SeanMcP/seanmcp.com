@@ -32,3 +32,11 @@
 .ContentContainer--page {
   background: white;
 }
+
+.Date {
+  border-bottom: 2px solid var(--text);
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 0.25rem 0;
+  text-transform: uppercase;
+}
