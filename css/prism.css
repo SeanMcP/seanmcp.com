@@ -56,5 +56,5 @@ pre {
 }
 
 pre[class*='language-'] {
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 }

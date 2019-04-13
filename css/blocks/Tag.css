@@ -2,7 +2,6 @@ a.Tag {
   --border-color: var(--transparent-border);
   border: 1px solid var(--border-color);
   border-left-width: 0.25rem;
-  border-radius: 2px;
   display: inline-block;
   font-size: var(--font-small);
   padding: 0.125rem 0.25rem;

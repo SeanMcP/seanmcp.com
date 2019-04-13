@@ -29,7 +29,6 @@ kbd {
 kbd,
 code:not([class]) {
   font-size: var(--font-small);
-  border-radius: 0.25rem;
   padding: 0.125rem 0.25rem;
 }
 

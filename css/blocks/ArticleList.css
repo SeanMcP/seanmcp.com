@@ -8,7 +8,7 @@
   grid-gap: 0.5rem;
 }
 
-.ArticleList__item:not(:last-of-type) {
+.ArticleList__item {
   margin-bottom: 2rem;
 }
 

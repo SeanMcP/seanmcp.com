@@ -19,7 +19,6 @@
 
   .SocialShare a {
     border: 1px solid var(--transparent-border);
-    border-radius: 2px;
     display: block;
     padding: 0.25rem;
     text-align: center;
