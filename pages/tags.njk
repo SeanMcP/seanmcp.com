@@ -13,9 +13,7 @@ renderData:
   title: Tagged “{{ tag }}”
 permalink: /tags/{{ tag }}/
 ---
-<h1>Articles tagged “{{ tag }}”</h1>
-
 {% set articles = collections[tag] %}
 {% include "components/ArticleList.njk" %}
 
-<p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
+<p><a href="{{ '/tags/' | url }}">View all tags</a>.</p>
