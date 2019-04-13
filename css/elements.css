@@ -32,7 +32,7 @@ code:not([class]) {
   padding: 0.125rem 0.25rem;
 }
 
-code:not([class]) {
+:not(pre) > code:not([class]) {
   background: #e3f2fd;
   color: #0d47a1;
 }

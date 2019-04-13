@@ -36,7 +36,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('tagIcon', tag => {
     let icon = ''
-    switch (tag) {
+    switch (tag.toLowerCase()) {
       case 'a11y':
       case 'accessibility':
         icon += 'fab fa-accessible-icon'

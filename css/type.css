@@ -30,3 +30,36 @@ h5 {
 h6 {
   font-size: 0.75rem;
 }
+
+blockquote {
+  border-left: 2px solid var(--text);
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.5rem 2.5rem;
+  position: relative;
+}
+
+blockquote::before, blockquote::after {
+  position: absolute;
+  font-family: Georgia;
+  font-size: 4em;
+  opacity: 0.25;
+}
+
+blockquote::before {
+  content: '“';
+  left: 0.5rem;
+  top: -0.5rem;
+}
+
+blockquote::after {
+  content: '”';
+  right: 0.5rem;
+  bottom: -2.5rem;
+}
+
+blockquote p {
+  font-style: italic;
+  /* line-height: 1.125rem; */
+  margin: 0;
+}
