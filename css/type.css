@@ -41,7 +41,7 @@ blockquote {
 
 blockquote::before, blockquote::after {
   position: absolute;
-  font-family: Georgia;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 4em;
   opacity: 0.25;
 }
@@ -60,6 +60,5 @@ blockquote::after {
 
 blockquote p {
   font-style: italic;
-  /* line-height: 1.125rem; */
   margin: 0;
 }
