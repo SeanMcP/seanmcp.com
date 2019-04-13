@@ -165,5 +165,9 @@ a[href].DirectLink:hover {
 }
 
 .Footnotes ol {
-  padding-left: 0;
+  padding-left: 2rem;
+}
+
+.Footnotes ol, .Footnotes li > *:last-child {
+  margin-bottom: 0;
 }
