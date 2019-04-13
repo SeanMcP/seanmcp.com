@@ -62,3 +62,11 @@ blockquote p {
   font-style: italic;
   margin: 0;
 }
+
+li, blockquote p {
+  line-height: 1.25rem;
+}
+
+li:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}

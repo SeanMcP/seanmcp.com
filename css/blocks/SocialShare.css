@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+.SocialShare li {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 44rem) {
   .SocialShare ul {
     margin-top: 0.5rem;
