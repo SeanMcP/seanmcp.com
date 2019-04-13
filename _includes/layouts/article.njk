@@ -4,12 +4,15 @@ templateClass: ArticleTemplate
 ---
 
 <div class="ContentContainer">
+    <header class="Article__header --clear-child-margins">
+        <date>{{ date | readableDate }}</date>
+        <h1>{{ title }}</h1>
+    </header>
+</div>
+
+<div class="ContentContainer ContentContainer--page">
     <article class="Article">
-        <header class="Article__header">
-            <date>{{ date | readableDate }}</date>
-            <h1>{{ title }}</h1>
-        </header>
-        <div class="Article__content">
+        <div class="Article__content --clear-child-margins">
             {{ content | safe }}
         </div>
         <footer class="Article__footer">

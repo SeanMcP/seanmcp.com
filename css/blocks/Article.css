@@ -1,14 +1,18 @@
-.Article__header {
-  /* border-bottom: 1px solid var(--gray300); */
-  margin-bottom: 2rem;
-}
-
 .Article__header h1 {
   margin-top: 1rem;
 }
 
+.Article__header date {
+  background: var(--dark);
+  border-radius: 2px;
+  color: var(--text-alt);
+  font-size: 0.875rem;
+  padding: 0.125rem 0.25rem;
+  text-transform: uppercase;
+}
+
 .Article__content {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .Article__footer {

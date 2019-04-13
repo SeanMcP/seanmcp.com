@@ -4,9 +4,10 @@ tags:
   - nav
 navtitle: Articles
 permalink: /articles/
+title: Articles
 ---
-
-<h1>Articles</h1>
 
 {% set articles = collections.articles %}
 {% include "components/ArticleList.njk" %}
+
+<a href="{{ '/feed/feed.xml' | url }}">Subscribe to RSS feed</a>

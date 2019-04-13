@@ -1,7 +1,7 @@
 <header class="Header">
     <div class="ContentContainer">
         <div class="Header__content">
-            <a class="Header__logo" href="{{ '/' | url }}">{{ metadata.title }}</a>
+            <a class="Header__logo" href="{{ '/' | url }}">Sean<br/>McP</a>
             <nav class="Nav">
                 {%- for nav in navItems -%}
                     <a class="Nav__item{% if nav.url == page.url %} Nav__item--active{% endif %}" href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>

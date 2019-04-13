@@ -28,3 +28,7 @@
   max-width: 40rem;
   padding: 2rem;
 }
+
+.ContentContainer--page {
+  background: white;
+}

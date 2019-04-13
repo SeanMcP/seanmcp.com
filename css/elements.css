@@ -4,6 +4,7 @@
 
 html,
 body {
+  background: var(--gray100);
   color: var(--text);
   font-family: var(--body-font);
   margin: 0;

@@ -2,11 +2,13 @@
 layout: base
 templateClass: Page
 ---
-<div class="ContentContainer">
+{%- if title -%}
+<div class="ContentContainer --clear-child-margins">
+    <h1>{{ title }}</h1>
+</div>
+{%- endif -%}
+<div class="ContentContainer ContentContainer--page">
     <div class="Page__content --clear-child-margins">
-        {%- if title -%}
-            <h1>{{ title }}</h1>
-        {%- endif -%}
         {{ content | safe }}
     </div>
 </div>

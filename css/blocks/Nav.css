@@ -1,5 +1,6 @@
 a.Nav__item {
     color: white;
+    display: block;
 }
 
 .Nav__item:not(:last-of-type) {
