@@ -82,7 +82,7 @@ myArray[0] // 'first'
 
 Our `rollDie` function will never return a `0` because we're always adding one. By removing that addition, we can create a new function that will work well with arrays. Let's use the code from the previous block and add:
 
-```js/2
+```js
 const randomIndex = arrayLength => Math.floor(Math.random() * arrayLength)
 
 randomIndex(myArray.length) // 0
