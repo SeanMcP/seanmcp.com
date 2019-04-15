@@ -31,3 +31,7 @@
     padding: 0.125rem 0;
   }
 }
+
+.Article__content img {
+  width: 100%;
+}

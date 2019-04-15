@@ -132,10 +132,11 @@ pre[class*="language-"] > code[class*="language-"] {
 }
 
 /* Direct Links / Markdown Headers */
-.DirectLink {
+a.DirectLink {
   text-decoration: none;
   font-style: normal;
   margin-left: 0.125em;
+  text-decoration: none;
 }
 
 a[href].DirectLink,
