@@ -2,13 +2,11 @@
     {% for article in articles | reverse %}
         <li class="ArticleList__item{% if article.url == url %} ArticleList__item-active{% endif %}">
             <time class="Date" datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }}</time>
-            <a href="{{ article.url | url }}" class="ArticleList__link">
-                {% if article.data.title %}
+            <p class="ArticleList__heading">
+                <a href="{{ article.url | url }}" class="ArticleList__link">
                     {{ article.data.title }}
-                {% else %}
-                    <code>{{ article.url }}</code>
-                {% endif %}
-            </a>
+                </a>
+            </p>
             {% if article.data.description %}
                 <p class="ArticleList__description">{{ article.data.description }}</p>
             {% endif %}

@@ -1,6 +1,7 @@
 a.Nav__item {
     color: white;
     display: block;
+    text-decoration: none;
 }
 
 .Nav__item:not(:last-of-type) {
@@ -9,6 +10,7 @@ a.Nav__item {
 
 .Nav__item:hover, .Nav__item--active:focus, a.Nav__item--active {
     color: var(--amber600);
+    text-decoration: underline;
 }
 
 .Nav__item--active {
