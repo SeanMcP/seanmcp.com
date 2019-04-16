@@ -2,7 +2,7 @@ a.Tag {
   background: var(--dark);
   display: inline-block;
   font-size: var(--font-small);
-  padding: 0.0675rem 0.25rem;
+  padding: 0.125rem 0.25rem;
   position: relative;
   text-decoration: none;
 }
@@ -14,22 +14,11 @@ a.Tag {
 
 .Tag:hover,
 .Tag:focus {
-  background: var(--blue700);
-  color: white;
+  background: transparent;
+  box-shadow: inset 0 0 0 2px var(--blue700);
+  color: var(--blue700);
 }
 
 .Tag + .Tag {
   margin-left: 0.5rem;
-}
-
-a.Tag:hover::after {
-  background: transparent;
-  border: 2px solid var(--blue700);
-  content: '';
-  height: 100%;
-  left: -4px;   /* Sum of border-width and padding */
-  padding: 2px;
-  position: absolute;
-  top: -4px;    /* Sum of border-width and padding */
-  width: 100%;
 }
