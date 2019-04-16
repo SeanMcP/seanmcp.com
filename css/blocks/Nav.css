@@ -1,18 +1,17 @@
+.Nav {
+    margin-top: 0.5rem;
+    text-align: right;
+}
+
 a.Nav__item {
     color: white;
-    display: block;
     text-decoration: none;
 }
 
-.Nav__item:not(:last-of-type) {
-    margin-right: 0.5rem;
-}
-
 .Nav__item:hover, .Nav__item--active:focus, a.Nav__item--active {
-    color: var(--amber600);
     text-decoration: underline;
 }
 
-.Nav__item--active {
-    text-decoration: underline;
+.Nav__item + .Nav__item {
+    margin-left: 0.5rem;
 }
