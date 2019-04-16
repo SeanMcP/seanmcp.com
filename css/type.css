@@ -1,5 +1,5 @@
-p {
-  line-height: 1.5rem;
+p, ul, li {
+  line-height: 30px;
 }
 
 h1,
@@ -67,6 +67,6 @@ li, blockquote p {
   line-height: 1.25rem;
 }
 
-li:not(:last-of-type) {
-  margin-bottom: 0.5rem;
+li {
+  margin: 0.5rem 0;
 }
