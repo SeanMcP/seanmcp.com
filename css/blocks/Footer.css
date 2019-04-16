@@ -28,6 +28,11 @@
   display: flex;
   text-decoration: none;
 }
+
+.Footer__block nav a:not(:last-of-type) {
+  margin-bottom: 0.25rem;
+}
+
 .Footer__block nav a:hover,
 .Footer__block nav a:focus {
   text-decoration: underline;
