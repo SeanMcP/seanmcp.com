@@ -17,7 +17,7 @@
   color: var(--gray300);
 }
 
-@media screen and (max-width: 44rem) {
+@media screen and (max-width: calc(620px + 4rem)) {
   .SocialShare ul {
     margin-top: 0.5rem;
   }
@@ -45,7 +45,7 @@
   }
 }
 
-@media screen and (min-width: 44rem) {
+@media screen and (min-width: calc(620px + 4rem)) {
   .SocialShare,
   .SocialShare ul {
     align-items: center;

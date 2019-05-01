@@ -25,7 +25,7 @@
 
 .ContentContainer {
   margin: 0 auto;
-  max-width: 40rem;
+  max-width: calc(620px + 4rem);
   padding: 2rem;
 }
 

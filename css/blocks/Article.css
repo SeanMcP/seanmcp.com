@@ -22,7 +22,7 @@
   margin-right: 0.5rem;
 }
 
-@media screen and (max-width: 44rem) {
+@media screen and (max-width: calc(620px + 4rem)) {
   .Article__tags {
     align-items: flex-start;
   }

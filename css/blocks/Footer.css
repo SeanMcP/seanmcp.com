@@ -9,7 +9,7 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-@media screen and (max-width: 44rem) {
+@media screen and (max-width: calc(620px + 4rem)) {
   .Footer__content {
     grid-template-columns: initial;
   }
