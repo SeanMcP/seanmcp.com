@@ -1,1 +1,3 @@
-## 11ty Blog
+## seanmcp.com
+
+A personal site

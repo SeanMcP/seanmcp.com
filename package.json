@@ -1,7 +1,7 @@
 {
-  "name": "11ty-blog",
-  "version": "5.0.0",
-  "description": "A simple blog using Eleventy",
+  "name": "@seanmcp/seanmcp.com",
+  "version": "1.0.0",
+  "description": "A personal website",
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve --port=8088",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/seanmcp/11ty-blog.git"
+    "url": "git://github.com/seanmcp/seanmcp.com.git"
   },
   "author": {
     "name": "Sean McPherson",
@@ -19,9 +19,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seanmcp/11ty-blog/issues"
+    "url": "https://github.com/seanmcp/seanmcp.com/issues"
   },
-  "homepage": "https://github.com/seanmcp/11ty-blog#readme",
+  "homepage": "https://github.com/seanmcp/seanmcp.com#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.1",
     "@11ty/eleventy-plugin-rss": "^1.0.6",
