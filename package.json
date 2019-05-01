@@ -6,7 +6,8 @@
     "build": "eleventy",
     "start": "eleventy --serve --port=8088",
     "watch": "eleventy --watch",
-    "debug": "DEBUG=* eleventy"
+    "debug": "DEBUG=* eleventy",
+    "draft": "sh create-draft.sh"
   },
   "repository": {
     "type": "git",
