@@ -3,7 +3,7 @@ title: Why I switched from Gatsby to Eleventy
 description: 
 date: 2019-04-12
 tags:
-  - Eleventy
+  - eleventy
   - meta
 layout: article
 ---
