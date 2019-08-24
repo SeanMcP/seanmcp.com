@@ -1,25 +1,38 @@
 .Header {
-    background-color: var(--blue900);
+  background-color: var(--dark);
+}
+
+.Header .ContentContainer {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.Header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .Header__logo-container {
-    display: block;
-    text-align: right;
+  display: block;
+  text-align: right;
 }
 
 a.Header__logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: -0.0675rem -0.25rem;
-    padding: 0.0675rem 0.25rem;
-    text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: -0.0675rem -0.25rem;
+  padding: 0.0675rem 0.25rem;
+  text-decoration: none;
 }
 
-a.Header__logo, a.Header__logo:visited {
-    color: white;
+a.Header__logo,
+a.Header__logo:visited {
+  color: white;
 }
 
-a.Header__logo:hover, a.Header__logo:focus {
-    background: white;
-    color: var(--blue900);
+a.Header__logo:hover,
+a.Header__logo:focus {
+  background: white;
+  color: var(--dark);
 }

@@ -3,9 +3,11 @@ layout: base
 templateClass: Page
 ---
 {%- if title or renderData.title -%}
-<div class="ContentContainer --clear-child-margins">
-    <h1>{{ title or renderData.title }}</h1>
-</div>
+<section class="Hero Hero--page">
+    <div class="ContentContainer --clear-child-margins">
+        <h1>{{ title or renderData.title }}</h1>
+    </div>
+</section>
 {%- endif -%}
 <div class="ContentContainer ContentContainer--page">
     <div class="Page__content --clear-child-margins">

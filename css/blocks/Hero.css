@@ -1,0 +1,8 @@
+.Hero {
+  background: linear-gradient(to right, var(--blue900), var(--cyanA700));
+  color: white;
+}
+
+.Hero--article {
+  padding: 1rem 0;
+}

@@ -3,12 +3,14 @@ layout: base
 templateClass: ArticleTemplate
 ---
 
-<div class="ContentContainer">
-    <header class="Article__header --clear-child-margins">
-        <date class="Date">{{ date | readableDate }}</date>
-        <h1>{{ title }}</h1>
-    </header>
-</div>
+<section class="Hero Hero--article">
+    <div class="ContentContainer">
+        <header class="Article__header --clear-child-margins">
+            <date class="Date">{{ date | readableDate }}</date>
+            <h1>{{ title }}</h1>
+        </header>
+    </div>
+</section>
 
 <div class="ContentContainer ContentContainer--page">
     <article class="Article">

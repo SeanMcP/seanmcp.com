@@ -18,6 +18,7 @@
 @import 'blocks/TagList.css';
 @import 'blocks/SocialShare.css';
 @import 'blocks/Bio.css';
+@import 'blocks/Hero.css';
 
 .Main {
   flex: 1;
@@ -34,7 +35,7 @@
 }
 
 .Date {
-  border-bottom: 2px solid var(--text);
+  border-bottom: 2px solid white;
   font-size: 0.875rem;
   font-weight: bold;
   padding: 0.25rem 0;

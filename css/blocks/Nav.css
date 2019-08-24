@@ -1,17 +1,18 @@
 .Nav {
-    margin-top: 0.5rem;
-    text-align: right;
+  text-align: right;
 }
 
 a.Nav__item {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
-.Nav__item:hover, .Nav__item--active:focus, a.Nav__item--active {
-    text-decoration: underline;
+.Nav__item:hover,
+.Nav__item--active:focus,
+a.Nav__item--active {
+  text-decoration: underline;
 }
 
 .Nav__item + .Nav__item {
-    margin-left: 0.5rem;
+  margin-left: 0.5rem;
 }
