@@ -1,4 +1,6 @@
-p, ul, li {
+p,
+ul,
+li {
   line-height: 30px;
 }
 
@@ -35,27 +37,7 @@ blockquote {
   border-left: 2px solid var(--text);
   margin-left: 0;
   margin-right: 0;
-  padding: 0.5rem 2.5rem;
-  position: relative;
-}
-
-blockquote::before, blockquote::after {
-  position: absolute;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 4em;
-  opacity: 0.25;
-}
-
-blockquote::before {
-  content: '“';
-  left: 0.5rem;
-  top: -0.5rem;
-}
-
-blockquote::after {
-  content: '”';
-  right: 0.5rem;
-  bottom: -2.5rem;
+  padding: 0.5rem 1.5rem;
 }
 
 blockquote p {
@@ -63,7 +45,8 @@ blockquote p {
   margin: 0;
 }
 
-li, blockquote p {
+li,
+blockquote p {
   line-height: 1.25rem;
 }
 
