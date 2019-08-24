@@ -1,6 +1,6 @@
 ---
 title: Storing data in state vs. class variable
-description:
+description: Why do we store data in state as opposed to on the class?
 date: 2019-04-12
 tags:
   - react
@@ -101,7 +101,7 @@ I had never heard of this method before, and there is a reason why: the React te
 
 > Normally you should try to avoid all uses of `forceUpdate()` and only read from `this.props` and `this.state` in `render()`.
 
-In some instances you  may receive data from other sources, but otherwise **try to avoid manually managing a component's render**.
+In some instances you may receive data from other sources, but otherwise **try to avoid manually managing a component's render**.
 
 The alternative to using class variables and forcing updates is leveraging React's component state.
 
@@ -136,7 +136,7 @@ class StateCounter extends React.Component {
 
 While instantiating a state object might look like the previous example using a class variable, `state` is a protected keyword in React that refers to stored component data.
 
-You can access data from state with normal object dot or bracket notation, so the current count can be referenced with `this.state.count`. 
+You can access data from state with normal object dot or bracket notation, so the current count can be referenced with `this.state.count`.
 
 The major difference between using class variables and state is updating data. Instead of manually reassigning the variable, you call `this.setState()` and pass it an object or a function that returns an object.
 
