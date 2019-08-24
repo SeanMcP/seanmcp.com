@@ -3,7 +3,7 @@ layout: page
 title: Contact
 tags:
   - nav
-navtitle: Contact
+navTitle: Contact
 templateClass: Page
 ---
 
