@@ -1,16 +1,16 @@
 ---
 title: Edit a previous commit message
-description: 
-date: 2019-07-10
+description: The steps to edit recent or ancient commit messages
+date: 2019-08-23
 tags:
-    - git
-    - programming
+  - git
+  - programming
 layout: article
 ---
 
-At work, all of our commit messages need to begin with a ticket name and number from Jira. If I'm working on the Bananas project and am assigned ticket 5, my commit messages will look like:
+At my previous company, all commit messages need to begin with a ticket name and number from Jira. If I'm working on the Bananas project and am assigned ticket 5, my commit messages will look like:
 
-```sh
+```
 BANANAS-5 Add user authentication
 ```
 
@@ -26,7 +26,7 @@ Sometimes you can catch the error quickly after making your commit. If you need 
 
 In your project directory in the terminal, enter:
 
-```sh
+```
 git commit --amend
 ```
 
@@ -40,7 +40,7 @@ Rebasing in git is a way to change commits from long ago by reapplying all the c
 
 First, you need to find the commit message from which you want to start your rebase. To do that, go to the log:
 
-```sh
+```
 git log
 ```
 
@@ -48,7 +48,7 @@ Now find find the commit **immediately prior to the one you want to change** and
 
 Enter the `rebase` command with the `interactive` flag (you can also use `-i` for short) and the commit hash you copied:
 
-```sh
+```
 git rebase --interactive <prior_commit_hash>
 ```
 
@@ -56,7 +56,7 @@ This will open the default editor with a list of all the commits **after** the h
 
 It should look something like this:
 
-```sh
+```
 pick a8fc26a BANANAS-5 This is a good commit message
 pick 60ac057 Change me!
 
@@ -70,4 +70,4 @@ pick a8fc26a BANANAS-5 This is a good commit message
 reword 60ac057 Change me!
 ```
 
-Then save and exit the editor. 
+Then save and exit the editor.
