@@ -1,10 +1,10 @@
-<div class="TagList">
+<ul class="TagList">
     {% for tag in tags %}
         {%- if tag != "articles" -%}
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-            <a href="{{ tagUrl | url }}" class="Tag Tag--{{ tag }}">
-                <span>{{ tag | capitalize }}</span>
-            </a>
+            <li class="TagList__item">
+                <a href="{{ tagUrl | url }}" class="Tag Tag--{{ tag }}">{{ tag | capitalize }}</a>
+            </li>
         {%- endif -%}
     {% endfor %}
-</div>
+</ul>
