@@ -16,7 +16,7 @@
   width: 100%;
 }
 
-@media screen and (max-width: calc(620px + 4rem)) {
+@media screen and (max-width: 684px) {
   .Bio__content {
     grid-template-columns: initial;
   }

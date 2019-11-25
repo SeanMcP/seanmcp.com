@@ -1,0 +1,22 @@
+.TagList {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.TagList__item {
+    display: inline-block;
+    margin: 0;
+}
+
+.TagList__item + .TagList__item {
+    margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 684px) {
+    .TagList {
+        display: block;
+        margin-top: 0.5rem;
+    }
+}

@@ -1,59 +1,30 @@
 .SocialShare__title {
   font-weight: bold;
+  margin-right: 0.5rem;
 }
 
 .SocialShare ul {
+  display: inline-block;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .SocialShare li {
+  display: inline-block;
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.SocialShare__divider {
+.SocialShare li:not(:last-of-type)::after {
   color: var(--gray300);
+  content: '/';
+  margin: 0 0.25rem;
 }
 
-@media screen and (max-width: calc(620px + 4rem)) {
+@media screen and (max-width: 684px) {
   .SocialShare ul {
-    margin-top: 0.5rem;
-  }
-
-  .SocialShare li:not(:last-of-type) {
-    margin-bottom: 0.5rem;
-  }
-
-  .SocialShare__divider {
-    display: none;
-  }
-
-  .SocialShare a {
-    border: 2px solid var(--transparent-border);
     display: block;
-    padding: 0.25rem;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .SocialShare a:hover,
-  .SocialShare a:focus {
-    background: var(--amber900);
-    color: white;
-  }
-}
-
-@media screen and (min-width: calc(620px + 4rem)) {
-  .SocialShare,
-  .SocialShare ul {
-    align-items: center;
-    display: flex;
-  }
-
-  .SocialShare li,
-  .SocialShare li::after {
-    margin-left: 0.5rem;
+    margin-top: 0.5rem;
   }
 }

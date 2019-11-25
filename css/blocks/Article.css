@@ -12,8 +12,6 @@
 }
 
 .Article__tags {
-  align-items: center;
-  display: flex;
   margin-top: 1rem;
 }
 
@@ -22,15 +20,6 @@
   margin-right: 0.5rem;
 }
 
-@media screen and (max-width: calc(620px + 4rem)) {
-  .Article__tags {
-    align-items: flex-start;
-  }
-
-  .Article__tags_title {
-    padding: 0.125rem 0;
-  }
-}
 
 .Article__content img {
   width: 100%;
