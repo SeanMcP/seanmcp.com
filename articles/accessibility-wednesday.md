@@ -69,7 +69,7 @@ This is a learning exercise for me as much as it is for everyone else. With that
 
 [File an issue](https://github.com/SeanMcP/accessibility-wednesday/issues/new) on GitHub referencing the tip in question, or--better yet--make a pull request with the fix. I happily welcome any and all contributions the the project.
 
-If you notice the mistake [on Twitter](https://twitter.com/_seanmcp), please respond or direct message to let me know. I will remove the tweet, make the correction, and share the updated information later.
+If you notice the mistake [on Twitter](https://twitter.com/mcpcode), please respond or direct message to let me know. I will remove the tweet, make the correction, and share the updated information later.
 
 ## Stronger together
 

@@ -81,6 +81,6 @@ If you want to publish packages because you think it's fun or you want to help o
 
 ---
 
-I hope those were helpful. If you have any questions about open source or want to share some tips of your own, [please let me know](https://twitter.com/@_seanmcp).
+I hope those were helpful. If you have any questions about open source or want to share some tips of your own, [please let me know](https://twitter.com/@mcpcode).
 
 Genesis 1:27 (SDG)
