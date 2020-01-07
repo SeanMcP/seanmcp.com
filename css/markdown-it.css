@@ -152,7 +152,7 @@ a[href].DirectLink:focus:visited,
 }
 
 a[href].DirectLink:hover {
-  color: var(--amber900);
+  color: var(--blue800);
 }
 
 .Footnotes {
