@@ -1,6 +1,6 @@
 ---
 layout: /layouts/index.njk
-title: Sean McPherson
+title: "I am Sean McP"
 ---
 
 My name is Sean, and I'm a software developer and educator living in Pittsburgh, Pennsylvania. I'm interested in React, JavaScript, accessibility, user-experience, and good design.
