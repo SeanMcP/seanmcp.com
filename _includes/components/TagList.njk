@@ -1,9 +1,9 @@
-<ul class="TagList">
+<ul class="--slash-separated">
     {% for tag in tags %}
         {%- if tag != "articles" -%}
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-            <li class="TagList__item">
-                <a href="{{ tagUrl | url }}" class="Tag Tag--{{ tag }}">{{ tag | capitalize }}</a>
+            <li>
+                <a href="{{ tagUrl | url }}" class="Tag Tag--{{ tag }}">{{ tag }}</a>
             </li>
         {%- endif -%}
     {% endfor %}

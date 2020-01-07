@@ -14,8 +14,6 @@
 @import 'blocks/Footer.css';
 @import 'blocks/Article.css';
 @import 'blocks/ArticleList.css';
-@import 'blocks/Tag.css';
-@import 'blocks/TagList.css';
 @import 'blocks/SocialShare.css';
 @import 'blocks/Bio.css';
 @import 'blocks/Hero.css';
@@ -36,4 +34,28 @@
   font-weight: bold;
   padding: 0.25rem 0;
   text-transform: uppercase;
+}
+
+ul.--slash-separated {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.--slash-separated li {
+  display: inline-block;
+}
+
+ul.--slash-separated li:not(:last-of-type)::after {
+  color: var(--gray300);
+  content: '/';
+  margin: 0 0.25rem;
+}
+
+@media screen and (max-width: 672px) {
+  ul.--slash-separated {
+    display: block;
+    margin-top: 0.5rem;
+  }
 }
