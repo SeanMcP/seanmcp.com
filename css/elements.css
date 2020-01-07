@@ -4,7 +4,6 @@
 
 html,
 body {
-  background: var(--gray100);
   color: var(--text);
   font-family: var(--body-font);
   margin: 0;
@@ -46,13 +45,11 @@ kbd {
 
 a {
   color: var(--blue800);
-  text-decoration: underline solid var(--gray300);
 }
 
 a:hover,
 a:focus {
   color: var(--blue700);
-  text-decoration: underline;
 }
 
 a:active {

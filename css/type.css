@@ -1,7 +1,5 @@
-p,
-ul,
-li {
-  line-height: 30px;
+p {
+  line-height: 1.5;
 }
 
 h1,
@@ -15,16 +13,16 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
 }
 h2 {
-  font-size: 2rem;
-}
-h3 {
   font-size: 1.5rem;
 }
-h4 {
+h3 {
   font-size: 1.25rem;
+}
+h4 {
+  font-size: 1.125rem;
 }
 h5 {
   font-size: 1rem;
@@ -34,7 +32,7 @@ h6 {
 }
 
 blockquote {
-  border-left: 2px solid var(--text);
+  border-left: 4px solid var(--text);
   margin-left: 0;
   margin-right: 0;
   padding: 0.5rem 1.5rem;
@@ -42,14 +40,6 @@ blockquote {
 
 blockquote p {
   font-style: italic;
+  line-height: 1.25;
   margin: 0;
-}
-
-li,
-blockquote p {
-  line-height: 1.25rem;
-}
-
-li {
-  margin: 0.5rem 0;
 }
