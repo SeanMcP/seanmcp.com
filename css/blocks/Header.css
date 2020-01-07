@@ -7,19 +7,7 @@
   padding-top: 1rem;
 }
 
-.Header__content {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-.Header__logo-container {
-  display: block;
-  text-align: right;
-}
-
 a.Header__logo {
-  display: block;
   font-size: 1.5rem;
   font-weight: bold;
   margin: -0.0675rem -0.25rem;

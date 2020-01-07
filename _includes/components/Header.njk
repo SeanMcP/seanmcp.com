@@ -1,16 +1,14 @@
 <header class="Header">
     <div class="ContentContainer">
-        <div class="Header__content">
-            <div class="Header__logo-container">
-                <a class="Header__logo" href="{{ '/' | url }}">
-                    Sean McP
-                </a>
-            </div>
-            <nav class="Nav">
-                {%- for nav in navItems -%}
-                    <a class="Nav__item{% if nav.url == page.url %} Nav__item--active{% endif %}" href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a>
-                {%- endfor -%}
-            </nav>
+        <div class="Header__logo-container">
+            <a class="Header__logo" href="{{ '/' | url }}">
+                Sean McPherson
+            </a>
         </div>
+        <nav class="Nav">
+            {%- for nav in navItems -%}
+                <a class="Nav__item{% if nav.url == page.url %} Nav__item--active{% endif %}" href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a>
+            {%- endfor -%}
+        </nav>
     </div>
 </header>
