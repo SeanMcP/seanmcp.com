@@ -30,10 +30,6 @@
   padding: 2rem;
 }
 
-.ContentContainer--page {
-  background: white;
-}
-
 .Date {
   border-bottom: 2px solid white;
   font-size: 0.875rem;
