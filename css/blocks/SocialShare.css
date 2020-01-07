@@ -22,7 +22,7 @@
   margin: 0 0.25rem;
 }
 
-@media screen and (max-width: 684px) {
+@media screen and (max-width: 672px) {
   .SocialShare ul {
     display: block;
     margin-top: 0.5rem;
