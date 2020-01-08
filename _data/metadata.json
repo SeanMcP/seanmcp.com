@@ -1,9 +1,9 @@
 {
   "title": "Sean McPherson",
   "url": "https://seanmcp.com/",
-  "description": "Sean McPherson is a software developer and educator living in Atlanta, GA. He focuses on creating clean and accessible user interfaces that provide a greate user experience.",
+  "description": "Sean McPherson is a software developer and educator living in Pittsburgh, PA. He focuses on creating clean and accessible user interfaces that provide a greate user experience.",
   "feed": {
-    "subtitle": "Sean McPherson is a software developer and educator living in Atlanta, GA. He focuses on creating clean and accessible user interfaces that provide a greate user experience.",
+    "subtitle": "Sean McPherson is a software developer and educator living in Pittsburgh, PA. He focuses on creating clean and accessible user interfaces that provide a greate user experience.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "url": "https://seanmcp.com/feed/feed.xml",
