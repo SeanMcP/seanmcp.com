@@ -61,7 +61,7 @@ greetUser()
 
 Bingo! Now if our function is called without an argument, then the resulting log still makes sense.
 
-In this situation, the default parameter is working as a fallback value. This is probably the most common use case. But you will also find default parameters useful to reduce exisistential checking.
+In this situation, the default parameter is working as a fallback value. This is probably the most common use case. But you will also find default parameters useful to reduce existential checking.
 
 ### Reduce checks
 
