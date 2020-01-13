@@ -1,7 +1,7 @@
 ---
 title: "What default parameters do (and don't do)"
 description: Correcting my mental model
-date: 2020-01-08
+date: 2020-01-13
 tags:
     - javascript
 layout: article
