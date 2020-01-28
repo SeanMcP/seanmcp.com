@@ -15,6 +15,7 @@
 @import 'blocks/Article.css';
 @import 'blocks/ArticleList.css';
 @import 'blocks/SocialShare.css';
+@import 'blocks/TagList.css';
 @import 'blocks/Bio.css';
 @import 'blocks/Hero.css';
 
@@ -36,26 +37,26 @@
   text-transform: uppercase;
 }
 
-ul.--slash-separated {
-  display: inline-block;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+ul.--inline-list {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-ul.--slash-separated li {
+ul.--inline-list li {
   display: inline-block;
+}
+
+@media screen and (max-width: 672px) {
+  ul.--inline-list {
+    display: block;
+    margin-top: 0.5rem;
+  }
 }
 
 ul.--slash-separated li:not(:last-of-type)::after {
   color: var(--gray300);
   content: '/';
   margin: 0 0.25rem;
-}
-
-@media screen and (max-width: 672px) {
-  ul.--slash-separated {
-    display: block;
-    margin-top: 0.5rem;
-  }
 }

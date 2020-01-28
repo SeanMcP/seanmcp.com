@@ -1,0 +1,21 @@
+.TagList li:not(:last-of-type) {
+    margin-right: 0.5rem;
+}
+
+.Tag {
+  background: var(--gray200);
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+}
+
+.Tag,
+.Tag:visited {
+  color: var(--gray700);
+}
+
+.Tag:active,
+.Tag:focus,
+.Tag:hover {
+  background: var(--blue800);
+  color: white;
+}

@@ -16,3 +16,9 @@ I enrolled in The Iron Yard, a coding bootcamp in Atlanta, and—after a four-mo
 When I'm not coding at work and at home, I enjoy spending time with my wife (married '14), son (born '18), and three-legged dog (adopted '17). We like to play board games and [would love to hear your recommendations](https://twitter.com/snmcp).
 
 I also like soccer a little too much, but that's a topic for another page.
+
+---
+
+Do you have an exciting job opportunity for me? [Check my availability here](https://seanmcp.github.io/areyoulookingforwork).
+
+For all other inquires, you can [connect with me on LinkedIn](https://linkedin.com/in/seanmcp) or reach out to any of my accounts in the footer.
