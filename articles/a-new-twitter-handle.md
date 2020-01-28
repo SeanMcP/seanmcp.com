@@ -43,4 +43,4 @@ At first I didn't like the look of the new handle, but after a few weeks it's st
 
 1 Timothy 6:6 (SDG)
 
-[^1]: Son of encouragement
+[^1]: Like Barnabas, which means ["son of encouragement"](https://www.biblegateway.com/passage/?search=Acts+4%3A36-37&version=NKJV)
