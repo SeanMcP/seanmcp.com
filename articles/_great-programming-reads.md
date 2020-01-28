@@ -7,4 +7,6 @@ tags:
 layout: article
 ---
 
-_[The Wrong Abstraction](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction)_ by Sandi Metz
+_[Give it five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes)_ by Jason Fried
+
+_[The wrong abstraction](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction)_ by Sandi Metz
