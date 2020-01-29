@@ -1,7 +1,7 @@
 ---
-title: 
+title: <TITLE>
 description: 
-date: 2020-01-01
+date: <DATE>
 tags:
     - 
 layout: article
