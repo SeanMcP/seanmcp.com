@@ -7,7 +7,7 @@
     "start": "eleventy --serve --port=8088",
     "watch": "eleventy --watch",
     "debug": "DEBUG=* eleventy",
-    "draft": "sh create-draft.sh"
+    "draft": "node draft.js"
   },
   "repository": {
     "type": "git",
