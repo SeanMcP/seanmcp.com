@@ -1,7 +1,7 @@
 ---
 title: How to remove duplicates from an object array?
 description: Not as easy as we'd like it, but not as hard as it could be
-date: 2020-01-13
+date: 2020-01-31
 tags:
     - javascript
 layout: article
@@ -30,15 +30,15 @@ const listWithDups = [
 
 We want to be able to loop through this data as few times as possible in order to remove that duplicate entry.
 
-## Requirements
+## Steps
 
-There are a few things that we are going to need in order to solve this problem. First, I'm going to build a new array that contains unique items. Second, I'm going to need a way to keep track of the items that I have already seen. And third, I'm going to need a way to iterate through the data.
+There are a few things that we are going to need in order to solve this problem. First, we're going to need a new array to which we'll add unique items. Second, we're going to need a way to keep track of the items that we have already seen. And third, we're going to need a way to iterate through the data.
 
 Let's look at those one at a time.
 
 ## New array
 
-For this process, I want this to create a new unique array without modifying the original. This is a good practice, because it gives you the ability to compare your data down the road.
+For this process, we want this to create a new unique array without modifying the original. This is a good practice, because it gives you the ability to compare your data down the road.
 
 ```js
 const uniqueList = []
@@ -52,7 +52,7 @@ In order to know if an object is unique, we need to know all of the keys that we
 
 There are a few different data types that we could use, but the best option here is an object; they're perfect for looking up information based on a known key.
 
-This object only exists to track those keys. It will not be returned and no other process depends on its information. That makes it a [temporary variable](https://en.wikipedia.org/wiki/Temporary_variable) and we should name it as such:
+This object only exists to track those keys. It will not be returned and no other process depends on its information. That makes it a [temporary variable](https://en.wikipedia.org/wiki/Temporary_variable), and we should name it as such:
 
 ```js
 const temp = {}
@@ -62,7 +62,7 @@ For every object in our list, we'll check to see if their `name` key exists on o
 
 ## Iterate
 
-Since we are going to be iterating through data, the easiest^[YMMV] way to do that is with a `for` loop. I'm going to use a [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) here because I don't care about the index number:
+Since we are going to be iterating through data, the easiest^[YMMV] way to do that is with a `for` loop. We're going to use a [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) here because we don't care about the index number:
 
 ```js
 for (let item of listWithDups) {
@@ -76,7 +76,7 @@ Now we can go about implementing the steps above.
 
 Since we're using our `temp` object to track all of the items that we have already encountered, we can check to see if each item's `name` exists as a key on `temp`.
 
-Note: We haven't written the logic to add items to `temp` yet, but I know that this is how I want my application to work.
+Note: We haven't written the logic to add items to `temp` yet, but we know that this is how we want the application to work.
 
 ```js/2
 for (let item of listWithDups) {
@@ -97,6 +97,14 @@ for (let item of listWithDups) {
 }
 ```
 
+Once that loop has run, we will have built our `uniqueItems` array without duplicating any values. We have successfully de-duped our array with only a single iteration!
+
 ## Sample
 
-<!-- <iframe height="400px" width="100%" src="https://repl.it/@SeanMcP/Unique-items-in-array?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> -->
+Here is a Repl of the solution. Feel free to fork it, make improvements, and [share your code with me](https://twitter.com/snmcp).
+
+<iframe height="400px" width="100%" src="https://repl.it/@SeanMcP/Unique-items-in-array?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+Happy coding!
+
+Job 23:13 (SDG)
