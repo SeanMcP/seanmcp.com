@@ -15,8 +15,14 @@ templateClass: Page
 
 ## Workshops
 
+### 2020
+
+- Publishing to npm - Niche
+- The Right Abstraction - Niche
+
 ### 2019
 
+- Async Data Fetching in React - Niche
 - Modern State Management in React - Niche
 - Layouts with CSS Grid - Niche
 - Avoiding "Prop Drilling" - TSYS
