@@ -20,7 +20,7 @@ Listed alphabetically:
 - [`a11y-react-emoji`](https://npm.im/a11y-react-emoji): An accessible emoji component for React applications
 - [`class-list-builder`](https://npm.im/class-list-builder): An easier way to build a list of classes
 - [`onkey-event-manager`](https://npm.im/onkey-event-manager): Easily make onkey functions to keyboard events
-- [`usekey-event-manager`](https://npm.im/usekey-event-manager): Easily map keyboard functions to window listeners
 - [`svelte-emoji`](https://npm.im/svelte-emoji): An accessible emoji component for Svelte applications
+- [`usekey-event-manager`](https://npm.im/usekey-event-manager): Easily map keyboard functions to window listeners
 
 Hebrews 13:16 (SDG)
