@@ -1,6 +1,6 @@
 ---
 title: Write a draft script for your SSG blog
-description: 
+description: Easily spin up a new article when you don't have a CMS
 date: 2020-01-31
 tags:
     - bash
@@ -44,7 +44,7 @@ title:
 description: 
 date: 2020-01-01
 tags:
-    - 
+    - SAMPLE_TAG
 layout: article
 ---
 ```
@@ -55,7 +55,7 @@ I hard coded the date because I have a hard time remembering the YYYY-MM-DD form
 
 Now that I have a template to reference, all I really need to do is write a simple script to copy that file to the `articles/` directory. I added the following code to a `create-draft.sh` file in the root directory:
 
-```sh
+```bash
 #!/usr/bin/env bash
 
 title=draft
@@ -86,7 +86,7 @@ I added a `draft` script to packages.json:
 
 Once that was in place, I could call my script by running:
 
-```sh
+```
 npm run draft my-new-article
 ```
 
