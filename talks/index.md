@@ -15,17 +15,16 @@ templateClass: Page
 
 ## Workshops
 
-### 2020
-
 - Publishing to npm - Niche
-- The Right Abstraction - Niche
+- What's in a node module? - TSYS
 
-### 2019
+## Lightning Talks
 
-- Async Data Fetching in React - Niche
-- Modern State Management in React - Niche
-- Layouts with CSS Grid - Niche
-- Avoiding "Prop Drilling" - TSYS
+- The Right Abstraction
+- Async Data Fetching in React
+- Modern State Management in React
+- Layouts with CSS Grid
+- Avoiding "Prop Drilling"
 
 ## Meetups
 
