@@ -6,3 +6,23 @@
 .Hero--article {
   padding: 1rem 0;
 }
+
+.Hero--with-image {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.Hero--with-image .ContentContainer {
+    margin-top: 50vh;
+}
+
+.Hero--with-image .Article__header {
+  background: black;
+  display: inline-block;
+  margin: -0.5rem;
+  padding: 0.5rem;
+}
+
+.Hero--with-image .Date {
+    padding-top: 0;
+}
