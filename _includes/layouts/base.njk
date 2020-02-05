@@ -3,13 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ renderData.title or title or metadata.title }} - SeanMcP.com</title>
-        <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:creator" content="@snmcp">
-        <meta name="twitter:title" content="{{ renderData.title or title or metadata.title }}">
-        <meta name="twitter:description" content="{{ renderData.description or description or metadata.description }}">
-        <meta name="twitter:image" content="{{ image | url | absoluteUrl(metadata.url) if image else 'img/seanmcp_illustration.png' | url | absoluteUrl(metadata.url) }}">
+        {% include "partials/meta-info.njk" %}
         <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
         <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
         <link rel="shortcut icon" href="{{ '/img/seanmcp_illustration.png' | url }}" type="image/png">
