@@ -1,48 +1,48 @@
-.Footer {
+.footer {
   background: var(--dark);
   color: var(--text-alt);
 }
 
-.Footer__content {
+.footer__content {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
 }
 
 @media screen and (max-width: 672px) {
-  .Footer__content {
+  .footer__content {
     grid-template-columns: initial;
   }
 }
 
-.Footer__block-title {
+.footer__block-title {
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
   margin-top: 0rem;
 }
 
-.Footer__block nav a {
+.footer__block nav a {
   align-items: center;
   color: var(--text-alt);
   display: flex;
   text-decoration: none;
 }
 
-.Footer__block nav a:not(:last-of-type) {
+.footer__block nav a:not(:last-of-type) {
   margin-bottom: 0.25rem;
 }
 
-.Footer__block nav a:hover,
-.Footer__block nav a:focus {
+.footer__block nav a:hover,
+.footer__block nav a:focus {
   text-decoration: underline;
 }
 
-.Footer__block nav a svg {
+.footer__block nav a svg {
   margin-right: 0.5rem;
 }
 
-.Footer__block p {
+.footer__block p {
   line-height: 1rem;
   margin: 0;
 }

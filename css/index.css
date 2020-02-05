@@ -11,7 +11,7 @@
 /* Block-level styles */
 @import 'blocks/header.css';
 @import 'blocks/Nav.css';
-@import 'blocks/Footer.css';
+@import 'blocks/footer.css';
 @import 'blocks/Article.css';
 @import 'blocks/ArticleList.css';
 @import 'blocks/SocialShare.css';
