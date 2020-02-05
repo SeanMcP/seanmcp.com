@@ -1,14 +1,14 @@
-.Bio {
+.bio {
   background: var(--gray300);
 }
 
-.Bio__content {
+.bio__content {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 8rem 1fr;
 }
 
-.Bio__image {
+.bio__image {
   border: 0.25rem solid white;
   border-radius: 16rem;
   margin: 0 auto;
@@ -17,7 +17,7 @@
 }
 
 @media screen and (max-width: 672px) {
-  .Bio__content {
+  .bio__content {
     grid-template-columns: initial;
   }
 }
