@@ -4,6 +4,7 @@ description: Kicking off 2020 with (yet another) new handle
 date: 2020-01-28
 tags:
     - Twitter
+verse: 1 Timothy 6:6
 layout: article
 ---
 
@@ -40,7 +41,5 @@ As you can probably guess, we had a good time coming up with the punnier options
 After much internal deliberation, I settled on [`@snmcp`](https://twitter.com/snmcp). First, it's as close to my brand as possible. Second, it doesn't add additional words, letters, or symbols. And third, it's short and quick to type.
 
 At first I didn't like the look of the new handle, but after a few weeks it's starting to grow on me. I'm hoping that, starting this new decade, I will finally be content on Twitter (LW).
-
-1 Timothy 6:6 (SDG)
 
 [^1]: Like Barnabas, which means ["son of encouragement"](https://www.biblegateway.com/passage/?search=Acts+4%3A36-37&version=NKJV)
