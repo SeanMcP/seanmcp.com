@@ -1,4 +1,4 @@
-.TagList li:not(:last-of-type) {
+.tag-list li:not(:last-of-type) {
     margin-right: 0.5rem;
 }
 

@@ -14,8 +14,8 @@
 @import 'blocks/footer.css';
 @import 'blocks/Article.css';
 @import 'blocks/ArticleList.css';
-@import 'blocks/SocialShare.css';
-@import 'blocks/TagList.css';
+@import 'blocks/social-share.css';
+@import 'blocks/tag-list.css';
 @import 'blocks/bio.css';
 @import 'blocks/Hero.css';
 
