@@ -35,3 +35,13 @@
 .Article__content img {
   width: 100%;
 }
+
+.article__sdg {
+    opacity: 0.5;
+    text-align: right;
+    transition: opacity 200ms ease-in-out;
+}
+
+.article__sdg:hover {
+    opacity: 0.75;
+}

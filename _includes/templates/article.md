@@ -4,5 +4,6 @@ description:
 date: <DATE>
 tags:
     - 
+verse:
 layout: article
 ---

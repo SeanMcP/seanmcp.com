@@ -19,6 +19,7 @@ templateClass: ArticleTemplate
         <div class="Article__content --clear-child-margins">
             {{ content | safe }}
         </div>
+        {% if verse %}<p class="article__sdg">{{ verse }} (SDG)</p>{% endif %}
         <footer class="Article__footer">
             {% set url = page.url | url | absoluteUrl(metadata.url) %}
             {% include "partials/social-share.njk" %}
