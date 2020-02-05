@@ -8,6 +8,6 @@ permalink: /
 <h2>Recent Articles</h2>
 
 {% set articles = collections.articles | head(-4) %}
-{% include "components/ArticleList.njk" %}
+{% include "partials/article-list.njk" %}
 
 <p><a href="{{ '/articles/' | url }}">View more articles</a>.</p>

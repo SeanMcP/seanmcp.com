@@ -1,26 +1,26 @@
-.ArticleList {
+.article-list {
   list-style: none;
   padding: 0;
 }
 
-li.ArticleList__item {
+li.article-list__item {
   margin-bottom: 2rem;
 }
 
-.ArticleList__item {
+.article-list__item {
   display: grid;
   gap: 0.25rem;
 }
 
-.ArticleList__item p {
+.article-list__item p {
   margin: 0;
 }
 
-.ArticleList__item .Date {
+.article-list__item .Date {
   border-bottom: none;
 }
 
-.ArticleList__link {
+.article-list__link {
   display: block;
   font-size: 1.25rem;
   font-weight: bold;
