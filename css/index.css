@@ -9,7 +9,7 @@
 @import './markdown-it.css';
 
 /* Block-level styles */
-@import 'blocks/Header.css';
+@import 'blocks/header.css';
 @import 'blocks/Nav.css';
 @import 'blocks/Footer.css';
 @import 'blocks/Article.css';

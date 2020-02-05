@@ -10,7 +10,7 @@
     </head>
     <body>
         {% set navItems = collections.nav %}
-        {% include "components/Header.njk" %}
+        {% include "partials/header.njk" %}
 
         <main id="main" role="main" class="Main {% if templateClass %}{{ templateClass }}{% endif %}">
             {{ content | safe }}

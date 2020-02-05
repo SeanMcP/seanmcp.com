@@ -1,13 +1,13 @@
-.Header {
+.header {
   background-color: var(--dark);
 }
 
-.Header .ContentContainer {
+.header .ContentContainer {
   padding-bottom: 1rem;
   padding-top: 1rem;
 }
 
-a.Header__logo {
+a.header__logo {
   font-size: 1.5rem;
   font-weight: bold;
   margin: -0.0675rem -0.25rem;
@@ -15,13 +15,13 @@ a.Header__logo {
   text-decoration: none;
 }
 
-a.Header__logo,
-a.Header__logo:visited {
+a.header__logo,
+a.header__logo:visited {
   color: white;
 }
 
-a.Header__logo:hover,
-a.Header__logo:focus {
+a.header__logo:hover,
+a.header__logo:focus {
   background: white;
   color: var(--dark);
 }
