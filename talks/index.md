@@ -15,7 +15,7 @@ templateClass: Page
 
 ## Workshops
 
-- Publishing to npm - Niche
+- [Publishing to npm](./outlines/publishing-to-npm) - Niche
 - What's in a node module? - TSYS
 
 ## Lightning Talks
