@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
   eleventyConfig.addLayoutAlias('article', 'layouts/article.njk')
+  eleventyConfig.addLayoutAlias('outline', 'layouts/outline.njk')
   eleventyConfig.addLayoutAlias('page', 'layouts/page.njk')
 
   eleventyConfig.addFilter('readableDate', dateObj => {
