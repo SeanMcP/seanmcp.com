@@ -16,7 +16,7 @@
     margin-top: 50vh;
 }
 
-.Hero--with-image .Article__header {
+.Hero--with-image .article__header {
   background: black;
   display: inline-block;
   margin: -0.5rem;

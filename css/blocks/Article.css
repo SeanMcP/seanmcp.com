@@ -1,38 +1,38 @@
-.Article__header h1 {
+.article__header h1 {
   margin-top: 1rem;
 }
 
-.Article__content {
+.article__content {
   padding-bottom: 2rem;
 }
 
-.Article__footer, .Article hr {
+.article__footer, .article hr {
   border-top: 2px solid var(--transparent-border);
 }
 
-.Article hr {
+.article hr {
   border-bottom: none;
   border-left: none;
   border-right: none;
   margin: 2rem 0;
 }
 
-.Article__footer {
+.article__footer {
   padding-top: 2rem;
   
 }
 
-.Article__tags {
+.article__tags {
   margin-top: 1rem;
 }
 
-.Article__tags_title {
+.article__tags_title {
   font-weight: bold;
   margin-right: 0.5rem;
 }
 
 
-.Article__content img {
+.article__content img {
   width: 100%;
 }
 

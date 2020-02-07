@@ -12,7 +12,7 @@
         {% set navItems = collections.nav %}
         {% include "partials/header.njk" %}
 
-        <main id="main" role="main" class="Main {% if templateClass %}{{ templateClass }}{% endif %}">
+        <main id="main" role="main" class="Main {% if templateClass %}main--{{ templateClass }}{% endif %}">
             {{ content | safe }}
         </main>
 

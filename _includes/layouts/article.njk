@@ -1,13 +1,13 @@
 ---
 layout: base
-templateClass: ArticleTemplate
+templateClass: article
 ---
 
 {% set imageUrl = image | url | absoluteUrl(metadata.url) if image else undefined %}
 
 <section class="Hero Hero--article{% if imageUrl %} Hero--with-image" style="background-image: url({{ imageUrl }}){% endif %}">
     <div class="ContentContainer">
-        <header class="Article__header --clear-child-margins">
+        <header class="article__header --clear-child-margins">
             <date class="Date">{{ date | readableDate }}</date>
             <h1>{{ title }}</h1>
         </header>
@@ -15,16 +15,16 @@ templateClass: ArticleTemplate
 </section>
 
 <div class="ContentContainer">
-    <article class="Article">
-        <div class="Article__content --clear-child-margins">
+    <article class="article">
+        <div class="article__content --clear-child-margins">
             {{ content | safe }}
         </div>
         {% if verse %}<p class="article__sdg">{{ verse }} (SDG)</p>{% endif %}
-        <footer class="Article__footer">
+        <footer class="article__footer">
             {% set url = page.url | url | absoluteUrl(metadata.url) %}
             {% include "partials/social-share.njk" %}
-            <div class="Article__tags">
-                <span class="Article__tags_title">Read more:</span>
+            <div class="article__tags">
+                <span class="article__tags_title">Read more:</span>
                 {% include "partials/tag-list.njk" %}
             </div>
         </footer>
