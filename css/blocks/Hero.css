@@ -1,28 +1,28 @@
-.Hero {
+.hero {
   background: linear-gradient(to right, var(--blue900), var(--cyanA700));
   color: white;
 }
 
-.Hero--article {
+.hero--article {
   padding: 1rem 0;
 }
 
-.Hero--with-image {
+.hero--with-image {
   background-attachment: fixed;
   background-size: cover;
 }
 
-.Hero--with-image .ContentContainer {
+.hero--with-image .ContentContainer {
     margin-top: 50vh;
 }
 
-.Hero--with-image .article__header {
+.hero--with-image .article__header {
   background: black;
   display: inline-block;
   margin: -0.5rem;
   padding: 0.5rem;
 }
 
-.Hero--with-image .Date {
+.hero--with-image .Date {
     padding-top: 0;
 }

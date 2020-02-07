@@ -17,7 +17,7 @@
 @import 'blocks/social-share.css';
 @import 'blocks/tag-list.css';
 @import 'blocks/bio.css';
-@import 'blocks/Hero.css';
+@import 'blocks/hero.css';
 
 .Main {
   flex: 1;
