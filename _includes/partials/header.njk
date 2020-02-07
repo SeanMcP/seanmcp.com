@@ -5,9 +5,9 @@
                 Sean McPherson
             </a>
         </div>
-        <nav class="Nav">
+        <nav class="nav">
             {%- for nav in navItems -%}
-                <a class="Nav__item{% if nav.url == page.url %} Nav__item--active{% endif %}" href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a>
+                <a class="nav__item{% if nav.url == page.url %} nav__item--active{% endif %}" href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a>
             {%- endfor -%}
         </nav>
     </div>

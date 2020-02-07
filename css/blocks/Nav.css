@@ -1,18 +1,18 @@
-.Nav {
+.nav {
   margin-top: 0.5rem;
 }
 
-a.Nav__item {
+a.nav__item {
   color: white;
   text-decoration: none;
 }
 
-.Nav__item:hover,
-.Nav__item--active:focus,
-a.Nav__item--active {
+.nav__item:hover,
+.nav__item--active:focus,
+a.nav__item--active {
   text-decoration: underline;
 }
 
-.Nav__item + .Nav__item {
+.nav__item + .nav__item {
   margin-left: 1rem;
 }
