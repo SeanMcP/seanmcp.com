@@ -8,7 +8,7 @@ templateClass: article
 <section class="hero hero--article{% if imageUrl %} hero--with-image" style="background-image: url({{ imageUrl }}){% endif %}">
     <div class="content-container">
         <header class="article__header --clear-child-margins">
-            <date class="Date">{{ date | readableDate }}</date>
+            <date class="date">{{ date | readableDate }}</date>
             <h1>{{ title }}</h1>
         </header>
     </div>

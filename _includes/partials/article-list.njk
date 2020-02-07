@@ -2,7 +2,7 @@
     {% for article in articles | reverse %}
         <li class="article-list__item{% if article.url == url %} article-list__item-active{% endif %}">
             <div class="Date__container">
-                <time class="Date" datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }}</time>
+                <time class="date" datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }}</time>
             </div>
             <p class="article-list__heading">
                 <a href="{{ article.url | url }}" class="article-list__link">
