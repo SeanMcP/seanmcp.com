@@ -4,7 +4,6 @@ title: Talks
 tags:
   - nav
 navTitle: Talks
-templateClass: Page
 ---
 
 ## Conferences

@@ -4,7 +4,6 @@ title: Open Source Software
 tags:
   - nav
 navTitle: OSS
-templateClass: Page
 ---
 
 I am passionate about sharing my work with the developer community. Here are some of the packages that I authored and/or maintain.

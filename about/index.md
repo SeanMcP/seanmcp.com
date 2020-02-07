@@ -4,7 +4,6 @@ title: About
 tags:
   - nav
 navTitle: About
-templateClass: Page
 ---
 
 <!-- ![A photo of Sean McPherson in a blue and white gingham button down standing in front of a muted brick wall](/img/seanmcp-headshot-2017.jpg) -->
