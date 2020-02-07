@@ -5,7 +5,7 @@ templateClass: article
 
 {% set imageUrl = image | url | absoluteUrl(metadata.url) if image else undefined %}
 
-<section class="hero hero--article{% if imageUrl %} hero--with-image" style="background-image: url({{ imageUrl }}){% endif %}">
+<section class="hero{% if imageUrl %} hero--with-image" style="background-image: url({{ imageUrl }}){% endif %}">
     <div class="content-container">
         <header class="article__header --clear-child-margins">
             <date class="date">{{ date | readableDate }}</date>

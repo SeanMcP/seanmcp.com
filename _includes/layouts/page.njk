@@ -1,16 +1,16 @@
 ---
 layout: base
-templateClass: Page
+templateClass: page
 ---
 {%- if title or renderData.title -%}
-<section class="hero hero--page">
+<section class="hero">
     <div class="content-container --clear-child-margins">
         <h1>{{ title or renderData.title }}</h1>
     </div>
 </section>
 {%- endif -%}
 <div class="content-container">
-    <div class="Page__content --clear-child-margins">
+    <div class="--clear-child-margins">
         {{ content | safe }}
     </div>
 </div>
