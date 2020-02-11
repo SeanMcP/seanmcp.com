@@ -6,6 +6,7 @@ tags:
     - scripting
     - javascript
 verse: "1 Timothy 2:5"
+image: /img/screenplay.min.jpg
 layout: article
 ---
 
@@ -13,7 +14,7 @@ As a front-end engineer, I spend a lot of time jumping in-between JavaScript pro
 
 The commands that I want to use are in the `package.json` under `"scripts"`. When I haven't memorized the common commands, I need to either open the file in my editor or use a Unix utility like `cat`.
 
-```
+```bash
 # In my editor
 code package.json
 
@@ -25,7 +26,7 @@ Both of these commands work, but they are slow. `package.json` files can be mass
 
 Instead, I wrote a short bash scripts to quickly do the work for me. Here is the code in all of its glory:
 
-```
+```bash
 #!/bin/bash
 
 if [[ -f "package.json" ]]; then
@@ -46,7 +47,7 @@ Within the script, I am using `JSON` to parse the results of a `fs.readFileSync(
 
 I set it up by running `chmod` with two flags on the file in a `scripts/` directory:
 
-```
+```bash
 chmod u+x ~/scripts/npm-scripts
 ```
 
@@ -58,7 +59,7 @@ To do that, I removed all the new lines and added semicolons to separate the sta
 
 Now I had a handy alias to share:
 
-```
+```bash
 alias ns="if [[ -f \"package.json\" ]]; then node -pe \"JSON.parse(require('fs').readFileSync('package.json').toString()).scripts\"; else echo \"There is no package.json in this directory\"; fi"
 ```
 
