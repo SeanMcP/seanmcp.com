@@ -1,6 +1,6 @@
 ---
 title: How to check npm scripts in current directory
-description: 
+description: Writing a script to read the package.json for you
 date: 2020-02-06
 tags:
     - scripting
