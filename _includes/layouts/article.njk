@@ -3,7 +3,7 @@ layout: base
 templateClass: article
 ---
 
-{% set imageUrl = image | url | absoluteUrl(metadata.url) if image else undefined %}
+{% set imageUrl = image | url if image else undefined %}
 
 <section class="hero{% if imageUrl %} hero--with-image" style="background-image: url({{ imageUrl }}){% endif %}">
     <div class="content-container">
