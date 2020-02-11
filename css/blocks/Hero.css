@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(to right, var(--blue900), var(--cyanA700));
+  background: var(--hero-background);
   color: white;
 }
 
@@ -10,10 +10,11 @@
 .hero--with-image {
   background-attachment: fixed;
   background-size: cover;
+  position: relative;
 }
 
 .hero--with-image .content-container {
-    margin-top: 50vh;
+    margin-top: 40vh;
 }
 
 .hero--with-image .article__header {
@@ -25,4 +26,13 @@
 
 .hero--with-image .date {
     padding-top: 0;
+}
+
+.hero--with-image::before {
+  background: var(--hero-background);
+  content: '';
+  height: 0.5rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }

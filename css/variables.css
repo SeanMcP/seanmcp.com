@@ -11,4 +11,5 @@
     'Lucida Console', 'DejaVu Sans Mono',
     'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
     'Courier New', Courier, monospace;
+    --hero-background: linear-gradient(to right, var(--blue900), var(--cyanA700));
   }
