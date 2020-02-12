@@ -264,6 +264,14 @@ Likewise, we were able to simplify Menu by converting it to a functional compone
 
 You can see our render prop live, in all its glory, here on CodeSandbox:
 
+<iframe
+     src="https://codesandbox.io/embed/x5j1pl90o?fontsize=14&hidenavigation=1&theme=dark&view=preview"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="How to create a render prop component"
+     allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+     sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+   ></iframe>
+
 ## Review
 
 The render props technique is a great way to abstract reusable logic into specialized components. These components pass their logic/data/methods as arguments to functions passed as props.
