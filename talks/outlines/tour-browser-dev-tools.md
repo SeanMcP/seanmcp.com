@@ -27,7 +27,7 @@ For this talk, I'm assuming have a high-level understanding of:
    - IE Dev Tools
    - Firebug
 2. Open dev tools
-   - Mac: <kbd>command</kbd> + <kbd>options</kbd> + <kbd>I</kbd>
+   - Mac: <kbd>command</kbd> + <kbd>option</kbd> + <kbd>I</kbd>
    - Windows: <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>I</kbd>
 3. Elements/Inspector
    - DOM
