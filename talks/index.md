@@ -19,7 +19,7 @@ navTitle: Talks
 
 ## Lightning Talks
 
-- [A Quick Tour of Your Browser's Dev Tools](./outlines/tour-browser-dev-tools.md)
+- [A Quick Tour of Your Browser's Dev Tools](./outlines/tour-browser-dev-tools)
 - The Right Abstraction
 - Async Data Fetching in React
 - Modern State Management in React
