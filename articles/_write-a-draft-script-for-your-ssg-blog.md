@@ -16,15 +16,15 @@ For a blogging platform, it's pretty neat. I enjoy being able to run the whole s
 
 The secret sauce behind markdown-based sites is the frontmatter: specially formatted content at the top of a markdown file that is read by the generator. Here's what the frontmatter for a typical article looks like:
 
-```md
+```markdown
 ---
 title: Add event listener for class change
 description: How to create a custom event listener for class names using the MutationObserver API
 date: 2019-05-10
+layout: article
 tags:
     - JavaScript
     - Web
-layout: article
 ---
 
 <!-- Start writing your article here -->
@@ -38,14 +38,14 @@ Formatting and required fields are not something that I care to remember, so I w
 
 Most static-site generators will have a directory for you to store some files that are excluded from the build process. For Eleventy, that default directory is `_includes/`. I added a subdirectory for `templates/` and added an `article.md`. All it contains is the bare-bones frontmatter for a new article:
 
-```md
+```markdown
 ---
 title:
 description: 
 date: 2020-01-01
+layout: article
 tags:
     - SAMPLE_TAG
-layout: article
 ---
 ```
 
