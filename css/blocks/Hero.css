@@ -9,6 +9,7 @@
 
 .hero--with-image {
   background-attachment: fixed;
+  background-position: center;
   background-size: cover;
   position: relative;
 }
