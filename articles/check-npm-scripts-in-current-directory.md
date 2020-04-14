@@ -2,6 +2,7 @@
 title: How to check npm scripts in current directory
 description: Writing a script to read the package.json for you
 date: 2020-02-06
+update: 2020-04-14
 tags:
     - scripting
     - javascript
@@ -64,3 +65,26 @@ alias ns="if [[ -f \"package.json\" ]]; then node -pe \"JSON.parse(require('fs')
 ```
 
 Overall, I'm pretty happy with this utility. Going forward, I would like to extend it so that you can lookup and key on `package.json` by passing an argument.
+
+## Update – Apr 4, 2020
+
+I created a new script to which you could pass an argument to pick a key from the `package.json`. This script is in zsh, but I think it ports to bash:
+
+```bash
+# rpj - Read package.json
+function rpj () {
+  if [[ -f "package.json" ]]; then
+      node -pe "JSON.parse(require('fs').readFileSync('package.json').toString())['$1' || 'scripts']"
+  else
+      echo "There is no `package.json` in this directory"
+  fi
+}
+```
+
+Note how the shell arguments need to be wrapped in `''` in order to work. Otherwise JavaScript thinkgs that it is looking for a variable, which is undefined.
+
+If no argument is provided, then it falls back to printing the scripts which is probably the most common use case for me.
+
+I also named the new function `rpj` for "Read `package.json`" to avoid any [confusion with name servers](https://en.wikipedia.org/wiki/Name_server).
+
+For the next iteration, I would like to handle errors, but that is a project for another day.
