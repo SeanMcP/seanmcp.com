@@ -22,10 +22,10 @@ h3 {
   font-size: 1.25rem;
 }
 h4 {
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 h5 {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 h6 {
   font-size: 0.75rem;
@@ -42,4 +42,8 @@ blockquote p {
   font-style: italic;
   line-height: 1.25;
   margin: 0;
+}
+
+li:not(:last-of-type) {
+  margin-bottom: 0.5rem;
 }
