@@ -23,9 +23,7 @@
 }
 
 .footer__block nav a {
-  align-items: center;
   color: var(--text-alt);
-  display: flex;
   text-decoration: none;
 }
 
@@ -36,10 +34,6 @@
 .footer__block nav a:hover,
 .footer__block nav a:focus {
   text-decoration: underline;
-}
-
-.footer__block nav a svg {
-  margin-right: 0.5rem;
 }
 
 .footer__block p {
