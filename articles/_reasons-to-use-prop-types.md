@@ -3,7 +3,7 @@ title: Reasons to use prop-types
 description:
 date: 2019-06-27
 tags:
-  - React
+  - react
 layout: article
 ---
 

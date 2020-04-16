@@ -3,7 +3,7 @@ title: What to include in every node module
 description: 
 date: 2020-02-03
 tags:
-    - node modules
+    - node-modules
 layout: article
 ---
 

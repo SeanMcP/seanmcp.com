@@ -46,6 +46,7 @@ ul.--inline-list {
 
 ul.--inline-list li {
   display: inline-block;
+  margin-bottom: 1.25rem; /* This is a magic number, but makes a standard gutter */
 }
 
 @media screen and (max-width: 672px) {

@@ -6,7 +6,7 @@ tags:
     - bash
     - node
     - blog
-    - static site
+    - static-site
 layout: article
 ---
 

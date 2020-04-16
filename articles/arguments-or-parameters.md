@@ -3,7 +3,7 @@ title: Arguments or parameters?
 description: An attempt to remember the difference between the two
 date: 2019-07-30
 tags:
-  - Programming
+  - programming
 layout: article
 ---
 
