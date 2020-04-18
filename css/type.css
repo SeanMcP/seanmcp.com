@@ -47,3 +47,7 @@ blockquote p {
 li:not(:last-of-type) {
   margin-bottom: 0.5rem;
 }
+
+li ol, li ul {
+  margin-top: 0.5rem;
+}
