@@ -8,7 +8,11 @@ templateClass: article
 <section class="hero{% if imageUrl %} hero--with-image" style="background-image: url({{ imageUrl }}), var(--hero-background){% endif %}">
     <div class="content-container">
         <header class="article__header --clear-child-margins">
-            <date class="date">{{ date | readableDate }}</date>
+            {% if date %}
+                <date class="date">{{ date | readableDate }}</date>
+            {% else %}
+                <span class="date">Garden</span>
+            {% endif %}
             <h1>{{ title }}</h1>
         </header>
     </div>
