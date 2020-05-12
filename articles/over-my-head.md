@@ -1,6 +1,7 @@
 ---
 title: Over my head
 description: A list of articles, topics, and resources that are currently over my head
+date: 2020-04-24
 tags:
     - professional-development
     - garden
