@@ -2,6 +2,15 @@
   margin-top: 1rem;
 }
 
+.article__header h1 a {
+  color: white;
+  opacity: 0;
+}
+
+.article__header h1:hover a {
+  opacity: 1;
+}
+
 .article__content {
   padding-bottom: 2rem;
 }
