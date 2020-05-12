@@ -107,7 +107,7 @@ module.exports = function(eleventyConfig) {
     // This is only used for URLs (it does not affect your file structure)
     pathPrefix: '/',
 
-    markdownTemplateEngine: 'liquid',
+    markdownTemplateEngine: 'html',
     htmlTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
     passthroughFileCopy: true,
