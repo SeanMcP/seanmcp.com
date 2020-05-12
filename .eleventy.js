@@ -19,6 +19,10 @@ module.exports = function(eleventyConfig) {
     }).toFormat('DD')
   })
 
+  eleventyConfig.addFilter('log', value => {
+    console.log(value)
+  })
+
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter('htmlDateString', dateObj => {
     return DateTime.fromJSDate(dateObj, {
