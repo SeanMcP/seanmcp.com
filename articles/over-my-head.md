@@ -15,6 +15,7 @@ It is my goal to return to this page and move things from "are" over my head to 
 ## Are
 
 - [_Profiling React.js Performance_](https://addyosmani.com/blog/profiling-react-js/) by Addy Osmani
+- [_IndieWeb Link Sharing_](https://mxb.dev/blog/indieweb-link-sharing/) by Max Böck
 
 ## Were
 
