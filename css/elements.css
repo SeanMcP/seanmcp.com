@@ -59,3 +59,10 @@ a:active {
 a:visited {
   color: var(--blue900);
 }
+
+hr {
+  background: var(--border-color);
+  border: none;
+  height: 1px;
+  margin: 2rem 0;
+}
