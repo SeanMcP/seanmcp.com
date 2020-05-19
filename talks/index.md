@@ -2,7 +2,7 @@
 layout: page
 title: Talks
 tags:
-  - nav
+  - secondary-nav
 navTitle: Talks
 ---
 
