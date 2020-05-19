@@ -11,7 +11,7 @@ templateClass: article
             {% if "garden" in tags %}
                 <span class="date">Garden</span>
             {% else %}
-                <time class="date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</date>
+                <time class="date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
             {% endif %}
             <h1 id="title">{{ title }}</h1>
         </header>
