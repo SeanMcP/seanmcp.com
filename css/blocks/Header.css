@@ -58,9 +58,8 @@ a.home-link:focus .home-link__text {
 }
 
 @media screen and (max-width: 374px) {
-  .header .content-container {
-    display: grid;
-    gap: 1rem;
+  .home-link__text {
+    display: none;
   }
 }
 
