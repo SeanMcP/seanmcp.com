@@ -1,7 +1,3 @@
-.nav {
-  margin-top: 0.5rem;
-}
-
 a.nav__item {
   color: white;
   text-decoration: none;
@@ -10,7 +6,7 @@ a.nav__item {
 .nav__item:hover,
 .nav__item--active:focus,
 a.nav__item--active {
-  text-decoration: underline;
+  border-bottom: 2px solid white;
 }
 
 .nav__item + .nav__item {

@@ -1,10 +1,9 @@
 <header class="header">
-    <div class="content-container">
-        <div class="header__logo-container">
-            <a class="header__logo" href="{{ '/' | url }}">
-                Sean McPherson
-            </a>
-        </div>
+    <div class="content-container header__content">
+        <a class="home-link" href="{{ '/' | url }}">
+            <img class="home-link__image" src="/img/seanmcp.min.webp" alt="headshot" />
+            <span class="home-link__text">Sean McP</span>
+        </a>
         <nav class="nav">
             {%- for nav in navItems -%}
                 <a class="nav__item{% if nav.url == page.url %} nav__item--active{% endif %}" href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a>
