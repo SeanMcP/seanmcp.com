@@ -16,14 +16,11 @@
 }
 
 .article__footer, .article hr {
-  border-top: 2px solid var(--transparent-border);
+  border-top: var(--border);
 }
 
 .article hr {
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  margin: 2rem 0;
+  background: none;
 }
 
 .article__footer {
@@ -46,8 +43,8 @@
 }
 
 .article__content hr {
-  border-top: 4px dotted rgba(0, 0, 0, 0.125);
-  max-width: 1rem;
+  border-top: 4px dotted var(--gray300);
+  max-width: 1.5rem;
   margin-left: auto;
   margin-right: auto;
 }
