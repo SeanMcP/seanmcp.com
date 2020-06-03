@@ -2,7 +2,7 @@
 layout: page
 title: Open Source Software
 tags:
-  - secondary-nav
+  - nav
 navTitle: OSS
 ---
 
