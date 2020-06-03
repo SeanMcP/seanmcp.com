@@ -57,12 +57,6 @@ a.home-link:focus .home-link__text {
   padding: 0.0625rem 0.25rem;
 }
 
-@media screen and (max-width: 374px) {
-  .home-link__text {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 500px) {
   a.home-link {
     --image-size: 2rem;
