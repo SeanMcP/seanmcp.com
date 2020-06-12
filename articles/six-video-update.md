@@ -4,7 +4,7 @@ description: Lessons learned from publishing six videos on YouTube
 date: 2020-06-12
 tags:
     - youtube
-verse:
+verse: Exodus 20:9
 ---
 
 A few weeks ago, I wrote about [publishing my first YouTube video](./publishing-my-first-youtube-video). In that article, I included my reasoning and what I hoped to gain from it.
