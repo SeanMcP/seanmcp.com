@@ -2,7 +2,7 @@
 {% set pageDescription = renderData.description or description or metadata.description %}
 {% set pageTitle = renderData.title or title or metaData.title %}
 {% set siteTitle = "SeanMcP.com" %}
-{% set socialImage = image | url | absoluteUrl(metadata.url) if image else 'img/seanmcp_illustration.png' | url | absoluteUrl(metadata.url) %}
+{% set socialImage = image | url | absoluteUrl(metadata.url) if image else 'img/seanmcp.favicon.png' | url | absoluteUrl(metadata.url) %}
 
 <title>{{ pageTitle }} - {{ siteTitle }}</title>
 <meta property="og:site_name" content="{{ siteTitle }}" />
