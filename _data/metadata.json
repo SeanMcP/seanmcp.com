@@ -1,9 +1,9 @@
 {
   "title": "Sean McPherson",
   "url": "https://seanmcp.com/",
-  "description": "Sean McPherson is a software engineer and educator living in Pittsburgh, PA.",
+  "description": "Sean McPherson is a software engineer and educator focused on front-end development.",
   "feed": {
-    "subtitle": "Sean McPherson is a software engineer and living in Pittsburgh, PA.",
+    "subtitle": "Sean McPherson is a software engineer and educator focused on front-end development.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "url": "https://seanmcp.com/feed/feed.xml",
