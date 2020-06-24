@@ -7,7 +7,7 @@
   z-index: 10;
 }
 
-.header::after {
+#scroll-progress {
   background: var(--hero-background);
   content: '';
   left: 0;
@@ -15,6 +15,14 @@
   position: absolute;
   right: 0;
   top: 100%;
+}
+
+#scroll-progress span {
+  background: hsla(0, 0%, 13%, 50%);
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 100%; /* Initially */
 }
 
 .header .content-container {
