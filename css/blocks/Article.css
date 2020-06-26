@@ -51,11 +51,12 @@
 }
 
 .article__sdg {
-    opacity: 0.5;
+    margin-top: 0;
+    opacity: 0.125;
     text-align: right;
     transition: opacity 200ms ease-in-out;
 }
 
 .article__sdg:hover {
-    opacity: 0.75;
+    opacity: 0.5;
 }
