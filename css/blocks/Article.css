@@ -16,7 +16,8 @@
   padding-bottom: 2rem;
 }
 
-.article__footer, .article hr {
+.article__footer,
+.article hr {
   border-top: var(--border);
 }
 
@@ -26,7 +27,6 @@
 
 .article__footer {
   padding-top: 2rem;
-  
 }
 
 .article__tags {
@@ -37,7 +37,6 @@
   font-weight: bold;
   margin-right: 0.5rem;
 }
-
 
 .article__content img {
   width: 100%;
@@ -51,12 +50,28 @@
 }
 
 .article__sdg {
-    margin-top: 0;
-    opacity: 0.125;
-    text-align: right;
-    transition: opacity 200ms ease-in-out;
+  display: block;
+  margin-top: 0;
+  text-align: right;
 }
 
-.article__sdg:hover {
-    opacity: 0.5;
+.article__sdg a {
+  color: var(--text);
+  opacity: 0.125;
+  text-decoration: none;
+  transition: opacity 200ms ease-in-out;
+}
+
+.article__sdg a:focus,
+.article__sdg a:hover {
+  opacity: 0.5;
+}
+
+.article__sdg a:focus {
+  outline: 2px solid dodgerblue;
+  outline-offset: 0.25rem;
+}
+
+.article__sdg a:hover {
+  text-decoration: underline;
 }

@@ -23,7 +23,7 @@ templateClass: article
         <div class="article__content --clear-child-margins">
             {{ content | safe }}
         </div>
-        {% if verse %}<p class="article__sdg">{{ verse }} (SDG)</p>{% endif %}
+        {% if verse %}<p class="article__sdg"><a href="https://esv.org/{{verse}}">{{ verse }} (SDG)</a></p>{% endif %}
         <footer class="article__footer">
             {% set url = page.url | url | absoluteUrl(metadata.url) %}
             {% include "partials/social-share.njk" %}
