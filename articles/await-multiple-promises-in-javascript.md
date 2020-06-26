@@ -6,7 +6,7 @@ tags:
     - javascript
     - promises
     - await
-verse:
+verse: Isaiah 40:31
 ---
 
 Let's say I have two promises: the former resolves in three seconds, while the latter resolves in five. I need to wait for both of these before moving on to the next code block.
