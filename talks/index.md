@@ -3,14 +3,15 @@ layout: page
 title: Talks
 ---
 
+Since 2018, I have given conference talks, lightning talks, and lead workshops on all areas of front-end development. Here are some topics that I've discussed and links to outlines:
+
 ## Conferences
 
-### Connect Tech 2019 - Atlanta, GA
-
-"React && Accessibility: Creating accessible React applications for everyone"
+- _React && Accessibility: Creating accessible React applications for everyone_ at **Connect Tech 2019** (Atlanta, GA)
 
 ## Workshops
 
+- Building a modern React App - Niche
 - [Publishing to npm](./outlines/publishing-to-npm) - Niche
 - What's in a node module? - TSYS
 
@@ -25,7 +26,5 @@ title: Talks
 
 ## Meetups
 
-### Jr Devs - Peachtree Corners, GA
-
-- Intro to CSS Animations
-- CSS Variables
+- _Intro to CSS Animations_ at **Jr Devs** (Peachtree Corners, GA)
+- _CSS Variables_ at **Jr Devs** (Peachtree Corners, GA)
