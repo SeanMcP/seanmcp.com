@@ -1,9 +1,6 @@
 ---
 layout: page
 title: Talks
-tags:
-  - nav
-navTitle: Talks
 ---
 
 ## Conferences

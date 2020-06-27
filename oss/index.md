@@ -1,9 +1,6 @@
 ---
 layout: page
 title: Open Source Software
-tags:
-  - nav
-navTitle: OSS
 ---
 
 I am passionate about sharing my work with the developer community. Here are some of the packages that I authored and/or maintain.
