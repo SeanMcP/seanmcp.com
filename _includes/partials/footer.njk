@@ -11,19 +11,10 @@
                 <div class="footer__block-title">
                     Follow
                 </div>
-                <nav aria-label="social links">
-                    <a href="https://github.com/seanmcp">
-                        GitHub
-                    </a>
-                    <a href="https://twitter.com/snmcp">
-                        Twitter
-                    </a>
-                    <a href="https://bit.ly/seanmcp-youtube">
-                        YouTube
-                    </a>
-                    <a href="https://linkedin.com/in/seanmcp">
-                        LinkedIn
-                    </a>
+                <nav aria-label="social">
+                    {% for social in socials %}
+                        <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">{{ social.name }}</a>
+                    {% endfor %}
                 </nav>
             </div>
             <div class="footer__block SDG">
