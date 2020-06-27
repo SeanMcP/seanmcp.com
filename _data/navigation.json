@@ -10,11 +10,6 @@
         "url": "/talks"
     },
     {
-        "description": "Links to some of my open-source projects",
-        "label": "OSS",
-        "url": "/oss"
-    },
-    {
         "description": "Learn more about me and my work",
         "label": "About",
         "url": "/about"
