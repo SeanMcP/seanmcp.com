@@ -4,18 +4,18 @@
             <img class="home-link__image" src="/img/seanmcp.2020.min.webp" alt="SeanMcP headshot" />
             <span class="home-link__text">Sean McP</span>
         </a>
-        <nav id="desktop-nav" class="nav">
-            {%- for nav in navItems -%}
-                <a {% if nav.url == page.url %}aria-current="true"{% endif %} class="nav__item" href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a>
+        <nav id="desktop-nav" class="nav" aria-label="primary">
+            {%- for nav in navigation -%}
+                <a {% if nav.url == page.url %}aria-current="page"{% endif %} class="nav__item" href="{{ nav.url | url }}">{{ nav.label }}</a>
             {%- endfor -%}
         </nav>
         <section id="mobile-nav">
             <button aria-label="open navigation">Menu</button>
             <div id="mobile-nav__container" hidden>
                 <button aria-label="close navigation">Close</button>
-                <nav aria-label="mobile nav">
-                    {%- for nav in navItems -%}
-                        <a {% if nav.url == page.url %}aria-current="true"{% endif %} class="mobile-nav__item" href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a>
+                <nav aria-label="primary">
+                    {%- for nav in navigation -%}
+                        <a {% if nav.url == page.url %}aria-current="page"{% endif %} class="mobile-nav__item" href="{{ nav.url | url }}">{{ nav.label }}</a>
                     {%- endfor -%}
                 </nav>
             </div>

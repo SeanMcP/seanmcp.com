@@ -1,0 +1,22 @@
+[
+    {
+        "description": "Read articles about programming",
+        "label": "Articles",
+        "url": "/articles"
+    },
+    {
+        "description": "Outlines of talks I've given and workshops I've lead",
+        "label": "Talks",
+        "url": "/talks"
+    },
+    {
+        "description": "Links to some of my open-source projects",
+        "label": "OSS",
+        "url": "/oss"
+    },
+    {
+        "description": "Learn more about me and my work",
+        "label": "About",
+        "url": "/about"
+    }
+]
