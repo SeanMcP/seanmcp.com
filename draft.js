@@ -20,7 +20,7 @@ function scrubFileName(title) {
     return fileName
 }
 
-const fileName = '_' + (title ? scrubFileName(title) : 'draft') + '.md'
+const fileName = (title ? scrubFileName(title) : 'draft') + '.md'
 const filePath = './articles/' + fileName
 const date = new Date().toISOString().split('T')[0]
 
