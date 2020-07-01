@@ -1,0 +1,5 @@
+- Don't let the spectre of developer experience draw you focus from what really matters: how your product meets the users needs
+- What is best for dev is not (necessarily) best for the end user
+- Splash page in JS framework
+  - "Disrupt payroll industry with _blazing_ fast deposits"
+  - Page barely loads on an old Android device on 3G

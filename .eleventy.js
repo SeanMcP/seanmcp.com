@@ -52,11 +52,12 @@ module.exports = function(eleventyConfig) {
     }
   })
 
-  eleventyConfig.addCollection('tagList', require('./_11ty/getTagList'))
+  eleventyConfig.addCollection('tagList', require('./src/_11ty/getTagList'))
 
-  eleventyConfig.addPassthroughCopy('img')
-  eleventyConfig.addPassthroughCopy('css')
-  eleventyConfig.addPassthroughCopy('js')
+  eleventyConfig.addPassthroughCopy('src/img')
+  eleventyConfig.addPassthroughCopy('src/css')
+  eleventyConfig.addPassthroughCopy('src/js')
+  eleventyConfig.addPassthroughCopy('src/robots.txt')
 
   /* Markdown Plugins */
   const markdownIt = require('markdown-it')
@@ -113,7 +114,7 @@ module.exports = function(eleventyConfig) {
     dataTemplateEngine: 'njk',
     passthroughFileCopy: true,
     dir: {
-      input: '.',
+      input: 'src',
       includes: '_includes',
       data: '_data',
       output: '_site'
