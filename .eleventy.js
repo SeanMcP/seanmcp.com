@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
   eleventyConfig.addLayoutAlias('article', 'layouts/article.njk')
   eleventyConfig.addLayoutAlias('index', 'layouts/index.njk')
+  eleventyConfig.addLayoutAlias('note', 'layouts/note.njk')
   eleventyConfig.addLayoutAlias('outline', 'layouts/outline.njk')
   eleventyConfig.addLayoutAlias('page', 'layouts/page.njk')
 

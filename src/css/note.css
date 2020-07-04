@@ -1,6 +1,6 @@
-body[data-page-type="note"] article {
+/* body[data-page-type="note"] article {
     font-family: Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
-}
+} */
 
 body[data-page-type="note"] h1 {
     align-items: flex-start;
@@ -8,10 +8,46 @@ body[data-page-type="note"] h1 {
     flex-direction: column;
 }
 
-body[data-page-type="note"] h1 span:first-of-type {
-    border-bottom: 2px solid black;
+body[data-page-type="note"] h1 span {
+    border-bottom: 2px solid var(--text);
     font-size: 1rem;
     margin-bottom: 0.25rem;
     padding-bottom: 0.25rem;
     text-transform: uppercase;
+}
+
+.note__header {
+    border-bottom: 2px solid var(--text);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+.note__details {
+    padding: 0;
+    list-style-type: none;
+}
+
+.note__details li {
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 600px) {
+    .note__details {
+        display: flex;
+    }
+    
+    .note__details li + li {
+        margin-left: 1rem;
+    }
+    
+    .note__details li + li::before {
+        content: '|';
+        padding-right: 1rem;
+    }
+}
+
+body[data-page-type="note"] cite {
+    background: whitesmoke;
+    display: block;
+    padding: 0.5rem;
 }

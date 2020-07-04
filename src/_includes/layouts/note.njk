@@ -3,16 +3,34 @@ layout: base
 ---
 
 {% block head %}
-<!-- This isn't passing the content up to <head> -->
-<link rel="stylesheet" href="{{ '/css/note.css' | url }}" />
+    <!-- This isn't passing the content up to <head> -->
+    <link rel="stylesheet" href="{{ '/css/note.css' | url }}"/>
 {% endblock head %}
 
 <div class="content-container">
     <article class="article">
         <div class="article__content --clear-child-margins">
-            <h1><span>Notes on</span><span>{{ reference }}</span></h1>
-            <p>Source: <a href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ link }}</a></p>
+            <header class="note__header --clear-child-margins">
+                <h1>
+                    <span>Notes on</span>
+                    <em>{{ reference }}</em>
+                </h1>
+                <ul class="note__details">
+                    <li>
+                        <b>Author</b>:
+                        {{ author }}</li>
+                    <li>
+                        <b>Source</b>:
+                        <a href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ link }}</a>
+                    </li>
+                </ul>
+            </header>
             {{ content | safe }}
+            <hr>
+            <h2>Citation</h2>
+            <cite>{{ author }}.
+                {{ reference }}.
+                {{ link }}</cite>
         </div>
     </article>
 </div>

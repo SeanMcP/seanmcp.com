@@ -1,6 +1,6 @@
 {% set currentUrl = page.url | url | absoluteUrl(metadata.url) %}
 {% set pageDescription = renderData.description or description or metadata.description %}
-{% set pageTitle = renderData.title or title or metaData.title %}
+{% set pageTitle = renderData.title or title or metaData.title or reference %}
 {% set siteTitle = "SeanMcP.com" %}
 {% set socialImage = image | url | absoluteUrl(metadata.url) if image else 'img/seanmcp.favicon.png' | url | absoluteUrl(metadata.url) %}
 
