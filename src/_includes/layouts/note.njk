@@ -27,6 +27,12 @@ layout: base
             </header>
             {{ content | safe }}
             <hr>
+            <h2>Keywords</h2>
+            <ul class="note_keywords">
+                {% for keyword in keywords %}
+                <li>{{ keyword }}</li>
+                {% endfor %}
+            </ul>
             <h2>Citation</h2>
             <cite>{{ author }}.
                 {{ reference }}.
