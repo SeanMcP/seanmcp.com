@@ -1,5 +1,5 @@
 ---
-layout: /layouts/index.njk
+layout: index
 title: Software engineer and educator
 ---
 
