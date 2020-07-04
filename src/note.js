@@ -1,7 +1,9 @@
 const fs = require('fs')
 
+const cwd = process.cwd()
+
 try {
-    const notes = fs.readdirSync('./notes', { encoding: 'utf8' })
+    const notes = fs.readdirSync(`${cwd}/src/notes`, { encoding: 'utf8' })
 
     let highest = 0
 
@@ -15,12 +17,12 @@ try {
 
     const next = highest + 1;
 
-    const template = fs.readFileSync('./_includes/templates/note.md', { encoding: 'utf8' })
+    const template = fs.readFileSync(`${cwd}/src/_includes/templates/note.md`, { encoding: 'utf8' })
     const [date] = new Date().toISOString().split('T')
 
     const contents = template.replace('<DATE>', date)
 
-    fs.writeFileSync(`./src/notes/${next}.md`, contents)
+    fs.writeFileSync(`${cwd}/src/notes/${next}.md`, contents)
 } catch (error) {
     console.error(error)
     process.exit(0)
