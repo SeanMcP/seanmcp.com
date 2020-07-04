@@ -1,0 +1,18 @@
+---
+layout: base
+---
+
+{% block head %}
+<!-- This isn't passing the content up to <head> -->
+<link rel="stylesheet" href="{{ '/css/note.css' | url }}" />
+{% endblock head %}
+
+<div class="content-container">
+    <article class="article">
+        <div class="article__content --clear-child-margins">
+            <h1><span>Notes on</span><span>{{ reference }}</span></h1>
+            <p>Source: <a href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ link }}</a></p>
+            {{ content | safe }}
+        </div>
+    </article>
+</div>
