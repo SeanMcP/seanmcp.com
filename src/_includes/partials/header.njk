@@ -1,7 +1,11 @@
 <header class="header">
     <div class="content-container header__content">
         <a class="home-link" href="{{ '/' | url }}">
-            <img class="home-link__image" src="/img/seanmcp.2020.min.webp" alt="SeanMcP headshot" />
+            <picture>
+                <source srcset="/img/seanmcp.2020.min.webp" type="image/webp">
+                <source srcset="/img/seanmcp.2020.jpg" type="image/jpeg">
+                <img class="home-link__image" src="/img/seanmcp.2020.jpg" alt="SeanMcP headshot" />
+            </picture>
             <span class="home-link__text">Sean McP</span>
         </a>
         <nav id="desktop-nav" class="nav" aria-label="primary">

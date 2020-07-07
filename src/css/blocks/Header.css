@@ -1,4 +1,5 @@
 .header {
+  --image-size: 3rem;
   background-color: var(--dark);
   left: 0;
   position: sticky;
@@ -33,13 +34,18 @@
   padding-top: 1rem;
 }
 
+.header picture {
+  height: var(--image-size);
+  /* There are ~3px of unaccountable space without this */
+  overflow: hidden; 
+}
+
 .home-link__image {
   border-radius: var(--image-size);
   width: 100%;
 }
 
 a.home-link {
-  --image-size: 3rem;
   align-items: center;
   display: grid;
   font-weight: bold;
@@ -66,7 +72,7 @@ a.home-link:focus .home-link__text {
 }
 
 @media screen and (max-width: 500px) {
-  a.home-link {
+  .header {
     --image-size: 2rem;
   }
 }
