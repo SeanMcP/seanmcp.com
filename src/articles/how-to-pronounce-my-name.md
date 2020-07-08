@@ -5,6 +5,7 @@ date: 2019-06-15
 tags:
   - personal
 layout: article
+verse: Proverbs 18:10
 ---
 
 My name is Sean McPherson, and I have an often-mispronounced name. I wanted to take the opportunity for all those curious the history and pronunciation of my first and last names, and handle.
@@ -60,5 +61,3 @@ This article was originally posted on [SeanMcP.com](/), which you now know is re
 ## To each their own
 
 You may come across another Sean McPherson who pronounces his name differently than I do; and that's okay. It is our reasonable responsibility to learn and use the correct pronunciation of our neighbor's name to the best of our ability.
-
-Prov. 18:10 (SDG)
