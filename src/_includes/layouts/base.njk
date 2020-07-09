@@ -10,7 +10,7 @@
         {% block head %}
         {% endblock head %}
     </head>
-    <body data-page-type="{{ layout }}">
+    <body data-page-type="{{ layout }}" {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
         {% set navItems = collections.nav %}
         {% include "partials/header.njk" %}
 
