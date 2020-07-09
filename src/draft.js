@@ -14,6 +14,7 @@ function scrubFileName(title) {
     fileName = fileName.toLowerCase()
     fileName = fileName.replace(/&/g, 'and') // Removes ampersands
     fileName = fileName.replace(/\s+/g, '-') // Removes non-alphanumeric
+    fileName = fileName.replace(/,/g, '')    // Removes commas
     fileName = fileName.replace(/\\/g, '')   // Removes backslashes
     fileName = fileName.replace(/\"/g, '')   // Removes double quotes
     fileName = fileName.replace(/\'/g, '')   // Removes single quotes
@@ -21,10 +22,10 @@ function scrubFileName(title) {
 }
 
 const fileName = (title ? scrubFileName(title) : 'draft') + '.md'
-const filePath = './articles/' + fileName
+const filePath = './src/articles/' + fileName
 const date = new Date().toISOString().split('T')[0]
 
-fs.readFile('./_includes/templates/article.md', 'utf8', (err, data) => {
+fs.readFile('./src/_includes/templates/article.md', 'utf8', (err, data) => {
     if (err) {
         throw(err)
     }
