@@ -1,24 +1,30 @@
 ---
 layout: page
-permalink: /_notes/
+permalink: /notes/
 title: Notes
+bodyClass: notes
 ---
 
 <p>Use the browser's "Find" feature to search through notes.</p>
 
-<ul class="notes_list">
+<ul class="list">
     {% for note in collections._notes %}
-        <li>
-            <article>
-                {{ note.data.author}}.
-                <em>{{ note.data.reference }}</em>.
-                <a href="{{ note.data.link }}" target="_blank" rel="noopener noreferrer">{{ note.data.link }}</a>
-                <ul style="display:flex;list-style-type:none;padding:0;">
-                    {% for keyword in note.data.keywords %}
-                        <li style="background:whitesmoke;margin-right:2px;padding: 2px;">{{ keyword }}</li>
-                    {% endfor %}
-                </ul>
-            </article>
+        <li class="item">
+            <a href={{ note.url | url }}>
+                <article>
+                    <div class="item__title">
+                        <span>{{ note.data.author}}.</span>
+                        <em>{{ note.data.reference }}.</em>
+                        <span>{{ note.data.link }}</span>
+                    </div>
+                    <ul class="item__keywords">
+                        <li><b>Keywords</b>:</li>
+                        {% for keyword in note.data.keywords %}
+                            <li class="item__keyword">{{ keyword }}</li>
+                        {% endfor %}
+                    </ul>
+                </article>
+            </a>
         </li>
     {% endfor %}
 </ul>
