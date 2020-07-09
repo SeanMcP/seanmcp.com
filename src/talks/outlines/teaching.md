@@ -8,3 +8,8 @@
 - Murphy Paul, Annie. (2011). _The protégé effect_. Time: Health & Science. https://ideas.time.com/2011/11/30/the-protege-effect/
 - https://www.apa.org/gradpsych/2006/03/cover-teach
 - https://en.wikipedia.org/wiki/Learning_by_teaching
+- https://daedtech.com/how-developers-stop-learning-rise-of-the-expert-beginner/
+  - Avoid becoming an "expert beginner"
+  - Attempting to teach opens your eyes to the world of your ignorance
+  - This enables you to move to greater levels of skill acquisition
+- https://en.wikipedia.org/wiki/Dreyfus_model_of_skill_acquisition
