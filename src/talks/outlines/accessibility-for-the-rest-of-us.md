@@ -123,6 +123,7 @@
 - Higgins, Tucker. (2019). _Supreme Court hands victory to blind man who sued Domino’s over site accessibility_. CNBC. https://www.cnbc.com/2019/10/07/dominos-supreme-court.html
 - Matuzovic, Manuel. (2019). _Building the most inaccessible site possible with a perfect Lighthouse score_. https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/
 - Melendez, Steven. (2019). _Ninth Circuit court: Domino’s pizza website is bound by ADA_. Fast Company. https://www.fastcompany.com/90293399/ninth-circuit-court-dominos-pizza-website-is-bound-by-ada
+- WebAIM. (2020). _The WebAIM Million_. https://webaim.org/projects/million/
 
 ## To Reference
 
