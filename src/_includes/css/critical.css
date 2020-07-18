@@ -1,0 +1,19 @@
+/* Skiplink */
+
+.skip-link {
+    background-color: var(--blue);
+    color: white !important;
+    font-weight: bold;
+    position: fixed;
+    padding: 1rem;
+    z-index: 9999;
+}
+
+.skip-link:not(:focus) {
+    right: 200%;
+}
+
+.skip-link:focus {
+    left: 0;
+    outline: 2px dotted white;
+}
