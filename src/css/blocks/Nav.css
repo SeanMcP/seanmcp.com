@@ -16,19 +16,7 @@ a.nav__item[aria-current="true"] {
 
 /* Mobile nav */
 
-#mobile-nav {
-  display: none;
-}
-
-@media screen and (max-width: 500px) {
-  #desktop-nav {
-    display: none;
-  }
-
-  #mobile-nav {
-    display: block;
-  }
-}
+/* NOTE: Display breakpoint in _includes/critical.css */
 
 #mobile-nav button {
   background: transparent;
