@@ -3,7 +3,7 @@
         {%- if tag != "articles" -%}
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
             <li>
-                <a href="{{ tagUrl | url }}" class="Tag Tag--{{ tag }}">{{ tag }}</a>
+                <a href="{{ tagUrl | url }}" class="tag tag--{{ tag }}">{{ tag }}</a>
             </li>
         {%- endif -%}
     {% endfor %}

@@ -1,0 +1,144 @@
+/* Hero */
+
+.main--article .hero {
+  padding: 1rem 0;
+}
+
+.hero--with-image {
+  background-position: center;
+  background-size: cover;
+  height: 22rem;
+  margin: 0 auto;
+  max-width: 44rem;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 44rem) {
+  .hero--with-image {
+    margin-top: 2rem;
+  }
+}
+
+.hero--with-image .article__header {
+  --spacing: 2rem;
+  background: black;
+  bottom: var(--spacing);
+  display: inline-block;
+  left: var(--spacing);
+  margin: -0.5rem;
+  padding: 0.5rem;
+  position: absolute;
+}
+
+@media screen and (max-width: 500px) {
+  .hero--with-image {
+    height: 16rem;
+  }
+
+  .hero--with-image .article__header {
+    --spacing: 1rem;
+  }
+}
+
+.hero--with-image .date {
+  padding-top: 0;
+}
+
+/* Article */
+
+.article__header h1 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.article__header h1 a {
+  color: white;
+  opacity: 0;
+}
+
+.article__header h1:hover a {
+  opacity: 1;
+}
+
+.main--article .date {
+  border-bottom: 2px solid white;
+  padding-bottom: 0.25rem;
+}
+
+.article__content {
+  padding-bottom: 2rem;
+}
+
+.article__footer,
+.article hr {
+  border-top: var(--border);
+}
+
+.article hr {
+  background: none;
+}
+
+.article__footer {
+  padding-top: 2rem;
+}
+
+.article__tags {
+  margin-top: 1rem;
+}
+
+.article__tags_title {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.article__content img {
+  width: 100%;
+}
+
+.article__content hr {
+  border-top: 4px dotted var(--faint-gray);
+  max-width: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article__sdg {
+  display: block;
+  margin-top: 0;
+  text-align: right;
+}
+
+.article__sdg a {
+  color: var(--text-color);
+  opacity: 0.125;
+  text-decoration: none;
+  transition: opacity 200ms ease-in-out;
+}
+
+.article__sdg a:focus,
+.article__sdg a:hover {
+  opacity: 0.5;
+}
+
+.article__sdg a:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 0.25rem;
+}
+
+.article__sdg a:hover {
+  text-decoration: underline;
+}
+
+/* Social share */
+
+.social-share__title {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Bio */
+
+.bio {
+  background: var(--faint-gray);
+}

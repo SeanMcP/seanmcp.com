@@ -4,6 +4,12 @@
   --dark-blue: hsl(216, 85%, 34%);
   --red: hsl(0, 66%, 47%);
   --dark: hsl(0, 0%, 13%);
+  --accent: hsl(188, 100%, 42%);
+  --faint-gray: hsl(0, 0%, 88%);
+  --gray: hsl(0, 0%, 46%);
+  --off-white: hsl(0, 0%, 98%);
+
+  --hero-background: linear-gradient(to right, var(--dark-blue), var(--accent));
 
   --body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -11,7 +17,13 @@
     "Andale Mono", "Lucida Console", "DejaVu Sans Mono",
     "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
     "Courier New", Courier, monospace;
+  --font-small: 0.875em;
   --text-color: hsl(0, 0%, 26%);
+  --alt-text-color: var(--off-white);
+
+  --transparent-border: hsla(0, 0%, 0%, 0.125);
+  --border-color: var(--faint-gray);
+  --border: 1px solid var(--border-color);
 }
 
 html,
@@ -51,14 +63,6 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-}
-
-.--clear-child-margins > *:first-child {
-  margin-top: 0;
-}
-
-.--clear-child-margins > *:last-child {
-  margin-bottom: 0 !important;
 }
 
 /* Header */
@@ -158,4 +162,11 @@ body {
 .skip-link:focus {
   left: 0;
   outline: 2px dotted white;
+}
+
+/* Hero */
+
+.hero {
+  background: var(--hero-background);
+  color: white;
 }

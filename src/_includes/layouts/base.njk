@@ -9,7 +9,15 @@
         <link rel="shortcut icon" href="{{ '/img/seanmcp.favicon.png' | url }}" type="image/png">
         {% block head %}
         {% endblock head %}
-        <style>{% include "css/critical.css" %}</style>
+        {% set criticalStyles %}
+            {% include "css/critical.css" %}
+        {% endset %}
+        <style>{{ criticalStyles | cssmin | safe }}</style>
+        {% if styles %}
+        {% for style in styles%}
+            <link rel="stylesheet" href="{{ '/css/' + style | url }}">
+        {% endfor %}
+        {% endif %}
     </head>
     <body data-page-type="{{ layout }}" {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
         <a class="skip-link" href="#main">Skip to main content</a>

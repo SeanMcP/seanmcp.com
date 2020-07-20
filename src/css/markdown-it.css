@@ -131,44 +131,20 @@ pre[class*="language-"] > code[class*="language-"] {
   white-space: pre;
 }
 
-/* Direct Links / Markdown Headers */
-a.DirectLink {
-  text-decoration: none;
-  font-style: normal;
-  margin-left: 0.125em;
-  text-decoration: none;
-}
-
-a[href].DirectLink,
-a[href].DirectLink:visited {
-  color: transparent;
-}
-
-a[href].DirectLink:focus,
-a[href].DirectLink:focus:visited,
-:hover > a[href].DirectLink,
-:hover > a[href].DirectLink:visited {
-  color: var(--gray600);
-}
-
-a[href].DirectLink:hover {
-  color: var(--blue800);
-}
-
-.Footnotes {
+.footnotes {
   border-top: var(--border);
   margin: 2rem 0 0;
   padding: 2rem 0 0;
 }
 
-.Footnotes h5 {
+.footnotes h5 {
   margin-top: 0;
 }
 
-.Footnotes ol {
+.footnotes ol {
   padding-left: 2rem;
 }
 
-.Footnotes ol, .Footnotes li > *:last-child {
+.footnotes ol, .footnotes li > *:last-child {
   margin-bottom: 0;
 }

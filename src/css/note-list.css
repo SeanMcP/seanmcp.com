@@ -1,0 +1,49 @@
+body.notes .list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+body.notes .item {
+  margin-bottom: 0;
+}
+
+body.notes .item a {
+  border: 2px solid var(--transparent-border);
+  border-bottom-width: 4px;
+  display: block;
+  color: inherit;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+body.notes .item a:is(:focus, :hover) {
+  border-color: var(--accent);
+  transform: scale(1.025);
+  outline: 5px solid transparent;
+}
+
+@media screen and (max-width: 500px) {
+  body.notes .item__title {
+    margin-bottom: 0.5rem;
+  }
+}
+
+body.notes .item__keywords {
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-size: smaller;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+body.notes .item__keywords li {
+  margin-bottom: 0;
+  margin-right: 0.25rem;
+}
+
+body.notes .item__keyword:not(:last-child)::after {
+  content: ",";
+}
