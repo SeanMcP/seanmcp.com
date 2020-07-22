@@ -326,6 +326,7 @@ a[href].direct-link:hover {
   font-weight: bold;
   margin-bottom: 0.5rem;
   margin-top: 0rem;
+  text-transform: uppercase;
 }
 
 .footer__block nav a {
