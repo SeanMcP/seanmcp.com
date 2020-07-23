@@ -100,7 +100,8 @@ blockquote p {
 }
 
 li ol, li ul {
-  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 ul.--inline-list {
