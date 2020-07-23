@@ -1,11 +1,9 @@
 ---
 layout: outline
-title: "Lightning Talk: A Quick Tour of Your Browser's Dev Tools"
+title: A Quick Tour of Your Browser's Dev Tools
+description: This talk will take us on a quick tour through the features of the browser's dev tools and learn how to use them to do the work of a front-end engineer more effectively.
+type: lightning
 ---
-
-## Overview
-
-In this talk, we will take a quick tour through the features of your browser's dev tools and learn how to use them to do the work of a front-end engineer more effectively.
 
 ### Topics covered
 
