@@ -19,16 +19,17 @@
   - Definition
   - Individuals with disabilities
   - Types of disabilities
-- Why accessibility is important
-  - Good tools should work for everyone
-  - Curb-cut effect
-  - In many cases, it's the law
+- Why accessibility matters
+  - Accessible products are better
+    - Curb-cut effect
+  - Accessibility is a legal requirement
     - Americans with Disabilities Act
     - UN Convention on the Rights of Persons with Disabilities
       (CRPD)
     - Domino's case
-  - In the US, 12-20% of the population has a disability
-  - Temporary disabilities could affect anyone
+  - Accessibility is good for business
+    - In the US, 12-20% of the population has a disability
+    - Temporary disabilities could affect anyone
 - WCAG
   - Definition
   - History (versions)
@@ -117,12 +118,15 @@
 - Web Content Accessibility Guidelines (WCAG)
 
 ## References
+- Americans With Disabilities Act of 1990. https://www.ada.gov/pubs/adastatute08.htm
 - Deque. _Axe: Accessibility testing tools and software_. https://www.deque.com/axe/
 - Dodson, Rob. _How to do an accessibility review_. Web Fundamentals. https://developers.google.com/web/fundamentals/accessibility/how-to-review
+- Glover Blackwell, Angela. (2017). _The Curb-Cut Effect_. Stanford Social Innovation Review. https://ssir.org/articles/entry/the_curb_cut_effect
 - GoogleChrome. _lighthouse_. GitHub. https://github.com/GoogleChrome/lighthouse
 - Higgins, Tucker. (2019). _Supreme Court hands victory to blind man who sued Domino’s over site accessibility_. CNBC. https://www.cnbc.com/2019/10/07/dominos-supreme-court.html
 - Matuzovic, Manuel. (2019). _Building the most inaccessible site possible with a perfect Lighthouse score_. https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/
 - Melendez, Steven. (2019). _Ninth Circuit court: Domino’s pizza website is bound by ADA_. Fast Company. https://www.fastcompany.com/90293399/ninth-circuit-court-dominos-pizza-website-is-bound-by-ada
+- W3C. (2018). _Web Content Accessibility Guidelines (WCAG) 2.1_. https://www.w3.org/TR/WCAG21/
 - WebAIM. (2020). _The WebAIM Million_. https://webaim.org/projects/million/
 
 ## To Reference
