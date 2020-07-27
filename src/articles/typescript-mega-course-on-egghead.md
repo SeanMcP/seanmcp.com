@@ -9,6 +9,10 @@ tags:
 verse: Romans 5:14,15
 ---
 
+_This playlist has been updated. [Check out the latest version of my TypeScript "mega-course" on Egghead.io](./updated-typescript-mega-course-on-egghead)._
+
+---
+
 I would say that I have "functional" understanding of TypeScript. I can get the job done (at least most of the time), but as soon as the types get hairy I struggle.
 
 As TypeScript contiues grow in popularity, this will become a liability. To fix this, I have set a professional goal to improve my understanding of TypeScript.
