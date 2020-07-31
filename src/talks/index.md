@@ -7,6 +7,7 @@ Since 2018, I have given conference talks, lightning talks, and lead workshops o
 
 ## Conferences
 
+- [_Accessibility for the rest of us_](./accessibility-for-the-rest-of-us) at **Pittsburgh TechFest 2020** (Pittsburgh, PA)
 - _React && Accessibility: Creating accessible React applications for everyone_ at **Connect Tech 2019** (Atlanta, GA)
 
 ## Workshops

@@ -1,3 +1,11 @@
+---
+layout: outline
+title: Accessibility for the rest of us
+description: This talk covers accessibility, why it's important, the WCAG standards, common accessibility tasks, and recommendations for building accessible products.
+type: conference
+slides: https://docs.google.com/presentation/d/1iSlV4b56TeXawKv_XlnixdsO1d4U7QScuMa5bNuTCqY/edit?usp=sharing
+---
+
 ## Outline
 
 ### Intro
@@ -132,5 +140,4 @@
 - W3C. (2018). _Web Content Accessibility Guidelines (WCAG) 2.1_. https://www.w3.org/TR/WCAG21/
 - WebAIM. (2020). _The WebAIM Million_. https://webaim.org/projects/million/
 
-## To Reference
-
+<!-- ## To Reference -->
