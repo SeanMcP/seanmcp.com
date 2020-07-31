@@ -11,7 +11,7 @@ styles:
 {% set imageUrl = image | url if image else undefined %}
 
 <section class="hero{% if imageUrl %} hero--with-image" style="background-image: url({{ imageUrl }}), var(--hero-background){% endif %}">
-    <div class="content-container">
+    <div class="container --content">
         <header class="article__header --clear-child-margins">
             {% if "garden" in tags %}
                 <span class="date">Garden</span>
@@ -23,7 +23,7 @@ styles:
     </div>
 </section>
 
-<div class="content-container">
+<div class="container --content">
     <article class="article">
         <div class="article__content --clear-child-margins">
             {{ content | safe }}

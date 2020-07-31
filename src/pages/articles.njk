@@ -4,7 +4,11 @@ permalink: /articles/
 title: Articles
 ---
 
+<p>To search for a particular topic, use your browser's "Find" feature.</p>
+<p>You can also
+    <a href="{{ '/feed/feed.xml' | url }}">subscribe to the RSS feed</a>.</p>
+
+<hr>
+
 {% set articles = collections.articles %}
 {% include "partials/article-list.njk" %}
-
-<a href="{{ '/feed/feed.xml' | url }}">Subscribe to RSS feed</a>

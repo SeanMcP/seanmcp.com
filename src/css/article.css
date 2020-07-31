@@ -1,9 +1,5 @@
 /* Hero */
 
-.main--article .hero {
-  padding: 1rem 0;
-}
-
 .hero--with-image {
   background-position: center;
   background-size: cover;
@@ -48,7 +44,6 @@
 /* Article */
 
 .article__header h1 {
-  font-size: 2.5rem;
   margin-top: 1rem;
 }
 
