@@ -88,6 +88,9 @@
 - Auditing
   - Automated (good)
     - `jsx-a11y`
+    - `react-axe` & `vue-axe`,
+    - Svelte
+    - Axe & Wave browser extensions
     - Lighthouse CLI
   - Manual automation
     - Wave extension
