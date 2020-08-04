@@ -42,7 +42,7 @@
     }
 
     function handleLastAnchor(e) {
-        if (e.key === 'Tab') {
+        if (e.key === 'Tab' && !e.shiftKey) {
             e.preventDefault()
             firstAnchor.focus()
         }
