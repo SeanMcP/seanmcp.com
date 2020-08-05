@@ -18,7 +18,7 @@ function scrubFileName(title) {
     fileName = fileName.replace(/\\/g, '')   // Removes backslashes
     fileName = fileName.replace(/\"/g, '')   // Removes double quotes
     fileName = fileName.replace(/\'/g, '')   // Removes single quotes
-    fileName = fileName.replace(/?/g, '')    // Removes question marks
+    fileName = fileName.replace(/\?/g, '')    // Removes question marks
     return fileName
 }
 
