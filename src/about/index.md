@@ -11,7 +11,7 @@ I am interested in all areas of front-end development and am always looking for 
 
 Since joining the tech industry, I have:
 
-- Given a talk on "React && Accessibility" at CONNECT.TECH Conference
+- Given conference talks on accessibility and React in Atlanta and Pittsburgh
 - Published open source libraries with tens of thousands of downloads on npm
 - Lead workshops on React and the JavaScript ecosystem
 - Given lightning talks at Jr Devs Meetup
