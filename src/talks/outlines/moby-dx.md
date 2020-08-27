@@ -41,6 +41,7 @@
 - https://developerexperience.io/practices/good-developer-experience
 - Kuptiev, Samion & Reidman, Mark. (2014). _Optimizing the developer and user experiences for cross-platform applications_. Intel IT. https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/optimizing-developer-and-user-experiences-for-cross-platform-applications-white-paper.pdf
 - Wang, Shawn (swyx). (2019). _The importance of developer experience with GitHub founder Tom Preston-Werner_. https://www.netlify.com/blog/2019/01/17/the-importance-of-developer-experience-with-github-founder-tom-preston-werner/
+- Wang, Shawn (swyx). (2020, August 15). _Developer Exception Engineering_. https://dev.to/swyx/developer-exception-engineering-4jfo
 - Coyier, Chris. (2020). _What is developer experience (DX)?_. CSS-Tricks. https://css-tricks.com/what-is-developer-experience-dx/
 - https://whyisthisinteresting.substack.com/p/why-is-this-interesting-the-goodharts
 - https://daedtech.com/how-software-groups-rot-legacy-of-the-expert-beginner/
