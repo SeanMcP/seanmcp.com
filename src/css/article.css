@@ -12,7 +12,7 @@
   .article__header h1 a {
     opacity: 0;
   }
-  
+
   .article__header h1:focus a,
   .article__header h1:hover a {
     opacity: 1;
@@ -71,14 +71,14 @@
 
 .article__sdg a {
   color: var(--text-color);
-  opacity: 0.125;
+  opacity: 0.75;
   text-decoration: none;
   transition: opacity 200ms ease-in-out;
 }
 
 .article__sdg a:focus,
 .article__sdg a:hover {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .article__sdg a:focus {
@@ -94,4 +94,43 @@
 
 .bio {
   background: var(--faint-gray);
+}
+
+.bio .container > * {
+  margin: 0;
+}
+
+.bio .container {
+  display: grid;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .bio__image {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .bio .container {
+    grid-template-columns: auto 10rem;
+  }
+
+  .bio__image {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    width: 100%;
+  }
+}
+
+.bio__socials {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bio__socials li {
+  margin-right: 1rem;
 }
