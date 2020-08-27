@@ -1,14 +1,15 @@
 <footer class="footer">
-    <div class="container">
-        <div class="footer__content">
+    <div class="container --clear-child-margins">
+        <h2>SeanMcP.com</h2>
+        {# <div class="footer__content">
             <div class="footer__block">
-                <div class="footer__block-title">
+                <div class="heading footer__block-title">
                     Copyright
                 </div>
                 <p>© Sean McPherson</p>
             </div>
             <div class="footer__block">
-                <div class="footer__block-title">
+                <div class="heading footer__block-title">
                     Connect
                 </div>
                 <nav aria-label="social">
@@ -18,7 +19,7 @@
                 </nav>
             </div>
             <div class="footer__block SDG">
-                <div class="footer__block-title">
+                <div class="heading footer__block-title">
                     SDG
                 </div>
                 <p
@@ -29,6 +30,10 @@
                     Colossians 3:17
                 </p>
             </div>
-        </div>
+        </div> #}
+        {% set navLabel = "primary" %}
+        {% set navId = "footer-nav" %}
+        {% include "partials/navigation.njk" %}
+        <small class="footer__attribution">Copyright © 2018-{{ '' | year }} Sean McPherson (SDG)</small>
     </div>
 </footer>

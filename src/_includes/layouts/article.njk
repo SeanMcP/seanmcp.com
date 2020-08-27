@@ -10,7 +10,7 @@ styles:
 
 {% set imageUrl = image | url if image else undefined %}
 
-<section class="hero{% if imageUrl %} hero--with-image" style="background-image: url({{ imageUrl }}), var(--hero-background){% endif %}">
+<section class="hero">
     <div class="container --content">
         <header class="article__header --clear-child-margins">
             {% if "garden" in tags %}
@@ -23,21 +23,21 @@ styles:
     </div>
 </section>
 
-<div class="container --content">
-    <article class="article">
-        <div class="article__content --clear-child-margins">
-            {{ content | safe }}
-        </div>
-        {% if verse %}<p class="article__sdg"><a href="https://esv.org/{{verse}}">{{ verse }} (SDG)</a></p>{% endif %}
+<article class="article page">
+    <div class="container --content --clear-child-margins">
+        {% if imageUrl -%}
+            <img class="article__image" src="{{ imageUrl }}" alt="{{ title }}" />
+        {% endif -%}
+
+        {{ content | safe }}
         <footer class="article__footer">
-            {% set url = page.url | url | absoluteUrl(metadata.url) %}
-            {% include "partials/social-share.njk" %}
             <div class="article__tags">
-                <span class="article__tags_title">Read more:</span>
+                <strong>Filed under:</strong>
                 {% include "partials/tag-list.njk" %}
             </div>
+        {% if verse %}<p class="article__sdg"><a href="https://esv.org/{{verse}}">{{ verse }} (SDG)</a></p>{% endif %}
         </footer>
-    </article>
-</div>
+    </div>
+</article>
 
 {% include "partials/bio.njk" %}

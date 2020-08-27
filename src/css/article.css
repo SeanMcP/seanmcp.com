@@ -1,64 +1,27 @@
-/* Hero */
-
-.hero--with-image {
-  background-position: center;
-  background-size: cover;
-  height: 22rem;
-  margin: 0 auto;
-  max-width: 44rem;
-  position: relative;
-  width: 100%;
-}
-
-@media screen and (min-width: 44rem) {
-  .hero--with-image {
-    margin-top: 2rem;
-  }
-}
-
-.hero--with-image .article__header {
-  --spacing: 2rem;
-  background: black;
-  bottom: var(--spacing);
-  display: inline-block;
-  left: var(--spacing);
-  margin: -0.5rem;
-  padding: 0.5rem;
-  position: absolute;
-}
-
-@media screen and (max-width: 500px) {
-  .hero--with-image {
-    height: 16rem;
-  }
-
-  .hero--with-image .article__header {
-    --spacing: 1rem;
-  }
-}
-
-.hero--with-image .date {
-  padding-top: 0;
-}
-
 /* Article */
 
 .article__header h1 {
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .article__header h1 a {
-  color: white;
-  opacity: 0;
+  color: currentColor;
 }
 
-.article__header h1:hover a {
-  opacity: 1;
+@media screen and (min-width: 500px) {
+  .article__header h1 a {
+    opacity: 0;
+  }
+  
+  .article__header h1:focus a,
+  .article__header h1:hover a {
+    opacity: 1;
+  }
 }
 
-.main--article .date {
-  border-bottom: 2px solid white;
-  padding-bottom: 0.25rem;
+.article__image {
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
 .article__content {
@@ -75,23 +38,26 @@
 }
 
 .article__footer {
+  margin-top: 2rem;
   padding-top: 2rem;
 }
 
-.article__tags {
-  margin-top: 1rem;
-}
-
-.article__tags_title {
-  font-weight: bold;
+.article__tags strong {
   margin-right: 0.5rem;
 }
 
-.article__content img {
+@media screen and (max-width: 500px) {
+  .article__tags strong {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.article img {
   width: 100%;
 }
 
-.article__content hr {
+.article hr {
   border-top: 4px dotted var(--faint-gray);
   max-width: 1.5rem;
   margin-left: auto;
@@ -99,8 +65,7 @@
 }
 
 .article__sdg {
-  display: block;
-  margin-top: 0;
+  margin-bottom: 0;
   text-align: right;
 }
 
@@ -123,13 +88,6 @@
 
 .article__sdg a:hover {
   text-decoration: underline;
-}
-
-/* Social share */
-
-.social-share__title {
-  font-weight: bold;
-  margin-right: 0.5rem;
 }
 
 /* Bio */

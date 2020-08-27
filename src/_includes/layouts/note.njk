@@ -9,36 +9,34 @@ styles:
     <link rel="stylesheet" href="{{ '/css/note.css' | url }}"/>
 {% endblock head %}
 
-<div class="container --content">
-    <article class="article">
-        <div class="article__content --clear-child-margins">
-            <header class="note__header --clear-child-margins">
-                <h1>
-                    <span>Notes on</span>
-                    <em>{{ reference }}</em>
-                </h1>
-                <ul class="note__details">
-                    <li>
-                        <b>Author</b>:
-                        {{ author }}</li>
-                    <li>
-                        <b>Source</b>:
-                        <a href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ link }}</a>
-                    </li>
-                </ul>
-            </header>
-            {{ content | safe }}
-            <hr>
-            <h2>Keywords</h2>
-            <ul class="note_keywords">
-                {% for keyword in keywords %}
-                <li>{{ keyword }}</li>
-                {% endfor %}
+<article class="article page">
+    <div class="container --content --clear-child-margins">
+        <header class="note__header --clear-child-margins">
+            <h1>
+                <span>Notes on</span>
+                <em>{{ reference }}</em>
+            </h1>
+            <ul class="note__details">
+                <li>
+                    <b>Author</b>:
+                    {{ author }}</li>
+                <li>
+                    <b>Source</b>:
+                    <a href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ link }}</a>
+                </li>
             </ul>
-            <h2>Citation</h2>
-            <cite>{{ author }}.
-                {{ reference }}.
-                {{ link }}</cite>
-        </div>
-    </article>
-</div>
+        </header>
+        {{ content | safe }}
+        <hr>
+        <h2>Keywords</h2>
+        <ul class="note_keywords">
+            {% for keyword in keywords %}
+            <li>{{ keyword }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Citation</h2>
+        <cite>{{ author }}.
+            {{ reference }}.
+            {{ link }}</cite>
+    </div>
+</article>

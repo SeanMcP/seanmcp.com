@@ -26,6 +26,10 @@ module.exports = function (eleventyConfig) {
     console.log(value);
   });
 
+  eleventyConfig.addFilter("year", () => {
+    return new Date().getFullYear()
+  })
+
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj, {
