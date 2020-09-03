@@ -38,6 +38,7 @@
 
 ## To reference
 
+- https://infrequently.org/2018/09/the-developer-experience-bait-and-switch/
 - https://developerexperience.io/practices/good-developer-experience
 - Kuptiev, Samion & Reidman, Mark. (2014). _Optimizing the developer and user experiences for cross-platform applications_. Intel IT. https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/optimizing-developer-and-user-experiences-for-cross-platform-applications-white-paper.pdf
 - Wang, Shawn (swyx). (2019). _The importance of developer experience with GitHub founder Tom Preston-Werner_. https://www.netlify.com/blog/2019/01/17/the-importance-of-developer-experience-with-github-founder-tom-preston-werner/
