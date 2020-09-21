@@ -9,6 +9,8 @@ verse: Psalm 130:6
 image: /img/watch.min.jpg
 ---
 
+_Update: As of Deno v1.4, there is a built in watch mode that you can enable with the `--watch` flag. [Read more about that here](https://deno.land/posts/v1.4#codedeno-run---watchcode)._
+
 Nodemon, or as I read it in my head _Nodémon!_, is a utility for restarting Node.js processes when the source changes. It's is the first dev dependency I add when working in Node, because it is so handy!
 
 Deno, the secure runtime for JavaScript and TypeScript, doesn't work with Nodemon. When I first started building with Deno, I was reminded just how annoying it is to stop and start your server whenever there is a change.
