@@ -7,6 +7,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
+  eleventyConfig.addPlugin(require("eleventy-plugin-emoji"));
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
@@ -27,8 +28,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("year", () => {
-    return new Date().getFullYear()
-  })
+    return new Date().getFullYear();
+  });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
