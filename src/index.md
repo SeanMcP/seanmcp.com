@@ -1,9 +1,8 @@
 ---
-layout: index
+layout: home
 title: Sean McPherson
 display:
     title: Hey, I'm Sean McP!
-    subtitle: Software engineer, educator, and life-long learner
 ---
 
 My name is **Sean McPherson**, and I'm interested in all areas of front-end development: from HTML and CSS to JavaScript frameworks and developer tools.

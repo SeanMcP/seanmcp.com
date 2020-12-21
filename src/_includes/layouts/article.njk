@@ -2,41 +2,37 @@
 layout: base
 templateClass: article
 styles:
-    - article.css
     - prism.css
     - markdown-it.css
-    - tag-list.css
 ---
 
-{% set imageUrl = image | url if image else undefined %}
+{% set imageUrl = image | url if image else 
+    undefined %}
 
-<section class="hero">
+<article class="article">
     <div class="container --content">
-        <header class="article__header --clear-child-margins">
-            {% if "garden" in tags %}
-                <span class="date">Garden</span>
-            {% else %}
-                <time class="date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
-            {% endif %}
-            <h1 id="title">{{ title }}</h1>
-        </header>
-    </div>
-</section>
+        {% if "garden" in tags %}
+            <span class="date">Garden</span>
+        {% else %}
+            <time class="date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+        {% endif %}
+        <h1 id="title" style="margin-top:1rem;">{{ title }}</h1>
+        {% set horizontal = true %}
+        {% include "partials/tag-list.njk" %}
+    {% if imageUrl -%}
+        <img class="article__image" src="{{ imageUrl }}" alt="{{ title }}"/>
+    {% endif -%}
 
-<article class="article page">
-    <div class="container --content --clear-child-margins">
-        {% if imageUrl -%}
-            <img class="article__image" src="{{ imageUrl }}" alt="{{ title }}" />
-        {% endif -%}
+    <hr class="subtle" />
 
-        {{ content | safe }}
-        <footer class="article__footer">
-            <div class="article__tags">
-                <strong>Filed under:</strong>
-                {% include "partials/tag-list.njk" %}
-            </div>
-        {% if verse %}<p class="article__sdg"><a href="https://esv.org/{{verse}}" rel="noopener noreferrer" target="_blank">{{ verse }} (SDG)</a></p>{% endif %}
-        </footer>
+    {{ content | safe }}
+
+    {% if verse %}
+        <p style="text-align:right;">
+            <a href="https://esv.org/{{verse}}" rel="noopener noreferrer" target="_blank">{{ verse }}
+                (SDG)</a>
+        </p>
+    {% endif %}
     </div>
 </article>
 

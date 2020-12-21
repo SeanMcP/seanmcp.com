@@ -12,8 +12,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
   eleventyConfig.addLayoutAlias("article", "layouts/article.njk");
-  eleventyConfig.addLayoutAlias("index", "layouts/index.njk");
-  eleventyConfig.addLayoutAlias("note", "layouts/note.njk");
+  eleventyConfig.addLayoutAlias("home", "layouts/home.njk");
   eleventyConfig.addLayoutAlias("outline", "layouts/outline.njk");
   eleventyConfig.addLayoutAlias("page", "layouts/page.njk");
 
@@ -45,10 +44,16 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("capitalize", (string) => {
     switch (string) {
+      case "cli":
+        return "CLI";
+      case "css":
+        return "CSS";
       case "js":
         return "JS";
       case "javascript":
         return "JavaScript";
+      case "typescript":
+        return "TypeScript";
       case "ux":
         return "UX";
       default:
@@ -92,7 +97,8 @@ module.exports = function (eleventyConfig) {
     .use(require("markdown-it-footnote"));
 
   mdi.renderer.rules.footnote_block_open = () =>
-    `<section class="footnotes">
+    `<hr />
+    <section class="footnotes --clear-child-margins">
         <h2>Footnotes</h2>
         <ol>
     `;
@@ -122,7 +128,7 @@ module.exports = function (eleventyConfig) {
     // This is only used for URLs (it does not affect your file structure)
     pathPrefix: "/",
 
-    markdownTemplateEngine: "html",
+    markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     passthroughFileCopy: true,

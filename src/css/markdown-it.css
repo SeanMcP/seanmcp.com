@@ -131,16 +131,6 @@ pre[class*="language-"] > code[class*="language-"] {
   white-space: pre;
 }
 
-.footnotes {
-  border-top: var(--border);
-  margin: 2rem 0 0;
-  padding: 2rem 0 0;
-}
-
-.footnotes h5 {
-  margin-top: 0;
-}
-
 .footnotes ol {
   padding-left: 2rem;
 }
