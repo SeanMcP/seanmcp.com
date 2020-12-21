@@ -27,10 +27,6 @@ module.exports = function (eleventyConfig) {
     console.log(value);
   });
 
-  eleventyConfig.addFilter("year", () => {
-    return new Date().getFullYear();
-  });
-
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj, {
@@ -65,6 +61,10 @@ module.exports = function (eleventyConfig) {
     (code) => new CleanCSS({}).minify(code).styles
   );
 
+  eleventyConfig.addShortcode("currentYear", function () {
+    return String(new Date().getFullYear());
+  });
+
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
 
   eleventyConfig.addPassthroughCopy("src/img");
@@ -93,7 +93,7 @@ module.exports = function (eleventyConfig) {
 
   mdi.renderer.rules.footnote_block_open = () =>
     `<section class="footnotes">
-        <h5>Footnotes</h5>
+        <h2>Footnotes</h2>
         <ol>
     `;
 
