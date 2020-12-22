@@ -14,7 +14,7 @@ At some point in the future I may add some commentary on why I found these insig
 
 ## Articles
 
-- [_Give it five minutes_](https://signalvnoise.com/posts/3124-give-it-five-minutes)\_ by Jason Fried
+- [_Give it five minutes_](https://signalvnoise.com/posts/3124-give-it-five-minutes) by Jason Fried
 
 - [_Optimize for change_](https://overreacted.io/optimized-for-change/) by Dan Abramov
 
