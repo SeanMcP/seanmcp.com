@@ -3,18 +3,22 @@ layout: page
 title: About
 ---
 
-<img src="/img/seanmcp.fun.jpg" alt="A photo of Sean McPherson (SeanMcP) smiling" width="120" style="float:right;max-width:45vw;padding:0 0 1rem 1rem;">
+<!-- <img src="/img/seanmcp.fun.jpg" alt="A photo of Sean McPherson (SeanMcP) smiling" width="120" style="float:right;max-width:45vw;padding:0 0 1rem 1rem;"> -->
 
-My name is Sean McPherson, or [Sean McP](../articles/how-to-pronounce-my-name) for short. I am a software engineer and educator living in Pittsburgh, Pennsylvania.
+Thanks for visiting my website! My name is Sean McPherson, or [Sean McP](../articles/how-to-pronounce-my-name) for short, and I am a software engineer for Niche.com in Pittsburgh, Pennsylvania.
 
-I am interested in all areas of front-end development and am always looking for opportunities to practice my skills and learn new things.
+Before that, I worked for TSYS Digital Innovations in Atlanta creating products for financial institutions and their clients. I helped them focus on recruiting new talent and pushed for open-sourcing software.
 
-Since joining the tech industry, I have:
+I have had the opportunity to:
 
-- Given conference talks on accessibility and React in Atlanta and Pittsburgh
-- Published open source libraries with tens of thousands of downloads on npm
+- Give two conference talks on accessibility and React
+- Publish a few open-source libraries on npm
 - Lead workshops on React and the JavaScript ecosystem
-- Given lightning talks at Jr Devs Meetup
+- Give lightning talks at a meetup
+
+After college, I spent three years teaching at public and private institutions. It gave me valuable experience in learning, planning, and speaking, and my goal is to bring those lessons into all of my work. This website is an example of that
+
+Outside of work, I spend most of my time with my wife (married '14), two sons (born '18 and '20), and our three-legged dog (adopted '17). I also [like soccer](../soccer).
 <!-- 
 ## My journey
 

@@ -1,9 +1,9 @@
-<ul class="tag-list">
+<ul {% if horizontal -%}class="--horizontal-list"{% endif -%}>
     {% for tag in tags %}
         {%- if tag != "articles" -%}
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
             <li>
-                <a href="{{ tagUrl | url }}" class="tag tag--{{ tag }}">{{ tag }}</a>
+                <a href="{{ tagUrl | url }}" class="tag tag--{{ tag }}">{{ tag | capitalize }}</a>
             </li>
         {%- endif -%}
     {% endfor %}

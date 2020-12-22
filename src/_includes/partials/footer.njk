@@ -1,39 +1,6 @@
-<footer class="footer">
+<footer class="site-footer">
     <div class="container --clear-child-margins">
-        <h2>SeanMcP.com</h2>
-        {# <div class="footer__content">
-            <div class="footer__block">
-                <div class="heading footer__block-title">
-                    Copyright
-                </div>
-                <p>© Sean McPherson</p>
-            </div>
-            <div class="footer__block">
-                <div class="heading footer__block-title">
-                    Connect
-                </div>
-                <nav aria-label="social">
-                    {% for social in socials %}
-                        <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">{{ social.name }}</a>
-                    {% endfor %}
-                </nav>
-            </div>
-            <div class="footer__block SDG">
-                <div class="heading footer__block-title">
-                    SDG
-                </div>
-                <p
-                    title="And whatever you do in word or deed, do all in the name of the Lord Jesus, giving thanks to God the Father through Him. — Col. 3:17 (NKJV)"
-                    aria-label="And whatever you do in word or deed, do all in the name of the Lord Jesus, giving thanks to God the Father through Him. — Col. 3:17 (NKJV)"
-                    tabindex="0"
-                >
-                    Colossians 3:17
-                </p>
-            </div>
-        </div> #}
-        {% set navLabel = "primary" %}
-        {% set navId = "footer-nav" %}
-        {% include "partials/navigation.njk" %}
-        <small class="footer__attribution">Copyright © 2018-{{ '' | year }} Sean McPherson (SDG)</small>
+        <b>SeanMcP.com</b><br>
+        <small>Copyright © 2018-{% currentYear %} Sean McPherson (SDG)</small>
     </div>
 </footer>

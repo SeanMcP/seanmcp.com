@@ -3,8 +3,8 @@ title: TypeScript without TypeScript
 description: TypeScript provides valuable features but complicate the development process. What are some alternatives that provide the features without the headache?
 date: 2020-12-08
 tags:
-    - TypeScript
-    - JavaScript
+    - typescript
+    - javascript
 verse: Matthew 22:32
 # /img/<IMAGE>.min.jpg
 image:

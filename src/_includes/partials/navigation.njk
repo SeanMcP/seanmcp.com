@@ -1,7 +1,5 @@
-<nav aria-label="{{ navLabel }}" class="nav" {% if navId %}id="{{ navId }}"{% endif %}>
+<nav aria-label="{{ navLabel }}" class="--horizontal-list" {% if navId %}id="{{ navId }}"{% endif %}>
     {%- for nav in navigation -%}
-        <a {% if nav.url == page.url %}aria-current="page"{% endif %} class="nav__item site-link" href="{{ nav.url | url }}">
-            {{ nav.label }}
-        </a>
+        <a {% if nav.url == page.url %}aria-current="page"{% endif %} class="site-link" href="{{ nav.url | url }}">{{ nav.label }}</a>
     {%- endfor -%}
 </nav>
