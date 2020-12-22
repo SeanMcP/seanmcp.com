@@ -74,7 +74,7 @@ Happy standardizing!
 }
 
 .button-container button {
-    background-color: var(--dark-blue);
+    background-color: var(--primary);
     border: none;
     border-radius: 2px;
     color: white;
@@ -92,7 +92,7 @@ Happy standardizing!
 }
 
 .example {
-    background-color: var(--faint-gray);
+    background-color: var(--off-background);
     padding: 1rem;
     margin: 1rem 0;
     position: relative;
