@@ -1,16 +1,14 @@
 /* Elements */
 a {
   color: var(--primary);
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
   text-decoration-thickness: 1px;
-  transition: color 100ms ease-in-out, text-decoration 100ms ease-in-out;
+  transition: color 100ms ease-in-out, text-decoration 100ms ease-in-out, text-decoration-thickness 100ms ease-in-out;
 }
 
 a[aria-current="page"],
-a:focus,
 a:hover {
   text-decoration-thickness: 3px;
-  text-underline-offset: calc(2px - 2px);
 }
 
 a[aria-current="page"]:not(:hover) {
@@ -228,7 +226,9 @@ li ul {
 
 .site-header a[aria-current="page"],
 .site-header a:hover {
-  text-decoration: 3px solid underline;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 3px;
 }
 
 .site-header a:hover {
