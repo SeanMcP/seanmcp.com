@@ -45,17 +45,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("capitalize", (string) => {
     switch (string) {
       case "cli":
-        return "CLI";
       case "css":
-        return "CSS";
       case "js":
-        return "JS";
+      case "til":
+      case "ux":
+        return string.toUpperCase()
       case "javascript":
         return "JavaScript";
       case "typescript":
         return "TypeScript";
-      case "ux":
-        return "UX";
       default:
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
