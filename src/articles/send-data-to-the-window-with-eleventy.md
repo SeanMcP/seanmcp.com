@@ -42,7 +42,7 @@ module.exports = eleventyConfig => {
 
     eleventyConfig.addShortcode("expose", data => {
         return `<script>
-            window.__DATA__=${JSON.stringify(data)};
+            window.__DATA__=JSON.parse(${JSON.stringify(data)});
         </script>`;
     })
 
@@ -64,7 +64,7 @@ Nice and simple! I'm going to offer an optional improvement to cleanup after exp
 ```js/1,3
 eleventyConfig.addShortcode("expose", data => {
     return `<script id="__EXPOSE__">
-        window.__DATA__=${JSON.stringify(data)};
+        window.__DATA__=JSON.parse(${JSON.stringify(data)});
         document.getElementById("__EXPOSE__").remove();
     </script>`;
 })
