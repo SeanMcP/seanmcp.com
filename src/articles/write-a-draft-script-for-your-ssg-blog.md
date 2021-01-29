@@ -7,6 +7,7 @@ tags:
     - node
     - blog
     - static-site
+    - wip
 layout: article
 ---
 

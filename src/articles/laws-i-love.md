@@ -3,7 +3,7 @@ title: Laws I Love
 description: 
 date: 2020-04-14
 tags:
-    - 
+    - wip
 verse: Psalm 119:97
 layout: article
 ---

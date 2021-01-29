@@ -4,6 +4,7 @@ description:
 date: 2019-06-27
 tags:
   - react
+  - wip
 layout: article
 ---
 
@@ -19,6 +20,7 @@ The most immediate benefit to using prop-types is that you can catch and diagnos
 
 Let's say you have a `OrderedList` component that renders children based on an array of `items` passed as a prop. It might look like this:
 
+{% raw %}
 ```jsx
 import React from 'react'
 
@@ -34,6 +36,7 @@ function OrderedList(props) {
 
 export default OrderedList
 ```
+{% endraw %}
 
 Now what would happen if instantiated this component without passing it an array of items? React will throw an error:
 
@@ -57,6 +60,7 @@ When you are working on a larger code base with multiple users, it is easy to lo
 
 Take for example the this `LoginForm` component using [`Formik`](https://npmjs.com/package/formik). Try to quickly determine what props this component requires:
 
+{% raw %}
 ```jsx
 const LoginForm = props => {
   const Heading = `h${props.headingLevel}`
@@ -81,8 +85,11 @@ const LoginForm = props => {
   )
 }
 ```
+{% endraw %}
 
 You could do it, but it is time consuming and can be a nightmare for larger class components. Now imagine we had the same component above with the following prop-types declared below:
+
+{% raw %}
 
 ```jsx
 const LoginForm = props => {
@@ -94,5 +101,6 @@ LoginForm.propTypes = {
   headingLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired
 }
 ```
+{% endraw %}
 
 Now at a glance we can determine that this component needs two props, `level` and `login`, and what their types and restrictions are. When I want to use `LoginForm`, I know I need to pass it a `headingLevel` (from 1-6) and a `login` function. Nice and easy.

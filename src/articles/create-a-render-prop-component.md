@@ -13,13 +13,15 @@ It's been a year since Michael Jackson published "Use a Render Prop!", which enc
 
 If you are new to React or just new to the concept, the look of a render prop can be a little daunting. [Checkout this example from `react-spring`](https://www.react-spring.io/docs/props/spring)'s documentation:
 
-```jsx
+{% raw %}
+```js
 import { Spring } from 'react-spring'
 
 <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
   {styles => <div style={styles}>i will fade in</div>} // <-- Here
 </Spring>
 ```
+{% endraw %}
 
 If that makes perfect sense to you, awesome 🎉! Skip this article and get back to coding. If not, don't worry; I didn't get it at first either. Stick around, and I'll attempt to break down render props and show you how to make your own.
 
@@ -31,20 +33,24 @@ If that makes perfect sense to you, awesome 🎉! Skip this article and get back
 
 At its core, render prop is "a simple technique for sharing code between React components using a prop whose value is a function."[^https://reactjs.org/docs/render-props.html] Instead of passing a string or object, you pass a function as a prop.
 
-```jsx
+{% raw %}
+```js
 <Name
     renderProp={() => "Passing a function as a prop!"}
 />
 ```
+{% endraw %}
 
 The code above won't accomplish much - the arrow function just returns a string - but it introduces a new paradigm. What if, within `Name` we pass some data to our `props.renderProp` function?
 
-```jsx
+{% raw %}
+```js
 const Name = (props) => {
     const name = 'Sean'
     return props.renderProp(name)
 }
 ```
+{% endraw %}
 
 When `Name` renders, it calls `props.renderProp` and passes some data; in this case, a string with my name.
 
@@ -52,21 +58,25 @@ We have designed our `Name` component with the sole purpose of storing the `name
 
 Going back to the implementation of `Name`, the function I pass to `renderProp` can look for this data as a parameter:
 
-```jsx
+{% raw %}
+```js
 <Name
     renderProp={(name) => `Hello, my name is ${name}!`}
 />
 ```
+{% endraw %}
 
 When `Nam`e is called, it creates variable `name` with the value 'Sean', then calls the `props.renderProp` function and passes `name`. Finally, it returns a string that reads `Hello, my name is Sean!`.
 
 But we aren't just limited to strings; this is React! You can return JSX in your function to render new elements in the VirtualDOM:
 
-```jsx
+{% raw %}
+```js
 <Name
     renderProp={(name) => <span>Hello, my name is {name}!</span>}
 />
 ```
+{% endraw %}
 
 That's it! Render props provide us a method of passing props from a parent component to a child via function props. Using these same principles, we can create useful and reusable "logic" components to implement in any application.
 
@@ -76,19 +86,23 @@ _Note: I called our prop `renderProp`, but there is nothing special about that n
 
 In most use cases, render props will replace HOCs. If we wanted to accomplish the above example with an HOC, we might use something like this:
 
-```jsx
+{% raw %}
+```js
 const withName = (Component) => <Component name="Sean" />
 ```
+{% endraw %}
 
 Then our parent component would be passed to `withName`, usually during the export. Once that is done, we could access `props.name` and render our greeting:
 
-```jsx
+{% raw %}
+```js
 const App = (props) => (
     <span>Hello, my name is {props.name}!</span>
 )
 
 export default withName(App)
 ```
+{% endraw %}
 
 This works, and certainly has [its use cases](https://medium.com/r/?url=https%3A%2F%2Freact-redux.js.org%2Fdocs%2Fconnect-extracting-data-with-mapstatetoprops), but can introduce issues such as naming collisions. I recommend [Jackson's article for a more detailed dive into render props and HOCs](https://medium.com/r/?url=https%3A%2F%2Fcdb.reacttraining.com%2Fuse-a-render-prop-50de598f11ce).
 
@@ -100,7 +114,8 @@ _Note: Facebook provides an [introduction to render props in their React documen
 
 Let's imagine you're creating an application with drawer menu. Most of the time the menu is hidden, but when you hit a toggle button, the menu opens. Within the menu, you want to have an accordion that reveals additional links when open. In order to accomplish this, you might do something like this:
 
-```jsx
+{% raw %}
+```js
 export class App extends React.Component {
     state = {
         menuIsOpen: false
@@ -125,12 +140,14 @@ export class App extends React.Component {
     )
 }
 ```
+{% endraw %}
 
 We made `App` a stateful component and keep track of a boolean for the menu. Additionally, we added a `toggle` method to open and close the menu.
 
 Now we need to create Menu:
 
-```jsx
+{% raw %}
+```js
 export class Menu extends React.Component {
     state = {
         socialsIsOpen: false
@@ -156,6 +173,7 @@ export class Menu extends React.Component {
     )
 }
 ```
+{% endraw %}
 
 Look familiar? We **reused the state from `App`** (🚩 red flag no 1) so that we could keep track of whether or not to display our `Socials` component (just an unordered list of links). `Menu` needed to be toggled too, so we **copy and pasted the method from `App`** (🚩 red flag no. 2).
 
@@ -174,7 +192,8 @@ My preference for render props is to use a Component's `children` prop. This all
 
 Our render prop component looks like this:
 
-```jsx
+{% raw %}
+```js
 import React from 'react'
 
 export default class Open extends React.Component {
@@ -194,6 +213,7 @@ export default class Open extends React.Component {
     }
 }
 ```
+{% endraw %}
 
 Just like the previous examples, I am keeping track of an "open" state and toggling it with a method. Here I simplified the name of the boolean in the state to `isOpen` because our component doesn't care what is and is not open. The only thing `Open` cares about is whether or not `isOpen` is true or false.
 
@@ -211,7 +231,8 @@ You can optionally do some type-checking to ensure that `children` is a function
 
 Now that we have abstracted the open/close logic to `Open`, we can clean up our App component:
 
-```jsx
+{% raw %}
+```js
 export const App = () => (
     <Open>
         {openProps => (
@@ -232,6 +253,7 @@ export const App = () => (
     </Open>
 )
 ```
+{% endraw %}
 
 We pass `Open` a child function that looks for our render props. Now I just need to switch out all references to `this.state.menuIsOpen` and `this.toggle` to refer to `openProps`.
 
@@ -239,7 +261,8 @@ Notice that `App` no longer needs a state; we can convert it to a functional com
 
 Next, let's do the same thing with `Menu`:
 
-```jsx
+{% raw %}
+```js
 export const Menu = props => (
     <Open>
         {openProps => (
@@ -257,6 +280,7 @@ export const Menu = props => (
     </Open>
 )
 ```
+{% endraw %}
 
 Likewise, we were able to simplify Menu by converting it to a functional component as well. This may not seem like a big deal now, but it will be increasingly important as an application scales.
 
@@ -283,13 +307,15 @@ Utilizing render props components solves the two problems above:
 
 Now that we've reviewed, let's take a look back at that original example from `react-spring`:
 
-```jsx
+{% raw %}
+```js
 import { Spring } from 'react-spring'
 
 <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
   {styles => <div style={styles}>i will fade in</div>} // <-- Here
 </Spring>
 ```
+{% endraw %}
 
 We can see that this `Spring` component is passed a `this.props.children` function. It then gives some data, in this case a style object, to that function as an argument. Finally, those `styles` are applied to the `div`.
 

@@ -3,8 +3,9 @@ title: Don't remove default focus styles, enhance them
 description: 
 date: 2020-07-30
 tags:
-    - CSS
+    - css
     - accessibility
+    - wip
 verse:
 # /img/<IMAGE>.min.jpg
 image:

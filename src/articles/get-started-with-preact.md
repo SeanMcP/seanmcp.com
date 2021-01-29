@@ -5,6 +5,7 @@ date: 2020-08-18
 tags:
     - preact
     - get-started
+    - wip
 verse:
 # /img/<IMAGE>.min.jpg
 image:
@@ -20,6 +21,7 @@ With many of the same features at a fraction of the size, Preact might be a bett
 
 The [Preact website has a REPL](https://preactjs.com/repl) where you can test drive the library. The example as of writing using state and effect hooks and makes a request to the GitHub API with `fetch`:
 
+{% raw %}
 ```js
 const [items, setItems] = useState([]);
 
@@ -29,11 +31,13 @@ useEffect(() => {
         .then(data => setItems((data && data.items) || []));
 }, []);
 ```
+{% endraw %}
 
 ### CodeSandbox.io
 
 CodeSandbox has 54,000+ templates^[Based on a template search for "preact". I did not verify this count.] for Preact, including [a starter template from the CodeSandbox Team](https://codesandbox.io/s/preact-preact). The code is similar to the official REPL, but with a class component:
 
+{% raw %}
 ```js
 export default class App extends Component {
   componentDidMount() {
@@ -58,3 +62,4 @@ export default class App extends Component {
   }
 }
 ```
+{% endraw %}
