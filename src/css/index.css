@@ -276,6 +276,21 @@ a[href].direct-link:hover {
   margin-top: 0.5rem !important;
 }
 
+.wip-block {
+  border: 1px solid var(--off-background);
+  font-size: 87.5%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.wip-block > *:first-child {
+  margin-top: 0;
+}
+
+.wip-block > *:last-child {
+  margin-bottom: 0;
+}
+
 /* Site footer */
 
 .site-footer {

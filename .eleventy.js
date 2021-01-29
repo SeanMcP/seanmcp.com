@@ -49,6 +49,7 @@ module.exports = function (eleventyConfig) {
       case "js":
       case "til":
       case "ux":
+      case "wip":
         return string.toUpperCase()
       case "javascript":
         return "JavaScript";

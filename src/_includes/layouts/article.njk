@@ -19,20 +19,27 @@ styles:
         <h1 id="title" style="margin-top:1rem;">{{ title }}</h1>
         {% set horizontal = true %}
         {% include "partials/tag-list.njk" %}
-    {% if imageUrl -%}
-        <img class="article__image" src="{{ imageUrl }}" alt="{{ title }}"/>
-    {% endif -%}
+        {% if imageUrl -%}
+            <img class="article__image" src="{{ imageUrl }}" alt="{{ title }}"/>
+        {% endif -%}
 
-    <hr class="subtle" />
+        <hr class="subtle"/>
 
-    {{ content | safe }}
+        {% if "wip" in tags %}
+            <section class="wip-block">
+                <p>{% emoji "👋" %}&nbsp; Hey there! This article is being published a "work in progress," which means that it is not done. So take everything with a grain of salt.</p>
+                <p>I may or may not come back and finish this article. Regardless, I hope that it's helpful in its current state.</p>
+            </section>
+        {% endif %}
 
-    {% if verse %}
-        <p style="text-align:right;">
-            <a href="https://esv.org/{{verse}}" rel="noopener noreferrer" target="_blank">{{ verse }}
-                (SDG)</a>
-        </p>
-    {% endif %}
+        {{ content | safe }}
+
+        {% if verse %}
+            <p style="text-align:right;">
+                <a href="https://esv.org/{{verse}}" rel="noopener noreferrer" target="_blank">{{ verse }}
+                    (SDG)</a>
+            </p>
+        {% endif %}
     </div>
 </article>
 
