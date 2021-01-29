@@ -1,5 +1,7 @@
+const fs = require("fs");
+
 module.exports = function (collection) {
-  let tagSet = new Set();
+  const tagsAndCount = {};
   collection.getAll().forEach(function (item) {
     if ("tags" in item.data) {
       let tags = item.data.tags;
@@ -17,11 +19,25 @@ module.exports = function (collection) {
       });
 
       for (const tag of tags) {
-        tagSet.add(tag);
+        tagsAndCount[tag] = tagsAndCount[tag] ? tagsAndCount[tag] + 1 : 1;
       }
     }
   });
 
+  const allTags = Object.keys(tagsAndCount).sort();
+
+  fs.writeFileSync(
+    "./all-tags.json",
+    JSON.stringify(
+      allTags.reduce((acc, current) => {
+        acc[current] = tagsAndCount[current];
+        return acc;
+      }, {}),
+      null,
+      2
+    )
+  );
+
   // returning an array in addCollection works in Eleventy 0.5.3
-  return [...tagSet];
+  return allTags;
 };
