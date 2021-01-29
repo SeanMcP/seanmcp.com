@@ -12,7 +12,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
   eleventyConfig.addLayoutAlias("article", "layouts/article.njk");
-  eleventyConfig.addLayoutAlias("home", "layouts/home.njk");
   eleventyConfig.addLayoutAlias("outline", "layouts/outline.njk");
   eleventyConfig.addLayoutAlias("page", "layouts/page.njk");
 
@@ -50,7 +49,7 @@ module.exports = function (eleventyConfig) {
       case "til":
       case "ux":
       case "wip":
-        return string.toUpperCase()
+        return string.toUpperCase();
       case "javascript":
         return "JavaScript";
       case "typescript":
@@ -69,7 +68,22 @@ module.exports = function (eleventyConfig) {
     return String(new Date().getFullYear());
   });
 
+  eleventyConfig.addPairedShortcode("note", function (content, _date, _url) {
+    const date = _date || this.page.date
+    const url = _url || this.page.url
+    return `<article class="note">
+      <header class="note__header">
+        <b>Sean McPherson</b>
+        <a href="${url}">
+          <time datetime="${date}">${DateTime.fromJSDate(date).toFormat('t · DD')}</time>
+        </a>
+        </header>
+      <div class="note__body --clear-child-margins">${content}</div>
+    </article>`;
+  });
+
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
+  eleventyConfig.addCollection("notes", collections => collections.getFilteredByGlob("./src/notes/*.md"));
 
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/css");

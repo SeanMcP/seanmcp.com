@@ -7,8 +7,6 @@
         <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
         <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
         <link rel="shortcut icon" href="{{ '/img/seanmcp.favicon.png' | url }}" type="image/png">
-        {% block head %}
-        {% endblock head %}
         {% set criticalStyles %}
             {% include "css/critical.css" %}
         {% endset %}
@@ -18,6 +16,7 @@
             <link rel="stylesheet" href="{{ '/css/' + style | url }}">
         {% endfor %}
         {% endif %}
+        {% if head -%}{{ head | safe }}{%- endif %}
     </head>
     <body data-page-type="{{ layout }}" {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
         <a class="skip-link" href="#main">Skip to main content</a>
@@ -31,4 +30,5 @@
         <!-- Current page: {{ page.url | url }} -->
     </body>
     {# <script src="{{ '/js/scroll-progress.js' | url }}"></script> #}
+    {% if foot %}{{ foot }}{% endif %}
 </html>

@@ -5,7 +5,6 @@ date: 2020-04-16
 tags:
     - conference
     - magnolia-js
-    - notes
 verse: Isaiah 40:8
 layout: article
 ---
