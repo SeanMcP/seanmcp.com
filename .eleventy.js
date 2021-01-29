@@ -69,13 +69,13 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPairedShortcode("note", function (content, _date, _url) {
-    const date = _date || this.page.date
-    const url = _url || this.page.url
+    const date = _date || this.page.date;
+    const url = _url || this.page.url;
     return `<article class="note">
       <header class="note__header">
         <b>Sean McPherson</b>
         <a href="${url}">
-          <time datetime="${date}">${DateTime.fromJSDate(date).toFormat('t · DD')}</time>
+          <time datetime="${date}">${DateTime.fromJSDate(date, { zone: "America/New_York" }).toFormat("t · DD")}</time>
         </a>
         </header>
       <div class="note__body --clear-child-margins">${content}</div>
@@ -83,7 +83,9 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
-  eleventyConfig.addCollection("notes", collections => collections.getFilteredByGlob("./src/notes/*.md"));
+  eleventyConfig.addCollection("notes", (collections) =>
+    collections.getFilteredByGlob("./src/notes/*.md")
+  );
 
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/css");
