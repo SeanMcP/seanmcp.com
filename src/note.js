@@ -15,14 +15,13 @@ try {
         if (noteNumber > highest) highest = noteNumber
     }
 
-    const next = highest + 1;
+    const content = `---\ndate: ${new Date().toISOString()}\n---\n\n`
 
-    const template = fs.readFileSync(`${cwd}/src/_includes/templates/note.md`, { encoding: 'utf8' })
-    const [date] = new Date().toISOString().split('T')
+    const fileName = highest + 1 + '.md'
 
-    const contents = template.replace('<DATE>', date)
+    fs.writeFileSync(`${cwd}/src/notes/${fileName}`, content)
 
-    fs.writeFileSync(`${cwd}/src/notes/${next}.md`, contents)
+    console.log(`Created \`notes/${fileName}\``)
 } catch (error) {
     console.error(error)
     process.exit(0)
