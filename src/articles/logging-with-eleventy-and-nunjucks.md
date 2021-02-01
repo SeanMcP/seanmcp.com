@@ -25,10 +25,12 @@ eleventyConfig.addFilter('log', value => {
 
 With that, I could then use the `log` filter in my Nunjuck template:
 
+{% raw %}
 ```
 {{ article | log }}
 <li class="article"> ... </li>
 ```
+{% endraw %}
 
 Now I had Eleventy logging the entire article object in the terminal! Exactly what I needed.
 
