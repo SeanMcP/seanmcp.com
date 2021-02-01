@@ -1,0 +1,23 @@
+---
+layout: base
+templateClass: book
+styles:
+    - book-layout.css
+---
+
+<div class="container --content">
+    <a href="/bookshelf/">⇐ Bookshelf</a>
+    <header>
+        {# {% if image %}<img alt="{{ title }} cover" class="book__image" loading="lazy" src="{{ image }}" />{% endif %} #}
+        <h1><b>{{ title }}</b><span class="--visually-hidden">:</span><br/>{{ subtitle }}</h1>
+        <p>By {{ author }} |
+            {%- if rating and yearCompleted %} Rating <span aria-label="{{ rating }} stars">{% for i in range(0, rating) %}⭐️{% endfor %}</span></p>
+            {%- else %} <span class="pill">In Progress</span>
+            {% endif -%}
+    </header>
+    {% if content %}
+        <hr />
+        <h2 id="notes">Notes<a aria-label="direct link to notes header" class="direct-link" href="{{ page.url }}#notes">#</a></h2>
+        <div>{{ content | safe }}</div>
+    {% endif %}
+</div>

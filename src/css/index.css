@@ -244,6 +244,13 @@ li ul {
 
 /* ============ CONTENT ============ */
 
+.pill {
+  background: var(--off-background);
+  border-radius: 2px;
+  padding: 0.5ch 1ch;
+  font-size: x-small;
+}
+
 .date {
   font-size: 0.875rem;
   font-weight: bold;

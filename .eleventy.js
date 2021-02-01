@@ -83,6 +83,9 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
+  eleventyConfig.addCollection("books", (collections) =>
+    collections.getFilteredByGlob("./src/books/*.md")
+  );
   eleventyConfig.addCollection("notes", (collections) =>
     collections.getFilteredByGlob("./src/notes/*.md")
   );
