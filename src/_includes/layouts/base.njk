@@ -6,6 +6,7 @@
         {% include "partials/meta-info.njk" %}
         <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
         <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+        <link rel="alternate" href="{{ 'feed/notes.xml' | url }}" type="application/atom+xml" title="Notes on {{ metadata.title }}">
         <link rel="shortcut icon" href="{{ '/img/seanmcp.favicon.png' | url }}" type="image/png">
         {% set criticalStyles %}
             {% include "css/critical.css" %}
