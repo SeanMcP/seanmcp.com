@@ -6,10 +6,10 @@ eleventyExcludeFromCollections: true
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{ metadata.title }}</title>
     <subtitle>A feed of short notes, thoughts, or ideas, preserved here on SeanMcP.com</subtitle>
-    <link href="https://seanmcp.com/feed.notes.xml" rel="self"/>
+    <link href="https://seanmcp.com/feed/notes.xml" rel="self"/>
     <link href="{{ metadata.url }}"/>
     <updated>{{ collections.notes | rssLastUpdatedDate }}</updated>
-    <id>{{ metadata.feed.id }} - Notes</id>
+    <id>{{ metadata.feed.id }}notes</id>
     <author>
         <name>{{ metadata.author.name }}</name>
         <email>{{ metadata.author.email }}</email>
