@@ -8,7 +8,7 @@
     "watch": "eleventy --watch",
     "debug": "DEBUG=* eleventy",
     "draft": "node src/draft.js",
-    "note": "node src/note.js"
+    "note": "git pull && node src/note.js"
   },
   "repository": {
     "type": "git",
