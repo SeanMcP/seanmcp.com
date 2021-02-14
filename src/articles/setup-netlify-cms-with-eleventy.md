@@ -3,7 +3,7 @@ title: Setup Netlify CMS with Eleventy
 description: 
 date: 2021-02-08
 tags:
-    - 
+    - wip
 verse:
 # /img/<IMAGE>.min.jpg
 image:

@@ -37,7 +37,6 @@
   "node-js": 1,
   "node-modules": 1,
   "npm": 1,
-  "null": 1,
   "nunjucks": 1,
   "open-source": 1,
   "package": 1,
@@ -69,7 +68,7 @@
   "typography": 1,
   "web": 1,
   "web-development": 1,
-  "wip": 12,
+  "wip": 13,
   "year-in-review": 2,
   "youtube": 2
 }
