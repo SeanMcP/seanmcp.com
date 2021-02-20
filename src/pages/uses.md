@@ -38,6 +38,13 @@ description: The tools that I use to do what I do.
 - Live Server
 - Partial Diff
 
+## VS Code themes
+
+- Tokyo Night
+- One Dark Pro
+- GitHub Theme
+- Firefox Theme
+
 ## Programs
 
 - GIMP
