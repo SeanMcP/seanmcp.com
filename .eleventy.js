@@ -68,16 +68,12 @@ module.exports = function (eleventyConfig) {
     return String(new Date().getFullYear());
   });
 
-  eleventyConfig.addPairedShortcode("note", function (content, _date, _url) {
-    const date = _date || this.page.date;
-    const url = _url || this.page.url;
+  eleventyConfig.addPairedShortcode("note", function (content, date, url, edited = false) {
     return `<article class="note">
       <header class="note__header">
         <b>Sean McPherson</b>
-        <a href="${url}">
-          <time datetime="${date}">${DateTime.fromJSDate(date, { zone: "America/New_York" }).toFormat("t · DD")}</time>
-        </a>
-        </header>
+        <a href="${url}"><time datetime="${date}">${DateTime.fromJSDate(date, { zone: "America/New_York" }).toFormat("t · DD")}</time></a>${edited ? '<small>(Edited)</small>' : ''}
+      </header>
       <div class="note__body --clear-child-margins">${content}</div>
     </article>`;
   });

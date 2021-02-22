@@ -1,6 +1,6 @@
 <section class="note-list">
 {% for note in notes %}
-    {%- note note.date, note.url %}
+    {%- note note.date, note.url, note.data.edited %}
         {{ note.templateContent | safe }}
     {%- endnote %}
 {% endfor %}
