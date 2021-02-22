@@ -236,10 +236,6 @@ li ul {
   color: var(--primary);
 }
 
-.site-header a + a {
-  margin-left: 1rem;
-}
-
 /* Main navigation */
 
 /* ============ CONTENT ============ */
@@ -338,8 +334,8 @@ a[href].direct-link:hover {
   width: 100%;
 }
 
-.note__header b {
-  margin-right: 0.5rem;
+.note__header > * + * {
+  margin-left: 0.5rem;
 }
 
 .note__header a {

@@ -29,9 +29,22 @@ body {
 }
 
 .site-header .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header nav {
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.site-header nav a {
+  margin-top: 1rem;
+}
+
+.site-header nav a:not(:last-of-type) {
+  margin-right: 1rem;
 }
 
 @media screen and (min-width: 500px) {
@@ -41,6 +54,16 @@ body {
 
   .container.--content {
     max-width: 70ch;
+  }
+
+  .site-header .container {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .site-header nav a {
+    margin-top: 0;
   }
 }
 
