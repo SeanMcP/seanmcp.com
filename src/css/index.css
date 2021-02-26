@@ -1,15 +1,15 @@
 /* Elements */
 a {
   color: var(--primary);
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  transition: color 100ms ease-in-out, text-decoration 100ms ease-in-out,
-    text-decoration-thickness 100ms ease-in-out;
+  text-decoration-color: var(--off-background);
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 2px;
+  transition: color 100ms ease-in-out, text-decoration 100ms ease-in-out;
 }
 
 a[aria-current="page"],
 a:hover {
-  text-decoration-thickness: 3px;
+  text-decoration-color: currentColor;
 }
 
 a[aria-current="page"]:not(:hover) {
