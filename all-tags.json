@@ -35,6 +35,7 @@
   "logging": 1,
   "magnolia-js": 1,
   "meta": 2,
+  "netlify": 1,
   "node": 1,
   "node-js": 1,
   "node-modules": 1,
