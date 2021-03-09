@@ -14,6 +14,7 @@ styles:
             {%- if rating and yearCompleted %} Rating <span aria-label="{{ rating }} stars">{% for i in range(0, rating) %}⭐️{% endfor %}</span></p>
             {%- else %} <span class="pill">In Progress</span>
             {% endif -%}
+        {% if motivation %}<p><b>Motivation</b>: {{motivation}}</p>{% endif %}
     </header>
     {% if content %}
         <hr />
