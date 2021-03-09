@@ -33,9 +33,11 @@ With that in place, you are ready to use the `heroicon` shortcode. Head over to 
 ```md
 <!-- contact.md -->
 
-- {% heroicon "outline" "mail" %} Send me an email
+- {% heroicon "outline", "mail" %} Send me an email
 ```
 {% endraw %}
+
+**Note**: These examples are using Nunjucks syntax. If you are using Liquid, you can reference the official documentation for examples.
 
 The `heroicon` shortcode takes a few arguments:
 
@@ -43,13 +45,13 @@ The `heroicon` shortcode takes a few arguments:
 2. The name of the icon
 3. An optional alt tag for the SVG
 
-To save yourself a bit of time, you can use the `heroicon-outline` or `heroicon-solid` shortcodes which pass the style automatically. We could replace the previous example with:
+To save yourself a bit of time, you can use the `heroicon_outline` or `heroicon_solid` shortcodes which pass the style automatically. We could replace the previous example with:
 
 {% raw %}
 ```md
 <!-- contact.md -->
 
-- {% heroicon-outline "mail" %} Send me an email
+- {% heroicon_outline "mail" %} Send me an email
 ```
 {% endraw %}
 
@@ -60,7 +62,7 @@ If you use the shortcode without alt text, and `aria-hidden="true"` attribute is
 {% raw %}
 ```html
 <!-- Input -->
-{% heroicon-outline "heart" "Love" %}
+{% heroicon_outline "heart", "Love" %}
 
 <!-- Output -->
 <svg
@@ -87,12 +89,12 @@ This will enable screen-reader and other assistive technology users to understan
 {% raw %}
 ```html
 <button>
-  {% heroicon-solid "plus" %}
+  {% heroicon_solid "plus" %}
   <span>Add item</span>
 </button>
 
 <button>
-  {% heroicon-solid "x" %}
+  {% heroicon_solid "x" %}
   <span class="visually-hidden">Close menu</span>
 </button>
 ```
