@@ -52,6 +52,8 @@ module.exports = function (eleventyConfig) {
         return string.toUpperCase();
       case "javascript":
         return "JavaScript";
+      case "macos":
+        return "macOS";
       case "typescript":
         return "TypeScript";
       default:
