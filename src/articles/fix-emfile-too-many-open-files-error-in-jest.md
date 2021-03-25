@@ -4,6 +4,7 @@ description: When trying to run Jest in watch mode, this error may mean that you
 date: 2020-07-29
 tags:
     - debugging
+    - error
     - jest
 verse: Psalm 127:1
 # /img/<IMAGE>.min.jpg
