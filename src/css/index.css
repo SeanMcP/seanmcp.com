@@ -280,6 +280,10 @@ a[href].direct-link:hover {
   margin-top: 0.5rem !important;
 }
 
+.article__image {
+  width: 100%;
+}
+
 .wip-block {
   border: 1px solid var(--off-background);
   font-size: 87.5%;

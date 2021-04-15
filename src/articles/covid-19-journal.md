@@ -5,9 +5,9 @@ date: 2021-03-24
 tags:
     - garden
     - personal
-verse:
+verse: Psalm 103:3
 # /img/<IMAGE>.min.jpg
-image:
+image: /img/surgical-mask.min.jpg
 ---
 
 I tested positive for COVID-19 in November of 2020, a few weeks after the birth of my second son. My wife was the first in our household to show symptoms, and I followed a few days later.
@@ -16,6 +16,12 @@ Most of my symptoms were mild. I had full-body aches and congestion but no fever
 
 Once I recovered, that seemed to be the end of it. I warned by coworkers to take the virus seriously (they already were) and tried to be especially careful during the holidays.
 
-Fast-forward to March of 2021, and now a new symptom has emerged. There are now certain scents that have changed for the worse: bananas, toothpaste, and shampoo. They all share the same smell, and it is quite unpleasant. A kind of savory/overly rip odor that I am keen to avoid. I used to eat a (or two) banana a day, and now I can't stand to be too near to them.
+Fast-forward to March of 2021, and now a new symptom has emerged. There are now certain scents that have changed for the worse: bananas, toothpaste, and shampoo. They all share the same smell, and it is quite unpleasant. A kind of savory/overly-ripe odor that I am keen to avoid. I used to eat a banana a day (or more), and now I can't stand to be too near to them.
 
 I have heard that some people report a return to normal taste and smell after being vaccinated. Hopefully that is true, because I'd really like to enjoy eating bananas and brushing my teeth again.
+
+---
+
+In April of 2021, I got the first round of the Moderna COVID-19 vaccine. By the following morning, I experienced some typical "flu-like" symptoms: fatigue, full-body soreness, and skin sensitivity. The injection site – my left shoulder – was especially sore. By day two, most of the symptoms had resided.
+
+Bananas, shampoo, and toothpaste still smell odd but to a lesser degree. I'm optimistic that that will improve in the coming weeks! The second round of vaccination is scheduled for early May – four weeks after the first round. By then, Lord willing, I'll be back to a banana a day!
