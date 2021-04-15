@@ -19,6 +19,10 @@ description: The tools that I use to do what I do.
 - Wappalyzer: Detects the technology for sites your visit. Not critical, but interesting.
 - Wave Evaluation Tool: Accessibility audits
 
+### Browser themes
+
+- [Firefox Quantum Dark (for Chrome)](https://chrome.google.com/webstore/detail/firefox-quantum-dark/bgjapaaipcggokffggjohablhepagibn)
+
 ### User scripts
 
 - [Anchored Headings](https://gist.github.com/SeanMcP/ade3cb371d697709b3b95c5d539d888f)
@@ -38,17 +42,19 @@ description: The tools that I use to do what I do.
 - Live Server
 - Partial Diff
 
-## VS Code themes
+### VS Code themes
 
+- GitHub Theme
 - Tokyo Night
 - One Dark Pro
-- GitHub Theme
 - Firefox Theme
 
 ## Programs
 
 - GIMP
-- InkScape
-- KeyCastr
+- Inkscape
+- [KeyCastr](https://github.com/keycastr/keycastr)
+- [Numi](https://numi.app/)
 - Pika/Pixel Picker
-- RunJS
+- [Rectangle](https://rectangleapp.com/)
+- [RunJS](https://runjs.app/)
