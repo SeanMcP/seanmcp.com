@@ -31,5 +31,5 @@
         <!-- Current page: {{ page.url | url }} -->
     </body>
     {# <script src="{{ '/js/scroll-progress.js' | url }}"></script> #}
-    {% if foot %}{{ foot }}{% endif %}
+    {% if foot %}{{ foot | safe }}{% endif %}
 </html>

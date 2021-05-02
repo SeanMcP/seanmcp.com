@@ -7,7 +7,56 @@ tags:
 verse: 2 Kings 22:8
 # /img/<IMAGE>.min.jpg
 image:
+head: >-
+    <style>
+        #params-message {
+            border: 1px solid hsla(0, 0%, 0%, 0.25);
+            padding: 1rem;
+        }
+
+        #params-message h2 {
+            margin-top: 0;
+        }
+
+        #params-message p:last-of-type {
+            margin-bottom: 0;
+        }
+    </style>
+foot: >-
+    <script>
+        function readSearchParams() {
+            let usp = new URLSearchParams(window.location.search)
+            let params = {}
+            usp.forEach((value, key) => {
+                if (!params[key]) {
+                    params[key] = []
+                }
+                params[key].push(value)
+            })
+            return params
+        }
+        let params = readSearchParams()
+        let keys = Object.keys(params)
+        
+        if (keys.length > 0) {
+            let paramsMessage = document.getElementById('params-message')
+            let paramsList = document.getElementById('params-list')
+
+            keys.forEach(key => {
+                paramsList.innerHTML += `<li><b>${key}</b>: <code>${params[key].join('</code>&nbsp;<code>')}</code></li>`
+            })
+
+            paramsMessage.removeAttribute('hidden')
+        }
+    </script>
 ---
+
+<div id="params-message" hidden>
+    <h2>Hello search params!</h2>
+    <p>The following parameters were detected on this page:</p>
+    <ul id="params-list"></ul>
+    <p>To learn how I did this, read on or inspect the source code for this page.</p>
+</div>
 
 Search parameters, or query strings, are handy ways to store data on URLs. JavaScript provides an interface for reading search parameters called `URLSearchParams`. To use it, create an instance with the `new` keyword and pass your search parameter string as an argument:
 
@@ -58,7 +107,8 @@ function readSearchParams() {
 Then call the function whenever you need to reference the current location's search parameters:
 
 ```js
-// https://seanmcp.com/?greeting=Hello&name=World
+// https://seanmcp.com/articles/read-url-search-parameters-with-javascript/
+// ?greeting=Hello&name=World
 let params = readSearchParams()
 
 params.greeting
@@ -66,5 +116,7 @@ params.greeting
 params.name
 //['World']
 ```
+
+To see it in action, try going to [that url](./?greeting=Hello&name=World), or try adding your own search parameters.
 
 Happy reading!
