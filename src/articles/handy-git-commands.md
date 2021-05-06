@@ -16,7 +16,7 @@ Here are some of the git commands that I find useful when doing by work as a sof
 
 ### `git checkout -`
 
-Quick reference: Checkout the previous branch
+Quick: Checkout the previous branch
 
 This is super handy when working with long or unwieldy branch names. With the `-` reference, you can convert the following set of commands into a reusable alias:
 
@@ -24,15 +24,23 @@ This is super handy when working with long or unwieldy branch names. With the `-
 git checkout dev && git pull && git checkout - && git merge dev
 ```
 
+### `git commit -m "init" --allow-empty`
+
+Quick: Create a commit with no changes
+
+When starting on a development task, sometimes it's nice to set up branches and PRs before getting started on the work. The `--allow-empty` flag enables you to create commits without changing any files.
+
+I use this when I have a feature branch that will be the target of bunch of smaller branches. Initializing a those with an empty commit helps be get organized in the beginning. 
+
 ### `git diff branch_name -S "TODO:"`
 
-Search the diff between the current branch and `branch_name` for all strings matching `TODO:`
+Quick: Search the diff between the current branch and `branch_name` for all strings matching `TODO:`
 
 When working on a new feature, I like to leave myself todos to address before the branch is merged. Tracking these down can be tricky because there are other `TODO:`s in the codebase. I used to `grep` through the diff, but git's `-S` flag is much easier.
 
 ### `git diff branch_name -G "/*-action"`
 
-Search the diff between the current branch and `branch_name` for all strings matching the `/*-action` RegEx pattern
+Quick: Search the diff between the current branch and `branch_name` for all strings matching the `/*-action` RegEx pattern
 
 Similar to the `-S` flag, `-G` lets you search through the diff using RegEx. I don't know too much about regular expressions, but it's nice to have the option in your toolbelt.
 
