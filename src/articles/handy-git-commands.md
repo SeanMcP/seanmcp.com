@@ -44,6 +44,12 @@ Quick: Search the diff between the current branch and `branch_name` for all stri
 
 Similar to the `-S` flag, `-G` lets you search through the diff using RegEx. I don't know too much about regular expressions, but it's nice to have the option in your toolbelt.
 
+### `git log --before="2021-01-01 00:00"
+
+Quick: Limit the log output to all commits before the provided date.
+
+This is handy when you want to look at commits from a particular date or before a date (and/or after with `--after=`).
+
 ---
 
 Let me know if you have [any commands to add to the list](mailto:sean@seanmcp.com?subject=Git%20commands).
