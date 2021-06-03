@@ -1,10 +1,10 @@
 <header class="site-header">
-    <div class="container">
+    <div class="container --content">
         <a aria-label="Sean McP" class="logo-link" href="{{ '/' | url }}"></a>
 
         {% set navLabel = "primary" %}
         {% set navId = "desktop-nav" %}
+        {% set navLinks = nav.primary %}
         {% include "partials/navigation.njk" %}
     </div>
-    {# <div id="scroll-progress"><span></span></div> #}
 </header>

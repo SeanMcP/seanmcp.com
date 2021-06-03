@@ -1,10 +1,18 @@
 :root {
-  --background: hsl(216, 5%, 95%);
-  --off-background: hsla(216, 5%, 10%, 20%);
-  --text-color: hsl(216, 5%, 10%);
+  --dark: hsl(0, 0%, 10%);
+  --light: hsl(0, 0%, 95%);
 
   --accent: hsl(188, 100%, 42%);
   --primary: hsl(216, 85%, 34%);
+
+  --background: hsl(216, 5%, 95%);
+  --off-background: hsla(216, 5%, 10%, 20%);
+  --text-color: hsl(216, 5%, 10%);
+  --anchor-color: var(--primary);
+
+  --block-code-background: hsla(0, 0%, 0%, 90%);
+  --inline-code-background: hsla(0, 0%, 0%, 7.5%);
+  --inline-code-color: hsla(0, 0%, 0%, 75%);
 
   --body-font: -apple-system, BlinkMacSystemFont, Helvetica, Arial, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -17,15 +25,24 @@ body {
   background: var(--background);
   color: var(--text-color);
   font-family: var(--body-font);
-  /* font-size: 125%; */
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+body[data-theme="dark"] {
+  --background: var(--dark);
+  --off-background: hsla(216, 5%, 95%, 10%);
+  --text-color: var(--light);
+  --anchor-color: var(--accent);
+  --inline-code-background: hsla(0, 0%, 0%, 50%);
+  --inline-code-color: hsla(0, 0%, 100%, 85%);
+}
+
 .container {
   padding: 1rem;
+  margin: 0 auto;
 }
 
 .site-header .container {
@@ -85,3 +102,13 @@ body {
   outline: 2px dotted white;
 }
 
+.site-footer h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.site-footer nav a {
+  display: block;
+  margin-top: 0.25em;
+}

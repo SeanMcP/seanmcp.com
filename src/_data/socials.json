@@ -1,20 +1,20 @@
 [
   {
-    "name": "GitHub",
+    "label": "GitHub",
     "username": "seanmcp",
     "url": "https://github.com/seanmcp"
   },
   {
-    "name": "Twitter",
+    "label": "Twitter",
     "username": "snmcp",
     "url": "https://twitter.com/snmcp"
   },
   {
-    "name": "YouTube",
+    "label": "YouTube",
     "url": "https://smcp.dev/yt"
   },
   {
-    "name": "LinkedIn",
+    "label": "LinkedIn",
     "username": "seanmcp",
     "url": "https://linkedin.com/in/seanmcp"
   }
