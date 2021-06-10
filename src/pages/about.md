@@ -1,9 +1,31 @@
 ---
 layout: page
 title: About
+head: >-
+    <style>
+        .headshot {
+            display: block;
+            padding-bottom: 1rem;
+            margin: 0 auto;
+            max-width: 67%;
+            width: 100%;
+        }
+
+        @media (min-width: 500px) {
+            .headshot {
+                float: right;
+                max-width: 33%;
+                padding-left: 1rem;
+            }
+
+            .page .container > p:first-of-type {
+                margin-top: 0;
+            }
+        }
+    </style>
 ---
 
-<!-- <img src="/img/seanmcp.fun.jpg" alt="A photo of Sean McPherson (SeanMcP) smiling" width="120" style="float:right;max-width:45vw;padding:0 0 1rem 1rem;"> -->
+<img class="headshot" src="/img/seanmcp.2020.jpg" alt="A photo of Sean McPherson smiling">
 
 Thanks for visiting my website! My name is Sean McPherson, or [Sean McP](../articles/how-to-pronounce-my-name) for short, and I am a software engineer for Niche.com in Pittsburgh, Pennsylvania.
 
@@ -16,20 +38,12 @@ I have had the opportunity to:
 - Lead workshops on React and the JavaScript ecosystem
 - Give lightning talks at a meetup
 
-After college, I spent three years teaching at public and private institutions. It gave me valuable experience in learning, planning, and speaking, and my goal is to bring those lessons into all of my work. This website is an example of that
+After college, I spent three years teaching at public and private schools. It gave me valuable experience in learning, planning, and speaking, and my goal is to bring those lessons into all of my work. This website is an example of that.
 
 Outside of work, I spend most of my time with my wife (married '14), two sons (born '18 and '20), and our three-legged dog (adopted '17). I also [like soccer](../soccer).
-<!-- 
-## My journey
-
-Born and raised in State College, Pennsylvania, I graduated from Edinboro University with a degree in Middle-level Education. After working for three years as a teacher in Pennsylvania and Georgia, I decided to switch careers.
-
-I enrolled in The Iron Yard, a coding bootcamp in Atlanta and graduated with a certificate in front-end engineering with React. I worked at TSYS Digital Innovations in Alpharetta, GA for a year and half before moving back to Pennsylvania to take a position with Niche.com in Pittsburgh.
-
-When I'm not coding at work and at home, I enjoy spending time with my wife (married '14), son (born '18), and three-legged dog (adopted '17). We like to play board games and [would love to hear your recommendations](https://twitter.com/snmcp). -->
 
 ## Contact
 
-Do you have an exciting job opportunity for me? [Check my availability here](https://seanmcp.github.io/areyoulookingforwork).
+Do you have an exciting job opportunity for me? [Check my availability here](/are-you-looking-for-work/).
 
-For all other inquires, you can [connect with me on LinkedIn](https://linkedin.com/in/seanmcp) or reach out to any of my accounts in the footer.
+For all other inquires, you can [send me an email](mailto:sean@seanmcp.com?subject=Hey%20there!), [connect with me on LinkedIn](https://linkedin.com/in/seanmcp), or reach out to one of the other accounts in the footer.
