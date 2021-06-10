@@ -46,8 +46,9 @@ body[data-theme="dark"] {
 }
 
 .site-header .container {
+  align-items: center;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
 .site-header nav {
@@ -56,12 +57,65 @@ body[data-theme="dark"] {
   flex-wrap: wrap;
 }
 
-.site-header nav a {
-  margin-top: 1rem;
-}
-
 .site-header nav a:not(:last-of-type) {
   margin-right: 1rem;
+}
+
+.theme-toggle:hover {
+  cursor: pointer;
+  outline: none !important;
+}
+
+.theme-toggle:focus-within {
+  outline: 3px solid var(--anchor-color);
+  outline-offset: 3px;
+}
+
+.theme-toggle:hover span::before {
+  transform: translateX(-2px);
+}
+
+.theme-toggle:hover span::after {
+  transform: translateX(2px);
+}
+
+.theme-toggle input + span {
+  --size: 1.25em;
+  display: inline-block;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+}
+
+.theme-toggle input + span::before,
+.theme-toggle input + span::after {
+  border: 1px solid var(--text-color);
+  content: "";
+  display: inline-block;
+  height: calc(var(--size) * 2 / 3);
+  position: relative;
+  transition: transform 100ms ease-in-out;
+  width: calc(var(--size) * 2 / 3);
+}
+
+.theme-toggle input + span::before {
+  background-color: var(--text-color);
+}
+
+.theme-toggle input + span::after {
+  background: var(--background);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.theme-toggle input:checked + span::before {
+  background-color: var(--background);
+}
+
+.theme-toggle input:checked + span::after {
+  background-color: var(--text-color);
+  z-index: -1;
 }
 
 @media screen and (min-width: 500px) {
@@ -71,16 +125,6 @@ body[data-theme="dark"] {
 
   .container.--content {
     max-width: 70ch;
-  }
-
-  .site-header .container {
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .site-header nav a {
-    margin-top: 0;
   }
 }
 
