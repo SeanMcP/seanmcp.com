@@ -41,23 +41,34 @@ module.exports = function (eleventyConfig) {
     return array.slice(0, n);
   });
 
-  eleventyConfig.addFilter("capitalize", (string) => {
+  eleventyConfig.addFilter("capitalize", (string, separator = "-") => {
     switch (string) {
+      case "npm": {
+        return string;
+      }
       case "cli":
       case "css":
       case "js":
       case "til":
       case "ux":
       case "wip":
+      case "yaml":
         return string.toUpperCase();
       case "javascript":
         return "JavaScript";
       case "macos":
         return "macOS";
+      case "magnolia-js":
+        return "Magnolia JS";
+      case "node-js":
+        return "Node.js";
       case "typescript":
         return "TypeScript";
       default:
-        return string.charAt(0).toUpperCase() + string.slice(1);
+        return string
+          .split(separator)
+          .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+          .join(" ");
     }
   });
 
@@ -70,15 +81,22 @@ module.exports = function (eleventyConfig) {
     return String(new Date().getFullYear());
   });
 
-  eleventyConfig.addPairedShortcode("note", function (content, date, url, edited = false) {
-    return `<article class="note">
+  eleventyConfig.addPairedShortcode(
+    "note",
+    function (content, date, url, edited = false) {
+      return `<article class="note">
       <header class="note__header">
         <b>Sean McPherson</b>
-        <a href="${url}"><time datetime="${date}">${DateTime.fromJSDate(date, { zone: "America/New_York" }).toFormat("t · DD")}</time></a>${edited ? '<small>(Edited)</small>' : ''}
+        <a href="${url}"><time datetime="${date}">${DateTime.fromJSDate(date, {
+        zone: "America/New_York",
+      }).toFormat("t · DD")}</time></a>${
+        edited ? "<small>(Edited)</small>" : ""
+      }
       </header>
       <div class="note__body --clear-child-margins">${content}</div>
     </article>`;
-  });
+    }
+  );
 
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
   eleventyConfig.addCollection("books", (collections) =>
