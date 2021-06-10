@@ -5,7 +5,7 @@ date: 2019-09-11
 tags:
     - react
     - testing
-layout: article
+verse: Hebrews 4:12
 ---
 
 If you are writing tests for React components in 2019, you will probably find your way to Airbnb's Enzyme testing utilities. The recent industry standard, Enzyme provides you some useful tools for rendering your components.
@@ -111,5 +111,3 @@ If you're working with Enzyme, use [`find()`](https://airbnb.io/enzyme/docs/api/
 ## Further reading
 - ["Testing Implementation Details" by Kent C. Dodds](https://kentcdodds.com/blog/testing-implementation-details)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-
-Hebrews 4:12 (SDG)

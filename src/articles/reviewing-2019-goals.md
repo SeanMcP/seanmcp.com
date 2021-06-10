@@ -4,7 +4,7 @@ description: Checking in on the goals I set for myself in 2019
 date: 2020-01-08
 tags:
     - growth
-layout: article
+verse: Job 23:13
 ---
 
 To kick-off 2019, I wrote an article in which I [set some goals for 2019](./2018-into-2019). I had planned to check in on those goals more frequently:
@@ -78,5 +78,3 @@ At face value, that's not a great completion rate. But it is all a learning oppo
 You can see by going through the list the difference between goals that I _thought_ were important vs. the ones that were actually important. I'm happy with the four successes and am looking forward to reaching towards the other goals in this new year.
 
 Here's to new attempts in a new year! 
-
-Philippians 3:14 (SDG)

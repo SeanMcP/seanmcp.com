@@ -4,7 +4,7 @@ description: An attempt to remember the difference between the two
 date: 2019-07-30
 tags:
   - programming
-layout: article
+verse: Proverbs 4:13
 ---
 
 I have a hard time remembering the difference between two common programming terms: arguments, and parameters.
@@ -44,5 +44,3 @@ I've been wracking my brain for a [mnemonic device](https://en.wikipedia.org/wik
 If I hear of or come up with a better one, I'll update this article.
 
 I hope that helps!
-
-Proverbs 4:13 (SDG)

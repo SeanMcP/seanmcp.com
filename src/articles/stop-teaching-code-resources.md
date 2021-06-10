@@ -5,7 +5,7 @@ date: 2019-11-26
 tags:
     - teaching
     - coding
-layout: article
+verse: Psalm 25:4-5
 ---
 
 At some time in the future, I would like to return to the classroom to teach programming to middle school students. That is the age when I first starting coding, and I would love the opportunity to inspire the next generation of developers at an early age.
@@ -62,5 +62,3 @@ console.log(user2.age)
 ---
 
 I hope that helps. Happy coding!
-
-Psalm 25:4-5 (SDG)

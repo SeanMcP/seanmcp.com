@@ -4,7 +4,7 @@ description: Correcting my mental model
 date: 2020-01-13
 tags:
     - javascript
-layout: article
+verse: Micah 7:8
 ---
 
 Default parameters are a handy feature in JavaScript. [MDN has a more thorough explanation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), but imagine a function that greets a user:
@@ -122,5 +122,3 @@ To state it plainly: **falsy values do NOT become default parameters**. It only 
 So the above code is worked as designed, even if it's not what I expected. Time to update that mental model!
 
 Hopefully that clears up the mystery of default parameters for you. Happy coding!
-
-Micah 7:8 (SDG)
