@@ -4,7 +4,6 @@ description: A sample POST with fetch for those of us who can never remember how
 date: 2020-08-07
 tags:
     - javascript
-    - web-development
 verse: Ruth 3:11
 # /img/<IMAGE>.min.jpg
 image:
