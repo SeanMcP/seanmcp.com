@@ -354,12 +354,12 @@ a[href].direct-link:hover {
 }
 
 .note__body a {
-  color: var(--accent);
+  color: var(--note-anchor-color);
 }
 
 .note__body code:not([class]) {
-  background-color: hsla(0, 100%, 100%, 10%);
-  color: hsla(0, 100%, 100%, 80%);
+  background-color: transparent;
+  color: var(--background);
 }
 
 /* Site footer */

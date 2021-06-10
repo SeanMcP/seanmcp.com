@@ -9,6 +9,7 @@
   --off-background: hsla(0, 0%, 10%, 20%);
   --text-color: var(--dark);
   --anchor-color: var(--primary);
+  --note-anchor-color: var(--accent);
 
   --block-code-background: hsla(0, 0%, 0%, 90%);
   --inline-code-background: hsla(0, 0%, 0%, 7.5%);
@@ -38,6 +39,7 @@ body[data-theme="dark"] {
   --anchor-color: var(--accent);
   --inline-code-background: hsla(0, 0%, 0%, 50%);
   --inline-code-color: hsla(0, 0%, 100%, 85%);
+  --note-anchor-color: var(--primary);
 }
 
 .container {
