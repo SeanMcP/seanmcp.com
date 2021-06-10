@@ -4,7 +4,7 @@ description: A quick review of Jeff Olson's article on teaching code with transl
 date: 2019-11-26
 tags:
     - teaching
-    - coding
+    - programming
 verse: Psalm 25:4-5
 ---
 

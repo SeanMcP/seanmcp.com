@@ -58,8 +58,6 @@ module.exports = function (eleventyConfig) {
         return "JavaScript";
       case "macos":
         return "macOS";
-      case "magnolia-js":
-        return "Magnolia JS";
       case "node-js":
         return "Node.js";
       case "typescript":

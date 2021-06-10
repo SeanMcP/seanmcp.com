@@ -4,7 +4,6 @@ description:
 date: 2020-08-18
 tags:
     - preact
-    - get-started
     - wip
 verse:
 # /img/<IMAGE>.min.jpg
