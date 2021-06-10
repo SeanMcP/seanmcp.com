@@ -1,13 +1,13 @@
 :root {
-  --dark: hsl(0, 0%, 10%);
-  --light: hsl(0, 0%, 95%);
+  --dark: hsl(216, 5%, 10%);
+  --light: hsl(216, 5%, 97%);
 
   --accent: hsl(188, 100%, 42%);
   --primary: hsl(216, 85%, 34%);
 
-  --background: hsl(216, 5%, 95%);
-  --off-background: hsla(216, 5%, 10%, 20%);
-  --text-color: hsl(216, 5%, 10%);
+  --background: var(--light);
+  --off-background: hsla(0, 0%, 10%, 20%);
+  --text-color: var(--dark);
   --anchor-color: var(--primary);
 
   --block-code-background: hsla(0, 0%, 0%, 90%);

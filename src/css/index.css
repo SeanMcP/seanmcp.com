@@ -3,7 +3,7 @@ a {
   color: var(--anchor-color);
   text-decoration-color: var(--off-background);
   text-decoration-skip-ink: none;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1px;
   transition: color 100ms ease-in-out, text-decoration 100ms ease-in-out;
 }
 
