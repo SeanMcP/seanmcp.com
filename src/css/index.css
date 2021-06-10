@@ -73,7 +73,6 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  font-weight: 800;
 }
 
 h1,
@@ -97,11 +96,11 @@ h6 {
 }
 
 h1 {
-  font-size: calc(var(--heading-scale) * 4);
+  font-size: calc(var(--heading-scale) * 2.25);
   line-height: 1em;
 }
 h2 {
-  font-size: calc(var(--heading-scale) * 2);
+  font-size: calc(var(--heading-scale) * 1.75);
 }
 h3 {
   font-size: calc(var(--heading-scale) * 1.5);
@@ -227,7 +226,6 @@ li ul {
 .site-header a:hover {
   text-decoration-line: underline;
   text-decoration-style: solid;
-  text-decoration-thickness: 3px;
 }
 
 .site-header a:hover {
@@ -287,14 +285,6 @@ a[href].direct-link:hover {
   font-size: 87.5%;
   margin-bottom: 2rem;
   padding: 1rem;
-}
-
-.wip-block > *:first-child {
-  margin-top: 0;
-}
-
-.wip-block > *:last-child {
-  margin-bottom: 0;
 }
 
 .note-layout {
@@ -371,6 +361,22 @@ a[href].direct-link:hover {
 
 .site-footer {
   border-top: 1px solid var(--off-background);
+}
+
+.site-footer h2 {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.site-footer nav a {
+  font-size: smaller;
+  margin-top: 0.375em;
 }
 
 @media (prefers-reduced-motion: no-preference) {

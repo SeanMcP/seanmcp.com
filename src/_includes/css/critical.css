@@ -101,14 +101,3 @@ body[data-theme="dark"] {
   left: 0;
   outline: 2px dotted white;
 }
-
-.site-footer h2 {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0;
-}
-
-.site-footer nav a {
-  display: block;
-  margin-top: 0.25em;
-}
