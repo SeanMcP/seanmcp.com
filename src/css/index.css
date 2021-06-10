@@ -30,7 +30,7 @@ kbd {
 
 kbd,
 code:not([class]) {
-  font-size: 0.875rem;
+  font-size: 0.875em;
   padding: 2px 4px;
 }
 
