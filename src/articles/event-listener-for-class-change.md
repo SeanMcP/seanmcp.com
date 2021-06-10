@@ -4,7 +4,6 @@ description: How to create a custom event listener for class names using the Mut
 date: 2019-05-10
 tags:
     - javascript
-    - web
 layout: article
 ---
 

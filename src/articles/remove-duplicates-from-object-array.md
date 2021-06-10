@@ -4,7 +4,7 @@ description: Not as easy as we'd like it, but not as hard as it could be
 date: 2020-02-03
 tags:
     - javascript
-layout: article
+verse: Job 23:13
 ---
 
 Reviewing a recent code exercise at work, we came across a situation where a candidate wanted to ensure that there were no duplicates in an array of objects.
@@ -106,5 +106,3 @@ Here is a Repl of the solution. Feel free to fork it, make improvements, and [sh
 <iframe height="400px" width="100%" src="https://repl.it/@SeanMcP/Unique-items-in-array?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Happy coding!
-
-Job 23:13 (SDG)

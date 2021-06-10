@@ -1,5 +1,5 @@
 <nav aria-label="{{ navLabel }}" {% if navId %}id="{{ navId }}"{% endif %}>
-    {%- for nav in navigation -%}
-        <a {% if nav.url == page.url %}aria-current="page"{% endif %} class="site-link" href="{{ nav.url | url }}">{{ nav.label }}</a>
+    {%- for nav in navLinks -%}
+        <a {% if nav.url == page.url %}aria-current="page"{% endif %} href="{{ nav.url | url }}">{{ nav.label }}</a>
     {%- endfor -%}
 </nav>

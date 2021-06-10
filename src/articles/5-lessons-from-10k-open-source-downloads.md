@@ -5,7 +5,7 @@ date: 2019-11-25
 tags:
     - open-source
     - package
-layout: article
+verse: Gen 1:27
 ---
 
 In April of 2018, I wrote an article ["How to use emojis in React"](https://medium.com/@seanmcp/%EF%B8%8F-how-to-use-emojis-in-react-d23bbf608bf7). At the time, the default eslint configuration for Create React App would flash an error if you put an emoji in a rendered string.
@@ -82,5 +82,3 @@ If you want to publish packages because you think it's fun or you want to help o
 ---
 
 I hope those were helpful. If you have any questions about open source or want to share some tips of your own, [please let me know](https://twitter.com/@snmcp).
-
-Genesis 1:27 (SDG)

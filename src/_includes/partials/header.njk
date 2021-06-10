@@ -1,10 +1,16 @@
 <header class="site-header">
-    <div class="container">
+    <div class="container --content">
         <a aria-label="Sean McP" class="logo-link" href="{{ '/' | url }}"></a>
-
-        {% set navLabel = "primary" %}
-        {% set navId = "desktop-nav" %}
-        {% include "partials/navigation.njk" %}
+        <div style="align-items:center;display:flex;">
+            {% set navLabel = "primary" %}
+            {% set navId = "desktop-nav" %}
+            {% set navLinks = nav.primary %}
+            {% include "partials/navigation.njk" %}
+            <label class="theme-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle theme</span>
+                <input class="--visually-hidden" type="checkbox" id="dark-mode"/>
+                <span></span>
+            </label>
+        </div>
     </div>
-    {# <div id="scroll-progress"><span></span></div> #}
 </header>

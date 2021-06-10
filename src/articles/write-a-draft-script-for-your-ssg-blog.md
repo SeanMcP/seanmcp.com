@@ -4,9 +4,9 @@ description: Easily spin up a new article when you don't have a CMS
 date: 2020-01-31
 tags:
     - bash
-    - node
-    - blog
-    - static-site
+    - node-js
+    - blogging
+    - static-site-generator
     - wip
 layout: article
 ---

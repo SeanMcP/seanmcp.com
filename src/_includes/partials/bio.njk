@@ -1,14 +1,10 @@
-<section id="bio">
+<section>
     <div class="container --content --clear-child-margins">
-        <h2>About</h2>
-        {# <img alt="Sean McPherson" class="bio__image" loading="lazy" src="{{ '/img/seanmcp.2020.jpg' | url }}" /> #}
-        <p>My name is <b>Sean McPherson (SeanMcP)</b>, and I am a software engineer based in Pittsburgh, PA. Here I write articles about programming for developers of all levels.</p>
-        <ul class="--horizontal-list">
-            {% for network in socials %}
-                <li>
-                    <a href="{{ network.url }}" target="_blank" rel="noreferrer noopener">{{ network.name }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+        <h2>About<span class="--visually-hidden">&nbsp;the author</span></h2>
+        <p>My name is Sean McPherson, and I am a software engineer interesed in all areas of front-end development. Here I write
+            articles about programming for developers of all levels, and occassionally other topics.</p>
+        <p>Currently I work for
+            <a href="https://niche.com">Niche.com</a>
+            and live with my lovely family in Pittsburgh, PA.</p>
     </div>
 </section>

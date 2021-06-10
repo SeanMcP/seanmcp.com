@@ -32,10 +32,9 @@ code[class*="language-"]::mozselection {
   }
 }
 pre[class*="language-"] {
-  /* padding: 1em; */
   margin: .5em 0;
   overflow: auto;
-  background: #212121;
+  background: var(--block-code-background);
 }
 :not(pre) > code[class*="language-"] {
   padding: .1em .3em;

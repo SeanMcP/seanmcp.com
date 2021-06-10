@@ -4,8 +4,7 @@ description: By calling your asynchronous functions before awaiting, you can sav
 date: 2020-06-17
 tags:
     - javascript
-    - promises
-    - await
+    - asynchronous-code
 verse: Isaiah 40:31
 ---
 

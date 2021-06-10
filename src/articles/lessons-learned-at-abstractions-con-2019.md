@@ -4,7 +4,7 @@ description: Some notes and thoughts from Pittsburgh's cross-discipline software
 date: 2019-08-27
 tags:
     - professional
-layout: article
+verse: Proverbs 1:5
 ---
 
 Two weeks into the job, my new employer sent me and a dozen other engineers, qa's, and designers to [Abstractions 2019](https://abstractions.io/), a cross-discipline software conference in Pittsburgh, PA. Headlining the group of speakers was the YouTuber and creater Simone Gertz, Chris Coyier of CodePen and CSS-Tricks, and Guillermo Rauch of Zeit.
@@ -116,5 +116,3 @@ Certain tasks have shifted from the backend of the application to the front. The
 ### Building UX Teams
 
 Managers empower the team to realize its full potential. People have different skills, can work together, can learn, and can teach.
-
-Proverbs 1:5 (SDG)

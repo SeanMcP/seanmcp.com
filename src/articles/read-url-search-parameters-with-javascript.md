@@ -10,7 +10,7 @@ image:
 head: >-
     <style>
         #params-message {
-            border: 1px solid hsla(0, 0%, 0%, 0.25);
+            border: 1px solid var(--off-background);
             padding: 1rem;
         }
 
