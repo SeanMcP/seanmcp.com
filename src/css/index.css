@@ -34,9 +34,14 @@ code:not([class]) {
   padding: 2px 4px;
 }
 
+pre:not([class]),
 :not(pre) > code:not([class]) {
   background: var(--inline-code-background);
   color: var(--inline-code-color);
+}
+
+pre:not([class]) {
+  overflow-y: auto;
 }
 
 kbd {
