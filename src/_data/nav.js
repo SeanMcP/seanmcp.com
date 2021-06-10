@@ -24,15 +24,21 @@ const LINKS = {
     label: "About",
     url: "/about/",
   },
+  feed: {
+    description: "Subscribe to my blog with your favorite RSS reader",
+    label: "Feed",
+    url: "/feed/feed.xml"
+  }
 };
 
 module.exports = {
   primary: [LINKS.articles, LINKS.about],
   secondary: [
-    LINKS.articles,
-    LINKS.notes,
-    LINKS.talks,
-    LINKS.bookshelf,
     LINKS.about,
+    LINKS.articles,
+    LINKS.talks,
+    LINKS.notes,
+    LINKS.bookshelf,
+    LINKS.feed,
   ],
 };
