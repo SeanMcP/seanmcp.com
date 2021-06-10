@@ -5,7 +5,7 @@ templateClass: page
 {%- if title or renderData.title -%}
     <header class="page-header">
         <div class="container --content --clear-child-margins">
-            <h1 id="title">{{ display.title or title or renderData.title }}</h1>
+            <h1>{{ display.title or title or renderData.title }}</h1>
         </div>
     </header>
 {%- endif -%}
