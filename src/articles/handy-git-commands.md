@@ -24,6 +24,12 @@ This is super handy when working with long or unwieldy branch names. With the `-
 git checkout dev && git pull && git checkout - && git merge dev
 ```
 
+### `git checkout -- .`
+
+Quick: Delete all changes in the current branch
+
+When you just want to start from scratch on the current branch, this command is a huge timesaver. The `--` refers to the current branch, while the `.` refers to all files. If you want to reset a particular file, you could swap the name with the `.`.
+
 ### `git commit -m "init" --allow-empty`
 
 Quick: Create a commit with no changes
