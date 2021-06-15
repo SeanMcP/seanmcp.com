@@ -20,6 +20,7 @@
         {% if head -%}{{ head | safe }}{%- endif %}
     </head>
     <body data-page-type="{{ layout }}" {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
+        <div id="scroll-progress"><span></span></div>
         <a class="skip-link" href="#main">Skip to main content</a>
         {% include "partials/header.njk" %}
 
@@ -30,6 +31,7 @@
         {% include "partials/footer.njk" %}
         <!-- Current page: {{ page.url | url }} -->
     </body>
+    <script src="{{ '/js/scroll-progress.js' | url }}"></script>
     <script src="{{ '/js/theme-toggle.js' | url }}"></script>
     {% if foot %}{{ foot | safe }}{% endif %}
 </html>

@@ -23,11 +23,13 @@
 }
 
 body {
+  --scroll-progress-height: 6px;
   background: var(--background);
   color: var(--text-color);
   font-family: var(--body-font);
   margin: 0;
   padding: 0;
+  padding-top: var(--scroll-progress-height);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -146,4 +148,25 @@ body[data-theme="dark"] {
 .skip-link:focus {
   left: 0;
   outline: 2px dotted white;
+}
+
+#scroll-progress {
+  --height: var(--scroll-progress-height);
+  background: linear-gradient(to right, var(--accent), var(--primary));
+  position: fixed;
+  height: var(--height);
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+#scroll-progress span {
+  --width: var(--height);
+  border-right: var(--width) solid var(--background);
+  bottom: 0;
+  left: calc(var(--width) / -2);
+  position: absolute;
+  top: 0;
+  width: 0%;
 }
