@@ -49,7 +49,7 @@ If you're dealing with a simple class like the example above, you can add a `.le
 
 However, if you are dealing with subclasses, you may want to go a little deeper.
 
-Let's update the example so that a instance of a class that extends another:
+Let's update the example so that the class who's methods you want to count extends another:
 
 ```js
 class Pet {
