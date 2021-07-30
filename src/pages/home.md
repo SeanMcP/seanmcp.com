@@ -12,16 +12,16 @@ Currently I work at Niche.com in Pittsburgh, Pennsylvania building web and mobil
 
 Outside of work, I enjoy spending time with my family (wife, two sons, and dog), playing and watching soccer, re-playing my favorite board games, and trying not to embarrass Jesus Christ.
 
-## Latest note
-
-{% set notes = collections.notes | head(-1) %}
-{% include "partials/note-list.njk" %}
-
-[View all notes](/notes/)
-
 ## Recent Articles
 
 {% set articles = collections.articles | head(-5) %}
 {% include "partials/article-list.njk" %}
 
 [View all articles](/articles/)
+
+## Latest note
+
+{% set notes = collections.notes | head(-1) %}
+{% include "partials/note-list.njk" %}
+
+[View all notes](/notes/)
