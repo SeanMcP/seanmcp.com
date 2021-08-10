@@ -53,6 +53,7 @@ Finally, I added a bit of CSS to help the videos look good on my site. These sty
 iframe.yt-shortcode {
   height: 50vw;
   margin: 1rem 0;
+  max-height: 25rem;
   width: 100%;
 }
 ```
