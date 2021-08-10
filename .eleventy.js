@@ -62,6 +62,8 @@ module.exports = function (eleventyConfig) {
         return "Node.js";
       case "typescript":
         return "TypeScript";
+      case "youtube":
+        return "YouTube";
       default:
         return string
           .split(separator)
