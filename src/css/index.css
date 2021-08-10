@@ -389,3 +389,9 @@ a[href].direct-link:hover {
     scroll-behavior: smooth;
   }
 }
+
+iframe.yt-shortcode {
+  height: 50vw;
+  margin: 1rem 0;
+  width: 100%;
+}

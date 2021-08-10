@@ -28,9 +28,9 @@ With my wife's help, I tried using the [Google app's music recognition feature](
 
 Here are the two videos for comparison:
 
-<iframe src="https://www.youtube-nocookie.com/embed/tZaAmapkp4Q" title="YouTube video player for 'Banana' by Stony Pony" frameborder="0" allowfullscreen></iframe>
+{% youtube "https://www.youtube.com/watch?v=tZaAmapkp4Q", "'Banana' by Stony Pony" %}
 
-<iframe src="https://www.youtube-nocookie.com/embed/wlkCQXHEgjA" title="YouTube video player for 'Spot Launch' by Boston Dynamics" frameborder="0" allowfullscreen></iframe>
+{% youtube "https://www.youtube.com/watch?v=wlkCQXHEgjA", "'Spot Launch' by Boston Dynamics" %}
 
 The version in the Boston Dynamics video has removed the word "Banana" a few times, but it is otherwise the same song.
 
