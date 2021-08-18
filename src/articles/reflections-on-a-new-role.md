@@ -16,7 +16,7 @@ Recently I accepted a new position at Niche as a senior mobile software engineer
 
 While working for TSYS in 2018, I helped work on an unnamed mobile app in the consumer finance space. After joining Niche in 2019, I helped implement Apple Sign-In in our app and resolved some other issues. Now that I am fully dedicated to working on the mobile app, I'm looking forward to building new things and learning lots along the way.
 
-I'm going to start sharing more mobile and React Native articles on this site as I learn. The first of those came out earlier this week: [_What is Hermes in React Native?_](../what-is-hermes-in-react-native). Some of the information may be applicable in React contexts, so I'll try to tag articles appropriately.
+I'm going to start sharing more mobile and React Native articles on this site as I learn. The first of those came out earlier this week: [_What is Hermes in React Native?_](/articles/what-is-hermes-in-react-native). Some of the information may be applicable in React contexts, so I'll try to [tag articles appropriately](/tags/).
 
 That said, I'm not leaving the web world entirely. [A Chrome extension for teachers](https://chrome.google.com/webstore/detail/popsicle-sticks-random-st/lnckbgaeagindapiodcmccfokcmnfecm) that I launched in 2018 has over 10,000 weekly users during the school year, and I just released a new version with some great features. I'm committed to continued development on that and [all the other tools I've created](https://toollama.com).
 
