@@ -54,6 +54,8 @@ module.exports = function (eleventyConfig) {
       case "wip":
       case "yaml":
         return string.toUpperCase();
+      case "ios":
+        return "iOS";
       case "javascript":
         return "JavaScript";
       case "macos":
@@ -116,8 +118,9 @@ module.exports = function (eleventyConfig) {
     collections.getFilteredByGlob("./src/notes/*.md")
   );
 
-  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
