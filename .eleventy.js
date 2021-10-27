@@ -54,6 +54,9 @@ module.exports = function (eleventyConfig) {
       case "wip":
       case "yaml":
         return string.toUpperCase();
+      case "edtech": {
+        return "EdTech";
+      }
       case "ios":
         return "iOS";
       case "javascript":
