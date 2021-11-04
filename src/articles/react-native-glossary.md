@@ -19,8 +19,6 @@ Building applications with React Native requires a high-level understanding of m
 
 <!--
 TERMS TO ADD:
-- build.gradle
-- Gradle
 - JDK
 - JRE
 -->
@@ -34,6 +32,19 @@ Android App Bundles (AABs) are a new format for publishing applications on Andro
 ## APK
 
 Android Package Kits (APKs) are an older format for publishing applications on Android.
+
+## `build.gradle`
+
+A `build.gradle` file contains all of the information for Gradle to compile Android apps, including dependency resolutions and tasks to process the source.
+
+- [_What is a `build.gradle` file?_](../what-is-a-build-gradle-file)
+
+## Gradle
+
+Gradle is an automated build tool that is used to compile Android apps from source code. It is configured in `build.gradle` files and run through a wrapper: `gradlew`/`gradlew.bat`.
+
+- [Gradle Build Tool](https://gradle.org/)
+- [Gradle tutorial for complete beginners (YouTube)](https://www.youtube.com/watch?v=-dtcEMLNmn0)
 
 ## Hermes
 
@@ -54,7 +65,7 @@ JavaScript Core or JSCore is a JavaScript engine that is included on iOS devices
 
 - [JavaScriptCore (Apple)](https://developer.apple.com/documentation/javascriptcore)
 
-<!-- 
+<!--
 ## JRE
 
 A Java Runtime Environment (JRE) is the code required to run a Java application. It contains all of the libraries and software that Java programs, and starts the Java Virtual Machine (JVM).
