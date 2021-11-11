@@ -4,7 +4,7 @@
   "description": "A personal website",
   "scripts": {
     "build": "eleventy",
-    "prestart": "rimraf _site/",
+    "prestart": "rm -rf _site/",
     "start": "eleventy --serve --port=8088",
     "watch": "eleventy --watch",
     "debug": "DEBUG=* eleventy",
@@ -34,7 +34,6 @@
     "luxon": "^1.12.0",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.0.2",
-    "markdown-it-footnote": "^3.0.1",
-    "rimraf": "^3.0.2"
+    "markdown-it-footnote": "^3.0.1"
   }
 }
