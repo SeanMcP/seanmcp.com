@@ -7,6 +7,7 @@ description: The tools that I use to do what I do.
 ## Browsers
 
 - Google Chrome
+- Microsoft Edge
 - Mozilla Firefox Developer Edition
 
 ### Browser extensions
@@ -58,3 +59,4 @@ description: The tools that I use to do what I do.
 - Pika/Pixel Picker
 - [Rectangle](https://rectangleapp.com/)
 - [RunJS](https://runjs.app/)
+- [Warp](https://www.warp.dev/)
