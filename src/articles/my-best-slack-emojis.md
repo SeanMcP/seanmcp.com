@@ -1,6 +1,6 @@
 ---
 title: My best Slack emojis
-description:
+description: A curated list of the best reaction emojis that I have created for Slack
 date: 2022-01-04
 tags:
   - emojis
