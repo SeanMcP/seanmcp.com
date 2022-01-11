@@ -31,6 +31,7 @@ I like reaction emojis and have spent an embarrassing amount of time [making new
 | ![eagle eye](/img/emojis/eagle-eye.jpg)                          | `:eagle-eye:`                    |
 | ![frankenstein's monster](/img/emojis/frankensteins-monster.jpg) | `:frankensteins-monster:`        |
 | ![good point](/img/emojis/good-point.png)                        | `:good-point:`                   |
+| ![good question](/img/emojis/good-question.png)                  | `:good-question:`                |
 | ![interesting](/img/emojis/interesting.gif)                      | `:interesting:`                  |
 | ![it's alive](/img/emojis/its-alive.jpg)                         | `:its-alive:`/`:frankenstein:`   |
 | ![nail biter](/img/emojis/nail-biter.gif)                        | `:nail-biter:`                   |
