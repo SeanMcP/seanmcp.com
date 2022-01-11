@@ -3,9 +3,10 @@ layout: page
 title: 👦🏼 Sam
 head: >-
     <style>
-        .site-header, .site-footer { display: none; }
+        .site-header, .site-footer, #scroll-progress span { display: none; }
         h1 {
             font-size: 4rem;
+            margin-top: 1rem !important;
             text-align: center;
         }
         img {
