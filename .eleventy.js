@@ -137,7 +137,6 @@ module.exports = function (eleventyConfig) {
     quotes: "“”‘’",
   };
   const mdiAnchorOptions = {
-    permalink: true,
     permalinkClass: "direct-link",
     permalinkSymbol: "#",
   };
