@@ -1,0 +1,9 @@
+---
+title:
+subtitle:
+author:
+image:
+rating:
+yearCompleted:
+motivation:
+---
