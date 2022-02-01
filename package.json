@@ -5,7 +5,7 @@
   "scripts": {
     "build": "eleventy",
     "prestart": "rm -rf _site/",
-    "start": "eleventy --serve --port=8088",
+    "start": "eleventy --serve --port=2500",
     "watch": "eleventy --watch",
     "debug": "DEBUG=* eleventy",
     "draft": "node src/draft.js",
