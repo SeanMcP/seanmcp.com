@@ -77,6 +77,34 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addFilter("catalog", array => {
+    const current = []
+    const byYear = {}
+
+    array.forEach(item => {
+      const { yearCompleted } = item.data
+      if (yearCompleted) {
+        if (!byYear[yearCompleted]) {
+          byYear[yearCompleted] = []
+        }
+        byYear[yearCompleted].push(item)
+      } else {
+        current.push(item)
+      }
+    })
+
+    const years = Object.keys(byYear)
+    years.sort().reverse()
+
+    const output = [{ title: 'In progress', books: current }]
+    
+    years.forEach(year => {
+      output.push({ title: year, books: byYear[year] })
+    })
+
+    return output
+  })
+
   eleventyConfig.addFilter(
     "cssmin",
     (code) => new CleanCSS({}).minify(code).styles
