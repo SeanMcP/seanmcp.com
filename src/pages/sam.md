@@ -32,7 +32,7 @@ Let's learn something new on the computer today!
 
 - [🦙 Toollama](https://toollama.com)
   - [🐢 Turtle Guide](https://turtle-guide.toollama.com)
-  - [🐷 Paint Pig](https://paint-pit.toollama.com)
+  - [🐷 Paint Pig](https://paint-pig.toollama.com)
   - [🔦 Spotlight](https://spotlight.toollama.com)
   - [🧠 Memory Game](https://memory-game.toollama.com)
 - [🌱 Khan Academy](https://khanacademy.org)
