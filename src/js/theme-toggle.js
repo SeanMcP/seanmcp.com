@@ -4,10 +4,19 @@
 
   const STORAGE_KEY = "com.seanmcp.theme";
 
-  const storedTheme = localStorage.getItem(STORAGE_KEY) || "default";
-  if (storedTheme === "dark") {
-    document.body.dataset.theme = storedTheme;
+  function lightsOff() {
+    document.body.dataset.theme = "dark";
     darkModeCheckbox.checked = true;
+  }
+
+  const storedTheme = localStorage.getItem(STORAGE_KEY);
+  if (storedTheme) {
+    if (storedTheme === "dark") lightsOff();
+  } else if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    lightsOff();
   }
 
   darkModeCheckbox.addEventListener("change", (event) => {
