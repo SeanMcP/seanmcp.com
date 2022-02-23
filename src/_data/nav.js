@@ -9,6 +9,11 @@ const LINKS = {
     label: "Notes",
     url: "/notes/",
   },
+  tags: {
+    description: "All of the tags for my articles",
+    label: "Tags",
+    url: "/tags/",
+  },
   talks: {
     description: "Outlines of talks I've given and workshops I've lead",
     label: "Talks",
@@ -27,8 +32,8 @@ const LINKS = {
   feed: {
     description: "Subscribe to my blog with your favorite RSS reader",
     label: "Feed",
-    url: "/feed/feed.xml"
-  }
+    url: "/feed/feed.xml",
+  },
 };
 
 module.exports = {
@@ -36,6 +41,7 @@ module.exports = {
   secondary: [
     LINKS.about,
     LINKS.articles,
+    LINKS.tags,
     LINKS.talks,
     LINKS.notes,
     LINKS.bookshelf,
