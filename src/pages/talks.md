@@ -25,6 +25,7 @@ Since 2018, I have given conference talks, lightning talks, and lead workshops o
 - Modern State Management in React
 - Avoiding "Prop Drilling"
 - Layouts with CSS Grid
+- [Learning from LEGO](./learning-from-lego)
 
 ## Meetups
 
