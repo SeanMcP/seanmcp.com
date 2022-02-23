@@ -41,7 +41,7 @@ module.exports = function (eleventyConfig) {
     return array.slice(0, n);
   });
 
-  eleventyConfig.addFilter("capitalize", (string, separator = "-") => {
+  function capitalize(string, separator = "-") {
     switch (string) {
       case "npm": {
         return string;
@@ -75,40 +75,57 @@ module.exports = function (eleventyConfig) {
           .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
           .join(" ");
     }
-  });
+  }
 
-  eleventyConfig.addFilter("catalog", array => {
-    const current = []
-    const byYear = {}
+  eleventyConfig.addFilter("capitalize", capitalize);
 
-    array.forEach(item => {
-      const { yearCompleted } = item.data
+  eleventyConfig.addFilter("catalog", (array) => {
+    const current = [];
+    const byYear = {};
+
+    array.forEach((item) => {
+      const { yearCompleted } = item.data;
       if (yearCompleted) {
         if (!byYear[yearCompleted]) {
-          byYear[yearCompleted] = []
+          byYear[yearCompleted] = [];
         }
-        byYear[yearCompleted].push(item)
+        byYear[yearCompleted].push(item);
       } else {
-        current.push(item)
+        current.push(item);
       }
-    })
+    });
 
-    const years = Object.keys(byYear)
-    years.sort().reverse()
+    const years = Object.keys(byYear);
+    years.sort().reverse();
 
-    const output = [{ title: 'In progress', books: current }]
-    
-    years.forEach(year => {
-      output.push({ title: year, books: byYear[year] })
-    })
+    const output = [{ title: "In progress", books: current }];
 
-    return output
-  })
+    years.forEach((year) => {
+      output.push({ title: year, books: byYear[year] });
+    });
+
+    return output;
+  });
 
   eleventyConfig.addFilter(
     "cssmin",
     (code) => new CleanCSS({}).minify(code).styles
   );
+
+  eleventyConfig.addShortcode("breadcrumbs", (pageURL, pageTitle) => {
+    let [_, category, slug] = pageURL.split("/");
+    if (category === "books") {
+      category = "bookshelf";
+    }
+    return `<nav aria-label="breadcrumb" class="breadcrumbs">
+      <ol>
+        <li><a href="/${category}">${capitalize(category)}</a></li>
+        <li><a aria-current="page" href="${pageURL}">${
+      pageTitle || capitalize(slug)
+    }</a></li>
+      </ol>
+    </nav>`;
+  });
 
   eleventyConfig.addShortcode("currentYear", function () {
     return String(new Date().getFullYear());

@@ -6,7 +6,7 @@ styles:
 ---
 
 <div class="container --content">
-    <a href="/bookshelf/">⇐ Bookshelf</a>
+    {% breadcrumbs page.url, title %}
     <header>
         {# {% if image %}<img alt="{{ title }} cover" class="book__image" loading="lazy" src="{{ image }}" />{% endif %} #}
         <h1><b>{{ title }}</b><span class="--visually-hidden">:</span><br/>{{ subtitle }}</h1>

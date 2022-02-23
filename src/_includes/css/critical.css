@@ -132,6 +132,21 @@ body[data-theme="dark"] {
   }
 }
 
+.breadcrumbs ol {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs li + li::before {
+  color: var(--off-background);
+  content: "/";
+  display: inline-block;
+  height: 1rem;
+  margin: 0 0.5rem;
+}
+
 .skip-link {
   background-color: var(--primary);
   color: white !important;
