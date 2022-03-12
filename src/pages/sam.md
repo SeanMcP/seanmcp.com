@@ -27,7 +27,9 @@ foot: >-
   <script>
     document.querySelector('h1').addEventListener('click', ({ target }) => {
         const options = ['👦🏼', '🐶', '🦊', '🐸', '🐵', '🦁', '🐮', '🐻']
-        target.textContent = options[Math.floor(Math.random() * options.length)] + ' Sam'
+        const title = options[Math.floor(Math.random() * options.length)] + ' Sam'
+        target.textContent = title
+        document.title = title
     })
   </script>
 ---
