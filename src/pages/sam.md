@@ -8,6 +8,7 @@ head: >-
           padding-bottom: 1rem;
       }
       h1 {
+          cursor: pointer;
           font-size: 4rem;
           margin-top: 1rem !important;
           text-align: center;
@@ -22,6 +23,13 @@ head: >-
           padding-top: 0;
       }
   </style>
+foot: >-
+  <script>
+    document.querySelector('h1').addEventListener('click', ({ target }) => {
+        const options = ['👦🏼', '🐶', '🦊', '🐸', '🐵', '🦁', '🐮', '🐻']
+        target.textContent = options[Math.floor(Math.random() * options.length)] + ' Sam'
+    })
+  </script>
 ---
 
 Let's learn something new on the computer today!
