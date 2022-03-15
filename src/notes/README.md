@@ -10,10 +10,10 @@ date:
 ---
 ```
 
-## Get date
+## Script
 
-In the console, run:
+In the console, run the following and paste into a new note file:
 
 ```js
-copy(new Date().toISOString())
+copy(`---\ndate: ${new Date().toISOString()}\n---\n`)
 ```
