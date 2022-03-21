@@ -3,7 +3,7 @@ title: Great programming reads
 description: A list of articles, books, and resources for software engineers
 date: 2020-03-20
 tags:
-  - engineering
+  - software-engineering
   - garden
 verse: Nehemiah 8:8
 ---

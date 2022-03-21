@@ -6,7 +6,7 @@ tags:
     - javascript
     - markdown
     - react
-    - node.js
+    - node-js
 verse: Acts 12:25
 # /img/<IMAGE>.min.jpg
 image:

@@ -158,8 +158,8 @@ li ul {
   display: inline;
 }
 
-.--horizontal-list > * + * {
-  margin-left: 0.5rem;
+.--horizontal-list > *:not(:last-child) {
+  margin-right: 0.5rem;
 }
 
 .--visually-hidden {

@@ -4,7 +4,7 @@ description: Introducing a new series on how economics helps explain the decisio
 date: 2020-07-09
 tags:
     - economics
-    - software-development
+    - software-engineering
 verse:
 # /img/<IMAGE>.min.jpg
 image:

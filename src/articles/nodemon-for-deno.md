@@ -4,7 +4,7 @@ description: Denon is a utility for Deno that provides source watching and proce
 date: 2020-07-01
 tags:
     - deno
-    - tooling
+    - tools
 verse: Psalm 130:6
 image: /img/watch.min.jpg
 ---

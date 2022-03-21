@@ -3,7 +3,7 @@ title: The Economics of Software Development, Part III
 description: Demand inelasticity in web development, why its bad, and what we can do about it.
 date: 2020-07-29
 tags:
-    - software-development
+    - software-engineering
     - economics
 verse: Psalm 102:27
 # /img/<IMAGE>.min.jpg

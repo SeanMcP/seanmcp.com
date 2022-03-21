@@ -3,7 +3,7 @@ title: The Economics of Software Development, Part II
 description: Why developers should rely on markets to make the best decisions for their product
 date: 2020-07-22
 tags:
-    - software-development
+    - software-engineering
     - economics
 verse: Mark 6:56
 # /img/<IMAGE>.min.jpg
