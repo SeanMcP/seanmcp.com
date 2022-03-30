@@ -12,15 +12,18 @@ head: >-
           font-size: 4rem;
           margin-top: 1rem !important;
           text-align: center;
+          transition: transform 2s ease-in-out;
       }
       img {
-          float: right;
           padding-top: 1rem;
-          max-width: 16ch;
+          width: 100%;
       }
       main .container.--content {
           max-width: 40ch;
           padding-top: 0;
+      }
+      h1:hover {
+        transform: rotate(1080deg);
       }
   </style>
 foot: >-
@@ -36,8 +39,6 @@ foot: >-
 
 Let's learn something new on the computer today!
 
-<img src="/img/spot.gif" alt="spot dancing">
-
 ## Links
 
 - [🦙 Toollama](https://toollama.com)
@@ -49,3 +50,7 @@ Let's learn something new on the computer today!
 - [🐲 Click & Drag (code.org)](https://studio.code.org/s/pre-express-2021)
 - [🐱 Bongo Cat](https://bongo.cat)
 - [🦝 Reading Raccoon](https://seanmcp.github.io/reading-raccoon)
+
+## Dance Spot!
+
+<img src="/img/spot.gif" alt="spot dancing">
