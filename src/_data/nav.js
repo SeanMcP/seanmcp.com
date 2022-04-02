@@ -34,6 +34,11 @@ const LINKS = {
     label: "Feed",
     url: "/feed/feed.xml",
   },
+  soccer: {
+    description: "Read articles about soccer from a dedicated fan",
+    label: "Soccer",
+    url: "/soccer/",
+  },
 };
 
 module.exports = {
@@ -45,6 +50,7 @@ module.exports = {
     LINKS.talks,
     LINKS.notes,
     LINKS.bookshelf,
+    LINKS.soccer,
     LINKS.feed,
   ],
 };

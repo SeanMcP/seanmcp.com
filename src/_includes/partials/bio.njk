@@ -1,10 +1,21 @@
 <section>
     <div class="container --content --clear-child-margins">
-        <h2>About<span class="--visually-hidden">&nbsp;the author</span></h2>
-        <p>My name is Sean McPherson, and I am a software engineer interested in all areas of front-end development. Here I write
-            articles about programming for developers of all levels, and occassionally other topics.</p>
-        <p>Currently I work for
-            <a href="https://khanacademy.org">Khan Academy</a>
-            and live with my lovely family in Pittsburgh, PA.</p>
+        <h2>About<span class="--visually-hidden">&nbsp;the author</span>
+        </h2>
+        {% if pageFlavor == 'soccer' %}
+            <p>My name is Sean McPherson, and I am a soccer fan and occassional writer. I'm interested in following the beautiful
+                game around the world, with a focus on a lower-level leagues in the United States. My articles have featured in
+                <a href="https://npsl.com">NPSL.com</a>,
+                <a href="https://dirtysouthsoccer.com">Dirty South Soccer</a>, and
+                <a href="https://brotherlygame.com">Brotherly Game</a>.</p>
+            <p>I support West Ham United, FC Augsburg, Inverness Caledonian Thistle, and the Pittsburgh Riverhounds from Pittsburgh,
+                PA.</p>
+        {% else %}
+            <p>My name is Sean McPherson, and I am a software engineer interested in all areas of front-end development. Here I
+                write articles about programming for developers of all levels, and occassionally other topics.</p>
+            <p>Currently I work for
+                <a href="https://khanacademy.org">Khan Academy</a>
+                and live with my lovely family in Pittsburgh, PA.</p>
+        {% endif %}
     </div>
 </section>

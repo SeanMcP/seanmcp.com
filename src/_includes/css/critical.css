@@ -22,6 +22,11 @@
     "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
 }
 
+html[data-page-flavor="soccer"] {
+  --accent: hsl(100, 50%, 50%);
+  --primary: hsl(120, 50%, 30%);
+}
+
 body {
   --scroll-progress-height: 6px;
   background: var(--background);

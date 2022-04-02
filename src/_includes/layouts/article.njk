@@ -17,8 +17,12 @@ styles:
             <time class="date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
         {% endif %}
         <h1 style="margin-top:1rem;">{{ title }}</h1>
-        {% set horizontal = true %}
-        {% include "partials/tag-list.njk" %}
+        {% if pageFlavor == "soccer" %}
+            <p><a href="/soccer/">Soccer</a> {% emoji '⚽️' %}</p>
+        {% else %}
+            {% set horizontal = true %}
+            {% include "partials/tag-list.njk" %}
+        {% endif %}
         {% if imageUrl -%}
             <img class="article__image" src="{{ imageUrl }}" alt="{{ title }}"/>
         {% endif -%}
