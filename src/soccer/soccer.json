@@ -1,6 +1,6 @@
 {
   "layout": "article",
   "pageFlavor": "soccer",
-  "// image": "/img/pitch.jpg",
+  "image": "/img/pitch-narrow.png",
   "tags": ["soccer"]
 }
