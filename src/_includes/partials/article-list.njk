@@ -8,7 +8,7 @@
             {%- endif %}
             <{{ heading or 'h3' }} style="margin-top:1rem;">
                 <a href="{{ article.url | url }}">
-                    {{ article.data.title }}
+                    {% if article.data and article.data.tags and "wip" in article.data.tags %}{% emoji '🚧', 'WIP' %} {% endif %}{{ article.data.title }}
                 </a>
             </{{ heading or 'h3' }}>
             {%- if article.data.description %}
