@@ -48,6 +48,7 @@ head: >-
       #app #result {
           font-size: 2em;
           font-weight: bold;
+          overflow-x: auto;
           text-align: center;
       }
       #app #result[data-has-value] {
@@ -59,12 +60,10 @@ foot: >-
 ---
 
 <div id="app">
-<div id="settings">
+<form id="settings">
     <label for="x">Number</label>
-    <input id="x" type="number" value="10"/>
-    <label for="y">Step</label>
-    <input id="y" type="number" value="1"/>
-    <button id="calculate">Calculate</button>
-</div>
+    <input id="x" min="1" name="x" type="number" value="10"/>
+    <button>Calculate</button>
+</form>
 <div aria-live="polite" id="result"></div>
 </div>
