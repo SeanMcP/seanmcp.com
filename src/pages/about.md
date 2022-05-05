@@ -35,7 +35,7 @@ And before that, I worked for [TSYS Digital Innovations](https://www.tsys.com/) 
 
 I have had the opportunity to:
 
-- Give two conference talks on accessibility and React
+- Give a few conference talks on accessibility and React
 - Publish a few open-source libraries on npm
 - Lead workshops on React and the JavaScript ecosystem
 - Give lightning talks at a meetup
