@@ -32,13 +32,11 @@ code[class*="language-"]::mozselection {
   }
 }
 pre[class*="language-"] {
-  margin: .5em 0;
   overflow: auto;
   background: var(--block-code-background);
 }
 :not(pre) > code[class*="language-"] {
-  padding: .1em .3em;
-  /* border-radius: .3em; */
+  padding: 0.1em 0.3em;
   font-size: 0.9em;
   color: #0d47a1;
   background: #e3f2fd;
@@ -47,7 +45,7 @@ pre[class*="language-"] {
 * Tokens
 */
 .namespace {
-  opacity: .7;
+  opacity: 0.7;
 }
 .token.comment,
 .token.prolog,
@@ -65,7 +63,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #CE93D8;
+  color: #ce93d8;
 }
 .token.selector,
 .token.attr-name,
@@ -89,7 +87,7 @@ pre[class*="language-"] {
   color: #64b5f6;
 }
 .token.function {
-  color: #F48FB1;
+  color: #f48fb1;
 }
 .token.regex,
 .token.important,
@@ -134,6 +132,7 @@ pre[class*="language-"] > code[class*="language-"] {
   padding-left: 2rem;
 }
 
-.footnotes ol, .footnotes li > *:last-child {
+.footnotes ol,
+.footnotes li > *:last-child {
   margin-bottom: 0;
 }

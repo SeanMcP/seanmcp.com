@@ -323,6 +323,6 @@ Not bad, right? Now that you've mastered render props, make sure to check out th
 
 ---
 
-I hope this article helped; I know I learned a lot while writing it. Let me know if you have any [questions about or problems](https://twitter.com/snmcp).
+I hope this article helped; I know I learned a lot while writing it. Let me know if you have any [questions about or problems](#comment-link).
 
 Happy coding!

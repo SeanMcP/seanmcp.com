@@ -58,6 +58,6 @@ This is handy when you want to look at commits from a particular date or before 
 
 ---
 
-Let me know if you have [any commands to add to the list](mailto:sean@seanmcp.com?subject=Git%20commands).
+Let me know if you have [any commands to add to the list](#comment-link).
 
 Happy versioning!

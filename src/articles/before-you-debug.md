@@ -33,7 +33,7 @@ This garden aims to detail everything you should do _before you actually start d
 
 ## Note
 
-This is a living document and will change as my approach to debugging grows over time. If you have any suggestions, [please let me know](https://twitter.com/snmcp).
+This is a living document and will change as my approach to debugging grows over time. If you have any suggestions, [please let me know](#comment-link).
 
 ## Additional reading
 

@@ -55,6 +55,6 @@ const styles = StyleSheet.create({
 
 Not bad. And I'd much rather use a slightly foreign symbol in a familiar system than string properties.
 
-What do you think: good idea or bad idea? Or should I just use styled components already? Or maybe something else entirely? [Let me know](mailto:sean@seanmcp.com).
+What do you think: good idea or bad idea? Or should I just use styled components already? Or maybe something else entirely? [Let me know](#comment-link).
 
 Until then, happy naming!

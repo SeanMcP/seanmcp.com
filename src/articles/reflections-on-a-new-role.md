@@ -24,6 +24,6 @@ I am so grateful for the opportunities that I have been given in software develo
 
 It's humbling to remember that I don't deserve any of this; it's ultimately grace. But now my responsibility is to do the best I can with all that God has given me. To Him be the glory, now and forever. Amen.
 
-If you're reading this and have experience working in mobile development or with React Native, [then please reach out](mailto:sean@seanmcp.com). I'd love to pick your brain for a bit.
+If you're reading this and have experience working in mobile development or with React Native, [then please reach out](#comment-link). I'd love to pick your brain for a bit.
 
 Happy coding!

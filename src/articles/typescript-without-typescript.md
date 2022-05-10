@@ -18,6 +18,6 @@ In searching for a solution to my problem, I came across [_TypeScript without Ty
 
 I found the ["Defining Objects" section](https://fettblog.eu/typescript-jsdoc-superpowers/#defining-objects) to be particularly helpful. The ability to create "interfaces" for functions and objects in JavaScript is really powerful. If you combine that with [`// @ts-check`](https://code.visualstudio.com/docs/nodejs/working-with-javascript#_type-checking-javascript) and a TS-centric IDE like VS Code, you'll find yourself in a great position when developing.
 
-Give the article a read and [let me know what you think](https://twitter.com/snmcp).
+Give the article a read and [let me know what you think](#comment-link).
 
 Happy typing!

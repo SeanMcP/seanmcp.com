@@ -81,4 +81,4 @@ If you want to publish packages because you think it's fun or you want to help o
 
 ---
 
-I hope those were helpful. If you have any questions about open source or want to share some tips of your own, [please let me know](https://twitter.com/@snmcp).
+I hope those were helpful. If you have any questions about open source or want to share some tips of your own, [please let me know](#comment-link).

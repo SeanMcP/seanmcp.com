@@ -10,7 +10,7 @@ verse: Psalm 25:4-5
 
 At some time in the future, I would like to return to the classroom to teach programming to middle school students. That is the age when I first starting coding, and I would love the opportunity to inspire the next generation of developers at an early age.
 
-So I'm on the lookout for good techniques, strategies, and patterns for teaching the basics of computer science. [Hit me up if you have any](mailto:sean@seanmcp.com&subject=Teach).
+So I'm on the lookout for good techniques, strategies, and patterns for teaching the basics of computer science. [Hit me up if you have any](#comment-link).
 
 Today I read ["Stop Teaching Code" by Jeff Olson](https://blog.upperlinecode.com/stop-teaching-code-a1039983b39) where he described a different approach to teaching programming. He advocated for ditching the definitions, unrealistic examples, and non-sensical names and use real-world puzzles for students to solve.
 

@@ -41,6 +41,8 @@ module.exports = function (eleventyConfig) {
     return array.slice(0, n);
   });
 
+  eleventyConfig.addFilter("urlEncode", (string) => encodeURI(string));
+
   function capitalize(string, separator = "-") {
     switch (string) {
       case "npm": {
@@ -193,9 +195,9 @@ module.exports = function (eleventyConfig) {
     .use(require("markdown-it-footnote"));
 
   mdi.renderer.rules.footnote_block_open = () =>
-    `<hr />
+    `<hr class="small"/>
     <section class="footnotes --clear-child-margins">
-        <h2>Footnotes</h2>
+        <h2 class="--visually-hidden">Footnotes</h2>
         <ol>
     `;
 

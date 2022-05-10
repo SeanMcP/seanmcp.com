@@ -92,7 +92,7 @@ This will open the most recently opened tab. In my experience, it's the shortcut
 
 ---
 
-Phew! That was a bigger undertaking than I first imagined. If I made any mistakes, [please let me know](https://twitter.com/snmcp).
+Phew! That was a bigger undertaking than I first imagined. If I made any mistakes, [please let me know](#comment-link).
 
 I hope that helps! Happy tooling!
 

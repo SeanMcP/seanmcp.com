@@ -10,7 +10,7 @@ image:
 head: >-
     <style>
         /* Tag surrounding image */
-        h2 + p {
+        .article h2 + p {
             text-align: center;
         }
 
@@ -50,6 +50,6 @@ One of the forgotten tools of Google Drive, Drawings is an adequate option for s
 
 ---
 
-If you have any other suggestions to add to this list, [please let me know](mailto:sean@seanmcp.com).
+If you have any other suggestions to add to this list, [please let me know](#comment-link).
 
 Happy diagramming!

@@ -24,6 +24,6 @@ With the release of each episode of "Planet Money Summer School," I'm going to r
 
 I'm not interested in the _business of software development_, but rather the decisions that I and other developers make in building websites and applications. In other words: **why we do the things that we do (and what we can do about it)**!
 
-I hope you'll find this series interesting, even if it's just to crack your knuckles and [tell me how I have it all wrong](https://twitter.com/snmcp).
+I hope you'll find this series interesting, even if it's just to crack your knuckles and [tell me how I have it all wrong](#comment-link).
 
 Happy learning!

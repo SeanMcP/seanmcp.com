@@ -8,7 +8,6 @@ styles:
 
 {% set imageUrl = image | url if image else 
     undefined %}
-
 <article class="article">
     <div class="container --content">
         {% if "garden" in tags %}
@@ -18,7 +17,9 @@ styles:
         {% endif %}
         <h1 style="margin-top:1rem;">{{ title }}</h1>
         {% if pageFlavor == "soccer" %}
-            <p><a href="/soccer/">Soccer</a> {% emoji '⚽️' %}</p>
+            <p>
+                <a href="/soccer/">Soccer</a>
+                {% emoji '⚽️' %}</p>
         {% else %}
             {% set horizontal = true %}
             {% include "partials/tag-list.njk" %}
@@ -26,25 +27,26 @@ styles:
         {% if imageUrl -%}
             <img class="article__image" src="{{ imageUrl }}" alt="{{ title }}"/>
         {% endif -%}
-
-        <hr class="subtle"/>
-
+        <hr class="small"/>
         {% if "wip" in tags %}
             <section class="wip-block --clear-child-margins">
-                <p>{% emoji "👋" %}&nbsp; Hey there! This article is being published a "work in progress," which means that it is not done. So please excuse the rough edges!</p>
+                <p>{% emoji "👋" %}&nbsp; Hey there! This article is being published a "work in progress," which means that it is not
+                    done. So please excuse the rough edges!</p>
                 <p>I may or may not come back and finish this article. Regardless, I hope that it's helpful in its current state.</p>
             </section>
         {% endif %}
-
         {{ content | safe }}
-
-        {% if verse %}
-            <p style="text-align:right;">
-                <a href="https://esv.org/{{verse}}" rel="noopener noreferrer" target="_blank">{{ verse }}
-                    (SDG)</a>
+        <hr class="small" />
+        <section class="article__footer --clear-child-margins">
+            <p>
+                <a id="comment-link" href="mailto:sean@seanmcp.com?subject={{ title | urlEncode }}">Send a comment</a>
             </p>
-        {% endif %}
+            {% if verse %}
+                <p>
+                    <a href="https://esv.org/{{ verse | urlEncode }}" rel="noopener noreferrer" target="_blank">{{ verse }} (SDG)</a>
+                </p>
+            {% endif %}
+        </section>
     </div>
 </article>
-
 {% include "partials/bio.njk" %}

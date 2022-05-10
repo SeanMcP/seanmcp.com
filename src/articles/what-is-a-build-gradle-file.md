@@ -53,6 +53,6 @@ To start the build task, run the following in your terminal:
 ./gradlew build
 ```
 
-Hopefully that demystifies the `build.gradle` file in your Android/React-Native project a little bit. This is not yet my area of expertise, so [please let me know](mailto:sean@seanmcp.com) if I need to make any corrections.
+Hopefully that demystifies the `build.gradle` file in your Android/React-Native project a little bit. This is not yet my area of expertise, so [please let me know](#comment-link) if I need to make any corrections.
 
 Happy building!

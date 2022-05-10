@@ -101,7 +101,7 @@ Once that loop has run, we will have built our `uniqueItems` array without dupli
 
 ## Sample
 
-Here is a Repl of the solution. Feel free to fork it, make improvements, and [share your code with me](https://twitter.com/snmcp).
+Here is a Repl of the solution. Feel free to fork it, make improvements, and [share your code with me](#comment-link).
 
 <iframe height="400px" width="100%" src="https://repl.it/@SeanMcP/Unique-items-in-array?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 

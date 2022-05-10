@@ -57,10 +57,8 @@ hr {
   margin: 2rem 0;
 }
 
-hr.subtle {
-  background: none;
-  height: 2rem;
-  margin: 0;
+hr.small {
+  width: 4rem;
 }
 
 /* Type */
