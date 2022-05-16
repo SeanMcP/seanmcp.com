@@ -41,7 +41,7 @@ body {
 
 body[data-theme="dark"] {
   --background: var(--dark);
-  --off-background: hsla(216, 5%, 95%, 10%);
+  --off-background: hsla(216, 5%, 95%, 15%);
   --text-color: var(--light);
   --anchor-color: var(--accent);
   --inline-code-background: hsla(0, 0%, 0%, 50%);
