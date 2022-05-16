@@ -27,7 +27,7 @@ head: >-
 
 <img class="headshot" src="/img/seanmcp_2022.jpg" alt="A photo of Sean McPherson smiling">
 
-Thanks for visiting my website! My name is Sean McPherson, or [Sean McP](../articles/how-to-pronounce-my-name) for short, and I am a software engineer for [Khan Academy](https://khanacademy.org) living Pittsburgh, Pennsylvania.
+Thanks for visiting my website! My name is Sean McPherson, or [Sean McP](../articles/how-to-pronounce-my-name) for short, and I am a software engineer for [Khan Academy](https://khanacademy.org) living in Pittsburgh, Pennsylvania.
 
 Before that, I worked for Niche.com in Pittsburgh helping students and parents find the right school. At Niche, I organized weekly "Learn Over Lunch" sessions to facilitate shared professional development.
 
