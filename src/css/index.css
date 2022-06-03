@@ -360,6 +360,29 @@ a[href].direct-link:hover {
   color: var(--background);
 }
 
+.bio .container {
+  padding-top: 0;
+}
+
+.bio h2 {
+  margin-top: 0;
+}
+
+.bio img {
+  border: 1px solid var(--off-background);
+  width: 100%;
+}
+
+.bio__content {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 4rem auto;
+}
+
+.bio__content p {
+  margin-top: 0;
+}
+
 /* Site footer */
 
 .site-footer {

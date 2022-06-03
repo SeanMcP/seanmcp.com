@@ -39,11 +39,11 @@ styles:
         <hr class="small" />
         <section class="article__footer --clear-child-margins">
             <p>
-                <a id="comment-link" href="mailto:sean@seanmcp.com?subject={{ title | urlEncode }}">Send a comment</a>
+                <a id="comment-link" href="mailto:sean@seanmcp.com?subject=Re: {{ title | urlEncode }}">Send a comment</a>
             </p>
             {% if verse %}
                 <p>
-                    <a href="https://esv.org/{{ verse | urlEncode }}" rel="noopener noreferrer" target="_blank">{{ verse }} (SDG)</a>
+                    <a href="https://esv.org/{{ verse | urlEncode }}" rel="noopener noreferrer" target="_blank">{{ verse }}</a>
                 </p>
             {% endif %}
         </section>
