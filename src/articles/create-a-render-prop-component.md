@@ -31,7 +31,7 @@ If that makes perfect sense to you, awesome 🎉! Skip this article and get back
 
 ### What is a render prop?
 
-At its core, render prop is "a simple technique for sharing code between React components using a prop whose value is a function."[^https://reactjs.org/docs/render-props.html] Instead of passing a string or object, you pass a function as a prop.
+At its core, render prop is "a simple technique for sharing code between React components using a prop whose value is a function."^[https://reactjs.org/docs/render-props.html] Instead of passing a string or object, you pass a function as a prop.
 
 {% raw %}
 ```js
