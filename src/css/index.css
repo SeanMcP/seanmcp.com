@@ -279,8 +279,14 @@ a[href].direct-link:hover {
   margin-top: 0.5rem !important;
 }
 
+/* Main article image */
 .article__image {
   width: 100%;
+}
+
+/* Images within articles */
+.article img {
+  max-width: 100%;
 }
 
 .wip-block {
