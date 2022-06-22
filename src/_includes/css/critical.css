@@ -70,12 +70,12 @@ body[data-theme="dark"] {
   margin-right: 1rem;
 }
 
-.theme-toggle:hover {
+:is(.stars-toggle, .theme-toggle):hover {
   cursor: pointer;
   outline: none !important;
 }
 
-.theme-toggle:focus-within {
+:is(.theme-toggle, .stars-toggle):focus-within {
   outline: 3px solid var(--anchor-color);
   outline-offset: 3px;
 }
@@ -125,6 +125,41 @@ body[data-theme="dark"] {
 .theme-toggle input:checked + span::after {
   background-color: var(--text-color);
   z-index: -1;
+}
+
+.stars-toggle {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.stars-toggle svg {
+  display: inline-block;
+}
+
+.stars-toggle path {
+  transition: transform 200ms ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+.stars-toggle:hover path {
+  transform: rotate(72deg);
+}
+
+.stars-toggle input:checked + svg {
+  fill: currentColor;
+}
+
+[data-star] {
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+[data-star]:after {
+  content: "⭐️";
+  display: inline-block;
 }
 
 @media screen and (min-width: 500px) {
