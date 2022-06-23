@@ -32,8 +32,11 @@
     if (event.target.checked) {
       enableStars();
     } else {
-      confirm("Are you sure you want to disable stars site wide?") &&
+      if (confirm("Are you sure you want to disable stars?")) {
         disableStars();
+      } else {
+        event.target.checked = true;
+      }
     }
   });
 
