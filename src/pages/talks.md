@@ -7,7 +7,7 @@ Since 2018, I have given conference talks, lightning talks, and lead workshops o
 
 ## Conferences
 
-- [_React Bug Catcher: Tools and strategies for debugging React applications](https://smcp.dev/rbc-repo) at **React Global 2022** (Virtual)
+- [_React Bug Catcher: Tools and strategies for debugging React applications_](https://smcp.dev/rbc-repo) at **React Global 2022** (Virtual)
 - [_Accessibility for the rest of us_](./accessibility-for-the-rest-of-us) at **Pittsburgh TechFest 2020** (Virtual)
 - _React && Accessibility: Creating accessible React applications for everyone_ at **Connect Tech 2019** (Atlanta, GA)
 
