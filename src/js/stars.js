@@ -74,16 +74,10 @@
   }
 
   function handleDocumentClick(event) {
-    window.___clickCount = (window.___clickCount || 0) + 1;
-    if (window.___clickCount > 1) {
-      clearTimeout(window.___queuedStar);
-      delete window.___queuedStar;
-      setTimeout(() => (window.___clickCount = 0), 600);
-      return;
-    }
     if (event.target.dataset.star) {
       return removeStar(event.target);
     }
+    if (!event.metaKey) return;
     if (
       ["A", "BUTTON", "INPUT", "LABEL"].includes(event.target.nodeName) ||
       (event.target.parentNode &&
@@ -93,10 +87,6 @@
     ) {
       return;
     }
-    window.___queuedStar = setTimeout(() => {
-      addStar(event.pageX, event.pageY);
-      delete window.___queuedStar;
-      window.___clickCount = 0;
-    }, 300);
+    addStar(event.pageX, event.pageY);
   }
 })();
