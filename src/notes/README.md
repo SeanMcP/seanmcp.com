@@ -6,6 +6,7 @@ Use this when creating a new note from GitHub.
 
 ```md
 ---
+number:
 date:
 ---
 ```
@@ -15,5 +16,5 @@ date:
 In the console, run the following and paste into a new note file:
 
 ```js
-copy(`---\ndate: ${new Date().toISOString()}\n---\n`)
+copy(`---\nnumber: \ndate: ${new Date().toISOString()}\n---\n`)
 ```
