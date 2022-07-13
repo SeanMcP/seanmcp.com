@@ -15,9 +15,11 @@ try {
         if (noteNumber > highest) highest = noteNumber
     }
 
-    const content = `---\ndate: ${new Date().toISOString()}\n---\n\n`
+    const number = highest + 1;
 
-    const fileName = highest + 1 + '.md'
+    const content = `---\nnumber: ${number}\ndate: ${new Date().toISOString()}\n---\n\n`;
+
+    const fileName = number + ".md";
 
     fs.writeFileSync(`${cwd}/src/notes/${fileName}`, content)
 
