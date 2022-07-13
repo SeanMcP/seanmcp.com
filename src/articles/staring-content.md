@@ -5,7 +5,7 @@ date: 2022-07-13T15:49:15.021Z
 tags:
   - meta
   - javascript
-image: https://im3.ezgif.com/tmp/ezgif-3-bd084e1dff.jpg
+image: /img/nebula.jpg
 ---
 In June, I added a new feature to this site: stars. Now whenever you <kbd>command</kbd> or <kbd>windows</kbd> click anywhere on the site, a little star emoji ⭐️ is added. When you navigate to that page again, the star will be there waiting for you. If you ever want to remove a star, click it and it will vanish.
 
