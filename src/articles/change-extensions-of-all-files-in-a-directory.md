@@ -1,6 +1,6 @@
 ---
 title: Change extensions of all files in a directory
-description: 
+description: A little Bash script to rename all files from `.jsx` to `.tsx`
 date: 2020-12-17
 tags:
     - wip
