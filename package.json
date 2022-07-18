@@ -9,6 +9,7 @@
     "watch": "eleventy --watch",
     "debug": "DEBUG=* eleventy",
     "draft": "node src/draft.js",
+    "netlify-cms": "npx netlify-cms-proxy-server",
     "note": "git pull && node src/note.js"
   },
   "repository": {
@@ -31,6 +32,8 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3",
     "clean-css": "^5.2.2",
     "eleventy-plugin-emoji": "^1.1.0",
+    "front-matter": "^4.0.2",
+    "glob": "^8.0.3",
     "httpie": "^1.1.2",
     "luxon": "^2.3.0",
     "markdown-it": "^12.3.2",
