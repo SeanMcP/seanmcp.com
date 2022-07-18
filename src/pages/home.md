@@ -21,7 +21,6 @@ Outside of work, I enjoy spending time with my family (wife, two sons, and dog),
 
 ## Latest note
 
-{% set notes = collections.notes | head(-1) %}
-{% include "partials/note-list.njk" %}
+{% noteList { notes: collections.notes | head(-1) } %}
 
 [View all notes](/notes/)

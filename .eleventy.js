@@ -121,7 +121,8 @@ module.exports = function (eleventyConfig) {
     if (category === "books") {
       category = "bookshelf";
     }
-    return `<nav aria-label="breadcrumb" class="breadcrumbs">
+    return /* html */ `
+    <nav aria-label="breadcrumb" class="breadcrumbs">
       <ol>
         <li><a href="/${category}">${capitalize(category)}</a></li>
         <li><a aria-current="page" href="${pageURL}">${
@@ -130,37 +131,23 @@ module.exports = function (eleventyConfig) {
       </ol>
     </nav>`;
   });
-
+  
   eleventyConfig.addShortcode("currentYear", function () {
     return String(new Date().getFullYear());
   });
 
+  eleventyConfig.addShortcode("note", require("./src/_11ty/note"));
+  eleventyConfig.addShortcode("noteList", require("./src/_11ty/noteList"));
+
   eleventyConfig.addShortcode("youtube", (videoURL, title) => {
     const url = new URL(videoURL);
     const id = url.searchParams.get("v");
-    return `
+    return /* html */ `
 <iframe class="yt-shortcode" src="https://www.youtube-nocookie.com/embed/${id}" title="YouTube video player${
       title ? ` for ${title}` : ""
     }" frameborder="0" allowfullscreen></iframe>
   `;
   });
-
-  eleventyConfig.addPairedShortcode(
-    "note",
-    function (content, date, url, edited = false) {
-      return `<article class="note">
-      <header class="note__header">
-        <b>Sean McPherson</b>
-        <a href="${url}"><time datetime="${date}">${DateTime.fromJSDate(date, {
-        zone: "America/New_York",
-      }).toFormat("t · DD")}</time></a>${
-        edited ? "<small>(Edited)</small>" : ""
-      }
-      </header>
-      <div class="note__body --clear-child-margins">${content}</div>
-    </article>`;
-    }
-  );
 
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
   eleventyConfig.addCollection("books", (collections) =>

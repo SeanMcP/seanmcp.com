@@ -4,7 +4,7 @@ bodyClass: note-layout
 ---
 
 <div class="container --content note-container">
-    {% note page.date, page.url, edited %}{{ content | safe }}{% endnote %}
+    {% note { content: content | safe, date: page.date, edited: edited, url: page.url } %}
     <footer>
         <a href="/notes/">View all notes</a>
     </footer>
