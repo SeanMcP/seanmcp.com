@@ -67,6 +67,8 @@ module.exports = function (eleventyConfig) {
         return "macOS";
       case "node-js":
         return "Node.js";
+      case "stackblitz":
+        return "StackBlitz";
       case "static-site-generator":
         return "Static-site Generator";
       case "typescript":
