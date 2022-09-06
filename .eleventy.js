@@ -73,6 +73,8 @@ module.exports = function (eleventyConfig) {
         return "Static-site Generator";
       case "typescript":
         return "TypeScript";
+      case "vs-code":
+        return "VS Code";
       case "youtube":
         return "YouTube";
       default:
