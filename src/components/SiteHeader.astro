@@ -1,0 +1,26 @@
+---
+import navigation from "../data/navigation";
+---
+
+<header>
+  <a href="/">SeanMcP.com</a>
+  <nav>
+    {
+      navigation.primary.map((item) => (
+        <a aria-current={item.url === Astro.url.pathname} href={item.url}>{item.label}</a>
+      ))
+    }
+  </nav>
+</header>
+
+<style>
+  header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav a:not(:last-child) {
+    margin-right: 1rem;
+  }
+</style>

@@ -1,0 +1,10 @@
+---
+import ArticleList from '../../components/ArticleList.astro';
+import PageLayout from '../../layouts/PageLayout.astro'
+import { getSortedArticles } from '../../utils';
+
+const articles = getSortedArticles(await Astro.glob('./*.{md,mdx}'));
+---
+<PageLayout title="Articles">
+    <ArticleList articles={articles} />
+</PageLayout>

@@ -1,0 +1,48 @@
+---
+import PageLayout from "./PageLayout.astro";
+import { readableDate, slugify } from "../utils";
+import Bio from "../components/Bio.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<PageLayout
+  foot={frontmatter.foot}
+  head={frontmatter.head}
+  title={frontmatter.title}
+>
+  <div>
+    {
+      !frontmatter.tags?.includes("garden") && (
+        <time>{readableDate(frontmatter.date)}</time>
+      )
+    }
+    {
+      frontmatter.tags && (
+        <nav>
+          {frontmatter.tags.map((tag) => (
+            <a href={`/tags/${slugify(tag)}`}>{tag}</a>
+          ))}
+        </nav>
+      )
+    }
+  </div>
+  <hr />
+  <slot />
+  <hr />
+  <a
+    href={`mailto:sean@seanmcp.com?subject=Re: ${frontmatter.title}`}
+    id="comment-link">Send a comment</a
+  >
+  <hr />
+  <Bio />
+</PageLayout>
+
+<style>
+  div {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+</style>

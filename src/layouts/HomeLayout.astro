@@ -1,0 +1,14 @@
+---
+import PageLayout from "./PageLayout.astro";
+import ArticleList from "../components/ArticleList.astro";
+import { getSortedArticles } from "../utils";
+
+const articles = getSortedArticles(await Astro.glob("../pages/articles/*.md*"));
+---
+
+<PageLayout>
+  <slot />
+  <h2>Recent articles</h2>
+  <ArticleList articles={articles.slice(0, 3)} />
+  <a href="/articles">Browse all articles</a>
+</PageLayout>

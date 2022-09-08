@@ -1,0 +1,22 @@
+---
+import "../styles/global.css"
+
+export interface Props {
+    foot?: string
+    head?: string
+    title: string
+}
+
+const {foot, head, title} = Astro.props
+---
+<html>
+    <head>
+        <title>{title ? title : "SeanMcP.com"}</title>
+        <link rel="shortcut icon" href="/img/seanmcp.favicon.png" type="image/png">
+        {head && <Fragment set:html={head} />}
+    </head>
+    <body>
+        <slot />
+    </body>
+    {foot && <Fragment set:html={foot} />}
+</html>

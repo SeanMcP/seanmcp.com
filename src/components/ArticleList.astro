@@ -1,0 +1,32 @@
+---
+import { readableDate } from "../utils";
+
+const { articles } = Astro.props;
+---
+
+<section>
+  {
+    articles.map((article) => (
+      <article>
+        <time>{readableDate(article.frontmatter.date)}</time>
+        <h2>
+          <a href={article.url}>{article.frontmatter.title}</a>
+        </h2>
+        <p>{article.frontmatter.description}</p>
+      </article>
+    ))
+  }
+</section>
+
+<style>
+  article {
+    margin: 2rem 0 0;
+  }
+
+  article > * {
+    margin: 0;
+  }
+  article h2 {
+    margin: 0.5rem 0;
+  }
+</style>
