@@ -41,15 +41,16 @@ Let's learn something new on the computer today!
 
 ## Links
 
-- [🦙 Toollama](https://toollama.com)
-  - [🐢 Turtle Guide](https://turtle-guide.toollama.com)
-  - [🐷 Paint Pig](https://paint-pig.toollama.com)
-  - [🔦 Spotlight](https://spotlight.toollama.com)
-  - [🧠 Memory Game](https://memory-game.toollama.com)
+- [🧰 McP Tools](/tools)
+  - [🐢 Turtle Guide](https://seanmcp.github.io/turtle-guide)
+  - [🐷 Paint Pig](https://seanmcp.github.io/paint-pig)
+  - [🔦 Spotlight](https://seanmcp.github.io/spotlight)
+  - [🧠 Memory Game](https://seanmcp.github.io/memory-game)
+  - [🦝 Reading Raccoon](https://seanmcp.github.io/reading-raccoon)
+  - [🧸 Alphabear](https://seanmcp.github.io/alphabear)
 - [🌱 Khan Academy](https://khanacademy.org)
 - [🐲 Click & Drag (code.org)](https://studio.code.org/s/pre-express-2021)
 - [🐱 Bongo Cat](https://bongo.cat)
-- [🦝 Reading Raccoon](https://seanmcp.github.io/reading-raccoon)
 
 ## Dance Spot!
 

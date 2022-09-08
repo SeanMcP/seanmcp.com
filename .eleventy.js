@@ -142,6 +142,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("note", require("./src/_11ty/note"));
   eleventyConfig.addShortcode("noteList", require("./src/_11ty/noteList"));
+  eleventyConfig.addShortcode(
+    "toolsSection",
+    require("./src/_11ty/toolsSection")
+  );
 
   eleventyConfig.addShortcode("youtube", (videoURL, title) => {
     const url = new URL(videoURL);
