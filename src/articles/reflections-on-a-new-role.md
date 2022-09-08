@@ -18,7 +18,7 @@ While working for TSYS in 2018, I helped work on an unnamed mobile app in the co
 
 I'm going to start sharing more mobile and React Native articles on this site as I learn. The first of those came out earlier this week: [_What is Hermes in React Native?_](/articles/what-is-hermes-in-react-native). Some of the information may be applicable in React contexts, so I'll try to [tag articles appropriately](/tags/).
 
-That said, I'm not leaving the web world entirely. [A Chrome extension for teachers](https://chrome.google.com/webstore/detail/popsicle-sticks-random-st/lnckbgaeagindapiodcmccfokcmnfecm) that I launched in 2018 has over 10,000 weekly users during the school year, and I just released a new version with some great features. I'm committed to continued development on that and [all the other tools I've created](https://toollama.com).
+That said, I'm not leaving the web world entirely. [A Chrome extension for teachers](https://chrome.google.com/webstore/detail/popsicle-sticks-random-st/lnckbgaeagindapiodcmccfokcmnfecm) that I launched in 2018 has over 10,000 weekly users during the school year, and I just released a new version with some great features. I'm committed to continued development on that and [all the other tools I've created](/tools).
 
 I am so grateful for the opportunities that I have been given in software development. From the ability to attend a coding bootcamp full-time, to that first developer job with TSYS, to a new position closer to home with Niche, and now greater acclaim and responsibility at a company that is going places. If any one of those doors had been closed, then my situation now could look completely different.
 

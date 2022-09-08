@@ -62,7 +62,7 @@ A few things to note:
 2. `font-variant-numeric` does not work in Internet Explorer
 3. `font-feature-settings` supports IE but only works with [OpenType fonts](https://en.wikipedia.org/wiki/OpenType)
 
-That being said, this is CSS progressive enhancement: for whom it works, it improves the experience. I'm pretty happy with this solution, and I have used it in production with [Toollama's Contraction Tracker](https://contractions.toollama.com).
+That being said, this is CSS progressive enhancement: for whom it works, it improves the experience. I'm pretty happy with this solution, and I have used it in production with [Contraction Tracker](https://seanmcp.github.io/contractions).
 
 For more information about the CSS properties, you can read about [`font-feature-settings`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings) and [`font-variant-numetric`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric) on MDN.
 
