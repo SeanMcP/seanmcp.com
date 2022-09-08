@@ -1,0 +1,22 @@
+<footer class="site-footer">
+    <div class="container --content --clear-child-margins">
+        <div>
+            <b>SeanMcP.com</b><br>
+            <small>Copyright © 2018-{% currentYear %} Sean McPherson (SDG)</small>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;">
+            <div>
+                <h2>Navigation</h2>
+                {% set navLabel = "secondary" %}
+                {% set navLinks = nav.secondary %}
+                {% include "partials/navigation.njk" %}
+            </div>
+            <div>
+                <h2>Social</h2>
+                {% set navLabel = "social" %}
+                {% set navLinks = socials %}
+                {% include "partials/navigation.njk" %}
+            </div>
+        </div>
+    </div>
+</footer>

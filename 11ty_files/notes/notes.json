@@ -1,0 +1,9 @@
+{
+  "layout": "layouts/note.njk",
+  "permalink": "/note/{{ page.fileSlug }}/",
+  "eleventyComputed": {
+    "title": "Note #{{ page.fileSlug }}"
+  },
+  "description": "A short note or thought from me, Sean McP.",
+  "tags": []
+}

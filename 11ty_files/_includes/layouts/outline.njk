@@ -1,0 +1,12 @@
+---
+layout: page
+templateClass: outline
+breadcrumbs: true
+---
+
+{% if description %}
+<h2 id="overview">Overview <a class="direct-link" href="#overview">#</a></h2>
+<p>{{ description }}</p>
+{% endif %}
+
+{{ content | safe }}

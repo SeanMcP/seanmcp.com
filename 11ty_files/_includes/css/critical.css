@@ -1,0 +1,227 @@
+:root {
+  --dark: hsl(216, 5%, 10%);
+  --light: hsl(216, 5%, 97%);
+
+  --accent: hsl(188, 100%, 42%);
+  --primary: hsl(216, 85%, 34%);
+
+  --background: var(--light);
+  --off-background: hsla(0, 0%, 10%, 20%);
+  --text-color: var(--dark);
+  --anchor-color: var(--primary);
+  --note-anchor-color: var(--accent);
+
+  --block-code-background: hsla(0, 0%, 0%, 90%);
+  --inline-code-background: hsla(0, 0%, 0%, 7.5%);
+  --inline-code-color: hsla(0, 0%, 0%, 75%);
+
+  --body-font: -apple-system, BlinkMacSystemFont, Helvetica, Arial, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --mono-font: Menlo, Monaco, Consolas, "Andale Mono WT", "Andale Mono",
+    "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+}
+
+html[data-page-flavor="soccer"] {
+  --accent: hsl(100, 50%, 50%);
+  --primary: hsl(120, 50%, 30%);
+}
+
+body {
+  --scroll-progress-height: 6px;
+  background: var(--background);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  padding-top: var(--scroll-progress-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body[data-theme="dark"] {
+  --background: var(--dark);
+  --off-background: hsla(216, 5%, 95%, 15%);
+  --text-color: var(--light);
+  --anchor-color: var(--accent);
+  --inline-code-background: hsla(0, 0%, 0%, 50%);
+  --inline-code-color: hsla(0, 0%, 100%, 85%);
+  --note-anchor-color: var(--primary);
+}
+
+.container {
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.site-header .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-header nav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.site-header nav a:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+:is(.stars-toggle, .theme-toggle):hover {
+  cursor: pointer;
+  outline: none !important;
+}
+
+:is(.theme-toggle, .stars-toggle):focus-within {
+  outline: 3px solid var(--anchor-color);
+  outline-offset: 3px;
+}
+
+.theme-toggle:hover span::before {
+  transform: translateX(-2px);
+}
+
+.theme-toggle:hover span::after {
+  transform: translateX(2px);
+}
+
+.theme-toggle input + span {
+  --size: 1.25em;
+  display: inline-block;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+}
+
+.theme-toggle input + span::before,
+.theme-toggle input + span::after {
+  border: 1px solid var(--text-color);
+  content: "";
+  display: inline-block;
+  height: calc(var(--size) * 2 / 3);
+  position: relative;
+  transition: transform 100ms ease-in-out;
+  width: calc(var(--size) * 2 / 3);
+}
+
+.theme-toggle input + span::before {
+  background-color: var(--text-color);
+}
+
+.theme-toggle input + span::after {
+  background: var(--background);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.theme-toggle input:checked + span::before {
+  background-color: var(--background);
+}
+
+.theme-toggle input:checked + span::after {
+  background-color: var(--text-color);
+  z-index: -1;
+}
+
+.stars-toggle {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.stars-toggle svg {
+  display: inline-block;
+}
+
+.stars-toggle path {
+  transition: transform 200ms ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+.stars-toggle:hover path {
+  transform: rotate(72deg);
+}
+
+.stars-toggle input:checked + svg {
+  fill: currentColor;
+}
+
+[data-star] {
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+[data-star]:after {
+  content: "⭐️";
+  display: inline-block;
+}
+
+@media screen and (min-width: 500px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .container.--content {
+    max-width: 70ch;
+  }
+}
+
+.breadcrumbs ol {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs li + li::before {
+  color: var(--off-background);
+  content: "/";
+  display: inline-block;
+  height: 1rem;
+  margin: 0 0.5rem;
+}
+
+.skip-link {
+  background-color: var(--primary);
+  color: white !important;
+  font-weight: bold;
+  position: fixed;
+  padding: 1rem;
+  z-index: 9999;
+}
+
+.skip-link:not(:focus) {
+  right: 200%;
+}
+
+.skip-link:focus {
+  left: 0;
+  outline: 2px dotted white;
+}
+
+#scroll-progress {
+  --height: var(--scroll-progress-height);
+  background: linear-gradient(to right, var(--accent), var(--primary));
+  position: fixed;
+  height: var(--height);
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+#scroll-progress span {
+  --width: var(--height);
+  border-right: var(--width) solid var(--background);
+  bottom: 0;
+  left: calc(var(--width) / -2);
+  position: absolute;
+  top: 0;
+  width: 0%;
+}

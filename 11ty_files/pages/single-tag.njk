@@ -1,0 +1,19 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - article
+    - articles
+layout: page
+renderData:
+  title: Tagged “{{ tag }}”
+permalink: /tags/{{ tag }}/
+styles:
+---
+{% set articles = collections[tag] %}
+{% include "partials/article-list.njk" %}
+
+<p><a href="{{ '/tags/' | url }}">View all tags</a></p>

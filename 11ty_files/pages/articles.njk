@@ -1,0 +1,50 @@
+---
+layout: page
+permalink: /articles/
+title: Articles
+head: >-
+    <style>
+        #search-container {
+            align-items: center;
+            display: flex;
+        }
+
+        #search-container input {
+            background-color: transparent;
+            border: 1px solid var(--off-background);
+            color: inherit;
+            flex-grow: 1;
+            font: inherit;
+            margin-left: 0.5rem;
+            padding: 0.25rem;
+        }
+
+        #search-container input:focus {
+            outline: 2px solid var(--anchor-color);
+        }
+    </style>
+foot: >-
+    <script src="/js/article-search.js"></script>
+---
+
+{% set articles = collections.articles %}
+
+<label id="search-container">
+    <span>Search<span class="--visually-hidden">&nbsp;all articles</span></span>
+    <input list="articles-list" id="articles-search" type="search" />
+</label>
+<datalist id="articles-list">
+    {# Reversed to match article order #}
+    {% for article in articles | reverse %}
+        <option data-url="{{ article.url }}" value="{{ article.data.title }}">
+    {% endfor %}
+</datalist>
+
+<p>Articles are listed here in reverse-chronological order. You can <a href="/tags/">browse by tags</a>, and/or
+    <a href="{{ '/feed/feed.xml' | url }}">subscribe to the RSS feed</a>.</p>
+
+<hr>
+
+<h2>All articles</h2>
+
+{% include "partials/article-list.njk" %}

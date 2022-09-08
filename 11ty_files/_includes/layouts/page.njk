@@ -1,0 +1,19 @@
+---
+layout: base
+templateClass: page
+---
+{%- if title or renderData.title -%}
+    <header class="page-header">
+        <div class="container --content --clear-child-margins">
+        {%- if breadcrumbs -%}
+        {% breadcrumbs page.url, display.title or title or renderData.title %}
+        {%- endif -%}
+            <h1>{{ display.title or title or renderData.title }}</h1>
+        </div>
+    </header>
+{%- endif -%}
+<div class="page">
+    <div class="container --content --clear-child-margins">
+        {{ content | safe }}
+    </div>
+</div>
