@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Sean McPherson</title>
+    <subtitle>A feed of short notes, thoughts, or ideas, preserved here on SeanMcP.com</subtitle>
+    <link href="https://seanmcp.com/feed/notes.xml" rel="self"/>
+    <link href="https://seanmcp.com/"/>
+    <updated>2022-08-03T17:55:08Z</updated>
+    <id>https://seanmcp.com/notes</id>
+    <author>
+        <name>Sean McPherson</name>
+        <email>sean@seanmcp.com</email>
+    </author>
+        
+        <entry>
+            <title>Note #1</title>
+            <link href="https://seanmcp.com/note/1/"/>
+            <updated>2021-01-29T16:59:21Z</updated>
+            <id>https://seanmcp.com/note/1/</id>
+            <content type="html">&lt;p&gt;Hello world!&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #2</title>
+            <link href="https://seanmcp.com/note/2/"/>
+            <updated>2021-01-29T18:35:21Z</updated>
+            <id>https://seanmcp.com/note/2/</id>
+            <content type="html">&lt;p&gt;Why messages? I really like the idea of preserving content that would otherwise be shared on social media on my own site.&lt;/p&gt;
+&lt;p&gt;It’s definitely not the most popular option (in fact, I doubt anyone else will read these), but I think it’s the right decision in the long run.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #3</title>
+            <link href="https://seanmcp.com/note/3/"/>
+            <updated>2021-01-29T20:24:21Z</updated>
+            <id>https://seanmcp.com/note/3/</id>
+            <content type="html">&lt;p&gt;Each note is a simple markdown file. All the data necessary to render on the screen is set at a higher level, so it’s super simple.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit&lt;/strong&gt;: Okay, I needed to add a date field.&lt;/p&gt;
+&lt;p&gt;My favorite part of this setup is that I can commit a new note through GitHub, which automatically triggers a Netlify build.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #4</title>
+            <link href="https://seanmcp.com/note/4/"/>
+            <updated>2021-01-30T11:41:44Z</updated>
+            <id>https://seanmcp.com/note/4/</id>
+            <content type="html">&lt;p&gt;Nunjucks and Liquid have different methods for passing arguments to a filter.&lt;/p&gt;
+&lt;p&gt;In Nunjucks, it’s:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{ &#39;value&#39; | filter(&#39;arg&#39;) }}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In Liquid, it’s:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{ &#39;value&#39; | filter: &#39;arg&#39; }}
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #5</title>
+            <link href="https://seanmcp.com/note/5/"/>
+            <updated>2021-01-30T18:55:00Z</updated>
+            <id>https://seanmcp.com/note/5/</id>
+            <content type="html">&lt;p&gt;🚀 I &lt;a href=&quot;https://npm.im/eleventy-plugin-emoji&quot;&gt;released a new version&lt;/a&gt; of &lt;code&gt;eleventy-plugin-emoji&lt;/code&gt; this morning. Two minor changes: 1) the filter now supports a label, and 2) the default class name is now &lt;code&gt;eleventy-emoji&lt;/code&gt;.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #6</title>
+            <link href="https://seanmcp.com/note/6/"/>
+            <updated>2021-02-01T16:13:16Z</updated>
+            <id>https://seanmcp.com/note/6/</id>
+            <content type="html">&lt;p&gt;I added a new section to the site called &lt;a href=&quot;https://seanmcp.com/bookshelf&quot;&gt;“Bookshelf”&lt;/a&gt;. This was modelled after &lt;a href=&quot;https://daverupert.com/bookshelf&quot;&gt;David Rupert’s bookshelf&lt;/a&gt;, with the additional ability to include notes for each book.&lt;/p&gt;
+&lt;p&gt;I’m really enjoying the ability to add features to my site as needed.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #7</title>
+            <link href="https://seanmcp.com/note/7/"/>
+            <updated>2021-02-01T21:24:19Z</updated>
+            <id>https://seanmcp.com/note/7/</id>
+            <content type="html">&lt;p&gt;&lt;a href=&quot;https://startup-cto.net/10-bad-typescript-habits-to-break-this-year/&quot;&gt;&lt;em&gt;10 bad TypeScript habits to break this year&lt;/em&gt;&lt;/a&gt; was shared on the latest edition of &lt;a href=&quot;https://javascriptweekly.com/&quot;&gt;JavaScript Weekly&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There are a few useful tidbits in there, but I’m particularly interested in using &lt;code&gt;class Foo implements Bar&lt;/code&gt; to mock data for tests (6) and using descriptive names for generics (7).&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #8</title>
+            <link href="https://seanmcp.com/note/8/"/>
+            <updated>2021-02-02T11:13:35Z</updated>
+            <id>https://seanmcp.com/note/8/</id>
+            <content type="html">&lt;p&gt;The W3C has a &lt;a href=&quot;https://validator.w3.org/feed/&quot;&gt;feed validator&lt;/a&gt; that is pretty handy when you are working on generating RSS/XML feeds.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #9</title>
+            <link href="https://seanmcp.com/note/9/"/>
+            <updated>2021-02-02T18:26:04Z</updated>
+            <id>https://seanmcp.com/note/9/</id>
+            <content type="html">&lt;p&gt;Max Böck has &lt;a href=&quot;https://mxb.dev/blog/persistent-build-folders-netlify/&quot;&gt;a guide for persisting files inbetween Netlify builds&lt;/a&gt; using a custom plugin.&lt;/p&gt;
+&lt;p&gt;It looks pretty straightforward, so I’m going to file that away for later 🗄&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #10</title>
+            <link href="https://seanmcp.com/note/10/"/>
+            <updated>2021-02-03T19:55:26Z</updated>
+            <id>https://seanmcp.com/note/10/</id>
+            <content type="html">&lt;p&gt;To find the date a file was created in Node, you can use the &lt;code&gt;fs.stat&lt;/code&gt; or &lt;code&gt;fs.statSync&lt;/code&gt; methods and look for &lt;code&gt;birthdate&lt;/code&gt;. &lt;a href=&quot;https://stackoverflow.com/a/28886086&quot;&gt;See this answer on StackOverflow&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This might work differently based on your operating system, so your mileage may vary.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #11</title>
+            <link href="https://seanmcp.com/note/11/"/>
+            <updated>2021-02-04T13:35:51Z</updated>
+            <id>https://seanmcp.com/note/11/</id>
+            <content type="html">&lt;p&gt;I tried for a long time to find this resource, so I’m going to save it here: &lt;a href=&quot;https://marcamos.com/journal/add-duckduckgo-search/&quot;&gt;&lt;em&gt;Add DuckDuckGo-powered search to your website&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can add site-wide search to any static site using an HTML &lt;code&gt;form&lt;/code&gt; and a few fields. Pretty cool!&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #12</title>
+            <link href="https://seanmcp.com/note/12/"/>
+            <updated>2021-02-08T18:20:29Z</updated>
+            <id>https://seanmcp.com/note/12/</id>
+            <content type="html">&lt;p&gt;When I was teaching, teachers had a popular aphorism: “You really know something until you have to teach it.” Today I learned that this idea was given the term “the illusion of explanatory depth” (IOED) by psychologists in 2002.&lt;/p&gt;
+&lt;p&gt;Further reading: &lt;a href=&quot;http://www.meteo.mcgill.ca/~huardda/articles/rosenblit02.pdf&quot;&gt;[0]&lt;/a&gt;, &lt;a href=&quot;https://cogsci.mindmodeling.org/2016/papers/0185/paper0185.pdf&quot;&gt;[1]&lt;/a&gt;, &lt;a href=&quot;https://www.edge.org/response-detail/27117&quot;&gt;[2]&lt;/a&gt;, &lt;a href=&quot;https://behavioralscientist.org/to-fight-polarization-ask-how-does-that-policy-work/&quot;&gt;[3]&lt;/a&gt;, &lt;a href=&quot;https://www.npr.org/sections/13.7/2015/07/06/420513593/what-you-really-know-about-bicycles&quot;&gt;[4]&lt;/a&gt;&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #13</title>
+            <link href="https://seanmcp.com/note/13/"/>
+            <updated>2021-02-10T12:11:51Z</updated>
+            <id>https://seanmcp.com/note/13/</id>
+            <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/conwnet/github1s&quot;&gt;&lt;code&gt;github1s&lt;/code&gt;&lt;/a&gt; is the coolest thing that I have seen in a while. By changing the url of any GitHub repository, you can open the repo in a VS Code browser. This is begging for a userscript to add a link to every GitHub repo &lt;span aria-hidden=&quot;true&quot; class=&quot;eleventy-emoji&quot; role=&quot;img&quot;&gt;🤔&lt;/span&gt;&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #14</title>
+            <link href="https://seanmcp.com/note/14/"/>
+            <updated>2021-02-16T20:38:34Z</updated>
+            <id>https://seanmcp.com/note/14/</id>
+            <content type="html">&lt;p&gt;I added a &lt;a href=&quot;https://seanmcp.com/uses&quot;&gt;/uses&lt;/a&gt; page to keep track of the extensions and programs that I use everyday. Nothing is revolutionary, but there are a few extensions and user scripts that I find helpful.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #15</title>
+            <link href="https://seanmcp.com/note/15/"/>
+            <updated>2021-03-04T14:23:02Z</updated>
+            <id>https://seanmcp.com/note/15/</id>
+            <content type="html">&lt;p&gt;Today I learned that in Vim &lt;code&gt;:w&lt;/code&gt; stands for “write” and is not a weird alias for “save.” That’s much easier to remember.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #16</title>
+            <link href="https://seanmcp.com/note/16/"/>
+            <updated>2021-03-15T13:29:46Z</updated>
+            <id>https://seanmcp.com/note/16/</id>
+            <content type="html">&lt;p&gt;I enjoyed reading &lt;a href=&quot;https://aliensintheapple.com/2013/12/22/hacker-christianity/&quot;&gt;&lt;em&gt;Hacker Christianity&lt;/em&gt;&lt;/a&gt; by &lt;a href=&quot;https://benhoyt.com/&quot;&gt;Ben Hoyt&lt;/a&gt;. It’s nice to ready perspectives from the intersection of Christianity and programming. I’ll be on the lookout for more like this.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #17</title>
+            <link href="https://seanmcp.com/note/17/"/>
+            <updated>2021-03-16T13:24:06Z</updated>
+            <id>https://seanmcp.com/note/17/</id>
+            <content type="html">&lt;p&gt;This morning I added a new page with an embedded emoji picker: &lt;a href=&quot;https://www.seanmcp.com/sm/emoji-picker/&quot;&gt;https://www.seanmcp.com/sm/emoji-picker/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It embeds &lt;a href=&quot;https://www.webcomponents.org/element/@@npm/emoji-picker-element&quot;&gt;Nolan Lawson’s &lt;code&gt;emoji-picker&lt;/code&gt; web component&lt;/a&gt; in a webpage and prompts you to copy when selecting an emoji. You can see the &lt;a href=&quot;https://github.com/SeanMcP/seanmcp.com/blob/master/src/sm/emoji-picker.njk&quot;&gt;source code here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I’ll use this when doing computer activities with my three-year-old son, but others may find it useful as well.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #18</title>
+            <link href="https://seanmcp.com/note/18/"/>
+            <updated>2021-03-18T13:16:05Z</updated>
+            <id>https://seanmcp.com/note/18/</id>
+            <content type="html">&lt;p&gt;One of the things I miss most about Windows when working on macOS is the window management.&lt;/p&gt;
+&lt;p&gt;I’ve tried a few window management apps in the past, and today I’m giving &lt;a href=&quot;https://rectangleapp.com/&quot;&gt;Rectangle&lt;/a&gt; a spin. So far, the keyboard shortcuts feel logical and the app isn’t trying to do too much.&lt;/p&gt;
+&lt;p&gt;We’ll see how it goes!&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #19</title>
+            <link href="https://seanmcp.com/note/19/"/>
+            <updated>2021-04-15T13:05:45Z</updated>
+            <id>https://seanmcp.com/note/19/</id>
+            <content type="html">&lt;p&gt;If you wait until you are feeling productive, you will never be.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #20</title>
+            <link href="https://seanmcp.com/note/20/"/>
+            <updated>2021-04-28T12:47:42Z</updated>
+            <id>https://seanmcp.com/note/20/</id>
+            <content type="html">&lt;p&gt;Netlify is moving their React UI component library to Tailwind CSS:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;what started with organised PostCSS gradually grew to become a complex and entangled global CSS architecture with a lot of specificity and overrides. … the added tech debt it introduces makes it difficult to keep shipping fast without adding any regressions. Besides, as the number of frontend developers contributing to the codebase also grows, this kind of CSS architecture becomes even more difficult to work with.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To accomplish this, they set a deadline, divided the work across their front-end guild, and tracked their progress on GitHub. They added some internal tooling for visual-regression tests and to make building class lists easier, especially for conditional cases.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.netlify.com/blog/2021/03/23/from-semantic-css-to-tailwind-refactoring-the-netlify-ui-codebase/&quot;&gt;Read more about Netlify’s adoption of Tailwind CSS here&lt;/a&gt;&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #21</title>
+            <link href="https://seanmcp.com/note/21/"/>
+            <updated>2021-04-29T12:44:45Z</updated>
+            <id>https://seanmcp.com/note/21/</id>
+            <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.joshwcomeau.com/blog/how-i-built-my-blog/&quot;&gt;In the article &lt;em&gt;How I Built My Blog&lt;/em&gt;&lt;/a&gt;, Josh Comeau walks through the tech stack behind his lovely personal site. It’s neat to see the choices that he made and the reasoning behind them.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #22</title>
+            <link href="https://seanmcp.com/note/22/"/>
+            <updated>2021-06-01T20:30:10Z</updated>
+            <id>https://seanmcp.com/note/22/</id>
+            <content type="html">&lt;p&gt;WebAssembly sounds neat and has real potential, but the setup for a “Hello World” programming is pretty complex: &lt;a href=&quot;https://wasmbyexample.dev/examples/hello-world/hello-world.assemblyscript.en-us.html&quot;&gt;https://wasmbyexample.dev/examples/hello-world/hello-world.assemblyscript.en-us.html&lt;/a&gt;&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #23</title>
+            <link href="https://seanmcp.com/note/23/"/>
+            <updated>2021-06-25T00:11:18Z</updated>
+            <id>https://seanmcp.com/note/23/</id>
+            <content type="html">&lt;p&gt;&lt;strong&gt;Pop quiz&lt;/strong&gt;: What does the following evaluate to in JavaScript?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Object.keys(&#39;hmm...&#39;).length
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Answer&lt;/strong&gt;: &lt;code&gt;6&lt;/code&gt;. Here JS treats the string as a type of array which itself is a type of object. Who knew!&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #24</title>
+            <link href="https://seanmcp.com/note/24/"/>
+            <updated>2021-07-15T14:01:26Z</updated>
+            <id>https://seanmcp.com/note/24/</id>
+            <content type="html">&lt;p&gt;Google Chrome has been crashing on me without warning the past two weeks, so I’m going to give Microsoft Edge another try. Nice to see that there are more extensions available in Edge Add-on store.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #25</title>
+            <link href="https://seanmcp.com/note/25/"/>
+            <updated>2021-07-30T13:49:22Z</updated>
+            <id>https://seanmcp.com/note/25/</id>
+            <content type="html">&lt;p&gt;Every time I use &lt;a href=&quot;https://esbuild.github.io/&quot;&gt;esbuild&lt;/a&gt;, I’m impressed with its simplicity and speed. This new generation of JS tooling is really exciting!&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #26</title>
+            <link href="https://seanmcp.com/note/26/"/>
+            <updated>2021-10-08T12:46:31Z</updated>
+            <id>https://seanmcp.com/note/26/</id>
+            <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.simplethread.com/20-things-ive-learned-in-my-20-years-as-a-software-engineer/&quot;&gt;&lt;em&gt;20 Things I’ve Learned in my 20 Years as a Software Engineer&lt;/em&gt;&lt;/a&gt; by Justin Etheredge of Simple Thread made it to the top of Hacker News, and there were some interesting insights from the article.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There is no “right” architecture, you’ll never pay down all of your technical debt, you’ll never design the perfect interface, your tests will always be too slow. This isn’t an excuse to never make things better, but instead a way to give you perspective. Worry less about elegance and perfection; instead strive for continuous improvement and creating a livable system that your team enjoys working in and sustainably delivers value.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[Watch out for the 0.1x programmer] who wastes time, doesn’t ask for feedback, doesn’t test their code, doesn’t consider edge cases, etc… We should be far more concerned with keeping 0.1x programmers off our teams than finding the mythical 10x programmer.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you are using your tools, and you don’t love or hate them in a myriad of ways, you need to experience more. You need to explore other languages, libraries, and paradigms. There are few ways of leveling up your skills faster than actively seeking out how others accomplish tasks with different tools and techniques than you do.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Good written communication is one of the most important skills for any software engineer to master.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The article is worth the read (warning: a few vulgarities).&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #27</title>
+            <link href="https://seanmcp.com/note/27/"/>
+            <updated>2022-01-18T14:58:08Z</updated>
+            <id>https://seanmcp.com/note/27/</id>
+            <content type="html">&lt;p&gt;I was able to update &lt;code&gt;@11ty/eleventy&lt;/code&gt; for this site from version &lt;code&gt;0.12.0&lt;/code&gt; to &lt;code&gt;1.0.0&lt;/code&gt; &lt;s&gt;without any issues&lt;/s&gt; &lt;a href=&quot;https://seanmcp.com/articles/upgrading-an-eleventy-site-to-1-0-0&quot;&gt;only one hiccup&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Kudos to Zach Leatherman &amp;amp; co. on &lt;a href=&quot;https://github.com/11ty/eleventy/releases/tag/v1.0.0&quot;&gt;the 1.0 release&lt;/a&gt;!&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #28</title>
+            <link href="https://seanmcp.com/note/28/"/>
+            <updated>2022-01-21T01:19:06Z</updated>
+            <id>https://seanmcp.com/note/28/</id>
+            <content type="html">&lt;p&gt;Today marks the end of a chapter and the start of a new adventure. Onward and upward! 🦄&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #29</title>
+            <link href="https://seanmcp.com/note/29/"/>
+            <updated>2022-03-11T14:09:39Z</updated>
+            <id>https://seanmcp.com/note/29/</id>
+            <content type="html">&lt;blockquote&gt;
+&lt;p&gt;I have enjoyed working with React for the past few years; it always felt like the right level of abstraction from working with the actual DOM. That being said, I have also become wary of how error-prone React hooks code often becomes. Solid.js feels like it uses a lot of the ergonomic parts of React while minimizing confusion and errors.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;– Nick Scialli in &lt;a href=&quot;https://typeofnan.dev/solid-js-feels-like-what-i-always-wanted-react-to-be/&quot;&gt;&lt;em&gt;Solid.js feels like what I always wanted React to be&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #30</title>
+            <link href="https://seanmcp.com/note/30/"/>
+            <updated>2022-03-16T13:02:42Z</updated>
+            <id>https://seanmcp.com/note/30/</id>
+            <content type="html">&lt;p&gt;In &lt;a href=&quot;https://medium.com/coox-tech/deep-dive-into-react-natives-new-architecture-fb67ae615ccd&quot;&gt;&lt;em&gt;Deep dive into React Native’s New Architecture&lt;/em&gt;&lt;/a&gt;, Atharva Patil does a great job of summarizing all of the changes that are coming to React Native in 2022. Definitely worth the 7-minute read.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #31</title>
+            <link href="https://seanmcp.com/note/31/"/>
+            <updated>2022-03-18T19:26:09Z</updated>
+            <id>https://seanmcp.com/note/31/</id>
+            <content type="html">&lt;p&gt;In doing research on debugging, I’ve found &lt;a href=&quot;https://www.spinellis.gr/debugging/&quot;&gt;Diomidis Spinellis’ &lt;em&gt;Effective Debugging&lt;/em&gt;&lt;/a&gt; to be really insightful. It’s chock-full of helpful tips and real-world examples that illustrate the recommendations well.&lt;/p&gt;
+&lt;p&gt;If you are looking for a general book on debugging, then I highly recommend it.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #32</title>
+            <link href="https://seanmcp.com/note/32/"/>
+            <updated>2022-03-23T11:18:13Z</updated>
+            <id>https://seanmcp.com/note/32/</id>
+            <content type="html">&lt;p&gt;I started watching Brian Vaughn’s &lt;a href=&quot;https://www.youtube.com/watch?v=nySib7ipZdk&quot;&gt;&lt;em&gt;Deep dive with the React DevTools profiler&lt;/em&gt;&lt;/a&gt; to learn more about using the React Profiler, but there are a bunch of general tips for creating more performant React applications as well.&lt;/p&gt;
+&lt;p&gt;Watching it was a good use of 37 minutes!&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #33</title>
+            <link href="https://seanmcp.com/note/33/"/>
+            <updated>2022-03-24T16:24:49Z</updated>
+            <id>https://seanmcp.com/note/33/</id>
+            <content type="html">&lt;p&gt;Requesting data &lt;em&gt;before&lt;/em&gt; rendering the user interface is putting the horse before the cart. It’s great to see tools like React Router moving in that direction. 🐎&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://remix.run/blog/remixing-react-router&quot;&gt;https://remix.run/blog/remixing-react-router&lt;/a&gt;&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #34</title>
+            <link href="https://seanmcp.com/note/34/"/>
+            <updated>2022-03-25T18:49:11Z</updated>
+            <id>https://seanmcp.com/note/34/</id>
+            <content type="html">&lt;p&gt;&lt;em&gt;LEGO Bricktales&lt;/em&gt; looks so good! It’s like an open-ended &lt;a href=&quot;https://en.wikipedia.org/wiki/Lego_Island&quot;&gt;&lt;em&gt;LEGO Island&lt;/em&gt;&lt;/a&gt;, a favorite from my childhood. Hopefully the real game turns out like the trailer 🧱&lt;/p&gt;
+&lt;iframe class=&quot;yt-shortcode&quot; src=&quot;https://www.youtube-nocookie.com/embed/YJQjQ-nfJRY&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #35</title>
+            <link href="https://seanmcp.com/note/35/"/>
+            <updated>2022-04-21T19:19:21Z</updated>
+            <id>https://seanmcp.com/note/35/</id>
+            <content type="html">&lt;p&gt;This week I gave a talk titled &lt;em&gt;React Bug Catcher: Tools and strategies for debugging React apps&lt;/em&gt; at &lt;a href=&quot;https://events.geekle.us/react2/&quot;&gt;React Global 2022&lt;/a&gt;. It was a good experience, but I &lt;em&gt;really&lt;/em&gt; underestimated (again) how much time it takes to prepare a conference talk. ⌛️&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #36</title>
+            <link href="https://seanmcp.com/note/36/"/>
+            <updated>2022-06-24T20:24:39Z</updated>
+            <id>https://seanmcp.com/note/36/</id>
+            <content type="html">&lt;p&gt;I added a new feature to the site called “stars.” When it is enabled, you can add a little star anywhere on the site by tapping.&lt;br /&gt;
+I’m planning to write an article about why I wrote it, but in the meantime let me know if you have any feedback on the feature: &lt;a href=&quot;mailto:sean@seanmcp.com&quot;&gt;sean@seanmcp.com&lt;/a&gt;&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #37</title>
+            <link href="https://seanmcp.com/note/37/"/>
+            <updated>2022-06-28T20:34:02Z</updated>
+            <id>https://seanmcp.com/note/37/</id>
+            <content type="html">&lt;p&gt;I’ve needed to look up how to use React Testing Library to test that a component with particular props multiple times. Today I found a helpful answer on StackOverflow: &lt;a href=&quot;https://stackoverflow.com/a/58634377/8486161&quot;&gt;https://stackoverflow.com/a/58634377/8486161&lt;/a&gt;&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #38</title>
+            <link href="https://seanmcp.com/note/38/"/>
+            <updated>2022-07-12T19:18:28Z</updated>
+            <id>https://seanmcp.com/note/38/</id>
+            <content type="html">&lt;p&gt;Today I learned about TypeScript’s non-null assertion operator: &lt;code&gt;!&lt;/code&gt;. It’s a nice way to let the TS compiler know that the value cannot be &lt;code&gt;null&lt;/code&gt; or &lt;code&gt;undefined&lt;/code&gt;, which is a pretty common use case in my experience. &lt;a href=&quot;https://stackoverflow.com/questions/42273853/in-typescript-what-is-the-exclamation-mark-bang-operator-when-dereferenci&quot;&gt;This StackOverflow question and answer helped unpack things for me&lt;/a&gt;, and &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator&quot;&gt;you can reference the documentation here&lt;/a&gt;. ❗️&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #39</title>
+            <link href="https://seanmcp.com/note/39/"/>
+            <updated>2022-07-13T14:26:45Z</updated>
+            <id>https://seanmcp.com/note/39/</id>
+            <content type="html">&lt;p&gt;Today I added Netlify CMS to the site in order to make it easier to add &lt;a href=&quot;https://seanmcp.com/notes&quot;&gt;notes&lt;/a&gt;. I may expand the feature for articles in the future.&lt;/p&gt;
+&lt;p&gt;The most difficult part of the process was the limited control over file slugs. Notes are numbered and incremented, but there wasn’t a good way to do that with Netlify CMS without adding a new field. Oh well. Hopefully the ease of use will trump the annoyance of unnecessary data.&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #40</title>
+            <link href="https://seanmcp.com/note/40/"/>
+            <updated>2022-07-13T14:46:42Z</updated>
+            <id>https://seanmcp.com/note/40/</id>
+            <content type="html">&lt;p&gt;This is the first note created by Netlify CMS in production 🚀&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #41</title>
+            <link href="https://seanmcp.com/note/41/"/>
+            <updated>2022-07-14T15:23:41Z</updated>
+            <id>https://seanmcp.com/note/41/</id>
+            <content type="html">&lt;p&gt;I spent some time this morning looking into &lt;a href=&quot;https://github.com/google/zx&quot;&gt;&lt;code&gt;zx&lt;/code&gt;, Google’s tool for writing shell scripts in JavaScript&lt;/a&gt;. They have a lot of neat features baked in, but one of the coolest I saw was the ability to &lt;a href=&quot;https://github.com/google/zx/blob/main/docs/markdown.md&quot;&gt;execute scripts from a Markdown file&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That’s a much more approachable way to document scripts than code comments! ✨&lt;/p&gt;
+</content>
+        </entry>
+        
+        <entry>
+            <title>Note #42</title>
+            <link href="https://seanmcp.com/note/42/"/>
+            <updated>2022-08-03T17:55:08Z</updated>
+            <id>https://seanmcp.com/note/42/</id>
+            <content type="html">&lt;p&gt;I﻿’ve been a big fan of &lt;a href=&quot;http://codesandbox.io/&quot;&gt;CodeSandbox.io&lt;/a&gt; since it released. However, recently I noticed that when you want to convert a sandbox to a GitHub repository, it requires access to your organizations too.&lt;/p&gt;
+&lt;p&gt;I’m happy to give them access to my GitHub account, but I do not want to give them permissions to edit repos at Khan Academy. This seems like strange oversight from the CodeSandbox team. 🤔&lt;/p&gt;
+</content>
+        </entry>
+</feed>

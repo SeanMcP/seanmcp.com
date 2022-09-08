@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+
+
+
+
+<title>The Economics of Software Development, Part II - SeanMcP.com</title>
+<meta property="og:site_name" content="SeanMcP.com" />
+<meta property="og:title" content="The Economics of Software Development, Part II" />
+<meta name="twitter:title" content="The Economics of Software Development, Part II">
+
+<meta name="description" content="Why developers should rely on markets to make the best decisions for their product">
+<meta property="og:description" content="Why developers should rely on markets to make the best decisions for their product" />
+<meta name="twitter:description" content="Why developers should rely on markets to make the best decisions for their product">
+
+<meta property="og:image" content="https://seanmcp.com/img/seanmcp.favicon.png" />
+<meta name="twitter:image" content="https://seanmcp.com/img/seanmcp.favicon.png">
+
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://seanmcp.com/articles/the-economics-of-software-development-part-ii/" />
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@snmcp">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Sean McPherson">
+        <link rel="alternate" href="feed/notes.xml" type="application/atom+xml" title="Notes on Sean McPherson">
+        
+            <link rel="shortcut icon" href="/img/seanmcp.favicon.png" type="image/png">
+        
+        
+        <style>:root{--dark:hsl(216, 5%, 10%);--light:hsl(216, 5%, 97%);--accent:hsl(188, 100%, 42%);--primary:hsl(216, 85%, 34%);--background:var(--light);--off-background:hsla(0, 0%, 10%, 20%);--text-color:var(--dark);--anchor-color:var(--primary);--note-anchor-color:var(--accent);--block-code-background:hsla(0, 0%, 0%, 90%);--inline-code-background:hsla(0, 0%, 0%, 7.5%);--inline-code-color:hsla(0, 0%, 0%, 75%);--body-font:-apple-system,BlinkMacSystemFont,Helvetica,Arial,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;--mono-font:Menlo,Monaco,Consolas,"Andale Mono WT","Andale Mono","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace}html[data-page-flavor=soccer]{--accent:hsl(100, 50%, 50%);--primary:hsl(120, 50%, 30%)}body{--scroll-progress-height:6px;background:var(--background);color:var(--text-color);font-family:var(--body-font);margin:0;padding:0;padding-top:var(--scroll-progress-height);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body[data-theme=dark]{--background:var(--dark);--off-background:hsla(216, 5%, 95%, 15%);--text-color:var(--light);--anchor-color:var(--accent);--inline-code-background:hsla(0, 0%, 0%, 50%);--inline-code-color:hsla(0, 0%, 100%, 85%);--note-anchor-color:var(--primary)}.container{padding:1rem;margin:0 auto}.site-header .container{align-items:center;display:flex;justify-content:space-between}.site-header nav{align-items:center;display:flex;flex-wrap:wrap}.site-header nav a:not(:last-of-type){margin-right:1rem}:is(.stars-toggle,.theme-toggle):hover{cursor:pointer;outline:0!important}:is(.theme-toggle,.stars-toggle):focus-within{outline:3px solid var(--anchor-color);outline-offset:3px}.theme-toggle:hover span::before{transform:translateX(-2px)}.theme-toggle:hover span::after{transform:translateX(2px)}.theme-toggle input+span{--size:1.25em;display:inline-block;position:relative;width:var(--size);height:var(--size)}.theme-toggle input+span::after,.theme-toggle input+span::before{border:1px solid var(--text-color);content:"";display:inline-block;height:calc(var(--size) * 2 / 3);position:relative;transition:transform .1s ease-in-out;width:calc(var(--size) * 2 / 3)}.theme-toggle input+span::before{background-color:var(--text-color)}.theme-toggle input+span::after{background:var(--background);position:absolute;bottom:0;right:0}.theme-toggle input:checked+span::before{background-color:var(--background)}.theme-toggle input:checked+span::after{background-color:var(--text-color);z-index:-1}.stars-toggle{align-items:center;display:flex;justify-content:center}.stars-toggle svg{display:inline-block}.stars-toggle path{transition:transform .2s ease-in-out;transform-origin:50% 50%}.stars-toggle:hover path{transform:rotate(72deg)}.stars-toggle input:checked+svg{fill:currentColor}[data-star]{cursor:pointer;font-size:1.5rem;position:absolute;transform:translate(-50%,-50%)}[data-star]:after{content:"⭐️";display:inline-block}@media screen and (min-width:500px){.container{padding:2rem}.container.--content{max-width:70ch}}.breadcrumbs ol{display:flex;list-style:none;margin:0;padding:0}.breadcrumbs li+li::before{color:var(--off-background);content:"/";display:inline-block;height:1rem;margin:0 .5rem}.skip-link{background-color:var(--primary);color:#fff!important;font-weight:700;position:fixed;padding:1rem;z-index:9999}.skip-link:not(:focus){right:200%}.skip-link:focus{left:0;outline:2px dotted white}#scroll-progress{--height:var(--scroll-progress-height);background:linear-gradient(to right,var(--accent),var(--primary));position:fixed;height:var(--height);left:0;right:0;top:0;z-index:1000}#scroll-progress span{--width:var(--height);border-right:var(--width) solid var(--background);bottom:0;left:calc(var(--width)/ -2);position:absolute;top:0;width:0%}</style>
+        
+        
+            <link rel="stylesheet" href="/css/prism.css">
+        
+            <link rel="stylesheet" href="/css/markdown-it.css">
+        
+        
+        
+    </head>
+    <body data-page-type="article" >
+        <div id="scroll-progress"><span></span></div>
+        <a class="skip-link" href="#main">Skip to main content</a>
+        <header class="site-header">
+    <div class="container --content">
+        <a aria-label="Sean McP" class="logo-link" href="/"></a>
+        <div style="align-items:center;display:flex;">
+            
+            
+            
+            <nav aria-label="primary" id="desktop-nav"><a  href="/articles/">Articles</a><a  href="/about/">About</a></nav>
+            <label class="theme-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle theme</span>
+                <input class="--visually-hidden" type="checkbox" id="dark-mode"/>
+                <span></span>
+            </label>
+            <label class="stars-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle stars</span>
+                <input class="--visually-hidden" type="checkbox" id="stars-checkbox" checked/>
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 1.34175L14.6395 7.91471L14.7565 8.20601L15.0697 8.22724L22.1366 8.70642L16.701 13.2479L16.4601 13.4492L16.5367
+                            13.7536L18.2648 20.6227L12.2659 16.8565L12 16.6896L11.7341 16.8565L5.73524 20.6227L7.46331 13.7536L7.5399 13.4492L7.29901
+                            13.2479L1.8634 8.70642L8.93032 8.22724L9.2435 8.20601L9.36048 7.91471L12 1.34175Z"
+                        stroke="currentColor"/>
+                </svg>
+            </label>
+        </div>
+    </div>
+</header>
+
+        <main id="main" role="main" class="main main--article">
+            
+
+<article class="article">
+    <div class="container --content">
+        
+            <time class="date" datetime="2020-07-22">Jul 22, 2020</time>
+        
+        <h1 style="margin-top:1rem;">The Economics of Software Development, Part II</h1>
+        
+            
+            <ul class="--horizontal-list">
+    
+            <li>
+                <a href="/tags/software-engineering/" class="tag tag--software-engineering">Software Engineering</a>
+            </li>
+            <li>
+                <a href="/tags/economics/" class="tag tag--economics">Economics</a>
+            </li>
+</ul>
+        
+        <hr class="small"/>
+        
+        <p><em>This is the second post in a series on how economics helps explain the decisions we make when developing software. It is a response to “Summer School”, a series from <a href="https://www.npr.org/sections/money/">NPR’s Planet Money</a>.</em></p>
+<hr>
+<p>This week’s <a href="https://www.npr.org/2020/07/15/891488686/summer-school-2-markets-pickles">episode from Planet Money’s “Summer School”</a> was about <strong>markets</strong>:  where supply and demand come together. It’s where those decisions that Economists love so much get made.</p>
+<p>Sometimes a marketplace is like a bazaar (which I tend to picture), but other times it looks more like <a href="https://www.npmjs.com/search?q=capitalize">the results page when searching for an NPM package</a>. With that in mind, it’s easy to see markets everywhere.</p>
+<p>Markets can be freeing, if you’re the one making the decisions. But if you aren’t in the driver’s chair, you might not even know they exist.</p>
+<p>In general, we want as many decisions as possible to be made by the people who will be most affected by the decision. I’ll add the caveat: “provided they affected have the information necessary to make that decision.”</p>
+<p>This is the ideal, but it isn’t the only option.</p>
+<h2 id="suffering-in-a-%E2%80%9Ccentral-market%E2%80%9D" tabindex="-1">Suffering in a “central market”</h2>
+<p>An alternative to individuals deciding is central planning. This is when a higher authority makes the decisions that affect everyone else.</p>
+<p>At tech companies, you can see this in service contracts. In some organizations, the decision of what SaaS to use comes from the top, and the repercussions trickle their way down.</p>
+<p>I worked at a large company that had a contract with Microsoft for all of their office software services. As a result, everyone at the company had to use Skype and an ancient program called Lync for all of our messaging needs<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>. Both had significant shortcomings, and neither served the needs of the tech team well.</p>
+<p>Instead of letting the market decide which messaging app to use, we were forced to struggle with the inefficiencies of central planning.</p>
+<p>Rather than mandating a solution from the top, organizations should work hard to give teams and individuals the freedom to gather information and agency to make those decisions for themselves.</p>
+<h2 id="encouraging-markets" tabindex="-1">Encouraging markets</h2>
+<p>As developers, we want to structure as much of our infrastructure and processes to encourage a marketplace of ideas.</p>
+<p>If you have a micro-service architecture, teams are free to choose whatever language and framework will work best for them. By using CSS for your design system, each project can pick the JS framework fits their needs.</p>
+<p>Once you have an open marketplace, it’s now on the individuals to make rational decisions. Now if only we would actually do that<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>!</p>
+<hr class="small"/>
+    <section class="footnotes --clear-child-margins">
+        <h2 class="--visually-hidden">Footnotes</h2>
+        <ol>
+    <li id="fn1" class="footnote-item"><p>The company was rolling out Microsoft Teams when I left, which was much better. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>Ariely, Dan. (2009). <em>The End of Rational Economics</em>. Harvard Business Review. <a href="https://hbr.org/2009/07/the-end-of-rational-economics">https://hbr.org/2009/07/the-end-of-rational-economics</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+        <hr class="small" />
+        <section class="article__footer --clear-child-margins">
+            <p>
+                <a id="comment-link" href="mailto:sean@seanmcp.com?subject=Re: The%20Economics%20of%20Software%20Development,%20Part%20II">Send a comment</a>
+            </p>
+            
+                <p>
+                    <a href="https://esv.org/Mark%206:56" rel="noopener noreferrer" target="_blank">Mark 6:56</a>
+                </p>
+            
+        </section>
+    </div>
+</article>
+<section class="bio">
+    <div class="container --content --clear-child-margins">
+        <hr class="small"/>
+        <h2>About<span class="--visually-hidden">&nbsp;the author</span>
+        </h2>
+        <div class="bio__content">
+            <img alt="" loading="lazy" src="/img/seanmcp_thumbnail.png"/>
+            <p>
+                
+                    Sean McPherson is a software engineer for Khan Academy who specializes in web and mobile app development. He lives with
+                    his wife, sons, and dog in Pittsburgh, PA.
+                
+                (SDG)</p>
+        </div>
+    </div>
+</section>
+        </main>
+
+        <footer class="site-footer">
+    <div class="container --content --clear-child-margins">
+        <div>
+            <b>SeanMcP.com</b><br>
+            <small>Copyright © 2018-2022 Sean McPherson (SDG)</small>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;">
+            <div>
+                <h2>Navigation</h2>
+                
+                
+                <nav aria-label="secondary" ><a  href="/about/">About</a><a  href="/articles/">Articles</a><a  href="/tags/">Tags</a><a  href="/talks/">Talks</a><a  href="/notes/">Notes</a><a  href="/bookshelf/">Bookshelf</a><a  href="/soccer/">Soccer</a><a  href="/feed/feed.xml">Feed</a></nav>
+            </div>
+            <div>
+                <h2>Social</h2>
+                
+                
+                <nav aria-label="social" ><a  href="https://github.com/seanmcp">GitHub</a><a  href="https://twitter.com/snmcp">Twitter</a><a  href="https://smcp.dev/yt">YouTube</a><a  href="https://linkedin.com/in/seanmcp">LinkedIn</a></nav>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- Current page: /articles/the-economics-of-software-development-part-ii/ -->
+    </body>
+    <script src="/js/scroll-progress.js"></script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/stars.js"></script>
+    
+</html>

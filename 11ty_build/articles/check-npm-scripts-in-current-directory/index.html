@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+
+
+
+
+<title>How to check npm scripts in current directory - SeanMcP.com</title>
+<meta property="og:site_name" content="SeanMcP.com" />
+<meta property="og:title" content="How to check npm scripts in current directory" />
+<meta name="twitter:title" content="How to check npm scripts in current directory">
+
+<meta name="description" content="Writing a script to read the package.json for you">
+<meta property="og:description" content="Writing a script to read the package.json for you" />
+<meta name="twitter:description" content="Writing a script to read the package.json for you">
+
+<meta property="og:image" content="https://seanmcp.com/img/screenplay.min.jpg" />
+<meta name="twitter:image" content="https://seanmcp.com/img/screenplay.min.jpg">
+
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://seanmcp.com/articles/check-npm-scripts-in-current-directory/" />
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@snmcp">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Sean McPherson">
+        <link rel="alternate" href="feed/notes.xml" type="application/atom+xml" title="Notes on Sean McPherson">
+        
+            <link rel="shortcut icon" href="/img/seanmcp.favicon.png" type="image/png">
+        
+        
+        <style>:root{--dark:hsl(216, 5%, 10%);--light:hsl(216, 5%, 97%);--accent:hsl(188, 100%, 42%);--primary:hsl(216, 85%, 34%);--background:var(--light);--off-background:hsla(0, 0%, 10%, 20%);--text-color:var(--dark);--anchor-color:var(--primary);--note-anchor-color:var(--accent);--block-code-background:hsla(0, 0%, 0%, 90%);--inline-code-background:hsla(0, 0%, 0%, 7.5%);--inline-code-color:hsla(0, 0%, 0%, 75%);--body-font:-apple-system,BlinkMacSystemFont,Helvetica,Arial,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;--mono-font:Menlo,Monaco,Consolas,"Andale Mono WT","Andale Mono","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace}html[data-page-flavor=soccer]{--accent:hsl(100, 50%, 50%);--primary:hsl(120, 50%, 30%)}body{--scroll-progress-height:6px;background:var(--background);color:var(--text-color);font-family:var(--body-font);margin:0;padding:0;padding-top:var(--scroll-progress-height);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body[data-theme=dark]{--background:var(--dark);--off-background:hsla(216, 5%, 95%, 15%);--text-color:var(--light);--anchor-color:var(--accent);--inline-code-background:hsla(0, 0%, 0%, 50%);--inline-code-color:hsla(0, 0%, 100%, 85%);--note-anchor-color:var(--primary)}.container{padding:1rem;margin:0 auto}.site-header .container{align-items:center;display:flex;justify-content:space-between}.site-header nav{align-items:center;display:flex;flex-wrap:wrap}.site-header nav a:not(:last-of-type){margin-right:1rem}:is(.stars-toggle,.theme-toggle):hover{cursor:pointer;outline:0!important}:is(.theme-toggle,.stars-toggle):focus-within{outline:3px solid var(--anchor-color);outline-offset:3px}.theme-toggle:hover span::before{transform:translateX(-2px)}.theme-toggle:hover span::after{transform:translateX(2px)}.theme-toggle input+span{--size:1.25em;display:inline-block;position:relative;width:var(--size);height:var(--size)}.theme-toggle input+span::after,.theme-toggle input+span::before{border:1px solid var(--text-color);content:"";display:inline-block;height:calc(var(--size) * 2 / 3);position:relative;transition:transform .1s ease-in-out;width:calc(var(--size) * 2 / 3)}.theme-toggle input+span::before{background-color:var(--text-color)}.theme-toggle input+span::after{background:var(--background);position:absolute;bottom:0;right:0}.theme-toggle input:checked+span::before{background-color:var(--background)}.theme-toggle input:checked+span::after{background-color:var(--text-color);z-index:-1}.stars-toggle{align-items:center;display:flex;justify-content:center}.stars-toggle svg{display:inline-block}.stars-toggle path{transition:transform .2s ease-in-out;transform-origin:50% 50%}.stars-toggle:hover path{transform:rotate(72deg)}.stars-toggle input:checked+svg{fill:currentColor}[data-star]{cursor:pointer;font-size:1.5rem;position:absolute;transform:translate(-50%,-50%)}[data-star]:after{content:"⭐️";display:inline-block}@media screen and (min-width:500px){.container{padding:2rem}.container.--content{max-width:70ch}}.breadcrumbs ol{display:flex;list-style:none;margin:0;padding:0}.breadcrumbs li+li::before{color:var(--off-background);content:"/";display:inline-block;height:1rem;margin:0 .5rem}.skip-link{background-color:var(--primary);color:#fff!important;font-weight:700;position:fixed;padding:1rem;z-index:9999}.skip-link:not(:focus){right:200%}.skip-link:focus{left:0;outline:2px dotted white}#scroll-progress{--height:var(--scroll-progress-height);background:linear-gradient(to right,var(--accent),var(--primary));position:fixed;height:var(--height);left:0;right:0;top:0;z-index:1000}#scroll-progress span{--width:var(--height);border-right:var(--width) solid var(--background);bottom:0;left:calc(var(--width)/ -2);position:absolute;top:0;width:0%}</style>
+        
+        
+            <link rel="stylesheet" href="/css/prism.css">
+        
+            <link rel="stylesheet" href="/css/markdown-it.css">
+        
+        
+        
+    </head>
+    <body data-page-type="article" >
+        <div id="scroll-progress"><span></span></div>
+        <a class="skip-link" href="#main">Skip to main content</a>
+        <header class="site-header">
+    <div class="container --content">
+        <a aria-label="Sean McP" class="logo-link" href="/"></a>
+        <div style="align-items:center;display:flex;">
+            
+            
+            
+            <nav aria-label="primary" id="desktop-nav"><a  href="/articles/">Articles</a><a  href="/about/">About</a></nav>
+            <label class="theme-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle theme</span>
+                <input class="--visually-hidden" type="checkbox" id="dark-mode"/>
+                <span></span>
+            </label>
+            <label class="stars-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle stars</span>
+                <input class="--visually-hidden" type="checkbox" id="stars-checkbox" checked/>
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 1.34175L14.6395 7.91471L14.7565 8.20601L15.0697 8.22724L22.1366 8.70642L16.701 13.2479L16.4601 13.4492L16.5367
+                            13.7536L18.2648 20.6227L12.2659 16.8565L12 16.6896L11.7341 16.8565L5.73524 20.6227L7.46331 13.7536L7.5399 13.4492L7.29901
+                            13.2479L1.8634 8.70642L8.93032 8.22724L9.2435 8.20601L9.36048 7.91471L12 1.34175Z"
+                        stroke="currentColor"/>
+                </svg>
+            </label>
+        </div>
+    </div>
+</header>
+
+        <main id="main" role="main" class="main main--article">
+            
+
+<article class="article">
+    <div class="container --content">
+        
+            <time class="date" datetime="2020-02-06">Feb 6, 2020</time>
+        
+        <h1 style="margin-top:1rem;">How to check npm scripts in current directory</h1>
+        
+            
+            <ul class="--horizontal-list">
+    
+            <li>
+                <a href="/tags/scripting/" class="tag tag--scripting">Scripting</a>
+            </li>
+            <li>
+                <a href="/tags/javascript/" class="tag tag--javascript">JavaScript</a>
+            </li>
+</ul>
+        
+        <img class="article__image" src="/img/screenplay.min.jpg" alt="How to check npm scripts in current directory"/>
+        <hr class="small"/>
+        
+        <p>As a front-end engineer, I spend a lot of time jumping in-between JavaScript projects. Often times I want to run a command from those projects to start watchmode or spin up a service.</p>
+<p>The commands that I want to use are in the <code>package.json</code> under <code>&quot;scripts&quot;</code>. When I haven’t memorized the common commands, I need to either open the file in my editor or use a Unix utility like <code>cat</code>.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># In my editor</span><br>code package.json<br><br><span class="token comment"># In the terminal</span><br><span class="token function">cat</span> package.json</code></pre>
+<p>Both of these commands work, but they are slow. <code>package.json</code> files can be massive, including dozens of dependencies, dev depenendencies, and other fields. To find the scripts, I need to sort through the cruft to find the information that I want. This isn’t very efficient.</p>
+<p>Instead, I wrote a short bash scripts to quickly do the work for me. Here is the code in all of its glory:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span><br><br><span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> -f <span class="token string">"package.json"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span><br>    <span class="token function">node</span> -pe <span class="token string">"JSON.parse(require('fs').readFileSync('package.json').toString()).scripts"</span><br><span class="token keyword">else</span><br>    <span class="token builtin class-name">echo</span> <span class="token string">"There is no <span class="token variable"><span class="token variable">`</span>package.json<span class="token variable">`</span></span> in this directory"</span><br><span class="token keyword">fi</span></code></pre>
+<p>First, I let the computer know to run this file with bash. Then I set up an <code>if</code> block: if there is a <code>package.json</code> file in this directory, then run the following code; if not, then print a “can’t find it” message.</p>
+<p>The code to run, inspired by <a href="https://stackoverflow.com/questions/1955505/parsing-json-with-unix-tools#comment36088507_18469304">a StackOverflow comment</a>, is a node process with two flags:</p>
+<ul>
+<li><code>-e</code> tells node to evaluate the script that you pass</li>
+<li><code>-p</code> tells node to print the results to the console</li>
+</ul>
+<p>Within the script, I am using <code>JSON</code> to parse the results of a <code>fs.readFileSync()</code> of the <code>package.json</code>, then diving down to the <code>scripts</code> key.</p>
+<p>I set it up by running <code>chmod</code> with two flags on the file in a <code>scripts/</code> directory:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">chmod</span> u+x ~/scripts/npm-scripts</code></pre>
+<p>Then I could resource my terminal and run the command with <code>npm-scripts</code>. Bish bash bosh.</p>
+<p>Everything worked fine, but I wanted an easier way to share my script with others. The <code>chmod</code> command and flags are hard to remember, so it would be easier if the script could be compressed into a one-liner that could be aliased in their <code>~/.bash_profile</code>.</p>
+<p>To do that, I removed all the new lines and added semicolons to separate the statements. The alias needed to be wrapped in quotes, so I escaped all the double quotes within the script.</p>
+<p>Now I had a handy alias to share:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">alias</span> <span class="token assign-left variable">ns</span><span class="token operator">=</span><span class="token string">"if [[ -f <span class="token entity" title="\&quot;">\"</span>package.json<span class="token entity" title="\&quot;">\"</span> ]]; then node -pe <span class="token entity" title="\&quot;">\"</span>JSON.parse(require('fs').readFileSync('package.json').toString()).scripts<span class="token entity" title="\&quot;">\"</span>; else echo <span class="token entity" title="\&quot;">\"</span>There is no package.json in this directory<span class="token entity" title="\&quot;">\"</span>; fi"</span></code></pre>
+<p>Overall, I’m pretty happy with this utility. Going forward, I would like to extend it so that you can lookup and key on <code>package.json</code> by passing an argument.</p>
+<h2 id="update-%E2%80%93-apr-4%2C-2020" tabindex="-1">Update – Apr 4, 2020</h2>
+<p>I created a new script to which you could pass an argument to pick a key from the <code>package.json</code>. This script is in zsh, but I think it ports to bash:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># rpj - Read package.json</span><br><span class="token keyword">function</span> <span class="token function-name function">rpj</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> -f <span class="token string">"package.json"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span><br>      <span class="token function">node</span> -pe <span class="token string">"JSON.parse(require('fs').readFileSync('package.json').toString())['<span class="token variable">$1</span>' || 'scripts']"</span><br>  <span class="token keyword">else</span><br>      <span class="token builtin class-name">echo</span> <span class="token string">"There is no <span class="token variable"><span class="token variable">`</span>package.json<span class="token variable">`</span></span> in this directory"</span><br>  <span class="token keyword">fi</span><br><span class="token punctuation">}</span></code></pre>
+<p>Note how the shell arguments need to be wrapped in <code>''</code> in order to work. Otherwise JavaScript thinkgs that it is looking for a variable, which is undefined.</p>
+<p>If no argument is provided, then it falls back to printing the scripts which is probably the most common use case for me.</p>
+<p>I also named the new function <code>rpj</code> for “Read <code>package.json</code>” to avoid any <a href="https://en.wikipedia.org/wiki/Name_server">confusion with name servers</a>.</p>
+<p>For the next iteration, I would like to handle errors, but that is a project for another day.</p>
+
+        <hr class="small" />
+        <section class="article__footer --clear-child-margins">
+            <p>
+                <a id="comment-link" href="mailto:sean@seanmcp.com?subject=Re: How%20to%20check%20npm%20scripts%20in%20current%20directory">Send a comment</a>
+            </p>
+            
+                <p>
+                    <a href="https://esv.org/1%20Timothy%202:5" rel="noopener noreferrer" target="_blank">1 Timothy 2:5</a>
+                </p>
+            
+        </section>
+    </div>
+</article>
+<section class="bio">
+    <div class="container --content --clear-child-margins">
+        <hr class="small"/>
+        <h2>About<span class="--visually-hidden">&nbsp;the author</span>
+        </h2>
+        <div class="bio__content">
+            <img alt="" loading="lazy" src="/img/seanmcp_thumbnail.png"/>
+            <p>
+                
+                    Sean McPherson is a software engineer for Khan Academy who specializes in web and mobile app development. He lives with
+                    his wife, sons, and dog in Pittsburgh, PA.
+                
+                (SDG)</p>
+        </div>
+    </div>
+</section>
+        </main>
+
+        <footer class="site-footer">
+    <div class="container --content --clear-child-margins">
+        <div>
+            <b>SeanMcP.com</b><br>
+            <small>Copyright © 2018-2022 Sean McPherson (SDG)</small>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;">
+            <div>
+                <h2>Navigation</h2>
+                
+                
+                <nav aria-label="secondary" ><a  href="/about/">About</a><a  href="/articles/">Articles</a><a  href="/tags/">Tags</a><a  href="/talks/">Talks</a><a  href="/notes/">Notes</a><a  href="/bookshelf/">Bookshelf</a><a  href="/soccer/">Soccer</a><a  href="/feed/feed.xml">Feed</a></nav>
+            </div>
+            <div>
+                <h2>Social</h2>
+                
+                
+                <nav aria-label="social" ><a  href="https://github.com/seanmcp">GitHub</a><a  href="https://twitter.com/snmcp">Twitter</a><a  href="https://smcp.dev/yt">YouTube</a><a  href="https://linkedin.com/in/seanmcp">LinkedIn</a></nav>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- Current page: /articles/check-npm-scripts-in-current-directory/ -->
+    </body>
+    <script src="/js/scroll-progress.js"></script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/stars.js"></script>
+    
+</html>

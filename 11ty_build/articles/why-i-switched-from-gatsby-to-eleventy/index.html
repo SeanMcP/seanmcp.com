@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+
+
+
+
+<title>Why I switched from Gatsby to Eleventy - SeanMcP.com</title>
+<meta property="og:site_name" content="SeanMcP.com" />
+<meta property="og:title" content="Why I switched from Gatsby to Eleventy" />
+<meta name="twitter:title" content="Why I switched from Gatsby to Eleventy">
+
+<meta name="description" content="Sean McPherson is a software engineer and educator focused on front-end development.">
+<meta property="og:description" content="Sean McPherson is a software engineer and educator focused on front-end development." />
+<meta name="twitter:description" content="Sean McPherson is a software engineer and educator focused on front-end development.">
+
+<meta property="og:image" content="https://seanmcp.com/img/seanmcp.favicon.png" />
+<meta name="twitter:image" content="https://seanmcp.com/img/seanmcp.favicon.png">
+
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://seanmcp.com/articles/why-i-switched-from-gatsby-to-eleventy/" />
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@snmcp">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Sean McPherson">
+        <link rel="alternate" href="feed/notes.xml" type="application/atom+xml" title="Notes on Sean McPherson">
+        
+            <link rel="shortcut icon" href="/img/seanmcp.favicon.png" type="image/png">
+        
+        
+        <style>:root{--dark:hsl(216, 5%, 10%);--light:hsl(216, 5%, 97%);--accent:hsl(188, 100%, 42%);--primary:hsl(216, 85%, 34%);--background:var(--light);--off-background:hsla(0, 0%, 10%, 20%);--text-color:var(--dark);--anchor-color:var(--primary);--note-anchor-color:var(--accent);--block-code-background:hsla(0, 0%, 0%, 90%);--inline-code-background:hsla(0, 0%, 0%, 7.5%);--inline-code-color:hsla(0, 0%, 0%, 75%);--body-font:-apple-system,BlinkMacSystemFont,Helvetica,Arial,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;--mono-font:Menlo,Monaco,Consolas,"Andale Mono WT","Andale Mono","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace}html[data-page-flavor=soccer]{--accent:hsl(100, 50%, 50%);--primary:hsl(120, 50%, 30%)}body{--scroll-progress-height:6px;background:var(--background);color:var(--text-color);font-family:var(--body-font);margin:0;padding:0;padding-top:var(--scroll-progress-height);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body[data-theme=dark]{--background:var(--dark);--off-background:hsla(216, 5%, 95%, 15%);--text-color:var(--light);--anchor-color:var(--accent);--inline-code-background:hsla(0, 0%, 0%, 50%);--inline-code-color:hsla(0, 0%, 100%, 85%);--note-anchor-color:var(--primary)}.container{padding:1rem;margin:0 auto}.site-header .container{align-items:center;display:flex;justify-content:space-between}.site-header nav{align-items:center;display:flex;flex-wrap:wrap}.site-header nav a:not(:last-of-type){margin-right:1rem}:is(.stars-toggle,.theme-toggle):hover{cursor:pointer;outline:0!important}:is(.theme-toggle,.stars-toggle):focus-within{outline:3px solid var(--anchor-color);outline-offset:3px}.theme-toggle:hover span::before{transform:translateX(-2px)}.theme-toggle:hover span::after{transform:translateX(2px)}.theme-toggle input+span{--size:1.25em;display:inline-block;position:relative;width:var(--size);height:var(--size)}.theme-toggle input+span::after,.theme-toggle input+span::before{border:1px solid var(--text-color);content:"";display:inline-block;height:calc(var(--size) * 2 / 3);position:relative;transition:transform .1s ease-in-out;width:calc(var(--size) * 2 / 3)}.theme-toggle input+span::before{background-color:var(--text-color)}.theme-toggle input+span::after{background:var(--background);position:absolute;bottom:0;right:0}.theme-toggle input:checked+span::before{background-color:var(--background)}.theme-toggle input:checked+span::after{background-color:var(--text-color);z-index:-1}.stars-toggle{align-items:center;display:flex;justify-content:center}.stars-toggle svg{display:inline-block}.stars-toggle path{transition:transform .2s ease-in-out;transform-origin:50% 50%}.stars-toggle:hover path{transform:rotate(72deg)}.stars-toggle input:checked+svg{fill:currentColor}[data-star]{cursor:pointer;font-size:1.5rem;position:absolute;transform:translate(-50%,-50%)}[data-star]:after{content:"⭐️";display:inline-block}@media screen and (min-width:500px){.container{padding:2rem}.container.--content{max-width:70ch}}.breadcrumbs ol{display:flex;list-style:none;margin:0;padding:0}.breadcrumbs li+li::before{color:var(--off-background);content:"/";display:inline-block;height:1rem;margin:0 .5rem}.skip-link{background-color:var(--primary);color:#fff!important;font-weight:700;position:fixed;padding:1rem;z-index:9999}.skip-link:not(:focus){right:200%}.skip-link:focus{left:0;outline:2px dotted white}#scroll-progress{--height:var(--scroll-progress-height);background:linear-gradient(to right,var(--accent),var(--primary));position:fixed;height:var(--height);left:0;right:0;top:0;z-index:1000}#scroll-progress span{--width:var(--height);border-right:var(--width) solid var(--background);bottom:0;left:calc(var(--width)/ -2);position:absolute;top:0;width:0%}</style>
+        
+        
+            <link rel="stylesheet" href="/css/prism.css">
+        
+            <link rel="stylesheet" href="/css/markdown-it.css">
+        
+        
+        
+    </head>
+    <body data-page-type="article" >
+        <div id="scroll-progress"><span></span></div>
+        <a class="skip-link" href="#main">Skip to main content</a>
+        <header class="site-header">
+    <div class="container --content">
+        <a aria-label="Sean McP" class="logo-link" href="/"></a>
+        <div style="align-items:center;display:flex;">
+            
+            
+            
+            <nav aria-label="primary" id="desktop-nav"><a  href="/articles/">Articles</a><a  href="/about/">About</a></nav>
+            <label class="theme-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle theme</span>
+                <input class="--visually-hidden" type="checkbox" id="dark-mode"/>
+                <span></span>
+            </label>
+            <label class="stars-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle stars</span>
+                <input class="--visually-hidden" type="checkbox" id="stars-checkbox" checked/>
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 1.34175L14.6395 7.91471L14.7565 8.20601L15.0697 8.22724L22.1366 8.70642L16.701 13.2479L16.4601 13.4492L16.5367
+                            13.7536L18.2648 20.6227L12.2659 16.8565L12 16.6896L11.7341 16.8565L5.73524 20.6227L7.46331 13.7536L7.5399 13.4492L7.29901
+                            13.2479L1.8634 8.70642L8.93032 8.22724L9.2435 8.20601L9.36048 7.91471L12 1.34175Z"
+                        stroke="currentColor"/>
+                </svg>
+            </label>
+        </div>
+    </div>
+</header>
+
+        <main id="main" role="main" class="main main--article">
+            
+
+<article class="article">
+    <div class="container --content">
+        
+            <time class="date" datetime="2019-04-12">Apr 12, 2019</time>
+        
+        <h1 style="margin-top:1rem;">Why I switched from Gatsby to Eleventy</h1>
+        
+            
+            <ul class="--horizontal-list">
+    
+            <li>
+                <a href="/tags/eleventy/" class="tag tag--eleventy">Eleventy</a>
+            </li>
+            <li>
+                <a href="/tags/meta/" class="tag tag--meta">Meta</a>
+            </li>
+            <li>
+                <a href="/tags/wip/" class="tag tag--wip">WIP</a>
+            </li>
+</ul>
+        
+        <hr class="small"/>
+        
+            <section class="wip-block --clear-child-margins">
+                <p><span aria-hidden="true" class="eleventy-emoji" role="img">👋</span>&nbsp; Hey there! This article is being published a "work in progress," which means that it is not
+                    done. So please excuse the rough edges!</p>
+                <p>I may or may not come back and finish this article. Regardless, I hope that it's helpful in its current state.</p>
+            </section>
+        
+        <p>I spent the last few weeks exploring Eleventy, a simpler static-site generator. After tinkering for a few days, I decided to transition this website from Gatsby to Eleventy.</p>
+<p>I’m going to take the opportunity explain my decision for the benefit of myself and others who are looking for a static-site generator.</p>
+<h2 id="disclaimer" tabindex="-1">Disclaimer</h2>
+<p>Before I dive into my reasons for switching from Gatsby to Eleventy, I would like to state: <strong>I like Gatsby</strong>. I have no major criticisms of the project and would turn to it first if I were making a rich static site for a small business or enterprise. All of the following are not reasons why Gatsby is bad but rather why I preferred Eleventy for this blog.</p>
+<!-- 
+### Gatsby
+
+In case you haven't heard of it, Gatsby is one of the fastest-growing static site generators. The project was started by [Kyle Mathews](https://github.com/kyleamathews) way back in 2015 and has grown into a "free and open source framework based on React that helps developers build blazing fast websites and apps".
+
+For this reason (and others), Gatsby has become the first choice for React developers looking to create a static site with a growing ecosystem of powerful plugins.
+
+### Eleventy
+
+While some folks may have heard of Gatsby before, fewer will be familiar Eleventy. Created by [Zach Leatherman](https://github.com/zachleat) in November 2017, Eleventy bills itself as "a simpler static site generator." In a directory with only a single markdown file, Eleventy can generate a static site with one command:
+
+```bash
+eleventy
+```
+
+Folks at CERN, Google, Netlify, CSS-Tricks, and [loads of others](https://www.11ty.io/docs/sites/) are using Eleventy to generate static sites. -->
+<h2 id="the-initial-decision" tabindex="-1">The initial decision</h2>
+<p>After kicking around the idea of moving off Medium to a personal blog, I decided to take the plunge in the Fall of 2018. After a quick survey of the options, I settled on Gatsby for the following reasons:</p>
+<ul>
+<li><strong>React based</strong>: I am a React developer and loved the idea of using a familiar library for creating the components of my personal website.</li>
+<li><strong>GraphQL powered</strong>: I didn’t know much about GraphQL at the time, but everything I heard was positive.</li>
+<li><strong>Growing popularity</strong>: It seemed that everyone in the React community was launching a new Gatsby site. All aboard the hype train!</li>
+</ul>
+<p>I tinkered around with the setup for a few weeks, then launched the site late in 2018.</p>
+<h2 id="honeymoon" tabindex="-1">Honeymoon</h2>
+<p>Gatsby has a bit of a learning curve, but after the first few weeks I felt comfortable working in their environment. Whenever I wanted to tweak the layout, design, and/or functionality of the site, I felt comfortable diving into the JavaScript to make the change.</p>
+<p>Gatsby’s integration with Netlify was seamless as well<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>, which made pushing changes to production as easy as pushing code.</p>
+<p>With my Gatsby personal site and blog, I was riding high with the cool kids.</p>
+<h2 id="cracks-start-to-form" tabindex="-1">Cracks start to form</h2>
+<p>As the months rolled by, however, I started to struggle with my Gatsby-powered site. There were a few specific ways where those manifested themselves.</p>
+<h3 id="tinker-temptation" tabindex="-1">Tinker temptation</h3>
+<p>I found myself spending significantly more time making minor tweaks to the site than I did writing. This is partly a personal problem; I have a fixed mindset about writing that can throw significant blocks. I’m working on valuing production over perfection in that error.</p>
+<p>And the fact that my site was written in React provided me ample temptation to postpone writing in favor of tinkering. Whenever I found it difficult to write, I would create, then refactor, then recreate, then refactor components <em>ad nauseam</em>.</p>
+<p>It was not uncommon for me to have over a dozen commits on my blog a week, but no article to show for it. Gatsby’s strength of using React ended up a weakness for me as a writer.</p>
+<h3 id="modern-complication" tabindex="-1">Modern complication</h3>
+<p>Gatsby’s surge in popularity at the end of 2018 drew criticism from certain sections of the web. The criticism usually centered around Gatsby’s modern tooling, which is more advanced than some of its competitors.</p>
+<p>Mark Dalgleish, one of my funniest follows on Twitter, shared that sentiment with this gem of a meme:</p>
+<!-- EMBED THE MEME, DOG -->
+<p>I think this criticism is a little misguided, but there is a truth to the implied question: “Why do you need to use all these fancy tools for a simple blog?”</p>
+<p>As I struggled with the aforementioned temptation to tinker instead of write, that question was left ringing in my ears. Maybe there was a simpler system for my site?</p>
+<h3 id="the-final-straw" tabindex="-1">The final straw</h3>
+<p>I have a 2010 MacBook Pro on which I occasionally do some work. Despite it’s age, the computer still does a great job keeping up with the modern development environment. Up until recently, I used that laptop exclusively for personal projects, and it never had a problem (besides speed).</p>
+<p>That is, until it met Gatsby.</p>
+<p>Try as I might, I could not get my Gatsby site to run on that computer. I changed Node versions, updated <code>gatsby-cli</code>, and cloned and re-cloned the repository, but to no avail.</p>
+<p>I just resigned myself to not using that computer (it <em>is</em> almost ten years old). But then, a two months ago out of the blue, I had the same problem with my work computer (2015 MacBook Pro). Try as I might, I couldn’t get Gatsby running.</p>
+<p>Now there is almost certainly a solution to the problem on both of my computers. But I searched for a while, tried a few workarounds, and couldn’t find it. At some point, you need to ask: is it worth it?</p>
+<p>I decided that, instead of sinking more time tracking down this problem, I would instead investigate different generator solutions.</p>
+<h2 id="investigating-alternatives" tabindex="-1">Investigating alternatives</h2>
+<h2 id="making-the-switch" tabindex="-1">Making the switch</h2>
+<ul>
+<li>Simplicity
+<ul>
+<li>Meme</li>
+<li>Diagnosing Gatsby problems</li>
+<li>Gatsby problems on older systems</li>
+</ul>
+</li>
+<li>Not React
+<ul>
+<li>React === reusability</li>
+<li>Felt wrong creating 90+% single-use components</li>
+</ul>
+</li>
+</ul>
+<hr class="small"/>
+    <section class="footnotes --clear-child-margins">
+        <h2 class="--visually-hidden">Footnotes</h2>
+        <ol>
+    <li id="fn1" class="footnote-item"><p>In retrospect, I think this has more to do with Netlify’s amazing service than Gatsby. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+        <hr class="small" />
+        <section class="article__footer --clear-child-margins">
+            <p>
+                <a id="comment-link" href="mailto:sean@seanmcp.com?subject=Re: Why%20I%20switched%20from%20Gatsby%20to%20Eleventy">Send a comment</a>
+            </p>
+            
+        </section>
+    </div>
+</article>
+<section class="bio">
+    <div class="container --content --clear-child-margins">
+        <hr class="small"/>
+        <h2>About<span class="--visually-hidden">&nbsp;the author</span>
+        </h2>
+        <div class="bio__content">
+            <img alt="" loading="lazy" src="/img/seanmcp_thumbnail.png"/>
+            <p>
+                
+                    Sean McPherson is a software engineer for Khan Academy who specializes in web and mobile app development. He lives with
+                    his wife, sons, and dog in Pittsburgh, PA.
+                
+                (SDG)</p>
+        </div>
+    </div>
+</section>
+        </main>
+
+        <footer class="site-footer">
+    <div class="container --content --clear-child-margins">
+        <div>
+            <b>SeanMcP.com</b><br>
+            <small>Copyright © 2018-2022 Sean McPherson (SDG)</small>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;">
+            <div>
+                <h2>Navigation</h2>
+                
+                
+                <nav aria-label="secondary" ><a  href="/about/">About</a><a  href="/articles/">Articles</a><a  href="/tags/">Tags</a><a  href="/talks/">Talks</a><a  href="/notes/">Notes</a><a  href="/bookshelf/">Bookshelf</a><a  href="/soccer/">Soccer</a><a  href="/feed/feed.xml">Feed</a></nav>
+            </div>
+            <div>
+                <h2>Social</h2>
+                
+                
+                <nav aria-label="social" ><a  href="https://github.com/seanmcp">GitHub</a><a  href="https://twitter.com/snmcp">Twitter</a><a  href="https://smcp.dev/yt">YouTube</a><a  href="https://linkedin.com/in/seanmcp">LinkedIn</a></nav>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- Current page: /articles/why-i-switched-from-gatsby-to-eleventy/ -->
+    </body>
+    <script src="/js/scroll-progress.js"></script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/stars.js"></script>
+    
+</html>

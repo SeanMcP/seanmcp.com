@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+
+
+
+
+<title>Lessons Learned at Abstractions 2019 - SeanMcP.com</title>
+<meta property="og:site_name" content="SeanMcP.com" />
+<meta property="og:title" content="Lessons Learned at Abstractions 2019" />
+<meta name="twitter:title" content="Lessons Learned at Abstractions 2019">
+
+<meta name="description" content="Some notes and thoughts from Pittsburgh&#39;s cross-discipline software conference">
+<meta property="og:description" content="Some notes and thoughts from Pittsburgh&#39;s cross-discipline software conference" />
+<meta name="twitter:description" content="Some notes and thoughts from Pittsburgh&#39;s cross-discipline software conference">
+
+<meta property="og:image" content="https://seanmcp.com/img/seanmcp.favicon.png" />
+<meta name="twitter:image" content="https://seanmcp.com/img/seanmcp.favicon.png">
+
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://seanmcp.com/articles/lessons-learned-at-abstractions-con-2019/" />
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@snmcp">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Sean McPherson">
+        <link rel="alternate" href="feed/notes.xml" type="application/atom+xml" title="Notes on Sean McPherson">
+        
+            <link rel="shortcut icon" href="/img/seanmcp.favicon.png" type="image/png">
+        
+        
+        <style>:root{--dark:hsl(216, 5%, 10%);--light:hsl(216, 5%, 97%);--accent:hsl(188, 100%, 42%);--primary:hsl(216, 85%, 34%);--background:var(--light);--off-background:hsla(0, 0%, 10%, 20%);--text-color:var(--dark);--anchor-color:var(--primary);--note-anchor-color:var(--accent);--block-code-background:hsla(0, 0%, 0%, 90%);--inline-code-background:hsla(0, 0%, 0%, 7.5%);--inline-code-color:hsla(0, 0%, 0%, 75%);--body-font:-apple-system,BlinkMacSystemFont,Helvetica,Arial,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;--mono-font:Menlo,Monaco,Consolas,"Andale Mono WT","Andale Mono","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace}html[data-page-flavor=soccer]{--accent:hsl(100, 50%, 50%);--primary:hsl(120, 50%, 30%)}body{--scroll-progress-height:6px;background:var(--background);color:var(--text-color);font-family:var(--body-font);margin:0;padding:0;padding-top:var(--scroll-progress-height);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body[data-theme=dark]{--background:var(--dark);--off-background:hsla(216, 5%, 95%, 15%);--text-color:var(--light);--anchor-color:var(--accent);--inline-code-background:hsla(0, 0%, 0%, 50%);--inline-code-color:hsla(0, 0%, 100%, 85%);--note-anchor-color:var(--primary)}.container{padding:1rem;margin:0 auto}.site-header .container{align-items:center;display:flex;justify-content:space-between}.site-header nav{align-items:center;display:flex;flex-wrap:wrap}.site-header nav a:not(:last-of-type){margin-right:1rem}:is(.stars-toggle,.theme-toggle):hover{cursor:pointer;outline:0!important}:is(.theme-toggle,.stars-toggle):focus-within{outline:3px solid var(--anchor-color);outline-offset:3px}.theme-toggle:hover span::before{transform:translateX(-2px)}.theme-toggle:hover span::after{transform:translateX(2px)}.theme-toggle input+span{--size:1.25em;display:inline-block;position:relative;width:var(--size);height:var(--size)}.theme-toggle input+span::after,.theme-toggle input+span::before{border:1px solid var(--text-color);content:"";display:inline-block;height:calc(var(--size) * 2 / 3);position:relative;transition:transform .1s ease-in-out;width:calc(var(--size) * 2 / 3)}.theme-toggle input+span::before{background-color:var(--text-color)}.theme-toggle input+span::after{background:var(--background);position:absolute;bottom:0;right:0}.theme-toggle input:checked+span::before{background-color:var(--background)}.theme-toggle input:checked+span::after{background-color:var(--text-color);z-index:-1}.stars-toggle{align-items:center;display:flex;justify-content:center}.stars-toggle svg{display:inline-block}.stars-toggle path{transition:transform .2s ease-in-out;transform-origin:50% 50%}.stars-toggle:hover path{transform:rotate(72deg)}.stars-toggle input:checked+svg{fill:currentColor}[data-star]{cursor:pointer;font-size:1.5rem;position:absolute;transform:translate(-50%,-50%)}[data-star]:after{content:"⭐️";display:inline-block}@media screen and (min-width:500px){.container{padding:2rem}.container.--content{max-width:70ch}}.breadcrumbs ol{display:flex;list-style:none;margin:0;padding:0}.breadcrumbs li+li::before{color:var(--off-background);content:"/";display:inline-block;height:1rem;margin:0 .5rem}.skip-link{background-color:var(--primary);color:#fff!important;font-weight:700;position:fixed;padding:1rem;z-index:9999}.skip-link:not(:focus){right:200%}.skip-link:focus{left:0;outline:2px dotted white}#scroll-progress{--height:var(--scroll-progress-height);background:linear-gradient(to right,var(--accent),var(--primary));position:fixed;height:var(--height);left:0;right:0;top:0;z-index:1000}#scroll-progress span{--width:var(--height);border-right:var(--width) solid var(--background);bottom:0;left:calc(var(--width)/ -2);position:absolute;top:0;width:0%}</style>
+        
+        
+            <link rel="stylesheet" href="/css/prism.css">
+        
+            <link rel="stylesheet" href="/css/markdown-it.css">
+        
+        
+        
+    </head>
+    <body data-page-type="article" >
+        <div id="scroll-progress"><span></span></div>
+        <a class="skip-link" href="#main">Skip to main content</a>
+        <header class="site-header">
+    <div class="container --content">
+        <a aria-label="Sean McP" class="logo-link" href="/"></a>
+        <div style="align-items:center;display:flex;">
+            
+            
+            
+            <nav aria-label="primary" id="desktop-nav"><a  href="/articles/">Articles</a><a  href="/about/">About</a></nav>
+            <label class="theme-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle theme</span>
+                <input class="--visually-hidden" type="checkbox" id="dark-mode"/>
+                <span></span>
+            </label>
+            <label class="stars-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle stars</span>
+                <input class="--visually-hidden" type="checkbox" id="stars-checkbox" checked/>
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 1.34175L14.6395 7.91471L14.7565 8.20601L15.0697 8.22724L22.1366 8.70642L16.701 13.2479L16.4601 13.4492L16.5367
+                            13.7536L18.2648 20.6227L12.2659 16.8565L12 16.6896L11.7341 16.8565L5.73524 20.6227L7.46331 13.7536L7.5399 13.4492L7.29901
+                            13.2479L1.8634 8.70642L8.93032 8.22724L9.2435 8.20601L9.36048 7.91471L12 1.34175Z"
+                        stroke="currentColor"/>
+                </svg>
+            </label>
+        </div>
+    </div>
+</header>
+
+        <main id="main" role="main" class="main main--article">
+            
+
+<article class="article">
+    <div class="container --content">
+        
+            <time class="date" datetime="2019-08-27">Aug 27, 2019</time>
+        
+        <h1 style="margin-top:1rem;">Lessons Learned at Abstractions 2019</h1>
+        
+            
+            <ul class="--horizontal-list">
+    
+            <li>
+                <a href="/tags/conferences/" class="tag tag--conferences">Conferences</a>
+            </li>
+</ul>
+        
+        <hr class="small"/>
+        
+        <p>Two weeks into the job, my new employer sent me and a dozen other engineers, qa’s, and designers to <a href="https://abstractions.io/">Abstractions 2019</a>, a cross-discipline software conference in Pittsburgh, PA. Headlining the group of speakers was the YouTuber and creater Simone Gertz, Chris Coyier of CodePen and CSS-Tricks, and Guillermo Rauch of Zeit.</p>
+<p>I took down some notes for my team and me to reference after the event. If I have time, I’ll add more details including speakers, videos, and links. Until then, enjoy this for what it is!</p>
+<h2 id="wednesday" tabindex="-1">Wednesday</h2>
+<h3 id="your-work-has-moral-implications" tabindex="-1">Your Work Has Moral Implications</h3>
+<p>Tech has great power and great responsibility. Ensure that your team has a policy in place and make plans to protect yourself from moral crises.</p>
+<h3 id="how-to-build-a-community-from-scratch" tabindex="-1">How to Build a Community from Scratch</h3>
+<p>Find a consistent schedule to hold interesting meetings in an intimate environment.</p>
+<h3 id="deep-learning-for-developers" tabindex="-1">Deep Learning for Developers</h3>
+<p>The barrier to entry for machine learning is lower than ever. Check it out!</p>
+<p>Resources</p>
+<ul>
+<li>TensorFlow</li>
+<li>PyTorch</li>
+<li>IBM Max</li>
+</ul>
+<h3 id="building-accessibility-together" tabindex="-1">Building Accessibility Together</h3>
+<p>Every team should plan and work with accessibility in mind. Stick to best practices in design, markup, and scripting to help insure that products work well for everyone.</p>
+<h3 id="software-for-people-who-don%E2%80%99t-want-it" tabindex="-1">Software for people who don’t want it</h3>
+<p>Consider the end user when making all software decisions. Strive for an application that is as accessible and usable as possible.</p>
+<h3 id="programming-productivity" tabindex="-1">Programming Productivity</h3>
+<p>Take the time to create tooling to standardize best practices. Use the JavaScript AST to write custom lint tools or CodeMods that will work across the codebase.</p>
+<h2 id="thursday" tabindex="-1">Thursday</h2>
+<h3 id="practical-open-source-security" tabindex="-1">Practical Open Source Security</h3>
+<p>Use available tools like npm audit to scan your dependencies regularly. Make it part of the regular code reviews and automate the process as much as possible.</p>
+<p>Resources:</p>
+<ul>
+<li>mitre</li>
+<li>Snyk</li>
+<li>webhint</li>
+<li>Lighthouse</li>
+<li>Dependabot</li>
+</ul>
+<h3 id="those-who-can-do-should-also-teach" tabindex="-1">Those Who Can Do Should Also Teach</h3>
+<p>Teaching is a great way to reinforce your knowledge, and help people. Prepare your students for the challenges of learning something new and how to work through them. Teach targetted interactive lessons in 10-15 minute bursts.</p>
+<h3 id="mentoring-the-way-to-a-more-inclusive-workplace" tabindex="-1">Mentoring the Way to a More Inclusive Workplace</h3>
+<p>The tenants of good mentorship align with those of an inclusive workplace. List realistic criteria on job postings and provide specific constructive feedback throughout the hiring process. Have clear and structured onboarding, learning groups, and formalized mentorship/sponsorship. Don’t forget: mentorship is a learned skill that must be honed.</p>
+<h3 id="readability-%26-web" tabindex="-1">Readability &amp; Web</h3>
+<p>Reading is a complex cognitive task. Around 10% of the global population has some degree of dyslexia. Improving readability for users with dyslexia helps everyone. Readability is about anything communicating meaningful information, including icons.</p>
+<p>Fours C’s of readability</p>
+<ul>
+<li>Continuity: reputation of the information until the endpoint</li>
+<li>Conspicuity: beating easily seen or noticeable</li>
+<li>Consistency: keeping the same wording along the way</li>
+<li>Clarity: the message need to be clearly understandable</li>
+</ul>
+<h3 id="building-afghanistan-2.0-with-%23afghangirlscode" tabindex="-1">Building Afghanistan 2.0 with #AfghanGirlsCode</h3>
+<h3 id="an-unforgettable-developer-experience" tabindex="-1">An Unforgettable Developer Experience</h3>
+<p>Everything we do is for the human being on the other side. There is a lot of value from making things more accessible. Make the process work for both novices and experts.</p>
+<h2 id="friday" tabindex="-1">Friday</h2>
+<h3 id="humane-design-patterns" tabindex="-1">Humane Design Patterns</h3>
+<p>Considering the well-being of the user in your designs. Habit-forming products and sticky experiences might be bad for the people using them. Instead, align human goals and tech goals.</p>
+<p>Resources</p>
+<ul>
+<li>Abstract on Netflix</li>
+<li>Humane by Design</li>
+</ul>
+<h3 id="pedagogy-in-pairing" tabindex="-1">Pedagogy in Pairing</h3>
+<p>Scope the activity so that it lends itself to joint productive activity. Remove all distractions during the session (e.g. phones). Point to the source of information; don’t spoon feed. Ground your activity in areas that your partner already understands.</p>
+<h3 id="accessibility-as-a-bridge-between-designers-and-engineers" tabindex="-1">Accessibility as a Bridge Between Designers and Engineers</h3>
+<p>We can communicate effectively only by speaking the same language: developers must understand design, and <em>vice versa</em>. Collaboration is key to an accessible product.</p>
+<p>Resources</p>
+<ul>
+<li>Accessibility Insights for Web</li>
+<li>Vox Accessibility Guidelines</li>
+</ul>
+<h3 id="teaching-high-school-computer-science" tabindex="-1">Teaching High School Computer Science</h3>
+<p>There are differences between teaching high schoolers and junior developers, but there are also a lot of similarities. Try to direct the student towards self discovery. Help work them through failures with learning in mind. GitHub pages provided a great experience with quick feedback.</p>
+<p>Resources</p>
+<ul>
+<li>TEALS</li>
+<li>Pitt TLI Summer Program</li>
+</ul>
+<h3 id="oops-i-guess-we%E2%80%99re-full-stack-developers-now" tabindex="-1">Oops I Guess We’re Full-stack Developers Now</h3>
+<p>Certain tasks have shifted from the backend of the application to the front. There is a divide between frontend developers who focus on the front of the frontend and those who focus on the back.</p>
+<h3 id="building-ux-teams" tabindex="-1">Building UX Teams</h3>
+<p>Managers empower the team to realize its full potential. People have different skills, can work together, can learn, and can teach.</p>
+
+        <hr class="small" />
+        <section class="article__footer --clear-child-margins">
+            <p>
+                <a id="comment-link" href="mailto:sean@seanmcp.com?subject=Re: Lessons%20Learned%20at%20Abstractions%202019">Send a comment</a>
+            </p>
+            
+                <p>
+                    <a href="https://esv.org/Proverbs%201:5" rel="noopener noreferrer" target="_blank">Proverbs 1:5</a>
+                </p>
+            
+        </section>
+    </div>
+</article>
+<section class="bio">
+    <div class="container --content --clear-child-margins">
+        <hr class="small"/>
+        <h2>About<span class="--visually-hidden">&nbsp;the author</span>
+        </h2>
+        <div class="bio__content">
+            <img alt="" loading="lazy" src="/img/seanmcp_thumbnail.png"/>
+            <p>
+                
+                    Sean McPherson is a software engineer for Khan Academy who specializes in web and mobile app development. He lives with
+                    his wife, sons, and dog in Pittsburgh, PA.
+                
+                (SDG)</p>
+        </div>
+    </div>
+</section>
+        </main>
+
+        <footer class="site-footer">
+    <div class="container --content --clear-child-margins">
+        <div>
+            <b>SeanMcP.com</b><br>
+            <small>Copyright © 2018-2022 Sean McPherson (SDG)</small>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;">
+            <div>
+                <h2>Navigation</h2>
+                
+                
+                <nav aria-label="secondary" ><a  href="/about/">About</a><a  href="/articles/">Articles</a><a  href="/tags/">Tags</a><a  href="/talks/">Talks</a><a  href="/notes/">Notes</a><a  href="/bookshelf/">Bookshelf</a><a  href="/soccer/">Soccer</a><a  href="/feed/feed.xml">Feed</a></nav>
+            </div>
+            <div>
+                <h2>Social</h2>
+                
+                
+                <nav aria-label="social" ><a  href="https://github.com/seanmcp">GitHub</a><a  href="https://twitter.com/snmcp">Twitter</a><a  href="https://smcp.dev/yt">YouTube</a><a  href="https://linkedin.com/in/seanmcp">LinkedIn</a></nav>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- Current page: /articles/lessons-learned-at-abstractions-con-2019/ -->
+    </body>
+    <script src="/js/scroll-progress.js"></script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/stars.js"></script>
+    
+</html>

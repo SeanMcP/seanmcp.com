@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+
+
+
+
+<title>Read a json file in Node.js - SeanMcP.com</title>
+<meta property="og:site_name" content="SeanMcP.com" />
+<meta property="og:title" content="Read a json file in Node.js" />
+<meta name="twitter:title" content="Read a json file in Node.js">
+
+<meta name="description" content="How to use Node.js&#39;s file system to read and parse data from a json file.">
+<meta property="og:description" content="How to use Node.js&#39;s file system to read and parse data from a json file." />
+<meta name="twitter:description" content="How to use Node.js&#39;s file system to read and parse data from a json file.">
+
+<meta property="og:image" content="https://seanmcp.com/img/seanmcp.favicon.png" />
+<meta name="twitter:image" content="https://seanmcp.com/img/seanmcp.favicon.png">
+
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://seanmcp.com/articles/read-a-json-file-in-node-js/" />
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@snmcp">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Sean McPherson">
+        <link rel="alternate" href="feed/notes.xml" type="application/atom+xml" title="Notes on Sean McPherson">
+        
+            <link rel="shortcut icon" href="/img/seanmcp.favicon.png" type="image/png">
+        
+        
+        <style>:root{--dark:hsl(216, 5%, 10%);--light:hsl(216, 5%, 97%);--accent:hsl(188, 100%, 42%);--primary:hsl(216, 85%, 34%);--background:var(--light);--off-background:hsla(0, 0%, 10%, 20%);--text-color:var(--dark);--anchor-color:var(--primary);--note-anchor-color:var(--accent);--block-code-background:hsla(0, 0%, 0%, 90%);--inline-code-background:hsla(0, 0%, 0%, 7.5%);--inline-code-color:hsla(0, 0%, 0%, 75%);--body-font:-apple-system,BlinkMacSystemFont,Helvetica,Arial,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;--mono-font:Menlo,Monaco,Consolas,"Andale Mono WT","Andale Mono","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace}html[data-page-flavor=soccer]{--accent:hsl(100, 50%, 50%);--primary:hsl(120, 50%, 30%)}body{--scroll-progress-height:6px;background:var(--background);color:var(--text-color);font-family:var(--body-font);margin:0;padding:0;padding-top:var(--scroll-progress-height);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body[data-theme=dark]{--background:var(--dark);--off-background:hsla(216, 5%, 95%, 15%);--text-color:var(--light);--anchor-color:var(--accent);--inline-code-background:hsla(0, 0%, 0%, 50%);--inline-code-color:hsla(0, 0%, 100%, 85%);--note-anchor-color:var(--primary)}.container{padding:1rem;margin:0 auto}.site-header .container{align-items:center;display:flex;justify-content:space-between}.site-header nav{align-items:center;display:flex;flex-wrap:wrap}.site-header nav a:not(:last-of-type){margin-right:1rem}:is(.stars-toggle,.theme-toggle):hover{cursor:pointer;outline:0!important}:is(.theme-toggle,.stars-toggle):focus-within{outline:3px solid var(--anchor-color);outline-offset:3px}.theme-toggle:hover span::before{transform:translateX(-2px)}.theme-toggle:hover span::after{transform:translateX(2px)}.theme-toggle input+span{--size:1.25em;display:inline-block;position:relative;width:var(--size);height:var(--size)}.theme-toggle input+span::after,.theme-toggle input+span::before{border:1px solid var(--text-color);content:"";display:inline-block;height:calc(var(--size) * 2 / 3);position:relative;transition:transform .1s ease-in-out;width:calc(var(--size) * 2 / 3)}.theme-toggle input+span::before{background-color:var(--text-color)}.theme-toggle input+span::after{background:var(--background);position:absolute;bottom:0;right:0}.theme-toggle input:checked+span::before{background-color:var(--background)}.theme-toggle input:checked+span::after{background-color:var(--text-color);z-index:-1}.stars-toggle{align-items:center;display:flex;justify-content:center}.stars-toggle svg{display:inline-block}.stars-toggle path{transition:transform .2s ease-in-out;transform-origin:50% 50%}.stars-toggle:hover path{transform:rotate(72deg)}.stars-toggle input:checked+svg{fill:currentColor}[data-star]{cursor:pointer;font-size:1.5rem;position:absolute;transform:translate(-50%,-50%)}[data-star]:after{content:"⭐️";display:inline-block}@media screen and (min-width:500px){.container{padding:2rem}.container.--content{max-width:70ch}}.breadcrumbs ol{display:flex;list-style:none;margin:0;padding:0}.breadcrumbs li+li::before{color:var(--off-background);content:"/";display:inline-block;height:1rem;margin:0 .5rem}.skip-link{background-color:var(--primary);color:#fff!important;font-weight:700;position:fixed;padding:1rem;z-index:9999}.skip-link:not(:focus){right:200%}.skip-link:focus{left:0;outline:2px dotted white}#scroll-progress{--height:var(--scroll-progress-height);background:linear-gradient(to right,var(--accent),var(--primary));position:fixed;height:var(--height);left:0;right:0;top:0;z-index:1000}#scroll-progress span{--width:var(--height);border-right:var(--width) solid var(--background);bottom:0;left:calc(var(--width)/ -2);position:absolute;top:0;width:0%}</style>
+        
+        
+            <link rel="stylesheet" href="/css/prism.css">
+        
+            <link rel="stylesheet" href="/css/markdown-it.css">
+        
+        
+        
+    </head>
+    <body data-page-type="article" >
+        <div id="scroll-progress"><span></span></div>
+        <a class="skip-link" href="#main">Skip to main content</a>
+        <header class="site-header">
+    <div class="container --content">
+        <a aria-label="Sean McP" class="logo-link" href="/"></a>
+        <div style="align-items:center;display:flex;">
+            
+            
+            
+            <nav aria-label="primary" id="desktop-nav"><a  href="/articles/">Articles</a><a  href="/about/">About</a></nav>
+            <label class="theme-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle theme</span>
+                <input class="--visually-hidden" type="checkbox" id="dark-mode"/>
+                <span></span>
+            </label>
+            <label class="stars-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle stars</span>
+                <input class="--visually-hidden" type="checkbox" id="stars-checkbox" checked/>
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 1.34175L14.6395 7.91471L14.7565 8.20601L15.0697 8.22724L22.1366 8.70642L16.701 13.2479L16.4601 13.4492L16.5367
+                            13.7536L18.2648 20.6227L12.2659 16.8565L12 16.6896L11.7341 16.8565L5.73524 20.6227L7.46331 13.7536L7.5399 13.4492L7.29901
+                            13.2479L1.8634 8.70642L8.93032 8.22724L9.2435 8.20601L9.36048 7.91471L12 1.34175Z"
+                        stroke="currentColor"/>
+                </svg>
+            </label>
+        </div>
+    </div>
+</header>
+
+        <main id="main" role="main" class="main main--article">
+            
+
+<article class="article">
+    <div class="container --content">
+        
+            <time class="date" datetime="2020-05-27">May 27, 2020</time>
+        
+        <h1 style="margin-top:1rem;">Read a json file in Node.js</h1>
+        
+            
+            <ul class="--horizontal-list">
+    
+            <li>
+                <a href="/tags/node-js/" class="tag tag--node-js">Node.js</a>
+            </li>
+            <li>
+                <a href="/tags/javascript/" class="tag tag--javascript">JavaScript</a>
+            </li>
+</ul>
+        
+        <hr class="small"/>
+        
+        <p>To read any file in Node.js, you need to import the <code>fs</code> or file system module. From there, you have two methods from which to choose: <code>readFile</code>, and <code>readFileSync</code>.</p>
+<p>Both are similar in that they return <a href="https://nodejs.org/dist/latest-v14.x/docs/api/buffer.html#buffer_buffer">a Buffer of binary data</a> from a file. <code>readFile</code> accepts a callback that will receive the Buffer, while <code>readFileSync</code> returns it synchronously.</p>
+<p>In action, they look like:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><br><br>fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'./data.json'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">error<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><br>    error <span class="token operator">?</span> console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">:</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><br><span class="token punctuation">)</span><span class="token punctuation">)</span><br><br><span class="token keyword">try</span> <span class="token punctuation">{</span><br>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">'./data.json'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><br><span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><br><span class="token punctuation">}</span></code></pre>
+<p>If you run this code in a directory with a <code>data.json</code> file, boths methods will log something like:</p>
+<pre><code>&lt;Buffer 7b 0a 20 20 22 64 61 74 61 22 3a 20 74 72 75 65 0a 7d&gt;
+</code></pre>
+<p>Both are returning the same data, but it isn’t consumable. In most instances, you will need to do one more operation in order to use the data that you have read from a file.</p>
+<p>Since we are working with a json file, we can use the global <code>JSON</code> object to read the data. The <code>parse</code> method will convert this Buffer into a usuable JSON object:</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span></span><br><span class="highlight-line"></span><br><span class="highlight-line">fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'./data.json'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">error<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span></span><br><mark class="highlight-line highlight-line-active">    error <span class="token operator">?</span> console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">:</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span></mark><br><span class="highlight-line"><span class="token punctuation">)</span><span class="token punctuation">)</span></span><br><span class="highlight-line"></span><br><span class="highlight-line"><span class="token keyword">try</span> <span class="token punctuation">{</span></span><br><mark class="highlight-line highlight-line-active">    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">'./data.json'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></mark><br><span class="highlight-line"><span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span></code></pre>
+<p>Run it again, and you will see whatever data you had stored in your json file logged to the console. You have successfully read a json file in Node.js!</p>
+<p>You can see the code in action here:</p>
+<iframe height="500px" width="100%" src="https://repl.it/@SeanMcP/Read-json-file-in-Nodejs?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p>Happy coding!</p>
+
+        <hr class="small" />
+        <section class="article__footer --clear-child-margins">
+            <p>
+                <a id="comment-link" href="mailto:sean@seanmcp.com?subject=Re: Read%20a%20json%20file%20in%20Node.js">Send a comment</a>
+            </p>
+            
+                <p>
+                    <a href="https://esv.org/Nehemiah%208:3" rel="noopener noreferrer" target="_blank">Nehemiah 8:3</a>
+                </p>
+            
+        </section>
+    </div>
+</article>
+<section class="bio">
+    <div class="container --content --clear-child-margins">
+        <hr class="small"/>
+        <h2>About<span class="--visually-hidden">&nbsp;the author</span>
+        </h2>
+        <div class="bio__content">
+            <img alt="" loading="lazy" src="/img/seanmcp_thumbnail.png"/>
+            <p>
+                
+                    Sean McPherson is a software engineer for Khan Academy who specializes in web and mobile app development. He lives with
+                    his wife, sons, and dog in Pittsburgh, PA.
+                
+                (SDG)</p>
+        </div>
+    </div>
+</section>
+        </main>
+
+        <footer class="site-footer">
+    <div class="container --content --clear-child-margins">
+        <div>
+            <b>SeanMcP.com</b><br>
+            <small>Copyright © 2018-2022 Sean McPherson (SDG)</small>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;">
+            <div>
+                <h2>Navigation</h2>
+                
+                
+                <nav aria-label="secondary" ><a  href="/about/">About</a><a  href="/articles/">Articles</a><a  href="/tags/">Tags</a><a  href="/talks/">Talks</a><a  href="/notes/">Notes</a><a  href="/bookshelf/">Bookshelf</a><a  href="/soccer/">Soccer</a><a  href="/feed/feed.xml">Feed</a></nav>
+            </div>
+            <div>
+                <h2>Social</h2>
+                
+                
+                <nav aria-label="social" ><a  href="https://github.com/seanmcp">GitHub</a><a  href="https://twitter.com/snmcp">Twitter</a><a  href="https://smcp.dev/yt">YouTube</a><a  href="https://linkedin.com/in/seanmcp">LinkedIn</a></nav>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- Current page: /articles/read-a-json-file-in-node-js/ -->
+    </body>
+    <script src="/js/scroll-progress.js"></script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/stars.js"></script>
+    
+</html>

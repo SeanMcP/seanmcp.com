@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+
+
+
+
+<title>Should I snapshot my UI components? - SeanMcP.com</title>
+<meta property="og:site_name" content="SeanMcP.com" />
+<meta property="og:title" content="Should I snapshot my UI components?" />
+<meta name="twitter:title" content="Should I snapshot my UI components?">
+
+<meta name="description" content="The temptation is strong, but consider some of the tradeoffs.">
+<meta property="og:description" content="The temptation is strong, but consider some of the tradeoffs." />
+<meta name="twitter:description" content="The temptation is strong, but consider some of the tradeoffs.">
+
+<meta property="og:image" content="https://seanmcp.com/img/seanmcp.favicon.png" />
+<meta name="twitter:image" content="https://seanmcp.com/img/seanmcp.favicon.png">
+
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://seanmcp.com/articles/snapshot_test_ui_components/" />
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@snmcp">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Sean McPherson">
+        <link rel="alternate" href="feed/notes.xml" type="application/atom+xml" title="Notes on Sean McPherson">
+        
+            <link rel="shortcut icon" href="/img/seanmcp.favicon.png" type="image/png">
+        
+        
+        <style>:root{--dark:hsl(216, 5%, 10%);--light:hsl(216, 5%, 97%);--accent:hsl(188, 100%, 42%);--primary:hsl(216, 85%, 34%);--background:var(--light);--off-background:hsla(0, 0%, 10%, 20%);--text-color:var(--dark);--anchor-color:var(--primary);--note-anchor-color:var(--accent);--block-code-background:hsla(0, 0%, 0%, 90%);--inline-code-background:hsla(0, 0%, 0%, 7.5%);--inline-code-color:hsla(0, 0%, 0%, 75%);--body-font:-apple-system,BlinkMacSystemFont,Helvetica,Arial,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;--mono-font:Menlo,Monaco,Consolas,"Andale Mono WT","Andale Mono","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace}html[data-page-flavor=soccer]{--accent:hsl(100, 50%, 50%);--primary:hsl(120, 50%, 30%)}body{--scroll-progress-height:6px;background:var(--background);color:var(--text-color);font-family:var(--body-font);margin:0;padding:0;padding-top:var(--scroll-progress-height);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body[data-theme=dark]{--background:var(--dark);--off-background:hsla(216, 5%, 95%, 15%);--text-color:var(--light);--anchor-color:var(--accent);--inline-code-background:hsla(0, 0%, 0%, 50%);--inline-code-color:hsla(0, 0%, 100%, 85%);--note-anchor-color:var(--primary)}.container{padding:1rem;margin:0 auto}.site-header .container{align-items:center;display:flex;justify-content:space-between}.site-header nav{align-items:center;display:flex;flex-wrap:wrap}.site-header nav a:not(:last-of-type){margin-right:1rem}:is(.stars-toggle,.theme-toggle):hover{cursor:pointer;outline:0!important}:is(.theme-toggle,.stars-toggle):focus-within{outline:3px solid var(--anchor-color);outline-offset:3px}.theme-toggle:hover span::before{transform:translateX(-2px)}.theme-toggle:hover span::after{transform:translateX(2px)}.theme-toggle input+span{--size:1.25em;display:inline-block;position:relative;width:var(--size);height:var(--size)}.theme-toggle input+span::after,.theme-toggle input+span::before{border:1px solid var(--text-color);content:"";display:inline-block;height:calc(var(--size) * 2 / 3);position:relative;transition:transform .1s ease-in-out;width:calc(var(--size) * 2 / 3)}.theme-toggle input+span::before{background-color:var(--text-color)}.theme-toggle input+span::after{background:var(--background);position:absolute;bottom:0;right:0}.theme-toggle input:checked+span::before{background-color:var(--background)}.theme-toggle input:checked+span::after{background-color:var(--text-color);z-index:-1}.stars-toggle{align-items:center;display:flex;justify-content:center}.stars-toggle svg{display:inline-block}.stars-toggle path{transition:transform .2s ease-in-out;transform-origin:50% 50%}.stars-toggle:hover path{transform:rotate(72deg)}.stars-toggle input:checked+svg{fill:currentColor}[data-star]{cursor:pointer;font-size:1.5rem;position:absolute;transform:translate(-50%,-50%)}[data-star]:after{content:"⭐️";display:inline-block}@media screen and (min-width:500px){.container{padding:2rem}.container.--content{max-width:70ch}}.breadcrumbs ol{display:flex;list-style:none;margin:0;padding:0}.breadcrumbs li+li::before{color:var(--off-background);content:"/";display:inline-block;height:1rem;margin:0 .5rem}.skip-link{background-color:var(--primary);color:#fff!important;font-weight:700;position:fixed;padding:1rem;z-index:9999}.skip-link:not(:focus){right:200%}.skip-link:focus{left:0;outline:2px dotted white}#scroll-progress{--height:var(--scroll-progress-height);background:linear-gradient(to right,var(--accent),var(--primary));position:fixed;height:var(--height);left:0;right:0;top:0;z-index:1000}#scroll-progress span{--width:var(--height);border-right:var(--width) solid var(--background);bottom:0;left:calc(var(--width)/ -2);position:absolute;top:0;width:0%}</style>
+        
+        
+            <link rel="stylesheet" href="/css/prism.css">
+        
+            <link rel="stylesheet" href="/css/markdown-it.css">
+        
+        
+        
+    </head>
+    <body data-page-type="article" >
+        <div id="scroll-progress"><span></span></div>
+        <a class="skip-link" href="#main">Skip to main content</a>
+        <header class="site-header">
+    <div class="container --content">
+        <a aria-label="Sean McP" class="logo-link" href="/"></a>
+        <div style="align-items:center;display:flex;">
+            
+            
+            
+            <nav aria-label="primary" id="desktop-nav"><a  href="/articles/">Articles</a><a  href="/about/">About</a></nav>
+            <label class="theme-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle theme</span>
+                <input class="--visually-hidden" type="checkbox" id="dark-mode"/>
+                <span></span>
+            </label>
+            <label class="stars-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle stars</span>
+                <input class="--visually-hidden" type="checkbox" id="stars-checkbox" checked/>
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 1.34175L14.6395 7.91471L14.7565 8.20601L15.0697 8.22724L22.1366 8.70642L16.701 13.2479L16.4601 13.4492L16.5367
+                            13.7536L18.2648 20.6227L12.2659 16.8565L12 16.6896L11.7341 16.8565L5.73524 20.6227L7.46331 13.7536L7.5399 13.4492L7.29901
+                            13.2479L1.8634 8.70642L8.93032 8.22724L9.2435 8.20601L9.36048 7.91471L12 1.34175Z"
+                        stroke="currentColor"/>
+                </svg>
+            </label>
+        </div>
+    </div>
+</header>
+
+        <main id="main" role="main" class="main main--article">
+            
+
+<article class="article">
+    <div class="container --content">
+        
+            <time class="date" datetime="2019-09-11">Sep 11, 2019</time>
+        
+        <h1 style="margin-top:1rem;">Should I snapshot my UI components?</h1>
+        
+            
+            <ul class="--horizontal-list">
+    
+            <li>
+                <a href="/tags/react/" class="tag tag--react">React</a>
+            </li>
+            <li>
+                <a href="/tags/testing/" class="tag tag--testing">Testing</a>
+            </li>
+</ul>
+        
+        <hr class="small"/>
+        
+        <p>If you are writing tests for React components in 2019, you will probably find your way to Airbnb’s Enzyme testing utilities. The recent industry standard, Enzyme provides you some useful tools for rendering your components.</p>
+<p>Often times, folks will turn to snapshot testing with Enzyme because it a) is easy, b) provides significant test coverage, and c) seems like a good idea. I worked for a company where the default test suite for any component was a snapshot, then any additional tests were added to bump coverage to an acceptible level.</p>
+<p>However, the ease of use is often a double-edged sword. Here I wanted to outline some common issues that arise from using snapshot tests for your UI components.</p>
+<h2 id="issue-%231%3A-false-positives" tabindex="-1">Issue #1: False positives</h2>
+<p>If you’ve every worked in a codebase that snapshots UI components, you’ll know: snapshot tests fail all the time. This is because snapshots collect a JSON-ified version of the shallow render from Enzyme. Whenever anything changes to the structure of the render, the output is different and therefore the snapshot fails.</p>
+<p>Whenever you need to refactor a component, you can be assured that the test will fail because the new snapshot doesn’t match the one on record.</p>
+<p>Because snapshot tests fail all the time, they become <strong>false positives</strong>: results which incorrectly indicate that a problem is present. You snapshot can fail, even though everything about the component will still function as expected.</p>
+<p>If your test can fail when the function still works, <strong>what value is the snapshot test adding</strong>?</p>
+<p>I have seen deployments fail because the snapshot encountered an unexpected <code>div</code> tag. The “solution” was simple enough: update the snapshot and then deploy again. But that has its own problems.</p>
+<h2 id="issue-%232%3A-combating-false-positives" tabindex="-1">Issue #2: Combating false positives</h2>
+<p>Since failing snapshot tests are so common, it is common to run you rest suite with the <code>-u, --update-snapshot</code> flag:</p>
+<pre><code>npm run test -u
+</code></pre>
+<p>This rewrites the snapshot to match the current value instead of comparing it to the previous one. Since the updated snapshot will always match the new value, the test passes. Running the update snapshot flag is kind of like doing this:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> snapshot<br><br><span class="token comment">// npm test -u</span><br><span class="token keyword">let</span> value <span class="token operator">=</span> <span class="token number">5</span><br>snapshot <span class="token operator">=</span> value<br><br><span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">===</span> snapshot<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Passed!'</span><span class="token punctuation">)</span><br><span class="token punctuation">}</span></code></pre>
+<p>This is a little silly, but I think it illustrates the point. On its own, updating a snapshot will automatically pass a test without providing you any valuable information.</p>
+<p>Since failing tests are so common, you will be tempted to add the updated snapshot flag to every test run. I know that I got a little too quick the the <code>-u</code> flag.</p>
+<p>But as illustrated above, running updated snapshot tests provides no valuable information. So if you need to update the snapshot test every time, <strong>what value is the snapshot test adding</strong>?</p>
+<p>If you find yourself backed into this corner, take heart in knowing that it’s not your fault. Snapshot testing forces us to focus on structure.</p>
+<h2 id="issue-%233%3A-structure-over-function" tabindex="-1">Issue #3: Structure over function</h2>
+<p>Snapshot tests value the structure of a component over its functionality. They don’t tell you how the component will work in your application; it only tells you how the JSX will look. So you need to ask yourself: Do I want my test suite to care about the structure of my components?</p>
+<p>Let’s imagine an <code>IconButton</code> component that looks something like this:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">IconButton</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children<span class="token punctuation">,</span> icon<span class="token punctuation">,</span> <span class="token operator">...</span>props <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">return</span> <span class="token punctuation">(</span><br>        <span class="token operator">&lt;</span>button <span class="token punctuation">{</span><span class="token operator">...</span>props<span class="token punctuation">}</span><span class="token operator">></span><br>            <span class="token operator">&lt;</span>Icon icon<span class="token operator">=</span><span class="token punctuation">{</span>icon<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><br>            <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><br>        <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span><br>    <span class="token punctuation">)</span><br><span class="token punctuation">}</span></code></pre>
+<p>After reviewing with the design team, you determing that it would be better for the button text to be inline with the <code>Icon</code>, so you swap the <code>div</code> for a <code>span</code>:</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token keyword">function</span> <span class="token function">IconButton</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children<span class="token punctuation">,</span> icon<span class="token punctuation">,</span> <span class="token operator">...</span>props <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">    <span class="token keyword">return</span> <span class="token punctuation">(</span></span><br><span class="highlight-line">        <span class="token operator">&lt;</span>button <span class="token punctuation">{</span><span class="token operator">...</span>props<span class="token punctuation">}</span><span class="token operator">></span></span><br><span class="highlight-line">            <span class="token operator">&lt;</span>Icon icon<span class="token operator">=</span><span class="token punctuation">{</span>icon<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span></span><br><mark class="highlight-line highlight-line-active">            <span class="token operator">&lt;</span>span<span class="token operator">></span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span></mark><br><span class="highlight-line">        <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></span><br><span class="highlight-line">    <span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span></code></pre>
+<p>After this change, should the test for <code>IconButton</code> fail? I’d argue: no.</p>
+<p>The functionality of the IconButton hasn’t changed; it still renders an <code>Icon</code> and passes the <code>onClick</code> handler to the <code>button</code> element. I and every developer after me should be free to refactor as much as I need so long as the component still functions in the same manner when we’re done.</p>
+<p>But a snapshot test disagrees and will fail because you changed that tag. You might anticipate the test failing and run it with the update snapshot flag, which has all the problems listed above. So again, <strong>what value is the snapshot test adding</strong>?</p>
+<h2 id="snapshots-are-a-bad-fit-for-ui-testing" tabindex="-1">Snapshots are a bad fit for UI testing</h2>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Shallow rendering + snapshot tests. <a href="https://t.co/3TIa4VIhsc">pic.twitter.com/3TIa4VIhsc</a></p>&mdash; Mark Dalgleish (@markdalgleish) <a href="https://twitter.com/markdalgleish/status/1161616241531863045?ref_src=twsrc%5Etfw">August 14, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<p>In most instances, snapshots provde no additional value for your UI tests. They are easy and feel good to write, but I think they add little confidence to your testing suite for any given component.</p>
+<p>You may stumble across scenarios with a highly specialized component, definite structure, and specific attributes that would benefit from a snapshot. But these are an exception to the rule. In general, <strong>avoid snapshot testing for UI components</strong>.</p>
+<h2 id="another-way" tabindex="-1">Another way</h2>
+<p>Instead of defaulting to snapshots, ask yourself: What does this component <strong>need</strong> to do? Then write a test that ensures the component can do just that.</p>
+<p>If you’re working with Enzyme, use <a href="https://airbnb.io/enzyme/docs/api/ReactWrapper/find.html"><code>find()</code></a> to insure that any necessary elements render with the appropriate attributes. Use <a href="https://airbnb.io/enzyme/docs/api/ReactWrapper/simulate.html"><code>simulate()</code></a> to interact with your components in a meaningful way, focusing on functionality.</p>
+<p><strong>Your tests should give me the confidence to refactor any component to your heart’s content</strong>. They should fail if you change functionality, not structure.</p>
+<h2 id="further-reading" tabindex="-1">Further reading</h2>
+<ul>
+<li><a href="https://kentcdodds.com/blog/testing-implementation-details">“Testing Implementation Details” by Kent C. Dodds</a></li>
+<li><a href="https://testing-library.com/docs/react-testing-library/intro">React Testing Library</a></li>
+</ul>
+
+        <hr class="small" />
+        <section class="article__footer --clear-child-margins">
+            <p>
+                <a id="comment-link" href="mailto:sean@seanmcp.com?subject=Re: Should%20I%20snapshot%20my%20UI%20components?">Send a comment</a>
+            </p>
+            
+                <p>
+                    <a href="https://esv.org/Hebrews%204:12" rel="noopener noreferrer" target="_blank">Hebrews 4:12</a>
+                </p>
+            
+        </section>
+    </div>
+</article>
+<section class="bio">
+    <div class="container --content --clear-child-margins">
+        <hr class="small"/>
+        <h2>About<span class="--visually-hidden">&nbsp;the author</span>
+        </h2>
+        <div class="bio__content">
+            <img alt="" loading="lazy" src="/img/seanmcp_thumbnail.png"/>
+            <p>
+                
+                    Sean McPherson is a software engineer for Khan Academy who specializes in web and mobile app development. He lives with
+                    his wife, sons, and dog in Pittsburgh, PA.
+                
+                (SDG)</p>
+        </div>
+    </div>
+</section>
+        </main>
+
+        <footer class="site-footer">
+    <div class="container --content --clear-child-margins">
+        <div>
+            <b>SeanMcP.com</b><br>
+            <small>Copyright © 2018-2022 Sean McPherson (SDG)</small>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;">
+            <div>
+                <h2>Navigation</h2>
+                
+                
+                <nav aria-label="secondary" ><a  href="/about/">About</a><a  href="/articles/">Articles</a><a  href="/tags/">Tags</a><a  href="/talks/">Talks</a><a  href="/notes/">Notes</a><a  href="/bookshelf/">Bookshelf</a><a  href="/soccer/">Soccer</a><a  href="/feed/feed.xml">Feed</a></nav>
+            </div>
+            <div>
+                <h2>Social</h2>
+                
+                
+                <nav aria-label="social" ><a  href="https://github.com/seanmcp">GitHub</a><a  href="https://twitter.com/snmcp">Twitter</a><a  href="https://smcp.dev/yt">YouTube</a><a  href="https://linkedin.com/in/seanmcp">LinkedIn</a></nav>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- Current page: /articles/snapshot_test_ui_components/ -->
+    </body>
+    <script src="/js/scroll-progress.js"></script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/stars.js"></script>
+    
+</html>

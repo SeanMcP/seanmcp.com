@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+
+
+
+
+<title>Learning from LEGO - SeanMcP.com</title>
+<meta property="og:site_name" content="SeanMcP.com" />
+<meta property="og:title" content="Learning from LEGO" />
+<meta name="twitter:title" content="Learning from LEGO">
+
+<meta name="description" content="LEGO is a go-to analogy for programming, but what else can we learn from these little-plastic bricks on building quality software?">
+<meta property="og:description" content="LEGO is a go-to analogy for programming, but what else can we learn from these little-plastic bricks on building quality software?" />
+<meta name="twitter:description" content="LEGO is a go-to analogy for programming, but what else can we learn from these little-plastic bricks on building quality software?">
+
+<meta property="og:image" content="https://seanmcp.com/img/seanmcp.favicon.png" />
+<meta name="twitter:image" content="https://seanmcp.com/img/seanmcp.favicon.png">
+
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://seanmcp.com/talks/learning-from-lego/" />
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@snmcp">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Sean McPherson">
+        <link rel="alternate" href="feed/notes.xml" type="application/atom+xml" title="Notes on Sean McPherson">
+        
+            <link rel="shortcut icon" href="/img/seanmcp.favicon.png" type="image/png">
+        
+        
+        <style>:root{--dark:hsl(216, 5%, 10%);--light:hsl(216, 5%, 97%);--accent:hsl(188, 100%, 42%);--primary:hsl(216, 85%, 34%);--background:var(--light);--off-background:hsla(0, 0%, 10%, 20%);--text-color:var(--dark);--anchor-color:var(--primary);--note-anchor-color:var(--accent);--block-code-background:hsla(0, 0%, 0%, 90%);--inline-code-background:hsla(0, 0%, 0%, 7.5%);--inline-code-color:hsla(0, 0%, 0%, 75%);--body-font:-apple-system,BlinkMacSystemFont,Helvetica,Arial,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;--mono-font:Menlo,Monaco,Consolas,"Andale Mono WT","Andale Mono","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace}html[data-page-flavor=soccer]{--accent:hsl(100, 50%, 50%);--primary:hsl(120, 50%, 30%)}body{--scroll-progress-height:6px;background:var(--background);color:var(--text-color);font-family:var(--body-font);margin:0;padding:0;padding-top:var(--scroll-progress-height);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body[data-theme=dark]{--background:var(--dark);--off-background:hsla(216, 5%, 95%, 15%);--text-color:var(--light);--anchor-color:var(--accent);--inline-code-background:hsla(0, 0%, 0%, 50%);--inline-code-color:hsla(0, 0%, 100%, 85%);--note-anchor-color:var(--primary)}.container{padding:1rem;margin:0 auto}.site-header .container{align-items:center;display:flex;justify-content:space-between}.site-header nav{align-items:center;display:flex;flex-wrap:wrap}.site-header nav a:not(:last-of-type){margin-right:1rem}:is(.stars-toggle,.theme-toggle):hover{cursor:pointer;outline:0!important}:is(.theme-toggle,.stars-toggle):focus-within{outline:3px solid var(--anchor-color);outline-offset:3px}.theme-toggle:hover span::before{transform:translateX(-2px)}.theme-toggle:hover span::after{transform:translateX(2px)}.theme-toggle input+span{--size:1.25em;display:inline-block;position:relative;width:var(--size);height:var(--size)}.theme-toggle input+span::after,.theme-toggle input+span::before{border:1px solid var(--text-color);content:"";display:inline-block;height:calc(var(--size) * 2 / 3);position:relative;transition:transform .1s ease-in-out;width:calc(var(--size) * 2 / 3)}.theme-toggle input+span::before{background-color:var(--text-color)}.theme-toggle input+span::after{background:var(--background);position:absolute;bottom:0;right:0}.theme-toggle input:checked+span::before{background-color:var(--background)}.theme-toggle input:checked+span::after{background-color:var(--text-color);z-index:-1}.stars-toggle{align-items:center;display:flex;justify-content:center}.stars-toggle svg{display:inline-block}.stars-toggle path{transition:transform .2s ease-in-out;transform-origin:50% 50%}.stars-toggle:hover path{transform:rotate(72deg)}.stars-toggle input:checked+svg{fill:currentColor}[data-star]{cursor:pointer;font-size:1.5rem;position:absolute;transform:translate(-50%,-50%)}[data-star]:after{content:"⭐️";display:inline-block}@media screen and (min-width:500px){.container{padding:2rem}.container.--content{max-width:70ch}}.breadcrumbs ol{display:flex;list-style:none;margin:0;padding:0}.breadcrumbs li+li::before{color:var(--off-background);content:"/";display:inline-block;height:1rem;margin:0 .5rem}.skip-link{background-color:var(--primary);color:#fff!important;font-weight:700;position:fixed;padding:1rem;z-index:9999}.skip-link:not(:focus){right:200%}.skip-link:focus{left:0;outline:2px dotted white}#scroll-progress{--height:var(--scroll-progress-height);background:linear-gradient(to right,var(--accent),var(--primary));position:fixed;height:var(--height);left:0;right:0;top:0;z-index:1000}#scroll-progress span{--width:var(--height);border-right:var(--width) solid var(--background);bottom:0;left:calc(var(--width)/ -2);position:absolute;top:0;width:0%}</style>
+        
+        
+    </head>
+    <body data-page-type="outline" >
+        <div id="scroll-progress"><span></span></div>
+        <a class="skip-link" href="#main">Skip to main content</a>
+        <header class="site-header">
+    <div class="container --content">
+        <a aria-label="Sean McP" class="logo-link" href="/"></a>
+        <div style="align-items:center;display:flex;">
+            
+            
+            
+            <nav aria-label="primary" id="desktop-nav"><a  href="/articles/">Articles</a><a  href="/about/">About</a></nav>
+            <label class="theme-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle theme</span>
+                <input class="--visually-hidden" type="checkbox" id="dark-mode"/>
+                <span></span>
+            </label>
+            <label class="stars-toggle" style="margin-left:1.25rem">
+                <span class="--visually-hidden">Toggle stars</span>
+                <input class="--visually-hidden" type="checkbox" id="stars-checkbox" checked/>
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 1.34175L14.6395 7.91471L14.7565 8.20601L15.0697 8.22724L22.1366 8.70642L16.701 13.2479L16.4601 13.4492L16.5367
+                            13.7536L18.2648 20.6227L12.2659 16.8565L12 16.6896L11.7341 16.8565L5.73524 20.6227L7.46331 13.7536L7.5399 13.4492L7.29901
+                            13.2479L1.8634 8.70642L8.93032 8.22724L9.2435 8.20601L9.36048 7.91471L12 1.34175Z"
+                        stroke="currentColor"/>
+                </svg>
+            </label>
+        </div>
+    </div>
+</header>
+
+        <main id="main" role="main" class="main main--outline">
+            <header class="page-header">
+        <div class="container --content --clear-child-margins">
+    <nav aria-label="breadcrumb" class="breadcrumbs">
+      <ol>
+        <li><a href="/talks">Talks</a></li>
+        <li><a aria-current="page" href="/talks/learning-from-lego/">Learning from LEGO</a></li>
+      </ol>
+    </nav><h1>Learning from LEGO</h1>
+        </div>
+    </header><div class="page">
+    <div class="container --content --clear-child-margins">
+        
+
+<h2 id="overview">Overview <a class="direct-link" href="#overview">#</a></h2>
+<p>LEGO is a go-to analogy for programming, but what else can we learn from these little-plastic bricks on building quality software?</p>
+
+
+<h2 id="outline" tabindex="-1">Outline</h2>
+<ul>
+<li>Introduction
+<ul>
+<li>Founded by Ole Kirk Christiansen in 1932 Denmark</li>
+<li>Originally produced wooden toys</li>
+<li>Developed first plastic bricks in the 1950s</li>
+<li>Now one of the largest toy companies in the world
+<ul>
+<li>LEGO sets (licensing)</li>
+<li>LEGO stores</li>
+<li>LEGO amusement parks</li>
+<li>LEGO media (<em>e.g.</em> <em>The LEGO Movie</em>, <em>LEGO Star Wars</em> video games)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Principles
+<ul>
+<li>Systematic
+<ul>
+<li>LEGO
+<ul>
+<li>Every brick is designed to work within the LEGO System via a unifying “API”</li>
+<li>Input always equals output</li>
+<li>Serves as a design constraint that simplifies iteration, expansion</li>
+</ul>
+</li>
+<li>Programming
+<ul>
+<li>A uniform communication method from which we build our systems</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Composability
+<ul>
+<li>LEGO
+<ul>
+<li>Bricks can be combined into an infinite number of builds</li>
+<li>Each piece is designed to be used in conjunction with other unknown pieces</li>
+</ul>
+</li>
+<li>Programming
+<ul>
+<li>Our functions need to be designed to work alongside and with unknown functions</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Techniques
+<ul>
+<li>LEGO
+<ul>
+<li>Multiple building techniques to accomplish specific design challenges</li>
+<li>Each technique excels in a particular area, but may be ineffective in others</li>
+</ul>
+</li>
+<li>Programming
+<ul>
+<li>Learn and utilize different programming techniques and paradigms</li>
+<li>Carefully choose the best technique for a given situation</li>
+<li>Resist the temptation to choose the inefficient familiar or clever option</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Testing
+<ul>
+<li>LEGO
+<ul>
+<li>Rigorous quality control to ensure that all bricks are high quality</li>
+<li>Continual testing of connection strength when building</li>
+</ul>
+</li>
+<li>Programming
+<ul>
+<li>Have systems in place at every level to verify the quality of production code</li>
+<li>Regularly stress test to ensure a high-quality product for users</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Refactoring
+<ul>
+<li>LEGO
+<ul>
+<li>Countless solutions for solving the same problem</li>
+<li>System encourages working through alternatives to find the best solution</li>
+<li>They even provide a tool specifically for taking your builds apart!</li>
+</ul>
+</li>
+<li>Programming
+<ul>
+<li>Use rapid prototyping and compare POCs</li>
+<li>Build in sprint time to try multiple solutions for feature work</li>
+<li>Policy for addressing technical debt before it accrues too much interest</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+    </div>
+</div>
+        </main>
+
+        <footer class="site-footer">
+    <div class="container --content --clear-child-margins">
+        <div>
+            <b>SeanMcP.com</b><br>
+            <small>Copyright © 2018-2022 Sean McPherson (SDG)</small>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;">
+            <div>
+                <h2>Navigation</h2>
+                
+                
+                <nav aria-label="secondary" ><a  href="/about/">About</a><a  href="/articles/">Articles</a><a  href="/tags/">Tags</a><a  href="/talks/">Talks</a><a  href="/notes/">Notes</a><a  href="/bookshelf/">Bookshelf</a><a  href="/soccer/">Soccer</a><a  href="/feed/feed.xml">Feed</a></nav>
+            </div>
+            <div>
+                <h2>Social</h2>
+                
+                
+                <nav aria-label="social" ><a  href="https://github.com/seanmcp">GitHub</a><a  href="https://twitter.com/snmcp">Twitter</a><a  href="https://smcp.dev/yt">YouTube</a><a  href="https://linkedin.com/in/seanmcp">LinkedIn</a></nav>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- Current page: /talks/learning-from-lego/ -->
+    </body>
+    <script src="/js/scroll-progress.js"></script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/stars.js"></script>
+    
+</html>

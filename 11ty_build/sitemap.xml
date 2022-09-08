@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://seanmcp.com/articles/create-a-render-prop-component/</loc>
+    <lastmod>2018-10-09</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/why-a-blog/</loc>
+    <lastmod>2018-12-04</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/2018-into-2019/</loc>
+    <lastmod>2018-12-31</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/accessibility-wednesday/</loc>
+    <lastmod>2019-02-06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/convert-class-component-to-function-with-hooks/</loc>
+    <lastmod>2019-02-06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/js-ternary-operator/</loc>
+    <lastmod>2019-02-08</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/js-generate-random-number/</loc>
+    <lastmod>2019-02-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/three-reasons-to-learn-python/</loc>
+    <lastmod>2019-02-21</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/adding-accessibility-checks-to-react/</loc>
+    <lastmod>2019-03-04</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/filter-premium-medium-articles/</loc>
+    <lastmod>2019-04-08</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/storing-data-in-state-vs-class-variable/</loc>
+    <lastmod>2019-04-12</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/why-i-switched-from-gatsby-to-eleventy/</loc>
+    <lastmod>2019-04-12</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/event-listener-for-class-change/</loc>
+    <lastmod>2019-05-10</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/how-to-pronounce-my-name/</loc>
+    <lastmod>2019-06-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/reasons-to-use-prop-types/</loc>
+    <lastmod>2019-06-27</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/arguments-or-parameters/</loc>
+    <lastmod>2019-07-30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/edit-previous-commit-message/</loc>
+    <lastmod>2019-08-23</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/lessons-learned-at-abstractions-con-2019/</loc>
+    <lastmod>2019-08-27</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/snapshot_test_ui_components/</loc>
+    <lastmod>2019-09-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/5-lessons-from-10k-open-source-downloads/</loc>
+    <lastmod>2019-11-25</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/stop-teaching-code-resources/</loc>
+    <lastmod>2019-11-26</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/fastest-way-to-look-for-object-properties/</loc>
+    <lastmod>2019-12-31</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/2019-into-2020.md/</loc>
+    <lastmod>2020-01-08</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/reviewing-2019-goals/</loc>
+    <lastmod>2020-01-08</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/what-default-parameters-do-and-dont-do/</loc>
+    <lastmod>2020-01-13</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/a-new-twitter-handle/</loc>
+    <lastmod>2020-01-28</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/write-a-draft-script-for-your-ssg-blog/</loc>
+    <lastmod>2020-01-31</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/remove-duplicates-from-object-array/</loc>
+    <lastmod>2020-02-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/what-to-include-in-every-node-module/</loc>
+    <lastmod>2020-02-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/check-npm-scripts-in-current-directory/</loc>
+    <lastmod>2020-02-06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/free-to-grow-with-tests/</loc>
+    <lastmod>2020-02-17</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/great-programming-reads/</loc>
+    <lastmod>2020-03-20</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/laws-i-love/</loc>
+    <lastmod>2020-04-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/tools-for-custom-slack-emojis/</loc>
+    <lastmod>2020-04-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/how-to-open-dev-tools/</loc>
+    <lastmod>2020-04-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/magnoliajs-2020-conference-notes/</loc>
+    <lastmod>2020-04-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/over-my-head/</loc>
+    <lastmod>2020-04-24</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/store-readable-data/</loc>
+    <lastmod>2020-05-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/logging-with-eleventy-and-nunjucks/</loc>
+    <lastmod>2020-05-12</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/how-to-get-the-browser-version-in-javascript/</loc>
+    <lastmod>2020-05-19</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/publishing-my-first-youtube-video/</loc>
+    <lastmod>2020-05-20</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/read-a-json-file-in-node-js/</loc>
+    <lastmod>2020-05-27</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/read-a-json-file-in-deno/</loc>
+    <lastmod>2020-05-28</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/six-video-update/</loc>
+    <lastmod>2020-06-12</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/typescript-mega-course-on-egghead/</loc>
+    <lastmod>2020-06-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/await-multiple-promises-in-javascript/</loc>
+    <lastmod>2020-06-17</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/parse-argument-aliases-in-deno/</loc>
+    <lastmod>2020-06-26</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/adding-images-to-my-articles/</loc>
+    <lastmod>2020-06-30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/nodemon-for-deno/</loc>
+    <lastmod>2020-07-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/intro-to-economics-of-software-development/</loc>
+    <lastmod>2020-07-09</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/before-you-debug/</loc>
+    <lastmod>2020-07-10</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/manage-analysis-paralysis-while-programming/</loc>
+    <lastmod>2020-07-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/the-economics-of-software-development-part-i/</loc>
+    <lastmod>2020-07-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/access-the-home-directory-in-deno/</loc>
+    <lastmod>2020-07-17</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/the-economics-of-software-development-part-ii/</loc>
+    <lastmod>2020-07-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/updated-typescript-mega-course-on-egghead/</loc>
+    <lastmod>2020-07-27</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/fix-emfile-too-many-open-files-error-in-jest/</loc>
+    <lastmod>2020-07-29</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/the-economics-of-software-development-part-iii/</loc>
+    <lastmod>2020-07-29</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/dont-remove-default-focus-styles-enhance-them/</loc>
+    <lastmod>2020-07-30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/tab-focus-not-working-in-safari/</loc>
+    <lastmod>2020-08-04</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/remove-an-item-at-a-given-index-in-javascript/</loc>
+    <lastmod>2020-08-05</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/why-you-shouldnt-mutate-parameters/</loc>
+    <lastmod>2020-08-05</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/make-a-post-request-with-fetch/</loc>
+    <lastmod>2020-08-07</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/get-started-with-preact/</loc>
+    <lastmod>2020-08-18</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/emulate-iphone-and-ipad-in-safari/</loc>
+    <lastmod>2020-09-02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/typescript-without-typescript/</loc>
+    <lastmod>2020-12-08</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/see-all-package-versions-in-npm-cli/</loc>
+    <lastmod>2020-12-09</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/standardize-character-width-with-css/</loc>
+    <lastmod>2020-12-09</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/increase-the-playback-speed-on-any-audio-or-video-online/</loc>
+    <lastmod>2020-12-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/change-extensions-of-all-files-in-a-directory/</loc>
+    <lastmod>2020-12-17</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/sass-converts-hsla-to-hex-incorrectly/</loc>
+    <lastmod>2020-12-17</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/add-text-to-the-beginning-of-every-file/</loc>
+    <lastmod>2020-12-18</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/make-all-properties-required-in-typescript/</loc>
+    <lastmod>2020-12-19</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/checkout-the-previous-git-branch/</loc>
+    <lastmod>2021-01-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/send-data-to-the-window-with-eleventy/</loc>
+    <lastmod>2021-01-25</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/dave-geddes-guide-to-crafting/</loc>
+    <lastmod>2021-01-29</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/1/</loc>
+    <lastmod>2021-01-29</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/2/</loc>
+    <lastmod>2021-01-29</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/3/</loc>
+    <lastmod>2021-01-29</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/4/</loc>
+    <lastmod>2021-01-30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/5/</loc>
+    <lastmod>2021-01-30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/6/</loc>
+    <lastmod>2021-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/7/</loc>
+    <lastmod>2021-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/8/</loc>
+    <lastmod>2021-02-02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/9/</loc>
+    <lastmod>2021-02-02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/10/</loc>
+    <lastmod>2021-02-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/11/</loc>
+    <lastmod>2021-02-04</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/fix-error-could-not-resolve-pagination-key-in-template-data-in-eleventy/</loc>
+    <lastmod>2021-02-06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/setup-netlify-cms-with-eleventy/</loc>
+    <lastmod>2021-02-08</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/12/</loc>
+    <lastmod>2021-02-08</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/13/</loc>
+    <lastmod>2021-02-10</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/search-all-files-for-two-strings/</loc>
+    <lastmod>2021-02-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/14/</loc>
+    <lastmod>2021-02-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/lets-stop-skinning-cats/</loc>
+    <lastmod>2021-02-18</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/building-browser-extensions/</loc>
+    <lastmod>2021-02-23</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/set-innerhtml-of-an-element-in-svelte/</loc>
+    <lastmod>2021-02-25</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/create-a-url-shortener-with-netlify/</loc>
+    <lastmod>2021-02-26</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/15/</loc>
+    <lastmod>2021-03-04</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/add-heroicons-to-an-eleventy-site/</loc>
+    <lastmod>2021-03-09</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/16/</loc>
+    <lastmod>2021-03-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/17/</loc>
+    <lastmod>2021-03-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/18/</loc>
+    <lastmod>2021-03-18</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/copy-the-last-git-commit-hash-on-macos/</loc>
+    <lastmod>2021-03-24</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/covid-19-journal/</loc>
+    <lastmod>2021-03-24</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/fix-netlify-cms-yaml-error-implicit-map-keys-need-to-be-on-a-single-line/</loc>
+    <lastmod>2021-03-25</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/fix-downloadable-font-rejected-by-sanitizer-error-in-firefox/</loc>
+    <lastmod>2021-04-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/19/</loc>
+    <lastmod>2021-04-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/20/</loc>
+    <lastmod>2021-04-28</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/21/</loc>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/read-url-search-parameters-with-javascript/</loc>
+    <lastmod>2021-05-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/handy-git-commands/</loc>
+    <lastmod>2021-05-04</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/22/</loc>
+    <lastmod>2021-06-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/latin-phrases-to-know/</loc>
+    <lastmod>2021-06-07</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/a-modest-redesign-for-2021/</loc>
+    <lastmod>2021-06-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/count-class-methods-in-javascript/</loc>
+    <lastmod>2021-06-21</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/23/</loc>
+    <lastmod>2021-06-25</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/use-remark-to-covert-markdown-into-html/</loc>
+    <lastmod>2021-07-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/get-innerhtml-of-enzyme-wrapper/</loc>
+    <lastmod>2021-07-12</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/24/</loc>
+    <lastmod>2021-07-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/25/</loc>
+    <lastmod>2021-07-30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/add-a-youtube-embedder-shortcode-to-your-eleventy-site/</loc>
+    <lastmod>2021-08-10</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/what-is-the-song-from-boston-dynamics-spot-launch-video/</loc>
+    <lastmod>2021-08-10</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/what-is-hermes-in-react-native/</loc>
+    <lastmod>2021-08-17</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/reflections-on-a-new-role/</loc>
+    <lastmod>2021-08-18</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/using-bem-names-in-react-native/</loc>
+    <lastmod>2021-09-10</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/find-an-ios-simulator-identifier/</loc>
+    <lastmod>2021-10-04</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/what-happened-to-react-native-community-packages/</loc>
+    <lastmod>2021-10-05</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/react-native-glossary/</loc>
+    <lastmod>2021-10-07</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/26/</loc>
+    <lastmod>2021-10-08</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/three-new-games-on-toollama/</loc>
+    <lastmod>2021-10-27</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/what-is-a-build-gradle-file/</loc>
+    <lastmod>2021-11-04</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/helpful-online-tools-for-diagramming/</loc>
+    <lastmod>2021-12-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/my-best-slack-emojis/</loc>
+    <lastmod>2022-01-04</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/prevent-chrome-from-adjusting-audio-input-levels-on-mac/</loc>
+    <lastmod>2022-01-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/make-a-web-component/</loc>
+    <lastmod>2022-01-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/upgrading-an-eleventy-site-to-1-0-0/</loc>
+    <lastmod>2022-01-18</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/27/</loc>
+    <lastmod>2022-01-18</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/28/</loc>
+    <lastmod>2022-01-21</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/books/hunt-gather-parent/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/books/mindset/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/books/rocket-surgery-made-easy/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/books/thinking-in-bets/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/books/when-helping-hurts/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/abby/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/about/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/tags/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/are-you-looking-for-work/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/bookshelf/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/inspiration/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/notes/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/oss/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/sam/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/tags/growth/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/talks/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/uses/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/wilkinsburg/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/sm/emoji-picker/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/talks/accessibility-for-the-rest-of-us/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/talks/intro-to-deno/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/talks/jiro-dreams-of-c/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/talks/language-lessons/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/talks/moby-dx/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/talks/publishing-to-npm/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/talks/teaching/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/talks/tour-browser-dev-tools/</loc>
+    <lastmod>2022-02-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/books/one-world-school-house/</loc>
+    <lastmod>2022-02-02</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/add-a-custom-emulated-device-in-chrome/</loc>
+    <lastmod>2022-02-05</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/music-to-code-to/</loc>
+    <lastmod>2022-02-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/books/reading-while-black/</loc>
+    <lastmod>2022-02-23</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/talks/learning-from-lego/</loc>
+    <lastmod>2022-02-23</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/english-words-by-consonant-vowel-pattern/</loc>
+    <lastmod>2022-03-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/29/</loc>
+    <lastmod>2022-03-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/30/</loc>
+    <lastmod>2022-03-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/31/</loc>
+    <lastmod>2022-03-18</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/32/</loc>
+    <lastmod>2022-03-23</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/33/</loc>
+    <lastmod>2022-03-24</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/34/</loc>
+    <lastmod>2022-03-25</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/soccer/</loc>
+    <lastmod>2022-03-30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/soccer/hello-world/</loc>
+    <lastmod>2022-03-31</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/35/</loc>
+    <lastmod>2022-04-21</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/calculate-the-sum-of-everything-up-to-a-given-number/</loc>
+    <lastmod>2022-04-23</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/</loc>
+    <lastmod>2022-04-23</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/when-to-use-reacts-memo-hoc/</loc>
+    <lastmod>2022-04-28</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/use-multiple-chrome-profiles-when-debugging/</loc>
+    <lastmod>2022-06-06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/36/</loc>
+    <lastmod>2022-06-24</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/37/</loc>
+    <lastmod>2022-06-28</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/written-by-github-copilot/</loc>
+    <lastmod>2022-06-30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/38/</loc>
+    <lastmod>2022-07-12</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/admin/</loc>
+    <lastmod>2022-07-13</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/39/</loc>
+    <lastmod>2022-07-13</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/40/</loc>
+    <lastmod>2022-07-13</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/starring-content/</loc>
+    <lastmod>2022-07-13</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/41/</loc>
+    <lastmod>2022-07-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/replace-math-random-with-crypto-in-javascript/</loc>
+    <lastmod>2022-07-18</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/note/42/</loc>
+    <lastmod>2022-08-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/use-stackblitz-with-firefox/</loc>
+    <lastmod>2022-08-23</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/articles/solid-vs-code-extensions/</loc>
+    <lastmod>2022-09-06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://seanmcp.com/tools/</loc>
+    <lastmod>2022-09-08</lastmod>
+  </url>
+</urlset>
