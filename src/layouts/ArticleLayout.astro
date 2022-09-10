@@ -2,6 +2,8 @@
 import PageLayout from "./PageLayout.astro";
 import { readableDate, slugify } from "../utils";
 import Bio from "../components/Bio.astro";
+import ArticleTime from "../components/ArticleTime.astro";
+import TagList from "../components/TagList.astro";
 
 const { frontmatter } = Astro.props;
 ---
@@ -11,22 +13,11 @@ const { frontmatter } = Astro.props;
   head={frontmatter.head}
   title={frontmatter.title}
 >
-  <div>
-    {
-      !frontmatter.tags?.includes("garden") && (
-        <time>{readableDate(frontmatter.date)}</time>
-      )
-    }
-    {
-      frontmatter.tags && (
-        <nav>
-          {frontmatter.tags.map((tag) => (
-            <a href={`/tags/${slugify(tag)}`}>{tag}</a>
-          ))}
-        </nav>
-      )
-    }
-  </div>
+  {
+    !frontmatter.tags?.includes("garden") && (
+      <ArticleTime date={frontmatter.date} />
+    )
+  }
   <hr />
   <slot />
   <hr />
@@ -34,15 +25,7 @@ const { frontmatter } = Astro.props;
     href={`mailto:sean@seanmcp.com?subject=Re: ${frontmatter.title}`}
     id="comment-link">Send a comment</a
   >
+  <div>Read more <TagList tags={frontmatter.tags} /></div>
   <hr />
   <Bio />
 </PageLayout>
-
-<style>
-  div {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-</style>
