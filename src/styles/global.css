@@ -1,3 +1,28 @@
+:root {
+  --dark: hsl(216, 5%, 10%);
+  --light: hsl(216, 5%, 97%);
+
+  --accent: hsl(188, 100%, 42%);
+  --primary: hsl(216, 85%, 34%);
+
+  --background: var(--light);
+  --off-background: hsla(0, 0%, 10%, 20%);
+  --text-color: var(--dark);
+  --lighter-text-color: hsl(216, 5%, 40%);
+  --anchor-color: var(--primary);
+  --note-anchor-color: var(--accent);
+
+  --block-code-background: hsla(0, 0%, 0%, 90%);
+  --inline-code-background: hsla(0, 0%, 0%, 7.5%);
+  --inline-code-color: hsla(0, 0%, 0%, 75%);
+
+  --body-font: -apple-system, BlinkMacSystemFont, Helvetica, Arial, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --mono-font: Menlo, Monaco, Consolas, "Andale Mono WT", "Andale Mono",
+    "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+}
+
 html,
 body {
   margin: 0;
@@ -11,7 +36,7 @@ body > header,
 main,
 body > footer {
   margin: 0 auto;
-  max-width: 72ch;
+  max-width: calc(10rem * 4);
   padding: 1rem;
 }
 
@@ -23,4 +48,21 @@ code,
 
 .astro-code {
   padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1em;
+  margin-bottom: 1rem;
+}
+
+hr {
+  background: var(--off-background);
+  border: none;
+  height: 1px;
+  margin: 2rem 0;
 }
