@@ -1,16 +1,20 @@
 ---
-import SiteFooter from '../components/SiteFooter.astro';
-import SiteHeader from '../components/SiteHeader.astro';
-import BaseLayout from './BaseLayout.astro'
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import BaseLayout from "./BaseLayout.astro";
 
-export { type Props } from "./BaseLayout.astro"
+export { type Props } from "./BaseLayout.astro";
+
+const foot = Astro.props.frontmatter?.foot ?? Astro.props.foot;
+const head = Astro.props.frontmatter?.head ?? Astro.props.head;
+const title = Astro.props.frontmatter?.title ?? Astro.props.title;
 ---
 
-<BaseLayout {...Astro.props}>
-    <SiteHeader />
-    <main>
-        <h1>{Astro.props.title}</h1>
-        <slot/>
-    </main>
-    <SiteFooter />
+<BaseLayout foot={foot} head={head} title={title}>
+  <SiteHeader />
+  <main>
+    <h1>{title}</h1>
+    <slot />
+  </main>
+  <SiteFooter />
 </BaseLayout>
