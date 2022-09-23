@@ -1,5 +1,5 @@
 ---
-import ArticleTime from "./ArticleTime.astro";
+import ReadableTime from "./ReadableTime.astro";
 
 const { articles } = Astro.props;
 ---
@@ -8,8 +8,9 @@ const { articles } = Astro.props;
   {
     articles.map((article) => (
       <article>
-        <div> {/* Added for styling. Find a better way. */}
-          <ArticleTime date={article.frontmatter.date} />
+        <div>
+          {/* Added for styling. Find a better way. */}
+          <ReadableTime date={article.frontmatter.date} />
         </div>
         <a href={article.url}>{article.frontmatter.title}</a>
         <p>{article.frontmatter.description}</p>

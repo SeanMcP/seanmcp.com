@@ -1,0 +1,23 @@
+---
+import { readableDate } from "../utils";
+
+const { date, edited, number } = Astro.props;
+
+if (number == "40") console.log("Note.astro", date);
+---
+
+<article>
+  <header>
+    <a href={`/note/${number}`}>
+      <time datetime={date}>{readableDate(date)}</time>
+      {edited && <span>Edited</span>}
+    </a>
+  </header>
+  <slot />
+</article>
+
+<style>
+  header {
+    text-align: right;
+  }
+</style>

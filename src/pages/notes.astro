@@ -1,0 +1,41 @@
+---
+import ReadableTime from "../components/ReadableTime.astro";
+
+import PageLayout from "../layouts/PageLayout.astro";
+import { getSortedArticles } from "../utils";
+
+const notes = getSortedArticles(await Astro.glob("./note/*.{md,mdx}")).filter(
+  (file) => file.frontmatter.number
+);
+---
+
+<PageLayout title="Notes">
+  <ul>
+    {
+      notes.map(({ frontmatter: { date, number } }) => (
+        <li data-number={number}>
+          <a href={`/note/${number}`}>Note #{number}</a>
+          <small><ReadableTime {date} small /></small>
+        </li>
+      ))
+    }
+  </ul>
+</PageLayout>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+  }
+  li a {
+    display: block;
+  }
+  @media screen and (min-width: 768px) {
+    ul {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
