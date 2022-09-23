@@ -13,19 +13,21 @@ const { frontmatter } = Astro.props;
   head={frontmatter.head}
   title={frontmatter.title}
 >
-  {
-    !frontmatter.tags?.includes("garden") && (
-      <ReadableTime date={frontmatter.date} />
-    )
-  }
-  <hr />
-  <slot />
-  <hr />
-  <a
-    href={`mailto:sean@seanmcp.com?subject=Re: ${frontmatter.title}`}
-    id="comment-link">Send a comment</a
-  >
-  <div>Read more: <TagList tags={frontmatter.tags} /></div>
+  <div class="article">
+    {
+      !frontmatter.tags?.includes("garden") && (
+        <ReadableTime date={frontmatter.date} />
+      )
+    }
+    <hr />
+    <slot />
+    <hr />
+    <a
+      href={`mailto:sean@seanmcp.com?subject=Re: ${frontmatter.title}`}
+      id="comment-link">Send a comment</a
+    >
+    <div>Read more: <TagList tags={frontmatter.tags} /></div>
+  </div>
   <hr />
   <Bio />
 </PageLayout>
@@ -33,5 +35,9 @@ const { frontmatter } = Astro.props;
 <style>
   div {
     margin-top: 1rem;
+  }
+
+  :global(.article img) {
+    max-width: 100%;
   }
 </style>
