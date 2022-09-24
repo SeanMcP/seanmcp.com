@@ -11,7 +11,7 @@ verse:
 image:
 ---
 
-StackBlitz is a great tool for rapidly prototyping web applications. In recent weeks, I has been my go-to tool for testing out new web technologies ([CodeSandbox's loss](/note/42/)). However, when you try to use StackBlitz with Firefox, the preview window gives the following error message:
+StackBlitz is a great tool for rapidly prototyping web applications. In recent weeks, I has been my go-to tool for testing out new web technologies ([CodeSandbox's loss](/notes/42/)). However, when you try to use StackBlitz with Firefox, the preview window gives the following error message:
 
 ![Error message reads: Enable Third-Party Cookies. Looks like your browser is blocking our Service Worker. To see this web page, please allow third-party cookies for this site.](/img/stackblitz-firefox-error.png)
 

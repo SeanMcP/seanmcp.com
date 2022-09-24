@@ -4,7 +4,7 @@ import ReadableTime from "../components/ReadableTime.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 import { getSortedArticles } from "../utils";
 
-const notes = getSortedArticles(await Astro.glob("./note/*.{md,mdx}")).filter(
+const notes = getSortedArticles(await Astro.glob("./notes/*.{md,mdx}")).filter(
   (file) => file.frontmatter.number
 );
 ---
@@ -14,7 +14,7 @@ const notes = getSortedArticles(await Astro.glob("./note/*.{md,mdx}")).filter(
     {
       notes.map(({ frontmatter: { date, number } }) => (
         <li data-number={number}>
-          <a href={`/note/${number}`}>Note #{number}</a>
+          <a href={`/notes/${number}`}>Note #{number}</a>
           <small><ReadableTime {date} small /></small>
         </li>
       ))
