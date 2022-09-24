@@ -8,6 +8,7 @@ export { type Props } from "./BaseLayout.astro";
 const foot = Astro.props.frontmatter?.foot ?? Astro.props.foot;
 const head = Astro.props.frontmatter?.head ?? Astro.props.head;
 const title = Astro.props.frontmatter?.title ?? Astro.props.title;
+const back = Astro.props.frontmatter?.back ?? Astro.props.back;
 ---
 
 <BaseLayout foot={foot} head={head} title={title}>

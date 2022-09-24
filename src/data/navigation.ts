@@ -47,7 +47,7 @@ export default {
     LINKS.about,
     LINKS.articles,
     LINKS.tags,
-    // LINKS.talks,
+    LINKS.talks,
     LINKS.notes,
     // LINKS.bookshelf,
     // LINKS.soccer,
