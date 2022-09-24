@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Get started with Preact
 description: 
-date: 2020-08-18
+pubDate: 2020-08-18
 tags:
     - Preact
     - WIP

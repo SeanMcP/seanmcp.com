@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Standardize character width with CSS
 description: Two CSS properties that make letters and numbers the same width.
-date: 2020-12-09
+pubDate: 2020-12-09
 tags:
   - CSS
   - Typography

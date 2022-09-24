@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Use multiple Chrome Profiles when debugging
 description: With specialized profiles, you can help identify issues without messing with your favorite settings.
-date: 2022-06-06
+pubDate: 2022-06-06
 tags:
   - Debugging
   - Chrome

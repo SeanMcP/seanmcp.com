@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Manage analysis paralysis while programming
 description:
-date: 2020-07-14
+pubDate: 2020-07-14
 tags:
   - Programming
   - WIP

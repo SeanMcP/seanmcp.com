@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Tools for custom Slack emojis
 description: The full toolbelt for making your own custom Slack emojis
-date: 2020-04-14
+pubDate: 2020-04-14
 tags:
   - Slack
   - Tools

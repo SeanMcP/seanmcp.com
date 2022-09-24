@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: TypeScript mega-course on Egghead.io
 description: Creating a playlist to learn TypeScript
-date: 2020-06-15
+pubDate: 2020-06-15
 tags:
   - Course
   - Egghead

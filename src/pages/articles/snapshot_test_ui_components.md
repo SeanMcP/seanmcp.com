@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Should I snapshot my UI components?
 description: The temptation is strong, but consider some of the tradeoffs.
-date: 2019-09-11
+pubDate: 2019-09-11
 tags:
   - React
   - Testing

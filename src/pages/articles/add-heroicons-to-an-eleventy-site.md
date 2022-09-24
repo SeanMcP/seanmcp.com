@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Add Heroicons to an Eleventy site
 description: A guide to using the eleventy-plugin-heroicons package in your Eleventy projects
-date: 2021-03-09
+pubDate: 2021-03-09
 tags:
   - Eleventy
   - Icons

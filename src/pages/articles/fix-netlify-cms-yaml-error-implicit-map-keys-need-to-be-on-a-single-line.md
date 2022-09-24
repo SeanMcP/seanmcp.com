@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Fix Netlify CMS YAML error 'Implicit map keys need to be on a single line'
 description: Make sure that your configuration file is being copied to the destination directory.
-date: 2021-03-25
+pubDate: 2021-03-25
 tags:
     - Debugging
     - Error

@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Before You Debug
 description: An organized approach to debugging your code
-date: 2020-07-10
+pubDate: 2020-07-10
 tags:
   - Garden
   - Debugging

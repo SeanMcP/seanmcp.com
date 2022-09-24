@@ -2,8 +2,8 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: How to check npm scripts in current directory
 description: Writing a script to read the package.json for you
-date: 2020-02-06
-update: 2020-04-14
+pubDate: 2020-02-06
+uppubDate: 2020-04-14
 tags:
     - JavaScript
     - Scripting

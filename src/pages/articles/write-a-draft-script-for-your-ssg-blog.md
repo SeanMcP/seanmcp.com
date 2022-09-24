@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Write a draft script for your SSG blog
 description: Easily spin up a new article when you don't have a CMS
-date: 2020-01-31
+pubDate: 2020-01-31
 tags:
   - Bash
   - Node.js

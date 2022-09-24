@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Publishing my first YouTube video
 description: Why I started a YouTube channel and what I learned in the process
-date: 2020-05-20
+pubDate: 2020-05-20
 tags:
   - YouTube
   - Career

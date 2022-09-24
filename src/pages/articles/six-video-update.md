@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Six video update
 description: Lessons learned from publishing six videos on YouTube
-date: 2020-06-12
+pubDate: 2020-06-12
 tags:
   - YouTube
 verse: Exodus 20:9

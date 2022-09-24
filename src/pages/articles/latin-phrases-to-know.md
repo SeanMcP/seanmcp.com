@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Latin phrases to know
 description: 
-date: 2021-06-07
+pubDate: 2021-06-07
 tags:
     - Garden
     - Language

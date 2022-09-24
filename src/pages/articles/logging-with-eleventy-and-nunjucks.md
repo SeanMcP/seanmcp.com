@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Logging with Eleventy and Nunjucks
 description: Adding a simple filter to save you a lot of grief.
-date: 2020-05-12
+pubDate: 2020-05-12
 tags:
     - Eleventy
     - Nunjucks

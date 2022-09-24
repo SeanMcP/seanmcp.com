@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: A modest redesign for 2021
 description: Freshening up SeanMcP.com for the new year
-date: 2021-06-15
+pubDate: 2021-06-15
 tags:
   - Blogging
   - Design

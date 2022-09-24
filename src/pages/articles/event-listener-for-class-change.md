@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Add event listener for class change
 description: How to create a custom event listener for class names using the MutationObserver API
-date: 2019-05-10
+pubDate: 2019-05-10
 tags:
     - JavaScript
 ---

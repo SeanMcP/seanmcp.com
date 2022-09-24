@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Find an iOS simulator identifier
 description: How to find a simulator ID using the Xcode UI or terminal
-date: 2021-10-04
+pubDate: 2021-10-04
 tags:
     - iOS
     - macOS

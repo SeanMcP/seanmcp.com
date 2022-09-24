@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Parse argument aliases in Deno
 description: Using Deno's standard flags module to parse command-line arguments with aliases
-date: 2020-06-26
+pubDate: 2020-06-26
 tags:
     - CLI
     - Deno

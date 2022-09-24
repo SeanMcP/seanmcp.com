@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Solid VS Code extensions
 description: A curated list of great extensions that might fly under your radar
-date: 2022-09-06T14:18:37.349Z
+pubDate: 2022-09-06T14:18:37.349Z
 tags:
   - Garden
   - VS Code

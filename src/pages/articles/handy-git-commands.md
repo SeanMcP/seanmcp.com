@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Handy git commands
 description: A curated collection of git commands that help me do my job better
-date: 2021-05-04
+pubDate: 2021-05-04
 tags:
     - Garden
     - Git

@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: "JS Basics: Ternary Operator"
 description: Demystifying the inline if statement
-date: 2019-02-08
+pubDate: 2019-02-08
 tags:
   - JavaScript
 ---

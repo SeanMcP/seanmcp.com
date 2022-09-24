@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Filter out premium Medium articles
 description: Using a console script to alter the content on a webpage
-date: 2019-04-08
+pubDate: 2019-04-08
 tags:
   - Console Scripting
   - Dev Tools

@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: It has everything
 description: Even a description
-date: 2050-12-25
+pubDate: 2050-12-25
 tags:
     - meta
     - another

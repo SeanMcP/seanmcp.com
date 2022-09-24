@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Setup Netlify CMS with Eleventy
 description:
-date: 2021-02-08
+pubDate: 2021-02-08
 tags:
   - WIP
   - Eleventy

@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Reviewing 2019 goals
 description: Checking in on the goals I set for myself in 2019
-date: 2020-01-08
+pubDate: 2020-01-08
 tags:
   - Growth
 verse: Job 23:13

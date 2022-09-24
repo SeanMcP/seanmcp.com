@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: How to pronounce my name
 description: A guide to pronounce my often-mispronounced name
-date: 2019-06-15
+pubDate: 2019-06-15
 tags:
   - Personal
 verse: Proverbs 18:10

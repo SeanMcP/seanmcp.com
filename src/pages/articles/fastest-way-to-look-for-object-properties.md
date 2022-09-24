@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: The fastest way to look for object properties
 description: 
-date: 2019-12-31
+pubDate: 2019-12-31
 tags:
     - JavaScript
     - WIP

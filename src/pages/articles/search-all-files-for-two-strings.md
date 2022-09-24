@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Search all files for two strings
 description: A terminal command to search for all the files in the current directory that contain two independent strings.
-date: 2021-02-15
+pubDate: 2021-02-15
 tags:
   - Shell
 verse:

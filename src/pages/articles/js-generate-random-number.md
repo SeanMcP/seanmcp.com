@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: "JS Basics: Generate a random number"
 description: Using JavaScript's Math object to generate random numbers
-date: 2019-02-11
+pubDate: 2019-02-11
 tags:
   - JavaScript
 ---

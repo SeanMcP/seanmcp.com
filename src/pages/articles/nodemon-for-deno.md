@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Nodemon for Deno
 description: Denon is a utility for Deno that provides source watching and process restarting just like Nodemon
-date: 2020-07-01
+pubDate: 2020-07-01
 tags:
   - Deno
   - Tools
@@ -10,7 +10,7 @@ verse: Psalm 130:6
 image: /img/watch.min.jpg
 ---
 
-_Update: As of Deno v1.4, there is a built in watch mode that you can enable with the `--watch` flag. [Read more about that here](https://deno.land/posts/v1.4#codedeno-run---watchcode)._
+_UppubDate: As of Deno v1.4, there is a built in watch mode that you can enable with the `--watch` flag. [Read more about that here](https://deno.land/posts/v1.4#codedeno-run---watchcode)._
 
 Nodemon, or as I read it in my head _Nodémon!_, is a utility for restarting Node.js processes when the source changes. It's is the first dev dependency I add when working in Node, because it is so handy!
 

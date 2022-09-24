@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Make a web component
 description: How to make a custom web component with only a few lines of code
-date: 2022-01-14
+pubDate: 2022-01-14
 tags:
   - JavaScript
   - Web Components

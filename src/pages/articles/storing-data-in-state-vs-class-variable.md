@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Storing data in state vs. class variable
 description: Why do we store data in state as opposed to on the class?
-date: 2019-04-12
+pubDate: 2019-04-12
 tags:
   - React
 ---

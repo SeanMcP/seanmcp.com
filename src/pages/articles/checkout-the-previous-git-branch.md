@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Checkout the previous git branch
 description: Using a git shorthand to checkout the most recent branch
-date: 2021-01-22
+pubDate: 2021-01-22
 tags:
     - Git
     - Productivity

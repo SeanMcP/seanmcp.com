@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Why I switched from Gatsby to Eleventy
 description:
-date: 2019-04-12
+pubDate: 2019-04-12
 tags:
   - Eleventy
   - Meta

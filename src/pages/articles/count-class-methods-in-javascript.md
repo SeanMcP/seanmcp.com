@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Count class methods in JavaScript
 description: Although JS treats them like object, finding the methods of a class programmatically is trickier than I thought.
-date: 2021-06-21
+pubDate: 2021-06-21
 tags:
   - JavaScript
 verse: Psalm 147:4-5

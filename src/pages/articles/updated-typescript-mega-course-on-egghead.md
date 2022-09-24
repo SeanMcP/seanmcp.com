@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Updated TypeScript mega-course on Egghead.io
 description: Reviewing and updating my TypeScript mega-course on Egghead.io
-date: 2020-07-27
+pubDate: 2020-07-27
 tags:
   - Course
   - Egghead

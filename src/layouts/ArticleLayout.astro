@@ -1,6 +1,5 @@
 ---
 import PageLayout from "./PageLayout.astro";
-import { readableDate, slugify } from "../utils";
 import Bio from "../components/Bio.astro";
 import ReadableTime from "../components/ReadableTime.astro";
 import TagList from "../components/TagList.astro";
@@ -16,7 +15,7 @@ const { frontmatter } = Astro.props;
   <div class="article">
     {
       !frontmatter.tags?.includes("garden") && (
-        <ReadableTime date={frontmatter.date} />
+        <ReadableTime date={frontmatter.pubDate} />
       )
     }
     <hr />

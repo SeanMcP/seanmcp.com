@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Let's stop skinning cats
 description: Proposing an alternative, more constructive idiom to "there's more than one way to skin a cat"
-date: 2021-02-18
+pubDate: 2021-02-18
 tags:
   - Language
   - Soap Box

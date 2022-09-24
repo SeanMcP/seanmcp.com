@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Make all properties required in TypeScript
 description: Using the Required utility type to required all properties of a type
-date: 2020-12-19
+pubDate: 2020-12-19
 tags:
   - TypeScript
 verse:

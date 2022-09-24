@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: "\"Stop Teaching Code\" in JavaScript"
 description: A quick review of Jeff Olson's article on teaching code with translated examples
-date: 2019-11-26
+pubDate: 2019-11-26
 tags:
     - Teaching
     - Programming

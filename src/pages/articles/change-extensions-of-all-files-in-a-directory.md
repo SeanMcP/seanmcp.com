@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Change extensions of all files in a directory
 description: A little Bash script to rename all files from `.jsx` to `.tsx`
-date: 2020-12-17
+pubDate: 2020-12-17
 tags:
     - WIP
 verse:

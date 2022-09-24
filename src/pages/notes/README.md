@@ -8,7 +8,7 @@ Use this when creating a new note from GitHub.
 ---
 layout: "../../layouts/NoteLayout.astro"
 number:
-date:
+pubDate:
 ---
 ```
 
@@ -18,5 +18,5 @@ In the console, run the following and paste into a new note file:
 
 ```js
 copy(`---\nlayout: "../../layouts/NoteLayout.astro"
-number: \ndate: ${new Date().toISOString()}\n---\n`)
+number: \npubDate: ${new Date().toISOString()}\n---\n`)
 ```

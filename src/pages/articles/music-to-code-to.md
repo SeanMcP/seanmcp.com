@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Music to code to
 description: A growing list of artists that I like to listen to while programming.
-date: 2022-02-15
+pubDate: 2022-02-15
 tags:
   - Garden
   - Music

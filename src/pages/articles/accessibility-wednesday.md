@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Accessibility Wednesday
 description: Learning and sharing about accessibility for everyone
-date: 2019-02-06
+pubDate: 2019-02-06
 tags: 
     - A11y
 ---

@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Edit a previous commit message
 description: The steps to edit recent or ancient commit messages
-date: 2019-08-23
+pubDate: 2019-08-23
 tags:
   - Git
   - Programming

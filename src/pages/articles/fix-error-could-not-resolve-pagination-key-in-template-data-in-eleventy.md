@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: "Fix \"Error: Could not resolve pagination key in template data\" in Eleventy"
 description: Not a true fix, but a decent workaround when paginating collections in Eleventy
-date: 2021-02-06
+pubDate: 2021-02-06
 tags:
     - Debugging
     - Eleventy

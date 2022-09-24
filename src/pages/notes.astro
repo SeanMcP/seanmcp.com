@@ -12,10 +12,10 @@ const notes = getSortedArticles(await Astro.glob("./notes/*.{md,mdx}")).filter(
 <PageLayout title="Notes">
   <ul>
     {
-      notes.map(({ frontmatter: { date, number } }) => (
+      notes.map(({ frontmatter: { pubDate, number } }) => (
         <li data-number={number}>
           <a href={`/notes/${number}`}>Note #{number}</a>
-          <small><ReadableTime {date} small /></small>
+          <small><ReadableTime {pubDate} small /></small>
         </li>
       ))
     }

@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Upgrading an Eleventy site to 1.0.0
 description: Make sure the you are using Node.js version 12 or later
-date: 2022-01-18
+pubDate: 2022-01-18
 tags:
   - Eleventy
 verse:

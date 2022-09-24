@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: "What default parameters do (and don't do)"
 description: Correcting my mental model
-date: 2020-01-13
+pubDate: 2020-01-13
 tags:
   - JavaScript
 verse: Micah 7:8

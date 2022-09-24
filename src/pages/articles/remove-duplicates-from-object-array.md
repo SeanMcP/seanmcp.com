@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: How to remove duplicates from an object array?
 description: Not as easy as we'd like it, but not as hard as it could be
-date: 2020-02-03
+pubDate: 2020-02-03
 tags:
   - JavaScript
 verse: Job 23:13

@@ -3,7 +3,7 @@ layout: "../../layouts/ArticleLayout.astro"
 title: How to replace Math.random with crypto in JavaScript
 description: A drop-in replacement for Math.random that generates
   cryptographically strong random values
-date: 2022-07-18T18:15:00.707Z
+pubDate: 2022-07-18T18:15:00.707Z
 tags:
   - JavaScript
 verse: Proverbs 16:33

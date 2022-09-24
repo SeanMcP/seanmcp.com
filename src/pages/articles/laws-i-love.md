@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Laws I Love
 description:
-date: 2020-04-14
+pubDate: 2020-04-14
 tags:
   - WIP
 verse: Psalm 119:97

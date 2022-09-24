@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Await multiple promises in JavaScript
 description: By calling your asynchronous functions before awaiting, you can save valuable time in your JavaScript programs
-date: 2020-06-17
+pubDate: 2020-06-17
 tags:
     - JavaScript
     - Asynchronous Code

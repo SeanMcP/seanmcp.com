@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Building browser extensions
 description: Some resources and guides for making browser add-ons/extensions
-date: 2021-02-23
+pubDate: 2021-02-23
 tags:
   - Garden
   - Chrome

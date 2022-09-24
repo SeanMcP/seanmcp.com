@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Create a URL shortener with Netlify
 description: Build your very own shortener in six quick steps
-date: 2021-02-26
+pubDate: 2021-02-26
 tags:
     - Netlify
 verse: Luke 19:1-10

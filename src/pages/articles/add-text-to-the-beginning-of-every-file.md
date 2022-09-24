@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Add text to the beginning of every file
 description: Using a shell script to add a line to every file with a given extension
-date: 2020-12-18
+pubDate: 2020-12-18
 tags:
     - Scripting
     - Shell

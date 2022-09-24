@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Adding images to my articles
 description: How the right design and process for sourcing images made all the difference for me
-date: 2020-06-30
+pubDate: 2020-06-30
 tags:
     - Blogging
     - Meta

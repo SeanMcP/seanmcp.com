@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Why you shouldn't mutate parameters
 description:
-date: 2020-08-05
+pubDate: 2020-08-05
 tags:
   - JavaScript
   - WIP

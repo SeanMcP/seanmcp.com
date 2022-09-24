@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Free to grow
 description: Why tests (should) free you to grow with confidence
-date: 2020-02-17
+pubDate: 2020-02-17
 image: /img/redwood.min.jpg
 verse: Isaiah 53:2
 tags:

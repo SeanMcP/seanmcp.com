@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: React Native Glossary
 description: A growing list of terms you need to recognize when working in React Native
-date: 2021-10-07
+pubDate: 2021-10-07
 tags:
   - Garden
   - Android

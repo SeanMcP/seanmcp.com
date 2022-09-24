@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Copy the last git commit hash on macOS
 description: A one liner to copy the last commit hash to the clipboard on a Mac
-date: 2021-03-24
+pubDate: 2021-03-24
 tags:
     - macOS
     - Shell

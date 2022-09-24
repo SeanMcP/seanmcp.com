@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Starring content
 description: A write-up on the new star feature on seanmcp.com
-date: 2022-07-13T15:49:15.021Z
+pubDate: 2022-07-13T15:49:15.021Z
 tags:
   - Meta
   - JavaScript

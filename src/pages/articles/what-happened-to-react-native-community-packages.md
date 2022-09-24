@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: What happened to @react-native-community packages?
 description: Why you won't be installing any community packages on your next React Native project
-date: 2021-10-05
+pubDate: 2021-10-05
 tags:
   - Mobile
   - React Native

@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Three reasons to learn Python
 description:
-date: 2019-02-21
+pubDate: 2019-02-21
 tags:
   - Python
 ---

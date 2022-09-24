@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Increase the playback speed on any audio or video online
 description: Since audio and video are native HTML elements, you can change the playing speed with a quick console script
-date: 2020-12-15
+pubDate: 2020-12-15
 tags:
     - Console Scripting
     - Dev Tools

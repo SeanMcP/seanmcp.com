@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: How to get the browser and version in JavaScript
 description: A brief journey into the dangerous world of user agent sniffing
-date: 2020-05-19
+pubDate: 2020-05-19
 tags:
     - JavaScript
 verse: Ephesians 5:2

@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Set innerHTML of an element in Svelte
 description: You can use an HTML expression to add valid markup to an element
-date: 2021-02-25
+pubDate: 2021-02-25
 tags:
   - Svelte
 verse:

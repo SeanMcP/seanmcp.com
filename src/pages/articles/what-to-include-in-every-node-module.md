@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: What to include in every node module
 description:
-date: 2020-02-03
+pubDate: 2020-02-03
 tags:
   - Node Modules
   - Node.js

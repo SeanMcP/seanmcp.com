@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: How to create a render prop component
 description: Render props are a popular technique in modern React, but they can be tricky. Here is a brief explanation and guide to creating your own.
-date: 2018-10-09
+pubDate: 2018-10-09
 tags:
   - React
   - Patterns

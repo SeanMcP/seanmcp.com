@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Sass converts hsla to hex incorrectly
 description: A simple solution to stop Sass from transparent hsla colors to opaque hex colors.
-date: 2020-12-17
+pubDate: 2020-12-17
 tags:
   - Sass
   - CSS

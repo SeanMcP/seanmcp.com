@@ -1,9 +1,10 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import metadata from "./src/data/metadata.json";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://seanmcp.com",
+  site: metadata.url,
   integrations: [mdx(), sitemap()],
 });

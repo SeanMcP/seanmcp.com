@@ -2,7 +2,7 @@
 layout: "../../layouts/ArticleLayout.astro"
 title: Lessons Learned at Abstractions 2019
 description: Some notes and thoughts from Pittsburgh's cross-discipline software conference
-date: 2019-08-27
+pubDate: 2019-08-27
 tags:
   - Conferences
 verse: Proverbs 1:5

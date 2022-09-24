@@ -10,7 +10,7 @@ const { articles } = Astro.props;
       <article>
         <div>
           {/* Added for styling. Find a better way. */}
-          <ReadableTime date={article.frontmatter.date} />
+          <ReadableTime date={article.frontmatter.pubDate} />
         </div>
         <a href={article.url}>{article.frontmatter.title}</a>
         <p>{article.frontmatter.description}</p>
