@@ -10,8 +10,8 @@ if (number == "40") console.log("Note.astro", date);
   <header>
     <a href={`/note/${number}`}>
       <time datetime={date}>{readableDate(date)}</time>
-      {edited && <span>Edited</span>}
     </a>
+    {edited && <span>(Edited)</span>}
   </header>
   <slot />
 </article>
