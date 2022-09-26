@@ -1,0 +1,129 @@
+{
+  "education": [
+    {
+      "title": "Popsicle Sticks",
+      "description": "Randomly select a student in your class from any tab",
+      "url": "https://chrome.google.com/webstore/detail/popsicle-sticks-random-st/lnckbgaeagindapiodcmccfokcmnfecm",
+      "emoji": "✌️",
+      "type": "Chrome Extension"
+    },
+    {
+      "title": "Easy Grader",
+      "description": "Generate percent grading tables for every assignment",
+      "url": "https://seanmcp.github.io/easy-grader",
+      "emoji": "🦓",
+      "type": "Web App"
+    },
+    {
+      "title": "Overlays",
+      "description": "Full-screen overlays for your projector",
+      "url": "https://seanmcp.github.io/overlays/",
+      "emoji": "🐓",
+      "type": "Web App"
+    },
+    {
+      "title": "Random",
+      "description": "Generate random numbers, colors, animals, and group names",
+      "url": "https://seanmcp.github.io/random",
+      "emoji": "🐵",
+      "type": "Web App"
+    },
+    {
+      "title": "Rotations",
+      "description": "A group rotations clock for classrooms",
+      "url": "https://seanmcp.github.io/rotations",
+      "emoji": "🦋",
+      "type": "Web App"
+    },
+    {
+      "title": "Alphabear",
+      "description": "A tool to help students practice alphabet recognition",
+      "url": "https://seanmcp.github.io/alphabear",
+      "emoji": "🧸",
+      "type": "Web App"
+    }
+  ],
+  "games": [
+    {
+      "title": "Keyboard Practice",
+      "description": "A game to practice using the keyboard",
+      "url": "https://seanmcp.github.io/keyboard-practice",
+      "emoji": "⌨️",
+      "type": "Web App"
+    },
+    {
+      "title": "Mouse Practice",
+      "description": "A game to practice moving and clicking the mouse or trackpad",
+      "url": "https://seanmcp.github.io/mouse-practice",
+      "emoji": "🐭",
+      "type": "Web App"
+    },
+    {
+      "title": "Turtle Guide",
+      "description": "A game to help young children practice using the arrow keys",
+      "url": "https://seanmcp.github.io/turtle-guide",
+      "emoji": "🐢",
+      "type": "Web App"
+    },
+    {
+      "title": "Paint Pig",
+      "description": "A painting activity to help young children practice using the keyboard",
+      "url": "https://seanmcp.github.io/paint-pig",
+      "emoji": "🐷",
+      "type": "Web App"
+    },
+    {
+      "title": "Spotlight",
+      "description": "A game to help young children practice moving and clicking with the mouse or trackpad",
+      "url": "https://seanmcp.github.io/spotlight",
+      "emoji": "🔦",
+      "type": "Web App"
+    },
+    {
+      "title": "Memory",
+      "description": "A little game to help children learn",
+      "url": "https://seanmcp.github.io/memory-game",
+      "emoji": "🧠",
+      "type": "Web App"
+    },
+    {
+      "title": "Animal Soundboard",
+      "description": "A simple soundboard of animal sounds",
+      "url": "https://seanmcp.github.io/animal-soundboard",
+      "emoji": "📢",
+      "type": "Web App"
+    }
+  ],
+  "life": [
+    {
+      "title": "Contraction Tracker",
+      "description": "A simple contraction tracker for women who have enough to worry about",
+      "url": "https://seanmcp.github.io/contractions",
+      "emoji": "⚡️",
+      "type": "Web App"
+    },
+    {
+      "title": "Notepad",
+      "description": "A private note taking app",
+      "url": "https://seanmcp.github.io/notepad",
+      "emoji": "📝",
+      "type": "Web App"
+    }
+  ],
+  "fun": [
+    {
+      "title": "Sushi Go! Friend",
+      "description": "A companion app for the Sushi Go! card game",
+      "url": "https://sushigofriend.netlify.app",
+      "emoji": "🍣",
+      "type": "Web App"
+    },
+    {
+      "title": "Reading Raccoon",
+      "description": "A raccoon that will read whatever you type",
+      "url": "https://seanmcp.github.io/reading-raccoon",
+      "emoji": "🦝",
+      "type": "Web App"
+    }
+  ]
+}
