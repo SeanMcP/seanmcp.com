@@ -7,12 +7,8 @@ import TagList from "../components/TagList.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<PageLayout
-  foot={frontmatter.foot}
-  head={frontmatter.head}
-  title={frontmatter.title}
->
-  <div class="article">
+<PageLayout {...frontmatter}>
+  <article class="article">
     {
       !frontmatter.tags?.includes("garden") && (
         <ReadableTime date={frontmatter.pubDate} />
@@ -26,7 +22,7 @@ const { frontmatter } = Astro.props;
       id="comment-link">Send a comment</a
     >
     <div>Read more: <TagList tags={frontmatter.tags} /></div>
-  </div>
+  </article>
   <hr />
   <Bio />
 </PageLayout>

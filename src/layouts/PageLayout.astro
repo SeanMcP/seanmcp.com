@@ -5,13 +5,11 @@ import BaseLayout from "./BaseLayout.astro";
 
 export { type Props } from "./BaseLayout.astro";
 
-const foot = Astro.props.frontmatter?.foot ?? Astro.props.foot;
-const head = Astro.props.frontmatter?.head ?? Astro.props.head;
+// Logic repeated in BaseLayout.astro
 const title = Astro.props.frontmatter?.title ?? Astro.props.title;
-const back = Astro.props.frontmatter?.back ?? Astro.props.back;
 ---
 
-<BaseLayout foot={foot} head={head} title={title}>
+<BaseLayout {...Astro.props}>
   <SiteHeader />
   <main>
     <h1>{title}</h1>
