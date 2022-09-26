@@ -14,5 +14,9 @@
     "build": "astro build",
     "dev": "astro dev",
     "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@astrojs/svelte": "^1.0.0",
+    "svelte": "^3.50.1"
   }
 }
