@@ -1,13 +1,17 @@
 ---
 import navigation from "../data/navigation";
 import socials from "../data/socials";
+
+import metadata from "../data/metadata.json";
 ---
 
 <footer>
   <hr />
   <div>
-    <b>SeanMcP.com</b><br />
-    <small>Copyright &copy; 2018 - {new Date().getFullYear()} Sean McPherson (SDG)</small>
+    <b>{metadata.name}</b><br />
+    <small>
+      Copyright &copy; 2018 - {new Date().getFullYear()} Sean McPherson (SDG)
+    </small>
   </div>
   <div class="site-footer__nav">
     <section>
