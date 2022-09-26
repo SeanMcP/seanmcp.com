@@ -19,6 +19,8 @@ head: >-
   </style>
 ---
 
+import YouTube from "../../components/YouTube.astro";
+
 My three-year-old son _really_ likes Boston Dynamics videos. He frequently requests to watch them and will parade around the house as Spot, Atlas, or Stretch/Handle. As far as little kid fixations on machines go, I think robots are a pretty cool option; he's much more likely to work on/with robots in the future than steam engines!
 
 One video he likes is [_Spot Launch_](https://www.youtube.com/watch?v=wlkCQXHEgjA), which features the titular robot navigating through a bunch of simulated work environments. It's an entertaining video, and my son really likes dancing to the song.
@@ -29,9 +31,15 @@ With my wife's help, I tried using the [Google app's music recognition feature](
 
 Here are the two videos for comparison:
 
-{% youtube "https://www.youtube.com/watch?v=tZaAmapkp4Q", "'Banana' by Stony Pony" %}
+<YouTube
+  url="https://www.youtube.com/watch?v=tZaAmapkp4Q"
+  title="'Banana' by Stony Pony"
+/>
 
-{% youtube "https://www.youtube.com/watch?v=wlkCQXHEgjA", "'Spot Launch' by Boston Dynamics" %}
+<YouTube
+  url="https://www.youtube.com/watch?v=wlkCQXHEgjA"
+  title="'Spot Launch' by Boston Dynamics"
+/>
 
 The version in the Boston Dynamics video has removed the word "Banana" a few times, but it is otherwise the same song.
 
