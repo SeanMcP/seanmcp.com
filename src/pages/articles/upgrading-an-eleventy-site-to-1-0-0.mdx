@@ -10,6 +10,8 @@ verse:
 image:
 ---
 
+import Emoji from "astro-emoji";
+
 I initially published a [note](/notes) about how easy it was to upgrade to Eleventy `1.0.0`, but I hit a snag which warrants a quick article. Here are the two steps that I needed to complete to update this website to the latest version of Eleventy.
 
 First, update `@11ty/eleventy` with the following command:
@@ -38,6 +40,6 @@ There weren't any build configurations in Netlify for Node.js version, but a qui
 
 I added an environment variable for `NODE_VERSION` and set it to the current Node.js LTS (`16.13.2` as of writing), and the build was successful.
 
-Regardless of your setup, just make sure that you are using Node.js version `12` or later and you should be good to go. {% emoji "🚀" %}
+Regardless of your setup, just make sure that you are using Node.js version `12` or later and you should be good to go. <Emoji symbol="🚀" />
 
 Happy upgrading!

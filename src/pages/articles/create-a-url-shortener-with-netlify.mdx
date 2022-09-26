@@ -4,11 +4,13 @@ title: Create a URL shortener with Netlify
 description: Build your very own shortener in six quick steps
 pubDate: 2021-02-26
 tags:
-    - Netlify
+  - Netlify
 verse: Luke 19:1-10
 # /img/<IMAGE>.min.jpg
 image:
 ---
+
+import Emoji from "astro-emoji";
 
 After hearing of a few people doing the same, I set up a mostly-free URL shortener with Netlify: [smcp.dev](https://smcp.dev). Here's the steps I followed to get it done.
 
@@ -36,7 +38,7 @@ Login to Netlify (or create an account) and add a new project from git. Select y
 
 ## 4. Setup your custom domain
 
-In the main project view on Netlify, select "{% emoji '⚙️' %} Domain settings", then "Add custom domain". Enter the domain that you registered in step one and go through the flow.
+In the main project view on Netlify, select "<Emoji symbol='⚙️'/> Domain settings", then "Add custom domain". Enter the domain that you registered in step one and go through the flow.
 
 You'll need to update the DNS settings with your registrar to point to Netlify's servers:
 

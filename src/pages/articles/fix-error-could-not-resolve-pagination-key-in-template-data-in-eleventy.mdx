@@ -1,15 +1,17 @@
 ---
 layout: "../../layouts/ArticleLayout.astro"
-title: "Fix \"Error: Could not resolve pagination key in template data\" in Eleventy"
+title: 'Fix "Error: Could not resolve pagination key in template data" in Eleventy'
 description: Not a true fix, but a decent workaround when paginating collections in Eleventy
 pubDate: 2021-02-06
 tags:
-    - Debugging
-    - Eleventy
+  - Debugging
+  - Eleventy
 verse: Matthew 16:19
 # /img/<IMAGE>.min.jpg
 image:
 ---
+
+import Emoji from "astro-emoji";
 
 In a recent Eleventy project, I wanted to create a single collection for tags with two keys: `alphabetical` for an array of all tags, and `popular` for an array of arrays with the tag and number of times it was used.
 
@@ -27,7 +29,6 @@ Problem writing Eleventy templates: (more in DEBUG output)
 
 The pagination code in question looked like:
 
-
 ```md
 ---
 pagination:
@@ -37,9 +38,7 @@ permalink: /tag/{{ tag }}/
 ---
 ```
 
-
 Interesting. Maybe the collection hasn't been created by the time the pagination code runs, I guessed. To test this, I tried paginating `collections.tagList` to see if the `alphabetical` key was present:
-
 
 ```md
 ---
@@ -50,11 +49,9 @@ permalink: /tag/{{ tag }}/
 ---
 ```
 
-
 This created pages for `alphabetical` and `popular`, which proved my hypothesis wrong: the alphabetical data does exist when the pagination occurs.
 
 Maybe it had something to do with paginating nested objects? To confirm, I added a test object to the frontmatter and tried to paginate it:
-
 
 ```md
 ---
@@ -63,11 +60,10 @@ pagination:
   alias: tag
 permalink: /tag/{{ tag }}/
 test:
-    test:
-        test: ['a', 'b', 'c']
+  test:
+    test: ["a", "b", "c"]
 ---
 ```
-
 
 This worked as expected, creating pages for a, b, and c. So it isn't an issue with paginating deep objects.
 
@@ -79,7 +75,6 @@ Instead of `collections.tagList.alphabetical` and `collections.tagList.popular`,
 
 The final code to fix the "Error: could not resolve pagination key in template data" is a flattened collection:
 
-
 ```md
 ---
 pagination:
@@ -89,7 +84,6 @@ permalink: /tag/{{ tag }}/
 ---
 ```
 
-
-This works well, but I would still love to find a way to get the original solution to work. Let me know if you have a better way to solve this problem. {% emoji '👍' %}
+This works well, but I would still love to find a way to get the original solution to work. Let me know if you have a better way to solve this problem. <Emoji symbol='👍' />
 
 Happy paginating!

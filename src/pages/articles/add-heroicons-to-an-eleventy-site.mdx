@@ -11,6 +11,8 @@ verse:
 image:
 ---
 
+import Emoji from "astro-emoji";
+
 In a recent [Eleventy](https://11ty.dev) project, I wanted an easy way to add [Heroicons](https://heroicons.com). That lead me to creating an Eleventy plugin that adds some handy Heroicon shortcodes. Here's how to get started:
 
 First, install [`eleventy-plugin-heroicons`](https://npm.im/eleventy-plugin-heroicons):
@@ -132,6 +134,6 @@ module.exports = (eleventyConfig) => {
 
 There is also [an option to `errorOnMissing` icons](https://github.com/SeanMcP/eleventy-plugin-heroicons#configuration), which might be nice to ensure that all icons display as intended.
 
-Hopefully that helps! Let me know if you have any suggestions for the package. [PRs are most welcome {% emoji "😊" %}](https://github.com/SeanMcP/eleventy-plugin-heroicons/pulls).
+Hopefully that helps! Let me know if you have any suggestions for the package. [PRs are most welcome <Emoji symbol="😊" />](https://github.com/SeanMcP/eleventy-plugin-heroicons/pulls).
 
 Happy coding!
