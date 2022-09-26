@@ -9,13 +9,18 @@ const notes = getSortedArticles(await Astro.glob("./notes/*.{md,mdx}")).filter(
 );
 ---
 
-<PageLayout title="Notes">
+<PageLayout
+  description="A feed of short notes, thoughts, or ideas, preserved here on SeanMcP.com"
+  title="Notes"
+>
   <ul>
     {
       notes.map(({ frontmatter: { pubDate, number } }) => (
         <li data-number={number}>
           <a href={`/notes/${number}`}>Note #{number}</a>
-          <small><ReadableTime {pubDate} small /></small>
+          <small>
+            <ReadableTime {pubDate} small />
+          </small>
         </li>
       ))
     }
