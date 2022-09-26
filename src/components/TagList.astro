@@ -14,7 +14,7 @@ if (tags[0] === "string") {
 
 {
   tags && tags.length > 0 && (
-    <nav>
+    <nav aria-label="Article tags">
       {tags.map((tag) =>
         typeof tag === "string" ? (
           <a href={`/tags/${slugify(tag)}`}>{tag}</a>

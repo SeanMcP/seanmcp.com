@@ -5,7 +5,7 @@ import LogoLink from "./LogoLink.astro";
 
 <header>
   <LogoLink />
-  <nav>
+  <nav aria-label="primary">
     {
       navigation.primary.map((item) => (
         <a aria-current={item.url === Astro.url.pathname} href={item.url}>{item.label}</a>
