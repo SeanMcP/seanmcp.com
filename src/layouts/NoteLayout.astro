@@ -10,6 +10,7 @@ const title = `Note #` + number;
 ---
 
 <PageLayout title={title} withoutH1>
+  <div />
   <Note date={pubDate} edited={edited} number={number}>
     <slot />
   </Note>
@@ -17,6 +18,9 @@ const title = `Note #` + number;
 </PageLayout>
 
 <style>
+  div {
+    height: 2.5rem;
+  }
   p {
     margin-top: 2rem;
     text-align: center;
