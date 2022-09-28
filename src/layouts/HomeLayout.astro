@@ -1,9 +1,9 @@
 ---
 import PageLayout from "./PageLayout.astro";
 import ArticleList from "../components/ArticleList.astro";
-import { getSortedArticles } from "../utils";
+import { getSortedContent } from "../utils";
 
-const articles = getSortedArticles(await Astro.glob("../pages/articles/*.md*"));
+const articles = getSortedContent(await Astro.glob("../pages/articles/*.md*"));
 ---
 
 <PageLayout>

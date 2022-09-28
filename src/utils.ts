@@ -21,7 +21,7 @@ export function getTags(allPosts: any[]): Record<string, number> {
   return tags;
 }
 
-export function getSortedArticles(allPosts: any[]) {
+export function getSortedContent(allPosts: any[]) {
   return allPosts.sort(
     (a, b) =>
       new Date(b.frontmatter.pubDate).valueOf() -
