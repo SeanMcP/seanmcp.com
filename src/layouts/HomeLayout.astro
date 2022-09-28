@@ -3,7 +3,7 @@ import PageLayout from "./PageLayout.astro";
 import ArticleList from "../components/ArticleList.astro";
 import { getSortedContent } from "../utils";
 
-const articles = getSortedContent(await Astro.glob("../pages/articles/*.md*"));
+const articles = getSortedContent(await Astro.glob("../pages/articles/*.{md,mdx}"));
 ---
 
 <PageLayout>
