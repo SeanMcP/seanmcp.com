@@ -9,4 +9,7 @@ import metadata from "./src/data/metadata.json";
 export default defineConfig({
   site: metadata.url,
   integrations: [mdx(), sitemap(), svelte()],
+  markdown: {
+    drafts: true,
+  },
 });
