@@ -7,6 +7,8 @@ import BaseLayout from "./BaseLayout.astro";
 
 export { type Props } from "./BaseLayout.astro";
 
+const { withoutH1 } = Astro.props;
+
 // Logic repeated in BaseLayout.astro
 const title = Astro.props.frontmatter?.title ?? Astro.props.title;
 ---
@@ -26,7 +28,7 @@ const title = Astro.props.frontmatter?.title ?? Astro.props.title;
   </div>
   <SiteHeader />
   <main id="main">
-    <h1>{title}</h1>
+    {!withoutH1 && <h1>{title}</h1>}
     <slot />
   </main>
   <SiteFooter />

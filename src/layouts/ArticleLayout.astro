@@ -7,14 +7,14 @@ import TagList from "../components/TagList.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<PageLayout {...frontmatter}>
+<PageLayout {...frontmatter} withoutH1>
   <article class="article">
     {
       !frontmatter.tags?.includes("garden") && (
         <ReadableTime date={frontmatter.pubDate} />
       )
     }
-    <hr />
+    <h1>{frontmatter.title}</h1>
     <slot />
     <hr />
     <a
@@ -28,6 +28,17 @@ const { frontmatter } = Astro.props;
 </PageLayout>
 
 <style>
+  article {
+    padding-top: 2rem;
+  }
+
+  /* Specificity to override global styles */
+  article h1 {
+    font-size: 2em;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+  
   div {
     margin-top: 1rem;
   }
