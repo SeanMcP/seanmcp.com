@@ -20,7 +20,8 @@ In unix environments, returns a string along the lines of `"/home/USER"`.
 
 So if you want to write a script that accesses a configuration file like `.bashrc`, you could read the file with:
 
-```js/2
+<!-- ```js/2 -->
+```js
 // read-bashrc.ts
 const bashConfig = Deno.readTextFileSync(
     Deno.env.get("HOME") + "/.bashrc"

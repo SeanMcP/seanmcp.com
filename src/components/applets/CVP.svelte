@@ -73,11 +73,6 @@
     justify-self: end;
   }
 
-  #app h2 {
-    font-size: 1.5rem;
-    margin-top: 0;
-  }
-
   #results {
     border-top: 1px solid var(--off-background);
   }

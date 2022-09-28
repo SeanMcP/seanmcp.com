@@ -27,7 +27,8 @@ $$('span.svgIcon--star')
 
 Now that we've selected all stars, we need to iterate over them. Since we need to do something for every item in our iterable, we'll use `forEach`:
 
-```js/0,2
+<!-- ```js/0,2 -->
+```js
 $$('span.svgIcon--star').forEach(star => {
   // Hide parent element
 })
@@ -43,7 +44,8 @@ You may be familiar with the `querySelector` method, which starts with a given e
 
 Using the inspector again, we can see that articles outside the featured section are `div`s with the class `streamItem`. Using `closest`, we'll grab those elements:
 
-```js/1
+<!-- ```js/1 -->
+```js
 $$('span.svgIcon--star').forEach(star => {
   star.closest('.streamItem') // Hide element
 })
@@ -65,7 +67,8 @@ element.parentElement.removeChild(element)
 
 I think this pattern is annoying and try to avoid it whenever possible. But we could use it in our instance by first creating a variable to reference the element to be removed:
 
-```js/2,3
+<!-- ```js/2,3 -->
+```js
 // Option 1 - Remove element
 $$('span.svgIcon--star').forEach(star => {
   const article = star.closest('.streamItem')
@@ -77,7 +80,8 @@ This is your best option if you need to remove the element from the DOM.
 
 My preferred method leaves the element in the DOM and applies CSS styles to hide it from view. We'll set the article element's `display` style to `'none'`:
 
-```js/2
+<!-- ```js/2 -->
+```js
 // Option 2 - Hide element
 $$('span.svgIcon--star').forEach(star => {
   star.closest('.streamItem').style.display = 'none'

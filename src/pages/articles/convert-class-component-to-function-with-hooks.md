@@ -107,7 +107,8 @@ Using React Hooks, we can create the same example from above using a functional 
 
 First, we'll create a new file for our functional code and set up a basic function. Then copy the `return` from our class component and remove all references to `this.state`. We need to declare a variable to prevent reference errors, so let's call it `url`.
 
-```js/1,3-6
+<!-- ```js/1,3-6 -->
+```js
 const FunctionalComponent = props => {
   const url // We'll change this later
   return (
@@ -127,7 +128,8 @@ In our class component, we make an AJAX request when the component mounted and s
 
 For the first parameter, we'll pass an anonymous function that calls fetch, processes the data, and logs the response. The second argument just be an empty array for now.
 
-```js/2-6
+<!-- ```js/2-6 -->
+```js
 const FunctionalComponent = props => {
   const url
   React.useEffect(() => {
@@ -162,7 +164,8 @@ Using array destructuring, we can grab those variables and assign a name accordi
 
 We'll replace our old `url` with the results from `useState`:
 
-```js/1
+<!-- ```js/1 -->
+```js
 const FunctionalComponent = props => {
   const [url, setUrl] = React.useState(null)
   React.useEffect(() => {
@@ -183,7 +186,8 @@ Using `useState`, we can quickly add basic state to our functional component.
 
 In the code above, we're just logging the response from our API. Now we want to use the `setUrl` function to set the value or url in our component's state.
 
-```js/5
+<!-- ```js/5 -->
+```js
 const FunctionalComponent = props => {
   const [url, setUrl] = React.useState(null)
   React.useEffect(() => {
@@ -204,7 +208,8 @@ Now let's take a second to revisit the second parameter passed to `useEffect`. R
 
 Our effect depends on one outside variable: `setUrl`. This function is generated once by `useState`, and adding it to the array will ensure that our fetch call isn't fired repeatedly.[^1]
 
-```js/6
+<!-- ```js/6 -->
+```js
 const FunctionalComponent = props => {
   const [url, setUrl] = React.useState(null)
   React.useEffect(() => {

@@ -79,7 +79,8 @@ Since we're using our `temp` object to track all of the items that we have alrea
 
 Note: We haven't written the logic to add items to `temp` yet, but we know that this is how we want the application to work.
 
-```js/2
+<!-- ```js/2 -->
+```js
 for (let item of listWithDups) {
     // If we haven't seen this name before...
     if (!temp[item.name]) {}
@@ -88,7 +89,8 @@ for (let item of listWithDups) {
 
 Within this `if` block, we'll do our "unique name" logic. We want to add the item to our unique list and remember the name for next time.
 
-```js/3-4
+<!-- ```js/3-4 -->
+```js
 for (let item of listWithDups) {
     // If we haven't seen this name before...
     if (!temp[item.name]) {

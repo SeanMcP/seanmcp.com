@@ -11,7 +11,8 @@ A ternary or conditional operator is like an inline if statement. In JavaScript,
 
 When I first started coding, I found ternary operators more than a little confusing, so let's try to unpack them. Look at this common example:
 
-```js/1
+<!-- ```js/1 -->
+```js
 <span
     className={`Todo ${props.isDone ? 'Todo--done' : ''}`}
 >

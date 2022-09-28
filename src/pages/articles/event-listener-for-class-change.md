@@ -49,7 +49,8 @@ On each `MutationRecord` object, there is an `attributeName` property. If that v
 
 Now we can update the `callback` function by adding a condition:
 
-```js/0-5
+<!-- ```js/0-5 -->
+```js
 function callback(mutationsList) {
     mutationsList.forEach(mutation => {
         if (mutation.attributeName === 'class') {

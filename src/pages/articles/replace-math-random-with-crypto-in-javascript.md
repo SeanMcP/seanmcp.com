@@ -25,7 +25,8 @@ const typedArray = new Uint8Array(1);
 
 Now we pass this to `getRandomValues` and select the first (and only) item from the returned array.
 
-```js/1
+<!-- ```js/1 -->
+```js
 const typedArray = new Uint8Array(1)
 const randomValue = crypto.getRandomValues(typedArray)[0]
 // E.g. 122
@@ -33,7 +34,8 @@ const randomValue = crypto.getRandomValues(typedArray)[0]
 
 Since we used an `Uint8Array`, all of the numbers generated will from 0 to 255. To convert that into the same float returned from `Math.random`, we need to divide the value by the total number of possible numbers: 256 or 2<sup>8</sup>.
 
-```js/2
+<!-- ```js/2 -->
+```js
 const typedArray = new Uint8Array(1)
 const randomValue = crypto.getRandomValues(typedArray)[0]
 const randomFloat = randomValue / Math.pow(2, 8)

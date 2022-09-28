@@ -57,7 +57,8 @@ Now when we run the code, we see the contents of `data.json` logged in the conso
 
 This looks good, but it is just a formatted string. To consume this data, we need to use the global `JSON` object's `parse` method to get a usuable json object.
 
-```js/2
+<!-- ```js/2 -->
+```js
 const decoder = new TextDecoder('utf-8')
 const data = await Deno.readFile('data.json')
 console.log(JSON.parse(decoder.decode(data)))

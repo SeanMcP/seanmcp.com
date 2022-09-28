@@ -18,7 +18,7 @@ Netlify's guide for [adding Netlify CMS to your site](https://www.netlifycms.org
 
 Your posts will probably have tags, or a list of strings for organizing content. Netlify CMS has a [list widget type](https://www.netlifycms.org/docs/widgets/#list) that will work nicely:
 
-```yml
+```yaml
 # admin/config.yml
 collections:
   - name: "blog"

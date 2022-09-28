@@ -76,7 +76,8 @@ function IconButton({ children, icon, ...props }) {
 
 After reviewing with the design team, you determing that it would be better for the button text to be inline with the `Icon`, so you swap the `div` for a `span`:
 
-```js/4
+<!-- ```js/4 -->
+```js
 function IconButton({ children, icon, ...props }) {
     return (
         <button {...props}>

@@ -39,7 +39,8 @@ Both are returning the same data, but it isn't consumable. In most instances, yo
 
 Since we are working with a json file, we can use the global `JSON` object to read the data. The `parse` method will convert this Buffer into a usuable JSON object:
 
-```js/3,7
+<!-- ```js/3,7 -->
+```js
 const fs = require('fs')
 
 fs.readFile('./data.json', (error, data) => (

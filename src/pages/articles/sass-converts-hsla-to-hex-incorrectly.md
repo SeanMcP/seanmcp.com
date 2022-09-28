@@ -65,7 +65,8 @@ If you search around for an answer, you will find a few suggestions to [use stri
 
 Instead of changing how you declare `hsl` value or recreating the function, you can fix this issue by **using decimal alpha values instead of percent**. Going back to the original example, change `10%` to `0.1`:
 
-```css/2
+<!-- ```css/2 -->
+```css
 /* Input Sass */
 .subtle-blue {
   background-color: hsla(212, 50%, 50%, 0.1);
@@ -74,7 +75,8 @@ Instead of changing how you declare `hsl` value or recreating the function, you 
 
 And Sass will convert it to alpha-supporting `rgba`:
 
-```css/2
+<!-- ```css/2 -->
+```css
 /* Output css */
 .subtle-blue {
   background-color: rgba(64, 123, 191, 0.1);

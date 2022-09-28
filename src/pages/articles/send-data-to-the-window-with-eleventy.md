@@ -67,7 +67,8 @@ Then use the new shortcode like so:
 
 Nice and simple! I'm going to offer an optional improvement to cleanup after exposing the data:
 
-```js/1,3
+<!-- ```js/1,3 -->
+```js
 eleventyConfig.addShortcode("expose", data => {
     return `<script id="__EXPOSE__">
         window.__DATA__=JSON.parse(${JSON.stringify(data)});

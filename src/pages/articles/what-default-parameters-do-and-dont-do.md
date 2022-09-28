@@ -40,7 +40,8 @@ You probably don't want your function to return `Hello undefined!`, so let's try
 
 Add the following to the declaration line of `greetUser()`:
 
-```js/0
+<!-- ```js/0 -->
+```js
 function greetUser(name = "there") {
     return `Hello ${name}!`
 }
@@ -80,7 +81,8 @@ function greetUser(user) {
 
 You can imagine the complexity of this dive check growing with the size of the user object. Instead, we can save ourselves some trouble by defaulting that parameter to something that we can use right away:
 
-```js/0
+<!-- ```js/0 -->
+```js
 function greetUser(user = { name: 'there' }) {
     console.log(`Hello ${user.name}!`)
 }

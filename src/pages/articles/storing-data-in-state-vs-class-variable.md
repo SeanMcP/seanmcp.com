@@ -75,7 +75,8 @@ Updating the class variable involves neither, so it does not trigger a re-render
 
 In order to use class variables, we need to take the responsibility of triggering the re-render when our data changes. To do that, we need to add a line to our example:
 
-```js/14
+<!-- ```js/14 -->
+```js
 class VariableCounter extends React.Component {
   count = 0;
 
@@ -111,7 +112,8 @@ Instead of setting our count as a class variable, let's instead create a state o
 
 We only need to make a few modifications to the `VariableCounter` for our new component:
 
-```js/1-3,8,15-17
+<!-- ```js/1-3,8,15-17 -->
+```js
 class StateCounter extends React.Component {
   state = {
     count: 0
