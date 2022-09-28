@@ -9,8 +9,16 @@ const {
 const title = `Note #` + number;
 ---
 
-<PageLayout title={title}>
+<PageLayout title={title} withoutH1>
   <Note date={pubDate} edited={edited} number={number}>
     <slot />
   </Note>
+  <p>Browse <a href="/notes/">all notes</a></p>
 </PageLayout>
+
+<style>
+  p {
+    margin-top: 2rem;
+    text-align: center;
+  }
+</style>
