@@ -1,12 +1,16 @@
 ---
 import ReadableTime from "./ReadableTime.astro";
+import { getSortedContent } from "../utils";
 
-const { articles } = Astro.props;
+const { articles, count } = Astro.props;
+
+const all = articles || getSortedContent(await Astro.glob("../pages/articles/*.{md,mdx}"));
+const articlesToRender = all.slice(0, count);
 ---
 
 <section>
   {
-    articles.map((article) => (
+    articlesToRender.map((article) => (
       <article>
         <div>
           {/* Added for styling. Find a better way. */}
