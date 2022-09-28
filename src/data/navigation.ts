@@ -32,7 +32,7 @@ const LINKS = {
   feed: {
     description: "Subscribe to my blog with your favorite RSS reader",
     label: "Feed",
-    url: "/feed/feed.xml",
+    url: "/rss.xml",
   },
   soccer: {
     description: "Read articles about soccer from a dedicated fan",
@@ -50,7 +50,7 @@ export default {
     LINKS.talks,
     LINKS.notes,
     // LINKS.bookshelf,
-    // LINKS.soccer,
-    // LINKS.feed,
+    LINKS.soccer,
+    LINKS.feed,
   ],
 };
