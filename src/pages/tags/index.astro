@@ -1,0 +1,18 @@
+---
+import TagList from "../../components/TagList.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
+import { getTags } from "../../utils";
+
+const allPosts = await Astro.glob("../articles/*.md*");
+const tags = getTags(allPosts);
+---
+
+<PageLayout title="Tags">
+  <p>
+    All tags are listed below alphabetically. <a href="/notes/">Notes</a> are organized
+    separately.
+  </p>
+  <TagList tags={Object.entries(tags)} />
+
+  Hello?
+</PageLayout>

@@ -1,0 +1,34 @@
+---
+import ArticleList from "../../components/ArticleList.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
+import { getSortedArticles, getTags, slugify } from "../../utils";
+
+export async function getStaticPaths() {
+  const sorted = getSortedArticles(await Astro.glob("../articles/*.md*"));
+  const tags = getTags(sorted);
+
+  return Object.keys(tags).map((tag) => {
+    return {
+      params: {
+        tag: slugify(tag),
+      },
+      props: {
+        tag,
+        articles: sorted.filter((article) =>
+          article.frontmatter.tags?.includes(tag)
+        ),
+      },
+    };
+  });
+}
+const { tag, articles } = Astro.props;
+
+const title = `Tagged "${tag}"`;
+---
+
+<PageLayout title={title}>
+  <ArticleList articles={articles} />
+  <p>
+    Browse <a href="/tags">by tag</a> or <a href="/articles">all articles</a>.
+  </p>
+</PageLayout>
