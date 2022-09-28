@@ -1,6 +1,8 @@
 ---
+import Emoji from "astro-emoji";
 import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
+import SkipLink from "../components/SkipLink.astro";
 import BaseLayout from "./BaseLayout.astro";
 
 export { type Props } from "./BaseLayout.astro";
@@ -10,7 +12,18 @@ const title = Astro.props.frontmatter?.title ?? Astro.props.title;
 ---
 
 <BaseLayout {...Astro.props}>
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <SkipLink />
+  <div>
+    <p>
+      <Emoji symbol="👋" />
+      Hey neighbor! I am in the process of rebuilding this site, and there may be
+      some rough edges. If you come across an issue or content that you appears to
+      be missing, please
+      <a href="mailto:sean@seanmcp.com?subject=You Goofed"
+        >reach out and let me know</a
+      >.
+    </p>
+  </div>
   <SiteHeader />
   <main id="main">
     <h1>{title}</h1>
@@ -18,3 +31,16 @@ const title = Astro.props.frontmatter?.title ?? Astro.props.title;
   </main>
   <SiteFooter />
 </BaseLayout>
+
+<style>
+  div {
+    background-color: var(--off-background);
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: calc(10rem * 4);
+  }
+</style>

@@ -7,9 +7,18 @@ import LogoLink from "./LogoLink.astro";
   <LogoLink />
   <nav aria-label="primary">
     {
-      navigation.primary.map((item) => (
-        <a aria-current={item.url === Astro.url.pathname} href={item.url}>{item.label}</a>
-      ))
+      navigation.primary.map((item) => {
+        return (
+          <a
+            aria-current={
+              [Astro.url.pathname, Astro.url.pathname + "/"].includes(item.url)
+                ? "page"
+                : null
+            }
+            href={item.url}
+          >{item.label}</a>
+        );
+      })
     }
   </nav>
 </header>
@@ -19,6 +28,10 @@ import LogoLink from "./LogoLink.astro";
     align-items: center;
     display: flex;
     justify-content: space-between;
+  }
+
+  nav a {
+    font-weight: bold;
   }
 
   nav a:not(:last-child) {
