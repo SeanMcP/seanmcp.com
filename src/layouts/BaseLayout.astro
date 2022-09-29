@@ -1,0 +1,29 @@
+---
+import MetaTags from "../components/MetaTags.astro";
+import "../styles/global.css";
+
+export interface Props {
+  foot?: string;
+  head?: string;
+  title: string;
+}
+
+const found = {
+  description: Astro.props.frontmatter?.description ?? Astro.props.description,
+  foot: Astro.props.frontmatter?.foot ?? Astro.props.foot,
+  head: Astro.props.frontmatter?.head ?? Astro.props.head,
+  image: Astro.props.frontmatter?.image ?? Astro.props.image,
+  title: Astro.props.frontmatter?.title ?? Astro.props.title,
+};
+---
+
+<html lang="en">
+  <head>
+    <MetaTags {...found} />
+    {found.head && <Fragment set:html={found.head} />}
+  </head>
+
+  <slot />
+
+  {found.foot && <Fragment set:html={found.foot} />}
+</html>

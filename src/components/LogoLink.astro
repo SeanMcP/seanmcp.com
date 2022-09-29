@@ -1,0 +1,113 @@
+<a aria-current={Astro.url.pathname === "/"} aria-label="SeanMcP.com" href="/">
+  <div class="letter s">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="letter m">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</a>
+
+<style>
+  a {
+    --1un: 0.125rem;
+    --2un: calc(2 * var(--1un));
+    --8un: calc(8 * var(--1un));
+    --gradient: linear-gradient(
+      45deg,
+      hsl(216deg 85% 34%) 0%,
+      hsl(210deg 100% 34%) 11%,
+      hsl(207deg 100% 35%) 22%,
+      hsl(204deg 100% 37%) 33%,
+      hsl(202deg 100% 38%) 44%,
+      hsl(199deg 100% 39%) 56%,
+      hsl(196deg 100% 40%) 67%,
+      hsl(193deg 100% 41%) 78%,
+      hsl(191deg 100% 41%) 89%,
+      hsl(188deg 100% 42%) 100%
+    );
+    --foreground: var(--background);
+
+    background: var(--gradient);
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--1un);
+    padding: var(--2un);
+    position: relative;
+  }
+
+  a::after {
+    background: var(--text-color);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    transition: opacity 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    top: 0;
+  }
+
+  a:is(:focus,:hover)::after {
+    opacity: 0;
+  }
+
+  .letter > span {
+    background-color: var(--foreground);
+    display: inline-block;
+  }
+
+  .s,
+  .m {
+    display: flex;
+    height: var(--8un);
+    width: var(--8un);
+    position: relative;
+    z-index: 1;
+  }
+
+  .s {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .letter::after,
+  .letter::before {
+    content: "";
+    position: absolute;
+    width: var(--2un);
+    height: var(--1un);
+    background-color: var(--foreground);
+  }
+
+  .s::before {
+    top: var(--2un);
+  }
+
+  .s::after {
+    bottom: var(--2un);
+    right: 0;
+  }
+
+  .m {
+    justify-content: space-between;
+  }
+
+  .m::before {
+    width: var(--8un);
+    height: var(--2un);
+  }
+
+  .s > span {
+    height: var(--2un);
+    width: var(--8un);
+  }
+
+  .m > span {
+    height: var(--8un);
+    width: var(--2un);
+  }
+</style>

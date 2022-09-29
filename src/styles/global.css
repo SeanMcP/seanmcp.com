@@ -1,0 +1,164 @@
+:root {
+  --dark: hsl(216, 5%, 10%);
+  --light: hsl(216, 5%, 97%);
+
+  --accent: hsl(188, 100%, 42%);
+  --primary: hsl(216, 85%, 34%);
+
+  --background: var(--light);
+  --off-background: hsla(0, 0%, 10%, 20%);
+  --text-color: var(--dark);
+  --lighter-text-color: hsl(216, 5%, 40%);
+  --anchor-color: var(--primary);
+
+  --inline-code-background: hsla(0, 0%, 0%, 7.5%);
+  --inline-code-color: hsla(0, 0%, 0%, 75%);
+
+  --sans-font: system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  --mono-font: Menlo, Monaco, Consolas, "Andale Mono WT", "Andale Mono",
+    "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  --body-font: var(--sans-font);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  --text-color: hsl(0, 0%, 20%);
+  --background: white;
+  --lighter-text-color: hsl(0, 0%, 40%);
+  background: var(--background);
+  font-family: var(--body-font);
+  color: var(--text-color);
+}
+
+body > header,
+main,
+body > footer {
+  margin: 0 auto;
+  max-width: calc(10rem * 4);
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+  margin-top: 1em;
+}
+
+hr {
+  background: var(--off-background);
+  border: none;
+  height: 2px;
+  height: 0;
+  margin: 2rem 0;
+}
+
+hr.small {
+  width: 4rem;
+}
+
+a {
+  color: var(--anchor-color);
+  text-decoration-color: var(--off-background);
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 0.125em;
+  transition: color 100ms ease-in-out, text-decoration 100ms ease-in-out;
+}
+
+a[aria-current="page"],
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+a:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+code,
+.astro-code {
+  font-family: var(--mono-font);
+  font-size: 1rem;
+}
+
+.astro-code {
+  padding: 1rem;
+}
+
+pre,
+code,
+kbd {
+  font-family: var(--mono-font);
+  line-height: 1.5;
+}
+
+kbd,
+code:not([class]) {
+  font-size: 0.875em;
+  padding: 2px 4px;
+}
+
+pre:not([class]),
+:not(pre) > code:not([class]) {
+  background: var(--inline-code-background);
+  color: var(--inline-code-color);
+}
+
+pre:not([class]) {
+  overflow-y: auto;
+}
+
+kbd {
+  border: 1px solid var(--off-background);
+  border-radius: 4px;
+  border-bottom-width: 2px;
+}
+
+li,
+p {
+  line-height: 1.5;
+}
+
+blockquote {
+  border-left: 4px solid currentColor;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.5rem 1.5rem;
+}
+
+blockquote p {
+  font-style: italic;
+  line-height: 1.25;
+  margin: 0;
+}
+
+li ol,
+li ul {
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+/* Helpers */
+
+.--visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

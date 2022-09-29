@@ -1,0 +1,53 @@
+---
+import ReadableTime from "./ReadableTime.astro";
+import { getSortedContent } from "../utils";
+
+const { articles, count } = Astro.props;
+
+const all = articles || getSortedContent(await Astro.glob("../pages/articles/*.{md,mdx}"));
+const articlesToRender = all.slice(0, count);
+---
+
+<section>
+  {
+    articlesToRender.map((article) => (
+      <article>
+        <div>
+          {/* Added for styling. Find a better way. */}
+          <ReadableTime date={article.frontmatter.pubDate} />
+        </div>
+        <a href={article.url}>{article.frontmatter.title}</a>
+        <p>{article.frontmatter.description}</p>
+      </article>
+    ))
+  }
+</section>
+
+<style>
+  article {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  article:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  article > * {
+    margin: 0;
+  }
+
+  article a {
+    font-weight: bold;
+  }
+
+  @media screen and (min-width: 600px) {
+    article {
+      grid-template-columns: 10rem auto;
+    }
+
+    article div {
+      grid-row: 1 / span 2;
+    }
+  }
+</style>

@@ -1,7 +1,6 @@
 ---
-layout: page
-title: Uses
-description: The tools that I use to do what I do.
+layout: "../layouts/PageLayout.astro"
+title: "Uses"
 ---
 
 ## Browsers

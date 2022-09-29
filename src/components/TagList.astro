@@ -1,0 +1,37 @@
+---
+import { slugify } from "../utils";
+
+// Does Astro care about mutating props?
+const tags = [...Astro.props.tags];
+
+// tags could either be string[] or [string, number][]
+if (tags[0] === "string") {
+  tags.sort();
+} else {
+  tags.sort((a, b) => a[0].localeCompare(b[0]));
+}
+---
+
+{
+  tags && tags.length > 0 && (
+    <nav aria-label="Article tags">
+      {tags.map((tag) =>
+        typeof tag === "string" ? (
+          <a href={`/tags/${slugify(tag)}`}>{tag}</a>
+        ) : (
+          <a href={`/tags/${slugify(tag[0])}`}>
+            {tag[0]} ({tag[1]})
+          </a>
+        )
+      )}
+    </nav>
+  )
+}
+
+<style>
+  nav {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+</style>

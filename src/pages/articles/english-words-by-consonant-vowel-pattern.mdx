@@ -1,0 +1,25 @@
+---
+layout: "../../layouts/ArticleLayout.astro"
+title: English words by consonant-vowel pattern
+description: A tool to look up common words by their consonant-vowel pattern and resources for the rest
+pubDate: 2022-03-03
+tags:
+  - Reading
+verse:
+# /img/<IMAGE>.min.jpg
+image:
+---
+
+import CVP from '../../components/applets/CVP.svelte'
+
+When teaching people (or computers) to read, it's useful to group similar words into categories. One such grouping is by consonant-vowel patterns, which represent words by the letters that they contain.
+
+With consonant-vowel patterns, we can put words like "bun", "cat", and "dip" into one bucket as "cvc" words; they are all made up of a consonant, followed by a vowel, and ending in a consonant.
+
+I put together [a list of all English words sorted by their consonant-vowel pairs](https://github.com/SeanMcP/reading/tree/master/consonant-vowel-patterns). However, that is a long list to search through and I thought it might be nice to have a tool to look up shorter words by their consonant-vowel pattern.
+
+<CVP client:idle />
+
+The word list isn't perfect, but hopefully it will give you all of the data that you need for your use case! Let me know if you have any suggestions or run into any issues.
+
+Happy reading!

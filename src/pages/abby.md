@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: "../layouts/PageLayout.astro"
 title: Abby
+description: A page all about our family dog
 ---
 
 <img src="/img/abby-1.jpg" alt="A brown mutt named Abby looking longingly into the camera" width="300">

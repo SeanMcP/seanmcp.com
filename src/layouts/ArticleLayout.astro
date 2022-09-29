@@ -1,0 +1,49 @@
+---
+import PageLayout from "./PageLayout.astro";
+import Bio from "../components/Bio.astro";
+import ReadableTime from "../components/ReadableTime.astro";
+import TagList from "../components/TagList.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<PageLayout {...frontmatter} withoutH1>
+  <article class="article">
+    {
+      !frontmatter.tags?.includes("garden") && (
+        <ReadableTime date={frontmatter.pubDate} />
+      )
+    }
+    <h1>{frontmatter.title}</h1>
+    <slot />
+    <hr />
+    <a
+      href={`mailto:sean@seanmcp.com?subject=Re: ${frontmatter.title}`}
+      id="comment-link">Send a comment</a
+    >
+    <div>Read more: <TagList tags={frontmatter.tags} /></div>
+  </article>
+  <hr />
+  <Bio />
+</PageLayout>
+
+<style>
+  article {
+    padding-top: 2rem;
+  }
+
+  /* Specificity to override global styles */
+  article h1 {
+    font-size: 2em;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+  
+  div {
+    margin-top: 1rem;
+  }
+
+  :global(.article img) {
+    max-width: 100%;
+  }
+</style>

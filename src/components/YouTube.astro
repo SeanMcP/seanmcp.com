@@ -1,0 +1,22 @@
+---
+const { title, url } = Astro.props;
+
+const id = new URL(url).searchParams.get("v");
+---
+
+<iframe
+  allowfullscreen
+  frameborder="0"
+  src={`https://www.youtube-nocookie.com/embed/${id}`}
+  title={`YouTube video player${title ? ` for ${title}` : ""}`}
+>
+</iframe>
+
+<style>
+  iframe {
+    height: 50vw;
+    margin: 1rem 0;
+    max-height: 25rem;
+    width: 100%;
+  }
+</style>

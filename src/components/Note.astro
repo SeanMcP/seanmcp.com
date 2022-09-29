@@ -1,0 +1,36 @@
+---
+import { readableDate } from "../utils";
+
+const { date, edited, number } = Astro.props;
+---
+
+<article>
+  <header>
+    <h1>Note #{number}</h1>
+    <span>
+      <a href={`/notes/${number}`}><time datetime={date}>{readableDate(date)}</time></a>
+      {edited && <span>(Edited)</span>}
+    </span>
+  </header>
+  <br />
+  <div>
+    <slot />
+  </div>
+</article>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header h1 {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  div {
+    border: 2px solid var(--off-background);
+    padding: 0 1rem;
+  }
+</style>

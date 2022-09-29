@@ -1,0 +1,47 @@
+---
+import ReadableTime from "../components/ReadableTime.astro";
+
+import PageLayout from "../layouts/PageLayout.astro";
+import { getSortedContent } from "../utils";
+
+const notes = getSortedContent(await Astro.glob("./notes/*.{md,mdx}")).filter(
+  (file) => file.frontmatter.number
+);
+---
+
+<PageLayout
+  description="A feed of short notes, thoughts, or ideas, preserved here on SeanMcP.com"
+  title="Notes"
+>
+  <ul>
+    {
+      notes.map(({ frontmatter: { pubDate, number } }) => (
+        <li data-number={number}>
+          <a href={`/notes/${number}`}>Note #{number}</a>
+          <small>
+            <ReadableTime date={pubDate} small />
+          </small>
+        </li>
+      ))
+    }
+  </ul>
+</PageLayout>
+
+<style>
+  ul {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  li a {
+    display: block;
+  }
+  @media screen and (min-width: 768px) {
+    ul {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>

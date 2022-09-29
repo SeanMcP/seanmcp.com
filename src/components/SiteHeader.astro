@@ -1,0 +1,40 @@
+---
+import navigation from "../data/navigation";
+import LogoLink from "./LogoLink.astro";
+---
+
+<header>
+  <LogoLink />
+  <nav aria-label="primary">
+    {
+      navigation.primary.map((item) => {
+        return (
+          <a
+            aria-current={
+              [Astro.url.pathname, Astro.url.pathname + "/"].includes(item.url)
+                ? "page"
+                : null
+            }
+            href={item.url}
+          >{item.label}</a>
+        );
+      })
+    }
+  </nav>
+</header>
+
+<style>
+  header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav a {
+    font-weight: bold;
+  }
+
+  nav a:not(:last-child) {
+    margin-right: 1rem;
+  }
+</style>

@@ -1,12 +1,8 @@
 ---
-layout: page
+layout: "../layouts/PageLayout.astro"
 title: Are you looking for work, Sean?
 head: >-
     <style>
-        main {
-            min-height: 50vh;
-        }
-
         h1 {
             text-align: center;
         }
