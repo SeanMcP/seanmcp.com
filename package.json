@@ -15,7 +15,8 @@
     "astro": "astro",
     "build": "astro build",
     "dev": "astro dev",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "draft": "node src/draft-script.mjs"
   },
   "devDependencies": {
     "@astrojs/svelte": "^1.0.0",
