@@ -1,0 +1,55 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import books from "../data/books.json";
+import Rating from "../components/Rating.astro";
+
+const booksByYear = {};
+books.forEach((entry) => {
+  const [title, author, year, rating] = entry;
+
+  // Ignore example book
+  if (title === "TITLE") return;
+
+  const yearKey = typeof year === "number" ? year : "_";
+  if (!booksByYear[yearKey]) {
+    booksByYear[yearKey] = [];
+  }
+  booksByYear[yearKey].push({ title, author, rating });
+});
+const sections = Object.keys(booksByYear).sort().reverse();
+---
+
+<PageLayout title="Bookhelf" description="A list of books that I've read">
+  <p>Keeping a record of and taking notes on books that I've read.</p>
+  {
+    sections.map((key) => {
+      const books = booksByYear[key].reverse();
+      return (
+        <section>
+          <h2>{key === "_" ? "In Progress" : key}</h2>
+          <ul>
+            {books.map((book) => (
+              <li>
+                <span><i>{book.title}</i> by {book.author}</span>
+                {book.rating && (
+                  [
+                    <span>·</span>
+                    <Rating rating={book.rating} />
+                  ]
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      );
+    })
+  }
+</PageLayout>
+
+<style>
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+</style>

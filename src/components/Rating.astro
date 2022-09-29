@@ -1,0 +1,7 @@
+---
+const { rating } = Astro.props;
+
+const iterable = Array.from(Array(rating));
+---
+
+<span aria-label={`Rated ${rating}/5`}>{iterable.map((_) => "★")}</span>

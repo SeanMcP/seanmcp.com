@@ -49,7 +49,7 @@ export default {
     LINKS.tags,
     LINKS.talks,
     LINKS.notes,
-    // LINKS.bookshelf,
+    LINKS.bookshelf,
     LINKS.soccer,
     LINKS.feed,
   ],
