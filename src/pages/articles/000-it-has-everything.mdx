@@ -12,12 +12,26 @@ image: /img/photograph.min.jpg
 draft: true
 ---
 
+import Callout from '../../components/Callout.astro'
 import YouTube from '../../components/YouTube.astro'
 
 Here is some text with [a link](https://seanmcp.com)[^1]:
 
 ```js
 let variable = true
+
+class Dog extends Animal {
+    constructor(name) {
+        super(name)
+
+        this.name = name
+        this.isCute = true
+        this.speak = () => {
+            console.log('woof')
+        }
+        this.legs = 3
+    }
+}
 ```
 
 What about no syntax?
@@ -43,6 +57,36 @@ Here is <kbd>space</kbd> some more `stuff` that will need to work.
 ##### Heading 5
 
 <YouTube url="https://www.youtube.com/watch?v=fNedC1qBnZ8" />
+
+<Callout type="check">
+
+check
+
+</Callout>
+
+<Callout type="error">
+
+error
+
+</Callout>
+
+<Callout type="info">
+
+info
+
+</Callout>
+
+<Callout type="warn">
+
+warn
+
+</Callout>
+
+<Callout type="wave">
+
+wave
+
+</Callout>
 
 ###### Heading 6
 
