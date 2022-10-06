@@ -16,7 +16,7 @@ const title = titleArg.includes('"')
 const fileName =
   (title ? slugify(title, { lower: true, strict: true }) : "draft") + ".md";
 const filePath = "./src/pages/articles/" + fileName;
-const date = new Date().toISOString().split("T")[0];
+const date = new Date().toISOString();
 
 fs.readFile("./src/article-template.md", "utf8", (err, data) => {
   if (err) {
