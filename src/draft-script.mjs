@@ -1,5 +1,6 @@
 import fs from "fs";
 import slugify from "slugify";
+import { execSync } from "child_process";
 
 const titleArg = process.argv[2] || "";
 
@@ -27,7 +28,9 @@ fs.readFile("./src/article-template.md", "utf8", (err, data) => {
   fs.writeFile(filePath, injectedData, "utf8", (err) => {
     if (err) throw err;
     console.log(
-      `✅  Draft${titleArg ? ` "${titleArg}"` : ""} created at \`${filePath}\``
+      `🏗  Created draft${titleArg ? ` "${titleArg}"` : ""} at ${filePath}\n`
     );
+
+    execSync(`code -g ${filePath}:13`);
   });
 });
