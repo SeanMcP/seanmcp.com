@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Rebuilding with Astro
 description: Detailing why and how I rebuilt this site with Astro.
 draft: true
@@ -13,8 +13,8 @@ verse: Psalm 19:1
 ---
 
 import Emoji from "astro-emoji";
-import Callout from "../../components/Callout.astro";
-import Counter from "../../components/applets/Counter.svelte";
+import Callout from "@components/Callout.astro";
+import Counter from "@components/applets/Counter.svelte";
 
 After almost four years of [Eleventy](https://11ty.dev), I recently completed a
 rebuild of this site with [Astro](https://astro.build).

@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: What is a build.gradle file?
 description: An brief explanation of Gradle and build.gradle files for JavaScript developers
 pubDate: 2021-11-04

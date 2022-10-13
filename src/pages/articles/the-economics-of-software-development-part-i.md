@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: The Economics of Software Development, Part I
 description: How developers can reduce opportunity costs and avoid the sunk-cost fallacy
 pubDate: 2020-07-14

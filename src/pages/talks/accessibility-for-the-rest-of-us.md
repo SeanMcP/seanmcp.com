@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PageLayout.astro"
+layout: "@layouts/PageLayout.astro"
 title: Accessibility for the rest of us
 description: This talk covers accessibility, why it's important, the WCAG standards, common accessibility tasks, and recommendations for building accessible products.
 type: conference

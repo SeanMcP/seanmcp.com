@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: "JS Basics: Generate a random number"
 description: Using JavaScript's Math object to generate random numbers
 pubDate: 2019-02-11

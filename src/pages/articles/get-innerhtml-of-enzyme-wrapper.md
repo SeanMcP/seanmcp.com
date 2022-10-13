@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Get innerHTML of Enzyme wrapper
 description: Writing a little helper function to grab the HTML of all children of a shallow wrapper in Enzyme
 pubDate: 2021-07-12

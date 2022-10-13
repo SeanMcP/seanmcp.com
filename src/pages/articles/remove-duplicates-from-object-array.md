@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: How to remove duplicates from an object array?
 description: Not as easy as we'd like it, but not as hard as it could be
 pubDate: 2020-02-03

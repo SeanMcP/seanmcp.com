@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Geddes' Guide to Crafting
 description: When building something new, get your foundation in place before building upon it.
 pubDate: 2021-01-29

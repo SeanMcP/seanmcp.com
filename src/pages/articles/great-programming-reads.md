@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Great programming reads
 description: A list of articles, books, and resources for software engineers
 pubDate: 2020-03-20

@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Count class methods in JavaScript
 description: Although JS treats them like object, finding the methods of a class programmatically is trickier than I thought.
 pubDate: 2021-06-21

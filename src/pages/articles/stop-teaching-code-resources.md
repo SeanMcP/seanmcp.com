@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: "\"Stop Teaching Code\" in JavaScript"
 description: A quick review of Jeff Olson's article on teaching code with translated examples
 pubDate: 2019-11-26

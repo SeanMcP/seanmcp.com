@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: "JS Basics: Ternary Operator"
 description: Demystifying the inline if statement
 pubDate: 2019-02-08

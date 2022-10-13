@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Filter out premium Medium articles
 description: Using a console script to alter the content on a webpage
 pubDate: 2019-04-08

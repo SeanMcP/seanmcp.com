@@ -1,7 +1,7 @@
 ---
-import ReadableTime from "../components/ReadableTime.astro";
+import ReadableTime from "@components/ReadableTime.astro";
 
-import PageLayout from "../layouts/PageLayout.astro";
+import PageLayout from "@layouts/PageLayout.astro";
 import { getSortedContent } from "../utils";
 
 const notes = getSortedContent(await Astro.glob("./notes/*.{md,mdx}")).filter(

@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Manage analysis paralysis while programming
 description:
 pubDate: 2020-07-14

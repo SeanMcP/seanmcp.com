@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: How to pronounce my name
 description: A guide to pronounce my often-mispronounced name
 pubDate: 2019-06-15

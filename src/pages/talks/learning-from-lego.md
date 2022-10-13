@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PageLayout.astro"
+layout: "@layouts/PageLayout.astro"
 title: Learning from LEGO
 description: LEGO is a go-to analogy for programming, but what else can we learn from these little-plastic bricks on building quality software?
 type: lightning

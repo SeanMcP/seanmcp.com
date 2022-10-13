@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Don't remove default focus styles, enhance them
 description: 
 pubDate: 2020-07-30

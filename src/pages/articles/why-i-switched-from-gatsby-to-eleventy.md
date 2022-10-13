@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Why I switched from Gatsby to Eleventy
 description:
 pubDate: 2019-04-12

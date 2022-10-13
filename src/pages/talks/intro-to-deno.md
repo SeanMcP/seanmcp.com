@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PageLayout.astro"
+layout: "@layouts/PageLayout.astro"
 title: Intro to Deno
 description: This talk will introduce you to Deno, its features, and how it compares to Node.js. Then we'll illustrate some of those differences in a live demo.
 type: lightning

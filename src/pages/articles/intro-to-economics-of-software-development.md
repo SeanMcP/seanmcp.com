@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Intro to "The Economics of Software Development"
 description: Introducing a new series on how economics helps explain the decisions we make when developing software
 pubDate: 2020-07-09

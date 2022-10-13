@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Read a json file in Node.js
 description: How to use Node.js's file system to read and parse data from a json file.
 pubDate: 2020-05-27

@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Helpful online tools for diagramming
 description: Features and examples for some of the tools that I use to create illustrations and diagrams
 pubDate: 2021-12-15

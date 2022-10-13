@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Adding accessibility checks to your React app
 description: A few tools to help you build more accessible React applications
 pubDate: 2019-03-04

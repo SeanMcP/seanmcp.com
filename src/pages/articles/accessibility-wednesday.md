@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Accessibility Wednesday
 description: Learning and sharing about accessibility for everyone
 pubDate: 2019-02-06

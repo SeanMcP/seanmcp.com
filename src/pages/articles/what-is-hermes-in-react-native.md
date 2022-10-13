@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: What is Hermes in React Native?
 description: Hermes is a JavaScript engine that is designed to run on mobile devices. It helps power React Native on Android – and now iOS – devices.
 pubDate: 2021-08-17

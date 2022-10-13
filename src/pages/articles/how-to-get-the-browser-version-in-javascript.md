@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: How to get the browser and version in JavaScript
 description: A brief journey into the dangerous world of user agent sniffing
 pubDate: 2020-05-19

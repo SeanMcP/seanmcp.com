@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Parse argument aliases in Deno
 description: Using Deno's standard flags module to parse command-line arguments with aliases
 pubDate: 2020-06-26

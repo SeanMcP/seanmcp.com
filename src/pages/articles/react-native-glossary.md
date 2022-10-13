@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: React Native Glossary
 description: A growing list of terms you need to recognize when working in React Native
 pubDate: 2021-10-07

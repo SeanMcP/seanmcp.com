@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Change extensions of all files in a directory
 description: A little Bash script to rename all files from `.jsx` to `.tsx`
 pubDate: 2020-12-17

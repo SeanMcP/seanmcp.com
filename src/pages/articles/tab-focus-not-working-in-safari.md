@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Tab focus not working in Safari?
 description: For some unknown reason, you need to enable tab highlighting in the browser's settings.
 pubDate: 2020-08-04

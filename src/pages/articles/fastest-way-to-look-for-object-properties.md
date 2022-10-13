@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: The fastest way to look for object properties
 description: 
 pubDate: 2019-12-31

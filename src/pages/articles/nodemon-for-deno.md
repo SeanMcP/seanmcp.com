@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Nodemon for Deno
 description: Denon is a utility for Deno that provides source watching and process restarting just like Nodemon
 pubDate: 2020-07-01

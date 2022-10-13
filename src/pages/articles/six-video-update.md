@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Six video update
 description: Lessons learned from publishing six videos on YouTube
 pubDate: 2020-06-12

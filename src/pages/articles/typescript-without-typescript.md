@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: TypeScript without TypeScript
 description: TypeScript provides valuable features but complicate the development process. What are some alternatives that provide the features without the headache?
 pubDate: 2020-12-08

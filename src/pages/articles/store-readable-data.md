@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Store readable data
 description: When forced between storing data for humans or computers, choose the former.
 pubDate: 2020-05-11

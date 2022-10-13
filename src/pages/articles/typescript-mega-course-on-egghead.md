@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: TypeScript mega-course on Egghead.io
 description: Creating a playlist to learn TypeScript
 pubDate: 2020-06-15

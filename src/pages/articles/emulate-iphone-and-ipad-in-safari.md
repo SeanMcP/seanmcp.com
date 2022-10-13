@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Emulate iPhone & iPad in Safari
 description: Simulating your web pages on Apple devices is easy with Safari's responsive design mode
 pubDate: 2020-09-02

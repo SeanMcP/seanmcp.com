@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Why you shouldn't mutate parameters
 description:
 pubDate: 2020-08-05

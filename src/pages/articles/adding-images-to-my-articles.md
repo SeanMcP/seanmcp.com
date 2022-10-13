@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Adding images to my articles
 description: How the right design and process for sourcing images made all the difference for me
 pubDate: 2020-06-30

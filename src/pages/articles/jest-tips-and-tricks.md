@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Jest tips & tricks
 description: A growing list of little things that make working with Jest a little better
 draft: false

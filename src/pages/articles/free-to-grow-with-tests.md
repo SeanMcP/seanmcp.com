@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "@layouts/ArticleLayout.astro"
 title: Free to grow
 description: Why tests (should) free you to grow with confidence
 pubDate: 2020-02-17
