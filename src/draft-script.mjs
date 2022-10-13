@@ -19,18 +19,21 @@ const fileName =
 const filePath = "./src/pages/articles/" + fileName;
 const date = new Date().toISOString();
 
-fs.readFile("./src/article-template.md", "utf8", (err, data) => {
-  if (err) {
-    throw err;
-  }
-  const injectedData = data.replace("%TITLE%", title).replace("%DATE%", date);
+try {
+  const templateData = fs.readFileSync("./src/article-template.md", "utf8");
 
-  fs.writeFile(filePath, injectedData, "utf8", (err) => {
-    if (err) throw err;
-    console.log(
-      `🏗  Created draft${titleArg ? ` "${titleArg}"` : ""} at ${filePath}\n`
-    );
+  const injectedData = templateData
+    .replace("%TITLE%", title)
+    .replace("%DATE%", date);
 
-    execSync(`code -g ${filePath}:13`);
-  });
-});
+  fs.writeFileSync(filePath, injectedData, "utf8");
+
+  console.log(
+    `🏗  Created draft${titleArg ? ` "${titleArg}"` : ""} at ${filePath}\n`
+  );
+
+  execSync(`code -g ${filePath}:13`);
+} catch (error) {
+  console.error(error);
+  process.exit(1);
+}
