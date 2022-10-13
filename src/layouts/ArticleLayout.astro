@@ -3,18 +3,24 @@ import PageLayout from "./PageLayout.astro";
 import Bio from "@components/Bio.astro";
 import ReadableTime from "@components/ReadableTime.astro";
 import TagList from "@components/TagList.astro";
+import BookmarkToggle from "@components/BookmarkToggle.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
 <PageLayout {...frontmatter} withoutH1>
   <article class="article">
-    {
-      !frontmatter.tags?.includes("garden") && (
-        <ReadableTime date={frontmatter.pubDate} />
-      )
-    }
-    <h1>{frontmatter.title}</h1>
+    <header>
+      <div>
+        {
+          !frontmatter.tags?.includes("garden") && (
+            <ReadableTime date={frontmatter.pubDate} />
+          )
+        }
+        <h1>{frontmatter.title}</h1>
+      </div>
+      <BookmarkToggle />
+    </header>
     <slot />
     <hr />
     <footer>
@@ -45,11 +51,20 @@ const { frontmatter } = Astro.props;
     padding-top: 2rem;
   }
 
-  /* Specificity to override global styles */
-  article h1 {
-    font-size: 2em;
+  header {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
     margin-bottom: 2rem;
-    margin-top: 1rem;
+    /* Offset SVG's padding */
+    margin-right: -0.5rem;
+  }
+
+  /* Specificity to override global styles */
+  header h1 {
+    font-size: 2em;
+    margin: 1rem 0 0;
   }
 
   footer {
@@ -58,7 +73,7 @@ const { frontmatter } = Astro.props;
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   :global(.article img) {
     max-width: 100%;
   }

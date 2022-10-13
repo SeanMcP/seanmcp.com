@@ -11,7 +11,7 @@ const articlesToRender = all.slice(0, count);
 <section>
   {
     articlesToRender.map((article) => (
-      <article>
+      <article data-url={article.url}>
         <div>
           {/* Added for styling. Find a better way. */}
           <ReadableTime date={article.frontmatter.pubDate} />

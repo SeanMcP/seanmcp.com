@@ -162,3 +162,25 @@ li ul {
   white-space: nowrap;
   width: 1px;
 }
+
+/* Bookmarks */
+
+[data-bookmarked] {
+  position: relative;
+  /* outline: 2px solid var(--off-background);
+  outline-offset: 0.25rem; */
+}
+
+[data-bookmarked] span[role=img] {
+  position: absolute;
+  height: 24px;
+  right: -0.25rem;
+  top: -0.125rem;
+  width: 24px;
+}
+
+[data-bookmarked] svg {
+  height: 100%;
+  fill: var(--off-background);
+  width: 100%;
+}

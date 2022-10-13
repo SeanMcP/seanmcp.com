@@ -15,14 +15,16 @@ const notes = getSortedContent(await Astro.glob("./notes/*.{md,mdx}")).filter(
 >
   <ul>
     {
-      notes.map(({ frontmatter: { pubDate, number } }) => (
-        <li data-number={number}>
-          <a href={`/notes/${number}`}>Note #{number}</a>
-          <small>
-            <ReadableTime date={pubDate} small />
-          </small>
-        </li>
-      ))
+      notes.map(({ frontmatter: { pubDate, number }, url }) => {
+        return (
+          <li data-url={url}>
+            <a href={url}>Note #{number}</a>
+            <small>
+              <ReadableTime date={pubDate} small />
+            </small>
+          </li>
+        );
+      })
     }
   </ul>
 </PageLayout>
