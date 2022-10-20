@@ -1,0 +1,97 @@
+---
+const _items = (await Astro.glob("../pages/articles/*.{md,mdx}")).map(
+  (item) => ({
+    url: item.url,
+    value: item.frontmatter.title + "    " + item.frontmatter.description,
+  })
+);
+interface Props {
+  items: { url: string; value: string }[];
+}
+const { items } = Astro.props;
+---
+
+<style>
+  #fuzzy-search {
+    position: relative;
+  }
+</style>
+
+<section id="fuzzy-search">
+  <form>
+    <input aria-label="Query" type="search" name="q" list="datalist" />
+    <slot name="search-button">
+      <button>Search</button>
+    </slot>
+  </form>
+  <datalist id="datalist">
+    {_items.map((item) => <option data-url={item.url} value={item.value} />)}
+  </datalist>
+  <ol id="results"></ol>
+</section>
+
+<script is:inline type="module">
+  import uFuzzy from "https://unpkg.com/@leeoniya/ufuzzy@0.7.0/dist/uFuzzy.esm.js";
+
+  const containerEl = document.getElementById("fuzzy-search");
+  const inputEl = containerEl.querySelector("input[name=q]");
+  const resultsEl = containerEl.querySelector("#results");
+
+  if (uFuzzy) {
+    // Progressive enhancement
+    inputEl.removeAttribute("list");
+  }
+
+  const valueToURL = {};
+  const items = [];
+  document.querySelectorAll("#datalist option").forEach((n) => {
+    items.push(n.value);
+    valueToURL[n.value] = n.dataset.url;
+  });
+
+  const params = new URLSearchParams(location.search);
+  const query = params.get("q");
+
+  if (query) {
+    inputEl.value = query;
+    searchItems(query);
+  }
+
+  function searchItems(query) {
+    const u = new uFuzzy();
+    const indexes = u.filter(items, query);
+
+    if (indexes.length < 1000) {
+      const info = u.info(indexes, items, query);
+      const order = u.sort(info, items, query);
+
+      let innerHTML = "";
+
+      order.forEach((infoIndex) => {
+        const html = uFuzzy.highlight(
+          items[info.idx[infoIndex]],
+          info.ranges[infoIndex]
+        );
+        const url = valueToURL[items[info.idx[infoIndex]]];
+        innerHTML += `<li><a href="${url}">${html}</a></li>`;
+      });
+
+      resultsEl.innerHTML = innerHTML;
+
+      containerEl.appendChild(resultsEl);
+    } else {
+      indexes.forEach((i) => {
+        console.log(items[i]);
+      });
+    }
+  }
+
+  inputEl.addEventListener("input", (e) => {
+    const query = e.target.value;
+    if (query) {
+      searchItems(query);
+    } else {
+      resultsEl.textContent = "";
+    }
+  });
+</script>
