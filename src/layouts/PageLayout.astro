@@ -15,17 +15,6 @@ const title = Astro.props.frontmatter?.title ?? Astro.props.title;
 
 <BaseLayout {...Astro.props}>
   <SkipLink />
-  <div>
-    <p>
-      <Emoji symbol="👋" />
-      Hey neighbor! I am in the process of rebuilding this site, and there may be
-      some rough edges. If you come across an issue or content that you appears to
-      be missing, please
-      <a href="mailto:sean@seanmcp.com?subject=You Goofed"
-        >reach out and let me know</a
-      >.
-    </p>
-  </div>
   <SiteHeader />
   <main id="main">
     {!withoutH1 && <h1>{title}</h1>}
