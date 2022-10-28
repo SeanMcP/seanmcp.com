@@ -22,7 +22,7 @@ export function getTags(articles: any[]): Record<string, number> {
 }
 
 export function getSortedContent(content: any[]) {
-  let filteredContent = content;
+  let filteredContent = content.filter((item) => !item.file.includes("README"));
   if (!import.meta.env.DEV) {
     // Remove drafts in non-DEV environments
     filteredContent = content.filter((c) => !c.frontmatter.draft);
