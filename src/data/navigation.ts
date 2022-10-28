@@ -46,11 +46,9 @@ export default {
   secondary: [
     LINKS.about,
     LINKS.articles,
-    LINKS.tags,
     LINKS.talks,
     LINKS.notes,
     LINKS.bookshelf,
-    LINKS.soccer,
     LINKS.feed,
   ],
 };
