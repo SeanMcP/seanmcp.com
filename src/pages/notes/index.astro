@@ -15,13 +15,11 @@ const notes = getSortedContent(
 >
   <ul>
     {
-      notes.map((note) => {
-        return (
-          <li data-url={note.url}>
-            <Note {...note} />
-          </li>
-        );
-      })
+      notes.map((note) => (
+        <li>
+          <Note {...note} />
+        </li>
+      ))
     }
   </ul>
 </PageLayout>
@@ -33,8 +31,5 @@ const notes = getSortedContent(
     list-style-type: none;
     margin-bottom: 0;
     padding: 0;
-  }
-  li a {
-    display: block;
   }
 </style>

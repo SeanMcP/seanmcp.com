@@ -4,6 +4,10 @@ export function slugify(text: string) {
   return _slugify(text, { lower: true });
 }
 
+export function getNoteNumberFromFilePath(url: string) {
+  return url.slice(url.lastIndexOf("/") + 1, url.lastIndexOf("."));
+}
+
 export function getTags(articles: any[]): Record<string, number> {
   const tags = {};
 

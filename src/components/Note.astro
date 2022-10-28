@@ -1,6 +1,6 @@
 ---
-import { readableDate } from "../utils";
-import BookmarkToggle from "./BookmarkToggle.astro";
+import BookmarkToggle from "@components/BookmarkToggle.astro";
+import { getNoteNumberFromFilePath, readableDate } from "src/utils";
 
 const {
   Content,
@@ -8,7 +8,7 @@ const {
   frontmatter: { pubDate, edited },
 } = Astro.props;
 
-const [number] = file.split("/").pop().split(".");
+const number = getNoteNumberFromFilePath(file);
 const url = `/notes/${number}`;
 ---
 
