@@ -2,9 +2,10 @@
 const _items = (await Astro.glob("../pages/articles/*.{md,mdx}")).map(
   (item) => ({
     url: item.url,
-    value: item.frontmatter.title + "    " + item.frontmatter.description,
+    value: item.frontmatter.title + " | " + item.frontmatter.description,
   })
 );
+
 interface Props {
   items: { url: string; value: string }[];
 }
@@ -12,22 +13,33 @@ const { items } = Astro.props;
 ---
 
 <style>
-  #fuzzy-search {
-    position: relative;
+  #fuzzy-search_results {
+    display: grid;
+    gap: 0.5em;
+    padding: 0.5em;
   }
 </style>
 
 <section id="fuzzy-search">
   <form>
-    <input aria-label="Query" type="search" name="q" list="datalist" />
+    <input
+      aria-label="Query"
+      autocapitalize="off"
+      autocomplete="off"
+      id="fuzzy-search_input"
+      list="fuzzy-search_datalist"
+      name="q"
+      type="search"
+    />
     <slot name="search-button">
       <button>Search</button>
     </slot>
   </form>
-  <datalist id="datalist">
+  <datalist id="fuzzy-search_datalist">
     {_items.map((item) => <option data-url={item.url} value={item.value} />)}
   </datalist>
-  <ol id="results"></ol>
+  <nav aria-hidden="true" aria-label="Search results" id="fuzzy-search_results">
+  </nav>
 </section>
 
 <script is:inline type="module">
@@ -35,7 +47,7 @@ const { items } = Astro.props;
 
   const containerEl = document.getElementById("fuzzy-search");
   const inputEl = containerEl.querySelector("input[name=q]");
-  const resultsEl = containerEl.querySelector("#results");
+  const resultsEl = containerEl.querySelector("#fuzzy-search_results");
 
   if (uFuzzy) {
     // Progressive enhancement
@@ -44,7 +56,7 @@ const { items } = Astro.props;
 
   const valueToURL = {};
   const items = [];
-  document.querySelectorAll("#datalist option").forEach((n) => {
+  document.querySelectorAll("#fuzzy-search_datalist option").forEach((n) => {
     items.push(n.value);
     valueToURL[n.value] = n.dataset.url;
   });
@@ -57,33 +69,40 @@ const { items } = Astro.props;
     searchItems(query);
   }
 
+  function hideResults() {
+    resultsEl.textContent = "";
+    resultsEl.setAttribute("aria-hidden", "true");
+  }
+
+  function showResults() {
+    resultsEl.removeAttribute("aria-hidden");
+  }
+
   function searchItems(query) {
     const u = new uFuzzy();
     const indexes = u.filter(items, query);
 
-    if (indexes.length < 1000) {
-      const info = u.info(indexes, items, query);
-      const order = u.sort(info, items, query);
-
-      let innerHTML = "";
-
-      order.forEach((infoIndex) => {
-        const html = uFuzzy.highlight(
-          items[info.idx[infoIndex]],
-          info.ranges[infoIndex]
-        );
-        const url = valueToURL[items[info.idx[infoIndex]]];
-        innerHTML += `<li><a href="${url}">${html}</a></li>`;
-      });
-
-      resultsEl.innerHTML = innerHTML;
-
-      containerEl.appendChild(resultsEl);
-    } else {
-      indexes.forEach((i) => {
-        console.log(items[i]);
-      });
+    if (indexes.length > 0) {
+      showResults();
     }
+
+    let innerHTML = "";
+
+    const info = u.info(indexes, items, query);
+    const order = u.sort(info, items, query);
+
+    order.forEach((infoIndex) => {
+      const html = uFuzzy.highlight(
+        items[info.idx[infoIndex]],
+        info.ranges[infoIndex]
+      );
+      const url = valueToURL[items[info.idx[infoIndex]]];
+      innerHTML += `<a href="${url}" id="${url}">${html}</a>`;
+    });
+
+    containerEl.appendChild(resultsEl);
+
+    resultsEl.innerHTML = innerHTML;
   }
 
   inputEl.addEventListener("input", (e) => {
@@ -92,6 +111,54 @@ const { items } = Astro.props;
       searchItems(query);
     } else {
       resultsEl.textContent = "";
+    }
+  });
+
+  function focus(element) {
+    if (!element) {
+      return;
+    }
+    element.focus();
+  }
+
+  containerEl.addEventListener("keydown", (e) => {
+    const activeElement = document.activeElement;
+    const isResultAnchor = activeElement.matches("#fuzzy-search a");
+
+    switch (e.key) {
+      case "ArrowDown": {
+        if (activeElement === inputEl) {
+          e.preventDefault();
+          focus(resultsEl.querySelector("a"));
+        } else if (isResultAnchor) {
+          e.preventDefault();
+          focus(activeElement.nextElementSibling);
+        }
+        break;
+      }
+      case "ArrowUp": {
+        if (isResultAnchor) {
+          e.preventDefault();
+          const prev = activeElement.previousElementSibling;
+          if (prev) {
+            focus(prev);
+          } else {
+            focus(inputEl);
+          }
+        }
+        break;
+      }
+      case "Escape": {
+        if (activeElement === inputEl) {
+          e.preventDefault();
+          inputEl.value = "";
+          hideResults();
+        } else if (isResultAnchor) {
+          e.preventDefault();
+          focus(inputEl);
+        }
+        break;
+      }
     }
   });
 </script>
