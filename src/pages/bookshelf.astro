@@ -4,31 +4,50 @@ import books from "../data/books.json";
 import Rating from "@components/Rating.astro";
 
 const booksByYear = {};
+const inProgress = [];
+const DNF = []
 books.forEach((entry) => {
   const [title, author, year, rating] = entry;
 
   // Ignore example book
   if (title === "TITLE") return;
 
-  const yearKey = typeof year === "number" ? year : "_";
-  if (!booksByYear[yearKey]) {
-    booksByYear[yearKey] = [];
+  const item = { title, author, rating };
+
+  if (!year) {
+    return inProgress.push(item)
   }
-  booksByYear[yearKey].push({ title, author, rating });
+  if (year === "DNF") {
+    return DNF.push(item)
+  }
+
+  if (!booksByYear[year]) {
+    booksByYear[year] = [];
+  }
+  booksByYear[year].push({ title, author, rating });
 });
-const sections = Object.keys(booksByYear).sort().reverse();
+const orderedYears = Object.keys(booksByYear).sort().reverse();
+const sections = [
+  { title: "In Progress", books: inProgress },
+  ...orderedYears.map((year) => ({
+    title: year,
+    books: booksByYear[year],
+  })),
+  { title: "Did not finish", books: DNF },
+]
 ---
 
-<PageLayout title="Bookhelf" description="A list of books that I've read">
+<PageLayout title="Bookshelf" description="A list of books that I've read">
   <p>Keeping a record of and taking notes on books that I've read.</p>
   {
-    sections.map((key) => {
-      const books = booksByYear[key].reverse();
+    sections.map(({ title, books }) => {
+
+      const ordered = books.reverse();
       return (
         <section>
-          <h2>{key === "_" ? "In Progress" : key}</h2>
+          <h2>{title}</h2>
           <ul>
-            {books.map((book) => (
+            {ordered.map((book) => (
               <li>
                 <span><i>{book.title}</i> by {book.author}</span>
                 {book.rating && (

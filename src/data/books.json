@@ -1,5 +1,5 @@
 [
-  ["TITLE", "AUTHOR", "YEAR OR false", "RATING_OUT_OF_5 OR null"],
+  ["TITLE", "AUTHOR", "YEAR OR DNF OR false", "RATING_OUT_OF_5 OR null"],
   ["Rocket Surgery Made Easy", "Steve Krug", 2021, 4],
   ["When Helping Hurts", "Steve Corbett & Brian Fikkert", 2022, 5],
   ["Reading While Black", "Esau McCaulley", 2022, 4],
@@ -8,6 +8,7 @@
   ["Mindset", "Carol S. Dweck", false, null],
   ["Hunt, Gather, Parent", "Michaeleen Doucleff", 2022, 4],
   ["The Lord of the Rings", "J.R.R. Tolkien", 2022, 5],
-  ["The Good Life Method", "Meghan Sullivan & Paul Blaschko", false, null],
-  ["Dragon Hoops", "Gene Luen Yang", 2022, 3]
+  ["The Good Life Method", "Meghan Sullivan & Paul Blaschko", "DNF", null],
+  ["Dragon Hoops", "Gene Luen Yang", 2022, 3],
+  ["When Stars Are Scattered", "Victoria Jamieson & Omar Mohamed", 2022, 3]
 ]
