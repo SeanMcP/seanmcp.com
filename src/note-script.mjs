@@ -4,7 +4,7 @@ import { execSync } from "child_process";
 try {
   execSync("git pull");
 
-  const notes = fs.readdirSync("./src/pages/notes");
+  const notes = fs.readdirSync("./content/notes");
   let highest = 0;
   notes.forEach((fileName) => {
     const [name] = fileName.split(".");
@@ -15,13 +15,11 @@ try {
   });
 
   const next = highest + 1;
-  const fullPath = `./src/pages/notes/${next}.md`;
+  const fullPath = `./content/notes/${next}.md`;
   fs.writeFileSync(
     fullPath,
     `
 ---
-layout: "@layouts/NoteLayout.astro"
-number: ${next}
 pubDate: ${new Date().toISOString()}
 ---
 
@@ -30,7 +28,7 @@ pubDate: ${new Date().toISOString()}
   );
   console.log(`🏗 Created Note #${next} at ${fullPath}\n`);
 
-  execSync(`code -g ${fullPath}:7`);
+  execSync(`code -g ${fullPath}:5`);
 } catch (err) {
   console.error(err);
   process.exit(1);
