@@ -1,9 +1,10 @@
 ---
-import PageLayout from "./PageLayout.astro";
+import ArticleSeries from "@components/ArticleSeries.astro";
 import Bio from "@components/Bio.astro";
+import BookmarkToggle from "@components/BookmarkToggle.astro";
+import PageLayout from "./PageLayout.astro";
 import ReadableTime from "@components/ReadableTime.astro";
 import TagList from "@components/TagList.astro";
-import BookmarkToggle from "@components/BookmarkToggle.astro";
 
 const { frontmatter } = Astro.props;
 ---
@@ -21,6 +22,7 @@ const { frontmatter } = Astro.props;
       </div>
       <BookmarkToggle />
     </header>
+    <ArticleSeries series={frontmatter.series} />
     <slot />
     <hr />
     <footer>

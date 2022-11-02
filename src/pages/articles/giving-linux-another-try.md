@@ -9,6 +9,7 @@ image:
 tags:
   - Linux
   - Computing
+series: Trying Linux 2022
 pubDate: 2022-11-02T00:35:27.140Z
 verse:
 ---

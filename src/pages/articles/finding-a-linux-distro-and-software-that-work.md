@@ -1,6 +1,6 @@
 ---
 layout: "@layouts/ArticleLayout.astro"
-title: Giving Linux another try, part 2
+title: Finding a Linux distro and software that work
 description:
   After a lot of trial an error, I settled on Raspberry Pi OS and Firefox for my
   little Linux-powered computer.
@@ -9,6 +9,7 @@ image:
 tags:
   - Computing
   - Linux
+series: Trying Linux 2022
 pubDate: 2022-11-02T12:55:44.054Z
 verse:
 ---
