@@ -11,7 +11,7 @@ export default [
   },
   {
     label: "YouTube",
-    url: "https://smcp.dev/yt",
+    url: "https://youtube.com/@seanmcp",
   },
   {
     label: "Twitter",
