@@ -5,9 +5,9 @@ description: Detailing some of the struggles that I've encountered while trying 
 draft: false
 image: 
 tags:
-	- Computing
-	- Linux
-	- Raspberry Pi
+  - Computing
+  - Linux
+  - Raspberry Pi
 series: Trying Linux 2022
 pubDate: 2022-11-03T11:14:41.189Z
 verse: 
