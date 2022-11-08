@@ -7,6 +7,6 @@ const indicator = document.querySelector('#scroll-progress span')
 window.onscroll = () => {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    indicator.style.width = scrolled + "%";
+    const scrolled = 100 - (winScroll / height) * 100;
+    indicator.style.flexBasis = scrolled + "%";
 }

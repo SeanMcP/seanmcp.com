@@ -39,10 +39,11 @@ body {
   color: var(--text-color);
 }
 
-body > header,
-main,
-body > footer {
-  margin: 0 auto;
+body > footer,
+body > main,
+.cc /* Content Container */ {
+  margin-left: auto;
+  margin-right: auto;
   max-width: calc(10rem * 4);
   padding: 1rem;
 }
@@ -171,7 +172,7 @@ li ul {
   outline-offset: 0.25rem; */
 }
 
-[data-bookmarked] span[role=img] {
+[data-bookmarked] span[role="img"] {
   position: absolute;
   height: 24px;
   right: -0.25rem;

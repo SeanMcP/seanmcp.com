@@ -4,30 +4,64 @@ import LogoLink from "./LogoLink.astro";
 ---
 
 <header>
-  <LogoLink />
-  <nav aria-label="primary">
-    {
-      navigation.primary.map((item) => {
-        return (
-          <a
-            aria-current={
-              [Astro.url.pathname, Astro.url.pathname + "/"].includes(item.url)
-                ? "page"
-                : null
-            }
-            href={item.url}
-          >{item.label}</a>
-        );
-      })
-    }
-  </nav>
+  <div class="cc">
+    <LogoLink />
+    <nav aria-label="primary">
+      {
+        navigation.primary.map((item) => {
+          return (
+            <a
+              aria-current={
+                [Astro.url.pathname, Astro.url.pathname + "/"].includes(
+                  item.url
+                )
+                  ? "page"
+                  : null
+              }
+              href={item.url}
+            >
+              {item.label}
+            </a>
+          );
+        })
+      }
+    </nav>
+  </div>
+  <div id="scroll-progress">
+    <span></span>
+  </div>
 </header>
 
 <style>
   header {
+    background: var(--background);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  .cc {
     align-items: center;
     display: flex;
     justify-content: space-between;
+  }
+
+  #scroll-progress {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    bottom: 0;
+    display: flex;
+    height: 2px;
+    justify-content: flex-end;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  #scroll-progress span {
+    background: var(--background);
+    flex-basis: 100%;
+    justify-self: end;
   }
 
   nav a {
