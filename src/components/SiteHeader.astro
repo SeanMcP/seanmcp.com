@@ -1,5 +1,6 @@
 ---
 import navigation from "../data/navigation";
+import DarkModeToggle from "./DarkModeToggle.astro";
 import LogoLink from "./LogoLink.astro";
 ---
 
@@ -26,6 +27,7 @@ import LogoLink from "./LogoLink.astro";
         })
       }
     </nav>
+    <DarkModeToggle />
   </div>
   <div id="scroll-progress">
     <span></span>
@@ -44,7 +46,11 @@ import LogoLink from "./LogoLink.astro";
   .cc {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  nav {
+    margin-left: auto;
   }
 
   #scroll-progress {

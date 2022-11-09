@@ -39,6 +39,10 @@
     position: relative;
   }
 
+  body[data-theme=dark] a:where(:focus, :hover) {
+    --foreground: white;
+  }
+
   a::after {
     background: var(--text-color);
     bottom: 0;
