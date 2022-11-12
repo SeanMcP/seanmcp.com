@@ -27,7 +27,7 @@ import metadata from "../data/metadata.json";
     <section>
       <h2>Socials</h2>
       <nav>
-        {socials.map((link) => <a href={link.url}>{link.label}</a>)}
+        {socials.map((link) => <a href={link.url} rel="me">{link.label}</a>)}
       </nav>
     </section>
   </div>
