@@ -41,6 +41,12 @@ import LogoLink from "./LogoLink.astro";
     position: fixed;
     right: 0;
     top: 0;
+    transition: box-shadow 100ms ease-in-out;
+    z-index: 1;
+  }
+
+  body[data-scrolling] header {
+    box-shadow: 0 0 0.5rem 0 var(--off-background);
   }
 
   .cc {
