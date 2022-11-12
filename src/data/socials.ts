@@ -14,6 +14,10 @@ export default [
     url: "https://youtube.com/@seanmcp",
   },
   {
+    label: "Mastodon",
+    url: "https://mastodon.online/@seanmcp",
+  },
+  {
     label: "Twitter",
     username: "snmcp",
     url: "https://twitter.com/snmcp",
