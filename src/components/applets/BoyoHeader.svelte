@@ -29,10 +29,12 @@
     emoji = next;
     document.title = emoji + document.title.slice(document.title.indexOf(" "));
   }
+
+  export let name;
 </script>
 
 <div>
-  <h1 on:click={handleClick}><span>{emoji} Sam</span></h1>
+  <h1 on:click={handleClick}><span>{emoji} {name}</span></h1>
 </div>
 
 <style>
