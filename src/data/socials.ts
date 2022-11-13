@@ -15,7 +15,7 @@ export default [
   },
   {
     label: "Mastodon",
-    url: "https://mastodon.online/@seanmcp",
+    url: "https://fosstodon.org/@seanmcp",
   },
   {
     label: "Twitter",
