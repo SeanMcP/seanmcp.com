@@ -127,8 +127,15 @@
     align-items: center;
     display: flex;
   }
+  label,
+  label svg {
+    transition: color 200ms ease-in-out;
+  }
   label:where(:focus-within, :hover) {
     color: var(--anchor-color);
+  }
+  label:where(:focus-within, :hover) svg {
+    transform: rotate(12.5deg);
   }
   label:focus-within {
     outline: 2px solid var(--anchor-color);
