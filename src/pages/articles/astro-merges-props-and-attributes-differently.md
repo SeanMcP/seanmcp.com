@@ -5,7 +5,7 @@ description:
   Props are merged from left-to-right, while attributes are merged from
   right-to-left. This is an important rule to know when authoring Astro
   components.
-draft: false
+draft: true
 image:
 tags:
   - Astro
