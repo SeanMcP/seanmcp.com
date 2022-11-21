@@ -12,7 +12,7 @@ const {
 
 const pageDescription = Astro.props.description ?? description;
 const pageFavicon = Astro.props.Favicon ?? defaultFavicon;
-const pageImage = metadata.url + (Astro.props.image ?? defaultFavicon);
+const pageImage = metadata.url + (Astro.props.image ?? "/img/og-image.png");
 const pageTitle = Astro.props.title ?? "Sean McPherson";
 let pageUrl = url + Astro.url.pathname;
 
