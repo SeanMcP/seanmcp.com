@@ -5,7 +5,7 @@ import { getNoteNumberFromFilePath, getSortedContent } from "src/utils";
 
 export async function getStaticPaths() {
   const sorted = getSortedContent(
-    await Astro.glob("../../../content/notes/*.md*")
+    await Astro.glob("../../../content/notes/*.(md|mdx)")
   );
 
   return sorted.map((note) => {
