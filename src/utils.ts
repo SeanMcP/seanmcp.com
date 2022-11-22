@@ -14,6 +14,11 @@ export function getTags(articles: any[]): Record<string, number> {
   articles.forEach((article) => {
     article.frontmatter.tags &&
       article.frontmatter.tags.forEach((tag) => {
+        if (article.frontmatter.draft && import.meta.env.PROD) {
+          // Ignore drafts in production
+          return;
+        }
+
         if (!tags[tag]) {
           tags[tag] = 0;
         }

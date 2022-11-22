@@ -3,7 +3,7 @@ import TagList from "@components/TagList.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import { getTags } from "../../utils";
 
-const allPosts = await Astro.glob("../articles/*.md*");
+const allPosts = await Astro.glob("../articles/*.(md|mdx)");
 const tags = getTags(allPosts);
 ---
 
