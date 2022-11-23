@@ -1,4 +1,9 @@
 const LINKS = {
+  abby: {
+    description: "A page about my three-legged dog",
+    label: "Abby",
+    url: "/abby/",
+  },
   articles: {
     description: "Read articles about programming",
     label: "Articles",
@@ -19,8 +24,13 @@ const LINKS = {
     label: "Talks",
     url: "/talks/",
   },
+  bookmarks: {
+    description: "View and manage bookmarks on this site",
+    label: "Bookmarks",
+    url: "/bookmarks/",
+  },
   bookshelf: {
-    description: "Books that I have read and some notes on them",
+    description: "A running list of books that I have read",
     label: "Bookshelf",
     url: "/bookshelf/",
   },
@@ -34,6 +44,16 @@ const LINKS = {
     label: "Feed",
     url: "/rss.xml",
   },
+  map: {
+    description: "A detailed site map",
+    label: "Map",
+    url: "/map/",
+  },
+  series: {
+    description: "Articles organized into series",
+    label: "Series",
+    url: "/series/",
+  },
   soccer: {
     description: "Read articles about soccer from a dedicated fan",
     label: "Soccer",
@@ -42,13 +62,15 @@ const LINKS = {
 };
 
 export default {
-  primary: [LINKS.articles, LINKS.about],
-  secondary: [
+  header: [LINKS.articles, LINKS.about, { ...LINKS.map, label: "More" }],
+  map: [
     LINKS.about,
     LINKS.articles,
-    LINKS.talks,
-    LINKS.notes,
+    LINKS.bookmarks,
     LINKS.bookshelf,
-    LINKS.feed,
+    LINKS.notes,
+    LINKS.series,
+    LINKS.tags,
+    LINKS.talks,
   ],
 };

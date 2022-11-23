@@ -17,9 +17,4 @@ export default [
     label: "Mastodon",
     url: "https://fosstodon.org/@seanmcp",
   },
-  {
-    label: "Twitter",
-    username: "snmcp",
-    url: "https://twitter.com/snmcp",
-  },
 ];

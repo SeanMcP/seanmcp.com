@@ -7,9 +7,9 @@ import LogoLink from "./LogoLink.astro";
 <header>
   <div class="cc">
     <LogoLink />
-    <nav aria-label="primary">
+    <nav aria-label="header">
       {
-        navigation.primary.map((item) => {
+        navigation.header.map((item) => {
           return (
             <a
               aria-current={
@@ -20,9 +20,7 @@ import LogoLink from "./LogoLink.astro";
                   : null
               }
               href={item.url}
-            >
-              {item.label}
-            </a>
+            >{item.label}</a>
           );
         })
       }
@@ -59,6 +57,14 @@ import LogoLink from "./LogoLink.astro";
     margin-left: auto;
   }
 
+  nav a {
+    font-weight: bold;
+  }
+
+  nav a:not(:last-child) {
+    margin-right: 1rem;
+  }
+
   #scroll-progress {
     background: linear-gradient(to right, var(--primary), var(--accent));
     bottom: 0;
@@ -74,13 +80,5 @@ import LogoLink from "./LogoLink.astro";
     background: var(--background);
     flex-basis: 100%;
     justify-self: end;
-  }
-
-  nav a {
-    font-weight: bold;
-  }
-
-  nav a:not(:last-child) {
-    margin-right: 1rem;
   }
 </style>
