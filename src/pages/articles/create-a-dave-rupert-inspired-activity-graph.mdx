@@ -12,6 +12,7 @@ verse:
 ---
 
 import ActivityGraph from "@components/ActivityGraph.astro";
+import Callout from "@components/Callout.astro";
 
 I noticed on [Dave Rupert's website](https://daverupert.com/archive/) that he
 had a little activity graph to illustrate how many articles he has written per
@@ -34,6 +35,10 @@ const notes = getSortedContent(
   await Astro.glob("../../content/notes/*.{md,mdx}")
 );
 ```
+
+<Callout type="info">
+  This code is all subject to change, so for the latest [checkout the source on GitHub](https://github.com/SeanMcP/seanmcp.com/blob/master/src/components/ActivityGraph.astro)
+</Callout>
 
 Next, I knew that I needed to keep a record of some totals, so I created an
 object to track the totals for each content-type by the year:
