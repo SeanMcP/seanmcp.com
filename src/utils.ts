@@ -31,11 +31,15 @@ export function getTags(articles: any[]): Record<string, number> {
 }
 
 export function getSortedContent(content: any[]) {
-  let filteredContent = content.filter((item) => !item.file.includes("README"));
-  if (!import.meta.env.DEV) {
-    // Remove drafts in non-DEV environments
-    filteredContent = content.filter((c) => !c.frontmatter.draft);
-  }
+  const filteredContent = content.filter((item) => {
+    if (item.file.includes("/README.")) {
+      return false;
+    }
+    if (import.meta.env.PROD && item.frontmatter.draft) {
+      return false;
+    }
+    return true;
+  });
   return filteredContent.sort(
     (a, b) =>
       new Date(b.frontmatter.pubDate).valueOf() -
