@@ -1,0 +1,82 @@
+---
+import { getSortedContent } from "src/utils";
+
+const articles = getSortedContent(
+  await Astro.glob("../pages/articles/*.{md,mdx}")
+);
+const notes = getSortedContent(
+  await Astro.glob("../../content/notes/*.{md,mdx}")
+);
+
+const yearCount: Record<number, { articles: number; notes: number }> = {};
+
+articles.forEach((article) => {
+  const year = new Date(article.frontmatter.pubDate).getFullYear();
+  if (!yearCount[year]) yearCount[year] = { articles: 0, notes: 0 };
+  yearCount[year].articles++;
+});
+
+notes.forEach((note) => {
+  const year = new Date(note.frontmatter.pubDate).getFullYear();
+  if (!yearCount[year]) yearCount[year] = { articles: 0, notes: 0 };
+  yearCount[year].notes++;
+});
+
+const highest = Math.max(
+  ...Object.values(yearCount).map((record) => record.articles + record.notes)
+);
+const multiplier = (16 * 4) / highest;
+---
+
+<ul>
+  {
+    Object.entries(yearCount).map(([year, { articles, notes }]) => {
+      const articlesLabel = `${articles} articles`;
+      const notesLabel = `${notes} notes`;
+      return (
+        <li>
+          <div title={String(articles + notes)}>{year}</div>
+          <span
+            class="articles"
+            style={{ height: articles * multiplier + "px" }}
+            title={articlesLabel}
+          >
+            <span class="--visually-hidden">{articlesLabel}</span>
+          </span>
+          <span
+            class="notes"
+            style={{ height: notes * multiplier + "px" }}
+            title={notesLabel}
+          >
+            <span class="--visually-hidden">{notesLabel}</span>
+          </span>
+        </li>
+      );
+    })
+  }
+</ul>
+
+<style>
+  ul {
+    display: flex;
+    gap: 2px;
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+  }
+  li div {
+    text-align: center;
+    font-size: small;
+  }
+  li span.articles {
+    background: var(--primary);
+  }
+  li span.notes {
+    background: var(--accent);
+  }
+</style>
