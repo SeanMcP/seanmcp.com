@@ -20,7 +20,7 @@ import LogoLink from "./LogoLink.astro";
                   : null
               }
               href={item.url}
-            >{item.label}</a>
+            >{item.label}{item.label==="More"&&<span class="--visually-hidden"> links</span>}</a>
           );
         })
       }

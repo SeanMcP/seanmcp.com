@@ -1,36 +1,12 @@
 ---
-import Note from "@components/Note.astro";
+import NoteList from "@components/NoteList.astro";
 
 import PageLayout from "@layouts/PageLayout.astro";
-import { getSortedContent } from "../../utils";
-
-const notes = getSortedContent(
-  await Astro.glob("../../../content/notes/*.{md,mdx}")
-);
 ---
 
 <PageLayout
   description="A feed of short notes, thoughts, or ideas, preserved here on SeanMcP.com"
   title="Notes"
 >
-  <ul>
-    {
-      notes.map((note) => (
-        <li>
-          <Note {...note} />
-        </li>
-      ))
-    }
-  </ul>
+  <NoteList />
 </PageLayout>
-
-<style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    list-style-type: none;
-    margin-bottom: 0;
-    padding: 0;
-  }
-</style>
