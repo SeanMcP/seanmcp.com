@@ -8,6 +8,7 @@
     "@astrojs/sitemap": "^1.0.0",
     "astro": "^1.1.7",
     "astro-emoji": "^1.0.0",
+    "astro-netlify-components": "^0.1.0",
     "consonant-vowel-patterns": "^1.0.0",
     "slugify": "^1.6.5"
   },
@@ -17,7 +18,8 @@
     "dev": "astro dev",
     "preview": "astro preview",
     "draft": "node src/draft-script.mjs",
-    "note": "node src/note-script.mjs"
+    "note": "node src/note-script.mjs",
+    "cms": "npx netlify-cms-proxy-server"
   },
   "devDependencies": {
     "@astrojs/svelte": "^1.0.0",
