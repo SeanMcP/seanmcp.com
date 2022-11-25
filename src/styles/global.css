@@ -99,7 +99,7 @@ a:hover {
   text-decoration-color: currentColor;
 }
 
-a:focus {
+:where(:focus) {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }

@@ -1,0 +1,70 @@
+---
+import Form from "astro-netlify-components/Form.astro";
+
+import PageLayout from "@layouts/PageLayout.astro";
+---
+
+<PageLayout title="Contact">
+  <Form name="contact" action="/contact-success">
+    <div>
+      <label>
+        <b>Name</b>
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        <b>Email</b>
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        <b>Category</b>
+        <select name="category">
+          <option value="speaking">Speaking engagement</option>
+          <option value="inquiry">Other inquiry</option>
+          <option value="question-or-comment">Question or comment</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+      <label>
+        <b>Message</b>
+        <textarea name="message" required></textarea>
+      </label>
+      <footer>
+          <button type="reset">Reset</button>
+          <button type="submit">Send</button>
+      </footer>
+    </div>
+  </Form>
+</PageLayout>
+
+<style>
+  div {
+    display: grid;
+    gap: 0.5rem;
+  }
+  label {
+    display: grid;
+    gap: 0.25rem;
+  }
+  :where(button, input, select, textarea) {
+    background: transparent;
+    border: 2px solid var(--off-background);
+    font: inherit;
+    padding: 0.5rem;
+  }
+  textarea {
+    min-height: 10rem;
+  }
+  footer {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: end;
+  }
+  button {
+    font-weight: bold;
+    padding-inline: 1rem;
+  }
+  button[type="submit"] {
+    background: var(--anchor-color);
+    color: var(--background);
+  }
+</style>
