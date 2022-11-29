@@ -16,6 +16,7 @@
     "astro": "astro",
     "build": "astro build",
     "dev": "astro dev",
+    "ndev": "netlify dev",
     "preview": "astro preview",
     "draft": "node src/draft-script.mjs",
     "note": "node src/note-script.mjs",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@astrojs/svelte": "^1.0.0",
+    "netlify-cli": "^12.2.7",
     "svelte": "^3.50.1"
   }
 }

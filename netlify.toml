@@ -1,3 +1,9 @@
 [build]
     command = "npm run build"
     publish = "dist/"
+
+[dev]
+    command = "npm run dev"
+    autoLaunch = true
+    framework = "#custom"
+    targetPort = 3000
