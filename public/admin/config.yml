@@ -13,7 +13,7 @@ collections:
       - label: "Layout"
         name: "layout"
         widget: "hidden"
-        default: "\"@layouts/ArticleLayout.astro\""
+        default: "@layouts/ArticleLayout.astro"
       - label: "Title"
         name: "title"
         widget: "string"
