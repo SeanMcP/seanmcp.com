@@ -5,7 +5,7 @@ import PageLayout from "@layouts/PageLayout.astro";
 ---
 
 <PageLayout title="Contact">
-  <Form name="contact" action="/contact-success">
+  <Form name="contact" action="/contact/success">
     <div>
       <label>
         <b>Name</b>
@@ -29,8 +29,8 @@ import PageLayout from "@layouts/PageLayout.astro";
         <textarea name="message" required></textarea>
       </label>
       <footer>
-          <button type="reset">Reset</button>
-          <button type="submit">Send</button>
+        <button type="reset">Reset</button>
+        <button type="submit">Send</button>
       </footer>
     </div>
   </Form>
@@ -48,6 +48,7 @@ import PageLayout from "@layouts/PageLayout.astro";
   :where(button, input, select, textarea) {
     background: transparent;
     border: 2px solid var(--off-background);
+    color: inherit;
     font: inherit;
     padding: 0.5rem;
   }
