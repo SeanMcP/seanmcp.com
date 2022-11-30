@@ -1,7 +1,7 @@
 ---
 layout: "@layouts/ArticleLayout.astro"
-title: Add Static CMS to an Astro site
-description: A first (failed) attempt at using Static CMS, the Netlify CMS successor
+title: A first look at Static CMS with Astro
+description: Documenting my first attempt at switching from Netlify CMS to Static CMS
 pubDate: 2022-11-29T20:43:17.582-05:00
 draft: false
 tags:
