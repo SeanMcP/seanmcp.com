@@ -1,20 +1,20 @@
 ---
 layout: "@layouts/ArticleLayout.astro"
-title: Astro merges props and attributes differently
+title: Astro components do not merge HTML attributes
 description:
-  Props are merged from left-to-right, while attributes are merged from
-  right-to-left. This is an important rule to know when authoring Astro
-  components.
-draft: true
+  Props are merged, but attributes are not. This is an important rule to know
+  when authoring Astro components.
+draft: false
 image:
 tags:
   - Astro
-pubDate: 2022-11-21T15:36:16.192Z
+pubDate: 2022-11-29T15:36:16.192Z
 verse:
 ---
 
-I've been enjoying working in the [Astro](https://astro.build) ecosystem
-recently, and have been working on some simple community packages.
+Over the past month I have been enjoying working in the
+[Astro](https://astro.build) ecosystem recently, and have been working on some
+simple community packages.
 
 I've learned that Astro merges component props and element attributes
 differently, so I'm writing this short PSA to help myself and other Astro devs
@@ -50,10 +50,12 @@ you are creating a component that allows overriding default values:
 <ElementCard element="Hydrogen" {...Astro.props} />
 ```
 
-## Attributes: right-to-left
+## Attributes: no merging
 
-For attributes, however, **Astro merges from right-to-left**. So an attribute on
-the right-side of an element will overwrite the same attribute on the left:
+However, **Astro does not merge attributes on HTML elements**. So if you have
+two identical attributes passed to an element, that is what goes to the DOM.
+Browsers typically ignore any duplicate attributes, so the prevailing value is
+the first from left-to-right:
 
 ```astro
 <input type="text" type="number" />
@@ -70,8 +72,8 @@ values, then you need to spread them on _the left-side of the element_:
 ```
 
 This behavior might be the opposite of what you expect. For a counter example,
-React merges both props and attributes from left-to-right. But whatever the
-reason for the difference, it's important to remember.
+React merges both props and attributes. But whatever the reason for the
+difference, it's important to remember.
 
 ## tl;dr
 
