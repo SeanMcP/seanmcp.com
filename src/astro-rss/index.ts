@@ -79,12 +79,15 @@ type RSSFeedItem = {
   /** Item content */
   content?: string;
 
+  /** Item is draft in frontmatter */
+  isDraft: boolean;
+
   // End fork
 };
 
 type GenerateRSSArgs = {
   rssOptions: RSSOptions;
-  items: RSSFeedItem[];
+  items: RSSFeedItem[] | null;
 };
 
 function isGlobResult(items: RSSOptions["items"]): items is GlobResult {
@@ -115,8 +118,8 @@ function mapGlobResult(items: GlobResult): Promise<RSSFeedItem[]> {
         description: frontmatter.description,
         customData: frontmatter.customData,
         // Begin fork
-        content:
-          file.slice(-3) === ".md" ? compiledContent() : undefined,
+        content: file.slice(-3) === ".md" ? compiledContent() : undefined,
+        isDraft: frontmatter.draft === true,
         // End fork
       };
     })
@@ -173,6 +176,11 @@ export async function generateRSS({
   if (typeof rssOptions.customData === "string") xml += rssOptions.customData;
   // items
   for (const result of items) {
+    // Begin fork
+    if (result.isDraft) {
+      continue;
+    }
+    // End fork
     validate(result);
     xml += `<item>`;
     xml += `<title><![CDATA[${result.title}]]></title>`;
