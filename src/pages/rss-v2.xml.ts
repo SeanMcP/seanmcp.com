@@ -5,7 +5,7 @@ import metadata from "../data/metadata.json";
 export const get = () =>
   rss({
     // `<title>` field in output xml
-    title: metadata.title,
+    title: metadata.title + " V2",
     // `<description>` field in output xml
     description: metadata.description,
     // base URL for RSS <item> links
