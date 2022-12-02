@@ -1,11 +1,10 @@
-// import rss from "@astrojs/rss";
-import rss from "../astro-rss";
+import rss from "astro-rss-fork";
 import metadata from "../data/metadata.json";
 
 export const get = () =>
   rss({
     // `<title>` field in output xml
-    title: metadata.title + " V2",
+    title: "[v2.1] " + metadata.title,
     // `<description>` field in output xml
     description: metadata.description,
     // base URL for RSS <item> links
