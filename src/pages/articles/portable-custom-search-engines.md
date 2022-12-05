@@ -6,7 +6,7 @@ description: Custom search engines (sometimes called site search) are a great
   created a portable web app to handle your custom search engines from any
   browser.
 pubDate: 2022-12-05T16:49:10.952Z
-draft: true
+draft: false
 tags:
   - Product
   - Browsers
