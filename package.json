@@ -8,7 +8,7 @@
     "@astrojs/sitemap": "^1.0.0",
     "astro": "^1.1.7",
     "astro-emoji": "^1.0.0",
-    "astro-netlify-components": "^0.1.0",
+    "astro-netlify-components": "^0.1.1",
     "consonant-vowel-patterns": "^1.0.0",
     "slugify": "^1.6.5"
   },
@@ -26,7 +26,7 @@
   "devDependencies": {
     "@astrojs/svelte": "^1.0.0",
     "astro-rss-fork": "^0.2.0",
-    "netlify-cli": "^12.2.7",
+    "netlify-cli": "^2.37.0",
     "npm-run-all": "^4.1.5",
     "svelte": "^3.50.1"
   }
