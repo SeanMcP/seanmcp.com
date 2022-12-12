@@ -14,6 +14,7 @@
   },
   "scripts": {
     "astro": "astro",
+    "prebuild": "npm run images -- --skip-git",
     "build": "astro build",
     "dev": "astro dev",
     "devn": "netlify dev",
@@ -21,13 +22,15 @@
     "preview": "astro preview",
     "draft": "node src/draft-script.mjs",
     "note": "node src/note-script.mjs",
-    "cms": "npx netlify-cms-proxy-server"
+    "cms": "npx netlify-cms-proxy-server",
+    "images": "node src/images.mjs"
   },
   "devDependencies": {
     "@astrojs/svelte": "^1.0.0",
     "astro-rss-fork": "^0.2.0",
     "netlify-cli": "^12.2.9",
     "npm-run-all": "^4.1.5",
+    "sharp": "^0.31.2",
     "svelte": "^3.50.1"
   }
 }
