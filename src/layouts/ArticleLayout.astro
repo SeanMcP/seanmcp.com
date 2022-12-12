@@ -5,6 +5,7 @@ import BookmarkToggle from "@components/BookmarkToggle.astro";
 import PageLayout from "./PageLayout.astro";
 import ReadableTime from "@components/ReadableTime.astro";
 import TagList from "@components/TagList.astro";
+import HeroImage from "@components/HeroImage.astro";
 
 const { frontmatter } = Astro.props;
 ---
@@ -22,6 +23,7 @@ const { frontmatter } = Astro.props;
       </div>
       <BookmarkToggle />
     </header>
+    <HeroImage image={frontmatter.image} />
     <ArticleSeries series={frontmatter.series} />
     <slot />
     <hr />
