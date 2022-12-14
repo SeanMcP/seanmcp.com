@@ -1,0 +1,45 @@
+---
+interface Props {
+  label: string;
+  content: {
+    url: string;
+    visibleText: string;
+    hiddenText?: string;
+  }[];
+}
+const { content, label } = Astro.props;
+const id = `command-prompt__section--${label.toLowerCase()}`;
+---
+
+<section>
+  <b id={id}>{label}</b>
+  <nav aria-labelledby={id}>
+    <slot />
+    {
+      content.map((item) => (
+        <a href={item.url}>
+          {item.visibleText}
+          {item.hiddenText && (
+            <span class="--visually-hidden">{item.hiddenText}</span>
+          )}
+        </a>
+      ))
+    }
+  </nav>
+</section>
+
+<style>
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0.25rem 0.5rem;
+  }
+
+  a {
+    display: none;
+    font-size: small;
+  }
+  a[data-match="true"] {
+    display: initial;
+  }
+</style>

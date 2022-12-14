@@ -62,7 +62,7 @@ const LINKS = {
 };
 
 export default {
-  header: [LINKS.articles, LINKS.about, { ...LINKS.map, label: "More" }],
+  header: [LINKS.articles, LINKS.about, /*{ ...LINKS.map, label: "More" }*/],
   map: [
     LINKS.about,
     LINKS.articles,
@@ -73,4 +73,5 @@ export default {
     LINKS.tags,
     LINKS.talks,
   ],
+  all: Object.values(LINKS),
 };
