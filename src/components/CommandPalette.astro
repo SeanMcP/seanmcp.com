@@ -1,0 +1,268 @@
+---
+import { getNoteNumberFromFilePath } from "src/utils";
+import CommandPaletteSection from "./CommandPaletteSection.astro";
+import socials from "src/data/socials";
+import navigation from "src/data/navigation";
+
+const articles = await Astro.glob("../pages/articles/*.{md,mdx}");
+const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
+  ({ file }) => !file.includes("README")
+);
+---
+
+<button id="command-palette__trigger">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="#000000"
+    viewBox="0 0 256 256"
+    ><rect width="256" height="256" fill="none"></rect><circle
+      cx="116"
+      cy="116"
+      r="84"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="24"></circle><line
+      x1="175.4"
+      y1="175.4"
+      x2="224"
+      y2="224"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="24"></line>
+  </svg>
+</button>
+
+<aside id="command-palette">
+  <div id="command-palette__overlay"></div>
+  <section id="command-palette__content">
+    <input aria-label="Search for content" type="text" />
+    <div aria-live="polite" id="command-palette__results-message"></div>
+    <section>
+      <CommandPaletteSection
+        label="Commands"
+        content={[
+          {
+            url: "mailto:sean@seanmcp.com",
+            visibleText: "Email me",
+            hiddenText:
+              "Send an email to contact Sean McPherson (seanmcp): sean@seanmcp.com",
+          },
+          ...socials.map((social) => ({
+            url: social.url,
+            visibleText: `Find me on ${social.label}`,
+          })),
+        ]}
+      />
+      <CommandPaletteSection
+        label="Articles"
+        content={articles.map((article) => ({
+          url: article.url,
+          visibleText: article.frontmatter.title,
+          hiddenText: article.frontmatter.description,
+        }))}
+      />
+      <CommandPaletteSection
+        label="Notes"
+        content={notes.map((note) => {
+          const number = getNoteNumberFromFilePath(note.file);
+          return {
+            url: `/notes/${number}`,
+            visibleText: number,
+            hiddenText:
+              note.file.slice(-3) === ".md" ? note.rawContent() : undefined,
+          };
+        })}
+      />
+      <CommandPaletteSection
+        label="Pages"
+        content={navigation.all.map((page) => ({
+          url: page.url,
+          visibleText: page.label,
+          hiddenText: page.description,
+        }))}
+      />
+    </section>
+    <footer>
+      <span>Experiment: <a href="mailto:sean@seanmcp.com?subject=Command Palette">Feedback</a></span>
+      <span class="exit--mobile">Tap overlay to exit</span>  
+      <span class="exit--desktop">Exit with <kbd>Escape</kbd></span>
+    </footer>
+  </section>
+</aside>
+
+<script>
+  const palette = document.querySelector<HTMLElement>("#command-palette");
+  const trigger = document.querySelector<HTMLButtonElement>(
+    "#command-palette__trigger"
+  );
+  const overlay = document.querySelector("#command-palette__overlay");
+  const input = document.querySelector<HTMLInputElement>(
+    "#command-palette input"
+  );
+  const results = document.querySelector("#command-palette__results-message");
+  const items = document.querySelectorAll<HTMLAnchorElement>(
+    "#command-palette nav a"
+  );
+
+  input.addEventListener("input", (event) => {
+    const target = event.target as HTMLInputElement;
+    const query = target.value.toLowerCase();
+    if (query.length < 3) {
+      items.forEach((item) => delete item.dataset.match);
+      results.textContent = "";
+      return;
+    }
+
+    let count = 0;
+
+    items.forEach((item) => {
+      if (query && item.textContent.toLowerCase().includes(query)) {
+        item.dataset.match = "true";
+        count++;
+      } else {
+        delete item.dataset.match;
+      }
+    });
+
+    results.textContent = `${count} results`;
+  });
+
+  let previouslyActiveElement;
+
+  function focusTrap(focusEvent) {
+    if (!palette.contains(focusEvent.target)) {
+      input.focus();
+    }
+  }
+
+  function openPalette() {
+    palette.dataset.state = "open";
+    previouslyActiveElement = document.activeElement;
+    results.textContent = "";
+    input.value = "";
+    input.focus();
+    window.addEventListener("focus", focusTrap, true);
+    overlay.addEventListener("click", closePalette);
+  }
+
+  function closePalette() {
+    palette.dataset.state = "closed";
+    (previouslyActiveElement || document.body).focus();
+    window.removeEventListener("focus", focusTrap);
+    overlay.removeEventListener("click", closePalette);
+    items.forEach((item) => delete item.dataset.match);
+  }
+
+  trigger.addEventListener("click", openPalette);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "k" && e.metaKey && palette.dataset.state !== "open") {
+      e.preventDefault();
+      openPalette();
+    }
+    if (e.key === "Escape" && palette.dataset.state === "open") {
+      e.preventDefault();
+      closePalette();
+    }
+  });
+</script>
+
+<style>
+  button {
+    align-items: center;
+    background: transparent;
+    border: none;
+    display: flex;
+    padding: 0;
+  }
+  button:where(:hover, :focus) {
+    color: var(--anchor-color);
+  }
+  button:where(:focus, :hover) svg {
+    transform: rotate(12.5deg);
+  }
+  #command-palette {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+
+  #command-palette:not([data-state="open"]) {
+    display: none;
+  }
+
+  #command-palette__overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  #command-palette__content {
+    background: var(--background);
+    box-shadow: 0 0 1rem var(--off-background);
+    display: grid;
+    gap: 1rem;
+    margin-top: 4rem;
+    padding-top: 1rem;
+    position: absolute;
+    width: min(400px, calc(100% - 2rem));
+  }
+
+  #command-palette__content > *:not(footer) {
+    margin-inline: 1rem;
+  }
+
+  #command-palette__content section {
+    display: grid;
+    gap: 0.5rem;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+
+  #command-palette__results-message {
+    font-size: small;
+    text-align: center;
+  }
+
+  input {
+    background: transparent;
+    border: 1px solid var(--off-background);
+    color: inherit;
+    font: inherit;
+    padding: 1ch;
+  }
+
+  footer {
+    border-top: 1px solid var(--off-background);
+    color: var(--lighter-text-color);
+    display: flex;
+    font-size: x-small;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+  }
+
+  .exit--desktop {
+    display: none;
+  }
+
+  @media screen and (min-width: 600px) {
+    .exit--mobile {
+      display: none;
+    }
+    .exit--desktop {
+      display: initial;
+    }
+  }
+</style>

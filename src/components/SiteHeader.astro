@@ -1,7 +1,9 @@
 ---
-import navigation from "../data/navigation";
+import CommandPalette from "./CommandPalette.astro";
 import DarkModeToggle from "./DarkModeToggle.astro";
 import LogoLink from "./LogoLink.astro";
+
+import navigation from "../data/navigation";
 ---
 
 <header>
@@ -20,11 +22,14 @@ import LogoLink from "./LogoLink.astro";
                   : null
               }
               href={item.url}
-            >{item.label}{item.label==="More"&&<span class="--visually-hidden"> links</span>}</a>
+            >
+              {item.label}
+            </a>
           );
         })
       }
     </nav>
+    <CommandPalette />
     <DarkModeToggle />
   </div>
   <div id="scroll-progress">
