@@ -1,0 +1,93 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+---
+
+<PageLayout title="Bookmarks">
+  <p>
+    Bookmarks are saved content on SeanMcP.com. <a
+      href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"
+      rel="noopener noreferrer"
+      target="_blank">The data lives in your browser</a
+    >
+    and will never be shared with anyone else.
+  </p>
+  <p aria-hidden="true">
+    You don't have any bookmarks saved. Click the bookmark icon on any content
+    to save it for later.
+  </p>
+  <section aria-hidden="true">
+    <ul id="bookmarks"></ul>
+    <button id="remove-all">Remove all bookmarks</button>
+  </section>
+</PageLayout>
+
+<style>
+  :global([aria-hidden="true"]) {
+    display: none;
+  }
+
+  #bookmarks {
+    list-style: none;
+    padding: 0;
+  }
+
+  :global(#bookmarks li) {
+    align-items: start;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  :global(button) {
+    background: transparent;
+    border: 2px solid var(--off-background);
+    font: inherit;
+    line-height: 1.5em;
+  }
+</style>
+
+<script>
+  let bookmarks = JSON.parse(
+    localStorage.getItem("com.seanmcp.bookmarks") || "[]"
+  );
+  const bookmarksUl = document.getElementById("bookmarks");
+  const messageP = document.querySelector("p[aria-hidden=true]");
+  const bookmarksSection = document.querySelector("section[aria-hidden=true]");
+
+  function renderBookmarks() {
+    if (bookmarks.length) {
+      messageP.setAttribute("aria-hidden", "true");
+      bookmarksSection.removeAttribute("aria-hidden");
+
+      bookmarksUl.textContent = "";
+      let innerHTML = "";
+      bookmarks.forEach((bookmark) => {
+        innerHTML += `<li><a href="${bookmark}">${bookmark}</a><button data-data="${bookmark}">Remove</button></li>`;
+      });
+      bookmarksUl.innerHTML = innerHTML;
+    } else {
+      messageP.removeAttribute("aria-hidden");
+      bookmarksSection.setAttribute("aria-hidden", "true");
+    }
+  }
+
+  renderBookmarks();
+
+  document.addEventListener("click", (e) => {
+    if (!e.target) return;
+    if (e.target.dataset.data) {
+      bookmarks = bookmarks.filter((b) => b !== e.target.dataset.data);
+      localStorage.setItem("com.seanmcp.bookmarks", JSON.stringify(bookmarks));
+      renderBookmarks();
+    } else if (e.target.id === "remove-all") {
+      if (confirm("Are you sure you want to remove all bookmarks?")) {
+        bookmarks = [];
+        localStorage.setItem(
+          "com.seanmcp.bookmarks",
+          JSON.stringify(bookmarks)
+        );
+        renderBookmarks();
+      }
+    }
+  });
+</script>

@@ -16,7 +16,7 @@ const articlesToRender = all.slice(0, count);
           {/* Added for styling. Find a better way. */}
           <ReadableTime date={article.frontmatter.pubDate} />
         </div>
-        <a href={article.url}>{article.frontmatter.title}</a>
+        <a href={article.url}>{article.frontmatter.draft && "[DRAFT] "}{article.frontmatter.title}</a>
         <p>{article.frontmatter.description}</p>
       </article>
     ))

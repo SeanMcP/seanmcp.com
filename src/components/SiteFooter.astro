@@ -1,63 +1,79 @@
 ---
-import navigation from "../data/navigation";
-import socials from "../data/socials";
-
 import metadata from "../data/metadata.json";
 ---
 
 <footer>
-  <hr />
   <div>
-    <b>{metadata.name}</b><br />
-    <small>
-      Copyright &copy; 2018 - {new Date().getFullYear()} Sean McPherson (SDG)
-    </small>
+    <b>{metadata.name}</b> &copy; 2018 - {new Date().getFullYear()} (SDG)
   </div>
-  <div class="site-footer__nav">
-    <section>
-      <h2>Navigation</h2>
-      <nav aria-label="secondary">
-        {
-          navigation.secondary.map((link) => (
-            <a href={link.url}>{link.label}</a>
-          ))
-        }
-      </nav>
-    </section>
-    <section>
-      <h2>Socials</h2>
-      <nav>
-        {socials.map((link) => <a href={link.url}>{link.label}</a>)}
-      </nav>
-    </section>
-  </div>
+  <a aria-label="Email" href="mailto:sean@seanmcp.com">
+    <svg
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="192"
+      height="192"
+      fill="#000000"
+      viewBox="0 0 256 256"
+      ><path
+        d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="16"></path><polyline
+        points="224 56 128 144 32 56"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="16"></polyline>
+    </svg>
+  </a>
+  <a aria-label="RSS" href="/rss.xml">
+    <svg
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="192"
+      height="192"
+      fill="currentColor"
+      viewBox="0 0 256 256"
+      ><path
+        d="M56,48A152.1,152.1,0,0,1,208,200"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="16"></path><path
+        d="M56,120a80,80,0,0,1,80,80"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="16"></path><circle cx="56" cy="200" r="12"></circle>
+    </svg>
+  </a>
 </footer>
 
 <style>
-  footer hr {
-    margin-top: 0;
-  }
-
-  h2 {
-    font-size: 1rem;
-    margin-bottom: 0rem !important;
-  }
-
-  nav {
+  footer {
+    align-items: center;
     display: flex;
-    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 3rem;
   }
 
-  nav a {
-    font-size: small;
-    margin-top: 0.375rem;
+  svg {
+    height: 24px;
+    width: 24px;
   }
 
-  @media screen and (min-width: 768px) {
-    .site-footer__nav {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(2, 1fr);
-    }
+  a {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  a:first-of-type {
+    margin-left: auto;
   }
 </style>

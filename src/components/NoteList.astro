@@ -1,0 +1,39 @@
+---
+import Note from "@components/Note.astro";
+import { getSortedContent } from "../utils";
+
+interface Props {
+  count?: number;
+}
+
+const { count } = Astro.props;
+
+const notes = getSortedContent(
+  await Astro.glob("../../content/notes/*.{md,mdx}")
+);
+---
+
+{
+  count === 1 ? (
+    <Note {...notes[0]} />
+  ) : (
+    <ul>
+      {notes.slice(0, count).map((note) => (
+        <li>
+          <Note {...note} />
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding: 0;
+  }
+</style>

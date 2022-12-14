@@ -1,0 +1,51 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: "public/img/"
+local_backend: true
+public_folder: "/dist/"
+collections:
+  - name: "article"
+    label: "Article"
+    folder: "src/pages/articles"
+    create: true
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "@layouts/ArticleLayout.astro"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Description"
+        name: "description"
+        widget: "string"
+      - label: "Date"
+        name: "pubDate"
+        widget: "datetime"
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        default: true
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+      - label: "Verse"
+        name: "verse"
+        widget: "string"
+        required: false
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        buttons: []
+        modes: ["raw"]
+      - label: "Head"
+        name: "head"
+        widget: "code"
+        required: false
+        modes: ["html"]
+        output_code_only: true

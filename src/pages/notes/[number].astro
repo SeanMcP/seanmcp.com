@@ -1,0 +1,44 @@
+---
+import Note from "@components/Note.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import { getNoteNumberFromFilePath, getSortedContent } from "src/utils";
+
+export async function getStaticPaths() {
+  const sorted = getSortedContent(
+    await Astro.glob("../../../content/notes/*.(md|mdx)")
+  );
+
+  return sorted.map((note) => {
+    const number = getNoteNumberFromFilePath(note.file);
+    return {
+      params: {
+        number,
+      },
+      props: {
+        number,
+        note: note,
+      },
+    };
+  });
+}
+
+const { note, number } = Astro.props;
+
+const title = `Note #` + number;
+---
+
+<PageLayout title={title} withoutH1>
+  <div></div>
+  <Note {...note} />
+  <p>Browse <a href="/notes/">all notes</a></p>
+</PageLayout>
+
+<style>
+  div {
+    height: 2.5rem;
+  }
+  p {
+    margin-top: 2rem;
+    text-align: center;
+  }
+</style>

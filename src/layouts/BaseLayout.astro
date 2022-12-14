@@ -6,6 +6,7 @@ export interface Props {
   foot?: string;
   head?: string;
   title: string;
+  documentTitle?: string;
 }
 
 const found = {
@@ -13,7 +14,7 @@ const found = {
   foot: Astro.props.frontmatter?.foot ?? Astro.props.foot,
   head: Astro.props.frontmatter?.head ?? Astro.props.head,
   image: Astro.props.frontmatter?.image ?? Astro.props.image,
-  title: Astro.props.frontmatter?.title ?? Astro.props.title,
+  title: Astro.props.documentTitle || Astro.props.frontmatter?.documentTitle || Astro.props.frontmatter?.title || Astro.props.title,
 };
 ---
 

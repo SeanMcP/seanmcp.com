@@ -1,0 +1,53 @@
+---
+import { getSortedContent, slugify } from "src/utils";
+
+const { series } = Astro.props;
+
+let items;
+
+if (series) {
+  items = getSortedContent(await Astro.glob("../pages/articles/*.{md,mdx}"))
+    .filter((article) => {
+      return article.frontmatter.series === series;
+    })
+    .reverse();
+}
+---
+
+{
+  items && (
+    <section id="series">
+      <p>
+        This article is part of a series titled{" "}
+        <a href={`/series#${slugify(series)}`}>{series}</a>. You can read the
+        other items in there series here:
+      </p>
+      <ol>
+        {items.map((article) => {
+          return (
+            <li>
+              <a
+                href={article.url}
+                aria-current={article.url === Astro.url.pathname}
+              >
+                {article.frontmatter.title}
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+  )
+}
+
+<style>
+  #series {
+    border: 2px solid var(--off-background);
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  #series :global([aria-current]) {
+    font-weight: bold;
+  }
+</style>

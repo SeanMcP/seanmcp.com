@@ -1,10 +1,10 @@
-<label data-size={Astro.props.size}>
+<label data-size={Astro.props.size} class="--focus-within">
   <input
-    aria-label="toggle bookmarked"
-    id="bookmark-toggle"
+    aria-label="Bookmark"
     class="--visually-hidden"
+    data-url={Astro.props.url || Astro.url.pathname}
+    name="bookmark-toggle"
     type="checkbox"
-    data-url={Astro.url.pathname}
   />
   <svg
     xmlns="http://www.w3.org/2000/svg"

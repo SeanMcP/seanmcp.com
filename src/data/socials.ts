@@ -11,11 +11,10 @@ export default [
   },
   {
     label: "YouTube",
-    url: "https://smcp.dev/yt",
+    url: "https://youtube.com/@seanmcp",
   },
   {
-    label: "Twitter",
-    username: "snmcp",
-    url: "https://twitter.com/snmcp",
+    label: "Mastodon",
+    url: "https://fosstodon.org/@seanmcp",
   },
 ];

@@ -12,7 +12,7 @@ const {
 
 const pageDescription = Astro.props.description ?? description;
 const pageFavicon = Astro.props.Favicon ?? defaultFavicon;
-const pageImage = metadata.url + (Astro.props.image ?? defaultFavicon);
+const pageImage = metadata.url + (Astro.props.image ?? "/img/og-image.png");
 const pageTitle = Astro.props.title ?? "Sean McPherson";
 let pageUrl = url + Astro.url.pathname;
 
@@ -52,3 +52,10 @@ if (pageUrl[pageUrl.length - 1] !== "/") {
   type="application/rss+xml"
   title="SeanMcP.com RSS Feed"
 />
+<link
+  rel="alternate"
+  href="https://fosstodon.org/@seanmcp.rss"
+  type="application/rss+xml"
+  title="@seanmcp on Fosstodon.org"
+/>
+<link rel="me" href="https://fosstodon.org/@seanmcp" />

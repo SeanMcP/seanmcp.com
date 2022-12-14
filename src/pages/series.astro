@@ -1,0 +1,48 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import { getSortedContent, slugify } from "src/utils";
+
+const articlesBySeries = {};
+
+// TODO: Find a better way
+const descriptionsBySeries = {
+  "Trying Linux 2022":
+    "The last time I tried using Linux was probably 2012. In 2022, I decided to give Linux another try and see what it has to offer me as a front-end focused developer.",
+};
+
+getSortedContent(await Astro.glob("./articles/*.{md,mdx}")).forEach(
+  (article) => {
+    const { series } = article.frontmatter;
+    if (!series) return;
+    if (!articlesBySeries[series]) {
+      articlesBySeries[series] = [];
+    }
+    articlesBySeries[series].unshift(article);
+  }
+);
+---
+
+<PageLayout title="Series">
+  <p>Series are articles that are written in an ordered set.</p>
+  {
+    Object.entries(articlesBySeries).map(([series, articles]) => (
+      <article>
+        <h2 id={slugify(series)}>{series}</h2>
+        {descriptionsBySeries[series] && <p>{descriptionsBySeries[series]}</p>}
+        <ol>
+          {articles.map((article) => (
+            <li>
+              <a href={article.url}>{article.frontmatter.title}</a>
+            </li>
+          ))}
+        </ol>
+      </article>
+    ))
+  }
+</PageLayout>
+
+<style>
+  article + article {
+    margin-top: 3rem;
+  }
+</style>

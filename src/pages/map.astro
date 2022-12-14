@@ -1,0 +1,37 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import navigation from "src/data/navigation";
+import socials from "src/data/socials";
+---
+
+<PageLayout title="Site map">
+  <nav>
+    {
+      navigation.map.map((item) => (
+        <div>
+          <a href={item.url}>{item.label}</a>: {item.description}
+        </div>
+      ))
+    }
+  </nav>
+  <h2>Social media</h2>
+  <nav>
+    {
+      socials.map((item) => (
+        <a href={item.url} rel="me">
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</PageLayout>
+
+<style>
+  nav > * + * {
+    margin-top: 0.5rem;
+  }
+
+  nav > a {
+    display: block;
+  }
+</style>

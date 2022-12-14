@@ -1,9 +1,11 @@
 ---
-import PageLayout from "./PageLayout.astro";
+import ArticleSeries from "@components/ArticleSeries.astro";
 import Bio from "@components/Bio.astro";
+import BookmarkToggle from "@components/BookmarkToggle.astro";
+import PageLayout from "./PageLayout.astro";
 import ReadableTime from "@components/ReadableTime.astro";
 import TagList from "@components/TagList.astro";
-import BookmarkToggle from "@components/BookmarkToggle.astro";
+import HeroImage from "@components/HeroImage.astro";
 
 const { frontmatter } = Astro.props;
 ---
@@ -21,6 +23,8 @@ const { frontmatter } = Astro.props;
       </div>
       <BookmarkToggle />
     </header>
+    <HeroImage image={frontmatter.image} />
+    <ArticleSeries series={frontmatter.series} />
     <slot />
     <hr />
     <footer>
@@ -59,6 +63,10 @@ const { frontmatter } = Astro.props;
     margin-bottom: 2rem;
     /* Offset SVG's padding */
     margin-right: -0.5rem;
+  }
+
+  header div {
+    flex: 1;
   }
 
   /* Specificity to override global styles */

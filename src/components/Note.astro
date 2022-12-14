@@ -1,22 +1,27 @@
 ---
-import { readableDate } from "../utils";
-import BookmarkToggle from "./BookmarkToggle.astro";
+import BookmarkToggle from "@components/BookmarkToggle.astro";
+import { getNoteNumberFromFilePath, readableDate } from "src/utils";
 
-const { date, edited, number } = Astro.props;
+const {
+  Content,
+  file,
+  frontmatter: { pubDate, edited },
+} = Astro.props;
+
+const number = getNoteNumberFromFilePath(file);
+const url = `/notes/${number}`;
 ---
 
-<article>
-  <div>
-    <header>
-      <h1>Note #{number}</h1>
-      <span>
-        <a href={`/notes/${number}`}><time datetime={date}>{readableDate(date)}</time></a>
-        {edited && <span>(Edited)</span>}
-      </span>
-      <BookmarkToggle size="small" />
-    </header>
-    <slot />
-  </div>
+<article data-url={url}>
+  <header>
+    <h1>Note #{number}</h1>
+    <span>
+      <a href={url}><time datetime={pubDate}>{readableDate(pubDate)}</time></a>
+      {edited && <span>(Edited)</span>}
+    </span>
+    <BookmarkToggle size="small" url={url} />
+  </header>
+  <Content />
 </article>
 
 <style>
@@ -38,7 +43,7 @@ const { date, edited, number } = Astro.props;
     margin-right: auto;
   }
 
-  div {
+  article {
     border: 2px solid var(--off-background);
     padding: 0 1rem;
   }

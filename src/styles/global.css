@@ -1,6 +1,6 @@
 :root {
-  --dark: hsl(216, 5%, 10%);
-  --light: hsl(216, 5%, 97%);
+  --dark: hsl(0, 0%, 10%);
+  --light: hsl(0, 0%, 97%);
 
   --accent: hsl(188, 100%, 42%);
   --primary: hsl(216, 85%, 34%);
@@ -32,19 +32,35 @@ body {
 
 body {
   --text-color: hsl(0, 0%, 20%);
-  --background: white;
   --lighter-text-color: hsl(0, 0%, 40%);
   background: var(--background);
   font-family: var(--body-font);
   color: var(--text-color);
+  line-height: 1.5;
 }
 
-body > header,
-main,
-body > footer {
-  margin: 0 auto;
+body[data-theme="dark"] {
+  --background: var(--dark);
+  --off-background: hsla(0, 0%, 100%, 20%);
+  --text-color: var(--light);
+  --anchor-color: var(--accent);
+  --lighter-text-color: hsl(0, 0%, 60%);
+  --inline-code-background: hsla(0, 0%, 0%, 50%);
+  --inline-code-color: hsla(0, 0%, 100%, 85%);
+}
+
+body > :where(footer, main),
+.cc /* Content Container */ {
+  margin-left: auto;
+  margin-right: auto;
   max-width: calc(10rem * 4);
   padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  body > :where(footer, header) {
+    font-size: smaller;
+  }
 }
 
 h1,
@@ -83,9 +99,10 @@ a:hover {
   text-decoration-color: currentColor;
 }
 
-a:focus {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
+:where(.--focus-within):focus-within,
+:where(:focus) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 code,
@@ -133,7 +150,8 @@ p {
 }
 
 blockquote {
-  border-left: 4px solid currentColor;
+  border-left: 2px solid currentColor;
+  color: var(--lighter-text-color);
   margin-left: 0;
   margin-right: 0;
   padding: 0.5rem 1.5rem;
@@ -171,7 +189,7 @@ li ul {
   outline-offset: 0.25rem; */
 }
 
-[data-bookmarked] span[role=img] {
+[data-bookmarked] span[role="img"] {
   position: absolute;
   height: 24px;
   right: -0.25rem;
