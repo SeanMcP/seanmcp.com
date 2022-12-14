@@ -73,6 +73,10 @@ h6 {
   margin-top: 1em;
 }
 
+h1 {
+  line-height: 1;
+}
+
 hr {
   background: var(--off-background);
   border: none;
