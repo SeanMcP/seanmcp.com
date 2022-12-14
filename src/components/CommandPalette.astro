@@ -89,7 +89,7 @@ const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
       />
     </section>
     <footer>
-      <span>Experiment: <a href="mailto:sean@seanmcp.com?subject=Command Palette">Feedback</a></span>
+      <span>Experimental feature: <a href="mailto:sean@seanmcp.com?subject=Command Palette">Feedback</a></span>
       <span class="exit--mobile">Tap overlay to exit</span>  
       <span class="exit--desktop">Exit with <kbd>Escape</kbd></span>
     </footer>
@@ -178,6 +178,7 @@ const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
     align-items: center;
     background: transparent;
     border: none;
+    color: inherit;
     display: flex;
     padding: 0;
   }
