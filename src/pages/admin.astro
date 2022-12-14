@@ -1,5 +1,9 @@
 ---
-import CMS from 'astro-netlify-components/CMS.astro'
+import CMS from "astro-netlify-components/CMS.astro";
 ---
 
-<CMS />
+<CMS>
+  <script slot="foot">
+    CMS.registerPreviewStyle("/admin/preview.css");
+  </script>
+</CMS>
