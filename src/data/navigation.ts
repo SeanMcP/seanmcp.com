@@ -59,10 +59,21 @@ const LINKS = {
     label: "Soccer",
     url: "/soccer/",
   },
+  tools: {
+    description:
+      "A library of tools to help make your life easier. Okay, there are some games too – but they're educational!",
+    label: "Tools",
+    url: "/tools/",
+  },
+  uses: {
+    description: "A curated list of tools and technology that I use",
+    label: "Uses",
+    url: "/uses/",
+  },
 };
 
 export default {
-  header: [LINKS.articles, LINKS.about, /*{ ...LINKS.map, label: "More" }*/],
+  header: [LINKS.articles, LINKS.about /*{ ...LINKS.map, label: "More" }*/],
   map: [
     LINKS.about,
     LINKS.articles,
@@ -72,6 +83,8 @@ export default {
     LINKS.series,
     LINKS.tags,
     LINKS.talks,
+    LINKS.tools,
+    LINKS.uses,
   ],
   all: Object.values(LINKS),
 };
