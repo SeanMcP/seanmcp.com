@@ -196,6 +196,9 @@ const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
   button:where(:focus, :hover) svg {
     transform: rotate(12.5deg);
   }
+  button svg {
+    transition: color 200ms ease-in-out;
+  }
   #command-palette {
     display: flex;
     justify-content: center;
