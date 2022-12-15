@@ -101,6 +101,8 @@ const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
 </aside>
 
 <script>
+  import { platypus } from "../utils";
+
   const palette = document.querySelector<HTMLElement>("#command-palette");
   const trigger = document.querySelector<HTMLButtonElement>(
     "#command-palette__trigger"
@@ -146,6 +148,7 @@ const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
   }
 
   function openPalette() {
+    palette.dataset.mobile = platypus().isMobile().toString();
     palette.dataset.state = "open";
     previouslyActiveElement = document.activeElement;
     results.textContent = "";
@@ -168,7 +171,7 @@ const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
   document.addEventListener("keydown", (e) => {
     if (
       e.key === "k" &&
-      (e.metaKey || e.ctrlKey) &&
+      platypus().commandOrControl(e) &&
       palette.dataset.state !== "open"
     ) {
       e.preventDefault();
@@ -265,16 +268,11 @@ const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
     padding: 0.75rem 1rem;
   }
 
-  .exit--desktop {
+  #command-palette[data-mobile="true"] .exit--desktop {
     display: none;
   }
 
-  @media screen and (min-width: 600px) {
-    .exit--mobile {
-      display: none;
-    }
-    .exit--desktop {
-      display: initial;
-    }
+  #command-palette[data-mobile="false"] .exit--mobile {
+    display: none;
   }
 </style>

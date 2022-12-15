@@ -54,3 +54,32 @@ export function readableDate(date: string) {
     year: "numeric",
   });
 }
+
+export function platypus(nav = navigator) {
+  if (typeof nav === "undefined") {
+    throw new Error(
+      "Platypus assumes a global navigator object; did you call it outside of a browser environment?"
+    );
+  }
+  return {
+    /**
+     * Check if the userAgent appears to be macOS or iPhoneOS
+     */
+    isMac() {
+      return nav.userAgent.includes("Mac");
+    },
+    /**
+     * Check if the userAgent appears to be mobile
+     */
+    isMobile() {
+      return nav.userAgent.includes("Mobile");
+    },
+    /**
+     * Checks if command key is pressed on Mac or control key is pressed on
+     * other platforms
+     */
+    commandOrControl(keyboardEvent: KeyboardEvent) {
+      return this.isMac() ? keyboardEvent.metaKey : keyboardEvent.ctrlKey;
+    },
+  };
+}
