@@ -89,8 +89,12 @@ const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
       />
     </section>
     <footer>
-      <span>Experimental feature: <a href="mailto:sean@seanmcp.com?subject=Command Palette">Feedback</a></span>
-      <span class="exit--mobile">Tap overlay to exit</span>  
+      <span
+        >Experimental feature: <a
+          href="mailto:sean@seanmcp.com?subject=Command Palette">Feedback</a
+        >
+      </span>
+      <span class="exit--mobile">Tap overlay to exit</span>
       <span class="exit--desktop">Exit with <kbd>Escape</kbd></span>
     </footer>
   </section>
@@ -162,7 +166,11 @@ const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
   trigger.addEventListener("click", openPalette);
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "k" && e.metaKey && palette.dataset.state !== "open") {
+    if (
+      e.key === "k" &&
+      (e.metaKey || e.ctrlKey) &&
+      palette.dataset.state !== "open"
+    ) {
       e.preventDefault();
       openPalette();
     }
