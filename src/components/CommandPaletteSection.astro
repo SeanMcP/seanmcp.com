@@ -29,16 +29,20 @@ const id = `command-prompt__section--${label.toLowerCase()}`;
 </section>
 
 <style>
+  section {
+    font-size: small;
+  }
+
   nav {
     display: flex;
     flex-direction: column;
-    padding: 0.25rem 0.5rem;
   }
 
   a {
     display: none;
-    font-size: small;
+    margin: 2px 4px;
   }
+
   a[data-match="true"] {
     display: initial;
   }
