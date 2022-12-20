@@ -39,7 +39,7 @@ const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
   <span class="--visually-hidden">Search</span>
 </button>
 
-<aside id="command-palette">
+<section aria-label="Command palette" id="command-palette" role="dialog">
   <div id="command-palette__overlay"></div>
   <section id="command-palette__content">
     <input aria-label="Search for content" type="text" />
@@ -99,7 +99,7 @@ const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
       <span class="exit--desktop">Exit with <kbd>Escape</kbd></span>
     </footer>
   </section>
-</aside>
+</section>
 
 <script>
   import { platypus } from "../utils";
