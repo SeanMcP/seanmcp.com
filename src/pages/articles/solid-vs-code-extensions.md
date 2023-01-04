@@ -21,4 +21,6 @@ In an attempt to resolve that issue, here is a curated list of some great VS Cod
 
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer): Adds a button to the bottom status bar to launch a local development server in the current directory. Never Google "serve directory python" again!
 
+- [Search node_modules](https://marketplace.visualstudio.com/items?itemName=jasonnutter.search-node-modules): Adds a command to search the `node_modules/` directory in your project. VS Code ignores those files by default, so having a method to go spelunking in your dependencies is really handy.
+
 Happy extending!
