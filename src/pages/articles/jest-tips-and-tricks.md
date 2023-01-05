@@ -2,14 +2,14 @@
 layout: "@layouts/ArticleLayout.astro"
 title: Jest tips & tricks
 description: A growing list of little things that make working with Jest a little better
+pubDate: 2022-10-06T15:58:09.243Z
 draft: false
-image:
 tags:
   - Garden
   - Jest
   - Testing
-pubDate: 2022-10-06T15:58:09.243Z
-verse:
+verse: null
+image: null
 ---
 
 Since 2017, I have only used Jest for JavaScript application testing. And while [Vitest does look exciting](https://vitest.dev/), I think that it's safe to say that Jest will be around for a good while longer.
@@ -54,6 +54,7 @@ The Jest CLI has a number of flags that can be used to change the way that Jest 
 
 - `--bail/-b`: Exits the test suite after a given number of failures (default 1)
 - `--changedSince`: Only run tests related to files changed since a given point. I like to use this with the target branch as a quick check for regressions.
+-﻿ `--findRelatedTests`: Runs tests related to changed files. Works well in a pre-commit hook.
 - `--watch`: Run tests in watch mode. Great when running a small set of tests, but maybe omit if you're running the whole suite.
 
 ## Selective runs
