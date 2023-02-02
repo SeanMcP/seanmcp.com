@@ -5,24 +5,24 @@ description: A garden all about VS Code
 pubDate: 2023-01-04T19:51:08.581Z
 draft: true
 tags:
-  - VSCode
+  - VS Code
   - Garden
 ---
-V﻿S Code is a great all-around editor.
+VS Code is a great all-around editor.
 
-#﻿# Commands
+## Commands
 
--﻿ **Fold All** collapses all code blocks for the current file. Very handy when you are exploring a new file that is super long.
+- **Fold All** collapses all code blocks for the current file. Very handy when you are exploring a new file that is super long.
 
-#﻿# Extensions
+## Extensions
 
--﻿ Code Spell Checker
--﻿ Git Blame
--﻿ GitHub Pull Requests and Issues
--﻿ Live Server
--﻿ Prettier
--﻿ Search node_modules/
+- Code Spell Checker
+- Git Blame
+- GitHub Pull Requests and Issues
+- Live Server
+- Prettier
+- Search node_modules/
 
-#﻿# Settings
+## Settings
 
--﻿ **Format on save**: `editor.formatOnSave`
+- **Format on save**: `editor.formatOnSave`
