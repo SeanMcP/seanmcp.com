@@ -20,7 +20,7 @@ const items = Object.values(
 export const get = () =>
   rss({
     // `<title>` field in output xml
-    title: metadata.title,
+    title: metadata.author.name,
     // `<description>` field in output xml
     description: metadata.description,
     // base URL for RSS <item> links
