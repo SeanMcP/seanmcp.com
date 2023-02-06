@@ -7,7 +7,7 @@
     "@astrojs/sitemap": "^1.0.0",
     "astro": "^1.5.2",
     "astro-emoji": "^1.0.0",
-    "astro-netlify-components": "^0.2.0",
+    "astro-netlify-components": "^0.2.1",
     "consonant-vowel-patterns": "^1.0.0",
     "slugify": "^1.6.5"
   },
