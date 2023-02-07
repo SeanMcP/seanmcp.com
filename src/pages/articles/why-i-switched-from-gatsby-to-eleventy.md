@@ -1,7 +1,7 @@
 ---
 layout: "@layouts/ArticleLayout.astro"
 title: Why I switched from Gatsby to Eleventy
-description:
+description: This is a WIP that I probably will never finish.
 pubDate: 2019-04-12
 tags:
   - Eleventy

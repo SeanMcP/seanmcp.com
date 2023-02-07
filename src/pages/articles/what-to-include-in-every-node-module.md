@@ -1,7 +1,7 @@
 ---
 layout: "@layouts/ArticleLayout.astro"
 title: What to include in every node module
-description:
+description: This is a WIP that I probably will never finish.
 pubDate: 2020-02-03
 tags:
   - Node Modules

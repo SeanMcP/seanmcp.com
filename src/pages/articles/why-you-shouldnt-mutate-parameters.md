@@ -1,7 +1,7 @@
 ---
 layout: "@layouts/ArticleLayout.astro"
 title: Why you shouldn't mutate parameters
-description:
+description: This is a WIP that I probably will never finish.
 pubDate: 2020-08-05
 tags:
   - JavaScript

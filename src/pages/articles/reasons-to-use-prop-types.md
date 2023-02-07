@@ -1,7 +1,7 @@
 ---
 layout: "@layouts/ArticleLayout.astro"
 title: Reasons to use prop-types
-description:
+description: This is a WIP that I probably will never finish.
 pubDate: 2019-06-27
 tags:
   - React
