@@ -1,7 +1,7 @@
 ---
 layout: "@layouts/ArticleLayout.astro"
 title: Manage analysis paralysis while programming
-description:
+description: This is a WIP that I probably will never finish.
 pubDate: 2020-07-14
 tags:
   - Programming

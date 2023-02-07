@@ -1,7 +1,7 @@
 ---
 layout: "@layouts/ArticleLayout.astro"
 title: The fastest way to look for object properties
-description: 
+description: This is a WIP that I probably will never finish.
 pubDate: 2019-12-31
 tags:
     - JavaScript
