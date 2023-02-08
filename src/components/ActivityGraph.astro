@@ -1,34 +1,34 @@
 ---
 import { getSortedContent } from "src/utils";
 
-const articles = getSortedContent(
-  await Astro.glob("../pages/articles/*.{md,mdx}")
-);
-const notes = getSortedContent(
-  await Astro.glob("../../content/notes/*.{md,mdx}")
-);
+// const articles = getSortedContent(
+//   await Astro.glob("../pages/articles/*.{md,mdx}")
+// );
+// const notes = getSortedContent(
+//   await Astro.glob("../../content/notes/*.{md,mdx}")
+// );
 
-const yearCount: Record<number, { articles: number; notes: number }> = {};
+// const yearCount: Record<number, { articles: number; notes: number }> = {};
 
-articles.forEach((article) => {
-  const year = new Date(article.frontmatter.pubDate).getFullYear();
-  if (!yearCount[year]) yearCount[year] = { articles: 0, notes: 0 };
-  yearCount[year].articles++;
-});
+// articles.forEach((article) => {
+//   const year = new Date(article.frontmatter.pubDate).getFullYear();
+//   if (!yearCount[year]) yearCount[year] = { articles: 0, notes: 0 };
+//   yearCount[year].articles++;
+// });
 
-notes.forEach((note) => {
-  const year = new Date(note.frontmatter.pubDate).getFullYear();
-  if (!yearCount[year]) yearCount[year] = { articles: 0, notes: 0 };
-  yearCount[year].notes++;
-});
+// notes.forEach((note) => {
+//   const year = new Date(note.frontmatter.pubDate).getFullYear();
+//   if (!yearCount[year]) yearCount[year] = { articles: 0, notes: 0 };
+//   yearCount[year].notes++;
+// });
 
-const highest = Math.max(
-  ...Object.values(yearCount).map((record) => record.articles + record.notes)
-);
-const multiplier = (16 * 4) / highest;
+// const highest = Math.max(
+//   ...Object.values(yearCount).map((record) => record.articles + record.notes)
+// );
+// const multiplier = (16 * 4) / highest;
 ---
 
-<ol>
+<!-- <ol>
   {
     Object.entries(yearCount).map(([year, { articles, notes }]) => {
       const articlesLabel = `${articles} articles`;
@@ -54,7 +54,7 @@ const multiplier = (16 * 4) / highest;
       );
     })
   }
-</ol>
+</ol> -->
 
 <style>
   ol {

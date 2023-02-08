@@ -12,9 +12,9 @@ export function getTags(articles: any[]): Record<string, number> {
   const tags = {};
 
   articles.forEach((article) => {
-    article.frontmatter.tags &&
-      article.frontmatter.tags.forEach((tag) => {
-        if (article.frontmatter.draft && import.meta.env.PROD) {
+    article.data.tags &&
+      article.data.tags.forEach((tag) => {
+        if (article.data.draft && import.meta.env.PROD) {
           // Ignore drafts in production
           return;
         }
@@ -45,6 +45,34 @@ export function getSortedContent(content: any[]) {
       new Date(b.frontmatter.pubDate).valueOf() -
       new Date(a.frontmatter.pubDate).valueOf()
   );
+}
+
+type Entry = {
+  id: string;
+  slug: string;
+  collection: string;
+  data: Record<string, unknown> & { pubDate: Date };
+};
+
+export function getSortedContentV2<T extends Entry>(
+  content: T[],
+  count?: number
+) {
+  const filteredContent = content.filter((item) => {
+    if (item.id.includes("/README.")) {
+      return false;
+    }
+    if (import.meta.env.PROD && item.data.draft) {
+      return false;
+    }
+    return true;
+  });
+  return filteredContent
+    .sort(
+      (a, b) =>
+        new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+    )
+    .slice(0, count);
 }
 
 export function readableDate(date: string) {
