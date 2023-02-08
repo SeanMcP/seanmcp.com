@@ -25,7 +25,7 @@
         {patterns[selectedPattern].length} results for "{selectedPattern}"
         <a
           href={`https://raw.githubusercontent.com/SeanMcP/reading/master/consonant-vowel-patterns/lib/${selectedPattern}.json`}
-          target="_blank">View the raw data</a
+          target="_blank" rel="noreferrer">View the raw data</a
         >
       </p>
       <ol
