@@ -13,6 +13,14 @@ const articles = defineCollection({
   }),
 });
 
+const notes = defineCollection({
+  schema: z.object({
+    pubDate: z.date(),
+    edited: z.boolean().optional()
+  }),
+});
+
 export const collections = {
   articles,
+  notes,
 };

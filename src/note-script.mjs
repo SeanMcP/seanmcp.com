@@ -4,7 +4,7 @@ import { execSync } from "child_process";
 try {
   execSync("git pull");
 
-  const notes = fs.readdirSync("./content/notes");
+  const notes = fs.readdirSync("./src/content/notes");
   let highest = 0;
   notes.forEach((fileName) => {
     const [name] = fileName.split(".");
@@ -15,7 +15,7 @@ try {
   });
 
   const next = highest + 1;
-  const fullPath = `./content/notes/${next}.md`;
+  const fullPath = `./src/content/notes/${next}.md`;
   fs.writeFileSync(
     fullPath,
     `

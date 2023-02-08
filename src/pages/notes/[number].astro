@@ -1,30 +1,32 @@
 ---
 import Note from "@components/Note.astro";
 import PageLayout from "@layouts/PageLayout.astro";
-import { getNoteNumberFromFilePath, getSortedContent } from "src/utils";
+import { getCollection } from "astro:content";
+import {
+  getNoteNumberFromFilePath,
+  getSortedCollection,
+  getSortedContent,
+  getSortedContentV2,
+} from "src/utils";
 
 export async function getStaticPaths() {
-  const sorted = getSortedContent(
-    await Astro.glob("../../../content/notes/*.(md|mdx)")
-  );
+  const notes = getSortedContentV2(await getCollection("notes"));
 
-  return sorted.map((note) => {
-    const number = getNoteNumberFromFilePath(note.file);
+  return notes.map((note) => {
     return {
       params: {
-        number,
+        number: note.slug,
       },
       props: {
-        number,
-        note: note,
+        note,
       },
     };
   });
 }
 
-const { note, number } = Astro.props;
+const { note } = Astro.props;
 
-const title = `Note #` + number;
+const title = `Note #` + note.slug;
 ---
 
 <PageLayout title={title} withoutH1>
