@@ -1,17 +1,22 @@
 ---
-import { getCollection } from "astro:content";
+import { CollectionEntry, getCollection } from "astro:content";
+import { sortCollection } from "src/utils";
 import ReadableTime from "./ReadableTime.astro";
-import { getSortedContentV2 } from "../utils";
 
-const { articles, count } = Astro.props;
 
-let toRender = articles || (await getCollection("articles"));
-toRender = getSortedContentV2(toRender, count);
+interface Props {
+  articles: CollectionEntry<"articles">[]
+  count?: number
+}
+
+const { articles: initial, count } = Astro.props;
+
+const articles = initial || sortCollection.articles(await getCollection("articles"), count);
 ---
 
 <section>
   {
-    toRender.map((article) => {
+    articles.map((article) => {
       const url = `/articles/${article.slug}`;
       return (
         <article data-url={url}>

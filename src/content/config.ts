@@ -7,6 +7,7 @@ const articles = defineCollection({
     image: z.nullable(z.string()).optional(),
     layout: z.string(), // Might not need this after the switch
     pubDate: z.date(),
+    series: z.string().optional(),
     tags: z.array(z.string()),
     title: z.string(),
     verse: z.nullable(z.string()).optional(),
@@ -15,8 +16,8 @@ const articles = defineCollection({
 
 const notes = defineCollection({
   schema: z.object({
+    edited: z.boolean().optional(),
     pubDate: z.date(),
-    edited: z.boolean().optional()
   }),
 });
 

@@ -1,14 +1,16 @@
 ---
-import { getSortedContent, slugify } from "src/utils";
+import { getCollection } from "astro:content";
+import { slugify, sortCollection } from "src/utils";
 
 const { series } = Astro.props;
 
 let items;
 
 if (series) {
-  items = getSortedContent(await Astro.glob("../pages/articles/*.{md,mdx}"))
+  items = sortCollection
+    .articles(await getCollection("articles"))
     .filter((article) => {
-      return article.frontmatter.series === series;
+      return article.data.series === series;
     })
     .reverse();
 }

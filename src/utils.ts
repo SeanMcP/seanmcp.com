@@ -1,3 +1,4 @@
+import type { CollectionEntry } from "astro:content";
 import _slugify from "slugify";
 
 export function slugify(text: string) {
@@ -47,33 +48,31 @@ export function getSortedContent(content: any[]) {
   );
 }
 
-type Entry = {
-  id: string;
-  slug: string;
-  collection: string;
-  data: Record<string, unknown> & { pubDate: Date };
-};
-
-export function getSortedContentV2<T extends Entry>(
-  content: T[],
-  count?: number
-) {
-  const filteredContent = content.filter((item) => {
-    if (item.id.includes("/README.")) {
-      return false;
-    }
-    if (import.meta.env.PROD && item.data.draft) {
-      return false;
-    }
-    return true;
-  });
-  return filteredContent
-    .sort(
-      (a, b) =>
-        new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
-    )
-    .slice(0, count);
+function sortByPubDate<
+  T extends CollectionEntry<"articles"> | CollectionEntry<"notes">
+>(a: T, b: T) {
+  return (
+    new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
 }
+
+export const sortCollection = {
+  articles(articles: CollectionEntry<"articles">[], count?: number) {
+    return articles
+      .filter((entry) => {
+        // Ignore article drafts in production
+        if (import.meta.env.PROD && entry.data.draft) {
+          return false;
+        }
+        return true;
+      })
+      .sort(sortByPubDate)
+      .slice(0, count);
+  },
+  notes(notes: CollectionEntry<"notes">[], count?: number) {
+    return notes.sort(sortByPubDate).slice(0, count);
+  },
+};
 
 export function readableDate(date: string) {
   return new Date(date).toLocaleDateString("en-US", {
