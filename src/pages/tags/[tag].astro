@@ -1,11 +1,10 @@
 ---
 import ArticleList from "@components/ArticleList.astro";
 import PageLayout from "@layouts/PageLayout.astro";
-import { getCollection } from "astro:content";
-import { getTags, slugify, sortCollection } from "src/utils";
+import { getArticles, getTags, slugify } from "src/utils";
 
 export async function getStaticPaths() {
-  const articles = sortCollection.articles(await getCollection("articles"));
+  const articles = await getArticles();
   const tags = getTags(articles);
 
   return Object.keys(tags).map((tag) => {

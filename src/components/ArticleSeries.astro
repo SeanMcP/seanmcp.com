@@ -1,14 +1,12 @@
 ---
-import { getCollection } from "astro:content";
-import { slugify, sortCollection } from "src/utils";
+import { getArticles, slugify } from "src/utils";
 
 const { series } = Astro.props;
 
 let items;
 
 if (series) {
-  items = sortCollection
-    .articles(await getCollection("articles"))
+  items = (await getArticles())
     .filter((article) => {
       return article.data.series === series;
     })
@@ -26,13 +24,10 @@ if (series) {
       </p>
       <ol>
         {items.map((article) => {
-          const url = `/articles/${article.slug}`
+          const url = `/articles/${article.slug}`;
           return (
             <li>
-              <a
-                href={url}
-                aria-current={url === Astro.url.pathname}
-              >
+              <a href={url} aria-current={url === Astro.url.pathname}>
                 {article.data.title}
               </a>
             </li>

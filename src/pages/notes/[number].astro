@@ -1,11 +1,10 @@
 ---
 import Note from "@components/Note.astro";
 import PageLayout from "@layouts/PageLayout.astro";
-import { getCollection } from "astro:content";
-import { sortCollection } from "src/utils";
+import { getNotes } from "src/utils";
 
 export async function getStaticPaths() {
-  const notes = sortCollection.notes(await getCollection("notes"));
+  const notes = await getNotes();
 
   return notes.map((note) => {
     return {

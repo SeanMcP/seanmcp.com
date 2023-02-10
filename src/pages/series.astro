@@ -1,7 +1,7 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
-import { CollectionEntry, getCollection } from "astro:content";
-import { slugify, sortCollection } from "src/utils";
+import { CollectionEntry } from "astro:content";
+import { getArticles, slugify } from "src/utils";
 
 const articlesBySeries: Record<string, CollectionEntry<"articles">[]> = {};
 
@@ -11,7 +11,7 @@ const descriptionsBySeries = {
     "The last time I tried using Linux was probably 2012. In 2022, I decided to give Linux another try and see what it has to offer me as a front-end focused developer.",
 };
 
-sortCollection.articles(await getCollection("articles")).forEach((article) => {
+(await getArticles()).forEach((article) => {
   const { series } = article.data;
   if (!series) return;
   if (!articlesBySeries[series]) {

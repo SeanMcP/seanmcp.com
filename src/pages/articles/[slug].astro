@@ -1,6 +1,5 @@
 ---
-import { getCollection } from "astro:content";
-import { sortCollection } from "src/utils";
+import { getArticles } from "src/utils";
 import ArticleSeries from "@components/ArticleSeries.astro";
 import Bio from "@components/Bio.astro";
 import BookmarkToggle from "@components/BookmarkToggle.astro";
@@ -10,7 +9,7 @@ import TagList from "@components/TagList.astro";
 import HeroImage from "@components/HeroImage.astro";
 
 export async function getStaticPaths() {
-  const articles = sortCollection.articles(await getCollection("articles"));
+  const articles = await getArticles();
   return articles.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -26,11 +25,7 @@ const { data } = entry;
   <article class="article">
     <header>
       <div>
-        {
-          !data.tags?.includes("garden") && (
-            <ReadableTime date={data.pubDate} />
-          )
-        }
+        {!data.tags?.includes("garden") && <ReadableTime date={data.pubDate} />}
         <h1>{data.title}</h1>
       </div>
       <BookmarkToggle />

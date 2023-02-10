@@ -1,15 +1,13 @@
 ---
 import BookmarkToggle from "@components/BookmarkToggle.astro";
-import { getNoteNumberFromFilePath, readableDate } from "src/utils";
+import { readableDate } from "src/utils";
 
 const {
   data: { pubDate, edited },
   render,
-  id,
   slug: number,
 } = Astro.props;
 
-// const number = getNoteNumberFromFilePath(file);
 const url = `/notes/${number}`;
 const {Content} = await render();
 ---

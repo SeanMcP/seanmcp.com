@@ -1,4 +1,4 @@
-import type { CollectionEntry } from "astro:content";
+import { CollectionEntry, getCollection } from "astro:content";
 import _slugify from "slugify";
 
 export function slugify(text: string) {
@@ -31,23 +31,6 @@ export function getTags(articles: any[]): Record<string, number> {
   return tags;
 }
 
-export function getSortedContent(content: any[]) {
-  const filteredContent = content.filter((item) => {
-    if (item.file.includes("/README.")) {
-      return false;
-    }
-    if (import.meta.env.PROD && item.frontmatter.draft) {
-      return false;
-    }
-    return true;
-  });
-  return filteredContent.sort(
-    (a, b) =>
-      new Date(b.frontmatter.pubDate).valueOf() -
-      new Date(a.frontmatter.pubDate).valueOf()
-  );
-}
-
 function sortByPubDate<
   T extends CollectionEntry<"articles"> | CollectionEntry<"notes">
 >(a: T, b: T) {
@@ -56,23 +39,24 @@ function sortByPubDate<
   );
 }
 
-export const sortCollection = {
-  articles(articles: CollectionEntry<"articles">[], count?: number) {
-    return articles
-      .filter((entry) => {
-        // Ignore article drafts in production
-        if (import.meta.env.PROD && entry.data.draft) {
-          return false;
-        }
-        return true;
-      })
-      .sort(sortByPubDate)
-      .slice(0, count);
-  },
-  notes(notes: CollectionEntry<"notes">[], count?: number) {
-    return notes.sort(sortByPubDate).slice(0, count);
-  },
-};
+export async function getArticles(count?: number) {
+  const articles = await getCollection("articles");
+  return articles
+    .filter((entry) => {
+      // Ignore drafts in production
+      if (import.meta.env.PROD && entry.data.draft) {
+        return false;
+      }
+      return true;
+    })
+    .sort(sortByPubDate)
+    .slice(0, count);
+}
+
+export async function getNotes(count?: number) {
+  const notes = await getCollection("notes");
+  return notes.sort(sortByPubDate).slice(0, count);
+}
 
 export function readableDate(date: string) {
   return new Date(date).toLocaleDateString("en-US", {

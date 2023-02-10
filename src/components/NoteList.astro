@@ -1,7 +1,6 @@
 ---
 import Note from "@components/Note.astro";
-import { getCollection } from "astro:content";
-import { sortCollection } from "src/utils";
+import { getNotes } from "src/utils";
 
 interface Props {
   count?: number;
@@ -9,7 +8,7 @@ interface Props {
 
 const { count } = Astro.props;
 
-const notes = sortCollection.notes(await getCollection("notes"));
+const notes = await getNotes();
 ---
 
 {
