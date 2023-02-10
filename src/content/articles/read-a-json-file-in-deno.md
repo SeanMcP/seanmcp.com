@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Read a json file in Deno
 description: How to use Deno's standard library to read and parse data from a json file.
 pubDate: 2020-05-28

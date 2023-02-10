@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Standardize character width with CSS
 description: Two CSS properties that make letters and numbers the same width.
 pubDate: 2020-12-09

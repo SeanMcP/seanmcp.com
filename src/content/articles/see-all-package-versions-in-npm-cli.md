@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: See all package versions in npm cli
 description: How to use npm view to see all the published versions of a package on the registry.
 pubDate: 2020-12-09

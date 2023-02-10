@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: How to check npm scripts in current directory
 description: Writing a script to read the package.json for you
 pubDate: 2020-02-06

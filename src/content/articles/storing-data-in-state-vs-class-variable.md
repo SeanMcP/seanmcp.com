@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Storing data in state vs. class variable
 description: Why do we store data in state as opposed to on the class?
 pubDate: 2019-04-12

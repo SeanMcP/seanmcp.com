@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Setup Netlify CMS with Eleventy
 description: This is a WIP that I probably will never finish.
 pubDate: 2021-02-08

@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Send data to the window with Eleventy
 description: How to create a shortcode to expose data for client-side scripts
 pubDate: 2021-01-25

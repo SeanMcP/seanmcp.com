@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: My best Slack emojis
 description: A curated list of the best reaction emojis that I have created for Slack
 pubDate: 2022-01-04

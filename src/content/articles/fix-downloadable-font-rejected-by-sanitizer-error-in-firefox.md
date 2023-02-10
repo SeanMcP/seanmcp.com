@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: "Fix 'downloadable font: rejected by sanitizer' error in Firefox"
 description: Make sure that the path to your font is correct before going down the debugging rabbit hole.
 pubDate: 2021-04-01

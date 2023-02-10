@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Add a YouTube-embedder shortcode to your Eleventy site
 description: A quick guide to writing a time-saving shortcode to create the embeddable code from a YouTube url
 pubDate: 2021-08-10

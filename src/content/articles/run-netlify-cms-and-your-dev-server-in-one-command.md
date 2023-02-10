@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Run Netlify CMS and your dev server in one command
 description: The npm-run-all package allows you to run multiple scripts from
   your package.json in parallel

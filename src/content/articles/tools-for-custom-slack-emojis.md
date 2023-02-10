@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Tools for custom Slack emojis
 description: The full toolbelt for making your own custom Slack emojis
 pubDate: 2020-04-14

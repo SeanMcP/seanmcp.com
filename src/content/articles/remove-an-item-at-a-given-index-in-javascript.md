@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Remove an item at a given index in JavaScript
 description: Sidestep slicing and splicing and use Array's filter method for a no-hassle solution.
 pubDate: 2020-08-05

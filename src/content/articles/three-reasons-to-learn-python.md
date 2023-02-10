@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Three reasons to learn Python
 description: A few reasons why you should learn Python.
 pubDate: 2019-02-21

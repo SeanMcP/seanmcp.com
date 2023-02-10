@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: "What default parameters do (and don't do)"
 description: Correcting my mental model
 pubDate: 2020-01-13

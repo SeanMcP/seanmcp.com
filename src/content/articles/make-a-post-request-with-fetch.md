@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Make a POST request with fetch
 description: A sample POST with fetch for those of us who can never remember how.
 pubDate: 2020-08-07

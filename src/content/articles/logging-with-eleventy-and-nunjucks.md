@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Logging with Eleventy and Nunjucks
 description: Adding a simple filter to save you a lot of grief.
 pubDate: 2020-05-12

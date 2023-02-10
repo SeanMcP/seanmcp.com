@@ -3,15 +3,15 @@ import { CollectionEntry, getCollection } from "astro:content";
 import { sortCollection } from "src/utils";
 import ReadableTime from "./ReadableTime.astro";
 
-
 interface Props {
-  articles: CollectionEntry<"articles">[]
-  count?: number
+  articles: CollectionEntry<"articles">[];
+  count?: number;
 }
 
 const { articles: initial, count } = Astro.props;
 
-const articles = initial || sortCollection.articles(await getCollection("articles"), count);
+const articles =
+  initial || sortCollection.articles(await getCollection("articles"), count);
 ---
 
 <section>

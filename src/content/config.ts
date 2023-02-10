@@ -5,7 +5,6 @@ const articles = defineCollection({
     description: z.string(),
     draft: z.boolean().optional(),
     image: z.nullable(z.string()).optional(),
-    layout: z.string(), // Might not need this after the switch
     pubDate: z.date(),
     series: z.string().optional(),
     tags: z.array(z.string()),

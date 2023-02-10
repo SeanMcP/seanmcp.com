@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Portable custom search engines
 description: Custom search engines (sometimes called site search) are a great
   browser feature, but they aren't easily ported from one browser to the next. I

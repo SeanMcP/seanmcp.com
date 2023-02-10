@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: A modest redesign for 2021
 description: Freshening up SeanMcP.com for the new year
 pubDate: 2021-06-15

@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Updated TypeScript mega-course on Egghead.io
 description: Reviewing and updating my TypeScript mega-course on Egghead.io
 pubDate: 2020-07-27

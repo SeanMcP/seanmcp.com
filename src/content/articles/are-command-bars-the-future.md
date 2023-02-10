@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Are command bars the future?
 description:
   Command bars are a great way to access functionality through a single user

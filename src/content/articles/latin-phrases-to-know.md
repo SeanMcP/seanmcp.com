@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Latin phrases to know
 description: This is a WIP that I probably will never finish.
 pubDate: 2021-06-07

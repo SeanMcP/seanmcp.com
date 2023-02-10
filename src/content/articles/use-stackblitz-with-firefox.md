@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: How to use StackBlitz with Firefox
 description: Disable enhanced tracking protections to use StackBlitz with Firefox
 pubDate: 2022-08-23

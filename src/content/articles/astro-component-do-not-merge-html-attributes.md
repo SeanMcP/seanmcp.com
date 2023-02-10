@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Astro components do not merge HTML attributes
 description:
   Props are merged, but attributes are not. This is an important rule to know

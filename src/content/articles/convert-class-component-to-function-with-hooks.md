@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Convert class components to functions with React Hooks
 description: A step by step guide to converting old components to modern React
 pubDate: 2019-02-06

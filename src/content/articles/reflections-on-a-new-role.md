@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Reflecting on a new role
 description: Moving into mobile development at Niche and looking back on how I got here
 pubDate: 2021-08-18

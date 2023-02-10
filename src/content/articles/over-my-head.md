@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Over my head
 description: A list of articles, topics, and resources that are currently over my head
 pubDate: 2020-04-24

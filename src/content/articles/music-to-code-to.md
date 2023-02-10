@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Music to code to
 description: A growing list of artists that I like to listen to while programming.
 pubDate: 2022-02-15

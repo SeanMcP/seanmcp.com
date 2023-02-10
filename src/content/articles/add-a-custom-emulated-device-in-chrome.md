@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Add a custom emulated device in Chrome
 description: Walking through the steps within the Google Chrome dev tools to better mimic your users' devices.
 pubDate: 2022-02-05

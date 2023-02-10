@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: How to replace Math.random with crypto in JavaScript
 description: A drop-in replacement for Math.random that generates
   cryptographically strong random values

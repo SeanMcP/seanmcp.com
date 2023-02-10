@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: New command palette
 description: I added a new new command/control K command palette to my site. You
   can use the keyboard shortcut or activate it by clicking the magnifying glass

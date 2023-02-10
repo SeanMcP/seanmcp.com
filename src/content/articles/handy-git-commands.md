@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Handy git commands
 description: A curated collection of git commands that help me do my job better
 pubDate: 2021-05-04

@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Fix "package esbuild-linux-64 could not be found" error on Netlify
 description: I don't know how applicable this solution will be to your
   situation, but it worked for me!

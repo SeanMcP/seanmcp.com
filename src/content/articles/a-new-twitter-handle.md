@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: A new Twitter handle
 description: Kicking off 2020 with (yet another) new handle
 pubDate: 2020-01-28

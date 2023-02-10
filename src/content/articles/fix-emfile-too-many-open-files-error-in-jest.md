@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: "Fix 'EMFILE: too many open files' error in Jest"
 description: When trying to run Jest in watch mode, this error may mean that you are missing a dependency.
 pubDate: 2020-07-29

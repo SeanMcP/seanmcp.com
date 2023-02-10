@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Use remark to covert markdown into HTML
 description: The missing "hello world" example to get up and running with remark
 pubDate: 2021-07-03

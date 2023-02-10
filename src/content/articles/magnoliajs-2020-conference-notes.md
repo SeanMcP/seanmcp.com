@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: MagnoliaJS 2020 conference notes
 description: Some notes from the talks that I was able to attend
 pubDate: 2020-04-16
@@ -282,8 +281,7 @@ Niche graciously "sent" me to this two-day remote conference and here are some o
     - Use a spacial index with a library like RBush
 - Scroll: Let the browser and DOM help you
     - Using overflow and elements porportional to the content
-- Layout: Everything is absolute positions
-    - You can use a layout solution like Yoga (`yoga-layout`)
+-     - You can use a layout solution like Yoga (`yoga-layout`)
 - Plug: `react-blazing`
 - Other libraries: Skia, Lottie, PixiJS
 

@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Checkout the previous git branch
 description: Using a git shorthand to checkout the most recent branch
 pubDate: 2021-01-22

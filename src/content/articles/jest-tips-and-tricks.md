@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Jest tips & tricks
 description: A growing list of little things that make working with Jest a little better
 pubDate: 2022-10-06T15:58:09.243Z

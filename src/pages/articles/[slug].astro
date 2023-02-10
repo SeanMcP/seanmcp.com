@@ -1,6 +1,13 @@
 ---
 import { getCollection } from "astro:content";
 import { sortCollection } from "src/utils";
+import ArticleSeries from "@components/ArticleSeries.astro";
+import Bio from "@components/Bio.astro";
+import BookmarkToggle from "@components/BookmarkToggle.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import ReadableTime from "@components/ReadableTime.astro";
+import TagList from "@components/TagList.astro";
+import HeroImage from "@components/HeroImage.astro";
 
 export async function getStaticPaths() {
   const articles = sortCollection.articles(await getCollection("articles"));
@@ -12,6 +19,82 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const { data } = entry;
 ---
 
-<Content />
+<PageLayout {...data} withoutH1>
+  <article class="article">
+    <header>
+      <div>
+        {
+          !data.tags?.includes("garden") && (
+            <ReadableTime date={data.pubDate} />
+          )
+        }
+        <h1>{data.title}</h1>
+      </div>
+      <BookmarkToggle />
+    </header>
+    <HeroImage image={data.image} />
+    <ArticleSeries series={data.series} />
+    <Content />
+    <hr />
+    <footer>
+      {
+        data.verse && (
+          <a
+            href={`https://esv.org/${data.verse}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {data.verse}
+          </a>
+        )
+      }
+      <a
+        href={`mailto:sean@seanmcp.com?subject=Re: ${data.title}`}
+        id="comment-link">Send a comment</a
+      >
+      <div>Read more: <TagList tags={data.tags} /></div>
+    </footer>
+  </article>
+  <hr />
+  <Bio />
+</PageLayout>
+
+<style>
+  article {
+    padding-top: 2rem;
+  }
+
+  header {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    /* Offset SVG's padding */
+    margin-right: -0.5rem;
+  }
+
+  header div {
+    flex: 1;
+  }
+
+  /* Specificity to override global styles */
+  header h1 {
+    font-size: 2em;
+    margin: 1rem 0 0;
+  }
+
+  footer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  :global(.article img) {
+    max-width: 100%;
+  }
+</style>

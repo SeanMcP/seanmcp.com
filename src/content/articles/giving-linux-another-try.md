@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Giving Linux another try
 description:
   It's been about 10 years since I last tried using Linux, so I think it's time

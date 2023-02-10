@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Get started with Preact
 description: This is a WIP that I probably will never finish.
 pubDate: 2020-08-18

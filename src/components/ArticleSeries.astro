@@ -26,13 +26,14 @@ if (series) {
       </p>
       <ol>
         {items.map((article) => {
+          const url = `/articles/${article.slug}`
           return (
             <li>
               <a
-                href={article.url}
-                aria-current={article.url === Astro.url.pathname}
+                href={url}
+                aria-current={url === Astro.url.pathname}
               >
-                {article.frontmatter.title}
+                {article.data.title}
               </a>
             </li>
           );

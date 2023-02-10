@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Why a blog?
 description: An effort to preserve my content on the ever-changing web
 pubDate: 2018-12-04

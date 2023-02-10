@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Reviewing 2019 goals
 description: Checking in on the goals I set for myself in 2019
 pubDate: 2020-01-08

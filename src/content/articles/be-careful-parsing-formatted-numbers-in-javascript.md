@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Be careful parsing formatted numbers in JavaScript
 description:
   JavaScript's parseInt, parseFloat, and Number constructors struggle with

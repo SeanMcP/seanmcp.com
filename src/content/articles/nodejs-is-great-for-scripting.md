@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Node.js is great for scripting
 description:
   Node.js and JavaScript are a great option for scripting for the language

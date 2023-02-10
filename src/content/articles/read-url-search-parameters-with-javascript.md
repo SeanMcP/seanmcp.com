@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/ArticleLayout.astro"
 title: Read URL search parameters with JavaScript
 description: How to use URLSearchParams to parse any search parameters string like window.location.search
 pubDate: 2021-05-01
