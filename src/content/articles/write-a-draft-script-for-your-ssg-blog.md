@@ -18,6 +18,7 @@ The secret sauce behind markdown-based sites is the frontmatter: specially forma
 
 ```markdown
 ---
+layout: "@layouts/ArticleLayout.astro"
 title: Add event listener for class change
 description: How to create a custom event listener for class names using the MutationObserver API
 date: 2019-05-10
