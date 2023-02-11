@@ -1,6 +1,6 @@
 ---
 import Note from "@components/Note.astro";
-import { getSortedContent } from "../utils";
+import { getNotes } from "src/utils";
 
 interface Props {
   count?: number;
@@ -8,9 +8,7 @@ interface Props {
 
 const { count } = Astro.props;
 
-const notes = getSortedContent(
-  await Astro.glob("../../content/notes/*.{md,mdx}")
-);
+const notes = await getNotes();
 ---
 
 {

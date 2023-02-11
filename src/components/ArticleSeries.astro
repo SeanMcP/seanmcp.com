@@ -1,14 +1,14 @@
 ---
-import { getSortedContent, slugify } from "src/utils";
+import { getArticles, slugify } from "src/utils";
 
 const { series } = Astro.props;
 
 let items;
 
 if (series) {
-  items = getSortedContent(await Astro.glob("../pages/articles/*.{md,mdx}"))
+  items = (await getArticles())
     .filter((article) => {
-      return article.frontmatter.series === series;
+      return article.data.series === series;
     })
     .reverse();
 }
@@ -24,13 +24,11 @@ if (series) {
       </p>
       <ol>
         {items.map((article) => {
+          const url = `/articles/${article.slug}`;
           return (
             <li>
-              <a
-                href={article.url}
-                aria-current={article.url === Astro.url.pathname}
-              >
-                {article.frontmatter.title}
+              <a href={url} aria-current={url === Astro.url.pathname}>
+                {article.data.title}
               </a>
             </li>
           );

@@ -1,13 +1,16 @@
 ---
-import { getNoteNumberFromFilePath, getTags, slugify } from "src/utils";
+import {
+  getArticles,
+  getNotes,
+  getTags,
+  slugify,
+} from "src/utils";
 import CommandPaletteSection from "./CommandPaletteSection.astro";
 import socials from "src/data/socials";
 import navigation from "src/data/navigation";
 
-const articles = await Astro.glob("../pages/articles/*.{md,mdx}");
-const notes = (await Astro.glob("../../content/notes/*.{md,mdx}")).filter(
-  ({ file }) => !file.includes("README")
-);
+const articles = await getArticles();
+const notes = await getNotes();
 const tags = getTags(articles);
 ---
 
@@ -63,38 +66,42 @@ const tags = getTags(articles);
       />
       <CommandPaletteSection
         label="Articles"
-        content={articles.map((article) => ({
-          url: article.url,
-          visibleText: article.frontmatter.title,
-          hiddenText: article.frontmatter.description,
-        }))}
+        content={articles.map((article) => {
+          return {
+            url: `/articles/${article.slug}`,
+            visibleText: article.data.title,
+            hiddenText: article.data.description,
+          };
+        })}
       />
       <CommandPaletteSection
         label="Tags"
-        content={Object.entries(tags).map(([tag, count]) => ({
-          url: `/tags/${slugify(tag)}`,
-          visibleText: `#${tag} (${count})`,
-        }))}
+        content={Object.entries(tags).map(([tag, count]) => {
+          return {
+            url: `/tags/${slugify(tag)}`,
+            visibleText: `#${tag} (${count})`,
+          };
+        })}
       />
       <CommandPaletteSection
         label="Notes"
         content={notes.map((note) => {
-          const number = getNoteNumberFromFilePath(note.file);
           return {
-            url: `/notes/${number}`,
-            visibleText: "Note #" + number,
-            hiddenText:
-              note.file.slice(-3) === ".md" ? note.rawContent() : undefined,
+            url: `/notes/${note.slug}`,
+            visibleText: "Note #" + note.slug,
+            hiddenText: note.body,
           };
         })}
       />
       <CommandPaletteSection
         label="Pages"
-        content={navigation.all.map((page) => ({
-          url: page.url,
-          visibleText: page.label,
-          hiddenText: page.description,
-        }))}
+        content={navigation.all.map((page) => {
+          return {
+            url: page.url,
+            visibleText: page.label,
+            hiddenText: page.description,
+          };
+        })}
       />
     </section>
     <footer>

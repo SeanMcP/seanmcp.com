@@ -1,11 +1,11 @@
 ---
 import ArticleList from "@components/ArticleList.astro";
 import PageLayout from "@layouts/PageLayout.astro";
-import { getSortedContent, getTags, slugify } from "../../utils";
+import { getArticles, getTags, slugify } from "src/utils";
 
 export async function getStaticPaths() {
-  const sorted = getSortedContent(await Astro.glob("../articles/*.(md|mdx)"));
-  const tags = getTags(sorted);
+  const articles = await getArticles();
+  const tags = getTags(articles);
 
   return Object.keys(tags).map((tag) => {
     return {
@@ -14,8 +14,8 @@ export async function getStaticPaths() {
       },
       props: {
         tag,
-        articles: sorted.filter((article) =>
-          article.frontmatter.tags?.includes(tag)
+        articles: articles.filter((article) =>
+          article.data.tags?.includes(tag)
         ),
       },
     };

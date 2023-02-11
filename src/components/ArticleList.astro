@@ -1,25 +1,36 @@
 ---
+import { CollectionEntry } from "astro:content";
+import { getArticles } from "src/utils";
 import ReadableTime from "./ReadableTime.astro";
-import { getSortedContent } from "../utils";
 
-const { articles, count } = Astro.props;
+interface Props {
+  articles: CollectionEntry<"articles">[];
+  count?: number;
+}
 
-const all = articles || getSortedContent(await Astro.glob("../pages/articles/*.{md,mdx}"));
-const articlesToRender = all.slice(0, count);
+const { articles: initial, count } = Astro.props;
+
+const articles = initial || (await getArticles(count));
 ---
 
 <section>
   {
-    articlesToRender.map((article) => (
-      <article data-url={article.url}>
-        <div>
+    articles.map((article) => {
+      const url = `/articles/${article.slug}`;
+      return (
+        <article data-url={url}>
           {/* Added for styling. Find a better way. */}
-          <ReadableTime date={article.frontmatter.pubDate} />
-        </div>
-        <a href={article.url}>{article.frontmatter.draft && "[DRAFT] "}{article.frontmatter.title}</a>
-        <p>{article.frontmatter.description}</p>
-      </article>
-    ))
+          <div>
+            <ReadableTime date={article.data.pubDate} />
+          </div>
+          <a href={url}>
+            {article.data.draft && "[DRAFT] "}
+            {article.data.title}
+          </a>
+          <p>{article.data.description}</p>
+        </article>
+      );
+    })
   }
 </section>
 

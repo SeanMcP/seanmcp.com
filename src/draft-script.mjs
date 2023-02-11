@@ -16,7 +16,7 @@ const title = titleArg.includes('"')
 
 const fileName =
   (title ? slugify(title, { lower: true, strict: true }) : "draft") + ".md";
-const filePath = "./src/pages/articles/" + fileName;
+const filePath = "./src/content/articles/" + fileName;
 const date = new Date().toISOString();
 
 try {
