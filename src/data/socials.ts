@@ -15,6 +15,6 @@ export default [
   },
   {
     label: "Mastodon",
-    url: "https://fosstodon.org/@seanmcp",
+    url: "https://indieweb.social/@seanmcp",
   },
 ];
