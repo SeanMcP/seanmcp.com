@@ -1,4 +1,4 @@
-const INSTANCE = "fosstodon.org";
+const INSTANCE = "indieweb.social";
 const USERNAME = "seanmcp";
 
 /**
