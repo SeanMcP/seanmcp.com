@@ -16,11 +16,17 @@ const title = titleArg.includes('"')
 
 const fileName =
   (title ? slugify(title, { lower: true, strict: true }) : "draft") + ".md";
-const filePath = "./src/content/articles/" + fileName;
+const filePath = new URL(
+  "../src/content/articles/" + fileName,
+  import.meta.url
+);
 const date = new Date().toISOString();
 
 try {
-  const templateData = fs.readFileSync("./src/article-template.md", "utf8");
+  const templateData = fs.readFileSync(
+    new URL("article-template.md", import.meta.url),
+    "utf8"
+  );
 
   const injectedData = templateData
     .replace("%TITLE%", title)
@@ -32,7 +38,7 @@ try {
     `🏗  Created draft${titleArg ? ` "${titleArg}"` : ""} at ${filePath}\n`
   );
 
-  execSync(`code -g ${filePath}:13`);
+  execSync(`code -g ${filePath.pathname}:12`);
 } catch (error) {
   console.error(error);
   process.exit(1);
