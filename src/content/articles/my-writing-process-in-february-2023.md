@@ -1,5 +1,5 @@
 ---
-title: My writing process in Febraury 2023
+title: My writing process in February 2023
 description:
   The process involves mostly manual steps, and I am looking for a better
   solution.
@@ -31,3 +31,13 @@ I’m interested to see if [Static CMS](https://decapcms.org/) or
 [Decap CMS](https://decapcms.org/), both successors, can address this and other
 usability issues. In the meantime, my choices are to refine my current workflow
 or look for alternatives.
+
+**Update 1**: I originally misspelled February in the title and URL. Both have
+been rectified (sorry permalink fans).
+
+**Update 2**: I have added two Bash aliases to improve the process:
+
+```bash
+alias blog="node ~/seanmcp/seanmcp.com/src/draft-script.mjs"
+alias publish="(cd ~/seanmcp/seanmcp.com && git add src/content/articles public/images && git commit -m 'publish article' && git push)"
+```
