@@ -17,7 +17,7 @@ upward!” and [the controversial “Up the web!”](/notes/49).
 
 I picked up the practice back when
 [I was blogging my way through coding bootcamp](https://medium.com/@seanmcp/js-basics-functions-23637174f4f).
-I’m not sure where the practice came from; it was probably something that I
+I’m not sure where I picked it up; probably something that I
 noticed other writers doing as I tried to find my own style.
 
 But on further reflection, I’m don’t think that a salutation is necessary
