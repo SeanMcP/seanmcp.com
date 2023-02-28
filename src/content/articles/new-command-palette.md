@@ -4,7 +4,6 @@ description: I added a new new command/control K command palette to my site. You
   can use the keyboard shortcut or activate it by clicking the magnifying glass
   in the header.
 pubDate: 2022-12-15T12:17:33.865Z
-draft: false
 tags:
   - Astro
   - Meta

@@ -3,7 +3,6 @@ title: Run Netlify CMS and your dev server in one command
 description: The npm-run-all package allows you to run multiple scripts from
   your package.json in parallel
 pubDate: 2022-11-29T11:54:59.656Z
-draft: false
 tags:
   - Netlify
 ---

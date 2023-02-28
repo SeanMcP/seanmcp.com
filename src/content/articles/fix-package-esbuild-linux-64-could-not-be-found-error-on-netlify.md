@@ -3,7 +3,6 @@ title: Fix "package esbuild-linux-64 could not be found" error on Netlify
 description: I don't know how applicable this solution will be to your
   situation, but it worked for me!
 pubDate: 2022-12-14T15:37:56.186Z
-draft: false
 tags:
   - Debugging
   - Netlify

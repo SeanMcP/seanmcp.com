@@ -3,7 +3,6 @@ title: Astro components do not merge HTML attributes
 description:
   Props are merged, but attributes are not. This is an important rule to know
   when authoring Astro components.
-draft: false
 image:
 tags:
   - Astro

@@ -4,7 +4,6 @@ description:
   Axios co-founder Jim VandeHei advocates for a writing style that is clear and
   concise. I'm interested in learning whether I can provide more value through
   direct and informative writing.
-draft: false
 image:
 tags:
   - Meta

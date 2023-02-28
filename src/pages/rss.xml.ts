@@ -6,7 +6,7 @@ type Item = {
   file: string;
   frontmatter: {
     description: string;
-    draft?: boolean;
+    flags?: string[];
     pubDate: Date;
     title: string;
   };
@@ -14,7 +14,7 @@ type Item = {
 
 const items = Object.values(
   import.meta.glob<Item>("../content/articles/*.{md,mdx}", { eager: true })
-).filter((item) => !item.frontmatter.draft);
+).filter((item) => !item.frontmatter.flags?.includes("DRAFT"));
 
 function fileToSlug(file: string) {
   return file.slice(file.indexOf("/articles"), file.lastIndexOf("."));

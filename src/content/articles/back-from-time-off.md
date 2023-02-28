@@ -1,7 +1,6 @@
 ---
 title: Back from time off
 description: Reflecting on taking a break for all of January 2023
-draft: false
 image: 
 tags:
     - Meta

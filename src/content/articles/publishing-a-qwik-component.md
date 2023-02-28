@@ -3,7 +3,6 @@ title: Publishing a Qwik component
 description:
   The Qwik team has made creating and publish Qwik components a smooth and
   painless process.
-draft: false
 image:
 tags:
   - Qwik

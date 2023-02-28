@@ -1,7 +1,6 @@
 ---
 title: Burrito emoji
 description: Burrito means thank you. Thank you means burrito. Enjoy the burrito.
-draft: false
 image: 
 tags:
     - Language

@@ -1,7 +1,6 @@
 ---
 title: There is no multi-tasking on the Raspberry Pi
 description: Detailing some of the struggles that I've encountered while trying to do front-end development  on a Raspberry Pi. 
-draft: false
 image: 
 tags:
   - Computing

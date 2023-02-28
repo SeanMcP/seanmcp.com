@@ -3,7 +3,6 @@ title: "Fix Netlify Dev's 'Multiple possible start commands found' issue"
 description:
   You need to include additional properties in your netlify.toml to get it
   working correctly.
-draft: false
 image:
 tags:
   - Debugging

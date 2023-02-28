@@ -24,7 +24,8 @@ const articles = initial || (await getArticles(count));
             <ReadableTime date={article.data.pubDate} />
           </div>
           <a href={url}>
-            {article.data.draft && "[DRAFT] "}
+            {article.data.flags?.includes("DRAFT") && "[DRAFT] "}
+            {article.data.flags?.includes("RSS-ONLY") && "[RSS-ONLY] "}
             {article.data.title}
           </a>
           <p>{article.data.description}</p>

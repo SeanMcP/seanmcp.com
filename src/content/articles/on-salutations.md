@@ -3,7 +3,6 @@ title: On salutations
 description:
   Saluations are lovely in letters but unnecessary online. I'm going to try to
   omit salutations from my articles.
-draft: false
 image:
 tags:
   - Writing

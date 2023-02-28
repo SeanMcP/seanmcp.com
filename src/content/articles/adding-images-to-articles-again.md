@@ -3,7 +3,6 @@ title: Adding images to articles (again)
 description:
   I went through the process of adding images back to my articles with a helpful
   script to automate image processing for me.
-draft: false
 image: warm-mountains.jpg
 tags:
   - Blogging

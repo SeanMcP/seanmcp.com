@@ -15,7 +15,11 @@ export function getTags(articles: any[]): Record<string, number> {
   articles.forEach((article) => {
     article.data.tags &&
       article.data.tags.forEach((tag) => {
-        if (article.data.draft && import.meta.env.PROD) {
+        if (
+          import.meta.env.PROD &&
+          (article.data.flags?.includes("DRAFT") ||
+            article.data.flags?.includes("RSS-ONLY"))
+        ) {
           // Ignore drafts in production
           return;
         }
@@ -43,8 +47,12 @@ export async function getArticles(count?: number) {
   const articles = await getCollection("articles");
   return articles
     .filter((entry) => {
-      // Ignore drafts in production
-      if (import.meta.env.PROD && entry.data.draft) {
+      // Ignore drafts, RSS-only entries in production
+      if (
+        import.meta.env.PROD &&
+        (entry.data.flags?.includes("DRAFT") ||
+          entry.data.flags?.includes("RSS-ONLY"))
+      ) {
         return false;
       }
       return true;
