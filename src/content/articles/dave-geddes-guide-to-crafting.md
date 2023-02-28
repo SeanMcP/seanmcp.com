@@ -6,7 +6,6 @@ tags:
     - Craft
     - CSS
     - Professional
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

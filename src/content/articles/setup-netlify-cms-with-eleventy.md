@@ -6,7 +6,6 @@ tags:
   - WIP
   - Eleventy
   - Netlify
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

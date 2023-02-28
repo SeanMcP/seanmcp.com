@@ -5,7 +5,6 @@ pubDate: 2020-07-14
 tags:
   - Programming
   - WIP
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

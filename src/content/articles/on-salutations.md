@@ -7,7 +7,6 @@ image:
 tags:
   - Writing
 pubDate: 2023-02-27T19:56:08.939Z
-verse:
 ---
 
 I have historically ended all of my articles with a salutation like “Happy

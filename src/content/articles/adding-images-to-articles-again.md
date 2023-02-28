@@ -8,7 +8,6 @@ tags:
   - Blogging
   - Meta
 pubDate: 2022-12-13T11:52:41.302Z
-verse:
 ---
 
 Back in 2020

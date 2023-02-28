@@ -8,7 +8,6 @@ tags:
   - Debugging
   - Netlify
 pubDate: 2022-11-29T11:40:33.833Z
-verse:
 ---
 
 Netlify Dev attempts to guess what framework your project is using and what

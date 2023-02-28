@@ -4,7 +4,6 @@ description: A terminal command to search for all the files in the current direc
 pubDate: 2021-02-15
 tags:
   - Shell
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

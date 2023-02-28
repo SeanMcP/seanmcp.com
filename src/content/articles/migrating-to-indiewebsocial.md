@@ -6,7 +6,6 @@ image:
 tags:
   - Mastodon
 pubDate: 2023-02-16T15:38:51.874Z
-verse:
 ---
 
 Today I migrated from [fosstodon.org](http://fosstodon.org) to

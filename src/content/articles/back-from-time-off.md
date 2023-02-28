@@ -5,7 +5,6 @@ image:
 tags:
     - Meta
 pubDate: 2023-02-01T18:47:13.007Z
-verse: 
 ---
 
 I took the month of January off from coding. It was a good opportunity to decompress after work hours, explore new hobbies, and reflect on the future.

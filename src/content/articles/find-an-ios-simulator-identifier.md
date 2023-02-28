@@ -6,7 +6,6 @@ tags:
     - iOS
     - macOS
     - Xcode
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

@@ -6,7 +6,6 @@ tags:
   - Garden
   - Extensions
 pubDate: 2022-10-31T13:11:45.434Z
-verse:
 ---
 
 Extensions can slow down your browser, so I try to only add ones that are

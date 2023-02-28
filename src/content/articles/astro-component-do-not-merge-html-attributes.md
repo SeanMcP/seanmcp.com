@@ -7,7 +7,6 @@ image:
 tags:
   - Astro
 pubDate: 2022-11-29T15:36:16.192Z
-verse:
 ---
 
 Over the past month I have been enjoying working in the

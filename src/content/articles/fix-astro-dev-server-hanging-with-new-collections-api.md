@@ -7,7 +7,6 @@ tags:
   - Astro
   - Debugging
 pubDate: 2023-02-11T18:08:48.815Z
-verse:
 ---
 
 This week I was in the process of upgrading this site to

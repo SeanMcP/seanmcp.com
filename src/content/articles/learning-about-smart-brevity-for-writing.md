@@ -10,7 +10,6 @@ tags:
   - Smart Brevity
   - Writing
 pubDate: 2023-02-27T15:23:17.625Z
-verse:
 ---
 
 I was introduced to the idea of Axios’ Smart Brevity on the

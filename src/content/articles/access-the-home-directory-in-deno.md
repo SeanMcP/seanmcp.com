@@ -4,7 +4,6 @@ description: Using Deno's environment to determine your computer's home director
 pubDate: 2020-07-17
 tags:
     - Deno
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

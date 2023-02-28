@@ -9,7 +9,6 @@ tags:
   - UI
   - Patterns
 pubDate: 2022-11-17T12:14:17.993Z
-verse:
 ---
 
 [Maggie Appleton recently wrote about "Command K Bars"](https://maggieappleton.com/command-bar),

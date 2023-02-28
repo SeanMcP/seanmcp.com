@@ -6,7 +6,6 @@ tags:
     - Debugging
     - Error
     - Netlify
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

@@ -5,7 +5,6 @@ pubDate: 2020-09-02
 tags:
     - Dev Tools
     - Safari
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

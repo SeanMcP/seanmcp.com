@@ -7,7 +7,6 @@ image:
 tags:
   - Writing
 pubDate: 2023-02-27T16:37:37.838Z
-verse:
 ---
 
 How much time should it take before your writing can provide value? I’ve been

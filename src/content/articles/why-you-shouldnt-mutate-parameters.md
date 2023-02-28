@@ -5,7 +5,6 @@ pubDate: 2020-08-05
 tags:
   - JavaScript
   - WIP
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

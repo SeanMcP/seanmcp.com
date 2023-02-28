@@ -8,7 +8,6 @@ tags:
   - Meta
   - Writing
 pubDate: 2023-02-27T16:22:02.440Z
-verse:
 ---
 
 Today my process for writing an article looks like this:

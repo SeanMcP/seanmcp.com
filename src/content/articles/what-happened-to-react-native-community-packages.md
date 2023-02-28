@@ -5,7 +5,6 @@ pubDate: 2021-10-05
 tags:
   - Mobile
   - React Native
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

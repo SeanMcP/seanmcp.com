@@ -7,7 +7,6 @@ image: caution.jpg
 tags:
   - JavaScript
 pubDate: 2022-12-20T15:14:30.409Z
-verse:
 ---
 
 I was working on a script recently and ran into an unexpected issue. The work

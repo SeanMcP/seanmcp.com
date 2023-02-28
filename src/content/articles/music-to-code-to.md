@@ -6,7 +6,6 @@ tags:
   - Garden
   - Music
   - Programming
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

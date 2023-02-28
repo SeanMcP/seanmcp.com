@@ -6,7 +6,6 @@ tags:
     - Language
     - Reference
 pubDate: 2023-02-22T12:04:09.939Z
-verse: 
 ---
 
 The burrito emoji, aka 🌯 aka `:burrito:`, means thank you. Why a burrito? In the words of [a former colleague](https://daniel-salmon.com/):

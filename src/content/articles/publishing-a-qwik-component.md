@@ -7,7 +7,6 @@ image:
 tags:
   - Qwik
 pubDate: 2023-02-13T12:25:03.193Z
-verse:
 ---
 
 After hearing creator Miško Hevery on every front-end podcast that I listen to,

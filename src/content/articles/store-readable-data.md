@@ -4,7 +4,6 @@ description: When forced between storing data for humans or computers, choose th
 pubDate: 2020-05-11
 tags:
   - Programming
-verse:
 ---
 
 Imagine that you want to store data to look up the continent for every country in the world. The best data structure for this is a object/map/dictionary to quickly access the value without looping. I'll use the former for my examples:

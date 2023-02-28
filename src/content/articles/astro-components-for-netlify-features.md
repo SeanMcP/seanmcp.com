@@ -9,7 +9,6 @@ tags:
   - Netlify
   - Open Source
 pubDate: 2022-11-25T12:26:03.516Z
-verse:
 ---
 
 This morning, I released the first version of

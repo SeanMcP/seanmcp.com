@@ -4,7 +4,6 @@ description: You can use an HTML expression to add valid markup to an element
 pubDate: 2021-02-25
 tags:
   - Svelte
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

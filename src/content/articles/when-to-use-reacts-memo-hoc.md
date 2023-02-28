@@ -5,7 +5,6 @@ pubDate: 2022-04-28
 tags:
   - React
   - Performance
-verse:
 # /img/<IMAGE>.min.jpg
 image:
 ---

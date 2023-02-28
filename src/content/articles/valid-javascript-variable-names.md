@@ -6,7 +6,6 @@ tags:
     - JavaScript
     - Tools
 pubDate: 2023-02-25T12:15:58.750Z
-verse: 
 ---
 
 I’ve been working on a little library to help build little JavaScript applications. Something to fill the gap for me between little scripts and reaching for a framework like Svelte.
