@@ -6,7 +6,6 @@ tags:
     - Garden
     - Language
     - WIP
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

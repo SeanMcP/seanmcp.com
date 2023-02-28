@@ -7,7 +7,6 @@ tags:
     - Error
     - Firefox
 verse: Philippians 2:5-11
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

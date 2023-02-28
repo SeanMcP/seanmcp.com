@@ -7,7 +7,6 @@ tags:
     - Error
     - Jest
 verse: Psalm 127:1
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

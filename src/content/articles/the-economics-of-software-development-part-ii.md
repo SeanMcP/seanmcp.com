@@ -6,7 +6,6 @@ tags:
   - Economics
   - Software Engineering
 verse: Mark 6:56
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

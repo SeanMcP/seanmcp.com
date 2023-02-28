@@ -7,7 +7,6 @@ tags:
   - Design
   - Meta
 verse: Ecclesiastes 1:9
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

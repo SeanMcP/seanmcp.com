@@ -6,7 +6,6 @@ tags:
   - Emojis
   - Garden
   - Slack
-# /img/<IMAGE>.min.jpg
 image:
 head: >-
   <style>

@@ -9,7 +9,6 @@ tags:
   - Mobile
   - React Native
 verse: Psalm 19:14
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

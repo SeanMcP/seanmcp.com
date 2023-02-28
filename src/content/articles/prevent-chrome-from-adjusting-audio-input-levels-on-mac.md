@@ -6,7 +6,6 @@ tags:
   - Bug
   - Chrome
   - macOS
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

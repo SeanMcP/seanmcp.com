@@ -9,7 +9,6 @@ tags:
   - Professional Development
   - React Native
 verse: Job 1:21
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

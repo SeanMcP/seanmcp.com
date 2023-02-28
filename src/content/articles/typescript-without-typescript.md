@@ -6,7 +6,6 @@ tags:
   - TypeScript
   - JavaScript
 verse: Matthew 22:32
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

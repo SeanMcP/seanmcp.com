@@ -7,7 +7,6 @@ tags:
     - Productivity
     - TIL
 verse: Daniel 6:10
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

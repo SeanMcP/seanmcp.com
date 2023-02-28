@@ -7,7 +7,6 @@ tags:
     - Shell
     - Terminal
 verse: Hebrews 8:5
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

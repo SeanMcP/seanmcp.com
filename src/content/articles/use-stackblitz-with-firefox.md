@@ -5,7 +5,6 @@ pubDate: 2022-08-23
 tags:
   - Firefox
   - StackBlitz
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

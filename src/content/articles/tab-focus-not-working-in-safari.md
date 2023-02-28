@@ -6,7 +6,6 @@ tags:
   - A11y
   - Safari
 verse: Psalm 2:6
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

@@ -6,7 +6,6 @@ tags:
   - Debugging
   - Chrome
   - Dev Tools
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

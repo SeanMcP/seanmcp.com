@@ -5,7 +5,6 @@ pubDate: 2020-08-18
 tags:
     - Preact
     - WIP
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

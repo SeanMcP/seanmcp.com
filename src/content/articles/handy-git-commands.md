@@ -6,7 +6,6 @@ tags:
     - Garden
     - Git
 verse: Hebrews 5:9
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

@@ -5,7 +5,6 @@ pubDate: 2020-08-07
 tags:
   - JavaScript
 verse: Ruth 3:11
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

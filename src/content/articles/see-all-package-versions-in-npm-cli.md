@@ -6,7 +6,6 @@ tags:
     - npm
     - CLI
 verse: Psalm 34:8
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

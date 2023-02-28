@@ -8,7 +8,6 @@ tags:
   - Mobile
   - React Native
 verse: Psalm 127:1
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

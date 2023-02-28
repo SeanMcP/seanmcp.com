@@ -5,7 +5,6 @@ pubDate: 2021-01-25
 tags:
   - Eleventy
 verse: Joshua 2:15
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

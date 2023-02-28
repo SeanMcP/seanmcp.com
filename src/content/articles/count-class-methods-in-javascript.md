@@ -5,7 +5,6 @@ pubDate: 2021-06-21
 tags:
   - JavaScript
 verse: Psalm 147:4-5
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

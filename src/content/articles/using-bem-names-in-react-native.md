@@ -7,7 +7,6 @@ tags:
   - Mobile
   - React Native
 verse: Exodus 17:15
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

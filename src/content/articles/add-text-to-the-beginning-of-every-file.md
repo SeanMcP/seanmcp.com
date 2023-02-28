@@ -6,7 +6,6 @@ tags:
     - Scripting
     - Shell
 verse: Genesis 1:1
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

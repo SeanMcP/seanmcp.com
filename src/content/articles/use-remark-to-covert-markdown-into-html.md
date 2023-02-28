@@ -8,7 +8,6 @@ tags:
   - Node.js
   - React
 verse: Acts 12:25
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

@@ -5,7 +5,6 @@ pubDate: 2020-08-05
 tags:
   - JavaScript
 verse: Matthew 23:24
-# /img/<IMAGE>.min.jpg
 image:
 repl: https://repl.it/@SeanMcP/remove-an-item-at-a-given-index-js
 ---

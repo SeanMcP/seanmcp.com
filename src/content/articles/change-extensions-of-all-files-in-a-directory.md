@@ -4,7 +4,6 @@ description: A little Bash script to rename all files from `.jsx` to `.tsx`
 pubDate: 2020-12-17
 tags:
     - WIP
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

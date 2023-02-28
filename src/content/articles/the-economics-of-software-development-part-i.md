@@ -6,7 +6,6 @@ tags:
   - Economics
   - Software Engineering
 verse: Luke 14:28
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

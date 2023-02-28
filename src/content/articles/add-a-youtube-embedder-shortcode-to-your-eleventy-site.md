@@ -6,7 +6,6 @@ tags:
   - Eleventy
   - YouTube
 verse: Isaiah 59:1
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

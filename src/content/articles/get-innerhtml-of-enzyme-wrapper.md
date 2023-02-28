@@ -7,7 +7,6 @@ tags:
     - JavaScript
     - Testing
 verse: 1 Samuel 16:7
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

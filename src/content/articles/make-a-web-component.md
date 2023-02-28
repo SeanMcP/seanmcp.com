@@ -5,7 +5,6 @@ pubDate: 2022-01-14
 tags:
   - JavaScript
   - Web Components
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

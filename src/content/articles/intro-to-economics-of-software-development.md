@@ -5,7 +5,6 @@ pubDate: 2020-07-09
 tags:
     - Economics
     - Software Engineering
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

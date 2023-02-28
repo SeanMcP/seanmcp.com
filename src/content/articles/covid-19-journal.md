@@ -6,7 +6,6 @@ tags:
     - Garden
     - Personal
 verse: Psalm 103:3
-# /img/<IMAGE>.min.jpg
 image: /img/surgical-mask.min.jpg
 ---
 

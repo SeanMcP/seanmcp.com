@@ -6,7 +6,6 @@ tags:
     - Review
     - Tools
 verse: Exodus 26:30
-# /img/<IMAGE>.min.jpg
 image:
 head: >-
     <style>

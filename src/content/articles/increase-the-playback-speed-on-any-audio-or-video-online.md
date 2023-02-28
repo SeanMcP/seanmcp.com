@@ -7,7 +7,6 @@ tags:
     - Dev Tools
     - JavaScript
 verse: Deuteronomy 6:4
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

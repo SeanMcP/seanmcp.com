@@ -7,7 +7,6 @@ tags:
   - Debugging
   - Programming
 verse: Proverbs 30:25
-# /img/<IMAGE>.min.jpg
 image: /img/beetle-on-flower.min.jpg
 ---
 

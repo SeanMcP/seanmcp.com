@@ -4,7 +4,6 @@ description: Using the Required utility type to required all properties of a typ
 pubDate: 2020-12-19
 tags:
   - TypeScript
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

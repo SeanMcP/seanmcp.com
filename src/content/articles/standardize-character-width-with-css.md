@@ -6,7 +6,6 @@ tags:
   - CSS
   - Typography
 verse: Romans 5:3-5
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

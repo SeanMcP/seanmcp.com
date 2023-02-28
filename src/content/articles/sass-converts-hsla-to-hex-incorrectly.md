@@ -8,7 +8,6 @@ tags:
   - Styling
   - Bug
 verse: Exodus 39:8
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

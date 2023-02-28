@@ -6,7 +6,6 @@ tags:
   - Mobile
   - React Native
 verse: Acts 14:12
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

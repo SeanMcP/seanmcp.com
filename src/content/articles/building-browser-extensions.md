@@ -7,7 +7,6 @@ tags:
   - Chrome
   - Firefox
   - Extensions
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

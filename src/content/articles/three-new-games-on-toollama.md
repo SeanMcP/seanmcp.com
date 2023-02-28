@@ -5,7 +5,6 @@ pubDate: 2021-10-27
 tags:
   - EdTech
   - Toollama
-# /img/<IMAGE>.min.jpg
 image:
 ---
 

@@ -6,7 +6,6 @@ tags:
   - Economics
   - Software Engineering
 verse: Psalm 102:27
-# /img/<IMAGE>.min.jpg
 image:
 ---
 
