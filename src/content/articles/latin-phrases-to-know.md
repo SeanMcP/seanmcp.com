@@ -6,7 +6,6 @@ tags:
     - Garden
     - Language
     - WIP
-image:
 ---
 
 ## Phrases

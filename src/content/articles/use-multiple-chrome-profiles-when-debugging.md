@@ -6,7 +6,6 @@ tags:
   - Debugging
   - Chrome
   - Dev Tools
-image:
 ---
 
 Awhile back, I read about using separate Chrome profiles^[Read Vitaly Friedman’s [_DevTools Debugging Tips And Shortcuts_](https://www.smashingmagazine.com/2021/02/useful-chrome-firefox-devtools-tips-shortcuts/)] for debugging. The idea is to have specific environments that are specially configured to debug different kinds of issues.

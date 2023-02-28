@@ -7,7 +7,6 @@ tags:
     - JavaScript
     - Testing
 verse: 1 Samuel 16:7
-image:
 ---
 
 In Enzyme, wrapper's have a handle `.html()` method that will return the `outerHTML` for that element in the tree. It's handy in the rare instance when the markup that your code outputs needs to be precise. You can [read more about in the documentation](https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/html.html).

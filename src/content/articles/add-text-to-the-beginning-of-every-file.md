@@ -6,7 +6,6 @@ tags:
     - Scripting
     - Shell
 verse: Genesis 1:1
-image:
 ---
 
 While converting a JavaScript `create-react-app` project to TypeScript, I wanted a single line of text to every `.tsx` file. Searching for an answer brought me to [this question on StackExchange](https://superuser.com/questions/246837/how-do-i-add-text-to-the-beginning-of-a-file-in-bash), specifically [this answer](https://superuser.com/a/521654).

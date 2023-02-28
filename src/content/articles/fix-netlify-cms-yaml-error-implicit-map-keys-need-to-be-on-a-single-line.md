@@ -6,7 +6,6 @@ tags:
     - Debugging
     - Error
     - Netlify
-image:
 ---
 
 When trying to setup Netlify CMS on a project, I kept getting this error on the `/admin` page:

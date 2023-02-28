@@ -5,7 +5,6 @@ pubDate: 2020-07-09
 tags:
     - Economics
     - Software Engineering
-image:
 ---
 
 Economics was one of my favorite subjects in high school and college. Back before I made the career switch to software engineers, I would imagine the sweet "what ifs" of majoring in Econ instead of Education.

@@ -7,7 +7,6 @@ tags:
     - Shell
     - Terminal
 verse: Hebrews 8:5
-image:
 ---
 
 When responding to code-review requests, I like to point the reviewer to the specific commit where the issue was addressed with a message like:

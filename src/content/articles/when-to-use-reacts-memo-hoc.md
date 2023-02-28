@@ -5,7 +5,6 @@ pubDate: 2022-04-28
 tags:
   - React
   - Performance
-image:
 ---
 
 When React wants to render a component, it renders all of the components in the tree from that point. So if you have a parent component with two child components, a re-render (↻) of the parent will include re-rendering both children.

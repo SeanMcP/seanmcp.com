@@ -7,7 +7,6 @@ tags:
     - Error
     - Jest
 verse: Psalm 127:1
-image:
 ---
 
 When I tried to run `jest --watch` in a codebase, I received the following error:

@@ -6,7 +6,6 @@ tags:
   - WIP
   - Eleventy
   - Netlify
-image:
 ---
 
 Netlify's guide for [adding Netlify CMS to your site](https://www.netlifycms.org/docs/add-to-your-site/) was really helpful. Consider this a supplemental guide to getting your Eleventy site up and running with Netlify CMS.

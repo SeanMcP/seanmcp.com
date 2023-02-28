@@ -3,7 +3,6 @@ title: Node.js is great for scripting
 description:
   Node.js and JavaScript are a great option for scripting for the language
   features and the large ecosystem. Oh, and it's pretty fast too!
-image:
 tags:
   - JavaScript
   - Node.js

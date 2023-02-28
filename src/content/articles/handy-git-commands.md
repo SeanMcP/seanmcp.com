@@ -6,7 +6,6 @@ tags:
     - Garden
     - Git
 verse: Hebrews 5:9
-image:
 ---
 
 Here are some of the git commands that I find useful when doing by work as a software engineer. Hopefully you will find them helpful too!

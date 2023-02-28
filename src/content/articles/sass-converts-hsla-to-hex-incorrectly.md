@@ -8,7 +8,6 @@ tags:
   - Styling
   - Bug
 verse: Exodus 39:8
-image:
 ---
 
 I ran into an issue where Sass was converting `hsla()` values to hex incorrectly. It would take an input like this:

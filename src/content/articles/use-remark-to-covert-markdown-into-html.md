@@ -8,7 +8,6 @@ tags:
   - Node.js
   - React
 verse: Acts 12:25
-image:
 ---
 
 I've used [remark](https://npm.im/remark) in a few different projects, and each time I found it difficult to get started. For such a popular project, the [documentation is quite terse](https://remark.js.org/).

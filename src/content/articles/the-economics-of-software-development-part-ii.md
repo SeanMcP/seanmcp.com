@@ -6,7 +6,6 @@ tags:
   - Economics
   - Software Engineering
 verse: Mark 6:56
-image:
 ---
 
 _This is the second post in a series on how economics helps explain the decisions we make when developing software. It is a response to "Summer School", a series from [NPR's Planet Money](https://www.npr.org/sections/money/)._

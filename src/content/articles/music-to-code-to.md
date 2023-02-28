@@ -6,7 +6,6 @@ tags:
   - Garden
   - Music
   - Programming
-image:
 ---
 
 Whenever I need to put my head down and focus on a coding task, I have found that listening to music can help me focus and increase my productivity.

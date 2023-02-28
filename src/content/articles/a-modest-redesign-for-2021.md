@@ -7,7 +7,6 @@ tags:
   - Design
   - Meta
 verse: Ecclesiastes 1:9
-image:
 ---
 
 It had been a minute since I last worked on the design for this site, so I decided to make some changes for 2021. I didn't want to undertake anything major – just tweak a few things to freshen everything up.

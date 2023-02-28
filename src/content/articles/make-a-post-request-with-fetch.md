@@ -5,7 +5,6 @@ pubDate: 2020-08-07
 tags:
   - JavaScript
 verse: Ruth 3:11
-image:
 ---
 
 [`fetch` is utility for making HTTP requests](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) from the browser. It is [available in all modern browsers](https://caniuse.com/#feat=fetch) and has a [popular polyfill for older browsers](https://github.com/github/fetch).

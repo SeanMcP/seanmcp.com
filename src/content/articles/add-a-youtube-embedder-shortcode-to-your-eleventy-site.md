@@ -6,7 +6,6 @@ tags:
   - Eleventy
   - YouTube
 verse: Isaiah 59:1
-image:
 ---
 
 For a recent article, I wanted to add some embedded YouTube videos. Through the share menu beneath the video, you can select "Embed" to copy and paste the code for an `iframe` that will load the YouTube video.

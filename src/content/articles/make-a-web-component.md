@@ -5,7 +5,6 @@ pubDate: 2022-01-14
 tags:
   - JavaScript
   - Web Components
-image:
 ---
 
 To make a web component, you need to create a new class. You can extend an existing component class if you want to preserve some semantic behavior, but we'll go with the default `HTMLElement`:

@@ -3,7 +3,6 @@ title: Finding a Linux distro and software that work
 description:
   After a lot of trial an error, I settled on Raspberry Pi OS and Firefox for my
   little Linux-powered computer.
-image:
 tags:
   - Computing
   - Linux

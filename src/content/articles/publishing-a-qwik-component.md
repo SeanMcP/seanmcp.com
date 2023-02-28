@@ -3,7 +3,6 @@ title: Publishing a Qwik component
 description:
   The Qwik team has made creating and publish Qwik components a smooth and
   painless process.
-image:
 tags:
   - Qwik
 pubDate: 2023-02-13T12:25:03.193Z

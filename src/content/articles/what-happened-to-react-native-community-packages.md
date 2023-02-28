@@ -5,7 +5,6 @@ pubDate: 2021-10-05
 tags:
   - Mobile
   - React Native
-image:
 ---
 
 When React Native was first released, it included extra modules that were helpful for mobile development like `WebView`, `NetInfo`, and `AsyncStorage`. Later in 2018, [the RN team made the decision](https://github.com/react-native-community/discussions-and-proposals/issues/6) to deprecate those internal modules and hand them off to the community to maintain.

@@ -6,7 +6,6 @@ tags:
   - TypeScript
   - JavaScript
 verse: Matthew 22:32
-image:
 ---
 
 As a superset of JavaScript, TypeScript provides a lot of useful features. It's no mystery why it is one of the ["most loved" languages in software engineering](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved). When everything is running smoothly, TypeScript can been a huge boon to productivity.

@@ -6,7 +6,6 @@ tags:
     - CSS
     - A11y
     - WIP
-image:
 ---
 
 <style>

@@ -4,7 +4,6 @@ description: Using Deno's environment to determine your computer's home director
 pubDate: 2020-07-17
 tags:
     - Deno
-image:
 ---
 
 If you want to access the home directory from you Deno program, you can use the `Deno.env`'s `get` method with `"HOME"`:

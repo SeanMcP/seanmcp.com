@@ -5,7 +5,6 @@ pubDate: 2021-06-21
 tags:
   - JavaScript
 verse: Psalm 147:4-5
-image:
 ---
 
 If you have a class in JavaScript and want to know the number of methods it contains, there are a few steps that you need to follow.

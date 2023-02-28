@@ -5,7 +5,6 @@ pubDate: 2021-05-01
 tags:
   - JavaScript
 verse: 2 Kings 22:8
-image:
 head: >-
   <style>
       #params-message {

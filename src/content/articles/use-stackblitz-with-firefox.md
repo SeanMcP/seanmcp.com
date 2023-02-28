@@ -5,7 +5,6 @@ pubDate: 2022-08-23
 tags:
   - Firefox
   - StackBlitz
-image:
 ---
 
 StackBlitz is a great tool for rapidly prototyping web applications. In recent weeks, I has been my go-to tool for testing out new web technologies ([CodeSandbox's loss](/notes/42/)). However, when you try to use StackBlitz with Firefox, the preview window gives the following error message:

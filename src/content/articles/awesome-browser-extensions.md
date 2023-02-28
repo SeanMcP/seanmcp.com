@@ -1,7 +1,6 @@
 ---
 title: Awesome browser extensions
 description: A curated list of helpful browser extensions.
-image:
 tags:
   - Garden
   - Extensions

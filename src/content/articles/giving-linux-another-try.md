@@ -3,7 +3,6 @@ title: Giving Linux another try
 description:
   It's been about 10 years since I last tried using Linux, so I think it's time
   to explore what it has to offer in 2022.
-image:
 tags:
   - Linux
   - Computing

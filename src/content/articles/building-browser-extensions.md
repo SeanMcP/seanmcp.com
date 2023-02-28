@@ -7,7 +7,6 @@ tags:
   - Chrome
   - Firefox
   - Extensions
-image:
 ---
 
 These are resources that I reference and guides that I follow while developing browser add-ons/extensions. Hopefully this garden will be helpful to you along the way!

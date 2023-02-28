@@ -6,7 +6,6 @@ tags:
   - A11y
   - Safari
 verse: Psalm 2:6
-image:
 ---
 
 While doing some cross-browser testing in Safari, I noted that <kbd>tab</kbd> was not working as expected. I was looking at a focus-managed component, so my first thought was that I had done something in my JavaScript that did not work in Safari.

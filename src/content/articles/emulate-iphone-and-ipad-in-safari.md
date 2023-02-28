@@ -5,7 +5,6 @@ pubDate: 2020-09-02
 tags:
     - Dev Tools
     - Safari
-image:
 ---
 
 To emulate an iPhone or iPad in Safari, you first need to have [the developer tools enabled](https://support.apple.com/guide/safari/use-the-developer-tools-in-the-develop-menu-sfri20948/mac).

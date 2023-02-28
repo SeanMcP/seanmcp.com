@@ -9,7 +9,6 @@ tags:
   - Mobile
   - React Native
 verse: Psalm 19:14
-image:
 ---
 
 Building applications with React Native requires a high-level understanding of mobile development on Android and iOS devices in addition to React and React Native fundamentals. This glossary of terms will serve as a helpful reference when working across these environments.

@@ -7,7 +7,6 @@ tags:
     - Error
     - Firefox
 verse: Philippians 2:5-11
-image:
 ---
 
 I ran into an issue today when I tried to serve a typeface I downloaded from Google Fonts. When I added the files and `@font-face` rules to my CSS, I got the following error in the Firefox console:

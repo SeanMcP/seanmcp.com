@@ -6,7 +6,6 @@ tags:
   - Bug
   - Chrome
   - macOS
-image:
 ---
 
 Starting Fall of 2021, I noticed that my bluetooth headphones would periodically mute me while I was speaking during video chats on Google Meet. I tried multiple sets of bluetooth headphones, and they all had the same issue.

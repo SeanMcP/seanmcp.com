@@ -8,7 +8,6 @@ tags:
   - Mobile
   - React Native
 verse: Psalm 127:1
-image:
 ---
 
 When working on a React Native app, you will probably make some changes to the `build.gradle` file in your projects `android/` directory. This file is the core component of your build process and has all of the instructions necessary to compile an Android app from source.

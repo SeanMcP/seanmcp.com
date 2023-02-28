@@ -6,7 +6,6 @@ tags:
     - Craft
     - CSS
     - Professional
-image:
 ---
 
 I spent some time this week enjoying [Dave Geddes' content](https://mastery.games). Three resources in particular have left me with a lot to think about, and I'm combining them into what I call "Geddes' Guide to Crafting".

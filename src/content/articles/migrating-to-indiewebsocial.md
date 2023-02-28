@@ -2,7 +2,6 @@
 title: Migrating to IndieWeb.social
 description:
   A little write-up about my migration from Fosstodon to IndieWeb.social
-image:
 tags:
   - Mastodon
 pubDate: 2023-02-16T15:38:51.874Z

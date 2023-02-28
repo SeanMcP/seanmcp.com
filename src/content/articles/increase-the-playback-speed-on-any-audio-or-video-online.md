@@ -7,7 +7,6 @@ tags:
     - Dev Tools
     - JavaScript
 verse: Deuteronomy 6:4
-image:
 ---
 
 I like learning from audio and video, from podcasts to YouTube videos. My favorite applications let you alter the playback speed of the audio and video so that you can consume the content faster (or slower).

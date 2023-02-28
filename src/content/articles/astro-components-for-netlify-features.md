@@ -3,7 +3,6 @@ title: Astro components for Netlify features
 description:
   Announcing astro-netlify-components, a library for using Netlify features in
   your Astro projects.
-image:
 tags:
   - Astro
   - Netlify

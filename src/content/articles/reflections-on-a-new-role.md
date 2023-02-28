@@ -9,7 +9,6 @@ tags:
   - Professional Development
   - React Native
 verse: Job 1:21
-image:
 ---
 
 Recently I accepted a new position at Niche as a senior mobile software engineer. I will take the reigns of our mobile app ([Android](https://play.google.com/store/apps/details?id=com.nicheinc.nichealpha), [iOS](https://apps.apple.com/us/app/niche-colleges-k-12-places/id1356697847)) and work on a dedicated product team building new features for our users. This is a shift in focus for my career but not uncharted territory.

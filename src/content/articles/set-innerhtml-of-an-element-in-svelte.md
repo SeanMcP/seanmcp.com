@@ -4,7 +4,6 @@ description: You can use an HTML expression to add valid markup to an element
 pubDate: 2021-02-25
 tags:
   - Svelte
-image:
 ---
 
 When working on a Svelte application, I wanted to replace newline characters in a string with `<br>` elements and render the result as HTML. If you do the replace in your component markup, then the rendered output has escaped angle brackets:

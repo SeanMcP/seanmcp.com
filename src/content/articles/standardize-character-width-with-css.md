@@ -6,7 +6,6 @@ tags:
   - CSS
   - Typography
 verse: Romans 5:3-5
-image:
 ---
 
 **Authors note**: Before you read this article, you will want to click the "Start timer" button below to enable the live demos. You can cancel it at any time by clicking "Stop timer".

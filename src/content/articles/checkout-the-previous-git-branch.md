@@ -7,7 +7,6 @@ tags:
     - Productivity
     - TIL
 verse: Daniel 6:10
-image:
 ---
 
 Today I needed to checkout a branch, pull the latest, then checkout `dev`, pull the latest, and merge `dev` into my branch.

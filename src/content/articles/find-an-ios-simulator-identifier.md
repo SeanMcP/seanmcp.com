@@ -6,7 +6,6 @@ tags:
     - iOS
     - macOS
     - Xcode
-image:
 ---
 
 When running a device simulator on macOS, it is possible to navigate that system's directly through the command line (or Finder, if you'd prefer). To do that, navigate to to the following directory:

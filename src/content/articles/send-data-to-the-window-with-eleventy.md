@@ -5,7 +5,6 @@ pubDate: 2021-01-25
 tags:
   - Eleventy
 verse: Joshua 2:15
-image:
 ---
 
 Static-site generators like Eleventy are great at building websites. But when you want to add additional functionality, like a search feature, it might feel like they fall short.

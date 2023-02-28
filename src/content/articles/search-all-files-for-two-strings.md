@@ -4,7 +4,6 @@ description: A terminal command to search for all the files in the current direc
 pubDate: 2021-02-15
 tags:
   - Shell
-image:
 ---
 
 To search the current directory for all files that contain two independent strings, you can use the following terminal command:

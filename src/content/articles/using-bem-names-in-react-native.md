@@ -7,7 +7,6 @@ tags:
   - Mobile
   - React Native
 verse: Exodus 17:15
-image:
 ---
 
 When writing CSS classes, I prefer BEM's naming system. The pattern is clear to read and names are easy to generate. I believe the unwieldy length of some names is offset by the benefits.

@@ -5,7 +5,6 @@ pubDate: 2020-08-05
 tags:
   - JavaScript
   - WIP
-image:
 ---
 
 <!-- https://repl.it/@SeanMcP/why-you-shouldnt-mutate-parameters -->

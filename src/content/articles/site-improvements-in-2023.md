@@ -3,7 +3,6 @@ title: Site improvements in 2023
 description:
   An unordered list of things that I would like to change about this site in
   2023.
-image:
 tags:
   - Astro
   - Mastodon

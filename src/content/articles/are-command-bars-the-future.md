@@ -4,7 +4,6 @@ description:
   Command bars are a great way to access functionality through a single user
   interface, but how much potential does this pattern have to change the way we
   interact with products?
-image:
 tags:
   - UI
   - Patterns

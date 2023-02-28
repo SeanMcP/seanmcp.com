@@ -5,7 +5,6 @@ pubDate: 2022-02-05
 tags:
     - Chrome
     - Dev Tools
-image:
 head: >-
     <style>
         main img {

@@ -5,7 +5,6 @@ pubDate: 2020-08-18
 tags:
     - Preact
     - WIP
-image:
 ---
 
 Preact is a lightweight alternative to React. It provides the same^[Mostly.] modern API but at only 3kB minified and gzipped. For comparison, bundlephobia has `react` and `react-dom` at 38.5kB.

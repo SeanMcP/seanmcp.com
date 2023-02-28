@@ -3,7 +3,6 @@ title: How long should it take to write an article?
 description:
   Can I write articles in five minutes that are worth my and my reader's time? I
   don't know, but I think it's worth exploring.
-image:
 tags:
   - Writing
 pubDate: 2023-02-27T16:37:37.838Z

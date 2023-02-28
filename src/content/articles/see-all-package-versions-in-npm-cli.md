@@ -6,7 +6,6 @@ tags:
     - npm
     - CLI
 verse: Psalm 34:8
-image:
 ---
 
 At work, I ran into an issue that may have been related to an external dependency. I wanted to update the package to see if a future release fixed the issue.

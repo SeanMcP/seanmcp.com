@@ -3,7 +3,6 @@ title: My writing process in February 2023
 description:
   The process involves mostly manual steps, and I am looking for a better
   solution.
-image:
 tags:
   - Meta
   - Writing

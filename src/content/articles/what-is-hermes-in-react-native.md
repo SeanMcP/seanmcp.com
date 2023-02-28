@@ -6,7 +6,6 @@ tags:
   - Mobile
   - React Native
 verse: Acts 14:12
-image:
 ---
 
 React Native is framework for building Android and iOS application using React and native capabilities. It allows developers to write JavaScript code that will interact with platform APIs and native components to build interactive user interfaces.
