@@ -1,11 +1,9 @@
 ---
 title: %TITLE%
-description: One or two sentences ending with a period.
-image: 
+description: 1-2 SENTECES WITHOUT A FINAL PERIOD
 tags:
     - WIP
 pubDate: %DATE%
-verse: 
 ---
 
 
