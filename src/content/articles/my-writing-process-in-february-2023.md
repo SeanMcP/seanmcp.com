@@ -24,7 +24,7 @@ I would like to be able to write drafts and publish from one interface on
 desktop and mobile. To date, I haven’t found a good CMS solution.
 
 I had Netlify CMS configured, but a jumping cursor bug made it annoying to use.
-I’m interested to see if [Static CMS](https://decapcms.org/) or
+I’m interested to see if [Static CMS](https://www.staticcms.org/) or
 [Decap CMS](https://decapcms.org/), both successors, can address this and other
 usability issues. In the meantime, my choices are to refine my current workflow
 or look for alternatives.
