@@ -4,6 +4,8 @@ const articles = defineCollection({
   schema: z.object({
     description: z.string(),
     flags: z.array(z.enum(["DRAFT", "RSS-ONLY"])).optional(),
+    foot: z.string().optional(),
+    head: z.string().optional(),
     image: z.nullable(z.string()).optional(),
     pubDate: z.date(),
     series: z.string().optional(),
