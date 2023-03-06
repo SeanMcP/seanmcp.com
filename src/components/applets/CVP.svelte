@@ -3,6 +3,11 @@
 
   let selectedPattern = null;
 
+  if (typeof window !== "undefined") {
+    const searchParams = new URLSearchParams(window.location.search);
+    selectedPattern = searchParams.get("pattern");
+  }
+
   function handleChange(e) {
     if (e.target.value) selectedPattern = e.target.value;
   }
@@ -10,11 +15,18 @@
 
 <section id="app">
   <form id="pattern-form">
-    <label for="pattern"> Consonant-vowel pattern </label>
-    <select id="pattern" name="pattern" on:change={handleChange}>
+    <label for="pattern">Consonant-vowel pattern</label>
+    <select
+      id="pattern"
+      name="pattern"
+      on:change={handleChange}
+      value={selectedPattern}
+    >
       <option>Select a pattern</option>
       {#each Object.keys(patterns) as pattern}
-        <option value={pattern}>{pattern}</option>
+        {#if pattern !== "default"}
+          <option value={pattern}>{pattern}</option>
+        {/if}
       {/each}
     </select>
     <button>Search</button>
@@ -25,7 +37,8 @@
         {patterns[selectedPattern].length} results for "{selectedPattern}"
         <a
           href={`https://raw.githubusercontent.com/SeanMcP/reading/master/consonant-vowel-patterns/lib/${selectedPattern}.json`}
-          target="_blank" rel="noreferrer">View the raw data</a
+          target="_blank"
+          rel="noreferrer">View the raw data</a
         >
       </p>
       <ol
@@ -58,7 +71,8 @@
     padding: 1rem;
   }
 
-  #pattern-form :is(button, select) {
+  #pattern-form button,
+  #pattern-form select {
     border-radius: 0;
     border: 1px solid var(--off-background);
     font: inherit;
