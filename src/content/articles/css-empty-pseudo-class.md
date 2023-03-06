@@ -5,8 +5,6 @@ tags:
     - CSS
 pubDate: 2023-03-02T12:08:16.798Z
 foot: <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-head: >-
-    <style>.cp_embed_wrapper { margin: 2rem -1rem }</style>
 ---
 
 - `:empty` allows you to apply styles to an element when it has no child nodes
