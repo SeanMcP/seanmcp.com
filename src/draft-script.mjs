@@ -38,7 +38,7 @@ try {
     `🏗  Created draft${titleArg ? ` "${titleArg}"` : ""} at ${filePath}\n`
   );
 
-  execSync(`code -g ${filePath.pathname}:12`);
+  execSync(`code -g ${filePath.pathname}:9`);
 } catch (error) {
   console.error(error);
   process.exit(1);
