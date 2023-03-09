@@ -48,9 +48,9 @@ const { data } = entry;
       }
       <a
         href={`mailto:sean@seanmcp.com?subject=Re: ${data.title}`}
-        id="comment-link">Send a comment</a
+        id="comment-link">Reply by email</a
       >
-      <div>Read more: <TagList tags={data.tags} /></div>
+      <div>Filed under: <TagList tags={data.tags} /></div>
     </footer>
   </article>
   <hr />
@@ -95,4 +95,8 @@ const { data } = entry;
 
   /* CodePen embeds */
   :global(.cp_embed_wrapper) { margin: 2rem -1rem }
+
+  :global(.cp_embed_wrapper iframe) {
+    height: min(50vh, 500px);
+  }
 </style>

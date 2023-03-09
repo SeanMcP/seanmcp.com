@@ -1,40 +1,57 @@
 ---
 title: Add event listener for class change
-description: How to create a custom event listener for class names using the MutationObserver API
+description:
+  How to create a custom event listener for class names using the
+  MutationObserver API
 pubDate: 2019-05-10
 tags:
-    - JavaScript
+  - JavaScript
 ---
 
-If you're like me and spent some time searching for an event listener for class changes, let me save you some time: **there isn't one**.
+🆕 **Update:** I created a
+[reusable function to listen for class changes on any element](/articles/listen-for-class-change-in-javascript)
+that is more robust that the solution here.
 
-However, you can create your own custom event listener using the [`MutationObserver` API](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver). Let's look at how to create a simple listener for class changes.
+If you're like me and spent some time searching for an event listener for class
+changes, let me save you some time: **there isn't one**.
 
-`MutationObserver` is a constructor that can allows you to watch any changes to the DOM tree. The constructor takes a callback function that will receive two arguments: a list of [MutationRecords](https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord), and a reference to the observer.
+However, you can create your own custom event listener using the
+[`MutationObserver` API](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver).
+Let's look at how to create a simple listener for class changes.
 
-First, let's first create a callback that logs its parameters and then construct a new `MutationObserver`:
+`MutationObserver` is a constructor that can allows you to watch any changes to
+the DOM tree. The constructor takes a callback function that will receive two
+arguments: a list of
+[MutationRecords](https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord),
+and a reference to the observer.
+
+First, let's first create a callback that logs its parameters and then construct
+a new `MutationObserver`:
 
 ```js
 function callback(mutationsList, observer) {
-    console.log('Mutations:', mutationsList)
-    console.log('Observer:', observer)
+  console.log("Mutations:", mutationsList);
+  console.log("Observer:", observer);
 }
 
-const mutationObserver = new MutationObserver(callback)
+const mutationObserver = new MutationObserver(callback);
 ```
 
-We've constructed basic custom observer, but we need to listen for changes on something. To add our custom event listener, we need to call the created observer's [`observe()` method](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/observe).
+We've constructed basic custom observer, but we need to listen for changes on
+something. To add our custom event listener, we need to call the created
+observer's
+[`observe()` method](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/observe).
 
-`MutationObserver.observe()` takes two arguments: the DOM node target, and an optional options object. We'll call this method and pass it a node reference and one option:
+`MutationObserver.observe()` takes two arguments: the DOM node target, and an
+optional options object. We'll call this method and pass it a node reference and
+one option:
 
 ```js
-mutationObserver.observe(
-    document.getElementById('main'),
-    { attributes: true }
-)
+mutationObserver.observe(document.getElementById("main"), { attributes: true });
 ```
 
-This set our `MutationObserver` to look for any changes to the `main`'s attributes. If we trigger a change, we can see the two logs from `callback()`:
+This set our `MutationObserver` to look for any changes to the `main`'s
+attributes. If we trigger a change, we can see the two logs from `callback()`:
 
 ```
 Mutations:
@@ -44,27 +61,32 @@ Observer:
 MutationObserver
 ```
 
-On each `MutationRecord` object, there is an `attributeName` property. If that value is equal to 'class', then we know that there has been a change to the element's class name.
+On each `MutationRecord` object, there is an `attributeName` property. If that
+value is equal to 'class', then we know that there has been a change to the
+element's class name.
 
 Now we can update the `callback` function by adding a condition:
 
 <!-- ```js/0-5 -->
+
 ```js
 function callback(mutationsList) {
-    mutationsList.forEach(mutation => {
-        if (mutation.attributeName === 'class') {
-            alert('Ch-ch-ch-changes!')
-        }
-    })
+  mutationsList.forEach((mutation) => {
+    if (mutation.attributeName === "class") {
+      alert("Ch-ch-ch-changes!");
+    }
+  });
 }
 ```
 
-This code will fire an alert if any item in `mutationsList` records a change to `main`'s class attribute.
+This code will fire an alert if any item in `mutationsList` records a change to
+`main`'s class attribute.
 
-If you need to stop your custom event listener later, use `MutationObserver`'s `disconnect()` method to remove it like you would a normal event listener:
+If you need to stop your custom event listener later, use `MutationObserver`'s
+`disconnect()` method to remove it like you would a normal event listener:
 
 ```js
-mutationObserver.disconnect()
+mutationObserver.disconnect();
 ```
 
 ## Example
