@@ -1,6 +1,5 @@
 ---
-import { getArticles, getNotes, getTags, platypus, slugify } from "src/utils";
-import CommandPaletteSection from "./CommandPaletteSection.astro";
+import { getArticles, getNotes, getTags, slugify } from "src/utils";
 import socials from "src/data/socials";
 import navigation from "src/data/navigation";
 
@@ -19,7 +18,7 @@ const options = [
     type: "Note",
     url: `/notes/${note.slug}`,
     label: "Note #" + note.slug,
-    searchable: (note.slug + note.body).toLowerCase(),
+    searchable: ("Note #" + note.slug + note.body).toLowerCase(),
   })),
   {
     type: "Contact",
@@ -91,64 +90,13 @@ const options = [
   </template>
   <div id="command-palette__overlay"></div>
   <section id="command-palette__content">
-    <input aria-label="Search for content" type="text" />
+    <input
+      aria-label="Search for content"
+      type="text"
+      placeholder="Search for content"
+    />
     <div aria-live="polite" id="command-palette__results-message"></div>
-    <section id="command-palette__results">
-      <CommandPaletteSection
-        label="Commands"
-        content={[
-          {
-            url: "mailto:sean@seanmcp.com",
-            visibleText: "Email me",
-            hiddenText:
-              "Send an email to contact Sean McPherson (seanmcp): sean@seanmcp.com",
-          },
-          ...socials.map((social) => ({
-            url: social.url,
-            visibleText: `Find me on ${social.label}`,
-          })),
-        ]}
-      />
-      <CommandPaletteSection
-        label="Articles"
-        content={articles.map((article) => {
-          return {
-            url: `/articles/${article.slug}`,
-            visibleText: article.data.title,
-            hiddenText: article.data.description,
-          };
-        })}
-      />
-      <CommandPaletteSection
-        label="Tags"
-        content={Object.entries(tags).map(([tag, count]) => {
-          return {
-            url: `/tags/${slugify(tag)}`,
-            visibleText: `#${tag} (${count})`,
-          };
-        })}
-      />
-      <CommandPaletteSection
-        label="Notes"
-        content={notes.map((note) => {
-          return {
-            url: `/notes/${note.slug}`,
-            visibleText: "Note #" + note.slug,
-            hiddenText: note.body,
-          };
-        })}
-      />
-      <CommandPaletteSection
-        label="Pages"
-        content={navigation.all.map((page) => {
-          return {
-            url: page.url,
-            visibleText: page.label,
-            hiddenText: page.description,
-          };
-        })}
-      />
-    </section>
+    <section id="command-palette__results"></section>
     <footer>
       <span
         >Experimental feature: <a
@@ -162,6 +110,7 @@ const options = [
 </section>
 
 <script define:vars={{ options }}>
+  // Copied from utils.ts > platypus
   function platypus(nav = navigator) {
     if (typeof nav === "undefined") {
       throw new Error(
@@ -169,22 +118,12 @@ const options = [
       );
     }
     return {
-      /**
-       * Check if the userAgent appears to be macOS or iPhoneOS
-       */
       isMac() {
         return nav.userAgent.includes("Mac");
       },
-      /**
-       * Check if the userAgent appears to be mobile
-       */
       isMobile() {
         return nav.userAgent.includes("Mobile");
       },
-      /**
-       * Checks if command key is pressed on Mac or control key is pressed on
-       * other platforms
-       */
       commandOrControl(keyboardEvent) {
         return this.isMac() ? keyboardEvent.metaKey : keyboardEvent.ctrlKey;
       },
@@ -199,15 +138,13 @@ const options = [
   const resultsMessage = document.querySelector(
     "#command-palette__results-message"
   );
-  const items = document.querySelectorAll("#command-palette nav a");
   const resultTemplate = document.querySelector("#command-palette template");
 
   input.addEventListener("input", (event) => {
     const target = event.target;
     const query = target.value.toLowerCase();
     if (query.length < 3) {
-      results.textContent = ""
-      // items.forEach((item) => delete item.dataset.match);
+      results.textContent = "";
       resultsMessage.textContent = "";
       return;
     }
@@ -227,15 +164,6 @@ const options = [
     });
 
     results.innerHTML = resultsHTML;
-
-    // items.forEach((item) => {
-    //   if (query && item.textContent.toLowerCase().includes(query)) {
-    //     item.dataset.match = "true";
-    //     count++;
-    //   } else {
-    //     delete item.dataset.match;
-    //   }
-    // });
 
     resultsMessage.textContent = `${count} results`;
   });
@@ -264,8 +192,7 @@ const options = [
     (previouslyActiveElement || document.body).focus();
     window.removeEventListener("focus", focusTrap);
     overlay.removeEventListener("click", closePalette);
-    // items.forEach((item) => delete item.dataset.match);
-    results.textContent = ""
+    results.textContent = "";
   }
 
   trigger.addEventListener("click", openPalette);
@@ -326,9 +253,12 @@ const options = [
     width: 100%;
   }
 
+  body[data-theme="dark"] #command-palette__overlay {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
   #command-palette__content {
     background: var(--background);
-    box-shadow: 0 0 1rem var(--off-background);
     display: grid;
     gap: 0.5rem;
     margin-top: 4rem;
