@@ -1,6 +1,6 @@
 ---
 import { CollectionEntry } from "astro:content";
-import { getArticles } from "src/utils";
+import { getArticles, getArticleTitle } from "src/utils";
 import ReadableTime from "./ReadableTime.astro";
 
 interface Props {
@@ -10,7 +10,8 @@ interface Props {
 
 const { articles: initial, count } = Astro.props;
 
-const articles = initial || (await getArticles(count));
+const articles =
+  initial || (await getArticles({ count, excludeRSSOnlyInProd: true }));
 ---
 
 <section>
@@ -23,11 +24,7 @@ const articles = initial || (await getArticles(count));
           <div>
             <ReadableTime date={article.data.pubDate} />
           </div>
-          <a href={url}>
-            {article.data.flags?.includes("DRAFT") && "[DRAFT] "}
-            {article.data.flags?.includes("RSS-ONLY") && "[RSS-ONLY] "}
-            {article.data.title}
-          </a>
+          <a href={url}>{getArticleTitle(article.data)}</a>
           <p>{article.data.description}</p>
         </article>
       );

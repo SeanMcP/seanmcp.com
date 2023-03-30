@@ -1,9 +1,15 @@
 ---
-import { getArticles, getNotes, getTags, slugify } from "src/utils";
+import {
+  getArticles,
+  getNotes,
+  getTags,
+  getArticleTitle,
+  slugify,
+} from "src/utils";
 import socials from "src/data/socials";
 import navigation from "src/data/navigation";
 
-const articles = await getArticles();
+const articles = await getArticles({ excludeRSSOnlyInProd: true });
 const notes = await getNotes();
 const tags = getTags(articles);
 
@@ -11,7 +17,7 @@ const options = [
   ...articles.map((article) => ({
     type: "Article",
     url: `/articles/${article.slug}`,
-    label: article.data.title,
+    label: getArticleTitle(article.data),
     searchable: (article.data.title + article.data.description).toLowerCase(),
   })),
   ...notes.map((note) => ({

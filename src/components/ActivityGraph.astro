@@ -4,12 +4,24 @@ import { getArticles, getNotes } from "src/utils";
 const articles = await getArticles();
 const notes = await getNotes();
 
-const yearCount: Record<number, { articles: number; notes: number }> = {};
+const yearCount: Record<
+  number,
+  { articles: number; notes: number; rssClub: number }
+> = {};
 
 [...articles, ...notes].forEach((content) => {
   const year = new Date(content.data.pubDate).getFullYear();
-  if (!yearCount[year]) yearCount[year] = { articles: 0, notes: 0 };
-  yearCount[year][content.collection]++;
+  if (!yearCount[year]) yearCount[year] = { articles: 0, notes: 0, rssClub: 0 };
+  if (content.collection === "notes") {
+    yearCount[year].notes++;
+  }
+  if (content.collection === "articles") {
+    if (content.data.flags?.includes("RSS-ONLY")) {
+      yearCount[year].rssClub++;
+    } else {
+      yearCount[year].articles++;
+    }
+  }
 });
 
 const highest = Math.max(
@@ -20,9 +32,10 @@ const multiplier = (16 * 4) / highest;
 
 <ol>
   {
-    Object.entries(yearCount).map(([year, { articles, notes }]) => {
+    Object.entries(yearCount).map(([year, { articles, notes, rssClub }]) => {
       const articlesLabel = `${articles} articles`;
       const notesLabel = `${notes} notes`;
+      const rssClubLabel = `${rssClub} RSS Club articles`;
       return (
         <li>
           <div title={String(articles + notes)}>{year}</div>
@@ -39,6 +52,13 @@ const multiplier = (16 * 4) / highest;
             title={notesLabel}
           >
             <span class="--visually-hidden">{notesLabel}</span>
+          </span>
+          <span
+            class="rss-club"
+            style={{ height: rssClub * multiplier + "px" }}
+            title={rssClubLabel}
+          >
+            <span class="--visually-hidden">{rssClubLabel}</span>
           </span>
         </li>
       );
@@ -68,5 +88,8 @@ const multiplier = (16 * 4) / highest;
   }
   li span.notes {
     background: var(--accent);
+  }
+  li span.rss-club {
+    background: var(--off-background);
   }
 </style>

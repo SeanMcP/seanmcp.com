@@ -43,16 +43,35 @@ function sortByPubDate<
   );
 }
 
-export async function getArticles(count?: number) {
+export function getArticleTitle(data: CollectionEntry<"articles">["data"]) {
+  let prefix = "";
+  if (import.meta.env.DEV) {
+    if (data.flags?.includes("DRAFT")) {
+      prefix = "[DRAFT] ";
+    } else if (data.flags?.includes("RSS-ONLY")) {
+      prefix = "[RSS-ONLY] ";
+    }
+  }
+  return prefix + data.title;
+}
+
+export async function getArticles(options?: {
+  count?: number;
+  excludeRSSOnlyInProd?: boolean;
+}) {
+  const { count, excludeRSSOnlyInProd } = options || {};
   const articles = await getCollection("articles");
   return articles
     .filter((entry) => {
-      // Ignore drafts, RSS-only entries in production
       if (
         import.meta.env.PROD &&
-        (entry.data.flags?.includes("DRAFT") ||
-          entry.data.flags?.includes("RSS-ONLY"))
+        entry.data.flags?.includes("RSS-ONLY") &&
+        excludeRSSOnlyInProd
       ) {
+        return false;
+      }
+      // Ignore drafts in production
+      if (import.meta.env.PROD && entry.data.flags?.includes("DRAFT")) {
         return false;
       }
       return true;

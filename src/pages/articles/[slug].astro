@@ -32,6 +32,15 @@ const { data } = entry;
     </header>
     <HeroImage image={data.image} />
     <ArticleSeries series={data.series} />
+    {
+      data.flags?.includes("RSS-ONLY") && (
+        <section id="rss">
+          This is a special article for <strong>the RSS Club</strong>, but feel
+          free to save or share this link. You can join by subscribing to{" "}
+          <a href="/rss.xml">my RSS feed</a>.
+        </section>
+      )
+    }
     <Content />
     <hr />
     <footer>
@@ -82,6 +91,11 @@ const { data } = entry;
     margin: 1rem 0 0;
   }
 
+  #rss {
+    border: 2px solid var(--off-background);
+    padding: 1em;
+  }
+
   footer {
     align-items: flex-start;
     display: flex;
@@ -94,7 +108,9 @@ const { data } = entry;
   }
 
   /* CodePen embeds */
-  :global(.cp_embed_wrapper) { margin: 2rem -1rem }
+  :global(.cp_embed_wrapper) {
+    margin: 2rem -1rem;
+  }
 
   :global(.cp_embed_wrapper iframe) {
     height: min(50vh, 500px);
