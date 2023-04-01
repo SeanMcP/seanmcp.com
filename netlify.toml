@@ -7,7 +7,3 @@
     autoLaunch = true
     framework = "#custom"
     targetPort = 3000
-
-[[edge_functions]]
-    path = "/fn/random"
-    function = "random-article"
