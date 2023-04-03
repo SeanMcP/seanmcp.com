@@ -8,8 +8,6 @@ tags:
 pubDate: 2022-10-29T17:21:58.156Z
 ---
 
-import Callout from "@components/Callout.astro";
-
 If you create a new Astro project with the installer, it will organize blog
 posts as markdown files in a `src/pages/blog/` directory. Each post will have
 some frontmatter, including a `layout` field to set the frame in which the
@@ -115,12 +113,12 @@ const {
 <Content />
 ```
 
-<Callout type="info">
+<call-out type="info">
 
 Make sure to include post content in the `<head>` element too, and add encoding
 to ensure that it renders correctly.
 
-</Callout>
+</call-out>
 
 With all of that in place, you are now able to render markdown or MDX blog post
 content anywhere on your site with Astro's `Content` component; we're doing it

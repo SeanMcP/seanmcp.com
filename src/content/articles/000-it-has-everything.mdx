@@ -11,25 +11,24 @@ flags:
 	- DRAFT
 ---
 
-import Callout from '@components/Callout.astro'
-import YouTube from '@components/YouTube.astro'
+import YouTube from "@components/YouTube.astro";
 
 Here is some text with [a link](https://seanmcp.com)[^1]:
 
 ```js
-let variable = true
+let variable = true;
 
 class Dog extends Animal {
-    constructor(name) {
-        super(name)
+  constructor(name) {
+    super(name);
 
-        this.name = name
-        this.isCute = true
-        this.speak = () => {
-            console.log('woof')
-        }
-        this.legs = 3
-    }
+    this.name = name;
+    this.isCute = true;
+    this.speak = () => {
+      console.log("woof");
+    };
+    this.legs = 3;
+  }
 }
 ```
 
@@ -57,35 +56,35 @@ Here is <kbd>space</kbd> some more `stuff` that will need to work.
 
 <YouTube url="https://www.youtube.com/watch?v=fNedC1qBnZ8" />
 
-<Callout type="check">
+<call-out type="check">
 
 check
 
-</Callout>
+</call-out>
 
-<Callout type="error">
+<call-out type="error">
 
 error
 
-</Callout>
+</call-out>
 
-<Callout type="info">
+<call-out type="info">
 
 info
 
-</Callout>
+</call-out>
 
-<Callout type="warn">
+<call-out type="warn">
 
 warn
 
-</Callout>
+</call-out>
 
-<Callout type="wave">
+<call-out type="wave">
 
 wave
 
-</Callout>
+</call-out>
 
 ###### Heading 6
 

@@ -9,8 +9,6 @@ tags:
 pubDate: 2022-11-18T14:29:17.736Z
 ---
 
-import Callout from "@components/Callout.astro";
-
 **Update**: The solution in this article still works, but I think using a
 [redirect as described here](https://www.hawksworx.com/blog/alias-your-mastodon-username-to-your-domain-with-one-netlify-config-setting/)
 is probably a better option.
@@ -44,11 +42,11 @@ export async function get() {
 }
 ```
 
-<Callout type="info">
+<call-out type="info">
 
 Make sure to swap out the values for your Mastodon instance and username!
 
-</Callout>
+</call-out>
 
 When you trigger a build, Astro will run the `get()` function which grabs the
 webfinger information from your Mastodon instance and outputs it in the correct

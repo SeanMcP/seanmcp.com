@@ -10,7 +10,6 @@ verse: Psalm 19:1
 ---
 
 import Emoji from "astro-emoji";
-import Callout from "@components/Callout.astro";
 import Counter from "@components/applets/Counter.svelte";
 
 After almost four years of [Eleventy](https://11ty.dev), I recently completed a
@@ -69,12 +68,12 @@ For an example, the global selector `body > main` has a greater specificity than
 the scoped component selector `main:where(.astro-S3KS4JBQ)`. I would expect
 component styles to override global styles.
 
-<Callout type="wave">
+<call-out type="wave">
 
 If there is a setting to make Astro apply generated classes directly to the
 element, _e.g._ `main.astro-S3KS4JBQ`, please let me know!
 
-</Callout>
+</call-out>
 
 This isn't an insurmountable issue, but I would love to find a workaround (and
 avoid changing my mental model!).
