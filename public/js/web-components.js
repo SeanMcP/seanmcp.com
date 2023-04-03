@@ -45,6 +45,7 @@ class CallOut extends HTMLElement {
     svg {
         fill: currentColor;
         opacity: 0.5;
+        width: 44px;
     }
 </style>
 <section data-type="${this.getAttribute("type")}">
