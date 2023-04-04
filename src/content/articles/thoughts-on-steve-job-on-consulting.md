@@ -9,12 +9,14 @@ tags:
 pubDate: 2022-11-17T14:43:53.334Z
 ---
 
-import YouTube from "@components/YouTube.astro";
-
 My manager at Khan Academy sent me an old video of Steve Jobs talking about the
 idea of consulting:
 
-<YouTube title="Steve Jobs on Consulting" url="https://www.youtube.com/watch?v=rp6_3UQLi2Y" />
+<em-bed>
+
+https://www.youtube.com/watch?v=rp6_3UQLi2Y
+
+</em-bed>
 
 Here are some of the key quotes:
 

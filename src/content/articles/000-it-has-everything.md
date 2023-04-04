@@ -11,8 +11,6 @@ flags:
 	- DRAFT
 ---
 
-import YouTube from "@components/YouTube.astro";
-
 Here is some text with [a link](https://seanmcp.com)[^1]:
 
 ```js
@@ -54,11 +52,13 @@ Here is <kbd>space</kbd> some more `stuff` that will need to work.
 
 ##### Heading 5
 
-<YouTube url="https://www.youtube.com/watch?v=fNedC1qBnZ8" />
+<em-bed>
+<a href="https://www.youtube.com/watch?v=fNedC1qBnZ8">Watch on YouTube</a>
+</em-bed>
 
 <call-out type="check">
 
-check
+https://seanmcp.com
 
 </call-out>
 
