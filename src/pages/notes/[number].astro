@@ -24,14 +24,15 @@ const title = `Note #` + note.slug;
 ---
 
 <PageLayout title={title} withoutH1>
-  <div></div>
-  <Note {...note} />
+  <div>
+    <Note {...note} />
+  </div>
   <p>Browse <a href="/notes/">all notes</a></p>
 </PageLayout>
 
 <style>
   div {
-    height: 2.5rem;
+    margin-block: 2rem;
   }
   p {
     margin-top: 2rem;

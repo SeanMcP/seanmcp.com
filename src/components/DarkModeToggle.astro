@@ -1,4 +1,4 @@
-<label class="--focus-within">
+<label class="--focus-within focused">
   <span class="--visually-hidden">Toggle theme</span>
   <input class="--visually-hidden" type="checkbox" id="dark-mode" />
   <svg
@@ -133,9 +133,6 @@
   }
   label:where(:focus-within, :hover) {
     color: var(--anchor-color);
-  }
-  label:where(:focus-within, :hover) svg {
-    transform: rotate(12.5deg);
   }
   input:not([checked]) ~ .moon {
     display: none;

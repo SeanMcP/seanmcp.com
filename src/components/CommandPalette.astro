@@ -58,7 +58,7 @@ const options = [
 ];
 ---
 
-<button id="command-palette__trigger">
+<button id="command-palette__trigger" class="focused">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -231,9 +231,6 @@ const options = [
   button:where(:hover, :focus) {
     color: var(--anchor-color);
   }
-  button:where(:focus, :hover) svg {
-    transform: rotate(12.5deg);
-  }
   button svg {
     transition: color 200ms ease-in-out;
   }
@@ -270,7 +267,7 @@ const options = [
     margin-top: 4rem;
     padding-top: 1rem;
     position: absolute;
-    width: min(400px, calc(100% - 2rem));
+    width: min(32rem, calc(100% - 2rem));
   }
 
   #command-palette__content > *:not(footer) {

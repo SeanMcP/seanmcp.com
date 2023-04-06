@@ -19,13 +19,11 @@ const articles =
     articles.map((article) => {
       const url = `/articles/${article.slug}`;
       return (
-        <article data-url={url}>
-          {/* Added for styling. Find a better way. */}
-          <div>
-            <ReadableTime date={article.data.pubDate} />
-          </div>
+        <article class="stack" data-url={url}>
           <a href={url}>{getArticleTitle(article.data)}</a>
-          <p>{article.data.description}</p>
+          <p>
+            <ReadableTime date={article.data.pubDate} /><span class="divider" />{article.data.description}
+          </p>
         </article>
       );
     })
@@ -33,14 +31,9 @@ const articles =
 </section>
 
 <style>
-  article {
-    display: grid;
-    gap: 0.5rem;
-  }
-
-  article:not(:first-child) {
-    margin-top: 2rem;
-  }
+  article.stack {
+    --stack-space: 0.5rem;
+  }  
 
   article > * {
     margin: 0;
@@ -50,13 +43,7 @@ const articles =
     font-weight: bold;
   }
 
-  @media screen and (min-width: 600px) {
-    article {
-      grid-template-columns: 10rem auto;
-    }
-
-    article div {
-      grid-row: 1 / span 2;
-    }
+  article + article {
+    margin-block-start: 2rem;
   }
 </style>

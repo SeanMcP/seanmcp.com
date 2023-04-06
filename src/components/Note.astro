@@ -6,45 +6,33 @@ const {
   data: { pubDate, edited },
   render,
   slug: number,
+  useH1 = false,
+  headingLevel = 1,
 } = Astro.props;
 
 const url = `/notes/${number}`;
-const {Content} = await render();
+const { Content } = await render();
+
+const Heading = `h${headingLevel}`;
 ---
 
-<article data-url={url}>
-  <header>
-    <h1>Note #{number}</h1>
-    <span>
-      <a href={url}><time datetime={pubDate}>{readableDate(pubDate)}</time></a>
-      {edited && <span>(Edited)</span>}
-    </span>
-    <BookmarkToggle size="small" url={url} />
+<article class="stack" data-url={url}>
+  <header class="row">
+    <b role="heading" aria-level={headingLevel}>Note #{number}</b>
+    <span class="divider"></span>
+    <a href={url}><time datetime={pubDate}>{readableDate(pubDate)}</time></a>
+    {edited && <><span class="divider"></span><span>(Edited)</span></>}
   </header>
   <Content />
 </article>
 
 <style>
-  header {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
-    /* Offset SVG's padding */
-    margin-right: -0.75rem;
-  }
-
-  header h1 {
-    font-size: 1rem;
-    margin: 0;
-  }
-
-  header span {
-    margin-right: auto;
-  }
-
   article {
     border: 2px solid var(--off-background);
-    padding: 0 1rem;
+    padding: 2rem;
+  }
+
+  header {
+    --row-space: 0;
   }
 </style>

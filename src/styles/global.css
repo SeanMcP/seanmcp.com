@@ -14,13 +14,46 @@
   --inline-code-background: hsla(0, 0%, 0%, 7.5%);
   --inline-code-color: hsla(0, 0%, 0%, 75%);
 
-  --sans-font: system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial,
+  --sans-font: system-ui, -apple-system, BlinkMacSystemFont, Helvetica,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
+    Arial, sans-serif;
   --mono-font: Menlo, Monaco, Consolas, "Andale Mono WT", "Andale Mono",
     "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
     "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
   --body-font: var(--sans-font);
+
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1280,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --step--2: clamp(0.63rem, calc(0.84rem + -0.26vw), 0.79rem);
+  --step--1: clamp(0.84rem, calc(0.9rem + -0.07vw), 0.89rem);
+  --step-0: clamp(1rem, calc(0.96rem + 0.21vw), 1.13rem);
+  --step-1: clamp(1.13rem, calc(1rem + 0.62vw), 1.5rem);
+  --step-2: clamp(1.27rem, calc(1.02rem + 1.22vw), 2rem);
+  --step-3: clamp(1.42rem, calc(1.01rem + 2.07vw), 2.66rem);
+  --step-4: clamp(1.6rem, calc(0.95rem + 3.25vw), 3.55rem);
+  --step-5: clamp(1.8rem, calc(0.82rem + 4.89vw), 4.74rem);
+
+  /* Colors based on syntax highlighter theme */
+  --dark-code-block-background: hsl(211, 21%, 7%);
+  --dark-code-block-text: hsl(206, 18%, 79%);
+  --dark-code-block-red: hsl(4, 100%, 72%);
+  --dark-code-block-orange: hsl(28, 100%, 67%);
+  --dark-code-block-green: hsl(141, 70%, 66%);
+  --dark-code-block-blue: hsl(206, 96%, 68%);
+  --dark-code-block-purple: hsl(271, 92%, 80%);
+
+  --light-code-block-blue: hsl(213, 94%, 35%);
+  --light-code-block-purple: hsl(261, 69%, 59%);
+  --light-code-block-black: hsl(213, 13%, 16%);
+
+  --dark-hs: 211, 21%;
+  --dark: hsla(var(--dark-hs), 10%);
+  --light-hs: 206, 18%;
+  --light: hsla(var(--light-hs), 95%);
+
+  --off-background: hsla(var(--dark-hs), 85%);
+
+  --primary: var(--light-code-block-blue);
+  --accent: var(--light-code-block-purple);
 }
 
 html,
@@ -31,8 +64,7 @@ body {
 }
 
 body {
-  --text-color: hsl(0, 0%, 20%);
-  --lighter-text-color: hsl(0, 0%, 40%);
+  --lighter-text-color: hsl(var(--dark-hs), 40%);
   background: var(--background);
   font-family: var(--body-font);
   color: var(--text-color);
@@ -41,26 +73,14 @@ body {
 
 body[data-theme="dark"] {
   --background: var(--dark);
-  --off-background: hsla(0, 0%, 100%, 20%);
+  --off-background: hsla(var(--dark-hs), 25%);
   --text-color: var(--light);
   --anchor-color: var(--accent);
   --lighter-text-color: hsl(0, 0%, 60%);
-  --inline-code-background: hsla(0, 0%, 0%, 50%);
-  --inline-code-color: hsla(0, 0%, 100%, 85%);
-}
-
-body > :where(footer, main),
-.cc /* Content Container */ {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: calc(10rem * 4);
-  padding: 1rem;
-}
-
-@media screen and (max-width: 600px) {
-  body > :where(footer, header) {
-    font-size: smaller;
-  }
+  --inline-code-background: var(--dark-code-block-background);
+  --inline-code-color: var(--dark-code-block-text);
+  --primary: var(--dark-code-block-purple);
+  --accent: var(--dark-code-block-blue);
 }
 
 h1,
@@ -69,20 +89,32 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 1rem;
-  margin-top: 1em;
+  line-height: 0.9;
+  font-weight: 900;
+  text-wrap: balance;
 }
 
 h1 {
-  line-height: 1;
+  font-size: var(--step-4);
+}
+
+h2 {
+  font-size: var(--step-3);
+}
+
+h3 {
+  font-size: var(--step-2);
+}
+
+h4 {
+  font-size: var(--step-1);
 }
 
 hr {
   background: var(--off-background);
   border: none;
   height: 2px;
-  height: 0;
-  margin: 2rem 0;
+  margin-block: 2rem !important;
 }
 
 hr.small {
@@ -92,10 +124,10 @@ hr.small {
 a {
   color: var(--anchor-color);
   text-decoration-color: var(--off-background);
-  text-decoration-skip-ink: none;
+  text-decoration-skip-ink: auto;
   text-decoration-thickness: 0.125em;
   text-underline-offset: 0.125em;
-  transition: color 100ms ease-in-out, text-decoration 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 a[aria-current="page"],
@@ -173,6 +205,51 @@ li ul {
   margin-top: 0.25rem;
 }
 
+/* Utilities */
+
+.center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.content,
+.content-wide {
+  margin-inline: auto;
+  max-width: 40rem;
+  padding: 1rem;
+}
+
+.content-wide {
+  max-width: 60rem;
+}
+
+.divider::before {
+  color: var(--off-background);
+  content: "·";
+  font-weight: bold;
+  margin-inline: var(--space, 0.5rem);
+}
+
+.stack > * + * {
+  margin-block-end: 0;
+  margin-block-start: var(--stack-space, 1rem);
+}
+
+.stack :is(h1, h2, h3, h4) {
+  --stack-space: 1em;
+}
+
+.stack :is(h1, h2, h3, h4) + * {
+  --stack-space: 0.5rem;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  gap: var(--row-space, 1rem);
+}
+
 /* Helpers */
 
 .--visually-hidden {
@@ -183,6 +260,14 @@ li ul {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.focused {
+  transition: transform 100ms ease-in-out;
+}
+
+.focused:is(:focus, :hover), .focused:focus-within {
+  transform: scale(1.15);
 }
 
 /* Bookmarks */

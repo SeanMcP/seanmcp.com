@@ -4,34 +4,28 @@ import { getNotes } from "src/utils";
 
 interface Props {
   count?: number;
+  headingLevel?: number;
 }
 
-const { count } = Astro.props;
+const { count, headingLevel } = Astro.props;
 
 const notes = await getNotes();
 ---
 
 {
   count === 1 ? (
-    <Note {...notes[0]} />
+    <Note {...notes[0]} headingLevel={headingLevel} />
   ) : (
-    <ul>
+    <div class="stack">
       {notes.slice(0, count).map((note) => (
-        <li>
-          <Note {...note} />
-        </li>
+        <Note {...note} headingLevel={headingLevel} />
       ))}
-    </ul>
+    </div>
   )
 }
 
 <style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    list-style-type: none;
-    margin-bottom: 0;
-    padding: 0;
+  .stack {
+    --stack-space: 2rem;
   }
 </style>
