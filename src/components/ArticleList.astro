@@ -14,15 +14,17 @@ const articles =
   initial || (await getArticles({ count, excludeRSSOnlyInProd: true }));
 ---
 
-<section>
+<section class="stack(l)">
   {
     articles.map((article) => {
       const url = `/articles/${article.slug}`;
       return (
-        <article class="stack" data-url={url}>
+        <article class="stack(xs)" data-url={url}>
           <a href={url}>{getArticleTitle(article.data)}</a>
           <p>
-            <ReadableTime date={article.data.pubDate} /><span class="divider" />{article.data.description}
+            <ReadableTime date={article.data.pubDate} />
+            <span class="divider()" />
+            {article.data.description}
           </p>
         </article>
       );
@@ -31,19 +33,7 @@ const articles =
 </section>
 
 <style>
-  article.stack {
-    --stack-space: 0.5rem;
-  }  
-
-  article > * {
-    margin: 0;
-  }
-
   article a {
     font-weight: bold;
-  }
-
-  article + article {
-    margin-block-start: 2rem;
   }
 </style>

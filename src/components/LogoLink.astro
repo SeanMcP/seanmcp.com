@@ -1,10 +1,23 @@
-<a aria-current={Astro.url.pathname === "/"} aria-label="SeanMcP.com" class="focused" href="/">
-  <svg width="36" height="24" version="1.1" viewBox="0 0 7.9375 5.2917" xmlns="http://www.w3.org/2000/svg">
+<a
+  aria-current={Astro.url.pathname === "/"}
+  aria-label="SeanMcP.com"
+  class="focusable()"
+  href="/"
+>
+  <svg
+    width="36"
+    height="24"
+    version="1.1"
+    viewBox="0 0 7.9375 5.2917"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g>
-     <path d="m0 2.6458 2.6458-2.6458 2.6458 2.6458-2.6458 2.6458z" fill="currentColor"/>
-     <path d="m5.2917 0v5.2917l2.6458-2.6458z" fill="currentColor"/>
+      <path
+        d="m0 2.6458 2.6458-2.6458 2.6458 2.6458-2.6458 2.6458z"
+        fill="currentColor"></path>
+      <path d="m5.2917 0v5.2917l2.6458-2.6458z" fill="currentColor"></path>
     </g>
-   </svg>
+  </svg>
 </a>
 
 <style>
@@ -12,7 +25,7 @@
     display: flex;
   }
 
-  a:not(:is(:hover,:focus)) {
+  a:not(:is(:hover, :focus)) {
     color: var(--text-color);
   }
 

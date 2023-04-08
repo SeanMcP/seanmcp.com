@@ -1,11 +1,8 @@
 ---
 import { getArticles } from "src/utils";
 import ArticleSeries from "@components/ArticleSeries.astro";
-import Bio from "@components/Bio.astro";
-import BookmarkToggle from "@components/BookmarkToggle.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import ReadableTime from "@components/ReadableTime.astro";
-import TagList from "@components/TagList.astro";
 import HeroImage from "@components/HeroImage.astro";
 
 export async function getStaticPaths() {
@@ -23,10 +20,10 @@ const verse = data.verse ?? "John 11:25";
 ---
 
 <PageLayout {...data} withoutH1>
-  <article class="article | stack">
+  <article class="article | stack()">
     <h1>{data.title}</h1>
-    <p class="byline | row">
-      By Sean McPherson<span class="divider"></span>{
+    <p class="byline | line()">
+      By Sean McPherson<span class="divider()"></span>{
         data.tags?.includes("garden") ? (
           "Garden"
         ) : (
@@ -47,7 +44,7 @@ const verse = data.verse ?? "John 11:25";
     }
     <Content />
     <hr />
-    <footer class="row">
+    <footer class="line()">
       <a
         href={`mailto:sean@seanmcp.com?subject=Re: ${data.title}`}
         id="comment-link">Reply by email</a
@@ -65,13 +62,12 @@ const verse = data.verse ?? "John 11:25";
 
 <style>
   .byline {
-    --row-space: 0;
-    margin-block-end: 2rem;
+    margin-block-end: var(--space-l);
   }
 
   #rss {
-    border: 2px solid var(--off-background);
-    padding: 1em;
+    border: var(--stroke-thickness) solid var(--off-background);
+    padding: var(--space-s);
   }
 
   :global(.article img) {
@@ -83,6 +79,10 @@ const verse = data.verse ?? "John 11:25";
     margin-block-start: 2em;
     text-align: center; */
     margin-inline-start: auto;
+  }
+
+  :global(.footnotes h2) {
+    margin-block-start: 1em;
   }
 
   /* CodePen embeds */

@@ -46,7 +46,7 @@
     display: inline-block;
     cursor: pointer;
     font-size: 4rem;
-    margin-top: 2rem;
+    margin-top: var(--space-l);
     transition: transform 2s ease-in-out;
   }
 

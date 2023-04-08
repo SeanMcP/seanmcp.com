@@ -24,11 +24,6 @@ const LINKS = {
     label: "Talks",
     url: "/talks/",
   },
-  bookmarks: {
-    description: "View and manage bookmarks on this site",
-    label: "Bookmarks",
-    url: "/bookmarks/",
-  },
   bookshelf: {
     description: "A running list of books that I have read",
     label: "Bookshelf",
@@ -73,11 +68,10 @@ const LINKS = {
 };
 
 export default {
-  header: [LINKS.articles, LINKS.about /*{ ...LINKS.map, label: "More" }*/],
+  header: [LINKS.articles, LINKS.about, LINKS.notes, LINKS.tools, /*{ ...LINKS.map, label: "More" }*/],
   map: [
     LINKS.about,
     LINKS.articles,
-    LINKS.bookmarks,
     LINKS.bookshelf,
     LINKS.notes,
     LINKS.series,

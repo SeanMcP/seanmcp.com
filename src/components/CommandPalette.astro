@@ -58,7 +58,7 @@ const options = [
 ];
 ---
 
-<button id="command-palette__trigger" class="focused">
+<button id="command-palette__trigger" class="focusable()">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -84,7 +84,7 @@ const options = [
       stroke-linejoin="round"
       stroke-width="16"></line>
   </svg>
-  <span class="--visually-hidden">Search</span>
+  <span class="hidden()">Search</span>
 </button>
 
 <section aria-label="Command palette" id="command-palette" role="dialog">
@@ -176,9 +176,14 @@ const options = [
 
   let previouslyActiveElement;
 
-  function focusTrap(focusEvent) {
-    if (!palette.contains(focusEvent.target)) {
-      input.focus();
+  function focusTrap({ target }) {
+    try {
+      if (!target instanceof Window && !palette.contains(target)) {
+        input.focus();
+      }
+    } catch (e) {
+      // Probably safe to ignore, but I'll add a debug to maybe fix later
+      console.debug(e, { palette, target: focusEvent.target });
     }
   }
 
@@ -263,15 +268,15 @@ const options = [
   #command-palette__content {
     background: var(--background);
     display: grid;
-    gap: 0.5rem;
-    margin-top: 4rem;
-    padding-top: 1rem;
+    gap: var(--space-xs);
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-s);
     position: absolute;
-    width: min(32rem, calc(100% - 2rem));
+    width: min(32rem, calc(100% - var(--space-l)));
   }
 
   #command-palette__content > *:not(footer) {
-    margin-inline: 1rem;
+    margin-inline: var(--space-s);
   }
 
   #command-palette__results {
@@ -290,19 +295,19 @@ const options = [
 
   input {
     background: transparent;
-    border: 1px solid var(--off-background);
+    border: var(--stroke-thickness) solid var(--off-background);
     color: inherit;
     font: inherit;
     padding: 1ch;
   }
 
   footer {
-    border-top: 1px solid var(--off-background);
+    border-top: var(--stroke-thickness) solid var(--off-background);
     color: var(--lighter-text-color);
     display: flex;
     font-size: x-small;
     justify-content: space-between;
-    padding: 0.75rem 1rem;
+    padding: var(--space-xs) var(--space-s);
   }
 
   #command-palette[data-mobile="true"] .exit--desktop {
@@ -316,7 +321,7 @@ const options = [
   .command-palette__result {
     align-items: center;
     display: flex;
-    gap: 0.5rem;
+    gap: var(--space-xs);
     justify-content: space-between;
     text-decoration: none;
     outline: none;
@@ -340,6 +345,6 @@ const options = [
   }
 
   .command-palette__result:not(:last-of-type) {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-xs);
   }
 </style>

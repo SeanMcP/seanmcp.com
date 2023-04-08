@@ -16,16 +16,10 @@ const notes = await getNotes();
   count === 1 ? (
     <Note {...notes[0]} headingLevel={headingLevel} />
   ) : (
-    <div class="stack">
+    <div class="stack(l)">
       {notes.slice(0, count).map((note) => (
         <Note {...note} headingLevel={headingLevel} />
       ))}
     </div>
   )
 }
-
-<style>
-  .stack {
-    --stack-space: 2rem;
-  }
-</style>

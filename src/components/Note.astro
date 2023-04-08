@@ -1,38 +1,30 @@
 ---
-import BookmarkToggle from "@components/BookmarkToggle.astro";
 import { readableDate } from "src/utils";
 
 const {
   data: { pubDate, edited },
   render,
   slug: number,
-  useH1 = false,
   headingLevel = 1,
 } = Astro.props;
 
 const url = `/notes/${number}`;
 const { Content } = await render();
-
-const Heading = `h${headingLevel}`;
 ---
 
-<article class="stack" data-url={url}>
-  <header class="row">
+<article class="stack()" data-url={url}>
+  <header class="line()">
     <b role="heading" aria-level={headingLevel}>Note #{number}</b>
-    <span class="divider"></span>
+    <span class="divider()"></span>
     <a href={url}><time datetime={pubDate}>{readableDate(pubDate)}</time></a>
-    {edited && <><span class="divider"></span><span>(Edited)</span></>}
+    {edited && <><span class="divider()"></span><span>(Edited)</span></>}
   </header>
   <Content />
 </article>
 
 <style>
   article {
-    border: 2px solid var(--off-background);
-    padding: 2rem;
-  }
-
-  header {
-    --row-space: 0;
+    border: var(--stroke-thickness) solid var(--off-background);
+    padding: var(--space-s);
   }
 </style>
