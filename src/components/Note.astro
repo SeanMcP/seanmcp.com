@@ -2,7 +2,7 @@
 import { readableDate } from "src/utils";
 
 const {
-  data: { pubDate, edited },
+  data: { pubDate },
   render,
   slug: number,
   headingLevel = 1,
@@ -17,7 +17,6 @@ const { Content } = await render();
     <b role="heading" aria-level={headingLevel}>Note #{number}</b>
     <span class="divider()"></span>
     <a href={url}><time datetime={pubDate}>{readableDate(pubDate)}</time></a>
-    {edited && <><span class="divider()"></span><span>(Edited)</span></>}
   </header>
   <Content />
 </article>
