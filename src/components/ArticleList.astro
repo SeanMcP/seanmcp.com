@@ -4,7 +4,7 @@ import { getArticles, getArticleTitle } from "src/utils";
 import ReadableTime from "./ReadableTime.astro";
 
 interface Props {
-  articles: CollectionEntry<"articles">[];
+  articles?: CollectionEntry<"articles">[];
   count?: number;
 }
 

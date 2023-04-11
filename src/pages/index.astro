@@ -1,0 +1,52 @@
+---
+import ActivityGraph from "@components/ActivityGraph.astro";
+import ArticleList from "@components/ArticleList.astro";
+import NoteList from "@components/NoteList.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+---
+
+<PageLayout
+  documentTitle="The homepage of Sean McPherson"
+  title="Hello neighbor!"
+>
+  <p class="lede()">
+    I'm glad you could stop by. My name is Sean McPherson (SeanMcP for short),
+    and this is my little website. Make yourself at home!
+  </p>
+
+  <p>
+    For an introduction, I'm a software engineer and former teacher on a mission
+    to use technology to help people help people. Currently I work at <a
+      href="https://khanacademy.org"
+      target="_blank">Khan Academy</a
+    > building web applications.
+  </p>
+
+  <p>
+    Outside of work, I enjoy spending time with my family (wife, two sons, and
+    dog), playing and watching soccer, re-playing my favorite board games, and
+    trying not to embarrass Jesus Christ.
+  </p>
+
+  <h2>Recent articles</h2>
+
+  <ArticleList count={3} />
+
+  <p class="right()"><a href="/articles">Read more articles</a></p>
+
+  <h2>Latest note</h2>
+
+  <NoteList count={1} headingLevel={3} />
+
+  <p class="right()"><a href="/notes">Read more notes</a></p>
+
+  <h2>Activity</h2>
+
+  <ActivityGraph />
+</PageLayout>
+
+<style>
+    .right\(\) {
+        text-align: right;
+    }
+</style>
