@@ -1,4 +1,65 @@
 customElements.define(
+  "bible-verse",
+  class BibleVerse extends HTMLElement {
+    reference = undefined;
+    containerId = undefined;
+
+    constructor() {
+      super();
+
+      this.reference = this.textContent;
+      this.containerId =
+        this.reference.replace(/\W/g, "").toLowerCase() + "-container";
+
+      this.render();
+    }
+
+    async connectedCallback() {
+      const result = await fetch(
+        `https://labs.bible.org/api/?passage=${this.reference}`
+      );
+      const html = await result.text();
+
+      this.querySelector(`#${this.containerId}`).innerHTML = html;
+    }
+
+    render() {
+      this.innerHTML = `
+      <style>
+        bible-verse {
+          position: relative;
+        }
+        bible-verse:not(:is(:focus-within, :hover)) div {
+          clip: rect(0 0 0 0); 
+          clip-path: inset(50%);
+          height: 1px;
+          overflow: hidden;
+          position: absolute;
+          white-space: nowrap; 
+          width: 1px;
+        }
+        bible-verse div {
+          position: absolute;
+          z-index: 1;
+        }
+      </style>
+      <a
+        aria-describedby="${this.containerId}"
+        href="https://netbible.org/bible/${this.reference}"
+        target="_blank"
+      >
+        ${this.reference}
+      </a>
+      <div data-anchor="${this.getAttribute("anchor")}" id="${
+        this.containerId
+      }"></div>
+    `;
+    }
+  }
+);
+
+
+customElements.define(
   "call-out",
   class CallOut extends HTMLElement {
     constructor() {

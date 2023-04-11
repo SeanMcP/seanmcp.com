@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const { data } = entry;
-const verse = data.verse ?? "John 11:25";
+const verse = data.verse ?? "Romans 5:8";
 ---
 
 <PageLayout {...data} withoutH1>
@@ -49,13 +49,7 @@ const verse = data.verse ?? "John 11:25";
         href={`mailto:sean@seanmcp.com?subject=Re: ${data.title}`}
         id="comment-link">Reply by email</a
       >
-      <a
-        href={`https://esv.org/${verse}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {verse}
-      </a>
+      <bible-verse>{verse}</bible-verse>
     </footer>
   </article>
 </PageLayout>
@@ -74,11 +68,17 @@ const verse = data.verse ?? "John 11:25";
     max-width: 100%;
   }
 
-  a[href*="esv.org"] {
-    /* display: block;
-    margin-block-start: 2em;
-    text-align: center; */
+  bible-verse {
     margin-inline-start: auto;
+  }
+
+  :global(bible-verse div) {
+    background-color: var(--background);
+    border: var(--stroke-thickness) solid var(--off-background);
+    bottom: calc(100% + var(--space-xs));
+    padding: var(--space-xs);
+    right: calc(-1 * var(--space-xs));
+    width: 30ch;
   }
 
   :global(.footnotes h2) {
