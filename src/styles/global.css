@@ -83,7 +83,7 @@ body {
   line-height: 1.5;
 }
 
-body[data-theme="dark"] {
+html[data-theme="dark"] {
   --primary: var(--github-dark-purple);
   --accent: var(--github-dark-blue);
 

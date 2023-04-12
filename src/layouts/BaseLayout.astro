@@ -21,6 +21,7 @@ const found = {
 
 <html lang="en">
   <head>
+    <script id="fart">document.documentElement.dataset.theme = localStorage.getItem("com.seanmcp.theme")</script>
     <MetaTags {...found} />
     {found.head && <Fragment set:html={found.head} />}
   </head>

@@ -150,7 +150,7 @@
     const STORAGE_KEY = "com.seanmcp.theme";
 
     function lightsOff() {
-      document.body.dataset.theme = "dark";
+      document.documentElement.dataset.theme = "dark";
       darkModeCheckbox.setAttribute("checked", "true");
     }
 
@@ -173,7 +173,7 @@
       }
       const nextTheme = target.checked ? "dark" : "default";
       localStorage.setItem(STORAGE_KEY, nextTheme);
-      document.body.dataset.theme = nextTheme;
+      document.documentElement.dataset.theme = nextTheme;
     });
   })();
 </script>
