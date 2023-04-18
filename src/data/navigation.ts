@@ -24,6 +24,11 @@ const LINKS = {
     label: "Talks",
     url: "/talks/",
   },
+  boardGames: {
+    description: "My favorite board games",
+    label: "Board Games",
+    url: "/board-games/",
+  },
   bookshelf: {
     description: "A running list of books that I have read",
     label: "Bookshelf",
@@ -33,6 +38,11 @@ const LINKS = {
     description: "Learn more about me and my work",
     label: "About",
     url: "/about/",
+  },
+  faith: {
+    description: "A personal statement of faith",
+    label: "Faith",
+    url: "/faith",
   },
   feed: {
     description: "Subscribe to my blog with your favorite RSS reader",
@@ -50,7 +60,7 @@ const LINKS = {
     url: "/series/",
   },
   soccer: {
-    description: "Read articles about soccer from a dedicated fan",
+    description: "About my love of soccer and my favorite teams",
     label: "Soccer",
     url: "/soccer/",
   },
