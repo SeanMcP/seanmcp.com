@@ -23,10 +23,10 @@ head: >-
 
 <img class="headshot" src="/img/seanmcp_2022.jpg" alt="A photo of Sean McPherson smiling">
 
-Thanks for visiting my website! My name is Sean McPherson, or
-[Sean McP](/articles/how-to-pronounce-my-name) for short, and I am a software
-engineer for [Khan Academy](https://khanacademy.org) living in Pittsburgh,
-Pennsylvania.
+My name is Sean McPherson, or [Sean McP](/articles/how-to-pronounce-my-name) for
+short, and I am a software engineer in Pittsburgh, PA [on a mission](/mission)
+to help people help people. I currently work for
+[Khan Academy](https://khanacademy.org) building web applications.
 
 Before that, I worked for [Niche.com](https://niche.com) in Pittsburgh helping
 students and parents find the right school. At Niche, I organized weekly "Learn
@@ -49,8 +49,8 @@ gave me valuable experience in learning, planning, and speaking, and my goal is
 to bring those lessons into all of my work. This website is an example of that.
 
 Outside of work, I spend most of my time with my wife (married '14), two sons
-(born '18 and '20), and our three-legged dog (adopted '17). I also
-[like soccer](../soccer).
+(born '18 and '20), and our [three-legged dog](/abby) (adopted '17). I like
+[soccer](/soccer) and am very involved in [my church](/faith).
 
 ## Contact
 
