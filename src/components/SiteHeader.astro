@@ -7,9 +7,9 @@ import navigation from "../data/navigation";
 ---
 
 <header>
-  <div class="cc">
+  <div class="contain(full) line()">
     <LogoLink />
-    <nav aria-label="header">
+    <nav aria-label="header" class="line()">
       {
         navigation.header.map((item) => {
           // There is a bug where the Astro compiler swaps newline
@@ -55,13 +55,7 @@ import navigation from "../data/navigation";
   }
 
   body[data-scrolling] header {
-    box-shadow: 0 0 0.5rem 0 var(--off-background);
-  }
-
-  .cc {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
+    box-shadow: 0 0 var(--space-xs) 0 var(--off-background);
   }
 
   nav {
@@ -72,15 +66,18 @@ import navigation from "../data/navigation";
     font-weight: bold;
   }
 
-  nav a:not(:last-child) {
-    margin-right: 1rem;
+  @media screen and (max-width: 500px) {
+    nav a:nth-child(n+3) {
+      display: none;
+    }
   }
+
 
   #scroll-progress {
     background: linear-gradient(to right, var(--primary), var(--accent));
     bottom: 0;
     display: flex;
-    height: 2px;
+    height: var(--stroke-thickness);
     justify-content: flex-end;
     left: 0;
     position: absolute;

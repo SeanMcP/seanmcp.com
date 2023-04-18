@@ -1,6 +1,6 @@
-<label class="--focus-within">
-  <span class="--visually-hidden">Toggle theme</span>
-  <input class="--visually-hidden" type="checkbox" id="dark-mode" />
+<label class="focusable()">
+  <span class="hidden()">Toggle theme</span>
+  <input class="hidden()" type="checkbox" id="dark-mode" />
   <svg
     class="moon"
     xmlns="http://www.w3.org/2000/svg"
@@ -134,9 +134,6 @@
   label:where(:focus-within, :hover) {
     color: var(--anchor-color);
   }
-  label:where(:focus-within, :hover) svg {
-    transform: rotate(12.5deg);
-  }
   input:not([checked]) ~ .moon {
     display: none;
   }
@@ -153,7 +150,7 @@
     const STORAGE_KEY = "com.seanmcp.theme";
 
     function lightsOff() {
-      document.body.dataset.theme = "dark";
+      document.documentElement.dataset.theme = "dark";
       darkModeCheckbox.setAttribute("checked", "true");
     }
 
@@ -176,7 +173,7 @@
       }
       const nextTheme = target.checked ? "dark" : "default";
       localStorage.setItem(STORAGE_KEY, nextTheme);
-      document.body.dataset.theme = nextTheme;
+      document.documentElement.dataset.theme = nextTheme;
     });
   })();
 </script>

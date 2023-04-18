@@ -16,18 +16,19 @@ const title = Astro.props.frontmatter?.title ?? Astro.props.title;
   <SkipLink />
   <SiteHeader />
   <main id="main">
-    <!-- TODO: Add hero images to pages -->
-    {!withoutH1 && <h1>{title}</h1>}
-    <slot />
+    <div class="contain() stack()">
+      <!-- TODO: Add hero images to pages -->
+      {!withoutH1 && <h1>{title}</h1>}
+      <slot />
+    </div>
   </main>
   <SiteFooter />
-  <script src="/js/bookmarks.js" is:inline></script>
   <script src="/js/scroll.js" is:inline></script>
   <script src="/js/web-components.js" is:inline defer></script>
 </BaseLayout>
 
 <style>
   main {
-    margin-top: 3.5rem;
+    margin-block: 5rem;
   }
 </style>

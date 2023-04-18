@@ -30,10 +30,6 @@ const slug = slugify(heading);
 </section>
 
 <style>
-  section:not(:first-of-type) {
-    margin-top: 5rem;
-  }
-
   section h2 a::after {
     content: " #";
   }
@@ -49,16 +45,16 @@ const slug = slugify(heading);
 
   ul {
     display: grid;
-    gap: 1rem;
+    gap: var(--space-s);
     list-style-type: none;
-    margin: 1rem 0;
+    margin: var(--space-s) 0;
     padding: 0;
   }
 
   ul a {
     align-items: center;
     display: grid;
-    gap: 1rem;
+    gap: var(--space-s);
     grid-template-columns: max-content 1fr;
     text-decoration: none;
     color: var(--text-color);

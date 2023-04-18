@@ -1,5 +1,6 @@
 ---
 import MetaTags from "@components/MetaTags.astro";
+import "../styles/reset.css";
 import "../styles/global.css";
 
 export interface Props {
@@ -20,6 +21,7 @@ const found = {
 
 <html lang="en">
   <head>
+    <script id="fart">document.documentElement.dataset.theme = localStorage.getItem("com.seanmcp.theme")</script>
     <MetaTags {...found} />
     <script is:inline type="text/javascript">
       (function(c,l,a,r,i,t,y){

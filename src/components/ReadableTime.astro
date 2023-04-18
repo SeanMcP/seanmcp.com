@@ -4,12 +4,4 @@ import { readableDate } from "../utils";
 const { date } = Astro.props;
 ---
 
-<time datetime={date}>
-  {readableDate(date)}
-</time>
-
-<style>
-  time {
-    color: var(--lighter-text-color);
-  }
-</style>
+<time datetime={date}>{readableDate(date)}</time>

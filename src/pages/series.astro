@@ -23,25 +23,23 @@ const descriptionsBySeries = {
 
 <PageLayout title="Series">
   <p>Series are articles that are written in an ordered set.</p>
-  {
-    Object.entries(articlesBySeries).map(([series, articles]) => (
-      <article>
-        <h2 id={slugify(series)}>{series}</h2>
-        {descriptionsBySeries[series] && <p>{descriptionsBySeries[series]}</p>}
-        <ol>
-          {articles.map((article) => (
-            <li>
-              <a href={`/articles/${article.slug}/`}>{article.data.title}</a>
-            </li>
-          ))}
-        </ol>
-      </article>
-    ))
-  }
+  <section class="stack(2xl)">
+    {
+      Object.entries(articlesBySeries).map(([series, articles]) => (
+        <article>
+          <h2 id={slugify(series)}>{series}</h2>
+          {descriptionsBySeries[series] && (
+            <p>{descriptionsBySeries[series]}</p>
+          )}
+          <ol>
+            {articles.map((article) => (
+              <li>
+                <a href={`/articles/${article.slug}/`}>{article.data.title}</a>
+              </li>
+            ))}
+          </ol>
+        </article>
+      ))
+    }
+  </section>
 </PageLayout>
-
-<style>
-  article + article {
-    margin-top: 3rem;
-  }
-</style>
