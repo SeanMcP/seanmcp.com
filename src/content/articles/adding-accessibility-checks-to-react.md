@@ -8,17 +8,16 @@ tags:
   - A11y
 ---
 
-**Updated - 3/9/19**^[This article was initially released with a reference to a
+**Updated - 3/9/19** This article was initially released with a reference to a
 third tool for React accessibility checking: `react-a11y`. Since publication,
 that library has been deprecated. The article has been updated to reflect that
-change.]
+change.
 
 Whether you are working for a startup, non-profit, or Fortune 500 company,
 accessibility is a critical component of your product. Not only it is a legal
-requirement in many
-countries^[[Web accessibility: Web accessibility legislation](https://en.wikipedia.org/wiki/Web_accessibility#Web_accessibility_legislation)
-on Wikipedia], but creating accessible applications maximizes the number of
-potential users. And it often has a positive impact on all users
+requirement in many countries[^1], but creating accessible applications
+maximizes the number of potential users. And it often has a positive impact on
+all users
 ([read about the "Curb Cut Effect"](https://ssir.org/articles/entry/the_curb_cut_effect)).
 
 As React developers, we have a responsibility to avoid hiding in the virtual DOM
@@ -39,7 +38,6 @@ we're going to implement.
 
 If you're looking to add these checks to a current project, the only dependency
 is ESLint, which we'll look at later in this article. Now, let's jump in!
-
 
 ## React-axe
 
@@ -150,3 +148,7 @@ bit of learning, anyone can create accessible applications that work for all
 users.
 
 Happy coding!
+
+[^1]:
+    [Web accessibility: Web accessibility legislation](https://en.wikipedia.org/wiki/Web_accessibility#Web_accessibility_legislation)
+    on Wikipedia

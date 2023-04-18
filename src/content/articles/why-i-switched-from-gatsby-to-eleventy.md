@@ -47,7 +47,7 @@ I tinkered around with the setup for a few weeks, then launched the site late in
 
 Gatsby has a bit of a learning curve, but after the first few weeks I felt comfortable working in their environment. Whenever I wanted to tweak the layout, design, and/or functionality of the site, I felt comfortable diving into the JavaScript to make the change.
 
-Gatsby's integration with Netlify was seamless as well^[In retrospect, I think this has more to do with Netlify's amazing service than Gatsby.], which made pushing changes to production as easy as pushing code.
+Gatsby's integration with Netlify was seamless as well[^1], which made pushing changes to production as easy as pushing code.
 
 With my Gatsby personal site and blog, I was riding high with the cool kids.
 
@@ -100,3 +100,5 @@ I decided that, instead of sinking more time tracking down this problem, I would
 - Not React
   - React === reusability
   - Felt wrong creating 90+% single-use components
+
+[^1]: In retrospect, I think this has more to do with Netlify's amazing service than Gatsby.
