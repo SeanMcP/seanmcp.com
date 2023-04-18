@@ -33,7 +33,9 @@ These are some of my favorite games, broken down by category.
 - [Forbidden Island](https://boardgamegeek.com/boardgame/65244/forbidden-island):
   A cooperative game where players work to discover treasure on sinking island
 - [Concept](https://boardgamegeek.com/boardgame/147151/concept): We often
-  describe it as "Pictionary, but the pictures are already drawn for you"
+  describe it as
+  "[Pictionary](https://boardgamegeek.com/boardgame/2281/pictionary), but the
+  pictures are already drawn for you"
 
 ### Card games
 

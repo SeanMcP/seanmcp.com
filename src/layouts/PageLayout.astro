@@ -3,6 +3,7 @@ import SiteFooter from "@components/SiteFooter.astro";
 import SiteHeader from "@components/SiteHeader.astro";
 import SkipLink from "@components/SkipLink.astro";
 import BaseLayout from "./BaseLayout.astro";
+import Breadcrumbs from "@components/Breadcrumbs.astro";
 
 export { type Props } from "./BaseLayout.astro";
 
@@ -10,6 +11,8 @@ const { withoutH1 } = Astro.props;
 
 // Logic repeated in BaseLayout.astro
 const title = Astro.props.frontmatter?.title ?? Astro.props.title;
+const showBreadcrumbs =
+  Astro.props.frontmatter?.showBreadcrumbs ?? Astro.props.showBreadcrumbs;
 ---
 
 <BaseLayout {...Astro.props}>
@@ -17,6 +20,7 @@ const title = Astro.props.frontmatter?.title ?? Astro.props.title;
   <SiteHeader />
   <main id="main">
     <div class="contain() stack()">
+      {showBreadcrumbs && <Breadcrumbs />}
       <!-- TODO: Add hero images to pages -->
       {!withoutH1 && <h1>{title}</h1>}
       <slot />

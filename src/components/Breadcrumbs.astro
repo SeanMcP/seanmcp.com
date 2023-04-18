@@ -1,0 +1,39 @@
+---
+const { pathname } = Astro.url;
+
+const crumbs = [];
+
+for (let i = 0; i < pathname.length; i++) {
+  const character = pathname[i];
+  if (character === "/") {
+    const crumb = pathname.slice(0, i);
+    if (crumb) {
+        crumbs.push(crumb);
+    }
+  }
+}
+
+function crumbToLabel(crumb) {
+  if (crumb === "/") {
+    return "Home";
+  }
+  const slug = crumb.slice(crumb.lastIndexOf("/") + 1);
+  const readable = slug.replace(/-(\w)/g, (match) => {
+    return ` ${match[1].toUpperCase()}`;
+  });
+  return readable[0].toUpperCase() + readable.slice(1);
+}
+---
+
+{
+  crumbs.length > 0 && (
+    <nav aria-label="breadcrumbs" class="line()">
+      {crumbs.map((crumb, i) => (
+        <>
+          {i > 0 && <span class="divider()" />}
+          <a href={crumb}>{crumbToLabel(crumb)}</a>
+        </>
+      ))}
+    </nav>
+  )
+}
