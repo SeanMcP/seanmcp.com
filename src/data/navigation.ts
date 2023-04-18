@@ -29,11 +29,6 @@ const LINKS = {
     label: "Board Games",
     url: "/board-games/",
   },
-  bookshelf: {
-    description: "A running list of books that I have read",
-    label: "Bookshelf",
-    url: "/bookshelf/",
-  },
   about: {
     description: "Learn more about me and my work",
     label: "About",
@@ -53,6 +48,11 @@ const LINKS = {
     description: "A detailed site map",
     label: "Map",
     url: "/map/",
+  },
+  mission: {
+    description: "A personal mission statement",
+    label: "Mission",
+    url: "/mission",
   },
   series: {
     description: "Articles organized into series",
@@ -78,11 +78,15 @@ const LINKS = {
 };
 
 export default {
-  header: [LINKS.articles, LINKS.about, LINKS.notes, LINKS.tools, /*{ ...LINKS.map, label: "More" }*/],
+  header: [
+    LINKS.articles,
+    LINKS.about,
+    LINKS.notes,
+    LINKS.tools /*{ ...LINKS.map, label: "More" }*/,
+  ],
   map: [
     LINKS.about,
     LINKS.articles,
-    LINKS.bookshelf,
     LINKS.notes,
     LINKS.series,
     LINKS.tags,
