@@ -1,8 +1,6 @@
 ---
 import metadata from "../data/metadata.json";
 
-const defaultFavicon = "/img/seanmcp-logo.png";
-
 const {
   description,
   name,
@@ -11,7 +9,6 @@ const {
 } = metadata;
 
 const pageDescription = Astro.props.description ?? description;
-const pageFavicon = Astro.props.Favicon ?? defaultFavicon;
 const pageImage = metadata.url + (Astro.props.image ?? "/img/og-image.png");
 const pageTitle = Astro.props.title ?? "Sean McPherson";
 let pageUrl = url + Astro.url.pathname;
@@ -45,7 +42,7 @@ if (pageUrl[pageUrl.length - 1] !== "/") {
 <meta name="twitter:creator" content={`@${twitter}`} />
 
 {/* Links */}
-<link rel="shortcut icon" href={pageFavicon} type="image/png" />
+<link rel="shortcut icon" href="/favicon.png" type="image/png" />
 <link
   rel="alternate"
   href="/rss.xml"
