@@ -4,6 +4,14 @@ body {
   line-height: 1.5;
 }
 
+pre,
+code {
+  font-family: "Cascadia Code", SFMono-Regular, Monaco, Menlo, Consolas,
+    "Liberation Mono", Courier, monospace;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
 .frame-content * {
   max-width: 100%;
 }

@@ -7,13 +7,9 @@ public_folder: "/dist/"
 collections:
   - name: "article"
     label: "Article"
-    folder: "src/pages/articles"
+    folder: "src/content/articles"
     create: true
     fields:
-      - label: "Layout"
-        name: "layout"
-        widget: "hidden"
-        default: "@layouts/ArticleLayout.astro"
       - label: "Title"
         name: "title"
         widget: "string"
@@ -23,10 +19,6 @@ collections:
       - label: "Date"
         name: "pubDate"
         widget: "datetime"
-      - label: "Draft"
-        name: "draft"
-        widget: "boolean"
-        default: true
       - label: "Tags"
         name: "tags"
         widget: "list"
@@ -38,11 +30,18 @@ collections:
         name: "image"
         widget: "image"
         required: false
+      - label: "Series"
+        name: "series"
+        widget: "string"
+        required: false
+      - label: "Flags"
+        name: "flags"
+        widget: "select"
+        options: ["DRAFT", "RSS-ONLY"]
+        required: false
       - label: "Body"
         name: "body"
         widget: "markdown"
-        buttons: []
-        modes: ["raw"]
       - label: "Head"
         name: "head"
         widget: "code"
