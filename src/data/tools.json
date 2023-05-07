@@ -59,6 +59,13 @@
       "type": "Web App"
     },
     {
+      "title": "Reading Practice",
+      "description": "A game to help young children practice reading CVC words",
+      "url": "https://seanmcp.github.io/reading-practice",
+      "emoji": "👓",
+      "type": "Web App"
+    },
+    {
       "title": "Turtle Guide",
       "description": "A game to help young children practice using the arrow keys",
       "url": "https://seanmcp.github.io/turtle-guide",
