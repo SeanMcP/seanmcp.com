@@ -9,7 +9,7 @@ customElements.define(
 
       this.reference = this.textContent;
       this.containerId =
-        this.reference.replace(/\W/g, "").toLowerCase() + "-container";
+        "container-" + this.reference.replace(/\W/g, "").toLowerCase();
 
       this.render();
     }
@@ -57,7 +57,6 @@ customElements.define(
     }
   }
 );
-
 
 customElements.define(
   "call-out",
