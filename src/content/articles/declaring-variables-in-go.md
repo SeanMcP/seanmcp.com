@@ -4,7 +4,7 @@ description:
   You can declare variables with var, :=, and const depending on your use case
 tags:
   - Go
-pubDate: 2023-05-12T11:20:57.743Z
+pubDate: 2023-05-12
 verse: Romans 3:28
 ---
 
@@ -62,7 +62,7 @@ const PI float64 = 3.14159
 
 If you try to use `const` with other types like a `slice`, then you will get a
 compiler error:
-`(value of type []string) is not constant compiler([InvalidConstInit](https://pkg.go.dev/golang.org/x/tools/internal/typesinternal#InvalidConstInit))`
+`(value of type []string) is not constant compiler(InvalidConstInit)`
 
 **Declare a variable with `const` when you know that it will not change
 throughout your program.**
