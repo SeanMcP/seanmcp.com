@@ -5,7 +5,7 @@ description:
   separately from falsy values
 tags:
   - JavaScript
-pubDate: 2023-05-12T00:22:37.769Z
+pubDate: 2023-05-11
 verse: Genesis 1:2
 ---
 
