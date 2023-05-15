@@ -1,7 +1,7 @@
 ---
 title: Suffering from recipe-blog syndrome
 description:
-  I feel a gravitation pull to write long-winded introductions to my articles,
+  I feel a gravitational pull to write long-winded introductions to my articles,
   but it's time to break out of that orbit
 tags:
   - Writing
