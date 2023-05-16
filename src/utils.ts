@@ -85,7 +85,7 @@ export async function getNotes(count?: number) {
   return notes.sort(sortByPubDate).slice(0, count);
 }
 
-export function readableDate(date: string) {
+export function readableDate(date: Date | string) {
   return new Date(date).toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",

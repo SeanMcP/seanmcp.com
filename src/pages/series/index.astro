@@ -1,0 +1,53 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import { getArticles, readableDate, slugify } from "src/utils";
+import seriesData from "src/data/series-data.json";
+
+const articles = await getArticles();
+const series: Record<string, { count: number; lastUpdated: Date }> = {};
+
+articles.forEach((article) => {
+  if (article.data.series) {
+    if (!series[article.data.series]) {
+      series[article.data.series] = {
+        count: 0,
+        lastUpdated: null,
+      };
+    }
+
+    series[article.data.series].count += 1;
+    series[article.data.series].lastUpdated = article.data.pubDate;
+  }
+});
+---
+
+<PageLayout title="Series" description="Articles in a series">
+  <p>Series are articles that are written in an ordered set.</p>
+  <section class="stack(l)">
+    {
+      Object.entries(series).map(([name, { count, lastUpdated }]) => {
+        const data = seriesData[name];
+
+        return (
+          <article class="stack(xs)">
+            <a href={`/series/${slugify(name)}`}>{name}</a>
+            {data?.description && <p>{data?.description}</p>}
+            <p>
+              <span>Last updated {readableDate(lastUpdated)}</span>
+              <span class="divider()" />
+              <span>
+                {count} article{count === 1 ? "" : "s"}
+              </span>
+            </p>
+          </article>
+        );
+      })
+    }
+  </section>
+</PageLayout>
+
+<style>
+  a {
+    font-weight: bold;
+  }
+</style>
