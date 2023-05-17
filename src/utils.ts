@@ -93,6 +93,13 @@ export function readableDate(date: Date | string) {
   });
 }
 
+export function urlsMatch(a: string, b: string) {
+  // force trailing slash
+  let u1 = a.slice(-1) === "/" ? a : a + "/";
+  let u2 = b.slice(-1) === "/" ? b : b + "/";
+  return u1 === u2;
+}
+
 export function platypus(nav = navigator) {
   if (typeof nav === "undefined") {
     throw new Error(
