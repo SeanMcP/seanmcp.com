@@ -16,7 +16,9 @@ articles.forEach((article) => {
     }
 
     series[article.data.series].count += 1;
-    series[article.data.series].lastUpdated = article.data.pubDate;
+    if (series[article.data.series].lastUpdated < article.data.pubDate) {
+      series[article.data.series].lastUpdated = article.data.pubDate;
+    }
   }
 });
 ---
@@ -33,11 +35,11 @@ articles.forEach((article) => {
             <a href={`/series/${slugify(name)}`}>{name}</a>
             {data?.description && <p>{data?.description}</p>}
             <p>
-              <span>Last updated {readableDate(lastUpdated)}</span>
-              <span class="divider()" />
               <span>
                 {count} article{count === 1 ? "" : "s"}
               </span>
+              <span class="divider()" />
+              <span>Last updated {readableDate(lastUpdated)}</span>
             </p>
           </article>
         );
