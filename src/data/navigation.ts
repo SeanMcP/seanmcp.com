@@ -54,6 +54,11 @@ const LINKS = {
     label: "Mission",
     url: "/mission",
   },
+  randomAricle: {
+    description: "Navigate to a random article from my blog",
+    label: "Random Article",
+    url: "/fn/random-article",
+  },
   series: {
     description: "Articles organized into series",
     label: "Series",
