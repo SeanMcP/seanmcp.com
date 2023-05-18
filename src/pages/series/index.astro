@@ -30,9 +30,11 @@ articles.forEach((article) => {
       Object.entries(series).map(([name, { count, lastUpdated }]) => {
         const data = seriesData[name];
 
+        const slug = slugify(name);
+
         return (
-          <article class="stack(xs)">
-            <a href={`/series/${slugify(name)}`}>{name}</a>
+          <article class="stack(xs)" id={slug}>
+            <a href={`/series/${name}`}>{name}</a>
             {data?.description && <p>{data?.description}</p>}
             <p>
               <span>
