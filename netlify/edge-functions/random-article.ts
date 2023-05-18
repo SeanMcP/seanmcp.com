@@ -7,7 +7,7 @@ export default async () => {
     } catch (error) {
         console.error(error)
     }
-    return Response.redirect(path, 302)
+    return Response.redirect("https://www.seanmcp.com" + path, 302)
 }
 
 export const config = {
