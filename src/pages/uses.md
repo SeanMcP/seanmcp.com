@@ -1,61 +1,80 @@
 ---
 layout: "@layouts/PageLayout.astro"
 title: "Uses"
+description: A list of the tools that I use to get work done.
 ---
 
-## Browsers
+Here is an evergreen list of the tools that I use to get work done.
 
-- Google Chrome
+## Furniture
+
+- [VIVO 43"x24" sit/stand desk](https://www.amazon.com/gp/product/B0829DYFLK/)
+- [HON Ignition low-back chair](https://www.hon.com/chairs/ignition/hitl2ahmcu10tsb)
+
+## Computer
+
+- 2019 MacBook Pro
+- 2017 Lenovo YOGA: Ubuntu
+
+## Audio
+
+- [JBL VIBE300TWS earbuds](https://www.jbl.com/wireless-earbuds/VIBE300TWS-.html)
+- [JBL LIVE660NC headphones](https://www.jbl.com/over-ear-headphones/LIVE660NC-.html)
+
+## Software
+
+### Browsers
+
 - Microsoft Edge
+- Google Chrome
 - Mozilla Firefox Developer Edition
 
-### Browser extensions
+#### Browser extensions
 
 - Axe: Accessibility audits
+- [Bitwarden](https://bitwarden.com) password manager
 - React Developer Tools
 - Redux DevTools
-- Save To Pocket
-- Tampermonkey: User script agent
-- Wappalyzer: Detects the technology for sites your visit. Not critical, but interesting.
-- Wave Evaluation Tool: Accessibility audits
+- [Raindrop](https://raindrop.io/) bookmark manager
+- Tampermonkey userscript agent
+- Wave Evaluation Tool
 
-### Browser themes
-
-- [Firefox Quantum Dark (for Chrome)](https://chrome.google.com/webstore/detail/firefox-quantum-dark/bgjapaaipcggokffggjohablhepagibn)
-
-### User scripts
+#### User scripts
 
 - [Anchored Headings](https://gist.github.com/SeanMcP/ade3cb371d697709b3b95c5d539d888f)
 - [GitHub Explorer](https://gist.github.com/SeanMcP/1bf09672e56b6780cf02fa52736ea2c6)
 
-## Editors
+### Editors
 
 - VS Code
 - Vim
 
-### VS Code extensions
+#### VS Code extensions
 
-- Bracket Pair Colorizer
+In addition to language-specific extensions, I use the following:
+
 - Code Spell Checker
 - Duplicate action
-- GitLens
-- Live Server
-- Partial Diff
-
-### VS Code themes
-
+- Format Comment
+- Git Blame
+- GitHub Copilot
+- GitHub Pull Requests and Issues
 - GitHub Theme
-- Tokyo Night
-- One Dark Pro
-- Firefox Theme
+- Live Server
+- Notes
 
-## Programs
+#### VS Code themes
 
-- GIMP
-- Inkscape
+- GitHub Dark Default
+
+### Other programs
+
+- [Flow](https://flowapp.info/) timer
+- [GIMP](https://www.gimp.org/)
+- [Inkscape](https://inkscape.org/)
 - [KeyCastr](https://github.com/keycastr/keycastr)
 - [Numi](https://numi.app/)
-- Pika/Pixel Picker
-- [Rectangle](https://rectangleapp.com/)
+- [Pika](https://superhighfives.com/pika) color picker
+- [Rectangle](https://rectangleapp.com/) macOS window arranger
 - [RunJS](https://runjs.app/)
-- [Warp](https://www.warp.dev/)
+- [Warp](https://www.warp.dev/) terminal
