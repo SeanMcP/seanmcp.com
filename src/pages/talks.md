@@ -43,6 +43,7 @@ discuss details and my rate.
 
 ## Talks
 
+- [_Web-browser Accessibility Tools_](/talks/browser-a11y-tools)
 - [_Intro to Deno, the secure JS runtime_](/talks/intro-to-deno)
 - [_A Quick Tour of Your Browser's Dev Tools_](/talks/tour-browser-dev-tools)
 - [_Learning from LEGO_](/talks/learning-from-lego)
