@@ -15,6 +15,14 @@ const articles = defineCollection({
   }),
 });
 
+const gardens = defineCollection({
+  schema: z.object({
+    description: z.string(),
+    title: z.string(),
+    tendedDates: z.array(z.date())
+  }),
+});
+
 const notes = defineCollection({
   schema: z.object({
     edited: z.boolean().optional(),
@@ -24,5 +32,6 @@ const notes = defineCollection({
 
 export const collections = {
   articles,
+  gardens,
   notes,
 };

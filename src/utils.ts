@@ -80,6 +80,18 @@ export async function getArticles(options?: {
     .slice(0, count);
 }
 
+export function getGardenState(garden: CollectionEntry<"gardens">) {
+  const lastYear = new Date();
+  lastYear.setFullYear(lastYear.getFullYear() - 1);
+
+  return garden.data.tendedDates[0] > lastYear ? "FRESH" : "WILD";
+}
+
+export async function getGardens() {
+  const gardens = await getCollection("gardens");
+  return gardens;
+}
+
 export async function getNotes(count?: number) {
   const notes = await getCollection("notes");
   return notes.sort(sortByPubDate).slice(0, count);

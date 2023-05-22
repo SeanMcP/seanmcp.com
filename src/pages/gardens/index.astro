@@ -1,0 +1,79 @@
+---
+import GardenDetails from "@components/GardenDetails.astro";
+import GardenTitle from "@components/GardenTitle.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import { getGardenState, getGardens } from "src/utils";
+
+const gardens = await getGardens();
+
+const fresh = [];
+const wild = [];
+
+gardens.forEach((garden) => {
+  switch (getGardenState(garden)) {
+    case "FRESH": {
+      fresh.push(garden);
+      break;
+    }
+    case "WILD": {
+      wild.push(garden);
+      break;
+    }
+  }
+});
+---
+
+<PageLayout title="Gardens">
+  <blockquote>
+    A garden is a collection of evolving ideas that aren't strictly organised by
+    their publication date. They're inherently exploratory – notes are linked
+    through contextual associations. They aren't refined or complete - notes are
+    published as half-finished thoughts that will grow and evolve over time.
+    They're less rigid, less performative, and less perfect <cite
+      >– <a href="https://maggieappleton.com/garden-history">Maggie Appleton</a
+      ></cite
+    >
+  </blockquote>
+  <h2>
+    <GardenTitle title="Fresh" state="FRESH" />
+  </h2>
+  <p>
+    Gardens that have been tended in the previous year. They could be new or
+    well cared for.
+  </p>
+  {
+    fresh.map((garden) => (
+      <article>
+        <a href={`/gardens/${garden.slug}`}>{garden.data.title}</a>
+        <GardenDetails tendedDates={garden.data.tendedDates} />
+      </article>
+    ))
+  }
+  <h2>
+    <GardenTitle title="Wild" state="WILD" />
+  </h2>
+  <p>
+    Gardens that were last tended mover a year ago. They could be out of date or
+    just vintage.
+  </p>
+  {
+    wild.map((garden) => (
+      <article>
+        <a href={`/gardens/${garden.slug}`}>{garden.data.title}</a>
+        <GardenDetails tendedDates={garden.data.tendedDates} />
+      </article>
+    ))
+  }
+</PageLayout>
+
+<style>
+  cite {
+    display: block;
+    margin-block-start: var(--space-xs);
+  }
+
+  svg {
+    height: 1em;
+    width: 1em;
+  }
+</style>

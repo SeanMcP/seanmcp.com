@@ -283,6 +283,10 @@ li ul {
   gap: 0;
 }
 
+.line\(xs\) {
+  gap: var(--space-xs);
+}
+
 .hidden\(\) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
