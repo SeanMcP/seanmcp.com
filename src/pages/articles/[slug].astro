@@ -34,8 +34,16 @@ const verse = data.verse ?? "Romans 5:8";
     <HeroImage image={data.image} />
     <ArticleSeries series={data.series} />
     {
+      data.tags?.includes("Garden") && (
+        <section class="attn">
+          Evergreen articles like this have moved:{" "}
+          <a href="/gardens">view my gardens section</a> 🌱
+        </section>
+      )
+    }
+    {
       data.flags?.includes("RSS-ONLY") && (
-        <section id="rss">
+        <section class="attn">
           This is a special article for <strong>the RSS Club</strong>, but feel
           free to save or share this link. You can join by subscribing to{" "}
           <a href="/rss.xml">my RSS feed</a>.
@@ -59,7 +67,7 @@ const verse = data.verse ?? "Romans 5:8";
     margin-block-end: var(--space-l) !important;
   }
 
-  #rss {
+  .attn {
     border: var(--stroke-thickness) solid var(--off-background);
     padding: var(--space-s);
   }
