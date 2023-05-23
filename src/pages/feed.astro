@@ -1,0 +1,11 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Feed from "@components/Feed.astro"
+
+const description = "A feed of all content on seanmcp.com in reverse chronological order."
+---
+
+<PageLayout title="Feed" description={description}>
+    <p>{description}</p>
+    <Feed />
+</PageLayout>
