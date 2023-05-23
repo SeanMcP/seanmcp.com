@@ -3,6 +3,7 @@ title: Coding Music
 description:
   A growing list of artists that I like to listen to while programming.
 tendedDates:
+  - 2023-05-23
   - 2022-02-15
 verse: Psalm 150:3
 ---
@@ -20,6 +21,7 @@ alphabetical order:
 - [Arcade High](https://music.youtube.com/channel/UCT7LeKzJCc5P1AKY1Ghxjiw)
 - [Com Truise](https://music.youtube.com/channel/UC3G1cV92stSGOy4cLgXmgJQ)
 - [Dynatron](https://music.youtube.com/channel/UCov2JBrKDko0xcwfIwhEAfw)
+- [Hotel Pools](https://music.youtube.com/channel/UCHNQ_4_csObrqJ9p7q-Xxgg)
 - [Magic Sword](https://music.youtube.com/channel/UCnl2TnNDgp2rUepf5VnXJ1g)
 - [S U R V I V E](https://music.youtube.com/channel/UCec-IpmkXJQhgnkBIx1EGxQ)
 - [Timecop1983](https://music.youtube.com/channel/UCVjNyglpxEwPoB65b0Oc4Ew)
