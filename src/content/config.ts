@@ -18,6 +18,7 @@ const articles = defineCollection({
 const gardens = defineCollection({
   schema: z.object({
     description: z.string(),
+    head: z.string().optional(),
     title: z.string(),
     tendedDates: z.array(z.date())
   }),

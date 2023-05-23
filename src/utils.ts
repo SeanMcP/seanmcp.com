@@ -89,6 +89,9 @@ export function getGardenState(garden: CollectionEntry<"gardens">) {
 
 export async function getGardens() {
   const gardens = await getCollection("gardens");
+  gardens.sort((a, b) =>
+    a.data.tendedDates[0] > b.data.tendedDates[0] ? -1 : 1
+  );
   return gardens;
 }
 

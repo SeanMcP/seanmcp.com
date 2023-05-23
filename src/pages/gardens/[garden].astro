@@ -20,10 +20,16 @@ const {
 } = entry;
 ---
 
-<PageLayout title={title} description={description} withoutH1>
+<PageLayout
+  {...entry.data}
+  title={title}
+  description={description}
+  showBreadcrumbs
+  withoutH1
+>
   <h1><GardenTitle title={title} state={getGardenState(entry)} /></h1>
   <GardenDetails tendedDates={tendedDates} />
-  <hr />
+  <br />
   <Content />
   <hr />
   <ContentFooter title={title} />

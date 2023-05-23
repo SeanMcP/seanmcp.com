@@ -7,18 +7,18 @@ interface Props {
 
 const {tendedDates} = Astro.props
 const count = tendedDates.length
-let message = `Tended ${count} times`
+let tendedCount = `Tended ${count} times`
 if (count === 1) {
-    message = "Tended once"
+    tendedCount = "Tended once"
 } else if (count === 2) {
-    message = `Tended twice`
+    tendedCount = `Tended twice`
 }
 ---
 
-<small class="line(xs)">
-    <span>Planted {readableDate(tendedDates[tendedDates.length - 1])}</span>
-    <span class="divider()" />
-    <span>{message}</span>
-    <span class="divider()" />
+<div class="line(xs)">
     <span>Last tended {readableDate(tendedDates[0])}</span>
-</small>
+    <span class="divider()" />
+    <span>{tendedCount}</span>
+    <span class="divider()" />
+    <span>Planted {readableDate(tendedDates[tendedDates.length - 1])}</span>
+</div>

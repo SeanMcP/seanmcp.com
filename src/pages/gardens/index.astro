@@ -43,8 +43,9 @@ gardens.forEach((garden) => {
   </p>
   {
     fresh.map((garden) => (
-      <article>
+      <article class="stack(xs)">
         <a href={`/gardens/${garden.slug}`}>{garden.data.title}</a>
+        <p>{garden.data.description}</p>
         <GardenDetails tendedDates={garden.data.tendedDates} />
       </article>
     ))
@@ -58,8 +59,9 @@ gardens.forEach((garden) => {
   </p>
   {
     wild.map((garden) => (
-      <article>
+      <article class="stack(xs)">
         <a href={`/gardens/${garden.slug}`}>{garden.data.title}</a>
+        <p>{garden.data.description}</p>
         <GardenDetails tendedDates={garden.data.tendedDates} />
       </article>
     ))
@@ -70,5 +72,9 @@ gardens.forEach((garden) => {
   cite {
     display: block;
     margin-block-start: var(--space-xs);
+  }
+
+  article a {
+    font-weight: bold;
   }
 </style>
