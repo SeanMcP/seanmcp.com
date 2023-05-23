@@ -15,16 +15,16 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { data } = entry;
-
-const title  = `${data.title} Garden`
+const {
+  data: { description, tendedDates, title },
+} = entry;
 ---
 
-<PageLayout title={title} description={data.description} withoutH1>
-    <h1><GardenTitle title={title} state={getGardenState(entry)}/></h1>
-    <GardenDetails tendedDates={data.tendedDates} />
-    <hr />
-    <Content />
-    <hr />
-    <ContentFooter title={title} />
+<PageLayout title={title} description={description} withoutH1>
+  <h1><GardenTitle title={title} state={getGardenState(entry)} /></h1>
+  <GardenDetails tendedDates={tendedDates} />
+  <hr />
+  <Content />
+  <hr />
+  <ContentFooter title={title} />
 </PageLayout>
