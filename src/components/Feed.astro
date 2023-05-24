@@ -1,0 +1,224 @@
+---
+import { getArticles, getGardens, getNotes } from "src/utils";
+import ReadableTime from "./ReadableTime.astro";
+
+interface Props {
+  count?: number;
+}
+
+const {count} = Astro.props
+
+const articles = await getArticles({ count });
+const gardens = await getGardens();
+const notes = await getNotes(count);
+
+let feed = [].concat(articles, gardens, notes);
+
+feed.sort((a, b) => {
+  const aDate = a.data.tendedDates ? a.data.tendedDates[0] : a.data.pubDate;
+  const bDate = b.data.tendedDates ? b.data.tendedDates[0] : b.data.pubDate;
+
+  return aDate > bDate ? -1 : 1;
+});
+
+feed = feed.slice(0, count);
+---
+
+<section class="stack()">
+  {
+    feed.map((item) => {
+      const title = item.data.title || `Note #${item.slug}`;
+      let svg;
+      switch (item.collection) {
+        case "articles":
+          svg = (
+            <>
+              <rect
+                x="32"
+                y="48"
+                width="192"
+                height="160"
+                rx="8"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+              <line
+                x1="80"
+                y1="96"
+                x2="176"
+                y2="96"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+              <line
+                x1="80"
+                y1="128"
+                x2="176"
+                y2="128"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+              <>
+                <rect width="256" height="256" fill="none" />
+                <line
+                  x1="80"
+                  y1="160"
+                  x2="176"
+                  y2="160"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                />
+              </>
+            </>
+          );
+          break;
+        case "gardens":
+          svg = (
+            <>
+              <path
+                d="M144.28,111.72c-25.08-41.81,8.36-83.61,79.43-79.43C227.89,103.36,186.09,136.8,144.28,111.72Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+              <path
+                d="M98,114c18.24-30.41-6.08-60.81-57.77-57.77C37.17,107.9,67.57,132.22,98,114Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+              <line
+                x1="56"
+                y1="152"
+                x2="200"
+                y2="152"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+              <path
+                d="M184,152l-14.61,65.74a8,8,0,0,1-7.81,6.26H94.42a8,8,0,0,1-7.81-6.26L72,152"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+              <line
+                x1="144.28"
+                y1="111.72"
+                x2="104"
+                y2="152"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+              <rect width="256" height="256" fill="none" />
+              <line
+                x1="97.98"
+                y1="113.98"
+                x2="120"
+                y2="136"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+            </>
+          );
+          break;
+        case "notes":
+          svg = (
+            <>
+              <path
+                d="M156.69,216H48a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8H208a8,8,0,0,1,8,8V156.69a8,8,0,0,1-2.34,5.65l-51.32,51.32A8,8,0,0,1,156.69,216Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+              <rect width="256" height="256" fill="none" />
+              <polyline
+                points="215.28 159.99 160 159.99 160 215.27"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+            </>
+          );
+          break;
+      }
+      return (
+        <article class="line()">
+          <svg
+            aria-label={item.collection.slice(0, item.collection.length - 1)}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+          >
+            {svg}
+          </svg>
+
+          <span>
+            <a href={`/${item.collection}/${item.slug}`}>{title}</a>
+            <ReadableTime
+              date={
+                item.data.tendedDates
+                  ? item.data.tendedDates[0]
+                  : item.data.pubDate
+              }
+            />
+          </span>
+        </article>
+      );
+    })
+  }
+</section>
+
+<style>
+  a {
+    font-weight: bold;
+  }
+  svg {
+    --size: 1.5em;
+    height: var(--size);
+    min-width: var(--size);
+    transition: all 0.1s ease-in-out;
+    width: var(--size);
+  }
+
+  article:is(:focus-within, :hover) svg[aria-label="article"] {
+    color: var(--purple);
+  }
+
+  article:is(:focus-within, :hover) svg[aria-label="garden"] {
+    color: var(--green);
+  }
+
+  article:is(:focus-within, :hover) svg[aria-label="note"] {
+    color: var(--blue);
+  }
+</style>

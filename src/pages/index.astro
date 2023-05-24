@@ -1,7 +1,6 @@
 ---
 import ActivityGraph from "@components/ActivityGraph.astro";
-import ArticleList from "@components/ArticleList.astro";
-import NoteList from "@components/NoteList.astro";
+import Feed from "@components/Feed.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 ---
 
@@ -31,17 +30,9 @@ import PageLayout from "@layouts/PageLayout.astro";
     <a href="/faith">Jesus Christ</a>.
   </p>
 
-  <h2>Recent articles</h2>
+  <h2>Feed</h2>
 
-  <ArticleList count={3} />
-
-  <p class="right()"><a href="/articles">Read more articles</a></p>
-
-  <h2>Latest note</h2>
-
-  <NoteList count={1} headingLevel={3} />
-
-  <p class="right()"><a href="/notes">Read more notes</a></p>
+  <Feed count={10}/>
 
   <h2>Activity</h2>
 

@@ -44,9 +44,14 @@
   --github-dark-blue: hsl(206, 96%, 68%);
   --github-dark-purple: hsl(271, 92%, 80%);
 
+  --github-light-green: hsl(137, 63%, 33%);
   --github-light-blue: hsl(213, 94%, 35%);
   --github-light-purple: hsl(261, 69%, 59%);
   --github-light-black: hsl(213, 13%, 16%);
+
+  --green: var(--github-light-green);
+  --blue: var(--github-light-blue);
+  --purple: var(--github-light-purple);
 
   --dark-hs: 211, 21%;
   --dark: hsla(var(--dark-hs), 10%);
@@ -84,6 +89,10 @@ body {
 }
 
 html[data-theme="dark"] {
+  --green: var(--github-dark-green);
+  --blue: var(--github-dark-blue);
+  --purple: var(--github-dark-purple);
+
   --primary: var(--github-dark-purple);
   --accent: var(--github-dark-blue);
 
@@ -281,6 +290,10 @@ li ul {
 
 .line\(0\) {
   gap: 0;
+}
+
+.line\(xs\) {
+  gap: var(--space-xs);
 }
 
 .hidden\(\) {

@@ -1,14 +1,14 @@
 ---
 const { pathname } = Astro.url;
 
-const crumbs = [];
+const crumbs = ["/"];
 
 for (let i = 0; i < pathname.length; i++) {
   const character = pathname[i];
   if (character === "/") {
     const crumb = pathname.slice(0, i);
     if (crumb) {
-        crumbs.push(crumb);
+      crumbs.push(crumb);
     }
   }
 }
@@ -28,12 +28,39 @@ function crumbToLabel(crumb) {
 {
   crumbs.length > 0 && (
     <nav aria-label="breadcrumbs" class="line()">
-      {crumbs.map((crumb, i) => (
-        <>
-          {i > 0 && <span class="divider()" />}
-          <a href={crumb}>{crumbToLabel(crumb)}</a>
-        </>
-      ))}
+      {crumbs.map((crumb, i) =>
+        i === 0 ? (
+          <a href={crumb} class="center()">
+            <svg
+              aria-label={crumbToLabel(crumb)}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+            >
+              <rect width="256" height="256" fill="none" />
+              <path
+                d="M152,208V160a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v48a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V115.54a8,8,0,0,1,2.62-5.92l80-75.54a8,8,0,0,1,10.77,0l80,75.54a8,8,0,0,1,2.62,5.92V208a8,8,0,0,1-8,8H160A8,8,0,0,1,152,208Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              />
+            </svg>
+          </a>
+        ) : (
+          <>
+            {i > 0 && <span class="divider()" />}
+            <a href={crumb}>{crumbToLabel(crumb)}</a>
+          </>
+        )
+      )}
     </nav>
   )
 }
+
+<style>
+  svg {
+    width: 1.5em;
+    height: 1.5em;
+  }
+</style>

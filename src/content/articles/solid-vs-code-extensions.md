@@ -3,7 +3,6 @@ title: Solid VS Code extensions
 description: A curated list of great extensions that might fly under your radar
 pubDate: 2022-09-06T14:18:37.349Z
 tags:
-  - Garden
   - VS Code
 ---
 I [use](/uses) VS Code as my daily editor, and one of its best features is the wide selection of extensions. However, as with any other large marketplace, discoverability is a real issue.

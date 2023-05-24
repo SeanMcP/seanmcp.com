@@ -1,19 +1,27 @@
 ---
-import { getArticles, getNotes } from "src/utils";
+import { getArticles, getGardens, getNotes } from "src/utils";
 
 const articles = await getArticles();
+const gardens = await getGardens();
 const notes = await getNotes();
 
 const yearCount: Record<
   number,
-  { articles: number; notes: number; rssClub: number }
+  { articles: number; gardens: number; notes: number; rssClub: number }
 > = {};
 
-[...articles, ...notes].forEach((content) => {
-  const year = new Date(content.data.pubDate).getFullYear();
-  if (!yearCount[year]) yearCount[year] = { articles: 0, notes: 0, rssClub: 0 };
+[...articles, ...gardens, ...notes].forEach((content) => {
+  const year = new Date(
+    content.data.hasOwnProperty("tendedDates")
+      ? content.data.tendedDates.slice(-1)
+      : content.data.pubDate
+  ).getFullYear();
+  if (!yearCount[year]) yearCount[year] = { articles: 0, gardens: 0, notes: 0, rssClub: 0 };
   if (content.collection === "notes") {
     yearCount[year].notes++;
+  }
+  if (content.collection === "gardens") {
+    yearCount[year].gardens++;
   }
   if (content.collection === "articles") {
     if (content.data.flags?.includes("RSS-ONLY")) {
@@ -25,15 +33,16 @@ const yearCount: Record<
 });
 
 const highest = Math.max(
-  ...Object.values(yearCount).map((record) => record.articles + record.notes)
+  ...Object.values(yearCount).map((record) => record.articles + record.gardens + record.notes + record.rssClub)
 );
 const multiplier = (16 * 4) / highest;
 ---
 
 <ol>
   {
-    Object.entries(yearCount).map(([year, { articles, notes, rssClub }]) => {
+    Object.entries(yearCount).map(([year, { articles, gardens, notes, rssClub }]) => {
       const articlesLabel = `${articles} articles`;
+      const gardensLabel = `${gardens} gardens`;
       const notesLabel = `${notes} notes`;
       const rssClubLabel = `${rssClub} RSS Club articles`;
       return (
@@ -52,6 +61,13 @@ const multiplier = (16 * 4) / highest;
             title={notesLabel}
           >
             <span class="hidden()">{notesLabel}</span>
+          </span>
+          <span
+            class="gardens"
+            style={{ height: gardens * multiplier + "px" }}
+            title={gardensLabel}
+          >
+            <span class="hidden()">{gardensLabel}</span>
           </span>
           <span
             class="rss-club"
@@ -84,10 +100,13 @@ const multiplier = (16 * 4) / highest;
     font-size: small;
   }
   li span.articles {
-    background: var(--primary);
+    background: var(--purple);
+  }
+  li span.gardens {
+    background: var(--green);
   }
   li span.notes {
-    background: var(--accent);
+    background: var(--blue);
   }
   li span.rss-club {
     background: var(--off-background);

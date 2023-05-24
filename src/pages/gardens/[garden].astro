@@ -1,0 +1,36 @@
+---
+import ContentFooter from "@components/ContentFooter.astro";
+import GardenDetails from "@components/GardenDetails.astro";
+import GardenTitle from "@components/GardenTitle.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import { getGardenState, getGardens } from "src/utils";
+
+export async function getStaticPaths() {
+  const gardens = await getGardens();
+  return gardens.map((entry) => ({
+    params: { garden: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const {
+  data: { description, tendedDates, title },
+} = entry;
+---
+
+<PageLayout
+  {...entry.data}
+  title={title}
+  description={description}
+  showBreadcrumbs
+  withoutH1
+>
+  <h1><GardenTitle title={title} state={getGardenState(entry)} /></h1>
+  <GardenDetails tendedDates={tendedDates} />
+  <br />
+  <Content />
+  <hr />
+  <ContentFooter title={title} />
+</PageLayout>

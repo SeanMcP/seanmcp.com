@@ -1,0 +1,24 @@
+---
+import { readableDate } from 'src/utils';
+
+interface Props {
+    tendedDates: Date[];
+}
+
+const {tendedDates} = Astro.props
+const count = tendedDates.length
+let tendedCount = `Tended ${count} times`
+if (count === 1) {
+    tendedCount = "Tended once"
+} else if (count === 2) {
+    tendedCount = `Tended twice`
+}
+---
+
+<div class="line(xs)">
+    <span>Last tended {readableDate(tendedDates[0])}</span>
+    <span class="divider()" />
+    <span>{tendedCount}</span>
+    <span class="divider()" />
+    <span>Planted {readableDate(tendedDates[tendedDates.length - 1])}</span>
+</div>
