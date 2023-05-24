@@ -5,11 +5,13 @@ import {
   getTags,
   getArticleTitle,
   slugify,
+getGardens,
 } from "src/utils";
 import socials from "src/data/socials";
 import navigation from "src/data/navigation";
 
 const articles = await getArticles({ excludeRSSOnlyInProd: true });
+const gardens = await getGardens();
 const notes = await getNotes();
 const tags = getTags(articles);
 
@@ -19,6 +21,12 @@ const options = [
     url: `/articles/${article.slug}`,
     label: getArticleTitle(article.data),
     searchable: (article.data.title + article.data.description).toLowerCase(),
+  })),
+  ...gardens.map(garden => ({
+    type: "Garden",
+    url: `/gardens/${garden.slug}`,
+    label: garden.data.title,
+    searchable: (garden.data.title + garden.data.description).toLowerCase(),
   })),
   ...notes.map((note) => ({
     type: "Note",

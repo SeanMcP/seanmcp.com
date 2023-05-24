@@ -4,35 +4,20 @@ const LINKS = {
     label: "Abby",
     url: "/abby/",
   },
+  about: {
+    description: "Learn more about me and my work",
+    label: "About",
+    url: "/about/",
+  },
   articles: {
     description: "Read articles about programming",
     label: "Articles",
     url: "/articles/",
   },
-  notes: {
-    description: "A feed of short notes, thoughts, or ideas",
-    label: "Notes",
-    url: "/notes/",
-  },
-  tags: {
-    description: "All of the tags for my articles",
-    label: "Tags",
-    url: "/tags/",
-  },
-  talks: {
-    description: "Outlines of talks I've given and workshops I've lead",
-    label: "Talks",
-    url: "/talks/",
-  },
   boardGames: {
     description: "My favorite board games",
     label: "Board Games",
     url: "/board-games/",
-  },
-  about: {
-    description: "Learn more about me and my work",
-    label: "About",
-    url: "/about/",
   },
   faith: {
     description: "A personal statement of faith",
@@ -44,6 +29,11 @@ const LINKS = {
     label: "Feed",
     url: "/rss.xml",
   },
+  gardens: {
+    description: "Evergreen resources that grow over time",
+    label: "Gardens",
+    url: "/gardens",
+  },
   map: {
     description: "A detailed site map",
     label: "Map",
@@ -53,6 +43,11 @@ const LINKS = {
     description: "A personal mission statement",
     label: "Mission",
     url: "/mission",
+  },
+  notes: {
+    description: "A feed of short notes, thoughts, or ideas",
+    label: "Notes",
+    url: "/notes/",
   },
   randomAricle: {
     description: "Navigate to a random article from my blog",
@@ -68,6 +63,16 @@ const LINKS = {
     description: "About my love of soccer and my favorite teams",
     label: "Soccer",
     url: "/soccer/",
+  },
+  tags: {
+    description: "All of the tags for my articles",
+    label: "Tags",
+    url: "/tags/",
+  },
+  talks: {
+    description: "Outlines of talks I've given and workshops I've lead",
+    label: "Talks",
+    url: "/talks/",
   },
   tools: {
     description:
