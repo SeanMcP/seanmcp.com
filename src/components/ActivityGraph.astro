@@ -56,18 +56,18 @@ const multiplier = (16 * 4) / highest;
             <span class="hidden()">{articlesLabel}</span>
           </span>
           <span
-            class="gardens"
-            style={{ height: gardens * multiplier + "px" }}
-            title={gardensLabel}
-          >
-            <span class="hidden()">{gardensLabel}</span>
-          </span>
-          <span
             class="notes"
             style={{ height: notes * multiplier + "px" }}
             title={notesLabel}
           >
             <span class="hidden()">{notesLabel}</span>
+          </span>
+          <span
+            class="gardens"
+            style={{ height: gardens * multiplier + "px" }}
+            title={gardensLabel}
+          >
+            <span class="hidden()">{gardensLabel}</span>
           </span>
           <span
             class="rss-club"
@@ -100,13 +100,13 @@ const multiplier = (16 * 4) / highest;
     font-size: small;
   }
   li span.articles {
-    background: var(--primary);
+    background: var(--purple);
   }
   li span.gardens {
-    background: var(--github-dark-green);
+    background: var(--green);
   }
   li span.notes {
-    background: var(--accent);
+    background: var(--blue);
   }
   li span.rss-club {
     background: var(--off-background);

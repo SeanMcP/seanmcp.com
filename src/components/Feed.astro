@@ -206,6 +206,19 @@ feed = feed.slice(0, count);
     --size: 1.5em;
     height: var(--size);
     min-width: var(--size);
+    transition: all 0.1s ease-in-out;
     width: var(--size);
+  }
+
+  article:is(:focus-within, :hover) svg[aria-label="article"] {
+    color: var(--purple);
+  }
+
+  article:is(:focus-within, :hover) svg[aria-label="garden"] {
+    color: var(--green);
+  }
+
+  article:is(:focus-within, :hover) svg[aria-label="note"] {
+    color: var(--blue);
   }
 </style>
