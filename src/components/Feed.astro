@@ -6,9 +6,9 @@ interface Props {
   count?: number;
 }
 
-const {count} = Astro.props
+const { count } = Astro.props;
 
-const articles = await getArticles({ count });
+const articles = await getArticles({ count, excludeRSSOnlyInProd: true });
 const gardens = await getGardens();
 const notes = await getNotes(count);
 
