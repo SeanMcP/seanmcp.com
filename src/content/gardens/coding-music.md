@@ -3,6 +3,7 @@ title: Coding Music
 description:
   A growing list of artists that I like to listen to while programming.
 tendedDates:
+  - 2023-06-06
   - 2023-05-23
   - 2022-02-15
 verse: Psalm 150:3
@@ -25,6 +26,9 @@ alphabetical order:
 - [Magic Sword](https://music.youtube.com/channel/UCnl2TnNDgp2rUepf5VnXJ1g)
 - [S U R V I V E](https://music.youtube.com/channel/UCec-IpmkXJQhgnkBIx1EGxQ)
 - [Timecop1983](https://music.youtube.com/channel/UCVjNyglpxEwPoB65b0Oc4Ew)
+- [Washed Out](https://music.youtube.com/channel/UC1rCT_Cy1pP1wnRcEUV3nPA): A
+  little different from the others in the list, but the layers of music make it
+  easy to tune out other distractions.
 - [Waveshaper](https://music.youtube.com/channel/UCzdwXtAUt8VgaDXfTfttx8A)
 
 As of writing, these artists are all in similar, but as the lists grows I plan
