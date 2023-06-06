@@ -67,7 +67,8 @@ your team.
 Personally, I’m excited to see how this feature of JavaScript runtimes develops
 over time.
 
-**Afterward**: There are tools for creating executables for Node.js, but they
-are not native to the runtime. I have excluded them from this test, but if you
-are considering all of the options checkout [nexe](https://github.com/nexe/nexe)
-and [pkg](https://github.com/vercel/pkg).
+**Afterward**: Node.js does have an experimental feature to create executables,
+but at the time of writing
+[the steps were too involved](https://nodejs.org/docs/latest-v20.x/api/single-executable-applications.html).
+For open-source options for creating Node executables, checkout
+[nexe](https://github.com/nexe/nexe) and [pkg](https://github.com/vercel/pkg).
