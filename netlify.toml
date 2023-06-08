@@ -1,5 +1,5 @@
 [build]
-    command = "np run build"
+    command = "pnpm run build"
     publish = "dist/"
 
 [dev]
