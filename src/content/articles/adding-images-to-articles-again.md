@@ -3,7 +3,7 @@ title: Adding images to articles (again)
 description:
   I went through the process of adding images back to my articles with a helpful
   script to automate image processing for me.
-image: warm-mountains.jpg
+image: /img/warm-mountains.jpg
 tags:
   - Blogging
   - Meta
@@ -54,7 +54,7 @@ added will be handled before they go into production.
 There are some additional feature that I baked in, including a `--skip-git` flag
 for running in CI/CD and an ability to regenerate all images when the width
 settings change. That's a little in the weeds for this article, but you can
-[view the source code on GitHub if you're interested](https://github.com/SeanMcP/seanmcp.com/blob/master/src/images.mjs).
+[view the source code on GitHub if you're interested](https://github.com/SeanMcP/seanmcp.com/commit/d42adf26c833642f8d8a47cc3fbc76e36db0b020#diff-978160e4c9d9c60603d05e6a05f4d9ef1ae15c9bdd4c2a39ae3049a5708f5649).
 
 Hope that helps! With all of this in place, I'm looking forward to adding more
 images to my articles in the future. So stay tuned for more!

@@ -1,12 +1,11 @@
 ---
 interface Props {
-  /** Filename within the public/images/ directory */
+  /** Filename within the public/img/ directory */
   image?: string;
 }
 
 const { image } = Astro.props;
-// Support legacy image paths for now
-const path = image?.includes("/img/") ? image : `/images/${image}`;
+const path = image?.includes("/img/") ? image : `/img/${image}`;
 ---
 
 {image && <div style={{ backgroundImage: `url(${path})` }} />}

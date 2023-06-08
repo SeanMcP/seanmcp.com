@@ -10,7 +10,7 @@ tags:
   - UI
 image: null
 ---
-![Command Palette V1](/images/command-palette.png)
+![Command Palette V1](/img/command-palette.png)
 
 [﻿Last month, I wrote about the new "command bars" UI pattern](/articles/are-command-bars-the-future/), and ever since the idea of adding one to this site has been kicking around my head. The design doesn't support lots of links in the header, so an "over UI" for navigating seemed like a decent choice.
 

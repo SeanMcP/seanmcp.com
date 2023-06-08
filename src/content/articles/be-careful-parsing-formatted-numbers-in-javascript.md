@@ -3,7 +3,7 @@ title: Be careful parsing formatted numbers in JavaScript
 description:
   JavaScript's parseInt, parseFloat, and Number constructors struggle with
   comma-separated number strings.
-image: caution.jpg
+image: /img/caution.jpg
 tags:
   - JavaScript
 pubDate: 2022-12-20T15:14:30.409Z
