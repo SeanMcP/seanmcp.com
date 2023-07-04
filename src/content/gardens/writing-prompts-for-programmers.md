@@ -5,8 +5,15 @@ description:
   started writing
 tendedDates:
   - 2023-07-04T10:51:07.250Z
+  - 2023-07-04T12:51:07.250Z
 verse: Proverbs 3:3
 ---
+
+> The most effective way I know to improve your writing is to do freewriting
+> exercises regularly. --
+> [Peter Elbow](https://www.research.ucsb.edu/sites/default/files/RD/docs/FREEWRITING-by-Peter-Elbow.pdf)
+
+## Prompts
 
 - What is a tool that you have been using lately?
 - What tool would you miss the most if it were to disappear?
@@ -18,3 +25,16 @@ verse: Proverbs 3:3
 - Is there any value in bikeshedding? Why or why not?
 - How would you compare two solutions to a problem?
 - What are three strategies for reversing a list of strings?
+
+## How to use these prompts
+
+These prompts were curated for freewriting, an exercise to help you get started
+writing. To start, follow these steps:
+
+1. Pick a prompt that piques your interest
+2. Grab a pen and paper or open a text editor
+3. Set a timer for 5, 10, or 15 minutes
+4. Write until the timer goes off
+
+Once you are done, it's up to you: stop or continue, discard or publish. The
+goal was to write and strengthen those muscles, and you've succeeded!
