@@ -20,7 +20,8 @@ const gardens = defineCollection({
     description: z.string(),
     head: z.string().optional(),
     title: z.string(),
-    tendedDates: z.array(z.date())
+    tendedDates: z.array(z.date()),
+    verse: z.string().optional(),
   }),
 });
 

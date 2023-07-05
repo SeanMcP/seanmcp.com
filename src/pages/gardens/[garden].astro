@@ -16,8 +16,10 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const {
-  data: { description, tendedDates, title },
+  data: { description, tendedDates, title, verse },
 } = entry;
+
+console.log(title, verse)
 ---
 
 <PageLayout
@@ -32,5 +34,5 @@ const {
   <br />
   <Content />
   <hr />
-  <ContentFooter title={title} />
+  <ContentFooter title={title} verse={verse} />
 </PageLayout>
