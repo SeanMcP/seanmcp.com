@@ -102,8 +102,9 @@ export async function getNotes(count?: number) {
 
 export function readableDate(date: Date | string) {
   return new Date(date).toLocaleDateString("en-US", {
-    month: "short",
     day: "numeric",
+    month: "short",
+    timeZone: "America/New_York",
     year: "numeric",
   });
 }
