@@ -1,9 +1,11 @@
 ---
 title: CSS columns are neat
-description: 1-2 SENTECES WITHOUT A FINAL PERIOD
+description:
+  The columns property is CSS divides content among a set number or width of
+  columns
 tags:
   - CSS
-pubDate: 2023-08-01T11:18:42.768Z
+pubDate: 2023-08-01T07:18:42.768-4:00
 verse:
 head: >-
   <style> div.example {
