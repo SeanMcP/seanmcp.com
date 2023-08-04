@@ -211,6 +211,12 @@ blockquote p {
   margin: 0;
 }
 
+/* Necessary because blockquote content is already italic  */
+blockquote :is(i, em) {
+  font-style: normal;
+  text-decoration: underline;
+}
+
 li ol,
 li ul {
   margin-bottom: var(--space-2xs);
