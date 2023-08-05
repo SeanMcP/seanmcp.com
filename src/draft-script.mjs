@@ -1,6 +1,7 @@
 import fs from "fs";
 import slugify from "slugify";
 import { execSync } from "child_process";
+import { getTimestamp } from "./shared.mjs";
 
 const titleArg = process.argv[2] || "";
 
@@ -20,7 +21,6 @@ const filePath = new URL(
   "../src/content/articles/" + fileName,
   import.meta.url
 );
-const date = new Date().toISOString();
 
 try {
   const templateData = fs.readFileSync(
@@ -30,7 +30,7 @@ try {
 
   const injectedData = templateData
     .replace("%TITLE%", title)
-    .replace("%DATE%", date);
+    .replace("%DATE%", getTimestamp());
 
   fs.writeFileSync(filePath, injectedData, "utf8");
 
