@@ -1,7 +1,7 @@
 ---
 title: It has everything
 description: Even a description
-pubDate: 2050-12-25
+pubDate: 2050-12-25T12:00-0400
 tags:
     - Meta
     - Blogging

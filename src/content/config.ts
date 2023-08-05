@@ -7,7 +7,7 @@ const articles = defineCollection({
     foot: z.string().optional(),
     head: z.string().optional(),
     image: z.nullable(z.string()).optional(),
-    pubDate: z.date(),
+    pubDate: z.string(),
     series: z.string().optional(),
     tags: z.array(z.string()),
     title: z.string(),
@@ -20,7 +20,7 @@ const gardens = defineCollection({
     description: z.string(),
     head: z.string().optional(),
     title: z.string(),
-    tendedDates: z.array(z.date()),
+    tendedDates: z.array(z.string()),
     verse: z.string().optional(),
   }),
 });
@@ -28,7 +28,7 @@ const gardens = defineCollection({
 const notes = defineCollection({
   schema: z.object({
     edited: z.boolean().optional(),
-    pubDate: z.date(),
+    pubDate: z.string(),
   }),
 });
 
