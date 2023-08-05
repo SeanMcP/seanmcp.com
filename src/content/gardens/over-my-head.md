@@ -3,7 +3,7 @@ title: Over my head
 description:
   A list of articles, topics, and resources that are currently over my head
 tendedDates:
-  - 2020-04-24
+  - 2020-04-24T12:00-0400
 verse: Psalm 3:3
 ---
 

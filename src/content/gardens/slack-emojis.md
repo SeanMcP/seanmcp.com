@@ -3,7 +3,7 @@ title: Slack Emojis
 description:
   A curated list of the best reaction emojis that I have created for Slack
 tendedDates:
-  - 2022-01-04
+  - 2022-01-04T12:00-0400
 head: >-
   <style>
       table img {
