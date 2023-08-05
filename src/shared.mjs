@@ -7,18 +7,18 @@ function forceDigits(number) {
  * Returns a formatted timestamp in eastern time
  * @returns {string} timestamp
  */
-export function getTimestamp() {
-  const date = new Date();
+export function getTimestamp(date) {
+  const d = new Date(date || undefined);
 
-  let s = date.getFullYear();
+  let s = d.getFullYear();
   s += "-";
-  s += forceDigits(date.getMonth() + 1);
+  s += forceDigits(d.getMonth() + 1);
   s += "-";
-  s += forceDigits(date.getDate());
+  s += forceDigits(d.getDate());
   s += "T";
-  s += forceDigits(date.getHours());
+  s += forceDigits(d.getHours());
   s += ":";
-  s += forceDigits(date.getMinutes());
+  s += forceDigits(d.getMinutes());
   s += "-0400";
 
   return s;
