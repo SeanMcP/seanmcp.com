@@ -1,7 +1,7 @@
 ---
 title: Music to code to
 description: A growing list of artists that I like to listen to while programming.
-pubDate: 2022-02-15
+pubDate: 2022-02-15T12:00-0400
 tags:
   - Garden
   - Music

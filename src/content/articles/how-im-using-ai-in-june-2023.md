@@ -5,7 +5,7 @@ description:
   that I use regularly
 tags:
   - AI
-pubDate: 2023-06-23T10:57:11.037Z
+pubDate: 2023-06-23T06:57-0400
 verse:
 series: How I Use AI
 ---

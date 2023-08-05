@@ -1,7 +1,7 @@
 ---
 title: Edit a previous commit message
 description: The steps to edit recent or ancient commit messages
-pubDate: 2019-08-23
+pubDate: 2019-08-23T12:00-0400
 tags:
   - Git
   - Programming

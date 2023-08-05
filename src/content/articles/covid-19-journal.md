@@ -1,7 +1,7 @@
 ---
 title: COVID-19 journal
 description: Recording my experience contracting COVID-19 in 2020
-pubDate: 2021-03-24
+pubDate: 2021-03-24T12:00-0400
 tags:
     - Personal
 verse: Psalm 103:3

@@ -2,7 +2,7 @@
 title: Set up Decap CMS
 description: Decap CMS is the official successor to Netlify CMS and works well
   with the old tooling.
-pubDate: 2023-04-19T01:02:40.322Z
+pubDate: 2023-04-18T21:02-0400
 tags:
   - Decap
   - Netlify

@@ -1,7 +1,7 @@
 ---
 title: React Native Glossary
 description: A growing list of terms you need to recognize when working in React Native
-pubDate: 2021-10-07
+pubDate: 2021-10-07T12:00-0400
 tags:
   - Garden
   - Android

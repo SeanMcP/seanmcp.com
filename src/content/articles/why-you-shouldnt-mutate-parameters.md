@@ -1,7 +1,7 @@
 ---
 title: Why you shouldn't mutate parameters
 description: This is a WIP that I probably will never finish.
-pubDate: 2020-08-05
+pubDate: 2020-08-05T12:00-0400
 tags:
   - JavaScript
   - WIP

@@ -7,7 +7,7 @@ tags:
   - Zed
   - Editor
   - Review
-pubDate: 2023-04-01T10:32:03.781Z
+pubDate: 2023-04-01T06:32-0400
 ---
 
 Zed is a new Rust-powered editor by the creator of Atom that focuses on speed

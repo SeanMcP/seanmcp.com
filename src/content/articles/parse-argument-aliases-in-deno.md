@@ -1,7 +1,7 @@
 ---
 title: Parse argument aliases in Deno
 description: Using Deno's standard flags module to parse command-line arguments with aliases
-pubDate: 2020-06-26
+pubDate: 2020-06-26T12:00-0400
 tags:
     - CLI
     - Deno

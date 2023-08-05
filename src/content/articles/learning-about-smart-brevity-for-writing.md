@@ -8,7 +8,7 @@ tags:
   - Meta
   - Smart Brevity
   - Writing
-pubDate: 2023-02-27T15:23:17.625Z
+pubDate: 2023-02-27T10:23-0400
 ---
 
 I was introduced to the idea of Axios’ Smart Brevity on the

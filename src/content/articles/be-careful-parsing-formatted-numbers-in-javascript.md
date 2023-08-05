@@ -6,7 +6,7 @@ description:
 image: /img/caution.jpg
 tags:
   - JavaScript
-pubDate: 2022-12-20T15:14:30.409Z
+pubDate: 2022-12-20T10:14-0400
 ---
 
 I was working on a script recently and ran into an unexpected issue. The work

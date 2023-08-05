@@ -1,7 +1,7 @@
 ---
 title: Great programming reads
 description: A list of articles, books, and resources for software engineers
-pubDate: 2020-03-20
+pubDate: 2020-03-20T12:00-0400
 tags:
   - Garden
   - Software Engineering

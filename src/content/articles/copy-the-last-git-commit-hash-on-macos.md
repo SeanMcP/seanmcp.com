@@ -1,7 +1,7 @@
 ---
 title: Copy the last git commit hash on macOS
 description: A one liner to copy the last commit hash to the clipboard on a Mac
-pubDate: 2021-03-24
+pubDate: 2021-03-24T12:00-0400
 tags:
     - macOS
     - Shell

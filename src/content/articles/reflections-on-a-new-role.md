@@ -1,7 +1,7 @@
 ---
 title: Reflecting on a new role
 description: Moving into mobile development at Niche and looking back on how I got here
-pubDate: 2021-08-18
+pubDate: 2021-08-18T12:00-0400
 tags:
   - Career
   - Mobile

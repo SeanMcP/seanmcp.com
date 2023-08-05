@@ -6,7 +6,7 @@ description:
 tags:
   - Astro
   - Mastodon
-pubDate: 2022-11-18T14:29:17.736Z
+pubDate: 2022-11-18T09:29-0400
 ---
 
 **Update**: The solution in this article still works, but I think using a

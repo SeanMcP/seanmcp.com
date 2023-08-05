@@ -1,7 +1,7 @@
 ---
 title: What to include in every node module
 description: This is a WIP that I probably will never finish.
-pubDate: 2020-02-03
+pubDate: 2020-02-03T12:00-0400
 tags:
   - Node Modules
   - Node.js

@@ -3,7 +3,7 @@ title: I have never reviewed a podcast
 description: Despite being a regular listener, I am unable to review podcasts
 tags:
   - Podcasts
-pubDate: 2023-05-25T11:27:50.973Z
+pubDate: 2023-05-25T07:27-0400
 verse: Proverbs 1:8
 ---
 

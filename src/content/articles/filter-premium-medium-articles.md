@@ -1,7 +1,7 @@
 ---
 title: Filter out premium Medium articles
 description: Using a console script to alter the content on a webpage
-pubDate: 2019-04-08
+pubDate: 2019-04-08T12:00-0400
 tags:
   - Console Scripting
   - Dev Tools

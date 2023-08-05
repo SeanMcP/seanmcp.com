@@ -3,7 +3,7 @@ title: Find and replace with Regex groups
 description: Create Regex groups with parentheses for powerful find/replace patterns
 tags:
   - Regex
-pubDate: 2023-03-14T10:50:50.194Z
+pubDate: 2023-03-14T06:50-0400
 ---
 
 Create Regex groups with parentheses for powerful find/replace patterns.

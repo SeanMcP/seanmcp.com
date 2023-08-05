@@ -6,7 +6,7 @@ description:
 tags:
   - Debugging
   - Safari
-pubDate: 2023-03-10T11:45:24.767Z
+pubDate: 2023-03-10T06:45-0400
 foot:
   <script async
   src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>

@@ -1,7 +1,7 @@
 ---
 title: How to pronounce my name
 description: A guide to pronounce my often-mispronounced name
-pubDate: 2019-06-15
+pubDate: 2019-06-15T12:00-0400
 tags:
   - Personal
 verse: Proverbs 18:10

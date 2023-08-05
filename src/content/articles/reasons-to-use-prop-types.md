@@ -1,7 +1,7 @@
 ---
 title: Reasons to use prop-types
 description: This is a WIP that I probably will never finish.
-pubDate: 2019-06-27
+pubDate: 2019-06-27T12:00-0400
 tags:
   - React
   - WIP

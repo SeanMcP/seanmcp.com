@@ -1,7 +1,7 @@
 ---
 title: Convert class components to functions with React Hooks
 description: A step by step guide to converting old components to modern React
-pubDate: 2019-02-06
+pubDate: 2019-02-06T12:00-0400
 tags:
   - React
 ---

@@ -3,7 +3,7 @@ title: CSS :empty pseudo class
 description: Empty elements in a flex or grid container can result in double gaps, but CSS has an pseudo class to select and remove those elements
 tags:
     - CSS
-pubDate: 2023-03-02T12:08:16.798Z
+pubDate: 2023-03-02T07:08-0400
 foot: <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 ---
 

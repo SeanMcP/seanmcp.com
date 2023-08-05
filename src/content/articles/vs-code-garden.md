@@ -1,7 +1,7 @@
 ---
 title: VS Code Garden
 description: A garden all about VS Code
-pubDate: 2023-01-04T19:51:08.581Z
+pubDate: 2023-01-04T14:51-0400
 flags:
 	- DRAFT
 tags:

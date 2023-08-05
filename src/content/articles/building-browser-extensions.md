@@ -1,7 +1,7 @@
 ---
 title: Building browser extensions
 description: Some resources and guides for making browser add-ons/extensions
-pubDate: 2021-02-23
+pubDate: 2021-02-23T12:00-0400
 tags:
   - Garden
   - Chrome

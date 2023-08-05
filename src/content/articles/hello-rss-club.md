@@ -3,7 +3,7 @@ title: Hello RSS Club!
 description: This is the first article for the RSS Club
 tags:
     - RSS
-pubDate: 2023-02-28T12:10:01.217Z
+pubDate: 2023-02-28T07:10-0400
 flags:
     - RSS-ONLY
 ---

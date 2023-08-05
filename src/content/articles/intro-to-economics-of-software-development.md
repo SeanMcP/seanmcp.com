@@ -1,7 +1,7 @@
 ---
 title: Intro to "The Economics of Software Development"
 description: Introducing a new series on how economics helps explain the decisions we make when developing software
-pubDate: 2020-07-09
+pubDate: 2020-07-09T12:00-0400
 tags:
     - Economics
     - Software Engineering

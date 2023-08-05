@@ -4,7 +4,7 @@ description:
   A little write-up about my migration from Fosstodon to IndieWeb.social
 tags:
   - Mastodon
-pubDate: 2023-02-16T15:38:51.874Z
+pubDate: 2023-02-16T10:38-0400
 ---
 
 Today I migrated from [fosstodon.org](http://fosstodon.org) to

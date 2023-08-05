@@ -1,7 +1,7 @@
 ---
 title: Make a POST request with fetch
 description: A sample POST with fetch for those of us who can never remember how.
-pubDate: 2020-08-07
+pubDate: 2020-08-07T12:00-0400
 tags:
   - JavaScript
 verse: Ruth 3:11

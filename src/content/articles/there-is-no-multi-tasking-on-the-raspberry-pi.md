@@ -6,7 +6,7 @@ tags:
   - Linux
   - Raspberry Pi
 series: Trying Linux 2022
-pubDate: 2022-11-03T11:14:41.189Z
+pubDate: 2022-11-03T07:14-0400
 ---
 
 Maybe this isn't fair to file under the "Trying Linux 2022" series since it isn't commentary on the operating system writ large. However, it is a part of my journey trying Linux and worth documenting.

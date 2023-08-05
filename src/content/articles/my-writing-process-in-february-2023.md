@@ -6,7 +6,7 @@ description:
 tags:
   - Meta
   - Writing
-pubDate: 2023-02-27T16:22:02.440Z
+pubDate: 2023-02-27T11:22-0400
 ---
 
 Today my process for writing an article looks like this:

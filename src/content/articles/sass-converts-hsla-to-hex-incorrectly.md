@@ -1,7 +1,7 @@
 ---
 title: Sass converts hsla to hex incorrectly
 description: A simple solution to stop Sass from transparent hsla colors to opaque hex colors.
-pubDate: 2020-12-17
+pubDate: 2020-12-17T12:00-0400
 tags:
   - Sass
   - CSS

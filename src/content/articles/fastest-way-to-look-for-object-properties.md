@@ -1,7 +1,7 @@
 ---
 title: The fastest way to look for object properties
 description: This is a WIP that I probably will never finish.
-pubDate: 2019-12-31
+pubDate: 2019-12-31T12:00-0400
 tags:
     - JavaScript
     - WIP

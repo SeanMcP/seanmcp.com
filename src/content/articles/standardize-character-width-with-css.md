@@ -1,7 +1,7 @@
 ---
 title: Standardize character width with CSS
 description: Two CSS properties that make letters and numbers the same width.
-pubDate: 2020-12-09
+pubDate: 2020-12-09T12:00-0400
 tags:
   - CSS
   - Typography

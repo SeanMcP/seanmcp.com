@@ -4,7 +4,7 @@ description:
   You can declare variables with var, :=, and const depending on your use case
 tags:
   - Go
-pubDate: 2023-05-12
+pubDate: 2023-05-12T12:00-0400
 verse: Romans 3:28
 ---
 

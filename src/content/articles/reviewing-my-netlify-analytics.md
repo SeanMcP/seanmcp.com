@@ -4,7 +4,7 @@ description: Thanks to Netlify Analytics I know to focus on writing how-to artic
 tags:
     - Meta
     - Netlify
-pubDate: 2023-03-08T11:53:12.249Z
+pubDate: 2023-03-08T06:53-0400
 ---
 
 Thanks to Netlify Analytics I know to focus on writing how-to articles, but it has less data than I hoped.

@@ -1,7 +1,7 @@
 ---
 title: Send data to the window with Eleventy
 description: How to create a shortcode to expose data for client-side scripts
-pubDate: 2021-01-25
+pubDate: 2021-01-25T12:00-0400
 tags:
   - Eleventy
 verse: Joshua 2:15

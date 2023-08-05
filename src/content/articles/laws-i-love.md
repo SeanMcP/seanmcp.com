@@ -1,7 +1,7 @@
 ---
 title: Laws I Love
 description: This is a WIP that I probably will never finish.
-pubDate: 2020-04-14
+pubDate: 2020-04-14T12:00-0400
 tags:
   - WIP
 verse: Psalm 119:97

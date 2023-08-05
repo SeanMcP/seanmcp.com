@@ -1,7 +1,7 @@
 ---
 title: How to open the Dev Tools
 description: A comprehensive guide for opening the dev tools in Chrome and Firefox
-pubDate: 2020-04-15
+pubDate: 2020-04-15T12:00-0400
 tags:
     - Dev Tools
     - Chrome

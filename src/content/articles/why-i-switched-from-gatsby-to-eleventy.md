@@ -1,7 +1,7 @@
 ---
 title: Why I switched from Gatsby to Eleventy
 description: This is a WIP that I probably will never finish.
-pubDate: 2019-04-12
+pubDate: 2019-04-12T12:00-0400
 tags:
   - Eleventy
   - Meta

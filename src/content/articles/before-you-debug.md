@@ -1,7 +1,7 @@
 ---
 title: Before You Debug
 description: An organized approach to debugging your code
-pubDate: 2020-07-10
+pubDate: 2020-07-10T12:00-0400
 tags:
   - Garden
   - Debugging

@@ -1,7 +1,7 @@
 ---
 title: Why a blog?
 description: An effort to preserve my content on the ever-changing web
-pubDate: 2018-12-04
+pubDate: 2018-12-04T12:00-0400
 tags:
   - Blogging
   - Meta

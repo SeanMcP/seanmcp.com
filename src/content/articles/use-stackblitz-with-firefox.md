@@ -1,7 +1,7 @@
 ---
 title: How to use StackBlitz with Firefox
 description: Disable enhanced tracking protections to use StackBlitz with Firefox
-pubDate: 2022-08-23
+pubDate: 2022-08-23T12:00-0400
 tags:
   - Firefox
   - StackBlitz

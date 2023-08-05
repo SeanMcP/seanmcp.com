@@ -1,7 +1,7 @@
 ---
 title: Six video update
 description: Lessons learned from publishing six videos on YouTube
-pubDate: 2020-06-12
+pubDate: 2020-06-12T12:00-0400
 tags:
   - YouTube
 verse: Exodus 20:9

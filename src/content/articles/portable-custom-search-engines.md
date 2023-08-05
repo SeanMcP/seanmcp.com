@@ -4,7 +4,7 @@ description: Custom search engines (sometimes called site search) are a great
   browser feature, but they aren't easily ported from one browser to the next. I
   created a portable web app to handle your custom search engines from any
   browser.
-pubDate: 2022-12-05T16:49:10.952Z
+pubDate: 2022-12-05T11:49-0400
 tags:
   - Product
   - Browsers

@@ -5,7 +5,7 @@ description:
   listens for class changes on an element with the MutationObserver API
 tags:
   - JavaScript
-pubDate: 2023-03-09T12:00:39.423Z
+pubDate: 2023-03-09T07:00-0400
 foot:
   <script async
   src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>

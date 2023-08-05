@@ -6,7 +6,7 @@ description:
 tags:
   - Software Engineering
   - Quality Assurance
-pubDate: 2023-05-10T18:04:46.745Z
+pubDate: 2023-05-10T14:04-0400
 verse: 1 Kings 10:1
 ---
 

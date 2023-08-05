@@ -5,7 +5,7 @@ description:
 tags:
   - Astro
   - Debugging
-pubDate: 2023-02-11T18:08:48.815Z
+pubDate: 2023-02-11T13:08-0400
 ---
 
 This week I was in the process of upgrading this site to

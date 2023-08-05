@@ -1,7 +1,7 @@
 ---
 title: Manage analysis paralysis while programming
 description: This is a WIP that I probably will never finish.
-pubDate: 2020-07-14
+pubDate: 2020-07-14T12:00-0400
 tags:
   - Programming
   - WIP

@@ -1,7 +1,7 @@
 ---
 title: Logging with Eleventy and Nunjucks
 description: Adding a simple filter to save you a lot of grief.
-pubDate: 2020-05-12
+pubDate: 2020-05-12T12:00-0400
 tags:
     - Eleventy
     - Nunjucks

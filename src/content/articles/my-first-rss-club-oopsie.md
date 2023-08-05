@@ -5,7 +5,7 @@ description:
   some frontmatter fields
 tags:
   - RSS
-pubDate: 2023-07-04T11:49:20.586Z
+pubDate: 2023-07-04T07:49-0400
 verse:
 flags:
   - RSS-ONLY

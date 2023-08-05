@@ -5,7 +5,7 @@ description:
   hobby to encourage creativity instead of consumption
 tags:
   - Creativity
-pubDate: 2023-06-05T15:01:53.688Z
+pubDate: 2023-06-05T11:01-0400
 flags:
   - RSS-ONLY
 verse: Isaiah 40:28

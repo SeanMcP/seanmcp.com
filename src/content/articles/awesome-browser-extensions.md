@@ -4,7 +4,7 @@ description: A curated list of helpful browser extensions.
 tags:
   - Garden
   - Extensions
-pubDate: 2022-10-31T13:11:45.434Z
+pubDate: 2022-10-31T09:11-0400
 ---
 
 Extensions can slow down your browser, so I try to only add ones that are

@@ -1,7 +1,7 @@
 ---
 title: TypeScript without TypeScript
 description: TypeScript provides valuable features but complicate the development process. What are some alternatives that provide the features without the headache?
-pubDate: 2020-12-08
+pubDate: 2020-12-08T12:00-0400
 tags:
   - TypeScript
   - JavaScript

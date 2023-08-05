@@ -6,7 +6,7 @@ description:
 tags:
   - Linux
   - Setup
-pubDate: 2023-05-16T12:49:51.809Z
+pubDate: 2023-05-16T08:49-0400
 verse: Psalm 8:1
 series: Trying Linux 2022
 ---

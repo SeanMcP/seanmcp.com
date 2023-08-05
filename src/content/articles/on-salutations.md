@@ -5,7 +5,7 @@ description:
   omit closings from my articles.
 tags:
   - Writing
-pubDate: 2023-02-27T19:56:08.939Z
+pubDate: 2023-02-27T14:56-0400
 ---
 
 **Update**: I misused the term “salutation” in this article. What I meant was

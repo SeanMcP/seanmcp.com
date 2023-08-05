@@ -1,7 +1,7 @@
 ---
 title: Remove an item at a given index in JavaScript
 description: Sidestep slicing and splicing and use Array's filter method for a no-hassle solution.
-pubDate: 2020-08-05
+pubDate: 2020-08-05T12:00-0400
 tags:
   - JavaScript
 verse: Matthew 23:24

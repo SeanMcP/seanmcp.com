@@ -1,7 +1,7 @@
 ---
 title: Write a draft script for your SSG blog
 description: Easily spin up a new article when you don't have a CMS
-pubDate: 2020-01-31
+pubDate: 2020-01-31T12:00-0400
 tags:
   - Bash
   - Node.js
