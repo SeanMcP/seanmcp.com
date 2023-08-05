@@ -8,7 +8,8 @@ function forceDigits(number) {
  * @returns {string} timestamp
  */
 export function getTimestamp(date) {
-  const d = new Date(date || undefined);
+  // There is probably a better way to do this
+  const d = date ? new Date(date) : new Date();
 
   let s = d.getFullYear();
   s += "-";
