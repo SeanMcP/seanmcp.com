@@ -3,7 +3,7 @@ import path from "node:path";
 import { getTimestamp } from "./shared.mjs";
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
-const dirPath = path.join(__dirname, "./content/articles");
+const dirPath = path.join(__dirname, "./content/notes");
 
 const files = fs.readdirSync(dirPath);
 
