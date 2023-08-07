@@ -5,7 +5,7 @@ description:
   going to take multiple iterations to arrive at the best solution
 tags:
   - Programming
-pubDate: 2023-08-01T06:57:47.120-4:00
+pubDate: 2023-08-01T06:57-0400
 verse: Romans 5:3-4
 ---
 

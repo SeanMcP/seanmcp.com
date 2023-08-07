@@ -5,7 +5,7 @@ description:
   want to use a dynamic route to generate pages for your content.
 tags:
   - Astro
-pubDate: 2022-10-29T17:21:58.156Z
+pubDate: 2022-10-29T13:21-0400
 ---
 
 If you create a new Astro project with the installer, it will organize blog

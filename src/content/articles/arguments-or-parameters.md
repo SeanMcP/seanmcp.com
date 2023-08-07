@@ -1,7 +1,7 @@
 ---
 title: Arguments or parameters?
 description: An attempt to remember the difference between the two
-pubDate: 2019-07-30
+pubDate: 2019-07-30T12:00-0400
 tags:
   - Programming
 verse: Proverbs 4:13

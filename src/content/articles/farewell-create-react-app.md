@@ -5,7 +5,7 @@ description:
   scaffold to a launcher that includes options other than client-side rendering
 tags:
   - React
-pubDate: 2023-02-28T16:03:48.775Z
+pubDate: 2023-02-28T11:03-0400
 ---
 
 - The React team is looking to sunset “Create React App” as a project scaffold

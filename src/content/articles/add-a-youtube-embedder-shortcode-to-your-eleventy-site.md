@@ -1,7 +1,7 @@
 ---
 title: Add a YouTube-embedder shortcode to your Eleventy site
 description: A quick guide to writing a time-saving shortcode to create the embeddable code from a YouTube url
-pubDate: 2021-08-10
+pubDate: 2021-08-10T12:00-0400
 tags:
   - Eleventy
   - YouTube

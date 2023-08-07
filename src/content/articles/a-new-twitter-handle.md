@@ -1,7 +1,7 @@
 ---
 title: A new Twitter handle
 description: Kicking off 2020 with (yet another) new handle
-pubDate: 2020-01-28
+pubDate: 2020-01-28T12:00-0400
 tags:
     - Social Media
     - Twitter

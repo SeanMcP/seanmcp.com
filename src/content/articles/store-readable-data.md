@@ -1,7 +1,7 @@
 ---
 title: Store readable data
 description: When forced between storing data for humans or computers, choose the former.
-pubDate: 2020-05-11
+pubDate: 2020-05-11T12:00-0400
 tags:
   - Programming
 ---

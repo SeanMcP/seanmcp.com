@@ -1,7 +1,7 @@
 ---
 title: "What default parameters do (and don't do)"
 description: Correcting my mental model
-pubDate: 2020-01-13
+pubDate: 2020-01-13T12:00-0400
 tags:
   - JavaScript
 verse: Micah 7:8

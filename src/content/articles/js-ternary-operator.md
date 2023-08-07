@@ -1,7 +1,7 @@
 ---
 title: "JS Basics: Ternary Operator"
 description: Demystifying the inline if statement
-pubDate: 2019-02-08
+pubDate: 2019-02-08T12:00-0400
 tags:
   - JavaScript
 ---

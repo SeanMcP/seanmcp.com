@@ -7,7 +7,7 @@ tags:
   - Astro
   - Mastodon
   - Meta
-pubDate: 2023-02-07T01:06:36.352Z
+pubDate: 2023-02-06T20:06-0400
 ---
 
 In 2023 I want to making this site better. Here is an unordered list of tasks

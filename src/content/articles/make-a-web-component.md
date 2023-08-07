@@ -1,7 +1,7 @@
 ---
 title: Make a web component
 description: How to make a custom web component with only a few lines of code
-pubDate: 2022-01-14
+pubDate: 2022-01-14T12:00-0400
 tags:
   - JavaScript
   - Web Components

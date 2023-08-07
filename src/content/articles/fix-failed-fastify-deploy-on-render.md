@@ -5,7 +5,7 @@ tags:
     - Debugging
     - Fastify
     - Render
-pubDate: 2023-03-28T21:01:56.949Z
+pubDate: 2023-03-28T17:01-0400
 ---
 
 To get a boilerplate Fastify app to deploy on Render.com, you need to read to listen on PORT environment variable.

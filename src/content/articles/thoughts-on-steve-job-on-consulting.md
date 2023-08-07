@@ -6,7 +6,7 @@ description:
 tags:
   - Professional Development
   - Thoughts
-pubDate: 2022-11-17T14:43:53.334Z
+pubDate: 2022-11-17T09:43-0400
 ---
 
 My manager at Khan Academy sent me an old video of Steve Jobs talking about the

@@ -7,7 +7,7 @@ tags:
   - Astro
   - Netlify
   - Open Source
-pubDate: 2022-11-25T12:26:03.516Z
+pubDate: 2022-11-25T07:26-0400
 ---
 
 This morning, I released the first version of

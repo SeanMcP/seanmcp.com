@@ -7,7 +7,7 @@ tags:
   - JavaScript
   - Node.js
   - Scripting
-pubDate: 2022-11-16T15:21:46.240Z
+pubDate: 2022-11-16T10:21-0400
 ---
 
 This week I was working on a project that reads 6.4 MB of text files (the

@@ -1,7 +1,7 @@
 ---
 title: Get started with Preact
 description: This is a WIP that I probably will never finish.
-pubDate: 2020-08-18
+pubDate: 2020-08-18T12:00-0400
 tags:
   - Preact
   - WIP

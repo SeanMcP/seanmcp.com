@@ -9,7 +9,7 @@ tags:
   - Deno
   - Go
   - JavaScript
-pubDate: 2023-06-05T11:34:53.088Z
+pubDate: 2023-06-05T07:34-0400
 verse: Psalm 40:5
 ---
 

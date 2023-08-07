@@ -1,7 +1,7 @@
 ---
 title: Emulate iPhone & iPad in Safari
 description: Simulating your web pages on Apple devices is easy with Safari's responsive design mode
-pubDate: 2020-09-02
+pubDate: 2020-09-02T12:00-0400
 tags:
     - Dev Tools
     - Safari

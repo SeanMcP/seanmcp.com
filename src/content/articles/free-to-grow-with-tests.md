@@ -1,7 +1,7 @@
 ---
 title: Free to grow
 description: Why tests (should) free you to grow with confidence
-pubDate: 2020-02-17
+pubDate: 2020-02-17T12:00-0400
 image: /img/redwood.min.jpg
 verse: Isaiah 53:2
 tags:

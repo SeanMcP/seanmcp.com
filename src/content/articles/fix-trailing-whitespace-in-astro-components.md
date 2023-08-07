@@ -4,7 +4,7 @@ description: There is an issue with the Astro compiler that leaves unwanted whit
 tags:
     - Astro
     - Debugging
-pubDate: 2023-03-02T11:59:09.565Z
+pubDate: 2023-03-02T06:59-0400
 ---
 
 - [A closed issue on GitHub](https://github.com/withastro/astro/issues/5737) appears to still be occurring

@@ -5,7 +5,7 @@ description:
   following text while preserving the visual spacing
 tags:
   - CSS
-pubDate: 2023-03-06T19:52:34.564Z
+pubDate: 2023-03-06T14:52-0400
 foot: <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 ---
 

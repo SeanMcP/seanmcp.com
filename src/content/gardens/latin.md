@@ -2,7 +2,7 @@
 title: Latin
 description: This is a WIP that I may never finish.
 tendedDates:
-  - 2021-06-07
+  - 2021-06-07T12:00-0400
 ---
 
 ## Phrases

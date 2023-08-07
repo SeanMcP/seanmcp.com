@@ -1,8 +1,16 @@
 import fs from "fs";
 import slugify from "slugify";
 import { execSync } from "child_process";
+import { getTimestamp } from "./shared.mjs";
 
-const titleArg = process.argv[2] || "";
+const typeArg = process.argv[2]
+const titleArg = process.argv[3] || "";
+
+const [contentPath, template] = {
+  article: ["../src/content/articles/", "article-template.md"],
+  garden: ["../src/content/gardens/", "garden-template.md"]
+}[typeArg]
+
 
 if (!titleArg) {
   console.log(
@@ -17,20 +25,19 @@ const title = titleArg.includes('"')
 const fileName =
   (title ? slugify(title, { lower: true, strict: true }) : "draft") + ".md";
 const filePath = new URL(
-  "../src/content/articles/" + fileName,
+  contentPath + fileName,
   import.meta.url
 );
-const date = new Date().toISOString();
 
 try {
   const templateData = fs.readFileSync(
-    new URL("article-template.md", import.meta.url),
+    new URL(template, import.meta.url),
     "utf8"
   );
 
   const injectedData = templateData
     .replace("%TITLE%", title)
-    .replace("%DATE%", date);
+    .replace("%DATE%", getTimestamp());
 
   fs.writeFileSync(filePath, injectedData, "utf8");
 

@@ -6,7 +6,7 @@ description:
 tags:
   - Astro
   - RSS
-pubDate: 2023-02-28T15:42:16.949Z
+pubDate: 2023-02-28T10:42-0400
 ---
 
 I added the ability to publish articles exclusively to the RSS feed. The idea

@@ -1,7 +1,7 @@
 ---
 title: Don't remove default focus styles, enhance them
 description: This is a WIP that I probably will never finish.
-pubDate: 2020-07-30
+pubDate: 2020-07-30T12:00-0400
 tags:
     - CSS
     - A11y

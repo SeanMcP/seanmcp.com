@@ -1,7 +1,7 @@
 ---
 title: Handy git commands
 description: A curated collection of git commands that help me do my job better
-pubDate: 2021-05-04
+pubDate: 2021-05-04T12:00-0400
 tags:
     - Garden
     - Git

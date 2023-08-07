@@ -4,7 +4,7 @@ description:
   There are now secret pages for RSS Club articles that you can save and share
 tags:
   - RSS
-pubDate: 2023-03-30T20:31:04.766Z
+pubDate: 2023-03-30T16:31-0400
 flags:
   - RSS-ONLY
 ---

@@ -1,5 +1,6 @@
 import fs from "fs";
 import { execSync } from "child_process";
+import { getTimestamp } from "./shared.mjs";
 
 try {
   execSync("git pull");
@@ -20,7 +21,7 @@ try {
     fullPath,
     `
 ---
-pubDate: ${new Date().toISOString()}
+pubDate: ${getTimestamp()}
 ---
 
 

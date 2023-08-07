@@ -3,7 +3,7 @@ title: See all package versions in npm cli
 description:
   How to use npm view to see all the published versions of a package on the
   registry.
-pubDate: 2020-12-09
+pubDate: 2020-12-09T12:00-0400
 tags:
   - npm
   - CLI

@@ -1,7 +1,7 @@
 ---
 title: A first look at Static CMS with Astro
 description: Documenting my first attempt at switching from Netlify CMS to Static CMS
-pubDate: 2022-11-29T20:43:17.582-05:00
+pubDate: 2022-11-29T20:43-0400
 tags:
   - Astro
   - Netlify

@@ -1,7 +1,7 @@
 ---
 title: Should I snapshot my UI components?
 description: The temptation is strong, but consider some of the tradeoffs.
-pubDate: 2019-09-11
+pubDate: 2019-09-11T12:00-0400
 tags:
   - React
   - Testing

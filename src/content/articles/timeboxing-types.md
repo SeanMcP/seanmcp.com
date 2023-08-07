@@ -7,7 +7,7 @@ tags:
   - Programming
   - Type Systems
   - TypeScript
-pubDate: 2023-08-02T06:14:36.803-4:00
+pubDate: 2023-08-02T06:14-0400
 verse: Romans 5:14-15
 ---
 

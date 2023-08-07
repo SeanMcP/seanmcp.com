@@ -5,7 +5,7 @@ description:
   columns
 tags:
   - CSS
-pubDate: 2023-08-01T07:18:42.768-4:00
+pubDate: 2023-08-01T07:18-0400
 verse:
 head: >-
   <style> div.example {

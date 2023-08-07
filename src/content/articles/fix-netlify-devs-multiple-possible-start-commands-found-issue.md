@@ -6,7 +6,7 @@ description:
 tags:
   - Debugging
   - Netlify
-pubDate: 2022-11-29T11:40:33.833Z
+pubDate: 2022-11-29T06:40-0400
 ---
 
 Netlify Dev attempts to guess what framework your project is using and what

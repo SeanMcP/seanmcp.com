@@ -7,7 +7,7 @@ tags:
   - Computing
   - Linux
 series: Trying Linux 2022
-pubDate: 2022-11-02T12:55:44.054Z
+pubDate: 2022-11-02T08:55-0400
 ---
 
 I wrote

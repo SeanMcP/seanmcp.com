@@ -1,7 +1,7 @@
 ---
 title: "Fix 'EMFILE: too many open files' error in Jest"
 description: When trying to run Jest in watch mode, this error may mean that you are missing a dependency.
-pubDate: 2020-07-29
+pubDate: 2020-07-29T12:00-0400
 tags:
     - Debugging
     - Error

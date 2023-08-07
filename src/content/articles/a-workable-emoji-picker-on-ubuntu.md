@@ -6,7 +6,7 @@ description:
 tags:
   - Linux
   - Ubuntu
-pubDate: 2023-07-05T11:25:00.554Z
+pubDate: 2023-07-05T07:25-0400
 verse: Luke 5:24
 ---
 

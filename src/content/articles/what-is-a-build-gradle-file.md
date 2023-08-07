@@ -1,7 +1,7 @@
 ---
 title: What is a build.gradle file?
 description: An brief explanation of Gradle and build.gradle files for JavaScript developers
-pubDate: 2021-11-04
+pubDate: 2021-11-04T12:00-0400
 tags:
   - Android
   - Gradle

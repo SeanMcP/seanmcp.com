@@ -1,7 +1,7 @@
 ---
 title: Using BEM names in React Native
 description: A quick how-to without committing to whether it's a good idea or not
-pubDate: 2021-09-10
+pubDate: 2021-09-10T12:00-0400
 tags:
   - CSS
   - Mobile

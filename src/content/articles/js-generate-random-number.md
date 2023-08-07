@@ -1,7 +1,7 @@
 ---
 title: "JS Basics: Generate a random number"
 description: Using JavaScript's Math object to generate random numbers
-pubDate: 2019-02-11
+pubDate: 2019-02-11T12:00-0400
 tags:
   - JavaScript
 ---

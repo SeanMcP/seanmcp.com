@@ -1,7 +1,7 @@
 ---
 title: MagnoliaJS 2020 conference notes
 description: Some notes from the talks that I was able to attend
-pubDate: 2020-04-16
+pubDate: 2020-04-16T12:00-0400
 tags:
     - Conferences
 verse: Isaiah 40:8

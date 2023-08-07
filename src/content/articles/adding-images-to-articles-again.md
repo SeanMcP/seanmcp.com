@@ -7,7 +7,7 @@ image: /img/warm-mountains.jpg
 tags:
   - Blogging
   - Meta
-pubDate: 2022-12-13T11:52:41.302Z
+pubDate: 2022-12-13T06:52-0400
 ---
 
 Back in 2020

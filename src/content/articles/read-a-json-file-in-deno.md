@@ -1,7 +1,7 @@
 ---
 title: Read a json file in Deno
 description: How to use Deno's standard library to read and parse data from a json file.
-pubDate: 2020-05-28
+pubDate: 2020-05-28T12:00-0400
 tags:
   - Deno
   - JavaScript

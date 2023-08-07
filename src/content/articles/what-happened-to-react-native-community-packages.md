@@ -1,7 +1,7 @@
 ---
 title: What happened to @react-native-community packages?
 description: Why you won't be installing any community packages on your next React Native project
-pubDate: 2021-10-05
+pubDate: 2021-10-05T12:00-0400
 tags:
   - Mobile
   - React Native

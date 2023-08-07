@@ -5,7 +5,7 @@ description:
   recently
 tags:
   - Writing
-pubDate: 2023-07-04T10:58:23.170Z
+pubDate: 2023-07-04T06:58-0400
 verse: Jeremiah 31:33
 ---
 

@@ -6,7 +6,7 @@ description:
   in the language
 tags:
   - Go
-pubDate: 2023-07-04T10:51:07.250Z
+pubDate: 2023-07-04T06:51-0400
 verse: Hebrews 12:1-2
 ---
 

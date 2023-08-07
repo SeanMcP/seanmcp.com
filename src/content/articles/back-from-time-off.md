@@ -3,7 +3,7 @@ title: Back from time off
 description: Reflecting on taking a break for all of January 2023
 tags:
     - Meta
-pubDate: 2023-02-01T18:47:13.007Z
+pubDate: 2023-02-01T13:47-0400
 ---
 
 I took the month of January off from coding. It was a good opportunity to decompress after work hours, explore new hobbies, and reflect on the future.

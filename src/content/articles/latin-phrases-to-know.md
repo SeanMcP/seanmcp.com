@@ -1,7 +1,7 @@
 ---
 title: Latin phrases to know
 description: This is a WIP that I probably will never finish.
-pubDate: 2021-06-07
+pubDate: 2021-06-07T12:00-0400
 tags:
     - Garden
     - Language

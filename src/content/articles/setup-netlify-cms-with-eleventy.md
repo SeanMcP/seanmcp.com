@@ -1,7 +1,7 @@
 ---
 title: Setup Netlify CMS with Eleventy
 description: This is a WIP that I probably will never finish.
-pubDate: 2021-02-08
+pubDate: 2021-02-08T12:00-0400
 tags:
   - WIP
   - Eleventy

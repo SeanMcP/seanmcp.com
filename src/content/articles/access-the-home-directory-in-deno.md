@@ -1,7 +1,7 @@
 ---
 title: Access the home directory in Deno
 description: Using Deno's environment to determine your computer's home directory
-pubDate: 2020-07-17
+pubDate: 2020-07-17T12:00-0400
 tags:
     - Deno
 ---

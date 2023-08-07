@@ -2,7 +2,7 @@
 title: Before Debugging
 description: An organized approach to debugging your code
 tendedDates:
-  - 2020-07-10
+  - 2020-07-10T12:00-0400
 verse: Proverbs 30:25
 ---
 

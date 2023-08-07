@@ -2,7 +2,7 @@
 title: The Economics of Software Development, Part I
 description:
   How developers can reduce opportunity costs and avoid the sunk-cost fallacy
-pubDate: 2020-07-14
+pubDate: 2020-07-14T12:00-0400
 tags:
   - Economics
   - Software Engineering

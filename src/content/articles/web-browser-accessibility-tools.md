@@ -6,7 +6,7 @@ description:
 tags:
   - A11y
   - Dev Tools
-pubDate: 2023-05-19T11:07:42.274Z
+pubDate: 2023-05-19T07:07-0400
 verse: Isaiah 1:17
 ---
 

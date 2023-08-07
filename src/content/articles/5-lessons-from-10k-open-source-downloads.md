@@ -3,7 +3,7 @@ title: 5 Lessons from 10k open-source downloads
 description:
   A few things I've learned from managing a modestly popular open-source
   package.
-pubDate: 2019-11-25
+pubDate: 2019-11-25T12:00-0400
 tags:
   - Open Source
   - Package

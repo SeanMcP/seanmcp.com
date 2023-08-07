@@ -5,7 +5,7 @@ description:
   when authoring Astro components.
 tags:
   - Astro
-pubDate: 2022-11-29T15:36:16.192Z
+pubDate: 2022-11-29T10:36-0400
 ---
 
 Over the past month I have been enjoying working in the
