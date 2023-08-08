@@ -34,7 +34,7 @@ articles.forEach((article) => {
 
         return (
           <article class="stack(xs)" id={slug}>
-            <a href={`/series/${name}`}>{name}</a>
+            <a href={`/series/${slug}`}>{name}</a>
             {data?.description && <p>{data?.description}</p>}
             <p>
               <span>
