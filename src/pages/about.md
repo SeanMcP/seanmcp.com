@@ -7,21 +7,18 @@ head: >-
           display: block;
           padding-bottom: 1rem;
           margin: 0 auto;
-          max-width: 67%;
-          width: 100%;
       }
 
       @media (min-width: 500px) {
           .headshot {
               float: right;
-              max-width: 33%;
               padding-left: 1rem;
           }
       }
   </style>
 ---
 
-<img class="headshot" src="/img/seanmcp_2022.jpg" alt="A photo of Sean McPherson smiling">
+<img class="headshot" src="https://res.cloudinary.com/seanmcp/image/upload/c_scale,h_240,w_240/seanmcp_2022_khpgsy.jpg" alt="A photo of Sean McPherson smiling">
 
 My name is Sean McPherson, or [Sean McP](/articles/how-to-pronounce-my-name) for
 short, and I am a software engineer in Pittsburgh, PA [on a mission](/mission)
