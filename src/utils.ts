@@ -84,7 +84,7 @@ export function getGardenState(garden: CollectionEntry<"gardens">) {
   const lastYear = new Date();
   lastYear.setFullYear(lastYear.getFullYear() - 1);
 
-  return garden.data.tendedDates[0] > lastYear ? "FRESH" : "WILD";
+  return new Date(garden.data.tendedDates[0]) > lastYear ? "FRESH" : "WILD";
 }
 
 export async function getGardens() {

@@ -4,19 +4,25 @@ import { getArticles, readableDate, slugify } from "src/utils";
 import seriesData from "src/data/series-data.json";
 
 const articles = await getArticles();
-const series: Record<string, { count: number; lastUpdated: Date }> = {};
+const series: Record<string, { count: number; lastUpdated: string }> = {};
+const enCollator = Intl.Collator("en");
 
 articles.forEach((article) => {
   if (article.data.series) {
     if (!series[article.data.series]) {
       series[article.data.series] = {
         count: 0,
-        lastUpdated: null,
+        lastUpdated: "",
       };
     }
 
     series[article.data.series].count += 1;
-    if (series[article.data.series].lastUpdated < article.data.pubDate) {
+    if (
+      enCollator.compare(
+        article.data.pubDate,
+        series[article.data.series].lastUpdated
+      ) === 1
+    ) {
       series[article.data.series].lastUpdated = article.data.pubDate;
     }
   }
