@@ -9,6 +9,7 @@ tags:
   - TypeScript
 pubDate: 2023-08-02T06:14-0400
 verse: Romans 5:14-15
+image: /img/value-of-writing-types.png
 ---
 
 Two things that I currently believe:
@@ -43,8 +44,8 @@ the time to "solve" them. And as the types grow more complex, so too does the
 amount of time required for the "solution". I don't know if I can say
 exponentially, but that doesn't feel far off.
 
-The reality is that a simpler, less-precise type written quickly will probably
-get you 90+% of the benefits of the "perfect" type. Chris continues:
+The reality is that a basic type written quickly will probably get you 90+% of
+the benefits of the "perfect" type. Chris continues:
 
 > A simpler type might be a little less precise, might catch a couple fewer
 > errors, might make the system mildly less robust at runtime, might make it
@@ -60,7 +61,7 @@ If you can write the perfect type--"solve" that puzzle--then great! But if not,
 that's okay too. You surely have enough value in the type to justify the time
 you spent writing it.
 
-This timeboxed writing should be in combination with an effort to mastery the
+This timeboxed writing should be in combination with an effort to master the
 type system you are using. As you grow in your understanding of the system, the
 quality of the types that you can write within your timebox will increase.
 
