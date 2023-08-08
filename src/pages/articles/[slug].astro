@@ -3,7 +3,6 @@ import { getArticles } from "src/utils";
 import ArticleSeries from "@components/ArticleSeries.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import ReadableTime from "@components/ReadableTime.astro";
-import HeroImage from "@components/HeroImage.astro";
 
 export async function getStaticPaths() {
   const articles = await getArticles();
@@ -31,7 +30,6 @@ const verse = data.verse ?? "Romans 5:8";
         )
       }
     </p>
-    <HeroImage image={data.image} />
     <ArticleSeries series={data.series} />
     {
       data.tags?.includes("Garden") && (

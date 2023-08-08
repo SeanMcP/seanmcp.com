@@ -10,6 +10,8 @@ tags:
 pubDate: 2022-12-13T06:52-0400
 ---
 
+![a mountain range with a warm glow](/img/warm-mountains.jpg)
+
 Back in 2020
 [I wrote about adding images to articles](/articles/adding-images-to-my-articles),
 but I broke all of that when I rewrote the site in September. At the time, I

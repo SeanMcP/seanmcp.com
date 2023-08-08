@@ -9,6 +9,8 @@ tags:
 pubDate: 2022-12-20T10:14-0400
 ---
 
+![a hole in the sidewalk filed with a caution cone](/img/caution.jpg)
+
 I was working on a script recently and ran into an unexpected issue. The work
 involved parsing a number-range string into an array of numbers, _e.g._ "1-100"
 into `[1,100]`.

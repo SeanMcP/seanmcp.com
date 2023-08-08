@@ -14,6 +14,8 @@ tags:
 - Confidence to grow
 -->
 
+![a photograph of an upward shot of redwood trees](/img/redwood.min.jpg)
+
 I previously [wrote about testing UI components](../snapshot_test_ui_components), and why I recommend that you don't use snapshots. I finished that article with this line:
 
 > Your tests should give me the confidence to refactor any component to your heart's content. They should fail if you change functionality, not structure.
