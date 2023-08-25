@@ -3,11 +3,12 @@ title: Remove duplicates from an array in JavaScript
 description: Using sets to de-dupe arrays of primitive and object-like values
 tags:
   - JavaScript
-pubDate: 2023-08-24T06:06-0400
-verse:
-flags:
-  - DRAFT
+pubDate: 2023-08-25T06:38-0400
+verse: Psalm 103:12
+image: https://res.cloudinary.com/seanmcp/image/upload/v1692892991/remove-duplicates-in-array_ptvagw.png
 ---
+
+![](https://res.cloudinary.com/seanmcp/image/upload/v1692892991/remove-duplicates-in-array_ptvagw.png)
 
 Removing duplicates, sometimes called de-duplicating or de-duping, is a common
 task in programming. There are many ways for removing duplicates from an array
@@ -21,7 +22,7 @@ are the simplest form of data like strings and numbers. Let's say you have an
 array of strings:
 
 ```js
-const original = ["u1", "u2", "u3", "u2"];
+const original = ["a", "b", "c", "b"];
 ```
 
 We can de-duplicate this array by using it to create a set, a special object
@@ -29,7 +30,7 @@ that only stores unique values. We'll pass it to the `Set` constructor, and then
 compare the two by looking at how many items they contain:
 
 ```js
-const original = ["u1", "u2", "u3", "u2"];
+const original = ["a", "b", "c", "b"];
 const set = new Set(original);
 
 console.log(original.length + " vs " + set.size);
@@ -40,23 +41,23 @@ The final step is to convert this new set back into an array. We can do this
 with the `Array.from` method:
 
 ```js
-const original = ["u1", "u2", "u3", "u2"];
+const original = ["a", "b", "c", "b"];
 const set = new Set(original);
 const deDuped = Array.from(set);
 
-console.log(original); // ["u1", "u2", "u3", "u2"]
-console.log(deDuped); // ["u1", "u2", "u3"]
+console.log(original); // ["a", "b", "c", "b"]
+console.log(deDuped); // ["a", "b", "c"]
 ```
 
 With that strategy, we could write a one-liner or create a helper function for
 reuse later:
 
 ```js
-const original = ["u1", "u2", "u3", "u2"];
+const original = ["a", "b", "c", "b"];
 const deDuped = Array.from(new Set(original));
 
 const deDupePrimitiveArray = (arr) => Array.from(new Set(arr));
-deDupePrimitiveArray(original); // ["u1", "u2", "u3"]
+deDupePrimitiveArray(original); // ["a", "b", "c"]
 ```
 
 I think this is a nice and modern solution to remove duplicates from simple
@@ -70,7 +71,7 @@ strategy for removing duplicates. Let's say you have an array of objects with a
 unique `id` property:
 
 ```js
-const original = [{ id: "u1" }, { id: "u2" }, { id: "u3" }, { id: "u2" }];
+const original = [{ id: "a" }, { id: "b" }, { id: "c" }, { id: "b" }];
 ```
 
 We can use this `id` to keep track of which objects we have already seen. There
@@ -79,7 +80,7 @@ the last example. We'll create a new set to keep track of ids that we've already
 seen:
 
 ```js
-const original = [{ id: "u1" }, { id: "u2" }, { id: "u3" }, { id: "u2" }];
+const original = [{ id: "a" }, { id: "b" }, { id: "c" }, { id: "b" }];
 const seen = new Set();
 ```
 
@@ -88,7 +89,7 @@ the set. If it is, then we know that this object is a duplicate and can be
 filtered out:
 
 ```js
-const original = [{ id: "u1" }, { id: "u2" }, { id: "u3" }, { id: "u2" }];
+const original = [{ id: "a" }, { id: "b" }, { id: "c" }, { id: "b" }];
 const seen = new Set();
 
 const deDuped = original.filter((current) => {
@@ -98,7 +99,7 @@ const deDuped = original.filter((current) => {
   seen.add(current.id);
   return true;
 });
-// [{ id: "u1" }, { id: "u2" }, { id: "u3" }]
+// [{ id: "a" }, { id: "b" }, { id: "c" }]
 ```
 
 We can't write a one-liner for this, but we can create a helper function. In
@@ -106,7 +107,7 @@ addition to the array, we'll need to accept a function that maps an item in the
 array to the unique property that we'll use for comparison:
 
 ```js
-const original = [{ id: "u1" }, { id: "u2" }, { id: "u3" }, { id: "u2" }];
+const original = [{ id: "a" }, { id: "b" }, { id: "c" }, { id: "b" }];
 
 const deDupeObjectArray = (arr, mapper) => {
   const seen = new Set();
@@ -122,7 +123,7 @@ const deDupeObjectArray = (arr, mapper) => {
 };
 
 deDupeObjectArray(original, (item) => item.id);
-// [{ id: "u1" }, { id: "u2" }, { id: "u3" }]
+// [{ id: "a" }, { id: "b" }, { id: "c" }]
 ```
 
 Now that we have a mapper function, we can combine this with the previous
@@ -154,15 +155,15 @@ Now we can use this function to remove duplicates from primitive or object
 arrays:
 
 ```js
-console.log(deDupe(["u1", "u2", "u3", "u2"]));
-// ["u1", "u2", "u3"]
+console.log(deDupe(["a", "b", "c", "b"]));
+// ["a", "b", "c"]
 console.log(
   deDupe(
-    [{ id: "u1" }, { id: "u2" }, { id: "u3" }, { id: "u2" }],
+    [{ id: "a" }, { id: "b" }, { id: "c" }, { id: "b" }],
     (item) => item.id
   )
 );
-// [{ id: "u1" }, { id: "u2" }, { id: "u3" }]
+// [{ id: "a" }, { id: "b" }, { id: "c" }]
 ```
 
 You can see all of the examples above in this REPL: https://replit.com/@SeanMcP/removing-duplicates-in-arrays#index.ts
