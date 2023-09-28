@@ -54,6 +54,7 @@ Here is an evergreen list of the tools that I use to get work done.
 In addition to language-specific extensions, I use the following:
 
 - Code Spell Checker
+- Copy GitHub URL
 - Duplicate action
 - Format Comment
 - Git Blame
@@ -73,6 +74,7 @@ In addition to language-specific extensions, I use the following:
 - [GIMP](https://www.gimp.org/)
 - [Inkscape](https://inkscape.org/)
 - [KeyCastr](https://github.com/keycastr/keycastr)
+- [MeetingBar](https://meetingbar.app/): (Mac) Upcoming calendar events in status bar
 - [Numi](https://numi.app/)
 - [Pika](https://superhighfives.com/pika) color picker
 - [Rectangle](https://rectangleapp.com/) macOS window arranger
