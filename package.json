@@ -8,7 +8,6 @@
     "@astrojs/sitemap": "^1.3.3",
     "@astrojs/svelte": "^2.2.0",
     "astro": "^2.6.1",
-    "astro-emoji": "^1.2.0",
     "astro-netlify-components": "^0.2.1",
     "consonant-vowel-patterns": "^1.0.0",
     "netlify-cli": "^15.11.0",

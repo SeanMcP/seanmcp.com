@@ -10,8 +10,6 @@ tags:
 verse: Exodus 12:39
 ---
 
-import Emoji from "astro-emoji";
-
 Idioms are interesting. They're phrases that have a functional meaning that is
 independent of their literal meaning. In English, we have idioms like "beating
 around the bush," which means to avoid saying what you really mean because it's
@@ -28,7 +26,7 @@ argue. I'm not going to go that far; I think learning of
 [idioms in other languages in kind of neat](https://www.thatsanegg.com/about).
 That said, there is one English idiom that I would like to remove:
 
-> There is more than one way to skin a cat. <Emoji symbol='😿'/>
+> There is more than one way to skin a cat. <e-moji>😿</e-moji>
 
 If you are unfamiliar, the idiom means that there are multiple ways to complete
 a particular task. Since that is an axiom of sorts in programming,
@@ -45,7 +43,7 @@ cats and a phrase that involves removing their skin is a little insensitive.
 
 I propose replacing this idiom with another:
 
-> There is more than one way to bake a cake. <Emoji symbol='🍰'/>
+> There is more than one way to bake a cake. <e-moji>🍰</e-moji>
 
 This works on multiple levels. One, cakes are fun. Two, most people have heard
 of baking cakes and may have baked one themselves. And three, it doesn't involve

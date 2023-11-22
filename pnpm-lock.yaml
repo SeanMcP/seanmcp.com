@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -20,9 +20,6 @@ dependencies:
   astro:
     specifier: ^2.6.1
     version: 2.6.1(@types/node@18.16.3)
-  astro-emoji:
-    specifier: ^1.2.0
-    version: 1.2.0
   astro-netlify-components:
     specifier: ^0.2.1
     version: 0.2.1
@@ -2948,10 +2945,6 @@ packages:
   /astring@1.8.4:
     resolution: {integrity: sha512-97a+l2LBU3Op3bBQEff79i/E4jMD2ZLFD8rHx9B6mXyB2uQwhJQYfiDqUwtfjF4QA1F2qs//N6Cw8LetMbQjcw==}
     hasBin: true
-    dev: false
-
-  /astro-emoji@1.2.0:
-    resolution: {integrity: sha512-VSOWEuIJEUGX34w591LlwVWupr6Y+oFa9/HG/L3t1VdQRqK8j9c1578m67auQXMgC1FMF8S5poYF61CPawlrLw==}
     dev: false
 
   /astro-netlify-components@0.2.1:
@@ -7580,6 +7573,7 @@ packages:
 
   /nan@2.17.0:
     resolution: {integrity: sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==}
+    requiresBuild: true
     dev: false
     optional: true
 

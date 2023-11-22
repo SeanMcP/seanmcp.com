@@ -240,3 +240,24 @@ iframe {
     }
   }
 );
+
+customElements.define(
+  "e-moji",
+  class EMoji extends HTMLElement {
+    constructor() {
+      super();
+
+      const template = document.createElement("template");
+
+      const label = this.getAttribute("label");
+      const symbol = this.textContent.trim();
+
+      template.innerHTML = /* html */ `
+<span role="img" ${label ? `aria-label="${label}"` : `aria-hidden="true"`}>${symbol}</span>`;
+
+      this.attachShadow({ mode: "open" });
+
+      this.shadowRoot.append(template.content.cloneNode(true));
+    }
+  }
+)
