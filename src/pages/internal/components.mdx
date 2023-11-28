@@ -1,0 +1,41 @@
+---
+layout: "@layouts/PageLayout.astro"
+title: Components
+description: All components used across the site
+---
+
+import Counter from "@components/applets/Counter.svelte";
+import CumulativeSum from "@components/applets/CumulativeSum.svelte";
+import CVP from "@components/applets/CVP.svelte";
+
+## Applets
+
+<Counter client:visible />
+
+<br />
+
+<CumulativeSum client:visible />
+
+<br />
+
+<CVP client:visible />
+
+## Web Components
+
+### `bible-verse`
+
+<bible-verse>John 3:16</bible-verse>
+
+### `call-out`
+
+<call-out type="check">The quick brown fox jumped over the lazy dog.</call-out>
+<call-out type="error">The quick brown fox jumped over the lazy dog.</call-out>
+<call-out type="info">The quick brown fox jumped over the lazy dog.</call-out>
+<call-out type="warn">The quick brown fox jumped over the lazy dog.</call-out>
+<call-out type="wave">The quick brown fox jumped over the lazy dog.</call-out>
+
+### `e-moji`
+
+<e-moji label="zap">⚡️</e-moji>: with label
+
+<e-moji>🤐</e-moji>: without label

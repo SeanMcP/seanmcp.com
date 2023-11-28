@@ -68,6 +68,10 @@ customElements.define(
       const template = document.createElement("template");
       template.innerHTML = /* html */ `
 <style>
+    :host {
+      display: block;
+    }
+    
     section {
         align-items: center;
         border: 0.125em solid hsla(0, 0%, 0%, 0.1);
