@@ -2,6 +2,7 @@
 title: seanmcp.com
 description: Documenting this site
 tendedDates:
+  - 2023-11-28T06:45-0400
   - 2023-11-27T12:15-0400
   - 2023-11-22T09:33-0400
 ---
@@ -44,8 +45,11 @@ planning redesigns.
 
 - Color palette needs to look nice with code blocks
 - Colors for each content type
+- As of 11/28/2023, there are no `h5` of `h6` elements on the site
 
 ## Unorganized thoughts
 
 - I'd prefer to have a single color scheme for the site and bypass the idea of
   light/dark mode. Maybe there is a "middle" mode that will make everyone happy.
+- I like writing with lots of headings, but "big and bold" styles make those
+  articles look bad.
