@@ -14,18 +14,3 @@ const verse = Astro.props.verse ?? "Romans 5:8";
   >
   <bible-verse>{verse}</bible-verse>
 </footer>
-
-<style>
-  bible-verse {
-    margin-inline-start: auto;
-  }
-
-  :global(bible-verse div) {
-    background-color: var(--background);
-    border: var(--stroke-thickness) solid var(--off-background);
-    bottom: calc(100% + var(--space-xs));
-    padding: var(--space-xs);
-    right: calc(-1 * var(--space-xs));
-    width: 30ch;
-  }
-</style>
