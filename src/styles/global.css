@@ -322,6 +322,7 @@ li ul {
 
 bible-verse {
   margin-inline-start: auto;
+  position: relative;
 }
 
 bible-verse div {
@@ -329,6 +330,8 @@ bible-verse div {
   border: var(--stroke-thickness) solid var(--off-background);
   bottom: calc(100% + var(--space-xs));
   padding: var(--space-xs);
+  position: absolute;
   right: calc(-1 * var(--space-xs));
   width: 30ch;
+  z-index: 1;
 }

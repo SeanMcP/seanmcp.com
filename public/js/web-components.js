@@ -10,25 +10,26 @@ customElements.define(
       this.reference = this.textContent;
       this.containerId =
         "container-" + this.reference.replace(/\W/g, "").toLowerCase();
-
-      this.render();
     }
 
     async connectedCallback() {
-      const result = await fetch(
-        `https://labs.bible.org/api/?passage=${this.reference}`
-      );
-      const html = await result.text();
+      this.render();
 
-      this.querySelector(`#${this.containerId}`).innerHTML = html;
+      try {
+        const result = await fetch(
+          `https://labs.bible.org/api/?passage=${this.reference}`
+        );
+        const html = await result.text();
+
+        this.querySelector(`#${this.containerId}`).innerHTML = html;
+      } catch (error) {
+        console.debug(error)
+      }
     }
 
     render() {
       this.innerHTML = `
       <style>
-        bible-verse {
-          position: relative;
-        }
         bible-verse:not(:is(:focus-within, :hover)) div {
           clip: rect(0 0 0 0); 
           clip-path: inset(50%);
@@ -38,10 +39,6 @@ customElements.define(
           white-space: nowrap; 
           width: 1px;
         }
-        bible-verse div {
-          position: absolute;
-          z-index: 1;
-        }
       </style>
       <a
         aria-describedby="${this.containerId}"
@@ -50,9 +47,7 @@ customElements.define(
       >
         ${this.reference}
       </a>
-      <div data-anchor="${this.getAttribute("anchor")}" id="${
-        this.containerId
-      }"></div>
+      <div id="${this.containerId}"></div>
     `;
     }
   }
@@ -64,6 +59,9 @@ customElements.define(
     constructor() {
       super();
 
+      this.attachShadow({ mode: "open" });
+    }
+    connectedCallback() {
       // Maybe https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role ?
       const template = document.createElement("template");
       template.innerHTML = /* html */ `
@@ -124,8 +122,6 @@ customElements.define(
 </section>
       `;
 
-      this.attachShadow({ mode: "open" });
-
       this.shadowRoot.append(template.content.cloneNode(true));
     }
 
@@ -155,10 +151,7 @@ customElements.define(
 customElements.define(
   "em-bed",
   class EmBed extends HTMLElement {
-    constructor() {
-      super();
-
-      this.attachShadow({ mode: "open" });
+    connectedCallback() {
       const anchor = this.querySelector("a");
       if (!anchor) {
         throw new Error("em-bed missing required anchor child");
@@ -166,23 +159,49 @@ customElements.define(
       const { href } = anchor;
 
       if (href.includes("youtube.com")) {
-        this.youtube(href);
+        this.handleYouTube(href);
       } else if (href.includes("codepen.io")) {
-        this.codepen(href);
+        this.handleCodePen(href);
       } else if (href.includes("stackblitz.com")) {
-        this.stackblitz(href);
-      } else {
-        const template = document.createElement("template");
-        template.innerHTML = "<slot></slot>";
-        this.shadowRoot.append(template.content.cloneNode(true));
+        this.handleStackBlitz(href);
       }
     }
 
-    codepen(url) {
-      // The CodePen script could not find the markup in the shadow
-      // root, and the CodePen iframe would not load within a web
-      // component. So while this breaks the definition of a WC, it
-      // was the only solution that I found.
+    getIframe(src, title, type) {
+      const iframe = document.createElement("iframe");
+
+      iframe.setAttribute("allowfullscreen", "true");
+      iframe.setAttribute("frameborder", "0");
+      iframe.src = src;
+      iframe.title = title;
+      if (type) {
+        iframe.dataset.type = type;
+      }
+
+      return iframe;
+    }
+
+    getStyle() {
+      const style = document.createElement("style");
+      style.textContent = `
+em-bed,
+:host {
+  display: block;
+}
+
+iframe {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+}
+
+iframe[data-type="youtube"] {
+  aspect-ratio: 16 / 9;
+}
+`;
+      return style;
+    }
+    
+    handleCodePen(url) {
       const { pathname } = new URL(url);
       const [user, _, id] = pathname.slice(1).split("/");
 
@@ -198,49 +217,28 @@ customElements.define(
       script.async = true;
       script.src = "https://cpwebassets.codepen.io/assets/embed/ei.js";
 
-      this.outerHTML = wrapper.outerHTML;
-      document.body.appendChild(script);
+      this.innerHTML = wrapper.outerHTML;
+      this.append(this.getStyle(), script);
     }
 
-    _iframeAttributes(iframe, src, title) {
-      iframe.setAttribute("allowfullscreen", "true");
-      iframe.setAttribute("frameborder", "0");
-      iframe.src = src;
-      iframe.title = title;
+    handleStackBlitz(url) {
+      const iframe = this.getIframe(url, "StackBlitz editor");
 
-      return iframe;
+      this.attachShadow({ mode: "open"})
+      this.shadowRoot.append(iframe, this.getStyle());
     }
 
-    _iframeStyle() {
-      const style = document.createElement("style");
-      style.textContent = `
-iframe {
-  height: 50vw;
-  max-height: 500px;
-  width: 100%;
-}
-    `;
-      return style;
-    }
-
-    stackblitz(url) {
-      const iframe = document.createElement("iframe");
-      this._iframeAttributes(iframe, url, "StackBlitz editor");
-
-      this.shadowRoot.append(iframe, this._iframeStyle());
-    }
-
-    youtube(url) {
+    handleYouTube(url) {
       const id = new URL(url).searchParams.get("v");
 
-      const iframe = document.createElement("iframe");
-      this._iframeAttributes(
-        iframe,
+      const iframe = this.getIframe(
         `https://www.youtube-nocookie.com/embed/${id}`,
-        "YouTube video player"
+        "YouTube video player",
+        "youtube"
       );
 
-      this.shadowRoot.append(iframe, this._iframeStyle());
+      this.attachShadow({ mode: "open"})
+      this.shadowRoot.append(iframe, this.getStyle());
     }
   }
 );
@@ -251,15 +249,16 @@ customElements.define(
     constructor() {
       super();
 
+      this.attachShadow({ mode: "open" });
+    }
+
+    connectedCallback() {
       const template = document.createElement("template");
 
       const label = this.getAttribute("label");
-      const symbol = this.textContent.trim();
 
       template.innerHTML = /* html */ `
-<span role="img" ${label ? `aria-label="${label}"` : `aria-hidden="true"`}>${symbol}</span>`;
-
-      this.attachShadow({ mode: "open" });
+<span role="img" ${label ? `aria-label="${label}"` : `aria-hidden="true"`}><slot></slot></span>`;
 
       this.shadowRoot.append(template.content.cloneNode(true));
     }
