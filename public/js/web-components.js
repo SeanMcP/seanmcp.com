@@ -23,7 +23,7 @@ customElements.define(
 
         this.querySelector(`#${this.containerId}`).innerHTML = html;
       } catch (error) {
-        console.debug(error)
+        console.debug(error);
       }
     }
 
@@ -200,7 +200,7 @@ iframe[data-type="youtube"] {
 `;
       return style;
     }
-    
+
     handleCodePen(url) {
       const { pathname } = new URL(url);
       const [user, _, id] = pathname.slice(1).split("/");
@@ -224,7 +224,7 @@ iframe[data-type="youtube"] {
     handleStackBlitz(url) {
       const iframe = this.getIframe(url, "StackBlitz editor");
 
-      this.attachShadow({ mode: "open"})
+      this.attachShadow({ mode: "open" });
       this.shadowRoot.append(iframe, this.getStyle());
     }
 
@@ -237,7 +237,7 @@ iframe[data-type="youtube"] {
         "youtube"
       );
 
-      this.attachShadow({ mode: "open"})
+      this.attachShadow({ mode: "open" });
       this.shadowRoot.append(iframe, this.getStyle());
     }
   }
@@ -258,9 +258,74 @@ customElements.define(
       const label = this.getAttribute("label");
 
       template.innerHTML = /* html */ `
-<span role="img" ${label ? `aria-label="${label}"` : `aria-hidden="true"`}><slot></slot></span>`;
+<span role="img" ${
+        label ? `aria-label="${label}"` : `aria-hidden="true"`
+      }><slot></slot></span>`;
 
       this.shadowRoot.append(template.content.cloneNode(true));
     }
   }
-)
+);
+
+customElements.define(
+  "like-button",
+  class LikeButton extends HTMLElement {
+    slug = undefined;
+    constructor() {
+      super();
+
+      this.slug = location.pathname;
+
+      this.attachShadow({ mode: "open" });
+    }
+
+    async connectedCallback() {
+      const attrSlug = this.getAttribute("slug");
+      if (attrSlug) {
+        this.slug = attrSlug;
+      }
+
+      const response = await fetch("/fn/likes?slug=" + this.slug);
+      let count;
+      if (response.ok) {
+        const data = await response.json();
+        count = data.count;
+      }
+
+      const template = document.createElement("template");
+      template.innerHTML = /* html */ `
+      <form action="/fn/like">
+        <input type="hidden" name="slug" value="${this.slug}">
+        <button>Like</button>
+        <span>${count || ""}</span>
+      </form>
+`;
+
+      this.shadowRoot.append(template.content.cloneNode(true));
+
+      const form = this.shadowRoot.querySelector("form");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const searchParams = new URLSearchParams(formData);
+
+        const url = form.action + "?" + searchParams.toString();
+
+        const response = await fetch(url);
+        if (response.ok) {
+          const {count} = await response.json();
+          this.shadowRoot.querySelector("span").textContent = count;
+        }
+      });
+    }
+
+    getIsLiked() {
+      const stored = JSON.parse(
+        localStorage.getItem("likes.seanmcp.com") || "{}"
+      );
+      return stored.hasOwnProperty(this.slug);
+    }
+  }
+);
