@@ -1,0 +1,45 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import { getArticles } from "src/utils";
+
+const articles = await getArticles();
+const pathToTitle = {};
+articles.forEach(article => {
+    pathToTitle["/articles/" + article.slug] = article.data.title;
+});
+console.log(pathToTitle)
+---
+
+<PageLayout title="Likes">
+
+<p>More data is available in Supabase.</p>
+
+<hr />
+
+<likes-fetcher data-articles={JSON.stringify(pathToTitle)}>
+</likes-fetcher>
+
+</PageLayout>
+
+<script>
+
+customElements.define("likes-fetcher", class LikesFetcher extends HTMLElement {
+    async connectedCallback() {
+        this.textContent = "Loading...";
+
+        const pathToTitle = JSON.parse(this.dataset.articles);
+        const response = await fetch("/fn/likes");
+        const {data: likes} = await response.json();
+
+        let html = "";
+
+        likes.forEach(like => {
+            const title = pathToTitle[like.slug] || like.slug;
+            html += `<a href=${like.slug} style="display: block; margin-block-end: 0.5rem">${title}: ${like.count}</a>`;
+        });
+
+        this.innerHTML = html;
+    }
+})
+
+</script>
