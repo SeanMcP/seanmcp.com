@@ -2,6 +2,7 @@
 title: seanmcp.com
 description: Documenting this site
 tendedDates:
+  - 2023-12-09T14:53-0400
   - 2023-11-28T06:45-0400
   - 2023-11-27T12:15-0400
   - 2023-11-22T09:33-0400
@@ -20,6 +21,7 @@ planning redesigns.
 - Draft articles
 - RSS-only articles
 - Article images
+- Like button
 
 ## Content types
 

@@ -302,7 +302,6 @@ customElements.define(
         :host {
           align-items: center;
           display: inline-flex;
-          flex-direction: column;
         }
 
         button {
@@ -330,10 +329,6 @@ customElements.define(
 
         span:empty {
           display: none;
-        }
-
-        span:not(:empty) {
-          padding-bottom: 5px;
         }
       </style>
       <form action="/fn/like">

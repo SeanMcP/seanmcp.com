@@ -51,8 +51,10 @@ const verse = data.verse ?? "Romans 5:8";
     }
     <Content />
     <hr />
-    <ContentFooter verse={verse} />
-    </footer>
+    <ContentFooter title={data.title} verse={verse} />
+    <div style="text-align: center">
+      <like-button title="BETA"></like-button>
+    </div>
   </article>
 </PageLayout>
 

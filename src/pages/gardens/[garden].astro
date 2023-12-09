@@ -24,7 +24,6 @@ const {
   {...entry.data}
   title={title}
   description={description}
-  showBreadcrumbs
   withoutH1
 >
   <h1><GardenTitle title={title} state={getGardenState(entry)} /></h1>
@@ -33,4 +32,7 @@ const {
   <Content />
   <hr />
   <ContentFooter title={title} verse={verse} />
+  <div style="text-align: center">
+    <like-button title="BETA"></like-button>
+  </div>
 </PageLayout>
