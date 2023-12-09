@@ -9,10 +9,20 @@ const supabase = createClient(
 const IS_DEV = Netlify.env.get("NETLIFY_DEV");
 
 export default async (req: Request, context) => {
-  const referer = new URL(req.headers.get('referer'));
+  const referer = req.headers.get("referer");
+  const isInvalidReferer =
+    referer && new URL(referer).origin !== context.site.url;
 
-  if (!IS_DEV && referer.origin !== context.site.url) {
-    return Response.json({ error: "Not authorized" }, { status: 401 });
+  if (!IS_DEV && isInvalidReferer) {
+    return Response.json(
+      {
+        error: "Not authorized",
+        metadata: {
+          ...Netlify.env.toObject(),
+        },
+      },
+      { status: 401 }
+    );
   }
 
   const requestURL = new URL(req.url);
