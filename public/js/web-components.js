@@ -272,7 +272,7 @@ customElements.define(
   class LikeButton extends HTMLElement {
     storeKey = "com.seanmcp.likes";
     slug = undefined;
-    
+
     constructor() {
       super();
 
@@ -303,13 +303,6 @@ customElements.define(
           align-items: center;
           display: inline-flex;
           flex-direction: column;
-          padding-bottom: 5px;
-        }
-
-        button, form {
-          align-items: center;
-          display: flex;
-          justify-content: center;
         }
 
         button {
@@ -333,6 +326,14 @@ customElements.define(
 
         button[aria-disabled="true"] > svg > path {
           fill: currentColor;
+        }
+
+        span:empty {
+          display: none;
+        }
+
+        span:not(:empty) {
+          padding-bottom: 5px;
         }
       </style>
       <form action="/fn/like">
