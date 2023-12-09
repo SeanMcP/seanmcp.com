@@ -1,4 +1,8 @@
 ---
+interface Props {
+  currentPageTitle: string;
+}
+
 const { pathname } = Astro.url;
 
 const crumbs = ["/"];
@@ -13,10 +17,15 @@ for (let i = 0; i < pathname.length; i++) {
   }
 }
 
-function crumbToLabel(crumb) {
+function crumbToLabel(crumb, i) {
   if (crumb === "/") {
     return "Home";
   }
+  
+  if (i === crumbs.length - 1) {
+    return Astro.props.currentPageTitle;
+  }
+
   const slug = crumb.slice(crumb.lastIndexOf("/") + 1);
   const readable = slug.replace(/-(\w)/g, (match) => {
     return ` ${match[1].toUpperCase()}`;
@@ -32,7 +41,7 @@ function crumbToLabel(crumb) {
         i === 0 ? (
           <a href={crumb} class="center()">
             <svg
-              aria-label={crumbToLabel(crumb)}
+              aria-label={crumbToLabel(crumb,i)}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
             >
@@ -50,7 +59,7 @@ function crumbToLabel(crumb) {
         ) : (
           <>
             {i > 0 && <span class="divider()" />}
-            <a href={crumb}>{crumbToLabel(crumb)}</a>
+            <a href={crumb}>{crumbToLabel(crumb, i)}</a>
           </>
         )
       )}

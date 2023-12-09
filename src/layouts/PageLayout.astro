@@ -20,7 +20,7 @@ const showBreadcrumbs =
   <SiteHeader />
   <main id="main">
     <div class="contain() stack()">
-      {showBreadcrumbs && <Breadcrumbs />}
+      {showBreadcrumbs && <Breadcrumbs currentPageTitle={title} />}
       <!-- TODO: Add hero images to pages -->
       {!withoutH1 && <h1>{title}</h1>}
       <slot />
