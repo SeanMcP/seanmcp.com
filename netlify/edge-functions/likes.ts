@@ -6,7 +6,7 @@ const supabase = createClient(
   Netlify.env.get("SUPABASE_LIKES_KEY")
 );
 
-const IS_DEV = Netlify.env.get("DEV");
+const IS_DEV = Netlify.env.get("NETLIFY_DEV");
 
 export default async (req: Request, context) => {
   const referer = new URL(req.headers.get('referer'));
