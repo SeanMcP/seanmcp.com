@@ -270,7 +270,9 @@ customElements.define(
 customElements.define(
   "like-button",
   class LikeButton extends HTMLElement {
+    storeKey = "com.seanmcp.likes";
     slug = undefined;
+    
     constructor() {
       super();
 
@@ -292,13 +294,61 @@ customElements.define(
         count = data.count;
       }
 
+      const isLiked = this.getIsLiked();
+
       const template = document.createElement("template");
       template.innerHTML = /* html */ `
+      <style>
+        :host {
+          align-items: center;
+          display: inline-flex;
+          flex-direction: column;
+          padding-bottom: 5px;
+        }
+
+        button, form {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+        }
+
+        button {
+          align-items: center;
+          background: transparent;
+          border: none;
+          color: var(--anchor-color);
+          display: flex;
+          justify-content: center;
+          padding: 10px;
+          transition: all 100ms ease-in-out;
+        }
+
+        button:is(:focus, :hover) {
+          transform: scale(1.15);
+        }
+
+        button > svg {
+          width: 24px;
+        }
+
+        button[aria-disabled="true"] > svg > path {
+          fill: currentColor;
+        }
+      </style>
       <form action="/fn/like">
         <input type="hidden" name="slug" value="${this.slug}">
-        <button>Like</button>
-        <span>${count || ""}</span>
+        <button
+          ${isLiked ? "aria-disabled=true" : ""}
+          aria-label="${isLiked ? "Liked" : "Like"}"
+          class="center() focusable()"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+            <rect width="256" height="256" fill="none"/>
+            <path d="M128,216S24,160,24,94A54,54,0,0,1,78,40c22.59,0,41.94,12.31,50,32,8.06-19.69,27.41-32,50-32a54,54,0,0,1,54,54C232,160,128,216,128,216Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+          </svg>
+        </button>
       </form>
+      <span>${count || ""}</span>
 `;
 
       this.shadowRoot.append(template.content.cloneNode(true));
@@ -307,6 +357,10 @@ customElements.define(
 
       form.addEventListener("submit", async (event) => {
         event.preventDefault();
+        const button = this.shadowRoot.querySelector("button");
+        if (button.getAttribute("aria-disabled")) {
+          return;
+        }
 
         const formData = new FormData(form);
         const searchParams = new URLSearchParams(formData);
@@ -315,17 +369,24 @@ customElements.define(
 
         const response = await fetch(url);
         if (response.ok) {
-          const {count} = await response.json();
+          const { count } = await response.json();
+          this.setIsLiked();
+          button.setAttribute("aria-disabled", "true");
+          button.setAttribute("aria-label", "Liked");
           this.shadowRoot.querySelector("span").textContent = count;
         }
       });
     }
 
     getIsLiked() {
-      const stored = JSON.parse(
-        localStorage.getItem("likes.seanmcp.com") || "{}"
-      );
-      return stored.hasOwnProperty(this.slug);
+      const store = JSON.parse(localStorage.getItem(this.storeKey) || "[]");
+      return store.includes(this.slug);
+    }
+
+    setIsLiked() {
+      const stored = JSON.parse(localStorage.getItem(this.storeKey) || "[]");
+      stored.push(this.slug);
+      localStorage.setItem(this.storeKey, JSON.stringify(stored));
     }
   }
 );
