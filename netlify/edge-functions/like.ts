@@ -18,7 +18,8 @@ export default async (req: Request, context) => {
       {
         error: "Not authorized",
         metadata: {
-          ...Netlify.env.toObject(),
+          referer,
+          url: context.site.url,
         },
       },
       { status: 401 }
