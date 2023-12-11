@@ -1,7 +1,7 @@
 ---
 import { readableDate } from "../utils";
 
-const { date } = Astro.props;
+const { date, style } = Astro.props;
 ---
 
-<time datetime={date}>{readableDate(date)}</time>
+<time datetime={date} style={style}>{readableDate(date)}</time>

@@ -72,7 +72,6 @@ customElements.define(
     
     section {
         align-items: center;
-        border: 0.125em solid hsla(0, 0%, 0%, 0.1);
         display: flex;
         gap: 1rem;
         padding: 1rem;
@@ -107,9 +106,8 @@ customElements.define(
     }
 
     svg {
-        fill: currentColor;
-        opacity: 0.5;
-        width: 44px;
+      fill: var(--text-color);
+      width: 44px;
     }
 </style>
 <section data-type="${this.getAttribute("type")}">
@@ -258,9 +256,8 @@ customElements.define(
       const label = this.getAttribute("label");
 
       template.innerHTML = /* html */ `
-<span role="img" ${
-        label ? `aria-label="${label}"` : `aria-hidden="true"`
-      }><slot></slot></span>`;
+<span role="img" ${label ? `aria-label="${label}"` : `aria-hidden="true"`
+        }><slot></slot></span>`;
 
       this.shadowRoot.append(template.content.cloneNode(true));
     }

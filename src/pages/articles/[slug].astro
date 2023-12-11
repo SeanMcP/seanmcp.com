@@ -21,32 +21,27 @@ const verse = data.verse ?? "Romans 5:8";
 
 <PageLayout {...data} withoutH1>
   <article class="article | stack()">
+    <ReadableTime
+      date={data.pubDate}
+      style="color: var(--lighter-text-color)"
+    />
     <h1>{data.title}</h1>
-    <p class="byline | line()">
-      By Sean McPherson<span class="divider()"></span>{
-        data.tags?.includes("garden") ? (
-          "Garden"
-        ) : (
-          <ReadableTime date={data.pubDate} />
-        )
-      }
-    </p>
     <ArticleSeries series={data.series} />
     {
       data.tags?.includes("Garden") && (
-        <section class="attn">
+        <call-out type="wave">
           Evergreen articles like this have moved:{" "}
           <a href="/gardens">view my gardens section</a> 🌱
-        </section>
+        </call-out>
       )
     }
     {
       data.flags?.includes("RSS-ONLY") && (
-        <section class="attn">
+        <call-out type="info">
           This is a special article for <strong>the RSS Club</strong>, but feel
           free to save or share this link. You can join by subscribing to{" "}
           <a href="/rss.xml">my RSS feed</a>.
-        </section>
+        </call-out>
       )
     }
     <Content />
@@ -64,13 +59,9 @@ const verse = data.verse ?? "Romans 5:8";
 </PageLayout>
 
 <style>
-  .byline {
+  h1 {
+    margin-block-start: var(--space-xs) !important;
     margin-block-end: var(--space-l) !important;
-  }
-
-  .attn {
-    border: var(--stroke-thickness) solid var(--off-background);
-    padding: var(--space-s);
   }
 
   :global(.article img) {
