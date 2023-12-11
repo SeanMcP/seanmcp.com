@@ -56,6 +56,11 @@ const verse = data.verse ?? "Romans 5:8";
       <like-button title="BETA"></like-button>
     </div>
   </article>
+  {
+    data.scripts?.map((filename) => (
+      <script src={`/js/${filename}`} type="module" />
+    ))
+  }
 </PageLayout>
 
 <style>
