@@ -21,6 +21,7 @@
   "scripts": {
     "astro": "astro",
     "build": "astro build",
+    "postbuild": "npx -y pagefind --site dist",
     "dev": "astro dev",
     "devn": "netlify dev",
     "devc": "npm-run-all --parallel cms dev",

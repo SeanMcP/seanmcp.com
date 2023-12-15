@@ -1,0 +1,22 @@
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<script is:inline src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", () => {
+    new PagefindUI({
+      element: "#search",
+      showImages: false,
+      showSubResults: true,
+    });
+  });
+</script>
+
+<style>
+  #search {
+    --pagefind-ui-background: var(--background);
+    --pagefind-ui-border: var(--off-background);
+    --pagefind-ui-font: inherit;
+    --pagefind-ui-primary: var(--primary);
+    --pagefind-ui-text: var(--text-color);
+  }
+</style>
