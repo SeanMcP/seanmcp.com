@@ -1,0 +1,139 @@
+---
+import Pagefind from "./Pagefind.astro";
+const id = "cp-" + Math.random().toString(36).slice(2, 6);
+const triggerId = id + "_trigger";
+const dialogId = id + "_dialog";
+---
+
+<button id={triggerId} class="focusable()">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="#000000"
+    viewBox="0 0 256 256"
+    ><rect width="256" height="256" fill="none"></rect><circle
+      cx="116"
+      cy="116"
+      r="84"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="16"></circle><line
+      x1="175.4"
+      y1="175.4"
+      x2="224"
+      y2="224"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="16"></line>
+  </svg>
+  <span class="hidden()">Search</span>
+</button>
+
+<dialog id={dialogId}>
+  <Pagefind />
+</dialog>
+
+<script define:vars={{ dialogId, triggerId }}>
+  console.log("HERE", dialogId, triggerId);
+  // Copied from utils.ts > platypus
+  function platypus(nav = navigator) {
+    if (typeof nav === "undefined") {
+      throw new Error(
+        "Platypus assumes a global navigator object; did you call it outside of a browser environment?"
+      );
+    }
+    return {
+      isMac() {
+        return nav.userAgent.includes("Mac");
+      },
+      isMobile() {
+        return nav.userAgent.includes("Mobile");
+      },
+      commandOrControl(keyboardEvent) {
+        return this.isMac() ? keyboardEvent.metaKey : keyboardEvent.ctrlKey;
+      },
+    };
+  }
+
+  const dialog = document.getElementById(dialogId);
+  const trigger = document.getElementById(triggerId);
+
+  function handleBackdropClick(e) {
+    const target = e.target;
+
+    if (dialog.contains(target)) return;
+
+    if (
+      e.offsetX < 0 ||
+      e.offsetX > target.offsetWidth ||
+      e.offsetY < 0 ||
+      e.offsetY > target.offsetHeight
+    ) {
+      dialog.close();
+    }
+  }
+
+  function openPalette() {
+    dialog.showModal();
+    dialog.addEventListener("click", handleBackdropClick);
+  }
+
+  trigger.addEventListener("click", openPalette);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "k" && platypus().commandOrControl(e)) {
+      e.preventDefault();
+      openPalette();
+    }
+  });
+
+  function closePalette() {
+    dialog.removeEventListener("click", handleBackdropClick);
+  }
+
+  dialog.addEventListener("close", () => {
+    closePalette();
+  });
+</script>
+
+<style>
+  button {
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: inherit;
+    display: flex;
+    padding: 0;
+  }
+  button:where(:hover, :focus) {
+    color: var(--anchor-color);
+  }
+  button svg {
+    transition: color 200ms ease-in-out;
+  }
+
+  dialog {
+    background-color: var(--background);
+    border: 2px solid var(--off-background);
+    width: min(32rem, calc(100% - var(--space-l)));
+  }
+
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  body[data-theme="dark"] dialog::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  /* Not sure why the extra specificity is needed */
+  :global(.pagefind-ui .pagefind-ui__results) {
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+</style>
