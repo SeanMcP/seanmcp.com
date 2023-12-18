@@ -1,6 +1,9 @@
+---
+const id = "pf-" + Math.random().toString(36).slice(2, 6);
+---
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
 <script is:inline src="/pagefind/pagefind-ui.js"></script>
-<div id="search"></div>
+<div id={id}></div>
 <template>
   <form action="https://duckduckgo.com/" method="get">
     <input
@@ -15,17 +18,17 @@
     <button type="submit">Submit</button>
   </form>
 </template>
-<script is:inline>
+<script is:inline define:vars={{ id }}>
   window.addEventListener("DOMContentLoaded", () => {
     if (typeof PagefindUI === "undefined") {
       document
-        .getElementById("search")
+        .getElementById(id)
         .appendChild(
           document.querySelector("template").cloneNode(true).content
         );
     } else {
       new PagefindUI({
-        element: "#search",
+        element: `#${id}`,
         showImages: false,
         showSubResults: true,
       });
@@ -34,7 +37,7 @@
 </script>
 
 <style>
-  #search {
+  div {
     --pagefind-ui-background: var(--background);
     --pagefind-ui-border: var(--off-background);
     --pagefind-ui-font: inherit;
