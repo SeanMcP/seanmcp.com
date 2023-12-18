@@ -5,7 +5,7 @@ const triggerId = id + "_trigger";
 const dialogId = id + "_dialog";
 ---
 
-<button id={triggerId} class="focusable()">
+<button class="focusable()" id={triggerId}>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -120,6 +120,7 @@ const dialogId = id + "_dialog";
   dialog {
     background-color: var(--background);
     border: 2px solid var(--off-background);
+    margin-block-start: var(--space-2xl);
     width: min(32rem, calc(100% - var(--space-l)));
   }
 
