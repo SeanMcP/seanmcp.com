@@ -32,7 +32,15 @@ const showBreadcrumbs =
 </BaseLayout>
 
 <style>
+  body {
+    display: flex;
+    flex-direction: column;
+  }
   main {
+    flex: 1;
     margin-block: 5rem;
+  }
+  main > div {
+    height: 100%;
   }
 </style>

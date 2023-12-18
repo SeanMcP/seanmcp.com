@@ -1,38 +1,33 @@
 ---
 import ActivityGraph from "@components/ActivityGraph.astro";
 import Feed from "@components/Feed.astro";
+import Pagefind from "@components/Pagefind.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 ---
 
 <PageLayout
   documentTitle="The homepage of Sean McPherson"
-  title="Hello neighbor!"
+  title="Sean McPherson"
+  withoutH1
 >
+  <h1><mark>Sean McP</mark>herson</h1>
   <p class="lede()">
-    My name is Sean McPherson (SeanMcP for short), and this is my little
-    website. Thanks for stopping by, and make yourself at home!
-  </p>
-
-  <p>
-    For an introduction, I'm a software engineer and former teacher <a
-      href="/mission">on a mission</a
+    Software engineer @ <a href="https://khanacademy.org" target="_blank"
+      >Khan Academy</a
     >
-    to use technology to help people help people. Currently I work at <a
-      href="https://khanacademy.org"
-      target="_blank">Khan Academy</a
-    > building web applications.
   </p>
 
-  <p>
-    Outside of work, I enjoy spending time with my family (wife, two sons, and
-    dog), playing and watching <a href="/soccer">soccer</a>, re-playing my
-    favorite <a href="/board-games">board games</a>, and trying not to embarrass
-    <a href="/faith">Jesus Christ</a>.
-  </p>
+  <br />
+
+  <Pagefind />
+
+  <br />
 
   <h2>Feed</h2>
 
-  <Feed count={10}/>
+  <Feed count={5} />
+
+  <br />
 
   <h2>Activity</h2>
 
@@ -40,7 +35,39 @@ import PageLayout from "@layouts/PageLayout.astro";
 </PageLayout>
 
 <style>
-  .right\(\) {
-    text-align: right;
+  h1 {
+  }
+  h1 em {
+    color: var(--text-color);
+    font-style: initial;
+  }
+  h1:hover {
+    color: var(--text-color);
+  }
+  mark {
+    background-color: transparent !important;
+    color: inherit !important;
+    position: relative;
+  }
+  mark::after {
+    background-color: var(--alt-primary);
+    bottom: 0;
+    content: "";
+    left: -0.2ch;
+    position: absolute;
+    top: 0;
+    transform: skewX(-10deg);
+    transition: width 200ms ease-in-out;
+    width: 0;
+    z-index: -1;
+  }
+  h1:hover mark::after {
+    width: calc(100% + 0.4ch);
+  }
+  @media screen and (min-width: 600px) {
+    h1,
+    h1 + p {
+      text-align: center;
+    }
   }
 </style>
