@@ -25,6 +25,7 @@
     "dev": "astro dev",
     "devn": "netlify dev",
     "devc": "npm-run-all --parallel cms dev",
+    "devpf": "astro build && npx -y pagefind --site dist --serve",
     "preview": "astro preview",
     "create:article": "node src/draft-script.mjs article",
     "create:garden": "node src/draft-script.mjs garden",

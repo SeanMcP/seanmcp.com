@@ -1,72 +1,11 @@
 ---
-import {
-  getArticles,
-  getNotes,
-  getTags,
-  getArticleTitle,
-  slugify,
-getGardens,
-} from "src/utils";
-import socials from "src/data/socials";
-import navigation from "src/data/navigation";
-
-const articles = await getArticles({ excludeRSSOnlyInProd: true });
-const gardens = await getGardens();
-const notes = await getNotes();
-const tags = getTags(articles);
-
-const options = [
-  ...articles.map((article) => ({
-    type: "Article",
-    url: `/articles/${article.slug}`,
-    label: getArticleTitle(article.data),
-    searchable: (article.data.title + article.data.description).toLowerCase(),
-  })),
-  ...gardens.map(garden => ({
-    type: "Garden",
-    url: `/gardens/${garden.slug}`,
-    label: garden.data.title,
-    searchable: (garden.data.title + garden.data.description).toLowerCase(),
-  })),
-  ...notes.map((note) => ({
-    type: "Note",
-    url: `/notes/${note.slug}`,
-    label: "Note #" + note.slug,
-    searchable: ("Note #" + note.slug + note.body).toLowerCase(),
-  })),
-  {
-    type: "Contact",
-    url: "mailto:sean@seanmcp.com",
-    label: "Email me",
-    searchable:
-      "Send an email to contact Sean McPherson (seanmcp): sean@seanmcp.com".toLowerCase(),
-  },
-  ...socials.map((social) => ({
-    type: "Social",
-    url: social.url,
-    label: `Find me on ${social.label}`,
-    searchable: `Find me on ${social.label}`.toLowerCase(),
-  })),
-  ...Object.entries(tags).map(([tag, count]) => {
-    return {
-      type: "Tag",
-      url: `/tags/${slugify(tag)}`,
-      label: `#${tag} (${count})`,
-      searchable: `#${tag} (${count})`.toLowerCase(),
-    };
-  }),
-  ...navigation.all.map((page) => {
-    return {
-      type: "Page",
-      url: page.url,
-      label: page.label,
-      searchable: (page.label + page.description).toLowerCase(),
-    };
-  }),
-];
+import Pagefind from "./Pagefind.astro";
+const id = "cp-" + Math.random().toString(36).slice(2, 6);
+const triggerId = id + "_trigger";
+const dialogId = id + "_dialog";
 ---
 
-<button id="command-palette__trigger" class="focusable()">
+<button class="focusable()" id={triggerId}>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -95,35 +34,12 @@ const options = [
   <span class="hidden()">Search</span>
 </button>
 
-<section aria-label="Command palette" id="command-palette" role="dialog">
-  <template>
-    <a class="command-palette__result" href="%URL%">
-      <span>%LABEL%</span>
-      <span>%TYPE%</span>
-    </a>
-  </template>
-  <div id="command-palette__overlay"></div>
-  <section id="command-palette__content">
-    <input
-      aria-label="Search for content"
-      type="text"
-      placeholder="Search for content"
-    />
-    <div aria-live="polite" id="command-palette__results-message"></div>
-    <section id="command-palette__results"></section>
-    <footer>
-      <span
-        >Experimental feature: <a
-          href="mailto:sean@seanmcp.com?subject=Command Palette">Feedback</a
-        >
-      </span>
-      <span class="exit--mobile">Tap overlay to exit</span>
-      <span class="exit--desktop">Exit with <kbd>Escape</kbd></span>
-    </footer>
-  </section>
-</section>
+<dialog id={dialogId}>
+  <Pagefind />
+</dialog>
 
-<script define:vars={{ options }}>
+<script define:vars={{ dialogId, triggerId }}>
+  console.log("HERE", dialogId, triggerId);
   // Copied from utils.ts > platypus
   function platypus(nav = navigator) {
     if (typeof nav === "undefined") {
@@ -144,91 +60,44 @@ const options = [
     };
   }
 
-  const palette = document.querySelector("#command-palette");
-  const trigger = document.querySelector("#command-palette__trigger");
-  const overlay = document.querySelector("#command-palette__overlay");
-  const input = document.querySelector("#command-palette input");
-  const results = document.querySelector("#command-palette__results");
-  const resultsMessage = document.querySelector(
-    "#command-palette__results-message"
-  );
-  const resultTemplate = document.querySelector("#command-palette template");
+  const dialog = document.getElementById(dialogId);
+  const trigger = document.getElementById(triggerId);
 
-  input.addEventListener("input", (event) => {
-    const target = event.target;
-    const query = target.value.toLowerCase();
-    if (query.length < 3) {
-      results.textContent = "";
-      resultsMessage.textContent = "";
-      return;
-    }
+  function handleBackdropClick(e) {
+    const target = e.target;
 
-    let count = 0;
+    if (target !== dialog && dialog.contains(target)) return;
 
-    let resultsHTML = "";
-    const resultHTML = resultTemplate.innerHTML;
-    options.forEach((option) => {
-      if (query && option.searchable.includes(query)) {
-        resultsHTML += resultHTML
-          .replace("%URL%", option.url)
-          .replace("%TYPE%", option.type)
-          .replace("%LABEL%", option.label);
-        count++;
-      }
-    });
-
-    results.innerHTML = resultsHTML;
-
-    resultsMessage.textContent = `${count} results`;
-  });
-
-  let previouslyActiveElement;
-
-  function focusTrap({ target }) {
-    try {
-      if (!target instanceof Window && !palette.contains(target)) {
-        input.focus();
-      }
-    } catch (e) {
-      // Probably safe to ignore, but I'll add a debug to maybe fix later
-      console.debug(e, { palette, target: focusEvent.target });
+    if (
+      e.offsetX < 0 ||
+      e.offsetX > target.offsetWidth ||
+      e.offsetY < 0 ||
+      e.offsetY > target.offsetHeight
+    ) {
+      dialog.close();
     }
   }
 
   function openPalette() {
-    palette.dataset.mobile = platypus().isMobile().toString();
-    palette.dataset.state = "open";
-    previouslyActiveElement = document.activeElement;
-    resultsMessage.textContent = "";
-    input.value = "";
-    input.focus();
-    window.addEventListener("focus", focusTrap, true);
-    overlay.addEventListener("click", closePalette);
-  }
-
-  function closePalette() {
-    palette.dataset.state = "closed";
-    (previouslyActiveElement || document.body).focus();
-    window.removeEventListener("focus", focusTrap);
-    overlay.removeEventListener("click", closePalette);
-    results.textContent = "";
+    dialog.showModal();
+    dialog.addEventListener("click", handleBackdropClick);
   }
 
   trigger.addEventListener("click", openPalette);
 
   document.addEventListener("keydown", (e) => {
-    if (
-      e.key === "k" &&
-      platypus().commandOrControl(e) &&
-      palette.dataset.state !== "open"
-    ) {
+    if (e.key === "k" && platypus().commandOrControl(e)) {
       e.preventDefault();
       openPalette();
     }
-    if (e.key === "Escape" && palette.dataset.state === "open") {
-      e.preventDefault();
-      closePalette();
-    }
+  });
+
+  function closePalette() {
+    dialog.removeEventListener("click", handleBackdropClick);
+  }
+
+  dialog.addEventListener("close", () => {
+    closePalette();
   });
 </script>
 
@@ -247,112 +116,25 @@ const options = [
   button svg {
     transition: color 200ms ease-in-out;
   }
-  #command-palette {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-  }
 
-  #command-palette:not([data-state="open"]) {
-    display: none;
-  }
-
-  #command-palette__overlay {
-    background: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    position: absolute;
-    width: 100%;
-  }
-
-  body[data-theme="dark"] #command-palette__overlay {
-    background: rgba(0, 0, 0, 0.75);
-  }
-
-  #command-palette__content {
-    background: var(--background);
-    display: grid;
-    gap: var(--space-xs);
-    margin-top: var(--space-2xl);
-    padding-top: var(--space-s);
-    position: absolute;
+  dialog {
+    background-color: var(--background);
+    border: 2px solid var(--off-background);
+    margin-block-start: var(--space-2xl);
     width: min(32rem, calc(100% - var(--space-l)));
   }
 
-  #command-palette__content > *:not(footer) {
-    margin-inline: var(--space-s);
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
   }
 
-  #command-palette__results {
+  body[data-theme="dark"] dialog::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  /* Not sure why the extra specificity is needed */
+  :global(.pagefind-ui .pagefind-ui__results) {
     max-height: 50vh;
     overflow-y: auto;
-  }
-
-  #command-palette__results-message {
-    font-size: small;
-    text-align: center;
-  }
-
-  #command-palette__results-message:empty {
-    display: none;
-  }
-
-  input {
-    background: transparent;
-    border: var(--stroke-thickness) solid var(--off-background);
-    color: inherit;
-    font: inherit;
-    padding: 1ch;
-  }
-
-  footer {
-    border-top: var(--stroke-thickness) solid var(--off-background);
-    color: var(--lighter-text-color);
-    display: flex;
-    font-size: x-small;
-    justify-content: space-between;
-    padding: var(--space-xs) var(--space-s);
-  }
-
-  #command-palette[data-mobile="true"] .exit--desktop {
-    display: none;
-  }
-
-  #command-palette[data-mobile="false"] .exit--mobile {
-    display: none;
-  }
-
-  .command-palette__result {
-    align-items: center;
-    display: flex;
-    gap: var(--space-xs);
-    justify-content: space-between;
-    text-decoration: none;
-    outline: none;
-  }
-
-  .command-palette__result:where(:hover, :focus) span:first-of-type {
-    text-decoration: underline;
-  }
-
-  .command-palette__result span:first-of-type {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .command-palette__result span:last-of-type {
-    background-color: var(--off-background);
-    color: var(--text-color);
-    font-size: small;
-    padding: 0 4px;
-  }
-
-  .command-palette__result:not(:last-of-type) {
-    margin-bottom: var(--space-xs);
   }
 </style>

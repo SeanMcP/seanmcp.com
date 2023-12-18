@@ -23,9 +23,9 @@ import LogoLink from "./LogoLink.astro";
           //    https://github.com/SeanMcP/seanmcp.com/issues/35
           const props = {
             "aria-current": urlsMatch(Astro.url.pathname, item.url)
-              ? // Type casting is necessary because we aren't
-                // setting this attribute directly on the element
-                ("page" as any)
+            // Type casting is necessary because we aren't setting this
+            // attribute directly on the element
+              ? ("page" as any)
               : null,
             href: item.url,
           };

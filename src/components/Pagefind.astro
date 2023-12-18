@@ -1,13 +1,35 @@
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
 <script is:inline src="/pagefind/pagefind-ui.js"></script>
 <div id="search"></div>
+<template>
+  <form action="https://duckduckgo.com/" method="get">
+    <input
+      aria-label="Search"
+      autocomplete="off"
+      autofocus
+      name="q"
+      placeholder="Search"
+      type="search"
+    />
+    <input type="hidden" name="sites" value="https://seanmcp.com" />
+    <button type="submit">Submit</button>
+  </form>
+</template>
 <script is:inline>
   window.addEventListener("DOMContentLoaded", () => {
-    new PagefindUI({
-      element: "#search",
-      showImages: false,
-      showSubResults: true,
-    });
+    if (typeof PagefindUI === "undefined") {
+      document
+        .getElementById("search")
+        .appendChild(
+          document.querySelector("template").cloneNode(true).content
+        );
+    } else {
+      new PagefindUI({
+        element: "#search",
+        showImages: false,
+        showSubResults: true,
+      });
+    }
   });
 </script>
 
@@ -16,7 +38,17 @@
     --pagefind-ui-background: var(--background);
     --pagefind-ui-border: var(--off-background);
     --pagefind-ui-font: inherit;
-    --pagefind-ui-primary: var(--primary);
+    --pagefind-ui-primary: var(--anchor-color);
     --pagefind-ui-text: var(--text-color);
+  }
+
+  form {
+    align-items: center;
+    display: flex;
+    gap: var(--space-xs);
+  }
+
+  form input[name="q"] {
+    flex-grow: 1;
   }
 </style>
