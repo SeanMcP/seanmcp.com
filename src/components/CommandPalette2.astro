@@ -66,7 +66,7 @@ const dialogId = id + "_dialog";
   function handleBackdropClick(e) {
     const target = e.target;
 
-    if (dialog.contains(target)) return;
+    if (target !== dialog && dialog.contains(target)) return;
 
     if (
       e.offsetX < 0 ||
