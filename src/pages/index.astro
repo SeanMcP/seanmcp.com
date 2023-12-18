@@ -10,7 +10,7 @@ import PageLayout from "@layouts/PageLayout.astro";
   title="Sean McPherson"
   withoutH1
 >
-  <h1><em>Sean McP</em>herson</h1>
+  <h1><mark>Sean McP</mark>herson</h1>
   <p class="lede()">
     Software engineer @ <a href="https://khanacademy.org" target="_blank"
       >Khan Academy</a
@@ -36,8 +36,6 @@ import PageLayout from "@layouts/PageLayout.astro";
 
 <style>
   h1 {
-    color: var(--off-background);
-    transition: color 200ms ease-in-out;
   }
   h1 em {
     color: var(--text-color);
@@ -45,6 +43,26 @@ import PageLayout from "@layouts/PageLayout.astro";
   }
   h1:hover {
     color: var(--text-color);
+  }
+  mark {
+    background-color: transparent !important;
+    color: inherit !important;
+    position: relative;
+  }
+  mark::after {
+    background-color: var(--alt-primary);
+    bottom: 0;
+    content: "";
+    left: -0.2ch;
+    position: absolute;
+    top: 0;
+    transform: skewX(-10deg);
+    transition: width 200ms ease-in-out;
+    width: 0;
+    z-index: -1;
+  }
+  h1:hover mark::after {
+    width: calc(100% + 0.4ch);
   }
   @media screen and (min-width: 600px) {
     h1,

@@ -61,6 +61,7 @@
   /* Theme */
 
   --primary: var(--github-light-blue);
+  --alt-primary: var(--github-dark-blue);
   --accent: var(--github-light-purple);
 
   --background: var(--light);
@@ -94,6 +95,7 @@ html[data-theme="dark"] {
   --purple: var(--github-dark-purple);
 
   --primary: var(--github-dark-purple);
+  --alt-primary: var(--github-light-purple);
   --accent: var(--github-dark-blue);
 
   --background: var(--dark);
@@ -221,6 +223,11 @@ li ol,
 li ul {
   margin-bottom: var(--space-2xs);
   margin-top: var(--space-2xs);
+}
+
+mark {
+  background-color: var(--alt-primary);
+  color: var(--text-color);
 }
 
 /* Utilities */
