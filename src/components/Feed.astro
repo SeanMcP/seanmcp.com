@@ -1,6 +1,7 @@
 ---
-import { getArticles, getGardens, getNotes } from "src/utils";
+import { getArticles, getGardens, getNotes, normalizeArt, normalizeGardens, normalizeNotes, sortByPubDate } from "src/utils";
 import ReadableTime from "./ReadableTime.astro";
+import art from "../content/_art";
 
 interface Props {
   count?: number;
@@ -9,17 +10,13 @@ interface Props {
 const { count } = Astro.props;
 
 const articles = await getArticles({ count, excludeRSSOnlyInProd: true });
-const gardens = await getGardens();
-const notes = await getNotes(count);
+const gardens = normalizeGardens(await getGardens(), "MOST_RECENT");
+const notes = normalizeNotes(await getNotes(count));
+const normalizedArt = normalizeArt(art);
 
-let feed = [].concat(articles, gardens, notes);
+let feed = [].concat(articles, gardens, notes, normalizedArt);
 
-feed.sort((a, b) => {
-  const aDate = a.data.tendedDates ? a.data.tendedDates[0] : a.data.pubDate;
-  const bDate = b.data.tendedDates ? b.data.tendedDates[0] : b.data.pubDate;
-
-  return aDate > bDate ? -1 : 1;
-});
+feed.sort(sortByPubDate);
 
 feed = feed.slice(0, count);
 ---
@@ -27,9 +24,13 @@ feed = feed.slice(0, count);
 <section class="stack()">
   {
     feed.map((item) => {
-      const title = item.data.title || `Note #${item.slug}`;
-      let svg;
+      let svg: string;
       switch (item.collection) {
+        case "art":
+          svg = (
+            <rect width="256" height="256" fill="none"/><rect x="32" y="48" width="192" height="160" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="156" cy="100" r="12"/><path d="M147.31,164,173,138.34a8,8,0,0,1,11.31,0L224,178.06" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M32,168.69l54.34-54.35a8,8,0,0,1,11.32,0L191.31,208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+          )
+          break;
         case "articles":
           svg = (
             <>
@@ -150,32 +151,14 @@ feed = feed.slice(0, count);
           break;
         case "notes":
           svg = (
-            <>
-              <path
-                d="M156.69,216H48a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8H208a8,8,0,0,1,8,8V156.69a8,8,0,0,1-2.34,5.65l-51.32,51.32A8,8,0,0,1,156.69,216Z"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              />
-              <rect width="256" height="256" fill="none" />
-              <polyline
-                points="215.28 159.99 160 159.99 160 215.27"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              />
-            </>
+            <rect width="256" height="256" fill="none"/><path d="M156.69,216H48a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8H208a8,8,0,0,1,8,8V156.69a8,8,0,0,1-2.34,5.65l-51.32,51.32A8,8,0,0,1,156.69,216Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="215.28 159.99 160 159.99 160 215.27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
           );
           break;
       }
       return (
         <article class="line()">
           <svg
-            aria-label={item.collection.slice(0, item.collection.length - 1)}
+            aria-label={item.collection}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 256 256"
           >
@@ -183,14 +166,8 @@ feed = feed.slice(0, count);
           </svg>
 
           <span>
-            <a href={`/${item.collection}/${item.slug}`}>{title}</a>
-            <ReadableTime
-              date={
-                item.data.tendedDates
-                  ? item.data.tendedDates[0]
-                  : item.data.pubDate
-              }
-            />
+            <a href={`/${item.collection}/${item.slug}`}>{item.data.title}</a>
+            <ReadableTime date={item.data.pubDate}/>
           </span>
         </article>
       );
@@ -202,23 +179,33 @@ feed = feed.slice(0, count);
   a {
     font-weight: bold;
   }
+
   svg {
     --size: 1.5em;
+    fill: currentColor;
     height: var(--size);
     min-width: var(--size);
     transition: all 0.1s ease-in-out;
     width: var(--size);
   }
 
-  article:is(:focus-within, :hover) svg[aria-label="article"] {
-    color: var(--purple);
+  svg[aria-label=art] {
+    --hover-color: var(--orange);
   }
 
-  article:is(:focus-within, :hover) svg[aria-label="garden"] {
-    color: var(--green);
+  svg[aria-label=articles] {
+    --hover-color: var(--purple);
   }
 
-  article:is(:focus-within, :hover) svg[aria-label="note"] {
-    color: var(--blue);
+  svg[aria-label=gardens] {
+    --hover-color: var(--green);
+  }
+
+  svg[aria-label=notes] {
+    --hover-color: var(--blue);
+  }
+
+  article:is(:focus-within, :hover) svg {
+    color: var(--hover-color);
   }
 </style>

@@ -37,20 +37,22 @@
 
   /* Colors */
   --github-dark-background: hsl(211, 21%, 7%);
-  --github-dark-text: hsl(206, 18%, 79%);
-  --github-dark-red: hsl(4, 100%, 72%);
-  --github-dark-orange: hsl(28, 100%, 67%);
-  --github-dark-green: hsl(141, 70%, 66%);
   --github-dark-blue: hsl(206, 96%, 68%);
+  --github-dark-green: hsl(141, 70%, 66%);
+  --github-dark-orange: hsl(28, 100%, 67%);
   --github-dark-purple: hsl(271, 92%, 80%);
+  --github-dark-red: hsl(4, 100%, 72%);
+  --github-dark-text: hsl(206, 18%, 79%);
 
-  --github-light-green: hsl(137, 63%, 33%);
-  --github-light-blue: hsl(213, 94%, 35%);
-  --github-light-purple: hsl(261, 69%, 59%);
   --github-light-black: hsl(213, 13%, 16%);
+  --github-light-blue: hsl(213, 94%, 35%);
+  --github-light-green: hsl(137, 63%, 33%);
+  --github-light-orange: hsl(23, 100%, 29%);
+  --github-light-purple: hsl(261, 69%, 59%);
 
-  --green: var(--github-light-green);
   --blue: var(--github-light-blue);
+  --green: var(--github-light-green);
+  --orange: var(--github-light-orange);
   --purple: var(--github-light-purple);
 
   --dark-hs: 211, 21%;
@@ -90,8 +92,9 @@ body {
 }
 
 html[data-theme="dark"] {
-  --green: var(--github-dark-green);
   --blue: var(--github-dark-blue);
+  --green: var(--github-dark-green);
+  --orange: var(--github-dark-orange);
   --purple: var(--github-dark-purple);
 
   --primary: var(--github-dark-purple);

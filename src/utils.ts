@@ -1,5 +1,6 @@
 import { CollectionEntry, getCollection } from "astro:content";
 import _slugify from "slugify";
+import { Art } from "./content/_art";
 
 export function slugify(text: string) {
   return _slugify(text, { lower: true });
@@ -35,7 +36,7 @@ export function getTags(articles: any[]): Record<string, number> {
   return tags;
 }
 
-function sortByPubDate<
+export function sortByPubDate<
   T extends CollectionEntry<"articles"> | CollectionEntry<"notes">
 >(a: T, b: T) {
   return (
@@ -95,9 +96,41 @@ export async function getGardens() {
   return gardens;
 }
 
+export function normalizeGardens(gardens: CollectionEntry<"gardens">[], date: "FIRST" | "MOST_RECENT") {
+  return gardens.map((garden) => ({
+    ...garden,
+    data: {
+      ...garden.data,
+      pubDate: date === "FIRST" ? garden.data.tendedDates.slice(-1)[0] : garden.data.tendedDates[0],
+    },
+  }));
+}
+
 export async function getNotes(count?: number) {
   const notes = await getCollection("notes");
   return notes.sort(sortByPubDate).slice(0, count);
+}
+
+export function normalizeNotes(notes: CollectionEntry<"notes">[]) {
+  return notes.map((note) => ({
+    ...note,
+    data: {
+      ...note.data,
+      title: `Note #${note.slug.slice(1)}`,
+    },
+  }));
+}
+
+export function normalizeArt(art: Art) {
+  return art.map(([date, , title, description]) => ({
+    collection: "art",
+    data: {
+      description,
+      pubDate: date,
+      title,
+    },
+    slug: `#${title}`
+  }));
 }
 
 export function readableDate(date: Date | string) {
