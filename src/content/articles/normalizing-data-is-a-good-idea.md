@@ -48,12 +48,10 @@ time:
 ```js
 function normalizeNotes(notes) {
   return notes.map((note) => ({
-    ...note,
-    data: {
-      ...note.data,
-      title: `Note #${note.slug}`,
-    },
+    description: note.data.description,
     href: `/notes/${note.slug}`,
+    title: `Note #${note.slug}`,
+    pubData: note.data.pubDate,
   }));
 }
 ```
@@ -66,10 +64,10 @@ Once all of the content is normalized, rendering is simpler:
     return (
       <article>
         <h2>
-          <a href={item.href}>{item.data.title}</a>
+          <a href={item.href}>{item.title}</a>
         </h2>
-        <time>{item.data.pubDate}</time>
-        {item.data.description && <p>{item.data.description}</p>}
+        <time>{item.pubDate}</time>
+        {item.description && <p>{item.description}</p>}
       </article>
     );
   }
