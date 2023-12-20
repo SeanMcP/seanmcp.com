@@ -1,0 +1,116 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import art from "../content/_art";
+import { readableDate } from "src/utils";
+---
+
+<PageLayout title="Art">
+  <art-gallery>
+    {
+      art.map(([datestring, relativePath, title, description]) => (
+        <img
+          alt={description}
+          id={title}
+          src={`/art/${relativePath}`}
+          title={`${title}: ${description}`}
+          data-date={datestring}
+          data-readable-date={readableDate(datestring)}
+        />
+      ))
+    }
+  </art-gallery>
+</PageLayout>
+
+<style>
+  art-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-gap: var(--space-s);
+  }
+
+  art-gallery img {
+    height: auto;
+    image-rendering: pixelated;
+    width: 100%;
+    padding: var(--space-s);
+  }
+
+  :global(art-gallery dialog) {
+    margin-block-start: var(--space-m);
+    width: min(calc(100vw - 2 * var(--space-m)), 480px);
+  }
+</style>
+
+<script type="module">
+  customElements.define(
+    "art-gallery",
+    class extends HTMLElement {
+      connectedCallback() {
+        this.dialog = document.createElement("dialog");
+        this.dialog.id = "art-gallery-dialog";
+        this.appendChild(this.dialog);
+
+        this.addEventListener("click", (e) => {
+          if (e.target.matches("art-gallery > img")) {
+            this.renderImageInModal(e.target);
+          }
+        });
+
+        const linkedImg = this.querySelector(
+          `art-gallery > img${location.hash}`
+        );
+
+        // Try to find the image that corresponds to the URL hash
+        if (location.hash && linkedImg) {
+          this.renderImageInModal(linkedImg);
+        }
+      }
+
+      renderImageInModal(img) {
+        this.dialog.innerHTML = /* html */ `
+<style>
+    #art-gallery-dialog {
+        background-color: var(--background);
+        border: 2px solid var(--off-background);
+        color: var(--text-color);
+    }
+
+    #art-gallery-dialog img {
+        display: block;
+        image-rendering: pixelated;
+    }
+
+    #art-gallery-dialog img:first-of-type {
+        height: auto;
+        margin-inline: auto;
+        padding: var(--space-s);
+        width: 100%;
+    }
+
+    #art-gallery-dialog span {
+        display: inline-block;
+        margin-inline: var(--space-2xs);
+    }
+
+    #art-gallery-dialog time {
+        color: var(--lighter-text-color);
+    }
+</style>
+<img src="${img.src}" alt="${img.alt}" />
+<p>
+    <b>${img.id}</b>
+    <span class=divider()></span>
+    <time datetime=${img.dataset.date}>${img.dataset.readableDate}
+    </time>
+</p>
+${img.alt ? `<p>${img.alt}</p>` : ""}
+<img
+    src="${img.src}" alt="${img.alt}"
+    style="margin-inline-start:auto;"
+/>
+            `;
+        this.dialog.showModal();
+      }
+    }
+  );
+</script>
