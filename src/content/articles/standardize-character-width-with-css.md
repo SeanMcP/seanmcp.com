@@ -6,6 +6,78 @@ tags:
   - CSS
   - Typography
 verse: Romans 5:3-5
+head: >-
+  <style>
+      .button-container {
+          text-align: center;
+      }
+
+      .button-container button {
+          background-color: var(--primary);
+          border: none;
+          border-radius: 2px;
+          color: white;
+          font-family: inherit;
+          font-size: inherit;
+          font-weight: bold;
+          margin: 0 0.5rem;
+          padding: 0.5rem 1rem;
+      }
+
+      .button-container button:focus,
+      .button-container button:hover {
+          box-shadow: 0 2px 4px hsla(0, 0%, 0%, 25%);
+          filter: brightness(1.2);
+      }
+
+      .example {
+          background-color: var(--off-background);
+          padding: 1rem;
+          margin: 1rem 0;
+          position: relative;
+          text-align: center;
+      }
+
+      .example::before {
+          content: attr(aria-label);
+          font-size: 0.75rem;
+          left: 0;
+          padding: 5px;
+          position: absolute;
+          top: 0;
+      }
+
+      .example .count {
+          font-size: 3rem;
+      }
+
+      .example[aria-label="Monospaced"] .count {
+          font-family: Menlo, Monaco, Fira Code, monospace;
+      }
+
+      .example[aria-label="Standardized"] .count {
+          font-feature-settings: "tnum";
+          font-variant-numeric: tabular-nums;
+      }
+  </style>
+foot: >-
+  <script>
+      let countEls = document.querySelectorAll('.count')
+      function incrementCount() {
+          let nextNumber
+          countEls.forEach(el => {
+              if (!nextNumber) nextNumber = Number(el.textContent) + 1
+              if (nextNumber > 10000) stopTimer() 
+              el.textContent = nextNumber
+          })
+      }
+      function startTimer() {
+          window._interval = setInterval(incrementCount, 100)
+      }
+      function stopTimer() {
+          clearInterval(window._interval)
+      }
+  </script>
 ---
 
 **Authors note**: Before you read this article, you will want to click the
@@ -94,75 +166,3 @@ Happy standardizing!
     I first saw this solution from
     [Tomek Sułkowski (@sulco) on Twitter](https://twitter.com/sulco/status/1293862293139337217).
     He shares lots of great tips like this and is worth the follow.
-
-<style>
-.button-container {
-    text-align: center;
-}
-
-.button-container button {
-    background-color: var(--primary);
-    border: none;
-    border-radius: 2px;
-    color: white;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: bold;
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
-}
-
-.button-container button:focus,
-.button-container button:hover {
-    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 25%);
-    filter: brightness(1.2);
-}
-
-.example {
-    background-color: var(--off-background);
-    padding: 1rem;
-    margin: 1rem 0;
-    position: relative;
-    text-align: center;
-}
-
-.example::before {
-    content: attr(aria-label);
-    font-size: 0.75rem;
-    left: 0;
-    padding: 5px;
-    position: absolute;
-    top: 0;
-}
-
-.example .count {
-    font-size: 3rem;
-}
-
-.example[aria-label="Monospaced"] .count {
-    font-family: Menlo, Monaco, Fira Code, monospace;
-}
-
-.example[aria-label="Standardized"] .count {
-    font-feature-settings: "tnum";
-    font-variant-numeric: tabular-nums;
-}
-</style>
-
-<script>
-let countEls = document.querySelectorAll('.count')
-function incrementCount() {
-    let nextNumber
-    countEls.forEach(el => {
-        if (!nextNumber) nextNumber = Number(el.textContent) + 1
-        if (nextNumber > 10000) stopTimer() 
-        el.textContent = nextNumber
-    })
-}
-function startTimer() {
-    window._interval = setInterval(incrementCount, 100)
-}
-function stopTimer() {
-    clearInterval(window._interval)
-}
-</script>

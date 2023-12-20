@@ -31,5 +31,9 @@
     "create:garden": "node src/draft-script.mjs garden",
     "create:note": "node src/note-script.mjs",
     "cms": "npx netlify-cms-proxy-server"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.5"
   }
 }
