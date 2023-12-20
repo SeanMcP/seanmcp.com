@@ -129,7 +129,7 @@ export function normalizeArt(art: Art) {
       pubDate: date,
       title,
     },
-    slug: `#${title}`
+    slug: `#${slugify(title)}`
   }));
 }
 

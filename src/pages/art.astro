@@ -1,7 +1,7 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 import art from "../content/_art";
-import { readableDate } from "src/utils";
+import { readableDate, slugify } from "src/utils";
 ---
 
 <PageLayout title="Art">
@@ -10,11 +10,12 @@ import { readableDate } from "src/utils";
       art.map(([datestring, relativePath, title, description]) => (
         <img
           alt={description}
-          id={title}
-          src={`/art/${relativePath}`}
-          title={`${title}: ${description}`}
           data-date={datestring}
           data-readable-date={readableDate(datestring)}
+          data-title={title}
+          id={slugify(title)}
+          src={`/art/${relativePath}`}
+          title={`${title}: ${description}`}
         />
       ))
     }
@@ -98,10 +99,9 @@ import { readableDate } from "src/utils";
 </style>
 <img src="${img.src}" alt="${img.alt}" />
 <p>
-    <b>${img.id}</b>
+    <b>${img.dataset.title}</b>
     <span class=divider()></span>
-    <time datetime=${img.dataset.date}>${img.dataset.readableDate}
-    </time>
+    <time datetime=${img.dataset.date}>${img.dataset.readableDate}</time>
 </p>
 ${img.alt ? `<p>${img.alt}</p>` : ""}
 <img
