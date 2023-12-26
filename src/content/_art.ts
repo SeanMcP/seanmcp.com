@@ -3,6 +3,8 @@
 
 const art: Art = [
     // REVERSE CHRONOLOGICAL ORDER
+    ["2023-12-26T06:27-0400", "box_16.png", "Box", "Aseprite, Endesga 16"],
+    ["2023-12-26T06:15-0400", "christmas-tree_16.png", "Christmas tree", "Aseprite, Endesga 16"],
     ["2023-12-21T15:07-0400", "prof-oak_16.png", "Prof. Oak", "Palette: Endesga 16"],
     ["2023-12-20T08:24-0400", "maple-tree_16.png", "Maple tree", "Tried some dithering on the leaves"],
     ["2023-12-19T16:00-0400", "donut.png", "Donut", "What flavor is blue frosting?"],
