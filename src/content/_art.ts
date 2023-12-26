@@ -3,6 +3,9 @@
 
 const art: Art = [
     // REVERSE CHRONOLOGICAL ORDER
+    ["2023-12-26T07:25-0400", "logo_16.png", "Logo", "Aseprite, Endesga 16"],
+    ["2023-12-26T07:00-0400", "two-color-gradient_16.png", "Two-color gradient", "Aseprite, Endesga 16"],
+    ["2023-12-26T06:42-0400", "hokusai-great-wave_16.png", "Hokusai's Great Wave", "Aseprite, Endesga 16; Overly ambitious, but I might revisit later."],
     ["2023-12-26T06:27-0400", "box_16.png", "Box", "Aseprite, Endesga 16"],
     ["2023-12-26T06:15-0400", "christmas-tree_16.png", "Christmas tree", "Aseprite, Endesga 16"],
     ["2023-12-21T15:07-0400", "prof-oak_16.png", "Prof. Oak", "Palette: Endesga 16"],
