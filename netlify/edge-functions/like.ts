@@ -74,6 +74,8 @@ export const config = {
 
 // Shared with netlify/edge-functions/likes.ts
 function normalizeSlug(slug: string): string {
+  if (!slug) return slug;
+  
   // Force trailing slash
   return slug.slice(-1) === "/" ? slug : `${slug}/`;
 }
