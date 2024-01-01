@@ -48,7 +48,7 @@ export default async (req: Request, context) => {
     // Return all slugs and counts
     const ordered = await supabase
       .from("likes")
-      .select("slug,count")
+      .select("slug,count,last_updated")
       .order("count", { ascending: false });
 
     if (ordered.error) {
