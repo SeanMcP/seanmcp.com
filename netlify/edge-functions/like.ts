@@ -27,11 +27,13 @@ export default async (req: Request, context) => {
   }
 
   const requestURL = new URL(req.url);
-  const slug = requestURL.searchParams.get("slug");
+  let slug = requestURL.searchParams.get("slug");
 
   if (!slug) {
     return Response.json({ error: "Missing slug" }, { status: 400 });
   }
+
+  slug = normalizeSlug(slug);
 
   try {
     const exists = await supabase
@@ -69,3 +71,9 @@ export default async (req: Request, context) => {
 export const config = {
   path: "/fn/like",
 };
+
+// Shared with netlify/edge-functions/likes.ts
+function normalizeSlug(slug: string): string {
+  // Force trailing slash
+  return slug.slice(-1) === "/" ? slug : `${slug}/`;
+}
