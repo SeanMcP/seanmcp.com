@@ -116,7 +116,7 @@ export function normalizeNotes(notes: CollectionEntry<"notes">[]) {
     ...note,
     data: {
       ...note.data,
-      title: `Note #${note.slug.slice(1)}`,
+      title: `Note #${note.slug}`,
     },
   }));
 }
