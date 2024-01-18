@@ -23,7 +23,7 @@ const articles =
           <a href={url}>{getArticleTitle(article.data)}</a>
           <p>
             <ReadableTime date={article.data.pubDate} />
-            <span class="divider()" />
+            <span class="divider()" style="margin-inline: var(--space-xs)" />
             {article.data.description}
           </p>
         </article>

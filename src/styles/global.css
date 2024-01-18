@@ -184,7 +184,7 @@ kbd {
 }
 
 pre:not([class]),
-:not(pre) > code:not([class]) {
+:not(pre)>code:not([class]) {
   background: var(--inline-code-background);
   color: var(--inline-code-color);
   padding: 0.25ch 0.5ch;
@@ -257,17 +257,17 @@ mark {
 
 .divider\(\)::before {
   color: var(--off-background);
-  content: "·";
+  content: "◆";
+  font-size: xx-small;
   font-weight: bold;
-  /* margin-inline: var(--space-xs); */
 }
 
-[class*="stack("] > * + * {
+[class*="stack("]>*+* {
   margin-block-end: 0;
   margin-block-start: var(--space-s);
 }
 
-[class*="stack("] > * + * {
+[class*="stack("]>*+* {
   margin-block-end: 0;
   margin-block-start: var(--space-s);
 }
@@ -276,19 +276,19 @@ mark {
   margin-block-start: 1em;
 }
 
-[class*="stack("] :is(h1, h2, h3, h4) + * {
+[class*="stack("] :is(h1, h2, h3, h4)+* {
   margin-block-start: var(--space-xs);
 }
 
-.stack\(xs\) > * + * {
+.stack\(xs\)>*+* {
   margin-block-start: var(--space-xs);
 }
 
-.stack\(l\) > * + * {
+.stack\(l\)>*+* {
   margin-block-start: var(--space-l);
 }
 
-.stack\(2xl\) > * + * {
+.stack\(2xl\)>*+* {
   margin-block-start: var(--space-2xl);
 }
 
