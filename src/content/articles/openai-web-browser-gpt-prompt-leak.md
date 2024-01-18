@@ -11,7 +11,7 @@ verse:
 ![""](/img/web-browser-gpt-prompt-leaking.png)
 
 I'm not an expert in LLMs or GPTs, but something about the interaction above
-feels wrongs.
+feels wrong.
 
 When prompted with a simple getting started question, OpenAI's official Web
 Browser GPT seems to have leaked some version of its prompt.
