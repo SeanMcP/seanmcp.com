@@ -36,7 +36,7 @@ try {
   );
 
   const injectedData = templateData
-    .replace("%TITLE%", title)
+    .replace("%TITLE%", `"${title}"`)
     .replace("%DATE%", getTimestamp());
 
   fs.writeFileSync(filePath, injectedData, "utf8");
