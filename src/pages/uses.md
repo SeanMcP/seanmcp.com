@@ -13,8 +13,9 @@ Here is an evergreen list of the tools that I use to get work done.
 
 ## Computer
 
-- 2019 MacBook Pro
+- 2023 MacBook Pro
 - 2017 Lenovo YOGA: Ubuntu
+- Desktop: Windows
 
 ## Audio
 
@@ -72,9 +73,11 @@ In addition to language-specific extensions, I use the following:
 
 - [Flow](https://flowapp.info/) timer
 - [GIMP](https://www.gimp.org/)
+- [Hidden Bar](https://github.com/dwarvesf/hidden) macOS menu bar manager
 - [Inkscape](https://inkscape.org/)
 - [KeyCastr](https://github.com/keycastr/keycastr)
-- [MeetingBar](https://meetingbar.app/): (Mac) Upcoming calendar events in status bar
+- [MeetingBar](https://meetingbar.app/): (Mac) Upcoming calendar events in
+  status bar
 - [Numi](https://numi.app/)
 - [Pika](https://superhighfives.com/pika) color picker
 - [Rectangle](https://rectangleapp.com/) macOS window arranger
