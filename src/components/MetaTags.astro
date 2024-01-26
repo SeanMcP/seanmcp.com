@@ -1,12 +1,7 @@
 ---
 import metadata from "../data/metadata.json";
 
-const {
-  description,
-  name,
-  author: { twitter },
-  url,
-} = metadata;
+const { description, name, url } = metadata;
 
 const pageDescription = Astro.props.description ?? description;
 const pageImage = metadata.url + (Astro.props.image ?? "/img/og-image.png");
@@ -39,7 +34,6 @@ if (pageUrl[pageUrl.length - 1] !== "/") {
 
 {/* Twitter */}
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content={`@${twitter}`} />
 
 {/* Links */}
 <link rel="shortcut icon" href="/favicon.png" type="image/png" />
