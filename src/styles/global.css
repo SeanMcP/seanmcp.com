@@ -112,6 +112,10 @@ html[data-theme="dark"] {
   --inline-code-color: var(--github-dark-text);
 }
 
+:target {
+  scroll-margin-block-start: var(--space-2xl);
+}
+
 h1,
 h2,
 h3,
@@ -344,4 +348,14 @@ bible-verse div {
   right: calc(-1 * var(--space-xs));
   width: 30ch;
   z-index: 1;
+}
+
+table-of-contents {
+  display: block;
+  overflow-y: auto;
+}
+
+table-of-contents ol {
+  list-style-type: disc;
+  margin-block: 0;
 }
