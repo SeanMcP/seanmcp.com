@@ -7,12 +7,6 @@ tags:
   - A Few Things
 pubDate: 2024-02-02T16:02-0400
 verse: Revelation 21:5
-head: >-
-  <style>
-      li + li {
-          margin-block-start: 1em;
-      }
-  </style>
 ---
 
 Here are a few things that I found interesting this week:

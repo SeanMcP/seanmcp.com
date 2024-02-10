@@ -64,6 +64,10 @@ const verse = data.verse ?? "Romans 5:8";
     margin-block-end: var(--space-l) !important;
   }
 
+  :global(.article li + li) {
+    margin-block-start: 1em;
+  }
+
   :global(.article img) {
     max-width: 100%;
   }
