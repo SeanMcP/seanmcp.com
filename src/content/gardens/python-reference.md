@@ -2,6 +2,7 @@
 title: "Python Reference"
 description: A quick reference guide for working in Python
 tendedDates:
+  - 2024-02-17T09:25-0400
   - 2024-02-06T20:19-0400
 verse: Isaiah 11:8
 ---
@@ -59,6 +60,8 @@ with open("file.txt", "r") as file:
     contents = file.read()
 ```
 
+Using `with` ensures the file is closed when the block is exited.
+
 ## Writing a file
 
 Use `open` to write a file:
@@ -66,4 +69,20 @@ Use `open` to write a file:
 ```python
 with open("file.txt", "w") as file:
     file.write("Hello, world!")
+```
+
+Using `with` ensures the file is closed when the block is exited.
+
+## Requirements files
+
+To generate a `requirements.txt` file:
+
+```bash
+pip freeze > requirements.txt
+```
+
+To install dependencies from a `requirements.txt` file:
+
+```bash
+pip install -r requirements.txt
 ```
