@@ -334,6 +334,10 @@ mark {
   transform: scale(1.15);
 }
 
+.pixelate\(\) {
+  image-rendering: pixelated;
+}
+
 bible-verse {
   margin-inline-start: auto;
   position: relative;
