@@ -256,8 +256,9 @@ customElements.define(
       const label = this.getAttribute("label");
 
       template.innerHTML = /* html */ `
-<span role="img" ${label ? `aria-label="${label}"` : `aria-hidden="true"`
-        }><slot></slot></span>`;
+<span role="img" ${
+        label ? `aria-label="${label}"` : `aria-hidden="true"`
+      }><slot></slot></span>`;
 
       this.shadowRoot.append(template.content.cloneNode(true));
     }
@@ -380,6 +381,42 @@ customElements.define(
       const stored = JSON.parse(localStorage.getItem(this.storeKey) || "[]");
       stored.push(this.slug);
       localStorage.setItem(this.storeKey, JSON.stringify(stored));
+    }
+  }
+);
+
+customElements.define(
+  "table-of-contents",
+  class TableOfContents extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      const headings = Array.from(
+        document.querySelectorAll("main :is(h2, h3, h4, h5, h6)")
+      );
+
+      const toc = document.createElement("section");
+      toc.id = "table-of-contents";
+      toc.innerHTML = "<b>Table of Contents</b>";
+      const ol = document.createElement("ol");
+
+      let html = "";
+
+      headings.forEach((heading) => {
+        const level = parseInt(heading.tagName.slice(1));
+        const indent = `${level - 2}rem`;
+
+        html += `<li style="margin-inline-start: ${indent}">
+  <a href="#${heading.id}">${heading.textContent}</a>
+</li>`;
+      });
+
+      ol.innerHTML = html;
+      toc.append(ol);
+
+      this.append(toc);
     }
   }
 );

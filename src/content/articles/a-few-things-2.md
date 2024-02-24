@@ -7,12 +7,6 @@ tags:
   - A Few Things
 pubDate: 2024-01-26T22:30-0400
 verse: Job 37:15
-head: >-
-  <style>
-      li + li {
-          margin-block-start: 1em;
-      }
-  </style>
 ---
 
 Here are a few things that I found interesting this week:
