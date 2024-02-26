@@ -8,7 +8,7 @@ tags:
   - LLMs
   - Ollama
 pubDate: 2024-02-24T06:48-0400
-verse: Psalm 20:29
+verse: Proverbs 20:29
 ---
 
 **tl;dr** You _can_ run Ollama on an older device, but the response will be slow
