@@ -4,7 +4,7 @@ description:
   Tree mails, disappearing cockroaches, and an entry in the game dev log genre
 tags:
   - A Few Things
-pubDate: 2024-03-09T16:40-0400
+pubDate: 2024-03-09T06:40-0400
 verse: Psalm 1:3
 ---
 
