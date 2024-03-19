@@ -36,6 +36,14 @@ Here is a log of the process:
    8. That fixed it
 5. Tried `pnpm run build` again
 6. It worked
+7. Netlify build failed:
+    ```
+    9:32:21 PM: Node.js v18.12.1 is not supported by Astro!
+    9:32:21 PM: Please upgrade Node.js to a supported version: ">=18.14.1"
+    ```
+   1. Updated `NODE_VERSION` environment variable to LTS `20.11.1`
+   2. That fixed it
+8. Done
 
 I get a little nervous reading about the complexity of Astro--especially because
 I'm using it to build this simple site. But in my experience, all of the
