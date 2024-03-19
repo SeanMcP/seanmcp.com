@@ -11,6 +11,14 @@ pubDate: 2024-03-18T21:44-0400
 verse: Psalm 8:3
 ---
 
+<call-out type="info">
+
+**Update March 19, 2024**: I missed some
+[issues with static file endpoints](/articles/fix-static-file-endpoints-after-astro-v4-upgrade)
+that I needed to fix after the upgrade.
+
+</call-out>
+
 In a [recent episode of the ShopTalk podcast](https://shoptalkshow.com/607/),
 Chris Coyier and Dave Rupert interviewed Fred K. Schott about
 [new features in Astro](https://astro.build/blog/astro-db/). That reminded me
