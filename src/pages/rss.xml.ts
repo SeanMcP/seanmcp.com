@@ -20,7 +20,7 @@ function fileToSlug(file: string) {
   return file.slice(file.indexOf("/articles"), file.lastIndexOf("."));
 }
 
-export function get() {
+export function GET() {
   return rss({
     title: metadata.author.name,
     description: metadata.description,
