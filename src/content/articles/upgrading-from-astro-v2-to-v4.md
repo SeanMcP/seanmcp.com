@@ -1,11 +1,13 @@
 ---
 title: "Upgrading from Astro v2 to v4"
-description: 1-2 SENTENCES WITHOUT A FINAL PERIOD
+description:
+  I needed to update dependencies, change a client directive, and then update
+  configuration in Netlify
 tags:
   - Astro
   - Log
   - Meta
-pubDate: 2024-03-18T20:57-0400
+pubDate: 2024-03-18T21:44-0400
 verse: Psalm 8:3
 ---
 
@@ -37,10 +39,10 @@ Here is a log of the process:
 5. Tried `pnpm run build` again
 6. It worked
 7. Netlify build failed:
-    ```
-    9:32:21 PM: Node.js v18.12.1 is not supported by Astro!
-    9:32:21 PM: Please upgrade Node.js to a supported version: ">=18.14.1"
-    ```
+   ```
+   9:32:21 PM: Node.js v18.12.1 is not supported by Astro!
+   9:32:21 PM: Please upgrade Node.js to a supported version: ">=18.14.1"
+   ```
    1. Updated `NODE_VERSION` environment variable to LTS `20.11.1`
    2. That fixed it
 8. Done
