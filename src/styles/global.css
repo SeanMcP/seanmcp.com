@@ -180,6 +180,10 @@ code,
   padding: 1rem;
 }
 
+a code {
+  color: inherit !important;
+}
+
 pre,
 code,
 kbd {
