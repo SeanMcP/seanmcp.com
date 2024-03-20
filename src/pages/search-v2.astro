@@ -1,0 +1,318 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import {
+  getArticles,
+  getGardens,
+  getNotes,
+  normalizeArt,
+  normalizeGardens,
+  normalizeNotes,
+} from "src/utils";
+import artData from "../content/_art";
+
+type SearchableContentItem = {
+  body?: string;
+  date: string;
+  description: string;
+  tags: string[];
+  title: string;
+  type: "article" | "note" | "garden" | "art";
+  url: string;
+  year: number;
+};
+
+const searchableContent: Array<SearchableContentItem> = [];
+
+const years = new Set<number>();
+const tags = new Set<string>();
+
+function addToSearchableContent(array: Array<any>) {
+  array.forEach((item) => {
+    const date = new Date(item.data.pubDate);
+    const year = date.getFullYear();
+    years.add(year);
+
+    item.data.tags?.forEach((tag) => tags.add(tag));
+
+    const type =
+      item.collection.slice(-1) === "s"
+        ? item.collection.slice(0, -1)
+        : item.collection;
+
+    searchableContent.push({
+      body: item.body,
+      date: item.data.pubDate,
+      description: item.data.description || "",
+      tags: item.data.tags || [],
+      title: item.data.title,
+      type,
+      url: `/${item.collection}/${item.slug}`,
+      year: year,
+    });
+  });
+}
+addToSearchableContent(await getArticles());
+addToSearchableContent(normalizeNotes(await getNotes()));
+addToSearchableContent(normalizeGardens(await getGardens()));
+addToSearchableContent(normalizeArt(artData));
+
+const sortedYears = Array.from(years).sort((a, b) => b - a);
+const sortedTags = Array.from(tags).sort((a, b) =>
+  a.toLowerCase().localeCompare(b.toLowerCase())
+);
+---
+
+<PageLayout documentTitle="Search" title="Search">
+  <form action="." id="search-v2" method="get">
+    <div class="line(xs)">
+      <input
+        aria-label="Search for content"
+        autofocus
+        name="q"
+        placeholder="Search content title, description, or body"
+        type="search"
+      />
+      <button>Search</button>
+    </div>
+    <fieldset>
+      <legend class="hidden()">Filters</legend>
+      <div class="line(m)">
+        <label class="line(xs)">
+          Type
+          <select name="type">
+            <option value="">All</option>
+            {
+              ["Articles", "Notes", "Gardens", "Art"].map((type) => {
+                let value = type.toLowerCase();
+                if (value.slice(-1) === "s") {
+                  value = value.slice(0, -1);
+                }
+                return <option value={value}>{type}</option>;
+              })
+            }
+          </select>
+        </label>
+        <label class="line(xs)">
+          Year
+          <select name="year">
+            <option value="">All</option>
+            {sortedYears.map((year) => <option value={year}>{year}</option>)}
+          </select>
+        </label>
+        <label class="line(xs)">
+          Tag
+          <select name="tag">
+            <option value="">All</option>
+            {
+              sortedTags.map((tag) => {
+                return <option value={tag}>{tag}</option>;
+              })
+            }
+          </select>
+        </label>
+      </div>
+    </fieldset>
+    <output id="search-v2-output"></output>
+    <template id="search-v2-result">
+      <li class="line(xs)">
+        <span>%TYPE%</span>
+        <div>
+          <a href="%URL%">%TITLE%</a>
+          <time datetime="%DATE%">(%DISPLAY_DATE%)</time>
+        </div>
+      </li>
+    </template>
+
+    <script is:inline src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+
+    <script is:inline define:vars={{ searchableContent }}>
+      // Sync form with URL
+      const searchParams = new URLSearchParams(window.location.search);
+      const query = searchParams.get("q");
+      if (query) {
+        document.querySelector("input[name=q]").value = query;
+      }
+      const type = searchParams.get("type");
+      if (type) {
+        document.querySelector("select[name=type]").value = type;
+      }
+      const year = searchParams.get("year");
+      if (year) {
+        document.querySelector("select[name=year]").value = year;
+      }
+      const tag = searchParams.get("tag");
+      if (tag) {
+        document.querySelector("select[name=tag]").value = tag;
+      }
+
+      const output = document.getElementById("search-v2-output");
+      const liTemplate = document.querySelector("template#search-v2-result")
+        .content.firstElementChild;
+      function searchAndRender(query, type, year, tag) {
+        if (!query && !type && !year && !tag) {
+          output.textContent = "";
+          return;
+        }
+
+        // Filter content based on search parameters
+        const filteredList = searchableContent.filter((item) => {
+          let include = true;
+          if (type && item.type != type) {
+            include = false;
+          }
+          if (year && item.year != year) {
+            include = false;
+          }
+          if (tag && !item.tags.includes(tag)) {
+            include = false;
+          }
+          return include;
+        });
+
+        let listToRender = filteredList;
+
+        const fuse = new Fuse(filteredList, {
+          keys: ["body", "description", "tags", "title", "url"],
+          threshold: 0.2,
+        });
+
+        if (query) {
+          listToRender = fuse.search(query).map((result) => result.item);
+        }
+
+        // Render search results
+        const heading = query
+          ? `Search results for "${query}"`
+          : "Search results";
+        if (listToRender.length === 0) {
+          output.innerHTML = `
+          <h2>${heading}</h2>
+          <p>No results found</p>
+          `;
+          return;
+        }
+        output.innerHTML = `
+          <h2>${heading}</h2>
+          <p>Found ${listToRender.length} result${
+          listToRender.length === 1 ? "" : "s"
+        }</p>
+          <ol>
+            ${listToRender
+              .map((item) => {
+                const displayDate = new Date(item.date).toLocaleDateString();
+                const html = liTemplate
+                  .cloneNode(true)
+                  .outerHTML.replace(/%TYPE%/g, item.type)
+                  .replace(/%URL%/g, item.url)
+                  .replace(/%TITLE%/g, item.title)
+                  .replace(/%DATE%/g, item.date)
+                  .replace(/%DISPLAY_DATE%/g, displayDate);
+
+                return html;
+              })
+              .join("")}
+          </ol>
+        `;
+      }
+
+      searchAndRender(query, type, year, tag);
+
+      const form = document.querySelector("main form");
+      function handleFormChange() {
+        const searchParams = new URLSearchParams();
+        const formData = new FormData(form);
+        for (const [key, value] of formData) {
+          searchParams.set(key, value);
+        }
+        window.history.pushState(
+          {},
+          "",
+          `${window.location.pathname}?${searchParams}`
+        );
+        searchAndRender(
+          formData.get("q"),
+          formData.get("type"),
+          formData.get("year"),
+          formData.get("tag")
+        );
+      }
+      form.addEventListener("change", (e) => {
+        if (e.target.tagName === "SELECT") {
+          if (e.target.value) {
+            e.target.setAttribute("value", e.target.value);
+          } else {
+            e.target.removeAttribute("value");
+          }
+        }
+        handleFormChange();
+      });
+      form.addEventListener("input", handleFormChange);
+    </script>
+  </form>
+
+  <style>
+    form :is(input, select) {
+      background-color: transparent;
+      border: 2px solid var(--off-background);
+      color: var(--text-color);
+    }
+
+    form input {
+      flex-grow: 1;
+    }
+
+    form input::placeholder {
+      color: var(--lighter-text-color);
+    }
+
+    form fieldset {
+      border: 0;
+      font-size: small;
+      padding: var(--space-xs) 0;
+      margin: 0;
+    }
+
+    form button {
+      background-color: var(--off-background);
+      border: 2px solid var(--off-background);
+      color: var(--text);
+    }
+
+    form button:is(:focus, :hover) {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: var(--background);
+    }
+
+    form legend {
+      font-size: small;
+      color: var(--lighter-text-color);
+      text-transform: uppercase;
+      padding-inline: 1ch;
+    }
+
+    form select[value] {
+      color: var(--anchor-color);
+    }
+
+    :global(#search-v2-output ol) {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-block-start: var(--space-2xs);
+    }
+
+    li span {
+      background-color: var(--off-background);
+      font-size: x-small;
+      text-transform: uppercase;
+      padding: 0.25em 0.5em;
+    }
+
+    li time {
+      color: var(--lighter-text-color);
+    }
+  </style>
+</PageLayout>
