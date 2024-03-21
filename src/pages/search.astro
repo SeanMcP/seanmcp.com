@@ -63,7 +63,7 @@ const sortedTags = Array.from(tags).sort((a, b) =>
 ---
 
 <PageLayout documentTitle="Search" title="Search">
-  <form action="." id="search-v2" method="get">
+  <form action="." id="search" method="get">
     <div class="line(xs)" style="align-items:initial;">
       <label class="line(xs)">
         <svg
@@ -139,8 +139,8 @@ const sortedTags = Array.from(tags).sort((a, b) =>
         </label>
       </div>
     </fieldset>
-    <output id="search-v2-output"></output>
-    <template id="search-v2-result">
+    <output id="search-output"></output>
+    <template id="search-result">
       <li class="line(xs)">
         <span>%TYPE%</span>
         <div>
@@ -172,8 +172,8 @@ const sortedTags = Array.from(tags).sort((a, b) =>
         document.querySelector("select[name=tag]").value = tag;
       }
 
-      const output = document.getElementById("search-v2-output");
-      const liTemplate = document.querySelector("template#search-v2-result")
+      const output = document.getElementById("search-output");
+      const liTemplate = document.querySelector("template#search-result")
         .content.firstElementChild;
       function searchAndRender(query, type, year, tag) {
         if (!query && !type && !year && !tag) {
@@ -349,7 +349,7 @@ const sortedTags = Array.from(tags).sort((a, b) =>
       background-color: var(--off-background);
     }
 
-    :global(#search-v2-output ol) {
+    :global(#search-output ol) {
       list-style-type: none;
       padding: 0;
     }
