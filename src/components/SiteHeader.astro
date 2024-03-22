@@ -2,7 +2,6 @@
 import { urlsMatch } from "src/utils";
 import navigation from "src/data/navigation";
 
-import CommandPalette from "./CommandPalette.astro";
 import DarkModeToggle from "./DarkModeToggle.astro";
 import LogoLink from "./LogoLink.astro";
 ---
@@ -23,9 +22,9 @@ import LogoLink from "./LogoLink.astro";
           //    https://github.com/SeanMcP/seanmcp.com/issues/35
           const props = {
             "aria-current": urlsMatch(Astro.url.pathname, item.url)
-            // Type casting is necessary because we aren't setting this
-            // attribute directly on the element
-              ? ("page" as any)
+              ? // Type casting is necessary because we aren't setting this
+                // attribute directly on the element
+                ("page" as any)
               : null,
             href: item.url,
           };
@@ -33,7 +32,6 @@ import LogoLink from "./LogoLink.astro";
         })
       }
     </nav>
-    <CommandPalette />
     <DarkModeToggle />
   </div>
   <div id="scroll-progress">
@@ -65,7 +63,7 @@ import LogoLink from "./LogoLink.astro";
   }
 
   @media screen and (max-width: 500px) {
-    nav a:nth-child(n + 3) {
+    nav a:nth-child(n + 4) {
       display: none;
     }
   }

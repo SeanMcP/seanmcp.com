@@ -54,6 +54,11 @@ const LINKS = {
     label: "Random Article",
     url: "/fn/random-article",
   },
+  search: {
+    description: "Search my blog for articles or topics",
+    label: "Search",
+    url: "/search/",
+  },
   series: {
     description: "Articles organized into series",
     label: "Series",
@@ -89,6 +94,7 @@ const LINKS = {
 
 export default {
   header: [
+    LINKS.search,
     LINKS.articles,
     LINKS.about,
     LINKS.notes,
