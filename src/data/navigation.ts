@@ -49,7 +49,7 @@ const LINKS = {
     label: "Notes",
     url: "/notes/",
   },
-  randomAricle: {
+  randomArticle: {
     description: "Navigate to a random article from my blog",
     label: "Random Article",
     url: "/fn/random-article",

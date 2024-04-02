@@ -9,6 +9,7 @@ import {
   normalizeNotes,
 } from "src/utils";
 import artData from "../content/_art";
+import pages from "src/data/navigation";
 
 type SearchableContentItem = {
   body?: string;
@@ -16,7 +17,7 @@ type SearchableContentItem = {
   description: string;
   tags: string[];
   title: string;
-  type: "article" | "note" | "garden" | "art";
+  type: "article" | "note" | "garden" | "art" | "social" | "page";
   url: string;
   year: number;
 };
@@ -55,6 +56,44 @@ addToSearchableContent(await getArticles());
 addToSearchableContent(normalizeNotes(await getNotes()));
 addToSearchableContent(normalizeGardens(await getGardens(), "FIRST"));
 addToSearchableContent(normalizeArt(artData));
+
+[
+  {
+    url: "https://github.com/seanmcp",
+    title: "GitHub",
+  },
+  {
+    url: "https://linkedin.com/in/seanmcp",
+    title: "LinkedIn",
+  },
+  {
+    url: "https://indieweb.social/@seanmcp",
+    title: "Mastodon",
+  },
+].forEach((item) => {
+  searchableContent.push({
+    body: item.url,
+    date: "",
+    description: "",
+    tags: [],
+    title: `Find me on ${item.title}`,
+    type: "social",
+    url: item.url,
+    year: 0,
+  });
+});
+pages.all.forEach((item) => {
+  searchableContent.push({
+    body: item.url,
+    date: "",
+    description: item.description,
+    tags: [],
+    title: item.label,
+    type: "page",
+    url: item.url,
+    year: 0,
+  });
+});
 
 const sortedYears = Array.from(years).sort((a, b) => b - a);
 const sortedTags = Array.from(tags).sort((a, b) =>
@@ -199,7 +238,7 @@ const sortedTags = Array.from(tags).sort((a, b) =>
         let listToRender = filteredList;
 
         const fuse = new Fuse(filteredList, {
-          keys: ["body", "description", "tags", "title", "url"],
+          keys: ["body", "description", "tags", "title", "url", "type"],
           threshold: 0.2,
         });
 
@@ -225,15 +264,17 @@ const sortedTags = Array.from(tags).sort((a, b) =>
             ${listToRender
               .map((item) => {
                 const displayDate = new Date(item.date).toLocaleDateString();
-                const html = liTemplate
-                  .cloneNode(true)
-                  .outerHTML.replace(/%TYPE%/g, item.type)
+                let html = liTemplate.cloneNode(true).outerHTML;
+                if (!item.date) {
+                  html = html.replace(/<time.*<\/time>/, "");
+                }
+
+                return html
+                  .replace(/%TYPE%/g, item.type)
                   .replace(/%URL%/g, item.url)
                   .replace(/%TITLE%/g, item.title)
                   .replace(/%DATE%/g, item.date)
                   .replace(/%DISPLAY_DATE%/g, displayDate);
-
-                return html;
               })
               .join("")}
           </ol>
@@ -345,7 +386,7 @@ const sortedTags = Array.from(tags).sort((a, b) =>
       color: var(--anchor-color);
     }
 
-    form select option:is(:checked,:focus,:hover) {
+    form select option:is(:checked, :focus, :hover) {
       background-color: var(--off-background);
     }
 
