@@ -1,0 +1,101 @@
+---
+import ArticleList from "@components/ArticleList.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import { getArticles } from "src/utils";
+
+const articles = (await getArticles()).filter(
+  (article) =>
+    !article.data.flags?.includes("DRAFT") &&
+    !article.data.flags?.includes("RSS-ONLY")
+);
+---
+
+<PageLayout title="Random article">
+  <div aria-label="loading" id="loading"></div>
+  <output></output>
+  <button id="again">Again?</button>
+  <div aria-hidden="true" hidden="true" id="data">
+    <ArticleList articles={articles} />
+  </div>
+</PageLayout>
+
+<style>
+  #loading {
+    padding-block: var(--space-xs);
+    text-align: center;
+  }
+
+  #loading::after {
+    display: inline-block;
+    content: "";
+    background-color: var(--accent);
+    height: 1em;
+    width: 1em;
+    rotate: 45deg;
+    animation: loading 2s infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      background-color: var(--blue);
+      rotate: 45deg;
+    }
+    25% {
+      rotate: calc(45deg + 90deg);
+      background-color: var(--green);
+    }
+    50% {
+      background-color: var(--orange);
+      rotate: calc(45deg + 180deg);
+    }
+    75% {
+      background-color: var(--purple);
+      rotate: calc(45deg + 270deg);
+    }
+    100% {
+      background-color: var(--blue);
+      rotate: calc(45deg + 360deg);
+    }
+  }
+
+  output:not(:empty) {
+    display: block;
+  }
+
+  output:empty + button#again {
+    display: none;
+  }
+
+  button#again {
+    background: transparent;
+    border: 0;
+    color: var(--text-color);
+    display: block;
+    margin-inline: auto;
+  }
+
+  button#again:is(:focus, :hover) {
+    color: var(--primary);
+  }
+</style>
+
+<script>
+  const loading = document.getElementById("loading");
+  const articles = document.querySelectorAll("#data article");
+  const output = document.querySelector("output");
+
+  function getRandomArticle() {
+    const randomArticle = articles[Math.floor(Math.random() * articles.length)];
+    loading.removeAttribute("style");
+    output.textContent = "";
+
+    setTimeout(() => {
+      loading.setAttribute("style", "display: none");
+      output.appendChild(randomArticle);
+    }, 4000);
+  }
+
+  getRandomArticle();
+
+  document.getElementById("again").addEventListener("click", getRandomArticle);
+</script>
