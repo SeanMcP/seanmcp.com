@@ -284,7 +284,7 @@ customElements.define(
         this.slug = attrSlug;
       }
 
-      const response = await fetch("https://likes.seanmcp.com/api/likes?slug=" + this.slug);
+      const response = await fetch("https://functions.seanmcp.com/api/likes?slug=" + this.slug);
       let count;
       if (response.ok) {
         const data = await response.json();
@@ -328,7 +328,7 @@ customElements.define(
           display: none;
         }
       </style>
-      <form action="https://likes.seanmcp.com/api/like">
+      <form action="https://functions.seanmcp.com/api/like">
         <input type="hidden" name="slug" value="${this.slug}">
         <button
           ${isLiked ? "aria-disabled=true" : ""}
