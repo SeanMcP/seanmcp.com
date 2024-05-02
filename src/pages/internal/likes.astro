@@ -22,7 +22,7 @@ articles.forEach((article) => {
         this.textContent = "Loading...";
 
         const pathToTitle = JSON.parse(this.dataset.articles);
-        const response = await fetch("/fn/likes");
+        const response = await fetch("https://likes.seanmcp.com/api/likes");
         const { data: likes } = await response.json();
 
         let html = `

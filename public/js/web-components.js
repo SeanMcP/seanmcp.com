@@ -256,9 +256,8 @@ customElements.define(
       const label = this.getAttribute("label");
 
       template.innerHTML = /* html */ `
-<span role="img" ${
-        label ? `aria-label="${label}"` : `aria-hidden="true"`
-      }><slot></slot></span>`;
+<span role="img" ${label ? `aria-label="${label}"` : `aria-hidden="true"`
+        }><slot></slot></span>`;
 
       this.shadowRoot.append(template.content.cloneNode(true));
     }
@@ -285,7 +284,7 @@ customElements.define(
         this.slug = attrSlug;
       }
 
-      const response = await fetch("/fn/likes?slug=" + this.slug);
+      const response = await fetch("https://likes.seanmcp.com/api/likes?slug=" + this.slug);
       let count;
       if (response.ok) {
         const data = await response.json();
@@ -329,7 +328,7 @@ customElements.define(
           display: none;
         }
       </style>
-      <form action="/fn/like">
+      <form action="https://likes.seanmcp.com/api/like">
         <input type="hidden" name="slug" value="${this.slug}">
         <button
           ${isLiked ? "aria-disabled=true" : ""}
