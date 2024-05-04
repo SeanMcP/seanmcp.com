@@ -111,15 +111,15 @@ h1 {
 }
 
 h2 {
-  font-size: var(--step-3);
-}
-
-h3 {
   font-size: var(--step-2);
 }
 
-h4 {
+h3 {
   font-size: var(--step-1);
+}
+
+h4 {
+  font-size: var(--step--1);
 }
 
 hr {
@@ -218,6 +218,14 @@ li ul {
 mark {
   background-color: var(--alt-primary);
   color: var(--text-color);
+}
+
+.content-wrapper :is(ol, ul)>li+li {
+  margin-block-start: 1em;
+}
+
+.content-wrapper img {
+  max-width: 100%;
 }
 
 /* Utilities */

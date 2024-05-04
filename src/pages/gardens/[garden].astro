@@ -24,7 +24,9 @@ const {
   <h1><GardenTitle title={title} state={getGardenState(entry)} /></h1>
   <GardenDetails tendedDates={tendedDates} />
   <br />
-  <Content />
+  <div class="content-wrapper">
+    <Content />
+  </div>
   <hr />
   <ContentFooter title={title} verse={verse} />
 </PageLayout>
