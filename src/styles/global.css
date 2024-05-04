@@ -245,6 +245,7 @@ mark {
 .divider\(\)::before {
   color: var(--off-background);
   content: "◆";
+  display: block;
   font-size: xx-small;
   font-weight: bold;
 }
