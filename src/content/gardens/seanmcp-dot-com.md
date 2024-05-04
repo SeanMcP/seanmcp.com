@@ -2,6 +2,7 @@
 title: seanmcp.com
 description: Documenting this site
 tendedDates:
+  - 2024-05-04T13:55-0400
   - 2023-12-09T14:53-0400
   - 2023-11-28T06:45-0400
   - 2023-11-27T12:15-0400
@@ -13,19 +14,17 @@ planning redesigns.
 
 ## Features
 
-- Dark mode
 - Scroll progress indicator
-- Command palette: <kbd>cmd/ctrl</kbd> + <kbd>k</kbd>
 - Activity graph
 - Bible verses
 - Draft articles
 - RSS-only articles
 - Article images
-- Like button
 
 ## Content types
 
 - [Articles](/articles)
+- [Art](/art)
 - [Gardens](/gardens)
 - [Notes](/nodes)
 
