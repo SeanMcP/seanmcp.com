@@ -44,12 +44,11 @@ const verse = data.verse ?? "Romans 5:8";
         </call-out>
       )
     }
-    <Content />
+    <div class="content-wrapper">
+      <Content />
+    </div>
     <hr />
     <ContentFooter title={data.title} verse={verse} />
-    <div style="text-align: center">
-      <like-button title="BETA"></like-button>
-    </div>
   </article>
   {
     data.scripts?.map((filename) => (
@@ -62,18 +61,6 @@ const verse = data.verse ?? "Romans 5:8";
   h1 {
     margin-block-start: var(--space-xs) !important;
     margin-block-end: var(--space-l) !important;
-  }
-
-  :global(.article li + li) {
-    margin-block-start: 0.5em;
-  }
-
-  :global(.article img) {
-    max-width: 100%;
-  }
-
-  :global(.footnotes h2) {
-    margin-block-start: 1em;
   }
 
   /* CodePen embeds */

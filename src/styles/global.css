@@ -91,27 +91,6 @@ body {
   line-height: 1.5;
 }
 
-html[data-theme="dark"] {
-  --blue: var(--github-dark-blue);
-  --green: var(--github-dark-green);
-  --orange: var(--github-dark-orange);
-  --purple: var(--github-dark-purple);
-
-  --primary: var(--github-dark-purple);
-  --alt-primary: var(--github-light-purple);
-  --accent: var(--github-dark-blue);
-
-  --background: var(--dark);
-  --off-background: hsl(var(--dark-hs), 25%);
-
-  --text-color: var(--light);
-  --lighter-text-color: hsl(var(--light-hs), 70%);
-  --anchor-color: var(--accent);
-
-  --inline-code-background: var(--github-dark-background);
-  --inline-code-color: var(--github-dark-text);
-}
-
 :target {
   scroll-margin-block-start: var(--space-2xl);
 }
@@ -132,15 +111,15 @@ h1 {
 }
 
 h2 {
-  font-size: var(--step-3);
-}
-
-h3 {
   font-size: var(--step-2);
 }
 
-h4 {
+h3 {
   font-size: var(--step-1);
+}
+
+h4 {
+  font-size: var(--step--1);
 }
 
 hr {
@@ -241,6 +220,14 @@ mark {
   color: var(--text-color);
 }
 
+.content-wrapper :is(ol, ul)>li+li {
+  margin-block-start: 1em;
+}
+
+.content-wrapper img {
+  max-width: 100%;
+}
+
 /* Utilities */
 
 .center\(\) {
@@ -266,6 +253,7 @@ mark {
 .divider\(\)::before {
   color: var(--off-background);
   content: "◆";
+  display: block;
   font-size: xx-small;
   font-weight: bold;
 }
