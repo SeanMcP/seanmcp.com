@@ -4,10 +4,15 @@ import "../styles/reset.css";
 import "../styles/global.css";
 
 export interface Props {
+  documentTitle?: string;
   foot?: string;
   head?: string;
   title: string;
-  documentTitle?: string;
+
+  // Maybe props
+  description?: string;
+  frontmatter?: any;
+  image?: string;
 }
 
 const found = {
@@ -15,23 +20,18 @@ const found = {
   foot: Astro.props.frontmatter?.foot ?? Astro.props.foot,
   head: Astro.props.frontmatter?.head ?? Astro.props.head,
   image: Astro.props.frontmatter?.image ?? Astro.props.image,
-  title: Astro.props.documentTitle || Astro.props.frontmatter?.documentTitle || Astro.props.frontmatter?.title || Astro.props.title,
+  title:
+    Astro.props.documentTitle ||
+    Astro.props.frontmatter?.documentTitle ||
+    Astro.props.frontmatter?.title ||
+    Astro.props.title,
 };
 ---
 
 <html lang="en">
   <head>
-    <script id="fart">document.documentElement.dataset.theme = localStorage.getItem("com.seanmcp.theme")</script>
     <MetaTags {...found} />
-    <script is:inline type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "gofrcqzcyd");
-    </script>
     {found.head && <Fragment set:html={found.head} />}
-    
   </head>
 
   <slot />
