@@ -91,27 +91,6 @@ body {
   line-height: 1.5;
 }
 
-html[data-theme="dark"] {
-  --blue: var(--github-dark-blue);
-  --green: var(--github-dark-green);
-  --orange: var(--github-dark-orange);
-  --purple: var(--github-dark-purple);
-
-  --primary: var(--github-dark-purple);
-  --alt-primary: var(--github-light-purple);
-  --accent: var(--github-dark-blue);
-
-  --background: var(--dark);
-  --off-background: hsl(var(--dark-hs), 25%);
-
-  --text-color: var(--light);
-  --lighter-text-color: hsl(var(--light-hs), 70%);
-  --anchor-color: var(--accent);
-
-  --inline-code-background: var(--github-dark-background);
-  --inline-code-color: var(--github-dark-text);
-}
-
 :target {
   scroll-margin-block-start: var(--space-2xl);
 }

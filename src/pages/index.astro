@@ -45,19 +45,19 @@ import PageLayout from "@layouts/PageLayout.astro";
     position: relative;
   }
   mark::after {
+    --_overflow: 0.1ch;
     background-color: var(--alt-primary);
     bottom: 0;
     content: "";
-    left: -0.2ch;
+    left: calc(-1 * var(--_overflow));
     position: absolute;
     top: 0;
-    transform: skewX(-10deg);
     transition: width 200ms ease-in-out;
     width: 0;
     z-index: -1;
   }
   h1:hover mark::after {
-    width: calc(100% + 0.4ch);
+    width: calc(100% + calc(2 * var(--_overflow)));
   }
   @media screen and (min-width: 600px) {
     h1,
