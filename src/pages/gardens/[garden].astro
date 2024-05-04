@@ -20,19 +20,11 @@ const {
 } = entry;
 ---
 
-<PageLayout
-  {...entry.data}
-  title={title}
-  description={description}
-  withoutH1
->
+<PageLayout {...entry.data} title={title} description={description} withoutH1>
   <h1><GardenTitle title={title} state={getGardenState(entry)} /></h1>
   <GardenDetails tendedDates={tendedDates} />
   <br />
   <Content />
   <hr />
   <ContentFooter title={title} verse={verse} />
-  <div style="text-align: center">
-    <like-button title="BETA"></like-button>
-  </div>
 </PageLayout>
