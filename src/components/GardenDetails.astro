@@ -1,24 +1,70 @@
 ---
-import { readableDate } from 'src/utils';
+import { readableDate } from "src/utils";
 
 interface Props {
-    tendedDates: Date[];
+  tendedDates: string[];
 }
 
-const {tendedDates} = Astro.props
-const count = tendedDates.length
-let tendedCount = `Tended ${count} times`
-if (count === 1) {
-    tendedCount = "Tended once"
-} else if (count === 2) {
-    tendedCount = `Tended twice`
-}
+const { tendedDates } = Astro.props;
+const otherTendedDates = tendedDates.slice(1);
+
+const first = tendedDates[tendedDates.length - 1];
+const readableFirst = readableDate(first);
+const last = tendedDates[0];
+const readableLast = readableDate(last);
 ---
 
 <div class="line(xs)">
-    <span>Last tended {readableDate(tendedDates[0])}</span>
-    <span class="divider()" />
-    <span>{tendedCount}</span>
-    <span class="divider()" />
-    <span>Planted {readableDate(tendedDates[tendedDates.length - 1])}</span>
+  <time datetime={first}>{readableFirst}</time>
+  <ol aria-label="Tended dates" class="visualization">
+    <li title={"Planted " + readableFirst}></li>
+    {
+      otherTendedDates.map((date) => (
+        <li title={"Tended " + readableDate(date)} />
+      ))
+    }
+    <li title={"Last tended " + readableLast}></li>
+  </ol>
+  <time datetime={last}>{readableLast}</time>
 </div>
+
+<style>
+  ol {
+    --_size: 8px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  ol::before {
+    --_x-offset: calc(var(--_size) / 2);
+    --_height: 2px;
+    background-color: var(--green);
+    content: "";
+    height: var(--_height);
+    left: var(--_x-offset);
+    opacity: 0.5;
+    position: absolute;
+    right: var(--_x-offset);
+    top: calc(50% - calc(var(--_height) / 2));
+    width: calc(100% - calc(var(--_x-offset) * 2));
+    z-index: -1;
+  }
+
+  ol li {
+    background-color: var(--green);
+    border-radius: 50%;
+    border: 2px solid var(--green);
+    display: block;
+    height: var(--_size);
+    width: var(--_size);
+  }
+
+  ol > li:last-child {
+    background-color: var(--background);
+  }
+</style>
