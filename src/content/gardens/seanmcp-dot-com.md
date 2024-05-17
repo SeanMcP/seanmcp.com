@@ -2,6 +2,7 @@
 title: seanmcp.com
 description: Documenting this site
 tendedDates:
+  - 2024-05-17T13:10-0400
   - 2024-05-04T13:55-0400
   - 2023-12-09T14:53-0400
   - 2023-11-28T06:45-0400
@@ -34,7 +35,7 @@ planning redesigns.
 - [_Create a "Dave Rupert"-inspired activity graph_](/articles/create-a-dave-rupert-inspired-activity-graph)
 - [_English words by consonant-vowel pattern_](/articles/english-words-by-consonant-vowel-pattern)
 - [_Rebuilding with Astro_](/articles/rebuilding-with-astro)
-- [_Writing Prompts for Programmers_](/garden/writing-prompts-for-programmers)
+- [_Writing Prompts for Programmers_](/gardens/writing-prompts-for-programmers)
 
 ## Unique pages
 
