@@ -24,7 +24,7 @@ that ChatGPT provided was not sourced from those articles.
 
 I don't know what I expected, but it's clear that ChatGPT 4o isn't a reliable
 research assistant yet. It can provide you some common ~~misconceptions~~
-information, but it isn't going to point you to consistently point you to a true
-source. You're going to need to research for yourself.
+information, but it isn't going to point you to a true source consistently.
+You're going to need to research for yourself.
 
 Use with caution.
