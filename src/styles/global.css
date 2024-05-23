@@ -221,7 +221,7 @@ mark {
 }
 
 .content-wrapper :is(ol, ul)>li+li {
-  margin-block-start: 1em;
+  margin-block-start: 0.5em;
 }
 
 .content-wrapper img {
