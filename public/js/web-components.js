@@ -278,7 +278,8 @@ customElements.define(
 
       const toc = document.createElement("section");
       toc.id = "table-of-contents";
-      toc.innerHTML = "<b>Table of Contents</b>";
+      const headingTag = this.getAttribute("heading-tag") || "b";
+      toc.innerHTML = `<${headingTag}>Table of Contents</${headingTag}>`;
       const ol = document.createElement("ol");
 
       let html = "";
