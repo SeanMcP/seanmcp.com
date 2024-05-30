@@ -2,6 +2,7 @@
 title: "Solo-playing Adventure Games with AI"
 description: The best prompts for playing adventure games alone with AI
 tendedDates:
+  - 2024-05-30T06:58-0400
   - 2024-05-29T19:09-0400
 verse: Psalm 62:5
 ---
@@ -18,5 +19,8 @@ product/model. As with all AI: your experiences will vary.
 > You are a game master for Cairn RPG. Run a play by post adventure with me.
 > Keep everything brief, the goal is to get through an adventure quickly.
 
-- \+ Does a great job of generating options for you to choose from
-- \- Let's you steer the story too much
+- \+ Creative and engaging story and characters
+- \+ Generates options for you to choose from
+- \-/\+ Let's you steer the story
+- \- Some of the plot points were repetitive
+- \- Encounters were too easy and NPCs too helpful
