@@ -81,13 +81,6 @@ export async function getArticles(options?: {
     .slice(0, count);
 }
 
-export function getGardenState(garden: CollectionEntry<"gardens">) {
-  const lastYear = new Date();
-  lastYear.setFullYear(lastYear.getFullYear() - 1);
-
-  return new Date(garden.data.tendedDates[0]) > lastYear ? "FRESH" : "WILD";
-}
-
 export async function getGardens() {
   const gardens = await getCollection("gardens");
   gardens.sort((a, b) =>
@@ -96,12 +89,18 @@ export async function getGardens() {
   return gardens;
 }
 
-export function normalizeGardens(gardens: CollectionEntry<"gardens">[], date: "FIRST" | "MOST_RECENT") {
+export function normalizeGardens(
+  gardens: CollectionEntry<"gardens">[],
+  date: "FIRST" | "MOST_RECENT"
+) {
   return gardens.map((garden) => ({
     ...garden,
     data: {
       ...garden.data,
-      pubDate: date === "FIRST" ? garden.data.tendedDates.slice(-1)[0] : garden.data.tendedDates[0],
+      pubDate:
+        date === "FIRST"
+          ? garden.data.tendedDates.slice(-1)[0]
+          : garden.data.tendedDates[0],
     },
   }));
 }
@@ -129,7 +128,7 @@ export function normalizeArt(art: Art) {
       pubDate: date,
       title,
     },
-    slug: `#${slugify(title)}`
+    slug: `#${slugify(title)}`,
   }));
 }
 
