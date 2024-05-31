@@ -26,7 +26,7 @@ that is even simpler.
     import ollama
 
     def get_completion(prompt, model):
-        ollama.chat(model, messages=[{
+        response = ollama.chat(model, messages=[{
             'role': 'user',
             'content': prompt,
         }])
