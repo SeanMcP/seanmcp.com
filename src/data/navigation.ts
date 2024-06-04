@@ -96,8 +96,8 @@ export default {
   header: [
     LINKS.search,
     LINKS.articles,
+    LINKS.gardens,
     LINKS.about,
-    LINKS.notes,
     LINKS.tools /*{ ...LINKS.map, label: "More" }*/,
   ],
   map: [
