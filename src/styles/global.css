@@ -68,6 +68,7 @@
 
   --background: var(--light);
   --off-background: hsl(var(--dark-hs), 85%);
+  --faint: hsl(var(--dark-hs), 91%);
 
   --text-color: var(--dark);
   --lighter-text-color: hsl(var(--dark-hs), 40%);
@@ -218,6 +219,24 @@ li ul {
 mark {
   background-color: var(--alt-primary);
   color: var(--text-color);
+}
+
+table:not([class]) {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table:not([class]) :is(th, td) {
+  padding: var(--space-2xs);
+}
+
+table:not([class]) th {
+  border-bottom: var(--stroke-thickness) solid currentColor;
+  font-weight: bold;
+}
+
+table:not([class]) tr:nth-child(even) {
+  background-color: var(--faint);
 }
 
 .content-wrapper :is(ol, ul)>li+li {

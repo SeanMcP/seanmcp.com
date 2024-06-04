@@ -4,23 +4,6 @@ description: Resources for table-top adventure games
 tendedDates:
   - 2024-05-23T11:33-0400
 verse: ""
-head: >-
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      border-color: var(--off-background);
-    }
-    table tr > * {
-      --table-border-color: var(--off-background);
-      padding: 0.5em;
-      border: 1px solid var(--table-border-color);
-    }
-    table thead {
-      background-color: var(--text-color);
-      color: var(--background);
-    }
-  </style>
 ---
 
 Resources for table-top adventure games like Dungeons & Dragons.
