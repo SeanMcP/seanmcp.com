@@ -272,9 +272,10 @@ table:not([class]) tr:nth-child(even) {
 .divider\(\)::before {
   color: var(--off-background);
   content: "◆";
-  display: block;
+  display: inline-block;
   font-size: xx-small;
   font-weight: bold;
+  transform: translateY(-0.2em);
 }
 
 [class*="stack("]>*+* {
