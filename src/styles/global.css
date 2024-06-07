@@ -223,6 +223,7 @@ mark {
 
 table:not([class]) {
   border-collapse: collapse;
+  display: table;
   width: 100%;
 }
 
@@ -260,6 +261,7 @@ main img {
 }
 
 [class*="contain("]>* {
+  display: block;
   margin-inline: auto;
   max-width: 40rem;
 }
