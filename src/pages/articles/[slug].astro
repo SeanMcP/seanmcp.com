@@ -20,7 +20,6 @@ const verse = data.verse ?? "Romans 5:8";
 ---
 
 <PageLayout {...data} withoutH1>
-  <article class="article | stack()">
     <ReadableTime
       date={data.pubDate}
       style="color: var(--lighter-text-color)"
@@ -44,12 +43,9 @@ const verse = data.verse ?? "Romans 5:8";
         </call-out>
       )
     }
-    <div class="content-wrapper | stack()">
-      <Content />
-    </div>
+    <Content />
     <hr />
     <ContentFooter title={data.title} verse={verse} />
-  </article>
   {
     data.scripts?.map((filename) => (
       <script src={`/js/${filename}`} type="module" />

@@ -239,11 +239,11 @@ table:not([class]) tr:nth-child(even) {
   background-color: var(--faint);
 }
 
-.content-wrapper :is(ol, ul)>li+li {
+main :is(ol, ul):not([class])>li+li {
   margin-block-start: 0.5em;
 }
 
-.content-wrapper img {
+main img {
   max-width: 100%;
 }
 
@@ -256,16 +256,15 @@ table:not([class]) tr:nth-child(even) {
 }
 
 [class*="contain("] {
-  margin-inline: auto;
-  max-width: 40rem;
   padding: var(--space-s);
 }
 
-.contain\(wide\) {
-  max-width: 60rem;
+[class*="contain("]>* {
+  margin-inline: auto;
+  max-width: 40rem;
 }
 
-.contain\(full\) {
+.contain\(full\)>* {
   max-width: initial;
 }
 
