@@ -2,6 +2,7 @@
 title: Fonts
 description: Fonts (typefaces) that I like and where to find them
 tendedDates:
+  - 2024-06-15T06:38-0600
   - 2024-06-14T15:24-0600
   - 2023-11-27T16:05-0400
 ---
@@ -19,6 +20,7 @@ Things to look for:
 | g      | Open or loop tail          |
 | K/R    | Leg                        |
 | S/s    | Curves                     |
+| W/w    | Corners                    |
 | &      | Type and shape             |
 
 ## Sans
