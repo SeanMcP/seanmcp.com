@@ -123,6 +123,7 @@ h4 {
   font-size: var(--step--1);
 }
 
+/* Keep in sync with [data-footnotes] */
 hr {
   background: var(--off-background);
   border: none;
@@ -349,6 +350,17 @@ main img {
 
 .pixelate\(\) {
   image-rendering: pixelated;
+}
+
+/* Keep in sync with hr */
+[data-footnotes] {
+  border-top: var(--stroke-thickness) solid var(--off-background);
+  margin-block-start: var(--space-l);
+  padding-block-start: var(--space-l);
+}
+
+[data-footnotes] *:first-child {
+  margin-block-start: 0;
 }
 
 bible-verse {
