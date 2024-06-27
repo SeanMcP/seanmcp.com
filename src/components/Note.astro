@@ -18,12 +18,18 @@ const { Content } = await render();
     <span class="divider()"></span>
     <a href={url}><time datetime={pubDate}>{readableDate(pubDate)}</time></a>
   </header>
-  <Content />
+  <div>
+    <Content />
+  </div>
 </article>
 
 <style>
   article {
     border: var(--stroke-thickness) solid var(--off-background);
     padding: var(--space-s);
+  }
+
+  article > div {
+    font-size: 150%;
   }
 </style>

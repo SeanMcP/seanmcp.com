@@ -2,6 +2,12 @@ import fs from "fs";
 import { execSync } from "child_process";
 import { getTimestamp } from "./shared.mjs";
 
+const text = process.argv[2]
+
+if (!text) {
+  console.log("💡 You can provide the text for a note when calling the script")
+}
+
 try {
   execSync("git pull");
 
@@ -24,7 +30,7 @@ try {
 pubDate: ${getTimestamp()}
 ---
 
-
+${(text || "").replace(/\\n/g, "\n")}
 `.trimStart()
   );
   console.log(`🏗 Created Note #${next} at ${fullPath}\n`);
