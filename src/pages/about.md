@@ -4,21 +4,13 @@ title: About
 head: >-
   <style>
       .headshot {
-          display: block;
-          padding-bottom: 1rem;
-          margin: 0 auto;
-      }
-
-      @media (min-width: 500px) {
-          .headshot {
-              float: right;
-              padding-left: 1rem;
-          }
+          height: 180px;
+          aspect-ratio: 1 / 1;
       }
   </style>
 ---
 
-<img class="headshot" src="https://res.cloudinary.com/seanmcp/image/upload/c_scale,h_240,w_240/seanmcp_2022_khpgsy.jpg" alt="A photo of Sean McPherson smiling">
+<img class="headshot" src="https://res.cloudinary.com/seanmcp/image/upload/c_scale,h_180,w_180/seanmcp_2022_khpgsy.jpg" alt="A photo of Sean McPherson smiling">
 
 My name is Sean McPherson, or [Sean McP](/articles/how-to-pronounce-my-name) for
 short, and I am a software engineer in Pittsburgh, PA [on a mission](/mission)
