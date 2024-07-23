@@ -33,7 +33,7 @@
 
   /* Misc */
 
-  --stroke-thickness: 0.125em;
+  --stroke-thickness: 1px;
 
   /* Colors */
   --github-dark-background: hsl(211, 21%, 7%);
@@ -50,10 +50,10 @@
   --github-light-orange: hsl(23, 100%, 29%);
   --github-light-purple: hsl(261, 69%, 59%);
 
-  --blue: var(--github-light-blue);
-  --green: var(--github-light-green);
-  --orange: var(--github-light-orange);
-  --purple: var(--github-light-purple);
+  --blue: var(--github-dark-blue);
+  --green: var(--github-dark-green);
+  --orange: var(--github-dark-orange);
+  --purple: var(--github-dark-purple);
 
   --dark-hs: 211, 21%;
   --dark: hsla(var(--dark-hs), 10%);
@@ -62,20 +62,20 @@
 
   /* Theme */
 
-  --primary: var(--github-light-blue);
-  --alt-primary: var(--github-dark-blue);
-  --accent: var(--github-light-purple);
+  --primary: var(--github-dark-blue);
+  --alt-primary: var(--github-light-blue);
+  --accent: var(--github-dark-purple);
 
-  --background: var(--light);
-  --off-background: hsl(var(--dark-hs), 85%);
-  --faint: hsl(var(--dark-hs), 91%);
+  --background: var(--dark);
+  --off-background: hsl(var(--light-hs), 15%);
+  --faint: hsl(var(--light-hs), 12%);
 
-  --text-color: var(--dark);
-  --lighter-text-color: hsl(var(--dark-hs), 40%);
+  --text-color: var(--light);
+  --lighter-text-color: hsl(var(--light-hs), 40%);
   --anchor-color: var(--primary);
 
-  --inline-code-background: hsl(var(--dark-hs), 90%);
-  --inline-code-color: hsl(var(--dark-hs), 30%);
+  --inline-code-background: hsl(var(--light-hs), 90%);
+  --inline-code-color: hsl(var(--light-hs), 30%);
 }
 
 html,

@@ -26,7 +26,7 @@ const LINKS = {
   },
   feed: {
     description: "Subscribe to my blog with your favorite RSS reader",
-    label: "Feed",
+    label: "RSS",
     url: "/rss.xml",
   },
   gardens: {
@@ -90,15 +90,23 @@ const LINKS = {
     label: "Uses",
     url: "/uses/",
   },
+  home: {
+    description: "The homepage of seanmcp.com",
+    label: "Home",
+    url: "/",
+  },
 };
 
 export default {
   header: [
+    // LINKS.home,
     LINKS.search,
     LINKS.articles,
     LINKS.gardens,
+    LINKS.notes,
     LINKS.about,
-    LINKS.tools /*{ ...LINKS.map, label: "More" }*/,
+    // LINKS.tools /*{ ...LINKS.map, label: "More" }*/,
+    LINKS.feed,
   ],
   map: [
     LINKS.about,

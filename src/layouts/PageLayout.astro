@@ -17,7 +17,7 @@ const showBreadcrumbs =
 
 <BaseLayout {...Astro.props}>
   <SkipLink />
-  <SiteHeader />
+  <!-- <SiteHeader /> -->
   <main id="main">
     <div class="contain() stack()">
       {showBreadcrumbs && <Breadcrumbs currentPageTitle={title} />}
@@ -38,9 +38,12 @@ const showBreadcrumbs =
   }
   main {
     flex: 1;
-    margin-block: 5rem;
+    margin-block: var(--space-m);
   }
   main > div {
     height: 100%;
+  }
+  h1 {
+    text-align: center;
   }
 </style>
