@@ -47,11 +47,6 @@ const verse = data.verse ?? "Romans 5:8";
   <Content />
   <hr />
   <ContentFooter title={data.title} verse={verse} />
-  {
-    data.scripts?.map((filename) => (
-      <script src={`/js/${filename}`} type="module" />
-    ))
-  }
 </PageLayout>
 
 <style>

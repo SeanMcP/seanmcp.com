@@ -1,10 +1,8 @@
 ---
 title: "Cairn Starter-package Table"
 description: A starter-package table for Cairn based on Into the Odd.
-tendedDates:
-  - 2024-06-07T06:45-0400
-  - 2024-06-07T06:35-0400
-  - 2024-06-06T20:22-0400
+pubDate: 2024-06-06T20:22-0400
+updatedDate: 2024-06-07T06:45-0400
 head: >-
   <style>
     table {

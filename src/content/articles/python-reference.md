@@ -1,9 +1,8 @@
 ---
 title: "Python Reference"
 description: A quick reference guide for working in Python
-tendedDates:
-  - 2024-02-17T09:25-0400
-  - 2024-02-06T20:19-0400
+updatedDate: 2024-02-17T09:25-0400
+pubDate: 2024-02-06T20:19-0400
 verse: Isaiah 11:8
 ---
 

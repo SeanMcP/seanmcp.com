@@ -2,9 +2,8 @@
 title: "Cairn RPG"
 description:
   Resources and more for Cairn, the rules-light tabletop roleplaying game
-tendedDates:
-  - 2024-06-07T06:39-0400
-  - 2024-05-17T13:40-0400
+pubDate: 2024-05-17T13:40-0400
+updatedDate: 2024-06-07T06:39-0400
 verse: Joshua 4:1-3
 ---
 

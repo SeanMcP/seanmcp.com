@@ -1,9 +1,8 @@
 ---
 title: "Debugging"
 description: Resources on debugging
-tendedDates:
-  - 2024-05-17T14:07-0400
-  - 2024-05-09T09:28-0400
+updatedDate: 2024-05-17T14:07-0400
+pubDate: 2024-05-09T09:28-0400
 verse: Proverbs 18:15
 ---
 

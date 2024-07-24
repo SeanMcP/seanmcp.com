@@ -29,11 +29,6 @@ const LINKS = {
     label: "RSS",
     url: "/rss.xml",
   },
-  gardens: {
-    description: "Evergreen resources that grow over time",
-    label: "Gardens",
-    url: "/gardens",
-  },
   map: {
     description: "A detailed site map",
     label: "Map",
@@ -102,8 +97,7 @@ export default {
     // LINKS.home,
     LINKS.search,
     LINKS.articles,
-    LINKS.gardens,
-    LINKS.notes,
+    // LINKS.notes,
     LINKS.about,
     // LINKS.tools /*{ ...LINKS.map, label: "More" }*/,
     LINKS.feed,

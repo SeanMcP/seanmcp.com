@@ -1,8 +1,7 @@
 ---
 title: Git
 description: A garden all about Git
-tendedDates:
-  - 2021-05-04T12:00-0400
+pubDate: 2021-05-04T12:00-0400
 ---
 
 Here are some of the git commands that I find useful when doing by work as a

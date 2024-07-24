@@ -1,13 +1,8 @@
 ---
 title: seanmcp.com
 description: Documenting this site
-tendedDates:
-  - 2024-05-17T13:10-0400
-  - 2024-05-04T13:55-0400
-  - 2023-12-09T14:53-0400
-  - 2023-11-28T06:45-0400
-  - 2023-11-27T12:15-0400
-  - 2023-11-22T09:33-0400
+updatedDate: 2024-05-17T13:10-0400
+pubDate: 2023-11-22T09:33-0400
 ---
 
 The documentation for seanmcp.com. This will be particularly useful when

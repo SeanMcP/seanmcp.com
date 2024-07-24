@@ -1,8 +1,7 @@
 ---
 title: "Personal-site values"
 description: Some things that I value for personal sites.
-tendedDates:
-  - 2024-05-04T14:01-0400
+pubDate: 2024-05-04T14:01-0400
 verse: Psalm 116:15
 ---
 

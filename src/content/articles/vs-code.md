@@ -1,9 +1,8 @@
 ---
 title: VS Code
 description: A garden all about VS Code
-tendedDates:
-    - 2023-05-22T12:00-0400
-    - 2023-01-04T15:51-0400
+updatedDate: 2023-05-22T12:00-0400
+pubDate: 2023-01-04T15:51-0400
 ---
 
 VS Code is a great all-around editor.

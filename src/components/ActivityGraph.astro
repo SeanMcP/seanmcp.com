@@ -1,48 +1,24 @@
 ---
 import {
   getArticles,
-  getGardens,
-  getNotes,
-  normalizeArt,
-  normalizeGardens,
 } from "src/utils";
-import art from "../content/_art";
-import { CollectionEntry } from "astro:content";
 
 const articles = await getArticles();
-const gardens = normalizeGardens(await getGardens(), "FIRST");
-const notes = await getNotes();
-const normalizedArt = normalizeArt(art);
 
 const yearCount: Record<
   number,
   {
     articles: number;
-    gardens: number;
-    notes: number;
-    art: number;
     rssClub: number;
   }
 > = {};
 
-[...articles, ...gardens, ...notes, ...normalizedArt].forEach((content) => {
+articles.forEach((content) => {
   const year = new Date(content.data.pubDate).getFullYear();
   if (!yearCount[year])
-    yearCount[year] = { articles: 0, gardens: 0, notes: 0, art: 0, rssClub: 0 };
-  if (content.collection === "notes") {
-    yearCount[year].notes++;
-  }
-  if (content.collection === "gardens") {
-    yearCount[year].gardens++;
-  }
-  if (content.collection === "art") {
-    yearCount[year].art++;
-  }
+    yearCount[year] = { articles: 0, rssClub: 0 };
   if (content.collection === "articles") {
-    // Just to make TypeScript happy
-    const article = content as CollectionEntry<"articles">;
-
-    if (article.data.flags?.includes("RSS-ONLY")) {
+    if (content.data.flags?.includes("RSS-ONLY")) {
       yearCount[year].rssClub++;
     } else {
       yearCount[year].articles++;
@@ -52,7 +28,7 @@ const yearCount: Record<
 
 const highest = Math.max(
   ...Object.values(yearCount).map(
-    (record) => record.articles + record.gardens + record.notes + record.rssClub
+    (record) => record.articles + record.rssClub
   )
 );
 const multiplier = (16 * 4) / highest;
@@ -61,42 +37,18 @@ const multiplier = (16 * 4) / highest;
 <ol class="activity-graph">
   {
     Object.entries(yearCount).map(
-      ([year, { articles, gardens, notes, art, rssClub }]) => {
+      ([year, { articles, rssClub }]) => {
         const articlesLabel = `${articles} articles`;
-        const gardensLabel = `${gardens} gardens`;
-        const notesLabel = `${notes} notes`;
-        const artLabel = `${art} pieces of art`;
         const rssClubLabel = `${rssClub} RSS Club articles`;
         return (
           <li>
-            <div title={String(articles + notes)}>{year}</div>
+            <div title={String(articles + rssClub) + " total"}>{year}</div>
             <span
               class="articles"
               style={{ height: articles * multiplier + "px" }}
               title={articlesLabel}
             >
               <span class="hidden()">{articlesLabel}</span>
-            </span>
-            <span
-              class="notes"
-              style={{ height: notes * multiplier + "px" }}
-              title={notesLabel}
-            >
-              <span class="hidden()">{notesLabel}</span>
-            </span>
-            <span
-              class="gardens"
-              style={{ height: gardens * multiplier + "px" }}
-              title={gardensLabel}
-            >
-              <span class="hidden()">{gardensLabel}</span>
-            </span>
-            <span
-              class="art"
-              style={{ height: art * multiplier + "px" }}
-              title={artLabel}
-            >
-              <span class="hidden()">{artLabel}</span>
             </span>
             <span
               class="rss-club"
@@ -138,10 +90,6 @@ const multiplier = (16 * 4) / highest;
 
   li span.articles {
     --color: var(--purple);
-  }
-
-  li span.gardens {
-    --color: var(--green);
   }
 
   li span.notes {

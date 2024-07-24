@@ -1,9 +1,8 @@
 ---
 title: "Solo-playing Adventure Games with AI"
 description: The best prompts for playing adventure games alone with AI
-tendedDates:
-  - 2024-05-30T06:58-0400
-  - 2024-05-29T19:09-0400
+updatedDate: 2024-05-30T06:58-0400
+pubDate: 2024-05-29T19:09-0400
 verse: Psalm 62:5
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: Podcasts
 description: A list of some of my favorite podcasts
-tendedDates:
-  - 2023-05-25T12:00-0400
+pubDate: 2023-05-25T12:00-0400
 ---
 
 ## General Interest

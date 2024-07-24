@@ -2,11 +2,7 @@
 import PageLayout from "@layouts/PageLayout.astro";
 import {
   getArticles,
-  getGardens,
-  getNotes,
   normalizeArt,
-  normalizeGardens,
-  normalizeNotes,
 } from "src/utils";
 import artData from "../content/_art";
 import pages from "src/data/navigation";
@@ -53,8 +49,8 @@ function addToSearchableContent(array: Array<any>) {
   });
 }
 addToSearchableContent(await getArticles());
-addToSearchableContent(normalizeNotes(await getNotes()));
-addToSearchableContent(normalizeGardens(await getGardens(), "FIRST"));
+// addToSearchableContent(normalizeNotes(await getNotes()));
+// addToSearchableContent(normalizeGardens(await getGardens(), "FIRST"));
 addToSearchableContent(normalizeArt(artData));
 
 [
@@ -148,7 +144,7 @@ const sortedTags = Array.from(tags).sort((a, b) =>
           <select name="type">
             <option value="">All</option>
             {
-              ["Articles", "Notes", "Gardens", "Art"].map((type) => {
+              ["Articles", "Art"].map((type) => {
                 let value = type.toLowerCase();
                 if (value.slice(-1) === "s") {
                   value = value.slice(0, -1);

@@ -1,8 +1,7 @@
 ---
 title: "Adventure games"
 description: Resources for table-top adventure games
-tendedDates:
-  - 2024-05-23T11:33-0400
+pubDate: 2024-05-23T11:33-0400
 verse: ""
 ---
 

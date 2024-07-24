@@ -1,24 +1,15 @@
 ---
 import ActivityGraph from "@components/ActivityGraph.astro";
-import Feed from "@components/Feed.astro";
+import ArticleList from "@components/ArticleList.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 ---
 
-<PageLayout
-  documentTitle="The homepage of Sean McPherson"
-  title="Sean McPherson"
->
-  <p class="lede()" slot="after-h1">
-    Software engineer @ <a href="https://khanacademy.org" target="_blank"
-      >Khan Academy</a
-    >
-  </p>
+<PageLayout title="Sean McPherson">
+  <p class="lede()">Christian, family man, software engineer, soccer fan</p>
 
-  <br />
+  <h2>Recent</h2>
 
-  <h2>Feed</h2>
-
-  <Feed count={5} />
+  <ArticleList count={6} />
 
   <br />
 
@@ -28,7 +19,7 @@ import PageLayout from "@layouts/PageLayout.astro";
 </PageLayout>
 
 <style>
-  p {
+  p.lede\(\) {
     text-align: center;
   }
 </style>

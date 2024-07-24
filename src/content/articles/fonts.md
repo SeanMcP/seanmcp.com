@@ -1,10 +1,8 @@
 ---
 title: Fonts
 description: Fonts (typefaces) that I like and where to find them
-tendedDates:
-  - 2024-06-15T06:38-0600
-  - 2024-06-14T15:24-0600
-  - 2023-11-27T16:05-0400
+updatedDate: 2024-06-15T06:38-0600
+pubDate: 2023-11-27T16:05-0400
 ---
 
 Technically this is a garden about typefaces, but I won't be pedantic if you

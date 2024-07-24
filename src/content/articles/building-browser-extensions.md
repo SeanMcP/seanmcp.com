@@ -2,14 +2,11 @@
 title: Building browser extensions
 description: Some resources and guides for making browser add-ons/extensions
 pubDate: 2021-02-23T12:00-0400
-tags:
-  - Garden
-  - Chrome
-  - Firefox
-  - Extensions
 ---
 
-These are resources that I reference and guides that I follow while developing browser add-ons/extensions. Hopefully this garden will be helpful to you along the way!
+These are resources that I reference and guides that I follow while developing
+browser add-ons/extensions. Hopefully this garden will be helpful to you along
+the way!
 
 ## Resources
 
@@ -31,10 +28,7 @@ These are resources that I reference and guides that I follow while developing b
 
 #### Firefox
 
-1. Go to [`about:debugging#/runtime/this-firefox`](about:debugging#/runtime/this-firefox)
+1. Go to
+   [`about:debugging#/runtime/this-firefox`](about:debugging#/runtime/this-firefox)
 2. Select "Load Temporary Add-on..."
 3. Select the project directory
-
----
-
-Happy extending!

@@ -3,9 +3,8 @@ title: "Five-room Dungeons"
 description:
   General recommendations for creating five-room dungeons for your adventure
   games
-tendedDates:
-  - 2024-06-03T20:37-0400
-  - 2024-05-30T10:07-0400
+updatedDate: 2024-06-03T20:37-0400
+pubDate: 2024-05-30T10:07-0400
 verse: Psalm 40:2
 ---
 

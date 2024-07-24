@@ -3,8 +3,7 @@ title: "Getting started with Eleventy"
 description:
   The missing getting-started guide for the Eleventy (11ty) static-site
   generator.
-tendedDates:
-  - 2024-05-27T13:45-0400
+pubDate: 2024-05-27T13:45-0400
 verse: Matthew 28:16
 ---
 

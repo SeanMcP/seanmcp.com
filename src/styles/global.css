@@ -265,7 +265,7 @@ main img {
 [class*="contain("]>* {
   display: block;
   margin-inline: auto;
-  max-width: 40rem;
+  max-width: 48rem;
 }
 
 .contain\(full\)>* {

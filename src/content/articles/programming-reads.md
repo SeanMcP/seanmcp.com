@@ -1,8 +1,7 @@
 ---
 title: Programming reads
 description: A list of articles, books, and resources for software engineers
-tendedDates:
-  - 2020-03-20T12:00-0400
+pubDate: 2020-03-20T12:00-0400
 verse: Nehemiah 8:8
 ---
 
