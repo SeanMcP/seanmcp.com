@@ -19,9 +19,8 @@ const {
 } = entry;
 ---
 
-<PageLayout {...entry.data} title={title} description={description} withoutH1>
-  <h1 id="title">{title}</h1>
-  <GardenDetails tendedDates={tendedDates} />
+<PageLayout {...entry.data} title={title} description={description}>
+  <GardenDetails slot="after-h1" tendedDates={tendedDates} />
   <br />
   <Content />
   <hr />

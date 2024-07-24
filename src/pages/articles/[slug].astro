@@ -19,14 +19,13 @@ const { data } = entry;
 const verse = data.verse ?? "Romans 5:8";
 ---
 
-<PageLayout {...data} withoutH1>
-  <header>
-    <ReadableTime
-      date={data.pubDate}
-      style="color: var(--lighter-text-color)"
-    />
-    <h1>{data.title}</h1>
-  </header>
+<PageLayout {...data}>
+  <ReadableTime
+    date={data.pubDate}
+    slot="before-h1"
+    style="color: var(--lighter-text-color); display: block; text-align: center;"
+  />
+  <br />
   <ArticleSeries series={data.series} />
   {
     data.tags?.includes("Garden") && (
@@ -58,11 +57,6 @@ const verse = data.verse ?? "Romans 5:8";
 <style>
   header {
     text-align: center;
-  }
-  
-  h1 {
-    margin-block-start: var(--space-xs) !important;
-    margin-block-end: var(--space-l) !important;
   }
 
   /* CodePen embeds */

@@ -59,6 +59,7 @@
   --dark: hsla(var(--dark-hs), 10%);
   --light-hs: 206, 18%;
   --light: hsl(var(--light-hs), 95%);
+  --extra-dark: hsl(var(--dark-hs), 7.5%);
 
   /* Theme */
 
@@ -71,11 +72,11 @@
   --faint: hsl(var(--light-hs), 12%);
 
   --text-color: var(--light);
-  --lighter-text-color: hsl(var(--light-hs), 40%);
+  --lighter-text-color: hsl(var(--light-hs), 51%);
   --anchor-color: var(--primary);
 
-  --inline-code-background: hsl(var(--light-hs), 90%);
-  --inline-code-color: hsl(var(--light-hs), 30%);
+  --inline-code-background: hsl(var(--light-hs), 15%);
+  --inline-code-color: hsl(var(--light-hs), 60%);
 }
 
 html,
@@ -294,9 +295,9 @@ main img {
   margin-block-start: 1em;
 }
 
-[class*="stack("] :is(h1, h2, h3, h4)+* {
+/* [class*="stack("] :is(h1, h2, h3, h4)+* {
   margin-block-start: var(--space-xs);
-}
+} */
 
 .stack\(xs\)>*+* {
   margin-block-start: var(--space-xs);

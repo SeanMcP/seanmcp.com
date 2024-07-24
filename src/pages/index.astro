@@ -7,10 +7,8 @@ import PageLayout from "@layouts/PageLayout.astro";
 <PageLayout
   documentTitle="The homepage of Sean McPherson"
   title="Sean McPherson"
-  withoutH1
 >
-  <h1><mark>Sean McP</mark>herson</h1>
-  <p class="lede()">
+  <p class="lede()" slot="after-h1">
     Software engineer @ <a href="https://khanacademy.org" target="_blank"
       >Khan Academy</a
     >
@@ -30,39 +28,7 @@ import PageLayout from "@layouts/PageLayout.astro";
 </PageLayout>
 
 <style>
-  h1 {
-  }
-  h1 em {
-    color: var(--text-color);
-    font-style: initial;
-  }
-  h1:hover {
-    color: var(--text-color);
-  }
-  mark {
-    background-color: transparent !important;
-    color: inherit !important;
-    position: relative;
-  }
-  mark::after {
-    --_overflow: 0.1ch;
-    background-color: var(--alt-primary);
-    bottom: 0;
-    content: "";
-    left: calc(-1 * var(--_overflow));
-    position: absolute;
-    top: 0;
-    transition: width 200ms ease-in-out;
-    width: 0;
-    z-index: -1;
-  }
-  h1:hover mark::after {
-    width: calc(100% + calc(2 * var(--_overflow)));
-  }
-  @media screen and (min-width: 600px) {
-    h1,
-    h1 + p {
-      text-align: center;
-    }
+  p {
+    text-align: center;
   }
 </style>
