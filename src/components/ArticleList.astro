@@ -18,14 +18,10 @@ const articles =
   {
     articles.map((article) => {
       const url = `/articles/${article.slug}`;
-      const data = {...article.data};
-      if (!data.title) {
-        data.title = `Note #${article.slug}`;
-      }
       return (
         <article class="stack(xs)" data-url={url}>
           <div class="line(xs)">
-            <a href={url}>{getArticleTitle(data)}</a>
+            <a href={url}>{getArticleTitle(article.data)}</a>
             <ReadableTime
               date={article.data.updatedDate || article.data.pubDate}
               style="color: var(--lighter-text-color);"

@@ -80,7 +80,19 @@ export async function getArticles(options?: {
       return true;
     })
     .sort(sortByPubDate)
-    .slice(0, count);
+    .slice(0, count)
+    .map(entry => {
+      if (!entry.data.title) {
+        return {
+          ...entry,
+          data: {
+            ...entry.data,
+            title: `Note #${entry.slug}`
+          }
+        }
+      }
+      return entry
+    });
 }
 
 export function normalizeArt(art: Art) {
