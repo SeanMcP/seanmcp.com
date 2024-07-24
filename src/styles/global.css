@@ -250,6 +250,11 @@ main img {
   max-width: 100%;
 }
 
+script,
+style {
+  display: none !important;
+}
+
 /* Utilities */
 
 .center\(\) {
