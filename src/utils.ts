@@ -61,8 +61,9 @@ export function getArticleTitle(data: CollectionEntry<"articles">["data"]) {
 export async function getArticles(options?: {
   count?: number;
   excludeRSSOnlyInProd?: boolean;
+  tag?: string;
 }) {
-  const { count, excludeRSSOnlyInProd } = options || {};
+  const { count, excludeRSSOnlyInProd, tag } = options || {};
   const articles = await getCollection("articles");
   return articles
     .filter((entry) => {
@@ -76,6 +77,9 @@ export async function getArticles(options?: {
       // Ignore drafts in production
       if (import.meta.env.PROD && entry.data.flags?.includes("DRAFT")) {
         return false;
+      }
+      if (tag) {
+        return entry.data.tags?.includes(tag)
       }
       return true;
     })

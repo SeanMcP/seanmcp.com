@@ -6,12 +6,13 @@ import ReadableTime from "./ReadableTime.astro";
 interface Props {
   articles?: CollectionEntry<"articles">[];
   count?: number;
+  tag?: string;
 }
 
-const { articles: initial, count } = Astro.props;
+const { articles: initial, count, tag } = Astro.props;
 
 const articles =
-  initial || (await getArticles({ count, excludeRSSOnlyInProd: true }));
+  initial || (await getArticles({ count, excludeRSSOnlyInProd: true, tag }));
 ---
 
 <section class="stack(l)">

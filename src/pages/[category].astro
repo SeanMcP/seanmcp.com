@@ -1,0 +1,60 @@
+---
+import ArticleList from "@components/ArticleList.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import { slugify } from "src/utils";
+
+export function getStaticPaths() {
+    const categories = [
+        "Adventure Games",
+        "Blogging",
+        "Parenting",
+        "Programming",
+        "Soccer",
+    ] as const;
+
+    return categories.map((category) => ({
+        params: { category: slugify(category) },
+        props: { category },
+    }));
+}
+
+const { category } = Astro.props;
+
+const descriptions: Record<typeof category, string> = {
+    "Adventure Games":
+        "Articles about adventure and table-top role-playing games like Dungeons & Dragons and Cairn",
+    Blogging: "Articles about professional and personal blogging",
+    Parenting: "Articles about parenting from a father of two",
+    Programming: "Articles about programming and software engineering",
+    Soccer: "Articles about soccer (i.e. football) from an American fan",
+};
+
+const introductions: Record<typeof category, Array<string>> = {
+    "Adventure Games": [
+        "I have been playing homebrewed adventure games since my brothers and I brought home a Dungeons & Dragons knockoff from a yardsale when I was 10 years old.",
+        "These days, I enjoy rules-light systems like Cairn to tell collaborative stories with my friends and family.",
+    ],
+    Blogging: [
+        "The boom of the early 2000s may have passed on, but blogging continues to be a valuable tool for professional and personal growth.",
+    ],
+    Parenting: [
+        "Everyday I learn how to be a better parent. Some days I succeed at improving."
+    ],
+    Programming: [
+        "Articles about programming by a software engineer who mostly focuses on frontend technologies.",
+    ],
+    Soccer: [
+        "I am a big fan of soccer. There is something about the game that I find captivating, from the play, to the players, the teams and the leagues. Soccer connects me to billions of other fans around the world, bisecting geography, language, and culture. I can think fondly on many conversations that I've had with neighbors from around the world about the beautiful game.",
+        "At one point I was a paid soccer writer for leagues and teams in the lower divisions of soccer in the United States. Now I am just a fan. I follow the English Premier League, German Bundesliga, and the United States' national teams, but I keep tabs on teams and leagues across the world.",
+    ],
+
+};
+---
+
+<PageLayout title={category} description={descriptions[category]}>
+    {
+        introductions[category].map(line => <p>{line}</p>)
+    }
+    <hr />
+    <ArticleList tag={category} />
+</PageLayout>
