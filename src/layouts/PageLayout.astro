@@ -18,7 +18,13 @@ const title = Astro.props.frontmatter?.title ?? Astro.props.title;
   <main id="main">
     <div class="contain() stack()">
       <slot name="before-h1" />
-      {!withoutH1 && <h1 id="title">{title}</h1>}
+      {
+        !withoutH1 && (
+          <slot name="h1">
+            <h1 id="title">{title}</h1>
+          </slot>
+        )
+      }
       <slot name="after-h1" />
       <slot />
     </div>
