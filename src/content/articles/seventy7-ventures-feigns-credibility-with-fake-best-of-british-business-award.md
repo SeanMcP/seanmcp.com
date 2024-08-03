@@ -7,8 +7,6 @@ tags:
     - Seventy7 Ventures
 pubDate: 2024-08-03T14:08-0400
 verse: Proverbs 23:23
-flags:
-    - DRAFT
 ---
 
 Seventy7 Ventures, the new majority shareholder of Inverness Caledonian Thistle FC, [state on their website](https://seventy7.ventures/our-story) that they have "been awarded Best of British Business by The Independent."
