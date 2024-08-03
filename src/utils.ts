@@ -1,6 +1,6 @@
-import { CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 import _slugify from "slugify";
-import { Art } from "./content/_art";
+import type { Art } from "./content/_art";
 
 export function slugify(text: string) {
   return _slugify(text, { lower: true });
@@ -37,10 +37,12 @@ export function getTags(articles: any[]): Record<string, number> {
 }
 
 export function sortByPubDate<
-  T extends CollectionEntry<"articles"> | CollectionEntry<"notes">
+  T extends CollectionEntry<"articles">
 >(a: T, b: T) {
+  const aDate = a.data.updatedDate || a.data.pubDate
+  const bDate = b.data.updatedDate || b.data.pubDate
   return (
-    new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+    new Date(bDate).valueOf() - new Date(aDate).valueOf()
   );
 }
 
@@ -59,8 +61,9 @@ export function getArticleTitle(data: CollectionEntry<"articles">["data"]) {
 export async function getArticles(options?: {
   count?: number;
   excludeRSSOnlyInProd?: boolean;
+  tag?: string;
 }) {
-  const { count, excludeRSSOnlyInProd } = options || {};
+  const { count, excludeRSSOnlyInProd, tag } = options || {};
   const articles = await getCollection("articles");
   return articles
     .filter((entry) => {
@@ -75,49 +78,25 @@ export async function getArticles(options?: {
       if (import.meta.env.PROD && entry.data.flags?.includes("DRAFT")) {
         return false;
       }
+      if (tag) {
+        return entry.data.tags?.includes(tag)
+      }
       return true;
     })
     .sort(sortByPubDate)
-    .slice(0, count);
-}
-
-export async function getGardens() {
-  const gardens = await getCollection("gardens");
-  gardens.sort((a, b) =>
-    a.data.tendedDates[0] > b.data.tendedDates[0] ? -1 : 1
-  );
-  return gardens;
-}
-
-export function normalizeGardens(
-  gardens: CollectionEntry<"gardens">[],
-  date: "FIRST" | "MOST_RECENT"
-) {
-  return gardens.map((garden) => ({
-    ...garden,
-    data: {
-      ...garden.data,
-      pubDate:
-        date === "FIRST"
-          ? garden.data.tendedDates.slice(-1)[0]
-          : garden.data.tendedDates[0],
-    },
-  }));
-}
-
-export async function getNotes(count?: number) {
-  const notes = await getCollection("notes");
-  return notes.sort(sortByPubDate).slice(0, count);
-}
-
-export function normalizeNotes(notes: CollectionEntry<"notes">[]) {
-  return notes.map((note) => ({
-    ...note,
-    data: {
-      ...note.data,
-      title: `Note #${note.slug}`,
-    },
-  }));
+    .slice(0, count)
+    .map(entry => {
+      if (!entry.data.title) {
+        return {
+          ...entry,
+          data: {
+            ...entry.data,
+            title: `Note #${entry.slug}`
+          }
+        }
+      }
+      return entry
+    });
 }
 
 export function normalizeArt(art: Art) {

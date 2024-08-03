@@ -10,15 +10,15 @@
   --body-font: var(--sans-font);
 
   /* Font size */
-  /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --step--2: clamp(0.6944rem, 0.6642rem + 0.1511vw, 0.7813rem);
-  --step--1: clamp(0.8331rem, 0.7968rem + 0.1815vw, 0.9375rem);
-  --step-0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
-  --step-1: clamp(1.2rem, 1.1478rem + 0.2609vw, 1.35rem);
-  --step-2: clamp(1.44rem, 1.3774rem + 0.313vw, 1.62rem);
-  --step-3: clamp(1.7281rem, 1.6531rem + 0.375vw, 1.9438rem);
-  --step-4: clamp(2.0738rem, 1.9838rem + 0.45vw, 2.3325rem);
-  --step-5: clamp(2.4881rem, 2.3799rem + 0.5413vw, 2.7994rem);
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --step--2: clamp(0.6944rem, 0.6341rem + 0.3019vw, 0.8681rem);
+  --step--1: clamp(0.8333rem, 0.7609rem + 0.3623vw, 1.0417rem);
+  --step-0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+  --step-1: clamp(1.2rem, 1.0957rem + 0.5217vw, 1.5rem);
+  --step-2: clamp(1.44rem, 1.3148rem + 0.6261vw, 1.8rem);
+  --step-3: clamp(1.728rem, 1.5777rem + 0.7513vw, 2.16rem);
+  --step-4: clamp(2.0736rem, 1.8933rem + 0.9016vw, 2.592rem);
+  --step-5: clamp(2.4883rem, 2.2719rem + 1.0819vw, 3.1104rem);
 
   /* Spacing */
   /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,20,1.25,5,2,&s=0.5|0.25,1.5|2|3|4|6,&g=s,l,xl,12 */
@@ -33,7 +33,7 @@
 
   /* Misc */
 
-  --stroke-thickness: 0.125em;
+  --stroke-thickness: 1px;
 
   /* Colors */
   --github-dark-background: hsl(211, 21%, 7%);
@@ -50,32 +50,33 @@
   --github-light-orange: hsl(23, 100%, 29%);
   --github-light-purple: hsl(261, 69%, 59%);
 
-  --blue: var(--github-light-blue);
-  --green: var(--github-light-green);
-  --orange: var(--github-light-orange);
-  --purple: var(--github-light-purple);
+  --blue: var(--github-dark-blue);
+  --green: var(--github-dark-green);
+  --orange: var(--github-dark-orange);
+  --purple: var(--github-dark-purple);
 
   --dark-hs: 211, 21%;
   --dark: hsla(var(--dark-hs), 10%);
   --light-hs: 206, 18%;
   --light: hsl(var(--light-hs), 95%);
+  --extra-dark: hsl(var(--dark-hs), 7.5%);
 
   /* Theme */
 
-  --primary: var(--github-light-blue);
-  --alt-primary: var(--github-dark-blue);
-  --accent: var(--github-light-purple);
+  --primary: var(--github-dark-blue);
+  --alt-primary: var(--github-light-blue);
+  --accent: var(--github-dark-purple);
 
-  --background: var(--light);
-  --off-background: hsl(var(--dark-hs), 85%);
-  --faint: hsl(var(--dark-hs), 91%);
+  --background: var(--dark);
+  --off-background: hsl(var(--light-hs), 15%);
+  --faint: hsl(var(--light-hs), 12%);
 
-  --text-color: var(--dark);
-  --lighter-text-color: hsl(var(--dark-hs), 40%);
+  --text-color: var(--light);
+  --lighter-text-color: hsl(var(--light-hs), 51%);
   --anchor-color: var(--primary);
 
-  --inline-code-background: hsl(var(--dark-hs), 90%);
-  --inline-code-color: hsl(var(--dark-hs), 30%);
+  --inline-code-background: hsl(var(--light-hs), 15%);
+  --inline-code-color: hsl(var(--light-hs), 60%);
 }
 
 html,
@@ -87,8 +88,9 @@ body {
 
 body {
   background: var(--background);
-  font-family: var(--body-font);
   color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--step-0);
   line-height: 1.5;
 }
 
@@ -249,6 +251,11 @@ main img {
   max-width: 100%;
 }
 
+script,
+style {
+  display: none !important;
+}
+
 /* Utilities */
 
 .center\(\) {
@@ -264,7 +271,7 @@ main img {
 [class*="contain("]>* {
   display: block;
   margin-inline: auto;
-  max-width: 40rem;
+  max-width: 48rem;
 }
 
 .contain\(full\)>* {
@@ -294,9 +301,9 @@ main img {
   margin-block-start: 1em;
 }
 
-[class*="stack("] :is(h1, h2, h3, h4)+* {
+/* [class*="stack("] :is(h1, h2, h3, h4)+* {
   margin-block-start: var(--space-xs);
-}
+} */
 
 .stack\(xs\)>*+* {
   margin-block-start: var(--space-xs);

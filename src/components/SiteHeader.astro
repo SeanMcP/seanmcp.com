@@ -1,14 +1,12 @@
 ---
-import { urlsMatch } from "src/utils";
 import navigation from "src/data/navigation";
-
-import LogoLink from "./LogoLink.astro";
+import { urlsMatch } from "src/utils";
 ---
 
-<header class="contain(full)">
-  <div class="line()">
-    <LogoLink />
-    <nav aria-label="header" class="line()">
+<header class="contain(full)" id="top">
+  <div>
+    <a href="/">seanmcp.com</a>
+    <nav aria-label="site navigation" class="line()">
       {
         navigation.header.map((item) => {
           // There is a bug where the Astro compiler swaps newline
@@ -32,54 +30,38 @@ import LogoLink from "./LogoLink.astro";
       }
     </nav>
   </div>
-  <div id="scroll-progress">
-    <span></span>
-  </div>
 </header>
 
 <style>
   header {
-    background: var(--background);
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transition: box-shadow 100ms ease-in-out;
-    z-index: 1;
+    background: linear-gradient(to bottom, var(--extra-dark), transparent);
+    color: var(--text-color);
   }
 
-  body[data-scrolling] header {
-    box-shadow: 0 0 var(--space-xs) 0 var(--off-background);
+  div {
+    align-items: center;
+    display: flex;
+    gap: var(--space-s);
+    justify-content: space-between;
   }
 
-  nav {
-    margin-left: auto;
-  }
-
-  nav a {
-    font-weight: bold;
-  }
-
-  @media screen and (max-width: 500px) {
-    nav a:nth-child(n + 4) {
-      display: none;
+  @media screen and (max-width: 600px) {
+    div {
+      align-items: center;
+      flex-direction: column;
     }
   }
 
-  #scroll-progress {
-    background: linear-gradient(to right, var(--primary), var(--accent));
-    bottom: 0;
-    display: flex;
-    height: var(--stroke-thickness);
-    justify-content: flex-end;
-    left: 0;
-    position: absolute;
-    right: 0;
+  a[href="/"] {
+    font-weight: bold;
+    text-align: center;
   }
 
-  #scroll-progress span {
-    background: var(--background);
-    flex-basis: 100%;
-    justify-self: end;
+  a[href="/"]:not(:focus, :hover) {
+    text-decoration: none;
+  }
+
+  a:not(:focus, :hover) {
+    color: var(--text-color);
   }
 </style>

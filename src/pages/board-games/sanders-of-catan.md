@@ -4,7 +4,6 @@ title: "Sanders of Catan"
 description:
   "Sanders of Catan is a variation of the popular board game Catan that
   emphasizes game speed and competition, with a little bit of political humor."
-showBreadcrumbs: true
 ---
 
 > Playing the award-winning game like a true Socialist

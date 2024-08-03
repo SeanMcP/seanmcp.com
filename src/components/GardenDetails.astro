@@ -29,6 +29,10 @@ const readableLast = readableDate(last);
 </div>
 
 <style>
+  time {
+    color: var(--lighter-text-color);
+  }
+  
   ol {
     --_size: 8px;
     display: flex;
@@ -42,7 +46,7 @@ const readableLast = readableDate(last);
 
   ol::before {
     --_x-offset: calc(var(--_size) / 2);
-    --_height: 2px;
+    --_height: var(--stroke-thickness);
     background-color: var(--green);
     content: "";
     height: var(--_height);
@@ -58,7 +62,7 @@ const readableLast = readableDate(last);
   ol li {
     background-color: var(--green);
     border-radius: 50%;
-    border: 2px solid var(--green);
+    border: var(--stroke-thickness) solid var(--green);
     display: block;
     height: var(--_size);
     width: var(--_size);

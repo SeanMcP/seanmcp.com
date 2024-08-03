@@ -1,5 +1,5 @@
-/note/*       /notes/:splat
-/bookshelf/   https://literal.club/seanmcp
-/bookshelf    https://literal.club/seanmcp
+/note/*       /articles/:splat
+/gardens/*    /articles/:splat
+/notes/*      /articles/:splat
 /sam          https://boyo.seanmcp.com
 /ezra         https://boyo.seanmcp.com

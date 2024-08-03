@@ -1,26 +1,18 @@
 ---
 import ActivityGraph from "@components/ActivityGraph.astro";
-import Feed from "@components/Feed.astro";
+import ArticleList from "@components/ArticleList.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 ---
 
-<PageLayout
-  documentTitle="The homepage of Sean McPherson"
-  title="Sean McPherson"
-  withoutH1
->
-  <h1><mark>Sean McP</mark>herson</h1>
+<PageLayout title="Sean McPherson">
+  <h1 id="title" slot="h1"><mark>Sean McP</mark>herson</h1>
   <p class="lede()">
-    Software engineer @ <a href="https://khanacademy.org" target="_blank"
-      >Khan Academy</a
-    >
+    Christian, family&nbsp;man, software&nbsp;engineer, soccer&nbsp;fan
   </p>
 
-  <br />
+  <h2>Recent</h2>
 
-  <h2>Feed</h2>
-
-  <Feed count={5} />
+  <ArticleList count={6} />
 
   <br />
 
@@ -31,38 +23,21 @@ import PageLayout from "@layouts/PageLayout.astro";
 
 <style>
   h1 {
-  }
-  h1 em {
-    color: var(--text-color);
-    font-style: initial;
-  }
-  h1:hover {
-    color: var(--text-color);
+    margin-block: var(--space-xs);
+    text-align: center;
   }
   mark {
-    background-color: transparent !important;
-    color: inherit !important;
-    position: relative;
+    background-color: unset;
+    color: unset;
+    text-decoration: 0.1em underline var(--primary);
+    text-underline-offset: 0.1em;
+    transition: all 0.25s ease-in-out;
   }
-  mark::after {
-    --_overflow: 0.1ch;
-    background-color: var(--alt-primary);
-    bottom: 0;
-    content: "";
-    left: calc(-1 * var(--_overflow));
-    position: absolute;
-    top: 0;
-    transition: width 200ms ease-in-out;
-    width: 0;
-    z-index: -1;
+  h1:not(:hover) mark {
+    text-decoration-color: transparent;
+    text-underline-offset: 1px;
   }
-  h1:hover mark::after {
-    width: calc(100% + calc(2 * var(--_overflow)));
-  }
-  @media screen and (min-width: 600px) {
-    h1,
-    h1 + p {
-      text-align: center;
-    }
+  p.lede\(\) {
+    text-align: center;
   }
 </style>

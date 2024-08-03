@@ -19,44 +19,39 @@ const { data } = entry;
 const verse = data.verse ?? "Romans 5:8";
 ---
 
-<PageLayout {...data} withoutH1>
-    <ReadableTime
-      date={data.pubDate}
-      style="color: var(--lighter-text-color)"
-    />
-    <h1>{data.title}</h1>
-    <ArticleSeries series={data.series} />
-    {
-      data.tags?.includes("Garden") && (
-        <call-out type="wave">
-          Evergreen articles like this have moved:{" "}
-          <a href="/gardens">view my gardens section</a> 🌱
-        </call-out>
-      )
-    }
-    {
-      data.flags?.includes("RSS-ONLY") && (
-        <call-out type="info">
-          This is a special article for <strong>the RSS Club</strong>, but feel
-          free to save or share this link. You can join by subscribing to{" "}
-          <a href="/rss.xml">my RSS feed</a>.
-        </call-out>
-      )
-    }
-    <Content />
-    <hr />
-    <ContentFooter title={data.title} verse={verse} />
+<PageLayout {...data}>
+  <ReadableTime
+    date={data.pubDate}
+    slot="before-h1"
+    style="color: var(--lighter-text-color); display: block; text-align: center;"
+  />
+  <br />
+  <ArticleSeries series={data.series} />
   {
-    data.scripts?.map((filename) => (
-      <script src={`/js/${filename}`} type="module" />
-    ))
+    data.tags?.includes("Garden") && (
+      <call-out type="wave">
+        Evergreen articles like this have moved:{" "}
+        <a href="/gardens">view my gardens section</a> 🌱
+      </call-out>
+    )
   }
+  {
+    data.flags?.includes("RSS-ONLY") && (
+      <call-out type="info">
+        This is a special article for <strong>the RSS Club</strong>, but feel
+        free to save or share this link. You can join by subscribing to{" "}
+        <a href="/rss.xml">my RSS feed</a>.
+      </call-out>
+    )
+  }
+  <Content />
+  <hr />
+  <ContentFooter title={data.title} verse={verse} />
 </PageLayout>
 
 <style>
-  h1 {
-    margin-block-start: var(--space-xs) !important;
-    margin-block-end: var(--space-l) !important;
+  header {
+    text-align: center;
   }
 
   /* CodePen embeds */

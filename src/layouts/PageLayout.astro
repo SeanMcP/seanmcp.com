@@ -3,7 +3,6 @@ import SiteFooter from "@components/SiteFooter.astro";
 import SiteHeader from "@components/SiteHeader.astro";
 import SkipLink from "@components/SkipLink.astro";
 import BaseLayout from "./BaseLayout.astro";
-import Breadcrumbs from "@components/Breadcrumbs.astro";
 
 export { type Props } from "./BaseLayout.astro";
 
@@ -11,8 +10,6 @@ const { withoutH1 } = Astro.props;
 
 // Logic repeated in BaseLayout.astro
 const title = Astro.props.frontmatter?.title ?? Astro.props.title;
-const showBreadcrumbs =
-  Astro.props.frontmatter?.showBreadcrumbs ?? Astro.props.showBreadcrumbs;
 ---
 
 <BaseLayout {...Astro.props}>
@@ -20,14 +17,19 @@ const showBreadcrumbs =
   <SiteHeader />
   <main id="main">
     <div class="contain() stack()">
-      {showBreadcrumbs && <Breadcrumbs currentPageTitle={title} />}
-      <!-- TODO: Add hero images to pages -->
-      {!withoutH1 && <h1>{title}</h1>}
+      <slot name="before-h1" />
+      {
+        !withoutH1 && (
+          <slot name="h1">
+            <h1 id="title">{title}</h1>
+          </slot>
+        )
+      }
+      <slot name="after-h1" />
       <slot />
     </div>
   </main>
   <SiteFooter />
-  <script src="/js/scroll.js" is:inline></script>
   <script src="/js/web-components.js" is:inline defer></script>
 </BaseLayout>
 
@@ -38,9 +40,10 @@ const showBreadcrumbs =
   }
   main {
     flex: 1;
-    margin-block: 5rem;
+    padding-block: var(--space-l);
   }
-  main > div {
-    height: 100%;
+  h1 {
+    margin-block: var(--space-xs);
+    text-align: center;
   }
 </style>
