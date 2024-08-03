@@ -21,8 +21,9 @@ const articles =
       const url = `/articles/${article.slug}`;
       return (
         <article class="stack(xs)" data-url={url}>
-          <div class="line(xs)">
+          <div>
             <a href={url}>{getArticleTitle(article.data)}</a>
+            &nbsp;
             <ReadableTime
               date={article.data.updatedDate || article.data.pubDate}
               style="color: var(--lighter-text-color);"
