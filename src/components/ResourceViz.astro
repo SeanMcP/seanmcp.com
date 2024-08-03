@@ -1,0 +1,80 @@
+---
+export interface Props {
+  label?: string;
+  size: number;
+  slug: string;
+}
+
+/**
+ * Converts a string into a 16-digit number
+ * @see https://stackoverflow.com/a/52171480/8486161
+ * @example
+ * cyrb53("hello world") // 1749028900593364
+ */
+const cyrb53 = (str, seed = 0) => {
+  let h1 = 0xdeadbeef ^ seed,
+    h2 = 0x41c6ce57 ^ seed;
+  for (let i = 0, ch; i < str.length; i++) {
+    ch = str.charCodeAt(i);
+    h1 = Math.imul(h1 ^ ch, 2654435761);
+    h2 = Math.imul(h2 ^ ch, 1597334677);
+  }
+  h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507);
+  h1 ^= Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+  h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507);
+  h2 ^= Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+
+  return 4294967296 * (2097151 & h2) + (h1 >>> 0);
+};
+
+const hash = cyrb53(Astro.props.slug);
+---
+
+<div
+  aria-label={Astro.props.label}
+  aria-hidden={!Astro.props.label}
+  role="img"
+  style={{ "--size": Astro.props.size + "px" }}
+>
+  {
+    String(hash)
+      .split("")
+      .map((char) => (
+        <span
+          style={{
+            opacity: (parseInt(char) || 10) / 10,
+          }}
+        />
+      ))
+  }
+</div>
+
+<style>
+  div {
+    color: var(--off-background);
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    height: var(--size);
+    transition: color 0.5s ease-in;
+    user-select: none;
+    width: var(--size);
+  }
+  div:hover {
+    animation: color-cycle 1s infinite alternate;
+    animation-delay: 0.5s;
+    color: var(--primary);
+  }
+  span {
+    background: currentColor;
+    height: calc(var(--size) / 4);
+    width: calc(var(--size) / 4);
+  }
+  @keyframes color-cycle {
+    0% {
+      color: var(--primary);
+    }
+    100% {
+      color: var(--alt-primary);
+    }
+  }
+</style>
