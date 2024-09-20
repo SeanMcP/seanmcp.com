@@ -38,7 +38,7 @@ import { readableDate, slugify } from "src/utils";
 
   :global(art-gallery dialog) {
     margin-block-start: var(--space-m);
-    width: min(calc(100vw - 2 * var(--space-m)), 480px);
+    width: min(calc(100vw - 2 * var(--space-m)), 700px);
   }
 </style>
 
@@ -84,8 +84,11 @@ import { readableDate, slugify } from "src/utils";
     #art-gallery-dialog img:first-of-type {
         height: auto;
         margin-inline: auto;
-        padding: var(--space-s);
         width: 100%;
+    }
+
+    #art-gallery-dialog p {
+        margin-block-start: var(--space-s);
     }
 
     #art-gallery-dialog span {
@@ -97,17 +100,15 @@ import { readableDate, slugify } from "src/utils";
         color: var(--lighter-text-color);
     }
 </style>
+<a href=${img.src}>
 <img src="${img.src}" alt="${img.alt}" />
+</a>
 <p>
     <b>${img.dataset.title}</b>
     <span class=divider()></span>
     <time datetime=${img.dataset.date}>${img.dataset.readableDate}</time>
 </p>
 ${img.alt ? `<p>${img.alt}</p>` : ""}
-<img
-    src="${img.src}" alt="${img.alt}"
-    style="margin-inline-start:auto;"
-/>
             `;
         this.dialog.showModal();
       }
