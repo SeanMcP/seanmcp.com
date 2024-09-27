@@ -26,6 +26,9 @@ discuss details and my rate.
 
 ## Conference Talks
 
+- [_Thinking Outside the Bots: A human-centric approach to model interactions_](/talks/thinking-outside-the-bots)
+  at **Pittsburgh TechFest 2024**
+- _The Next Generation of Frontend Architecture_ at **Pittsburgh TechFest 2023**
 - [_React Bug Catcher: Tools and strategies for debugging React applications_](https://smcp.dev/rbc-repo)
   at **React Global 2022** (Virtual)
 - [_Accessibility for the rest of us_](/talks/accessibility-for-the-rest-of-us)
