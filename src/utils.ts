@@ -112,6 +112,7 @@ export function normalizeArt(art: Art) {
 }
 
 export function readableDate(date: Date | string) {
+  // Sync with src/pages/search.astro
   return new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
     month: "short",

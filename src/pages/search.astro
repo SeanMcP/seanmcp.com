@@ -1,9 +1,6 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
-import {
-  getArticles,
-  normalizeArt,
-} from "src/utils";
+import { getArticles, normalizeArt } from "src/utils";
 import artData from "../content/_art";
 import pages from "src/data/navigation";
 
@@ -13,7 +10,7 @@ type SearchableContentItem = {
   description: string;
   tags: string[];
   title: string;
-  type: "article" | "note" | "garden" | "art" | "social" | "page";
+  type: "article" | "art" | "social" | "page";
   url: string;
   year: number;
 };
@@ -49,8 +46,6 @@ function addToSearchableContent(array: Array<any>) {
   });
 }
 addToSearchableContent(await getArticles());
-// addToSearchableContent(normalizeNotes(await getNotes()));
-// addToSearchableContent(normalizeGardens(await getGardens(), "FIRST"));
 addToSearchableContent(normalizeArt(artData));
 
 [
@@ -93,7 +88,7 @@ pages.all.forEach((item) => {
 
 const sortedYears = Array.from(years).sort((a, b) => b - a);
 const sortedTags = Array.from(tags).sort((a, b) =>
-  a.toLowerCase().localeCompare(b.toLowerCase())
+  a.toLowerCase().localeCompare(b.toLowerCase()),
 );
 ---
 
@@ -177,11 +172,8 @@ const sortedTags = Array.from(tags).sort((a, b) =>
     <output id="search-output"></output>
     <template id="search-result">
       <li class="line(xs)">
-        <span>%TYPE%</span>
-        <div>
-          <a href="%URL%">%TITLE%</a>
-          <time datetime="%DATE%">(%DISPLAY_DATE%)</time>
-        </div>
+        <a href="%URL%">%TITLE%</a>
+        <time datetime="%DATE%">%DISPLAY_DATE%</time>
       </li>
     </template>
 
@@ -259,14 +251,22 @@ const sortedTags = Array.from(tags).sort((a, b) =>
           <ol>
             ${listToRender
               .map((item) => {
-                const displayDate = new Date(item.date).toLocaleDateString();
+                // Sync with src/utils.ts
+                const displayDate = new Date(item.date).toLocaleDateString(
+                  "en-US",
+                  {
+                    day: "numeric",
+                    month: "short",
+                    timeZone: "America/New_York",
+                    year: "numeric",
+                  },
+                );
                 let html = liTemplate.cloneNode(true).outerHTML;
                 if (!item.date) {
                   html = html.replace(/<time.*<\/time>/, "");
                 }
 
                 return html
-                  .replace(/%TYPE%/g, item.type)
                   .replace(/%URL%/g, item.url)
                   .replace(/%TITLE%/g, item.title)
                   .replace(/%DATE%/g, item.date)
@@ -289,13 +289,13 @@ const sortedTags = Array.from(tags).sort((a, b) =>
         window.history.pushState(
           {},
           "",
-          `${window.location.pathname}?${searchParams}`
+          `${window.location.pathname}?${searchParams}`,
         );
         searchAndRender(
           formData.get("q"),
           formData.get("type"),
           formData.get("year"),
-          formData.get("tag")
+          formData.get("tag"),
         );
       }
       form.addEventListener("change", (e) => {
@@ -396,11 +396,8 @@ const sortedTags = Array.from(tags).sort((a, b) =>
       margin-block-start: var(--space-2xs);
     }
 
-    li span {
-      background-color: var(--off-background);
-      font-size: x-small;
-      text-transform: uppercase;
-      padding: 0.25em 0.5em;
+    li a {
+      font-weight: bold;
     }
 
     li time {
