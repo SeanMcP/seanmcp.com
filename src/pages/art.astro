@@ -1,117 +1,132 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
-import art from "../content/_art";
-import { readableDate, slugify } from "src/utils";
+import { slugify } from "src/utils";
+import ReadableTime from "@components/ReadableTime.astro";
+
+const art = [
+  // REVERSE CHRONOLOGICAL ORDER
+  ["2024-09-20T13:00-0400", "blackridge.jpg", "Blackridge", "Krita"],
+  ["2024-02-03T06:45-0400", "sad-dice.png", "Sad dice", "Aseprite", "pixel"],
+  [
+    "2024-01-23T20:30-0400",
+    "tree_32.png",
+    "Tree",
+    "Aseprite, Mystical Leaf",
+    "pixel",
+  ],
+  [
+    "2024-01-13T15:28-0400",
+    "droplet_16.png",
+    "Water droplet",
+    "Aseprite",
+    "pixel",
+  ],
+  ["2024-01-12T13:20-0400", "404_16.png", "404", "Aseprite", "pixel"],
+  [
+    "2023-12-26T07:25-0400",
+    "logo_16.png",
+    "Logo",
+    "Aseprite, Endesga 16",
+    "pixel",
+  ],
+  [
+    "2023-12-26T07:00-0400",
+    "two-color-gradient_16.png",
+    "Two-color gradient",
+    "Aseprite, Endesga 16",
+    "pixel",
+  ],
+  [
+    "2023-12-26T06:42-0400",
+    "hokusai-great-wave_16.png",
+    "Hokusai's Great Wave",
+    "Aseprite, Endesga 16; Overly ambitious, but I might revisit later.",
+    "pixel",
+  ],
+  [
+    "2023-12-26T06:27-0400",
+    "box_16.png",
+    "Box",
+    "Aseprite, Endesga 16",
+    "pixel",
+  ],
+  [
+    "2023-12-26T06:15-0400",
+    "christmas-tree_16.png",
+    "Christmas tree",
+    "Aseprite, Endesga 16",
+    "pixel",
+  ],
+  [
+    "2023-12-21T15:07-0400",
+    "prof-oak_16.png",
+    "Prof. Oak",
+    "Palette: Endesga 16",
+    "pixel",
+  ],
+  [
+    "2023-12-20T08:24-0400",
+    "maple-tree_16.png",
+    "Maple tree",
+    "Tried some dithering on the leaves",
+    "pixel",
+  ],
+  [
+    "2023-12-19T16:00-0400",
+    "donut.png",
+    "Donut",
+    "What flavor is blue frosting?",
+    "pixel",
+  ],
+  [
+    "2023-12-19T15:30-0400",
+    "red.png",
+    "Red",
+    "Maybe jumping into color a little too quickly, but I like how the shading turned out",
+    "pixel",
+  ],
+];
 ---
 
 <PageLayout title="Art">
-  <art-gallery>
-    {
-      art.map(([datestring, relativePath, title, description]) => (
-        <img
-          alt={description}
-          data-date={datestring}
-          data-readable-date={readableDate(datestring)}
-          data-title={title}
-          id={slugify(title)}
-          src={`/art/${relativePath}`}
-          title={`${title}: ${description}`}
-        />
-      ))
-    }
-  </art-gallery>
+  {
+    art.map(([datestring, relativePath, title, description, type]) => (
+      <article class="stack(m)" id={slugify(title)} data-type={type}>
+        <header class="line(xs)">
+          <h2>{title}</h2>
+          <ReadableTime
+            date={datestring}
+            style="color: var(--lighter-text-color);"
+          />
+        </header>
+        <a href={`/art/${relativePath}`} target="_blank">
+          <img alt={description} src={`/art/${relativePath}`} />
+        </a>
+        {description && <p>{description}</p>}
+      </article>
+    ))
+  }
 </PageLayout>
 
 <style>
-  art-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    grid-gap: var(--space-s);
+  article h2 {
+    margin-block-start: 0;
   }
 
-  art-gallery img {
-    height: auto;
+  article a {
+    display: flex;
+    background-color: hsla(0, 0%, 0%, 0.75);
+    justify-content: center;
+    padding: var(--space-m);
+    text-align: center;
+  }
+
+  article[data-type=pixel] img {
     image-rendering: pixelated;
-    width: 100%;
-    padding: var(--space-s);
+    width: 50%;
   }
 
-  :global(art-gallery dialog) {
-    margin-block-start: var(--space-m);
-    width: min(calc(100vw - 2 * var(--space-m)), 700px);
+  article + article {
+    margin-block-start: var(--space-xl);
   }
 </style>
-
-<script type="module">
-  customElements.define(
-    "art-gallery",
-    class extends HTMLElement {
-      connectedCallback() {
-        this.dialog = document.createElement("dialog");
-        this.dialog.id = "art-gallery-dialog";
-        this.appendChild(this.dialog);
-
-        this.addEventListener("click", (e) => {
-          if (e.target.matches("art-gallery > img")) {
-            this.renderImageInModal(e.target);
-          }
-        });
-
-        const linkedImg = this.querySelector(
-          `art-gallery > img${location.hash}`
-        );
-
-        // Try to find the image that corresponds to the URL hash
-        if (location.hash && linkedImg) {
-          this.renderImageInModal(linkedImg);
-        }
-      }
-
-      renderImageInModal(img) {
-        this.dialog.innerHTML = /* html */ `
-<style>
-    #art-gallery-dialog {
-        background-color: var(--background);
-        border: 2px solid var(--off-background);
-        color: var(--text-color);
-    }
-
-    #art-gallery-dialog img {
-        display: block;
-        image-rendering: pixelated;
-    }
-
-    #art-gallery-dialog img:first-of-type {
-        height: auto;
-        margin-inline: auto;
-        width: 100%;
-    }
-
-    #art-gallery-dialog p {
-        margin-block-start: var(--space-s);
-    }
-
-    #art-gallery-dialog span {
-        display: inline-block;
-        margin-inline: var(--space-2xs);
-    }
-
-    #art-gallery-dialog time {
-        color: var(--lighter-text-color);
-    }
-</style>
-<a href=${img.src}>
-<img src="${img.src}" alt="${img.alt}" />
-</a>
-<p>
-    <b>${img.dataset.title}</b>
-    <span class=divider()></span>
-    <time datetime=${img.dataset.date}>${img.dataset.readableDate}</time>
-</p>
-${img.alt ? `<p>${img.alt}</p>` : ""}
-            `;
-        this.dialog.showModal();
-      }
-    }
-  );
-</script>

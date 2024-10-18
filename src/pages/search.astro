@@ -1,7 +1,6 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
-import { getArticles, normalizeArt } from "src/utils";
-import artData from "../content/_art";
+import { getArticles } from "src/utils";
 import pages from "src/data/navigation";
 
 type SearchableContentItem = {
@@ -10,7 +9,7 @@ type SearchableContentItem = {
   description: string;
   tags: string[];
   title: string;
-  type: "article" | "art" | "social" | "page";
+  type: "article" | "social" | "page";
   url: string;
   year: number;
 };
@@ -46,7 +45,6 @@ function addToSearchableContent(array: Array<any>) {
   });
 }
 addToSearchableContent(await getArticles());
-addToSearchableContent(normalizeArt(artData));
 
 [
   {

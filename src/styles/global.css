@@ -95,7 +95,7 @@ body {
 }
 
 :target {
-  scroll-margin-block-start: var(--space-2xl);
+  scroll-margin-block-start: var(--space-l);
 }
 
 h1,
