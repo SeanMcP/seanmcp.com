@@ -77,6 +77,10 @@ const articles = (await getArticles()).filter(
   button#again:is(:focus, :hover) {
     color: var(--primary);
   }
+
+  #data {
+    display: none;
+  }
 </style>
 
 <script>
@@ -92,7 +96,7 @@ const articles = (await getArticles()).filter(
     setTimeout(() => {
       loading.setAttribute("style", "display: none");
       output.appendChild(randomArticle);
-    }, 4000);
+    }, 2000);
   }
 
   getRandomArticle();

@@ -1,6 +1,5 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import _slugify from "slugify";
-import type { Art } from "./content/_art";
 
 export function slugify(text: string) {
   return _slugify(text, { lower: true });
@@ -99,19 +98,8 @@ export async function getArticles(options?: {
     });
 }
 
-export function normalizeArt(art: Art) {
-  return art.map(([date, , title, description]) => ({
-    collection: "art",
-    data: {
-      description,
-      pubDate: date,
-      title,
-    },
-    slug: `#${slugify(title)}`,
-  }));
-}
-
 export function readableDate(date: Date | string) {
+  // Sync with src/pages/search.astro
   return new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
     month: "short",
