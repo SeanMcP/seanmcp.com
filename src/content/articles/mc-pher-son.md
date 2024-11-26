@@ -25,7 +25,7 @@ least until we all learn
 a read aloud:
 
 <div style="text-align: center">
-    <audio controls src="/reading-mcpherson-meme.mp3"></audio>
+    <audio controls controlslist="nodownload" src="/reading-mcpherson-meme.mp3"></audio>
 </div>
 
 Related: [_How to pronounce my name_](/articles/how-to-pronounce-my-name)
