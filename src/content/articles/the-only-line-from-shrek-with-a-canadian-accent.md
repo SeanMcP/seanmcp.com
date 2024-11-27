@@ -7,10 +7,8 @@ tags:
   - Film
   - Investigation
   - Shrek
-pubDate: 2024-11-26T13:06-0400
-flags:
-  - DRAFT
-verse:
+pubDate: 2024-11-26T06:39-0400
+verse: Proverbs 19:20
 ---
 
 After replacing Chris Farley as the voice of Shrek,
