@@ -6,7 +6,7 @@ foot: >-
     <a href="/">seanmcp.com</a>
 </header>
 <main>
-    <ui-content style="padding-block: 3rem;">
+    <layout-content style="padding-block: 3rem;">
         <h1>{{ title }}</h1>
         {%- if date -%}
             <time datetime="{{ date }}">{{ date | readable_date }}</time>
@@ -14,13 +14,14 @@ foot: >-
         {%- if tagline -%}
             <p style="color: var(--faint-text);">{{ tagline }}</p>
         {%- endif -%}
-    </ui-content>
-    <ui-content style="padding-block-end: 8rem;">
-        <content class="{%- if prose -%}prose{%- endif -%}">
-            {{ content }}
-        </content>
-        {%- if verse -%}<bible-verse>{{verse}}</bible-verse>{%- endif -%}
-    </ui-content>
+    </layout-content>
+    <layout-content id="content" class="{%- if prose -%}prose{%- endif -%}" style="padding-block-end: 8rem;">
+        {{ content }}
+        <div>
+            <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}">Reply by email</a>
+            <bible-verse>{{verse | default: "Romans 5:8" }}</bible-verse>
+        </div>
+    </layout-content>
 </main>
 <footer>
     Since 2018 (SDG)
@@ -28,7 +29,7 @@ foot: >-
 
 <style>
     html {
-        background-color: var(--bg-color);
+        background-color: var(--bg);
     }
     body {
         display: grid;
@@ -42,7 +43,7 @@ foot: >-
         text-align: center;
     }
 
-    ui-content {
+    layout-content {
         display: block;
         margin-inline: auto;
         max-width: 70ch;
@@ -50,19 +51,21 @@ foot: >-
         width: 100%;
     }
 
-    ui-content > *:first-child {
-        margin-block-start: 0;
-        padding-block-start: 0;
-    }
-
-    ui-content > *:last-child {
-        margin-block-end: 0;
-        padding-block-end: 0;
-    }
-
-    content {
+    #content {
         font-family: var(--serif);
         line-height: 1.2;
+    }
+
+    #content img {
+        display: block;
+        margin-inline: auto;
+        max-width: 100%;
+    }
+
+    #content>div:last-child {
+        display: flex;
+        justify-content: space-between;
+        margin-block-start: 4rem;
     }
 
     h1 {
@@ -75,12 +78,6 @@ foot: >-
         margin-block-start: 0;
     }
 
-    content img {
-        display: block;
-        margin-inline: auto;
-        max-width: 100%;
-    }
-
     time {
         display: block;
         font-size: var(--step--1);
@@ -89,7 +86,7 @@ foot: >-
     }
 
     footer {
-        color: var(--text-color-2);
+        color: var(--faint-text);
         font-size: var(--step--1);
     }
 </style>

@@ -3,8 +3,8 @@ layout: page.liquid
 eleventyExcludeFromCollections: true
 title: Search
 foot: >-
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
-  <script type="module" src="/js/fuzzy-search.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script> <script
+  type="module" src="/js/fuzzy-search.js"></script>
 ---
 
 <fuzzy-search>
@@ -37,8 +37,7 @@ foot: >-
 
 </datalist>
 
-<output></output>
-{%include "article-list" %}
+<output></output> {%include "article-list" %}
 
 <!-- sync: article-list-item.liquid -->
 <template>
@@ -61,7 +60,7 @@ foot: >-
     fuzzy-search form button {
         background-color: var(--accent-color);
         border-color: var(--accent-color);
-        color: var(--bg-color);
+        color: var(--bg);
     }
     fuzzy-search output {
         margin-block-start: 1rem;

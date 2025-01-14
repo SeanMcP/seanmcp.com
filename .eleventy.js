@@ -1,10 +1,8 @@
-import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import markdownIt from "markdown-it"
 import markdownItAnchor from "markdown-it-anchor"
 import markdownItFootnote from "markdown-it-footnote"
-
 
 // Pulling this out improved the speed of the `readable_date` filter
 const localeDateStringConfig = {
@@ -62,8 +60,6 @@ export default function (eleventyConfig) {
       }
     }
   })
-  // This is required for asset bundling to work correctly
-  eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
   /** Filters */
   eleventyConfig.addFilter("debug_log", value => {

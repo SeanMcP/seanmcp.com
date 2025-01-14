@@ -12,12 +12,6 @@
 }
 
 :root {
-    --bg-color: hsl(0, 0%, 98%);
-    --bg-color-2: hsl(0, 0%, 90%);
-    --text-color: hsl(0, 0%, 27%);
-    --text-color-2: hsl(0, 0%, 45%);
-    --accent-color: hsl(114, 30%, 38%);
-
     --stroke-width: 2px;
 
     --serif: Lora, Newsreader, Georgia, "Times New Roman", Times, serif;
@@ -31,29 +25,11 @@
     --pattern-texture-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     --pattern-diagonal-background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 
-    --surf-beach: #f4efd9;
-    --surf-deep: #238db0;
-    /* #248daf */
-    --surf-bright: #5bb7c6;
-
-    --pa-0: hsl(36, 75%, 92%);
-    --pa-1: hsl(36, 67%, 85%);
-    --pa-2: hsl(35, 38%, 72%);
-    --pa-3: hsl(39, 29%, 69%);
-    --pa-4: hsl(53, 11%, 55%);
-    --pa-5: hsl(11, 8%, 28%);
-
-
     --bg: hsl(0, 0%, 100%);
     --off-bg: hsl(0, 0%, 95%);
     --text: hsl(0, 0%, 30%);
     --faint-text: hsl(0, 0%, 46%);
     --accent-color: hsl(114, 30%, 38%);
-
-    --bg-color: var(--bg);
-    --bg-color-2: var(--off-bg);
-    --text-color: var(--text);
-    --text-color-2: var(--faint-text);
 }
 
 * {
@@ -61,8 +37,7 @@
 }
 
 body {
-    /* background-color: var(--bg-color); */
-    color: var(--text-color);
+    color: var(--text);
     font-family: var(--sans);
     font-size: var(--step-0);
     line-height: 1;
@@ -83,7 +58,7 @@ textarea {
 
 a {
     color: var(--accent-color);
-    text-decoration-color: var(--bg-color-2);
+    text-decoration-color: var(--off-bg);
 }
 
 a:is(:focus, :hover) {
@@ -92,7 +67,7 @@ a:is(:focus, :hover) {
 }
 
 time {
-    color: var(--text-color-2);
+    color: var(--faint-text);
     font-family: var(--sans);
 }
 
@@ -142,14 +117,14 @@ h2,
 
 h3,
 .heading-container:has(h3) {
-    color: var(--text-color-2);
+    color: var(--faint-text);
     font-size: var(--step-0);
     font-weight: normal;
 }
 
 h4,
 .heading-container:has(h4) {
-    color: var(--text-color-2);
+    color: var(--faint-text);
     font-size: var(--step--1);
     font-weight: normal;
     letter-spacing: 0.1ch;
@@ -173,7 +148,7 @@ h4,
 }
 
 blockquote {
-    background: var(--bg-color-2);
+    background: var(--off-bg);
     border-inline-start: var(--stroke-width) solid var(--accent-color);
     line-height: 1.1;
     margin-inline: 0;
@@ -190,7 +165,7 @@ blockquote>*:last-child {
 
 *:not(pre)>code,
 kbd {
-    background-color: var(--bg-color-2);
+    background-color: var(--off-bg);
     padding: 1px 0.2ch;
     margin-inline: 0.2ch;
 }
@@ -225,8 +200,6 @@ hr,
 bible-verse {
     display: block;
     font-family: var(--serif);
-    margin-block-start: 4rem;
-    margin-block-end: 0;
     position: relative;
     text-align: end;
 }
@@ -235,10 +208,10 @@ bible-verse div {
     background: var(--off-bg);
     bottom: calc(100% + 0.5rem);
     border-block-end: var(--stroke-width) solid var(--accent-color);
-    max-width: 32ch;
     padding: 1rem;
     position: absolute;
     right: 0;
+    width: 32ch;
 }
 
 bible-verse div b {
