@@ -1,0 +1,7 @@
+/gardens/*    /articles/:splat
+/note/*       /void
+/notes/*      /void
+/sam          https://boyo.seanmcp.com
+/ezra         https://boyo.seanmcp.com
+
+/articles/getting-started-with-eleventy/    /resources/getting-started-with-eleventy/

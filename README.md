@@ -1,3 +1,3 @@
-## seanmcp.com
+# seanmcp.com
 
 A personal site
