@@ -16,6 +16,13 @@ foot: >-
         {%- endif -%}
     </layout-content>
     <layout-content id="content" class="{%- if prose -%}prose{%- endif -%}" style="padding-block-end: 8rem;">
+        {% if flags contains "RSS-ONLY" -%}
+        <call-out type="info">
+            This is a special article for <strong>the RSS Club</strong>, but feel
+            free to save or share this link. You can join by subscribing to <a href="/rss.xml">my RSS feed</a>.
+        </call-out>
+        {%- endif %}
+
         {{ content }}
         <div>
             <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}">Reply by email</a>
