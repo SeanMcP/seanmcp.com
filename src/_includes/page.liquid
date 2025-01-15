@@ -1,0 +1,103 @@
+---
+layout: base.liquid
+foot: >-
+---
+<header>
+    <a href="/">seanmcp.com</a>
+</header>
+<main>
+    <layout-content style="padding-block: 3rem;">
+        <h1>{{ title }}</h1>
+        {%- if date -%}
+            <time datetime="{{ date }}">{{ date | readable_date }}</time>
+        {%- endif -%}
+        {%- if tagline -%}
+            <p style="color: var(--faint-text);">{{ tagline }}</p>
+        {%- endif -%}
+    </layout-content>
+    <layout-content id="content" class="{%- if prose -%}prose{%- endif -%}" style="padding-block-end: 8rem;">
+        {% if flags contains "RSS-ONLY" -%}
+        <call-out type="info">
+            This is a special article for <strong>the RSS Club</strong>, but feel
+            free to save or share this link. You can join by subscribing to <a href="/rss.xml">my RSS feed</a>.
+        </call-out>
+        {%- endif %}
+
+        {{ content }}
+
+        {% if replies or verse -%}
+        <div>
+            <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}" id="comment-link">Reply by email</a>
+            <bible-verse>{{verse | default: "Romans 5:8" }}</bible-verse>
+        </div>
+        {%- endif %}
+    </layout-content>
+</main>
+<footer>
+    Since 2018 (SDG)
+</footer>
+
+<style>
+    html {
+        background-color: var(--bg);
+    }
+    body {
+        display: grid;
+        grid-template-rows: max-content auto max-content;
+        min-height: 100vh;
+    }
+
+    header, footer {
+        background-image: var(--pattern-diagonal-background-image);
+        padding: 1rem;
+        text-align: center;
+    }
+
+    layout-content {
+        display: block;
+        margin-inline: auto;
+        max-width: 70ch;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    #content {
+        font-family: var(--serif);
+        line-height: 1.2;
+    }
+
+    #content img {
+        display: block;
+        margin-inline: auto;
+        max-width: 100%;
+    }
+
+    #content>div:last-child {
+        display: flex;
+        justify-content: space-between;
+        margin-block-start: 4rem;
+    }
+
+    h1 {
+        font-size: var(--step-4);
+        margin-block: 0;
+        margin-inline: auto;
+    }
+
+    h1 + p {
+        margin-block-start: 0;
+    }
+
+    time {
+        display: block;
+        font-size: var(--step--1);
+        letter-spacing: 0.1ch;
+        text-transform: uppercase;
+    }
+
+    footer {
+        color: var(--faint-text);
+        font-size: var(--step--1);
+    }
+</style>
+<script type="module" src="/js/keyboard-shortcuts.js"></script>

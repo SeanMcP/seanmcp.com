@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% assign pageTitle = title | default: "Sean McPherson" %}
+        {% assign pageDescription = description | default: metadata.description %}
+        {% assign pageImage = image | default: "/og-image.png" | url %}
+        {% assign pageURL = "https://seanmcp.com" | append: page.url | url %}
+        <title>{{pageTitle}} - seanmcp.com</title>
+        <meta name="description" content="{{pageDescription}}">
+
+        <meta property="og:site_name" content="seanmcp.com" />
+        <meta property="og:title" content="{{pageTitle}}" />
+        <meta name="twitter:title" content="{{pageTitle}}" />
+
+        <meta name="description" content="{{pageDescription}}" />
+        <meta property="og:description" content="{{pageDescription}}" />
+        <meta name="twitter:description" content="{{pageDescription}}" />
+
+        <meta property="og:image" content="{{pageImage}}" />
+        <meta name="twitter:image" content="{{pageImage}}" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{pageURL}}" />
+        <meta name="twitter:card" content="summary" />
+
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link
+          rel="alternate"
+          href="https://seanmcp.com/rss.xml"
+          type="application/rss+xml"
+          title="seanmcp.com RSS Feed"
+        />
+        <link
+          rel="alternate"
+          href="https://indieweb.social/@seanmcp.rss"
+          type="application/rss+xml"
+          title="SeanMcP on Mastodon"
+        />
+        <link rel="me" href="https://indieweb.social/@seanmcp" />
+
+        {% comment %} TODO: Serve whatever Google Fonts you settle on {% endcomment %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="/css/prism-theme.css" />
+        <script type="module" src="/js/wc.js"></script>
+        {%- if head -%}{{head}}{%- endif -%}
+    </head>
+    <body>{{ content }}</body>
+    {%- if foot -%}{{foot}}{%- endif -%}
+</html>

@@ -19,6 +19,3 @@ pnpm-debug.log*
 
 # Local Netlify folder
 .netlify
-
-# Other
-.astro

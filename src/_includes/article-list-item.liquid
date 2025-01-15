@@ -1,0 +1,8 @@
+{% # sync: search.md %}
+<li class="article-list-item">
+    <a href="{{ article.url }}">
+        {{ article | render_title | escape }}
+    </a>
+    <time datetime="{{ article.data.date }}">{{ article.data.date | readable_date }}</time>
+</li>
+{% # endsync %}
