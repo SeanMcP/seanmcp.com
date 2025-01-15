@@ -24,10 +24,13 @@ foot: >-
         {%- endif %}
 
         {{ content }}
+
+        {% if replies or verse -%}
         <div>
-            <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}">Reply by email</a>
+            <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}" id="comment-link">Reply by email</a>
             <bible-verse>{{verse | default: "Romans 5:8" }}</bible-verse>
         </div>
+        {%- endif %}
     </layout-content>
 </main>
 <footer>

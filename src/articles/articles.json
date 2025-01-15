@@ -1,4 +1,7 @@
 {
-    "layout": "page.liquid",
-    "tags": ["articles"]
+  "layout": "page.liquid",
+  "tags": [
+    "articles"
+  ],
+  "replies": true
 }

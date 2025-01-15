@@ -1,17 +1,18 @@
 ---
 layout: page.liquid
 title: Sanders of Catan
-description: Sanders of Catan is a variation of the popular board game Catan that emphasizes game speed and competition, with a little bit of political humor.
+description:
+  Sanders of Catan is a variation of the popular board game Catan that
+  emphasizes game speed and competition, with a little bit of political humor.
 tagline: Playing the award-winning game like a true Socialist
 ---
-
 
 ## Improving on perfection
 
 Klaus Teuber's (_Settlers of_) _Catan_ is an award-winning strategy board game
 loved by millions. However, a game of Catan can run long and can be one-sided
-from the outset. In order to address these minor shortcomings, _Sanders of Catan_
-was developed.
+from the outset. In order to address these minor shortcomings, _Sanders of
+Catan_ was developed.
 
 _Sanders of Catan_ aims to make the game faster and encourage parity among the
 players, regardless of experience, board, or dice.
@@ -46,8 +47,9 @@ Players acquire resources more rapidly in _Sanders of Catan_.
 
 ### The Taxman
 
-The gray robber piece is renamed "The Taxman" and remains on the Desert tile (renamed "Washington, DC") for
-the duration of the game. When a player rolls a 7:
+The gray robber piece is renamed "The Taxman" and remains on the Desert tile
+(renamed "Washington, DC") for the duration of the game. When a player rolls a
+7:
 
 1. All players count the number of resource cards in their hand
 2. The player with the most cards (_i.e._ the "richest" player) selects half of

@@ -1,7 +1,8 @@
 ---
 layout: page.liquid
 title: "Cairn RPG"
-description: Resources and more for Cairn, the rules-light tabletop roleplaying game
+description:
+  Resources and more for Cairn, the rules-light tabletop roleplaying game
 date: 2024-05-17T13:40-0400
 updatedDate: 2024-06-07T06:39-0400
 verse: Joshua 4:1-3
@@ -30,5 +31,5 @@ with my family and friends.
 
 - [Cairn Printables](https://docs.google.com/presentation/d/1yXx2k5GN_Qos7VdiwStepIK0O2DB7NvDouYNjaEWTiQ/edit?usp=sharing):
   Printable character sheets that support first and second edition
-- [Cairn Starter-package Table](/gardens/cairn-starter-package-table):
-  A starter-package table for Cairn based on Into the Odd
+- [Cairn Starter-package Table](/gardens/cairn-starter-package-table): A
+  starter-package table for Cairn based on Into the Odd

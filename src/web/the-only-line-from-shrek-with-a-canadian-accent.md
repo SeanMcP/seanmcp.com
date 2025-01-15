@@ -5,9 +5,9 @@ description:
   Mike Myers does not seem to use his iconic Scottish accent for the line "It's
   on my to-do list!"
 tags:
-- Film
-- Investigation
-- Shrek
+  - Film
+  - Investigation
+  - Shrek
 # date: 2024-11-27T06:39-0400
 verse: Proverbs 19:20
 ---
