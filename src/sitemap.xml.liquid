@@ -1,0 +1,13 @@
+---
+permalink: /sitemap.xml
+excludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for item in collections.all | exclude_flag_in_prod: "DRAFT" %}
+    <url>
+        <loc>https://seanmcp.com{{ item.url }}</loc>
+        <lastmod>{{ item.date | date: '%Y-%m-%d' }}</lastmod>
+    </url>
+{%- endfor %}
+</urlset>
