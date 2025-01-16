@@ -3,11 +3,9 @@ layout: page.liquid
 title: Sean McPherson
 prose: true
 head: >-
-  <style>
-  h1 {
+  <style> h1 {
     text-align: center;
-  }
-  nav {
+  } nav {
     border-block: var(--stroke-width) solid var(--accent-color);
     background-image: var(--pattern-diagonal-background-image);
     display: flex;
@@ -15,18 +13,14 @@ head: >-
     gap: 1rem;
     justify-content: center;
     padding: 0.5rem;
-  }
-  nav > p {
+  } nav > p {
     display: contents;
-  }
-  </style>
+  } </style>
 ---
 
 <nav>
 
-[About](/)
-[Articles](/articles)
-[Search](/search)
+[About](/) [Articles](/articles) [Search](/search)
 
 </nav>
 
@@ -34,19 +28,27 @@ head: >-
 
 ### Professionally
 
-I work as a software engineer at [Khan Academy](https://khanacademy.org) building AI-powered activities for students and teachers like [Khanmigo Writing Coach](https://www.khanmigo.ai/writingcoach).
+I work as a software engineer at [Khan Academy](https://khanacademy.org)
+building AI-powered activities for students and teachers like
+[Khanmigo Writing Coach](https://www.khanmigo.ai/writingcoach).
 
-I have previously worked as a software engineer for Niche.com in Pittsburgh and [TSYS](https://www.tsys.com/) in Atlanta. And before that I was a teacher at Gwinnett County Public Schools, AmeriCorps, and a juvenile detention center.
+I have previously worked as a software engineer for Niche.com in Pittsburgh and
+[TSYS](https://www.tsys.com/) in Atlanta. And before that I was a teacher at
+Gwinnett County Public Schools, AmeriCorps, and a juvenile detention center.
 
-I graduated from Edinboro University with a degree in middle-level education and later The Iron Yard Coding Bootcamp.
+I graduated from Edinboro University with a degree in middle-level education and
+later The Iron Yard Coding Bootcamp.
 
 ### Personally
 
-I live in Pittsburgh, PA with my wife and two sons. I serve as a deacon at my local presbyterian church, and volunteer on the [Wilkinsburg Public Library](https://wilkinsburglibrary.org) Board of Directors.
+I live in Pittsburgh, PA with my wife and two sons. I serve as a deacon at my
+local presbyterian church, and volunteer on the
+[Wilkinsburg Public Library](https://wilkinsburglibrary.org) Board of Directors.
 
-I watch, read about, and play soccer; and play [board](/board-games) and [adventure](/adventure-games) games.
+I watch, read about, and play soccer; and play [board](/board-games) and
+[adventure](/adventure-games) games.
 
 ## Recent articles
 
-{%- assign articles = collections.articles | reverse | slice: 0, 5 -%}
+{%- assign articles = collections.articles | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 5 -%}
 {% include "article-list" %}
