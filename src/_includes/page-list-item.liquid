@@ -1,10 +1,10 @@
 {% # sync: search.md %}
 <li class="page-list-item">
-    <a href="{{ article.url }}">
-        {{ article | render_title | escape }}
+    <a href="{{ page.url }}">
+        {{ page | render_title | escape }}
     </a>
-    {%- if article.data.date -%}
-    <time datetime="{{ article.data.date }}">{{ article.data.date | readable_date }}</time>
+    {%- if page.data.date -%}
+    <time datetime="{{ page.data.date }}">{{ page.data.date | readable_date }}</time>
     {%- endif -%}
 </li>
 {% # endsync %}

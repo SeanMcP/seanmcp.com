@@ -2,6 +2,7 @@
 layout: page.liquid
 prose: false
 title: Articles
+leaf: false
 ---
 
 To search for an article, use your browsers find feature or
