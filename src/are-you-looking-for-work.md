@@ -18,4 +18,6 @@ head: >-
 
 <div class="answer">Nope.</div>
 
-Thank you for reaching out, but I am happy in my current position. Feel free to connect with me on [LinkedIn](https://linkedin.com/in/seanmcp) and check back later.
+Thank you for reaching out, but I am happy in my current position. Feel free to
+connect with me on [LinkedIn](https://linkedin.com/in/seanmcp) and check back
+later.

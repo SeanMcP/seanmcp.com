@@ -14,7 +14,7 @@ Here is an evergreen list of the tools that I use to get work done.
 ## Computer
 
 - 2023 MacBook Pro
-- 2017 Lenovo YOGA: Ubuntu
+- Dell Latitude 5320: Ubuntu
 - Desktop: Windows
 
 ## Audio

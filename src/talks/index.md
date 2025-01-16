@@ -1,6 +1,7 @@
 ---
 layout: page.liquid
 title: Talks
+leaf: false
 ---
 
 Since 2018, I have given conference talks, lightning talks, and lead workshops
