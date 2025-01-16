@@ -3,11 +3,37 @@ import path from "path";
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
+function forceDigits(number) {
+  const string = String(number);
+  return string.length === 1 ? "0" + string : string;
+}
+
+/**
+ * Returns a formatted timestamp in eastern time
+ * @returns {string} timestamp
+ */
+export function getTimestamp(date) {
+  // There is probably a better way to do this
+  const d = date ? new Date(date) : new Date();
+
+  let s = d.getFullYear();
+  s += "-";
+  s += forceDigits(d.getMonth() + 1);
+  s += "-";
+  s += forceDigits(d.getDate());
+  s += "T";
+  s += forceDigits(d.getHours());
+  s += ":";
+  s += forceDigits(d.getMinutes());
+  s += "-0400";
+
+  return s;
+}
+
 const template = `---
-<!-- layout: page.liquid -->
 title: %TITLE%
 description:
-data: ${new Date().toISOString()}
+date: ${getTimestamp()}
 tags:
 flags:
 verse:
@@ -22,7 +48,10 @@ if (!title) {
   process.exit(1);
 }
 
-const slug = title.toLowerCase().replace(/ /g, "-");
+const slug = title
+  .toLowerCase()
+  .replace(/ /g, "-")
+  .replace(/[^a-z0-9-]/g, "");
 const filename = `${slug}.md`;
 
 fs.writeFileSync(path.join(__dirname, "src/articles", filename), template.replace("%TITLE%", title));
