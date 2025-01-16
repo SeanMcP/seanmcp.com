@@ -37,11 +37,11 @@ foot: >-
 
 </datalist>
 
-<output></output> {%include "article-list" %}
+<output></output> {%include "page-list" %}
 
-<!-- sync: article-list-item.liquid -->
+<!-- sync: page-list-item.liquid -->
 <template>
-<li class="article-list-item">
+<li class="page-list-item">
     <a href="%URL%">%TITLE%</a><time datetime="%DATETIME%">%READABLE_DATE%</time>
 </li>
 </template>

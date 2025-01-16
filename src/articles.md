@@ -4,9 +4,10 @@ prose: false
 title: Articles
 ---
 
-To search for an article, use your browsers find feature or [visit the search page](/search).
+To search for an article, use your browsers find feature or
+[visit the search page](/search).
 
 ---
 
-{% assign articles = collections.articles | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse %}
-{% include "article-list" %}
+{% assign pages = collections.articles | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse %}
+{% include "page-list" %}

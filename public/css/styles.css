@@ -1,267 +1,267 @@
 /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
-    --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
-    --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-    --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-    --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
-    --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
-    --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
-    --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
-    --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
 }
 
 :root {
-    --stroke-width: 2px;
+  --stroke-width: 2px;
 
-    --serif: Lora, Newsreader, Georgia, "Times New Roman", Times, serif;
-    --sans: "Public Sans", "Source Sans 3", system-ui;
-    --body-typeface: "Public Sans", var(--serif);
+  --serif: Lora, Newsreader, Georgia, "Times New Roman", Times, serif;
+  --sans: "Public Sans", "Source Sans 3", system-ui;
+  --body-typeface: "Public Sans", var(--serif);
 
-    --pattern-background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23000000' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-    --pattern-clouds-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%23000000' fill-opacity='0.05' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
-    --pattern-diamonds-background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zM16.686 0L10.2 6.485 11.616 7.9l7.9-7.9h-2.83zm20.97 0l9.315 9.314-1.414 1.414L34.828 0h2.83zM22.344 0L13.03 9.314l1.414 1.414L25.172 0h-2.83zM32 0l12.142 12.142-1.414 1.414L30 .828 17.272 13.556l-1.414-1.414L28 0h4zM.284 0l28 28-1.414 1.414L0 2.544V0h.284zM0 5.373l25.456 25.455-1.414 1.415L0 8.2V5.374zm0 5.656l22.627 22.627-1.414 1.414L0 13.86v-2.83zm0 5.656l19.8 19.8-1.415 1.413L0 19.514v-2.83zm0 5.657l16.97 16.97-1.414 1.415L0 25.172v-2.83zM0 28l14.142 14.142-1.414 1.414L0 30.828V28zm0 5.657L11.314 44.97 9.9 46.386l-9.9-9.9v-2.828zm0 5.657L8.485 47.8 7.07 49.212 0 42.143v-2.83zm0 5.657l5.657 5.657-1.414 1.415L0 47.8v-2.83zm0 5.657l2.828 2.83-1.414 1.413L0 53.456v-2.83zM54.627 60L30 35.373 5.373 60H8.2L30 38.2 51.8 60h2.827zm-5.656 0L30 41.03 11.03 60h2.828L30 43.858 46.142 60h2.83zm-5.656 0L30 46.686 16.686 60h2.83L30 49.515 40.485 60h2.83zm-5.657 0L30 52.343 22.343 60h2.83L30 55.172 34.828 60h2.83zM32 60l-2-2-2 2h4zM59.716 0l-28 28 1.414 1.414L60 2.544V0h-.284zM60 5.373L34.544 30.828l1.414 1.415L60 8.2V5.374zm0 5.656L37.373 33.656l1.414 1.414L60 13.86v-2.83zm0 5.656l-19.8 19.8 1.415 1.413L60 19.514v-2.83zm0 5.657l-16.97 16.97 1.414 1.415L60 25.172v-2.83zM60 28L45.858 42.142l1.414 1.414L60 30.828V28zm0 5.657L48.686 44.97l1.415 1.415 9.9-9.9v-2.828zm0 5.657L51.515 47.8l1.414 1.413 7.07-7.07v-2.83zm0 5.657l-5.657 5.657 1.414 1.415L60 47.8v-2.83zm0 5.657l-2.828 2.83 1.414 1.413L60 53.456v-2.83zM39.9 16.385l1.414-1.414L30 3.658 18.686 14.97l1.415 1.415 9.9-9.9 9.9 9.9zm-2.83 2.828l1.415-1.414L30 9.313 21.515 17.8l1.414 1.413 7.07-7.07 7.07 7.07zm-2.827 2.83l1.414-1.416L30 14.97l-5.657 5.657 1.414 1.415L30 17.8l4.243 4.242zm-2.83 2.827l1.415-1.414L30 20.626l-2.828 2.83 1.414 1.414L30 23.456l1.414 1.414zM56.87 59.414L58.284 58 30 29.716 1.716 58l1.414 1.414L30 32.544l26.87 26.87z' fill='%23000000' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-    --pattern-stars-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
-    --pattern-texture-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    --pattern-diagonal-background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23000000' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  --pattern-clouds-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%23000000' fill-opacity='0.05' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
+  --pattern-diamonds-background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zM16.686 0L10.2 6.485 11.616 7.9l7.9-7.9h-2.83zm20.97 0l9.315 9.314-1.414 1.414L34.828 0h2.83zM22.344 0L13.03 9.314l1.414 1.414L25.172 0h-2.83zM32 0l12.142 12.142-1.414 1.414L30 .828 17.272 13.556l-1.414-1.414L28 0h4zM.284 0l28 28-1.414 1.414L0 2.544V0h.284zM0 5.373l25.456 25.455-1.414 1.415L0 8.2V5.374zm0 5.656l22.627 22.627-1.414 1.414L0 13.86v-2.83zm0 5.656l19.8 19.8-1.415 1.413L0 19.514v-2.83zm0 5.657l16.97 16.97-1.414 1.415L0 25.172v-2.83zM0 28l14.142 14.142-1.414 1.414L0 30.828V28zm0 5.657L11.314 44.97 9.9 46.386l-9.9-9.9v-2.828zm0 5.657L8.485 47.8 7.07 49.212 0 42.143v-2.83zm0 5.657l5.657 5.657-1.414 1.415L0 47.8v-2.83zm0 5.657l2.828 2.83-1.414 1.413L0 53.456v-2.83zM54.627 60L30 35.373 5.373 60H8.2L30 38.2 51.8 60h2.827zm-5.656 0L30 41.03 11.03 60h2.828L30 43.858 46.142 60h2.83zm-5.656 0L30 46.686 16.686 60h2.83L30 49.515 40.485 60h2.83zm-5.657 0L30 52.343 22.343 60h2.83L30 55.172 34.828 60h2.83zM32 60l-2-2-2 2h4zM59.716 0l-28 28 1.414 1.414L60 2.544V0h-.284zM60 5.373L34.544 30.828l1.414 1.415L60 8.2V5.374zm0 5.656L37.373 33.656l1.414 1.414L60 13.86v-2.83zm0 5.656l-19.8 19.8 1.415 1.413L60 19.514v-2.83zm0 5.657l-16.97 16.97 1.414 1.415L60 25.172v-2.83zM60 28L45.858 42.142l1.414 1.414L60 30.828V28zm0 5.657L48.686 44.97l1.415 1.415 9.9-9.9v-2.828zm0 5.657L51.515 47.8l1.414 1.413 7.07-7.07v-2.83zm0 5.657l-5.657 5.657 1.414 1.415L60 47.8v-2.83zm0 5.657l-2.828 2.83 1.414 1.413L60 53.456v-2.83zM39.9 16.385l1.414-1.414L30 3.658 18.686 14.97l1.415 1.415 9.9-9.9 9.9 9.9zm-2.83 2.828l1.415-1.414L30 9.313 21.515 17.8l1.414 1.413 7.07-7.07 7.07 7.07zm-2.827 2.83l1.414-1.416L30 14.97l-5.657 5.657 1.414 1.415L30 17.8l4.243 4.242zm-2.83 2.827l1.415-1.414L30 20.626l-2.828 2.83 1.414 1.414L30 23.456l1.414 1.414zM56.87 59.414L58.284 58 30 29.716 1.716 58l1.414 1.414L30 32.544l26.87 26.87z' fill='%23000000' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  --pattern-stars-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-texture-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  --pattern-diagonal-background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 
-    --bg: hsl(0, 0%, 100%);
-    --off-bg: hsl(0, 0%, 95%);
-    --text: hsl(0, 0%, 30%);
-    --faint-text: hsl(0, 0%, 46%);
-    --accent-color: hsl(114, 30%, 38%);
+  --bg: hsl(0, 0%, 100%);
+  --off-bg: hsl(0, 0%, 95%);
+  --text: hsl(0, 0%, 30%);
+  --faint-text: hsl(0, 0%, 46%);
+  --accent-color: hsl(114, 30%, 38%);
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    color: var(--text);
-    font-family: var(--sans);
-    font-size: var(--step-0);
-    line-height: 1;
-    margin: 0;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: var(--step-0);
+  line-height: 1;
+  margin: 0;
 }
 
 button,
 input,
 select,
 textarea {
-    background-color: transparent;
-    font: inherit;
-    font-family: var(--sans);
-    border: var(--stroke-width) solid var(--faint-text);
-    border-radius: 0;
-    padding: 0.25em 0.5em;
+  background-color: transparent;
+  font: inherit;
+  font-family: var(--sans);
+  border: var(--stroke-width) solid var(--faint-text);
+  border-radius: 0;
+  padding: 0.25em 0.5em;
 }
 
 a {
-    color: var(--accent-color);
-    text-decoration-color: var(--off-bg);
+  color: var(--accent-color);
+  text-decoration-color: var(--off-bg);
 }
 
 a:is(:focus, :hover) {
-    text-decoration-color: currentColor;
-    text-underline-offset: 2px;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
 }
 
 time {
-    color: var(--faint-text);
-    font-family: var(--sans);
+  color: var(--faint-text);
+  font-family: var(--sans);
 }
 
 ol li::marker {
-    color: var(--accent-color);
-    font-family: var(--sans);
+  color: var(--accent-color);
+  font-family: var(--sans);
 }
 
 ul {
-    list-style: square;
+  list-style: square;
 }
 
 ul li::marker {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
-li+li {
-    margin-block-start: 0.5em;
+li + li {
+  margin-block-start: 0.5em;
 }
 
-.prose>p:first-child::first-letter {
-    /* Takes up three lines of text */
-    font-size: 4.1em;
-    font-weight: bold;
-    float: inline-start;
-    margin-block-start: -0.15em;
-    margin-block-end: -0.3em;
-    margin-inline-end: 0.1em;
+.prose > p:first-child::first-letter {
+  /* Takes up three lines of text */
+  font-size: 4.1em;
+  font-weight: bold;
+  float: inline-start;
+  margin-block-start: -0.15em;
+  margin-block-end: -0.3em;
+  margin-inline-end: 0.1em;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    font-family: var(--sans);
-    margin-block: 0;
+  font-family: var(--sans);
+  margin-block: 0;
 }
 
 h1 {
-    font-size: var(--step-5);
+  font-size: var(--step-5);
 }
 
 h2,
 .heading-container:has(h2) {
-    font-size: var(--step-1);
+  font-size: var(--step-1);
 }
 
 h3,
 .heading-container:has(h3) {
-    color: var(--faint-text);
-    font-size: var(--step-0);
-    font-weight: normal;
+  color: var(--faint-text);
+  font-size: var(--step-0);
+  font-weight: normal;
 }
 
 h4,
 .heading-container:has(h4) {
-    color: var(--faint-text);
-    font-size: var(--step--1);
-    font-weight: normal;
-    letter-spacing: 0.1ch;
-    text-transform: uppercase;
+  color: var(--faint-text);
+  font-size: var(--step--1);
+  font-weight: normal;
+  letter-spacing: 0.1ch;
+  text-transform: uppercase;
 }
 
 .heading-container {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5ch;
-    margin-block-start: 2em;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5ch;
+  margin-block-start: 2em;
 
-    &+* {
-        margin-block-start: 0.5rem;
-    }
+  & + * {
+    margin-block-start: 0.5rem;
+  }
 
-    &:not(:hover) a:not(:focus) {
-        opacity: 0;
-    }
+  &:not(:hover) a:not(:focus) {
+    opacity: 0;
+  }
 }
 
 blockquote {
-    background: var(--off-bg);
-    border-inline-start: var(--stroke-width) solid var(--accent-color);
-    line-height: 1.1;
-    margin-inline: 0;
-    padding: 1em;
+  background: var(--off-bg);
+  border-inline-start: var(--stroke-width) solid var(--accent-color);
+  line-height: 1.1;
+  margin-inline: 0;
+  padding: 1em;
 }
 
-blockquote>*:first-child {
-    margin-block-start: 0;
+blockquote > *:first-child {
+  margin-block-start: 0;
 }
 
-blockquote>*:last-child {
-    margin-block-end: 0;
+blockquote > *:last-child {
+  margin-block-end: 0;
 }
 
-*:not(pre)>code,
+*:not(pre) > code,
 kbd {
-    background-color: var(--off-bg);
-    padding: 1px 0.2ch;
-    margin-inline: 0.2ch;
+  background-color: var(--off-bg);
+  padding: 1px 0.2ch;
+  margin-inline: 0.2ch;
 }
 
 kbd {
-    border-block-end: var(--stroke-width) solid var(--faint-text);
-    border-radius: 0.2em;
-    font-size: smaller;
+  border-block-end: var(--stroke-width) solid var(--faint-text);
+  border-radius: 0.2em;
+  font-size: smaller;
 }
 
 /* Utility classes */
 .visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* Plugins & Web Components */
 
 hr,
 .footnotes-sep {
-    background-color: var(--off-bg);
-    border: none;
-    height: var(--stroke-width);
-    margin-block: 2rem;
+  background-color: var(--off-bg);
+  border: none;
+  height: var(--stroke-width);
+  margin-block: 2rem;
 }
 
 bible-verse {
-    display: block;
-    font-family: var(--serif);
-    position: relative;
-    text-align: end;
+  display: block;
+  font-family: var(--serif);
+  position: relative;
+  text-align: end;
 }
 
 bible-verse div {
-    background: var(--off-bg);
-    bottom: calc(100% + 0.5rem);
-    border-block-end: var(--stroke-width) solid var(--accent-color);
-    padding: 1rem;
-    position: absolute;
-    right: 0;
-    width: 32ch;
+  background: var(--off-bg);
+  bottom: calc(100% + 0.5rem);
+  border-block-end: var(--stroke-width) solid var(--accent-color);
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  width: 32ch;
 }
 
 bible-verse div b {
-    font-family: var(--sans);
+  font-family: var(--sans);
 }
 
 call-out {
-    --call-out_icon-color: var(--accent-color);
-    align-items: center;
-    background-color: var(--off-bg);
-    border: var(--stroke-width) solid var(--accent-color);
-    display: flex;
-    gap: 1rem;
-    margin-block: 1rem;
-    padding: 1em;
+  --call-out_icon-color: var(--accent-color);
+  align-items: center;
+  background-color: var(--off-bg);
+  border: var(--stroke-width) solid var(--accent-color);
+  display: flex;
+  gap: 1rem;
+  margin-block: 1rem;
+  padding: 1em;
 }
 
 call-out svg {
-    height: 1.5rem;
+  height: 1.5rem;
 }
 
 call-out div {
-    flex: 1;
+  flex: 1;
 }
 
-call-out div>*:first-child {
-    margin-block-start: 0;
+call-out div > *:first-child {
+  margin-block-start: 0;
 }
 
-call-out div>*:last-child {
-    margin-block-end: 0;
+call-out div > *:last-child {
+  margin-block-end: 0;
 }
 
 /* Components */
 
-.article-list {
-    display: grid;
-    gap: 0.5rem;
-    list-style: none;
-    padding: 0;
+.page-list {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
 }
 
-.article-list-item {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
+.page-list-item {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
 
-    & time {
-        display: inline;
-        font-size: var(--step--2);
-    }
+  & time {
+    display: inline;
+    font-size: var(--step--2);
+  }
 }

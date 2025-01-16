@@ -50,5 +50,5 @@ I watch, read about, and play soccer; and play [board](/board-games) and
 
 ## Recent articles
 
-{%- assign articles = collections.articles | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 5 -%}
-{% include "article-list" %}
+{%- assign pages = collections.articles | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 5 -%}
+{% include "page-list" %}

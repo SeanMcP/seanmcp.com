@@ -2,6 +2,7 @@
 title: "Adventure games"
 description: Resources for table-top adventure games
 date: 2024-05-23T11:33-0400
+leaf: false
 ---
 
 Resources for table-top adventure games like Dungeons & Dragons.
@@ -78,3 +79,8 @@ http://www.necropraxis.com/hazard-system/
 
 Questing Beast _Track everything in DnD with one die_ (2023)
 https://www.youtube.com/watch?v=WhCulg30Zko
+
+## Pages
+
+{%- assign pages = collections["adventure-games"] | exclude_index | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse -%}
+{% include "page-list" %}

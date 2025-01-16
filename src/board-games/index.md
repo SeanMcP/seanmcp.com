@@ -1,5 +1,6 @@
 ---
 title: Board Games
+leaf: false
 ---
 
 I enjoy playing board games with family and friends. They're a great vehicle for
@@ -50,3 +51,8 @@ These are some of my favorite games, broken down by category.
 
 - [Fishbowl](https://fishbowl-game.com/): The best game for a large group is
   three games in one: taboo, password, and charades.
+
+## Pages
+
+{%- assign pages = collections["board-games"] | exclude_index | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse -%}
+{% include "page-list" %}
