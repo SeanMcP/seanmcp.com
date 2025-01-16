@@ -1,7 +1,7 @@
 ---
-layout: page.liquid
 title: Jest
-description: A growing list of little things that make working with Jest a little better
+description:
+  A growing list of little things that make working with Jest a little better
 date: 2022-10-06T11:58-0400
 verse: Acts 17:11
 ---
@@ -37,7 +37,7 @@ properties/values are present on the object without needing to mock all of them.
 expect(mockFn).toHaveBeenCalledWith(
   expect.objectContaining({
     example: true,
-  }),
+  })
 );
 ```
 

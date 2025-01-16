@@ -1,7 +1,7 @@
 ---
-layout: page.liquid
 title: React Native
-description: A growing list of terms you need to recognize when working in React Native
+description:
+  A growing list of terms you need to recognize when working in React Native
 date: 2021-10-07T12:00-0400
 verse: Psalm 19:14
 ---

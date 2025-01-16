@@ -1,7 +1,7 @@
 ---
-layout: page.liquid
 title: Coding Music
-description: A growing list of artists that I like to listen to while programming.
+description:
+  A growing list of artists that I like to listen to while programming.
 updatedDate: 2023-06-06T12:00-0400
 date: 2022-02-15T12:00-0400
 verse: Psalm 150:3

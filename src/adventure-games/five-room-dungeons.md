@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: "Five-room Dungeons"
 description:
   General recommendations for creating five-room dungeons for your adventure

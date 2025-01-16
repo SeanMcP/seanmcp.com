@@ -1,6 +1,7 @@
 {
+  "layout": "page.liquid",
   "tags": [
     "board-games"
   ],
-  "replies": true
+  "leaf": true
 }

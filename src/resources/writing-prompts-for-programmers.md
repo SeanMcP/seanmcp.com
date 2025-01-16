@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: Writing Prompts for Programmers
 description:
   A list of software-engineering focused writing prompts to help programmers get
@@ -8,14 +7,12 @@ updatedDate: 2023-07-05T10:51-0400
 date: 2023-07-04T10:51-0400
 verse: Proverbs 3:3
 head: >-
-  <style>
-  li[data-highlighted] {
+  <style> li[data-highlighted] {
     background-color: yellow;
-  }
-  </style>
+  } </style>
 foot: >-
-  <script type="module">
-  customElements.define("random-prompt", class RandomPrompt extends HTMLElement {
+  <script type="module"> customElements.define("random-prompt", class
+  RandomPrompt extends HTMLElement {
     constructor() {
       super();
       this.items = this.querySelectorAll("li");
@@ -37,8 +34,7 @@ foot: >-
       })
       this.prepend(button);
     }
-  })
-  </script>
+  }) </script>
 ---
 
 > The most effective way I know to improve your writing is to do freewriting

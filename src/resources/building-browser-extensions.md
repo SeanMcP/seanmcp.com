@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: Building browser extensions
 description: Some resources and guides for making browser add-ons/extensions
 date: 2021-02-23T12:00-0400

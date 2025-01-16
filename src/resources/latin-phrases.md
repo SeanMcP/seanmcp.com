@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: Latin
 description: Latin phrases that are good to know
 updatedDate: 2024-06-03T21:07-0400

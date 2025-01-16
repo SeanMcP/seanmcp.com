@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: Fonts
 description: Fonts (typefaces) that I like and where to find them
 updatedDate: 2024-06-15T06:38-0600

@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: Sanders of Catan
 description:
   Sanders of Catan is a variation of the popular board game Catan that

@@ -1,6 +1,7 @@
 {
+  "layout": "page.liquid",
   "tags": [
     "web"
   ],
-  "replies": true
+  "leaf": true
 }

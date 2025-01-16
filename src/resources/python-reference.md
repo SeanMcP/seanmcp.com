@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: "Python Reference"
 description: A quick reference guide for working in Python
 updatedDate: 2024-02-17T09:25-0400

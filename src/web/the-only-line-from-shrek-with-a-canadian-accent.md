@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: "The only line from Shrek with a Canadian accent"
 description:
   Mike Myers does not seem to use his iconic Scottish accent for the line "It's

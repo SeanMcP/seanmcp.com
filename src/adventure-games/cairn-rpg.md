@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: "Cairn RPG"
 description:
   Resources and more for Cairn, the rules-light tabletop roleplaying game

@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: "Adventure games"
 description: Resources for table-top adventure games
 date: 2024-05-23T11:33-0400

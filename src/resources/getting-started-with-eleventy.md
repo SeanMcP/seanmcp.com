@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: "Getting started with Eleventy"
 description:
   The missing getting-started guide for the Eleventy (11ty) static-site
@@ -255,7 +254,8 @@ markup.
 
 ## Syntax highlighting
 
-Eleventy will format inline code and code blocks correctly, but you need a plugin for syntax highlighting.
+Eleventy will format inline code and code blocks correctly, but you need a
+plugin for syntax highlighting.
 
 1. Install the official plugin: `pnpm i @11ty/eleventy-plugin-syntaxhighlight`
 2. Add the plugin to the `.eleventy.js` config:
@@ -272,12 +272,17 @@ export default function (eleventyConfig) {
 }
 ```
 
-3. Now the generated markup will have token classes. To style those differently, you can either create your own theme or [download a Prism theme](https://github.com/PrismJS/prism-themes/tree/master).
-4. Link those styles in your base or page template and syntax highlighting will work for code blocks. (You may want to tweak the styles to apply to inline code too.)
+3. Now the generated markup will have token classes. To style those differently,
+   you can either create your own theme or
+   [download a Prism theme](https://github.com/PrismJS/prism-themes/tree/master).
+4. Link those styles in your base or page template and syntax highlighting will
+   work for code blocks. (You may want to tweak the styles to apply to inline
+   code too.)
 
 ## Footnotes
 
-Eleventy does not have an official plugin for markdown footnotes, but the markdown parser it uses does.
+Eleventy does not have an official plugin for markdown footnotes, but the
+markdown parser it uses does.
 
 1. Install the markdown-it plugin: `pnpm i markdown-it markdown-it-footnote`
 2. Add the config to `.eleventy.js`:
@@ -295,7 +300,8 @@ export default function (eleventyConfig) {
 }
 ```
 
-3. Configure the plugin to meet your needs: [`markdown-it-footnote` documentation](https://github.com/markdown-it/markdown-it-footnote?tab=readme-ov-file#customize)
+3. Configure the plugin to meet your needs:
+   [`markdown-it-footnote` documentation](https://github.com/markdown-it/markdown-it-footnote?tab=readme-ov-file#customize)
 
 ## Conclusion
 

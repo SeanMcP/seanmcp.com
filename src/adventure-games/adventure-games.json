@@ -1,6 +1,7 @@
 {
+  "layout": "page.liquid",
   "tags": [
     "adventure-games"
   ],
-  "replies": true
+  "leaf": true
 }

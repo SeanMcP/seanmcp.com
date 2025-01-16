@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: "Debugging"
 description: Resources on debugging
 updatedDate: 2024-05-17T14:07-0400

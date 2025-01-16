@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: Podcasts
 description: A list of some of my favorite podcasts
 date: 2023-05-25T12:00-0400
@@ -22,13 +21,18 @@ date: 2023-05-25T12:00-0400
 
 ## Soccer (Football)
 
-- [Football Weekly (The Guardian)](https://www.theguardian.com/football/series/footballweekly): The standard for England-centric soccer podcasts. Max is a great host and the panel is always insightful and entertaining.
-- [The Tifo Football Podcast (The Athletic)](https://theathletic.com/podcast/197-the-tifo-football-podcast/): The format is going to change shortly, but I appreciated the mixture of levity and analysis.
+- [Football Weekly (The Guardian)](https://www.theguardian.com/football/series/footballweekly):
+  The standard for England-centric soccer podcasts. Max is a great host and the
+  panel is always insightful and entertaining.
+- [The Tifo Football Podcast (The Athletic)](https://theathletic.com/podcast/197-the-tifo-football-podcast/):
+  The format is going to change shortly, but I appreciated the mixture of levity
+  and analysis.
 - [The Football Tactics Podcast (The Athletic)](https://theathletic.com/podcast/145-football-tactics-podcast/)
 
 ## Faith
 
-- [The Holy Post](https://www.holypost.com/): Current events from a faith perspective
+- [The Holy Post](https://www.holypost.com/): Current events from a faith
+  perspective
 - [The Good Faith Podcast (Redeeming Babel)](https://www.redeemingbabel.com/goodfaith)
 - [The Bible Project Podcast](https://bibleproject.com/podcasts/the-bible-project-podcast/)
 - [Cooper & Cary Have Words](https://www.patreon.com/cooperandcary)

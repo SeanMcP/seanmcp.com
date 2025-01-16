@@ -1,5 +1,4 @@
 ---
-layout: page.liquid
 title: Git
 description: A garden all about Git
 date: 2021-05-04T12:00-0400

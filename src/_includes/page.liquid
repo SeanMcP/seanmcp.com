@@ -25,7 +25,7 @@ foot: >-
 
         {{ content }}
 
-        {% if replies or verse -%}
+        {% if leaf -%}
         <div>
             <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}" id="comment-link">Reply by email</a>
             <bible-verse>{{verse | default: "Romans 5:8" }}</bible-verse>

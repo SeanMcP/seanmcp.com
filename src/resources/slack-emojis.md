@@ -1,7 +1,7 @@
 ---
-layout: page.liquid
 title: Slack Emojis
-description: A curated list of the best reaction emojis that I have created for Slack
+description:
+  A curated list of the best reaction emojis that I have created for Slack
 date: 2022-01-04T12:00-0400
 head: >-
   <style>

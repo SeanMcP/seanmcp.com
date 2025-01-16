@@ -1,5 +1,7 @@
 {
+  "layout": "page.liquid",
   "tags": [
     "resources"
-  ]
+  ],
+  "leaf": true
 }
