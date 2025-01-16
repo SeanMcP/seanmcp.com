@@ -9,6 +9,10 @@ head: >-
   <style>content hr { margin-block: 3em; }</style>
 ---
 
+**January 16, 2025** — This is the first message send the void by a Node script.
+
+---
+
 **Jan 11, 2025** — I'm starting to rethink how I combined notes/gardens into
 articles (classic). I think I only did that because of how my site was
 architected in Astro. Now that I'm moving back to Eleventy, I don't see a good
