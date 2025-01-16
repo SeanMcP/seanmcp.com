@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "rm -rf dist/ && eleventy --serve",
-    "build": "rm -rf dist/ && eleventy"
+    "build": "rm -rf dist/ && eleventy",
+    "draft": "node new.mjs",
+    "void": "node void.mjs"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
