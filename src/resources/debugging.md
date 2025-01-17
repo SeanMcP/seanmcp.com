@@ -8,7 +8,7 @@ verse: Proverbs 18:15
 
 ## Reads
 
-- [_Before debugging_](/gardens/before-debugging)
+- [_Before debugging_](/resources/before-debugging)
 - [_The Debugger's Toolkit_](https://open.substack.com/pub/addyo/p/the-debuggers-toolkit)
   by Addy Osmani
 - [_When debugging, your attitude matters_](https://jvns.ca/blog/debugging-attitude-matters/)

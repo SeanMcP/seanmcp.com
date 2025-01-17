@@ -30,5 +30,5 @@ with my family and friends.
 
 - [Cairn Printables](https://docs.google.com/presentation/d/1yXx2k5GN_Qos7VdiwStepIK0O2DB7NvDouYNjaEWTiQ/edit?usp=sharing):
   Printable character sheets that support first and second edition
-- [Cairn Starter-package Table](/gardens/cairn-starter-package-table): A
+- [Cairn Starter-package Table](/resources/cairn-starter-package-table): A
   starter-package table for Cairn based on Into the Odd

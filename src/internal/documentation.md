@@ -20,7 +20,7 @@ planning redesigns.
 
 - [_Calculate the sum of everything up to a given number_](/articles/calculating-the-sum-of-everything-up-to-a-given-number)
 - [_English words by consonant-vowel pattern_](/articles/english-words-by-consonant-vowel-pattern)
-- [_Writing Prompts for Programmers_](/gardens/writing-prompts-for-programmers)
+- [_Writing Prompts for Programmers_](/resources/writing-prompts-for-programmers)
 
 ## Unique pages
 

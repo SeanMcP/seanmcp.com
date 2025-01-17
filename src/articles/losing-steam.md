@@ -4,7 +4,7 @@ description:
   This year started strong on writing, but I have found little motivation
   recently
 tags:
-- Writing
+  - Writing
 date: 2023-07-04T06:58-0400
 verse: Jeremiah 31:33
 ---
@@ -27,7 +27,7 @@ neat, but B is also fine too" makes for a compelling read. So perhaps
 "columnist" is not in my future.
 
 To help unblock myself, I created
-[a new garden of writing prompts for programmers](/gardens/writing-prompts-for-programmers).
+[a new garden of writing prompts for programmers](/resources/writing-prompts-for-programmers).
 These are cultivated for freewriting, an exercise where you write about a
 particular topic for a set amount of time. The goal isn't the output but rather
 the practice of getting started writing. It helps prime your brain for creative

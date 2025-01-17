@@ -4,8 +4,8 @@ description:
   Eleventy is looking better and better as an alternative to Astro for simple or
   long-lived websites
 tags:
-- Astro
-- Eleventy
+  - Astro
+  - Eleventy
 date: 2024-05-27T14:43-0400
 verse: Psalm 17:8
 ---
@@ -37,9 +37,9 @@ community that he is building. I like the ethos, and that gives me confidence in
 where the project will be in 3-5 years. Can I say the same for Astro?[^2]
 
 I'm not going to re-write this site. But I think I'm going to
-[reach for Eleventy](/gardens/getting-started-with-eleventy/) the next time I'm
-building a simple or long-lived website. If all I need is a way to generate a
-bunch of HTML with linked CSS and JavaScript, Eleventy seems like the better
+[reach for Eleventy](/resources/getting-started-with-eleventy/) the next time
+I'm building a simple or long-lived website. If all I need is a way to generate
+a bunch of HTML with linked CSS and JavaScript, Eleventy seems like the better
 option of the two.
 
 [^1]: At the time of writing, I am five minor releases behind and counting.
