@@ -35,8 +35,12 @@ export default function (eleventyConfig) {
   );
   /** Collections */
   eleventyConfig.addCollection("rssArticles", function (collectionsAPI) {
+    // QUESTION: Can we use filters here?
     return collectionsAPI.getFilteredByTag("articles").filter((item) => {
-      return !(item.data.flags || []).includes("DRAFT");
+      return (
+        !(item.data.flags || []).includes("DRAFT") &&
+        !item.inputPath.includes("index.md")
+      );
     });
   });
   /** Plugins */
@@ -88,7 +92,6 @@ export default function (eleventyConfig) {
     return pages;
   });
   eleventyConfig.addFilter("exclude_index", function (pages) {
-    // console.log(pages[0], pages[1]);
     return pages.filter((page) => !page.inputPath.includes("index.md"));
   });
   eleventyConfig.addFilter("render_title", function (page) {
