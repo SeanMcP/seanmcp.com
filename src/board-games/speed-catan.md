@@ -15,8 +15,8 @@ It is played with a standard _Catan_ game with a few altered rules.
 
 ## Setup
 
-Set out the terrain hexes (tiles) and sea frame pieces as usual. Do not place
-the circular number tokens (chits).
+Set out the terrain hexes (tiles) as usual. Do not place the circular number
+tokens (chits) nor the sea frame pieces. Harbor pieces are optional.
 
 Set the five resource and development cards in a row _in any order you choose_.
 This is the **card list**. On your turn, the cards you draw will be based on
@@ -49,6 +49,15 @@ The rest of your turn proceeds as normal.
 Since you are no longer summing the dice when rolling, there is no way to
 trigger the robber. You can either leave the piece in the box or set it in the
 desert.
+
+### Development cards
+
+Development cards _can_ be played on the turn you bought it.
+
+### Soldier (Knight) Cards
+
+When you play a "Knight" development card, steal one resource card from the
+player with the most victory points.
 
 ### Winning
 
