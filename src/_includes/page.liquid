@@ -2,20 +2,21 @@
 layout: base.liquid
 foot: >-
 ---
-<header>
+<header class="site">
     <a href="/">seanmcp.com</a>
 </header>
 <main>
-    <layout-content style="padding-block: 3rem;">
+    <header>
         <h1>{{ title }}</h1>
         {%- if date -%}
             <time datetime="{{ date }}">{{ date | readable_date }}</time>
-        {%- endif -%}
-        {%- if tagline -%}
+        {%- elsif tagline -%}
             <p style="color: var(--faint-text);">{{ tagline }}</p>
         {%- endif -%}
-    </layout-content>
-    <layout-content id="content" class="{%- if prose -%}prose{%- endif -%}" style="padding-block-end: 8rem;">
+    </header>
+    {% comment %} <layout-content style="padding-block: 3rem;"> {% endcomment %}
+    {% comment %} </layout-content> {% endcomment %}
+    {% comment %} <layout-content id="content" class="{%- if prose -%}prose{%- endif -%}" style="padding-block-end: 8rem;"> {% endcomment %}
         {% if flags contains "RSS-ONLY" -%}
         <call-out type="info">
             This is a special article for <strong>the RSS Club</strong>, but feel
@@ -26,14 +27,14 @@ foot: >-
         {{ content }}
 
         {% if leaf -%}
-        <div>
+        <footer>
             <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}" id="comment-link">Reply by email</a>
             <bible-verse>{{verse | default: "Romans 5:8" }}</bible-verse>
-        </div>
+        </footer>
         {%- endif %}
-    </layout-content>
+    {% comment %} </layout-content> {% endcomment %}
 </main>
-<footer>
+<footer class="site">
     Since 2018 (SDG)
 </footer>
 
@@ -41,41 +42,64 @@ foot: >-
     html {
         background-color: var(--bg);
     }
+
     body {
         display: grid;
         grid-template-rows: max-content auto max-content;
+        grid-template-columns: 1fr 120px 60ch 120px 1fr;
+        grid-template-areas:
+            "header header header header header"
+            "full-start wide-start content wide-end full-end"
+            "footer footer footer footer footer";
+        ;
         min-height: 100vh;
     }
 
-    header, footer {
+    .site {
         background-image: var(--pattern-diagonal-background-image);
         padding: 1rem;
         text-align: center;
     }
 
-    layout-content {
-        display: block;
-        margin-inline: auto;
-        max-width: 70ch;
-        padding: 1rem;
-        width: 100%;
+    header.site {
+        grid-area: header;
     }
 
-    #content {
+    main {
+        display: grid;
         font-family: var(--serif);
+        gap: 0;
+        grid-column: full-start / full-end;
+        grid-template-columns: subgrid;
         line-height: 1.2;
+        margin-block-end: 4rem;
+
+        > * {
+            grid-column: content;
+            margin-block-end: 0;
+        }
+
+        img {
+            display: block;
+            margin-inline: auto;
+            max-width: 100%;
+        }
+
+        header {
+            margin-block: 4rem;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            margin-block-start: 4rem;
+        }
     }
 
-    #content img {
-        display: block;
-        margin-inline: auto;
-        max-width: 100%;
-    }
-
-    #content>div:last-child {
-        display: flex;
-        justify-content: space-between;
-        margin-block-start: 4rem;
+    footer.site {
+        color: var(--faint-text);
+        font-size: var(--step--1);
+        grid-area: footer;
     }
 
     h1 {
@@ -93,11 +117,6 @@ foot: >-
         font-size: var(--step--1);
         letter-spacing: 0.1ch;
         text-transform: uppercase;
-    }
-
-    footer {
-        color: var(--faint-text);
-        font-size: var(--step--1);
     }
 </style>
 <script type="module" src="/js/keyboard-shortcuts.js"></script>
