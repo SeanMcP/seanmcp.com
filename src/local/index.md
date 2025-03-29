@@ -1,5 +1,8 @@
 ---
 title: Local
+description:
+  News and guides centered on Wilkinsburg, Pittsburgh, Allegheny County, and
+  Pennsylvania.
 leaf: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page.liquid
 title: Sean McPherson
-prose: true
+prose: false
 head: >-
   <style> h1 {
     text-align: center;
