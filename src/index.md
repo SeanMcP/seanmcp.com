@@ -6,8 +6,7 @@ head: >-
   <style> h1 {
     text-align: center;
   } nav {
-    border-block: var(--stroke-width) solid var(--accent-color);
-    background-image: var(--pattern-diagonal-background-image);
+    background-color: var(--off-bg);
     display: flex;
     font-family: var(--sans);
     gap: 1rem;
@@ -15,7 +14,7 @@ head: >-
     padding: 0.5rem;
   } nav > p {
     display: contents;
-  } </style>
+  }</style>
 ---
 
 <nav>
@@ -30,7 +29,7 @@ head: >-
 
 I work as a software engineer at [Khan Academy](https://khanacademy.org)
 building AI-powered activities for students and teachers like
-[Khanmigo Writing Coach](https://www.khanmigo.ai/writingcoach).
+[Writing Coach](https://www.khanmigo.ai/writingcoach).
 
 I have previously worked as a software engineer for Niche.com in Pittsburgh and
 [TSYS](https://www.tsys.com/) in Atlanta. And before that I was a teacher at

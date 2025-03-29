@@ -3,7 +3,7 @@ layout: base.liquid
 foot: >-
 ---
 <header>
-    <a href="/">seanmcp.com</a>
+    <a aria-label="seanmcp.com" href="/">sm</a>
 </header>
 <main>
     <layout-content style="padding-block: 3rem;">
@@ -48,8 +48,28 @@ foot: >-
     }
 
     header, footer {
-        background-image: var(--pattern-diagonal-background-image);
         padding: 1rem;
+    }
+
+    header a {
+        align-items: center;
+        background-color: var(--accent-color);
+        color: var(--bg);
+        display: inline-flex;
+        font-weight: bold;
+        font-size: var(--step-1);
+        font-style: italic;
+        justify-content: center;
+        padding: 0.15em 0.3em;
+        text-decoration: none;
+
+        &:is(:focus, :hover) {
+            background-color: var(--text);
+        }
+    }
+
+    footer {
+        background-color: var(--off-bg);
         text-align: center;
     }
 
@@ -63,7 +83,7 @@ foot: >-
 
     #content {
         font-family: var(--serif);
-        line-height: 1.2;
+        line-height: 1.4;
     }
 
     #content img {
