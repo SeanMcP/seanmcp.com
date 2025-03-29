@@ -6,6 +6,7 @@ tags:
 flags:
 verse: Psalm 42:1
 prose: true
+image: https://res.cloudinary.com/seanmcp/image/upload/v1743270699/three-deer-crossing-road.jpg
 ---
 
 <img src="https://res.cloudinary.com/seanmcp/image/upload/c_scale,w_900/v1743270699/three-deer-crossing-road.jpg" alt="three deer crossing the road" />
