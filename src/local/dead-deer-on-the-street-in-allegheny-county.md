@@ -24,7 +24,8 @@ that the street was a state road. They then redirected my call to
 for maintenance.
 
 The operator at PennDOT took the address and said that they would try to get it
-cleaned up that same day.
+cleaned up that same day. When people arrived on church the next morning, the
+deer was gone.
 
 It is important that you do not attempt to remove the deer without proper
 equipment and training. Dead animal bodies can carry diseases that will make you
