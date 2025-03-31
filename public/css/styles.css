@@ -83,10 +83,10 @@ li + li {
 
 .prose > p:first-of-type:first-letter {
   /* Takes up three lines of text */
-  font-size: 4.45em;
+  font-size: 4.5em;
   font-weight: bold;
   float: inline-start;
-  margin-block-start: -0.2em;
+  margin-block-start: -0.22em;
   margin-block-end: -0.3em;
   margin-inline-end: 0.1em;
 }
