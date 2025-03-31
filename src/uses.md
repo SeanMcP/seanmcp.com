@@ -37,7 +37,6 @@ Here is an evergreen list of the tools that I use to get work done.
 - React Developer Tools
 - Redux DevTools
 - [Raindrop](https://raindrop.io/) bookmark manager
-- Tampermonkey userscript agent
 - Wave Evaluation Tool
 
 #### User scripts
@@ -63,7 +62,6 @@ In addition to language-specific extensions, I use the following:
 - GitHub Pull Requests and Issues
 - GitHub Theme
 - Live Server
-- Notes
 
 #### VS Code themes
 
