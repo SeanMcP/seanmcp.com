@@ -81,6 +81,15 @@ li + li {
   margin-block-start: 0.5em;
 }
 
+li ul {
+  list-style: disc;
+  margin-block-start: 0.25em;
+}
+
+li ul li ul {
+  list-style: circle;
+}
+
 .prose > p:first-of-type:first-letter {
   /* Takes up three lines of text */
   font-size: 4.5em;
