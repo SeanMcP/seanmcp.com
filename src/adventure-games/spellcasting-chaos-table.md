@@ -64,4 +64,4 @@ the possibility of unintended consequences even in ideal conditions. With the
 Chaos Table, magic is not neat and tidy but wild and dangerous.
 
 To mimic the "deprived or in danger" situation, you could add a -1 penalty to
-the roll or swap one of the d6s for a d4.
+the roll or swap one of the d6s for d4s.
