@@ -1,6 +1,8 @@
 ---
 title: Rethinking wolves
-description: Subverting the trope of villainous wolves from folklore
+description:
+  Subverting the trope of villainous wolves from folklore for your adventure
+  games
 date: 2025-04-23T06:45-0400
 verse: Isaiah 11:6
 ---
@@ -43,14 +45,18 @@ a positive—role in fantasy worlds.
   - Generally avoid humans
   - Symbiotic relationship with human settlements
     - Wolves protect the settlements from threats
+    - Referred to as "Guardians"
+    - The superstitious believe that wolves bring good luck to a village
+    - Small settlements try to attract wolves to their area
     - Settlement provides wolves with food when necessary
-  - Farmers are happy to loose a few sheep to wolves rather than pillaging
-    goblins
+    - Wolves summon the local ruler to a monthly meeting by howling
+- Vampires can turn into jet-black pumas
+  - They rarely choose wolves as their animal due to their good reputation
 
 | d6  | Wolf encounter                                                              |
 | :-: | --------------------------------------------------------------------------- |
 |  1  | A starved lone wolf watches you from behind a tree                          |
-|  2  | A group of adventurers killed 1d4 wolves                                    |
+|  2  | A group of rival adventurers killed 1d4 wolves                              |
 |  3  | A roaming band of goblins/bandits killed 1d4 wolves                         |
 |  4  | The pack found a clue, spoor, or indication of something interesting nearby |
 |  5  | The pack is mourning the death of a patriarch/matriarch                     |
