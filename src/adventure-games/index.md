@@ -1,7 +1,8 @@
 ---
 title: "Adventure games"
 description: Resources for table-top adventure games
-date: 2024-05-23T11:33-0400
+tagline: Resources for table-top adventure games
+# date: 2024-05-23T11:33-0400
 leaf: false
 ---
 
