@@ -270,9 +270,11 @@ call-out div > *:last-child {
 
 table {
   border-collapse: collapse;
+  margin-block: var(--step-1);
   width: 100%;
 
-  td, th {
+  td,
+  th {
     padding: 0.25em;
   }
 
