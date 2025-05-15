@@ -12,8 +12,8 @@ left a broken arm untreated, and the shelter staff made the difficult decision
 to amputate it.
 
 Christened "Abby Normal" (a reference to Mel Brooke's _Young Frankenstein_), we
-took her home, and she has been a lovely part of our family ever since.
+took her home, and she was a lovely part of our family for eight years. She died
+in 2025 with lymphoma.
 
-The official adoption paperwork said that she was a "Boxer Mix," but her genetic
-makeup remains a mystery. She likes running around in the backyard, chasing
-groundhogs, and eating carrots.
+She loved running around in the backyard, chasing groundhogs, and eating
+carrots.
