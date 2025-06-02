@@ -50,7 +50,8 @@ a positive—role in fantasy worlds.
     - Small settlements try to attract wolves to their area
     - Settlement provides wolves with food when necessary
     - Wolves summon the local ruler to a monthly meeting by howling
-  - They an smell fear and are occasionally aggressive towards humans who lie
+  - They can smell a lie and are distrustful of and occasionally aggressive
+    towards liars
 - Vampires can turn into jet-black pumas
   - They rarely choose wolves as their animal due to their good reputation
 
