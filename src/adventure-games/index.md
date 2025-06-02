@@ -10,31 +10,13 @@ Resources for table-top adventure games like Dungeons & Dragons.
 
 ## Games/systems
 
-- [Cairn](https://cairnrpg.com/): Have played and would recommend
-- Mausritter
-- [Into the Odd](https://freeleaguepublishing.com/games/into-the-odd/)
-- [Electric Bastionland](https://bastionlandpress.com/products/electric-bastionland-hardback-book)
-- [Mythic Bastionland](https://www.kickstarter.com/projects/bastionland/mythic-bastionland-rpg-before-into-the-odd/)
-- [Knave](https://questingblog.com/knave-2e/)
+- [Cairn](https://cairnrpg.com/): A minimal ruleset for playing any table-top
+  adventure game
+- [Shadowdark](https://www.thearcanelibrary.com/pages/shadowdark): Very similar
+  to D&D but with fewer rules and more danger
 
-## Tables
-
-### Hazards
-
-Lightly edited from Necropraxis Productions Hazard System v0.3 (2017)
-http://www.necropraxis.com/hazard-system/
-
-| d6  | Hazard                                          |
-| --- | ----------------------------------------------- |
-| 1   | **Setback**: Someone/thing impedes the players  |
-| 2   | **Fatigue**: Players grow tired or suffer harm  |
-| 3   | **Expiration**: Loss of a finite resource       |
-| 4   | **Locality**: Environment changes in some way   |
-| 5   | **Insight**: Gain information into the scenario |
-| 6   | **Advantage**: Someone/thing helps the players  |
-
-Questing Beast _Track everything in DnD with one die_ (2023)
-https://www.youtube.com/watch?v=WhCulg30Zko
+Someday I would like to try: Mausritter, Into the Odd, Electric Bastionland,
+Mythic Bastionland, and Knave.
 
 ## Pages
 
