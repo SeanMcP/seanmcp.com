@@ -9,7 +9,10 @@ head: >-
   <style>content hr { margin-block: 3em; }</style>
 ---
 
-**June 10, 2025** — Apple's new "design language" is [a visual mess](https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/). Makes you wonder how a decision like that can make it through all those layers of hierarchy to a public release.
+**June 10, 2025** — Apple's new "design language" is
+[a visual mess](https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/).
+Makes you wonder how a decision like that can make it through all those layers
+of hierarchy to a public release.
 
 ---
 
@@ -313,13 +316,8 @@ conference talk. ⌛️
 
 **March 25, 2022** — _LEGO Bricktales_ looks so good! It's like an open-ended
 [_LEGO Island_](https://en.wikipedia.org/wiki/Lego_Island), a favorite from my
-childhood. Hopefully the real game turns out like the trailer 🧱
-
-<em-bed>
-
-https://www.youtube.com/watch?v=YJQjQ-nfJRY
-
-</em-bed>
+childhood.
+[Hopefully the real game turns out like the trailer](https://www.youtube.com/watch?v=YJQjQ-nfJRY).
 
 ---
 

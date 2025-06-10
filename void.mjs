@@ -37,6 +37,7 @@ process.stdin.once("data", (data) => {
   if (data.toString().trim() === "y") {
     fs.writeFileSync(path.join(__dirname, "src/void.md"), nextContent);
 
+    execSync("git pull");
     execSync("git add src/void.md");
     execSync("git commit -m 'New void entry'");
     execSync("git push");
