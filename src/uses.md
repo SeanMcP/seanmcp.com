@@ -71,13 +71,13 @@ In addition to language-specific extensions, I use the following:
 
 - [Flow](https://flowapp.info/) timer
 - [GIMP](https://www.gimp.org/)
-- [Hidden Bar](https://github.com/dwarvesf/hidden) macOS menu bar manager
+- [Hidden Bar](https://github.com/dwarvesf/hidden): (Mac) Menu bar manager
 - [Inkscape](https://inkscape.org/)
 - [KeyCastr](https://github.com/keycastr/keycastr)
+- [Maccy](https://maccy.app/): (Mac) Simple clipboard manager
 - [MeetingBar](https://meetingbar.app/): (Mac) Upcoming calendar events in
   status bar
-- [Numi](https://numi.app/)
-- [Pika](https://superhighfives.com/pika) color picker
-- [Rectangle](https://rectangleapp.com/) macOS window arranger
+- [Pika](https://superhighfives.com/pika): (Mac) color picker
+- [Rectangle](https://rectangleapp.com/): (Mac) window arranger
 - [RunJS](https://runjs.app/)
 - [Warp](https://www.warp.dev/) terminal
