@@ -9,6 +9,10 @@ head: >-
   <style>content hr { margin-block: 3em; }</style>
 ---
 
+**June 27, 2025** — Factor is just rebranded microwave dinners.
+
+---
+
 **June 10, 2025** — Apple's new "design language" is
 [a visual mess](https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/).
 Makes you wonder how a decision like that can make it through all those layers
