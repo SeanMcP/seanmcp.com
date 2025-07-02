@@ -6,6 +6,7 @@ foot: >-
     <a aria-label="seanmcp.com" href="/">sm</a>
 </header>
 <main>
+{{ category }}
     <layout-content style="padding-block: 3rem;">
         <h1>{{ title }}</h1>
         {%- if date -%}
@@ -29,6 +30,9 @@ foot: >-
         <div>
             <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}" id="comment-link">Reply by email</a>
             <bible-verse>{{verse | default: "Romans 5:8" }}</bible-verse>
+            {% assign url_chunks = page.url | split: "/" %}
+            {% assign category = url_chunks[1] %}
+            <span>More <a href="/{{category}}" data-url="{{page.url}}">{{category | readable_slug}}</a></span>
         </div>
         {%- endif %}
     </layout-content>
@@ -53,6 +57,7 @@ foot: >-
 
     header a {
         align-items: center;
+        background-image: url(/img/bg-pattern.svg);
         background-color: var(--accent-color);
         color: var(--bg);
         display: inline-flex;
@@ -70,7 +75,9 @@ foot: >-
     }
 
     footer {
-        background-color: var(--off-bg);
+        --bg-pattern-color: red;
+        xbackground-color: var(--off-bg);
+        background-image: url(/img/bg-pattern.svg);
         text-align: center;
     }
 
@@ -94,9 +101,13 @@ foot: >-
     }
 
     #content>div:last-child {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
         margin-block-start: 4rem;
+    }
+    #content>div bible-verse {
+        justify-self: end;
     }
 
     h1 {

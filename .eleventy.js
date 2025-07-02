@@ -73,6 +73,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("readable_date", (datetime) =>
     new Date(datetime).toLocaleDateString("en-US", localeDateStringConfig)
   );
+  eleventyConfig.addFilter("readable_slug", slug => {
+    return slug.split("-").map(word => word[0].toUpperCase() + word.slice(1)).join(" ");
+  })
   eleventyConfig.addFilter("exclude_flag_in_prod", function (pages, ...flags) {
     if (this.eleventy.env.runMode === "build") {
       return pages.filter((page) => {
