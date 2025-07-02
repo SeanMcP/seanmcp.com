@@ -4,7 +4,8 @@ description:
   You're not going to write the perfect program on your first attempt; it's
   going to take multiple iterations to arrive at the best solution
 tags:
-- Programming
+  - Articles
+  - Programming
 date: 2023-08-01T06:57-0400
 verse: Romans 5:3-4
 ---

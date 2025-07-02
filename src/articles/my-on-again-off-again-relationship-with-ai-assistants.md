@@ -3,6 +3,7 @@ title: My on-again-off-again relationship with AI assistants
 description:
 date: 2025-03-31T06:18-0400
 tags:
+  - Articles
   - AI
   - GitHub Copilot
   - Productivity

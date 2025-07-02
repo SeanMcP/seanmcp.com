@@ -4,8 +4,9 @@ description:
   Using a single file seems to reduce response times, but there is more to the
   story
 tags:
-- AI
-- GPTs
+  - Articles
+  - AI
+  - GPTs
 date: 2023-11-15T10:46-0400
 verse:
 ---

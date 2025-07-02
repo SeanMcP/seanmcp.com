@@ -1,8 +1,11 @@
 ---
 title: "A Few Things #6"
-description: Reflections on digital waste, a great green wall, beautiful illuminations, and a fun trivia game
+description:
+  Reflections on digital waste, a great green wall, beautiful illuminations, and
+  a fun trivia game
 tags:
-- A Few Things
+  - Articles
+  - A Few Things
 date: 2024-02-24T16:40-0400
 verse: Genesis 1:12
 ---
@@ -28,12 +31,12 @@ Here are a few things that I found interesting this week:
    [thegreatgreenwall.org](https://www.thegreatgreenwall.org/).
 
 3. **[_The Book of Kells_ Collection](https://digitalcollections.tcd.ie/concern/works/hm50tr726?locale=en)
-   at Trinity College Dublin**<br/>After last week's article about
-   text illuminations, I wanted to track down the most famous illuminated text:
-   The Book of Kells. The detail of the illustrations is stunning, and the
-   colors are beautiful. Take a few minutes and explore the pages of this
-   1200-year-old book.
+   at Trinity College Dublin**<br/>After last week's article about text
+   illuminations, I wanted to track down the most famous illuminated text: The
+   Book of Kells. The detail of the illustrations is stunning, and the colors
+   are beautiful. Take a few minutes and explore the pages of this 1200-year-old
+   book.
 
-4. **[Trivia Pig](https://triviapig.com/)**<br/>A fun Wordle-style game with daily
-   trivia questions in 8 different categories. I don't see it being a runaway
-   success, but it's good for a quick diversion.
+4. **[Trivia Pig](https://triviapig.com/)**<br/>A fun Wordle-style game with
+   daily trivia questions in 8 different categories. I don't see it being a
+   runaway success, but it's good for a quick diversion.

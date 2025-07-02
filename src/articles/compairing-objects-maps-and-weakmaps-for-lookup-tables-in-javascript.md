@@ -2,9 +2,10 @@
 title: Compairing Objects, Maps, and WeakMaps for lookup tables in JavaScript
 description:
   You could use an Object, but Maps are probably best for lookup tables and
-  WeakMaps are useful for memory performance    
+  WeakMaps are useful for memory performance
 tags:
-- JavaScript
+  - Articles
+  - JavaScript
 date: 2023-05-22T07:24-0400
 verse: Matthew 8:11
 ---

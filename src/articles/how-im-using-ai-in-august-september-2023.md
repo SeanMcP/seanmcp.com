@@ -4,7 +4,8 @@ description:
   GitHub Copilot and Warp are the only two AI-powered products that I used in
   August and September, with Copilot being by far the most valuable
 tags:
-- AI
+  - Articles
+  - AI
 date: 2023-10-03T17:22-0400
 verse:
 series: How I Use AI

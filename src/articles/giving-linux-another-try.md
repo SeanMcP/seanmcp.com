@@ -4,8 +4,9 @@ description:
   It's been about 10 years since I last tried using Linux, so I think it's time
   to explore what it has to offer in 2022.
 tags:
-- Linux
-- Computing
+  - Articles
+  - Linux
+  - Computing
 series: Trying Linux 2022
 date: 2022-11-01T20:35-0400
 ---

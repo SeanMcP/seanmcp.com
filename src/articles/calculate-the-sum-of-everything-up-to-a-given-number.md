@@ -5,8 +5,9 @@ date: 2022-04-23T12:00-0400
 foot: >-
   <script src="/js/cumulative-sum.js" type="module"></script>
 tags:
-- Math
-- Tools
+  - Articles
+  - Math
+  - Tools
 ---
 
 My wife showed me a Tik Tok series where someone was decluttering their life by

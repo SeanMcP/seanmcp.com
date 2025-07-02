@@ -3,6 +3,8 @@ title: Programming reads
 description: A list of articles, books, and resources for software engineers
 date: 2020-03-20T12:00-0400
 verse: Nehemiah 8:8
+tags:
+  - Articles
 ---
 
 This is an alphabetical list that has helped shape the way that I think about

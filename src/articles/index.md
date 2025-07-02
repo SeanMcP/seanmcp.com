@@ -10,5 +10,5 @@ To search for an article, use your browsers find feature or
 
 ---
 
-{%- assign pages = collections.articles | exclude_index | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse %}
+{%- assign pages = collections.Articles | exclude_index | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse %}
 {% include "page-list" %}

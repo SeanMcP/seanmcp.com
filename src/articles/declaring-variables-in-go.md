@@ -3,7 +3,8 @@ title: Declaring variables in Go
 description:
   You can declare variables with var, :=, and const depending on your use case
 tags:
-- Go
+  - Articles
+  - Go
 date: 2023-05-12T12:00-0400
 verse: Romans 3:28
 ---

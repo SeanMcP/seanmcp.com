@@ -5,6 +5,7 @@ description:
   Content has moved around and the result might confuse your RSS reader.
 date: 2025-01-14T06:40-0400
 tags:
+  - Articles
 flags:
   - RSS-ONLY
 verse:

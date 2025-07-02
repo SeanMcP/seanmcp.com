@@ -4,7 +4,8 @@ description:
   The Japanese art of repair, a movie/TV recommendation service, a relaxing
   gardening game, and answering the question "Can elephants swim?"
 tags:
-- A Few Things
+  - Articles
+  - A Few Things
 date: 2024-02-02T16:02-0400
 verse: Revelation 21:5
 ---

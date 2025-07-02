@@ -4,9 +4,10 @@ description:
   I switched for performance reasons on an older device, and so far Linux Mint
   seems to be an improvement
 tags:
-- Linux
-- Linux Mint
-- Ubuntu
+  - Articles
+  - Linux
+  - Linux Mint
+  - Ubuntu
 date: 2024-03-06T13:24-0400
 verse: Matthew 23:23
 ---

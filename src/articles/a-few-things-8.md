@@ -3,7 +3,8 @@ title: "A Few Things #8"
 description:
   Tree mails, disappearing cockroaches, and an entry in the game dev log genre
 tags:
-- A Few Things
+  - Articles
+  - A Few Things
 date: 2024-03-09T06:40-0400
 verse: Psalm 1:3
 ---

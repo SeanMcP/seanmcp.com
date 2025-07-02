@@ -2,11 +2,12 @@
 title: What's in a timestamp?
 description: 1-2 SENTENCES WITHOUT A FINAL PERIOD
 tags:
-- WIP
+  - Articles
+  - WIP
 date: 2023-08-05T15:36-0400
 verse:
 flags:
-- DRAFT
+  - DRAFT
 ---
 
 There are different formats for a timestamp but a common one is ISO 8601. It
@@ -53,5 +54,3 @@ or five hours behind UTC depending on the time of year. We write that as:
 
 - `-0400`
 - `-0500`
-
-

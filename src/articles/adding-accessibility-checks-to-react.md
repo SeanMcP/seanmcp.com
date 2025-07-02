@@ -4,8 +4,9 @@ description: A few tools to help you build more accessible React applications
 date: 2019-03-04T12:00-0400
 update: 2019-03-09
 tags:
-- React
-- A11y
+  - Articles
+  - React
+  - A11y
 ---
 
 **Updated - 3/9/19** This article was initially released with a reference to a

@@ -4,7 +4,8 @@ description:
   Reflections on creation, the NFL's success, a map of lightning strikes, and
   Chester A. Arthur holding ham.
 tags:
-- A Few Things
+  - Articles
+  - A Few Things
 date: 2024-01-26T22:30-0400
 verse: Job 37:15
 ---

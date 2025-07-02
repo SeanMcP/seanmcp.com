@@ -4,7 +4,8 @@ description:
   A personal apologetic, assessing the world, Scotland's rainforests, and
   finding new music
 tags:
-- A Few Things
+  - Articles
+  - A Few Things
 date: 2024-03-30T20:59-0400
 verse: Luke 23:53-54
 ---

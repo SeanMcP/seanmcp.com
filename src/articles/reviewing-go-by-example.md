@@ -5,7 +5,8 @@ description:
   but you might need to supplement it with other resources to learn how to work
   in the language
 tags:
-- Go
+  - Articles
+  - Go
 date: 2023-07-04T06:51-0400
 verse: Hebrews 12:1-2
 ---
@@ -38,6 +39,6 @@ more holistic introduction to Go, you might need to supplement Go By Example
 with something else.
 
 So I’m looking for an additional resource to fill in some of those knowledge
-gaps. If you have any recommendations, [please let me
-know](mailto:sean@seanmcp.com?subject=Go%20Resources). Otherwise, I’ll write again
-when I have found something that works well.
+gaps. If you have any recommendations,
+[please let me know](mailto:sean@seanmcp.com?subject=Go%20Resources). Otherwise,
+I’ll write again when I have found something that works well.

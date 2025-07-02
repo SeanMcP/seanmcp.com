@@ -4,9 +4,10 @@ description:
   You can run Ollama on an older device, but the response will be slow and/or
   low quality.
 tags:
-- AI
-- LLMs
-- Ollama
+  - Articles
+  - AI
+  - LLMs
+  - Ollama
 date: 2024-02-24T06:48-0400
 verse: Proverbs 20:29
 ---

@@ -4,7 +4,8 @@ description:
   The columns property is CSS divides content among a set number or width of
   columns
 tags:
-- CSS
+  - Articles
+  - CSS
 date: 2023-08-01T07:18-0400
 verse:
 head: >-

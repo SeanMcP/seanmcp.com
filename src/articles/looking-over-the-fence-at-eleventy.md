@@ -4,6 +4,7 @@ description:
   Eleventy is looking better and better as an alternative to Astro for simple or
   long-lived websites
 tags:
+  - Articles
   - Astro
   - Eleventy
 date: 2024-05-27T14:43-0400

@@ -4,7 +4,8 @@ description:
   Using the Navigator's onLine property and online/offline events to create a
   custom React hook
 tags:
-- React
+  - Articles
+  - React
 date: 2024-03-19T15:35-0400
 verse:
 ---

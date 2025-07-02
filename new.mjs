@@ -35,6 +35,7 @@ title: %TITLE%
 description:
 date: ${getTimestamp()}
 tags:
+  - Articles
 flags:
 verse:
 prose: true

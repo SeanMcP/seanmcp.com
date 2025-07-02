@@ -4,7 +4,8 @@ description:
   Props are merged, but attributes are not. This is an important rule to know
   when authoring Astro components.
 tags:
-- Astro
+  - Articles
+  - Astro
 date: 2022-11-29T10:36-0400
 ---
 

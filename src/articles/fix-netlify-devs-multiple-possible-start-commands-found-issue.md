@@ -4,8 +4,9 @@ description:
   You need to include additional properties in your netlify.toml to get it
   working correctly.
 tags:
-- Debugging
-- Netlify
+  - Articles
+  - Debugging
+  - Netlify
 date: 2022-11-29T06:40-0400
 ---
 

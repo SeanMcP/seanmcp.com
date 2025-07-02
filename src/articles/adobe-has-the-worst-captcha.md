@@ -4,7 +4,8 @@ description:
   To create an Adobe account, you are required to count the value of a pile of
   dice 120 times
 tags:
-- User Experience
+  - Articles
+  - User Experience
 date: 2024-02-01T12:45-0400
 verse: Psalm 147:4
 ---

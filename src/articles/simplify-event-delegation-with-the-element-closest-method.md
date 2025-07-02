@@ -4,7 +4,8 @@ description:
   Event delegation is a useful pattern for managing descendant interactions and
   Element.closest helps with simple and robust code
 tags:
-- JavaScript
+  - Articles
+  - JavaScript
 date: 2024-06-11T21:31-0400
 verse: Exodus 18:17-18
 ---

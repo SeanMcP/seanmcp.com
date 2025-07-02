@@ -2,7 +2,8 @@
 title: Remove duplicates from an array in JavaScript
 description: Using sets to de-dupe arrays of primitive and object-like values
 tags:
-- JavaScript
+  - Articles
+  - JavaScript
 date: 2023-08-25T06:38-0400
 verse: Psalm 103:12
 image: https://res.cloudinary.com/seanmcp/image/upload/v1692892991/remove-duplicates-in-array_ptvagw.png
@@ -166,4 +167,5 @@ console.log(
 // [{ id: "a" }, { id: "b" }, { id: "c" }]
 ```
 
-You can see all of the examples above in this REPL: https://replit.com/@SeanMcP/removing-duplicates-in-arrays#index.ts
+You can see all of the examples above in this REPL:
+https://replit.com/@SeanMcP/removing-duplicates-in-arrays#index.ts

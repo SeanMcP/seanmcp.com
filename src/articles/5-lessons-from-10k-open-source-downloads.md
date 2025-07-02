@@ -5,8 +5,9 @@ description:
   package.
 date: 2019-11-25T12:00-0400
 tags:
-- Open Source
-- Package
+  - Articles
+  - Open Source
+  - Package
 verse: Gen 1:27
 ---
 

@@ -5,9 +5,10 @@ description:
   concise. I'm interested in learning whether I can provide more value through
   direct and informative writing.
 tags:
-- Meta
-- Smart Brevity
-- Writing
+  - Articles
+  - Meta
+  - Smart Brevity
+  - Writing
 date: 2023-02-27T10:23-0400
 ---
 
@@ -33,15 +34,15 @@ Here some some key points (loosely quoted):
 - More often than not, people who share stories haven’t read them
 - Tips for writing better:
 - **Stop being selfish**: Writing is self-indulgent. We don’t think about the
-    purpose. What does the reader need to know?
-- **Grab me**: What is the most important thing? What is the reason that
-    you’re writing? What is the one thing that I need to remember?
+  purpose. What does the reader need to know?
+- **Grab me**: What is the most important thing? What is the reason that you’re
+  writing? What is the one thing that I need to remember?
 - **Keep it simple**: Shorter. Simple, strong words.
 - **Be human**: Write like a human. We’re think we’re Walt Whitman; we try to
-    show off with our writing. If you’re talking to someone at a bar, you’re not
-    going to use SAT words or use acronyms.
+  show off with our writing. If you’re talking to someone at a bar, you’re not
+  going to use SAT words or use acronyms.
 - **Just stop**: The best thing you can do in this cluttered world is give
-    people their time back. Use as few words, in as few sentences, as humanly
-    possible.
+  people their time back. Use as few words, in as few sentences, as humanly
+  possible.
 - In your own mind you’ll find yourself start to think more clearly and speak
   more clearly.

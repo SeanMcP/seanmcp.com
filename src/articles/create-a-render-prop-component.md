@@ -5,8 +5,9 @@ description:
   Here is a brief explanation and guide to creating your own.
 date: 2018-10-09T12:00-0400
 tags:
-- React
-- Patterns
+  - Articles
+  - React
+  - Patterns
 verse: Psalm 116:12
 ---
 
@@ -21,6 +22,7 @@ can be a little daunting.
 documentation:
 
 {% raw %}
+
 ```js
 import { Spring } from 'react-spring'
 
@@ -28,6 +30,7 @@ import { Spring } from 'react-spring'
   {styles => <div style={styles}>i will fade in</div>} // <-- Here
 </Spring>
 ```
+
 {% endraw %}
 
 If that makes perfect sense to you, awesome 🎉! Skip this article and get back
@@ -337,6 +340,7 @@ Now that we've reviewed, let's take a look back at that original example from
 `react-spring`:
 
 {% raw %}
+
 ```js
 import { Spring } from 'react-spring'
 
@@ -344,6 +348,7 @@ import { Spring } from 'react-spring'
   {styles => <div style={styles}>i will fade in</div>} // <-- Here
 </Spring>
 ```
+
 {% endraw %}
 
 We can see that this `Spring` component is passed a `this.props.children`

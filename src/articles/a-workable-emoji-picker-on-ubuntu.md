@@ -4,8 +4,9 @@ description:
   The default GNOME emoji picker is limited to certain applications, but you can
   find copyable emojis in the Activities view
 tags:
-- Linux
-- Ubuntu
+  - Articles
+  - Linux
+  - Ubuntu
 date: 2023-07-05T07:25-0400
 verse: Luke 5:24
 ---
@@ -30,8 +31,10 @@ Here are the steps that work for me:
 1. Press the super key (formerly Windows)
 2. Type the name of the emoji: _e.g._ turtle
 3. Select the emoji result from the Characters application to copy to clipboard
- - In addition to your mouse, you can use <kbd>tab</kbd> and the up/down arrow
-     keys to navigate the options 🙌
+
+- In addition to your mouse, you can use <kbd>tab</kbd> and the up/down arrow
+  keys to navigate the options 🙌
+
 4. Paste the emoji in your application
 
 This process is not perfect: there are some emojis that are hard to find by

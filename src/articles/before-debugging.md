@@ -3,6 +3,8 @@ title: Before Debugging
 description: An organized approach to debugging your code
 date: 2020-07-10T12:00-0400
 verse: Proverbs 30:25
+tags:
+  - Articles
 ---
 
 Debugging, "the process of finding and resolving defects within a computer

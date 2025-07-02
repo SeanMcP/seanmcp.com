@@ -5,9 +5,10 @@ description:
   speed with a quick console script
 date: 2020-12-15T12:00-0400
 tags:
-- Console Scripting
-- Dev Tools
-- JavaScript
+  - Articles
+  - Console Scripting
+  - Dev Tools
+  - JavaScript
 verse: Deuteronomy 6:4
 ---
 
@@ -44,8 +45,7 @@ listen at the speed that is best for them[^2].
 Happy listening/watching!
 
 [^1]:
-    [`$$` is a shorthand for
-    `document.querySelectorAll()`](https://developers.google.com/web/tools/chrome-devtools/console/utilities#queryselectorall)
+    [`$$` is a shorthand for `document.querySelectorAll()`](https://developers.google.com/web/tools/chrome-devtools/console/utilities#queryselectorall)
     and works in all modern browsers
 
 [^2]:

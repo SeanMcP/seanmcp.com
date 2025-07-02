@@ -3,9 +3,10 @@ title: "Making a video game with my kids"
 description:
   My experiences after one week of building a game with my kids using Kaboom.js
 tags:
-- Kaboom.js
-- Parenting
-- Video Games
+  - Articles
+  - Kaboom.js
+  - Parenting
+  - Video Games
 date: 2024-02-16T10:05-0400
 verse: Psalm 144:12
 ---

@@ -3,7 +3,8 @@ title: Migrating to IndieWeb.social
 description:
   A little write-up about my migration from Fosstodon to IndieWeb.social
 tags:
-- Mastodon
+  - Articles
+  - Mastodon
 date: 2023-02-16T10:38-0400
 ---
 

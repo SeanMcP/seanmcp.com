@@ -4,6 +4,8 @@ description: The best prompts for playing adventure games alone with AI
 updatedDate: 2024-05-30T06:58-0400
 date: 2024-05-29T19:09-0400
 verse: Psalm 62:5
+tags:
+  - Articles
 ---
 
 Adventure Games like Dungeons & Dragons and Cairn are best played in-person with

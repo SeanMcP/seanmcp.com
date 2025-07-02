@@ -3,8 +3,9 @@ title: "Why Microsoft Edge?"
 description:
   Edge has all of the features of Chrome with some additional features
 tags:
-- Browsers
-- Microsoft Edge
+  - Articles
+  - Browsers
+  - Microsoft Edge
 date: 2024-03-06T13:59-0400
 verse: Luke 5:2
 ---

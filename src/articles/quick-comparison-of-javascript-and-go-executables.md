@@ -5,10 +5,11 @@ description:
   and Deno offer a competitive option for developers familiar with the
   JavaScript ecosystem
 tags:
-- Bun
-- Deno
-- Go
-- JavaScript
+  - Articles
+  - Bun
+  - Deno
+  - Go
+  - JavaScript
 date: 2023-06-05T07:34-0400
 verse: Psalm 40:5
 ---

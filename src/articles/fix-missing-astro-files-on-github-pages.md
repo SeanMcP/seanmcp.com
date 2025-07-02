@@ -4,11 +4,12 @@ description:
   Astro generated CSS files start with an underscore which causes them to be
   ignored by GitHub Pages
 tags:
-- Astro
-- Fix
-- GitHub
-- GitHub Actions
-- GitHub Pages
+  - Articles
+  - Astro
+  - Fix
+  - GitHub
+  - GitHub Actions
+  - GitHub Pages
 date: 2024-03-19T21:12-0400
 verse: Isaiah 40:26
 ---

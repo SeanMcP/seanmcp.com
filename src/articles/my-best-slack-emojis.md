@@ -1,11 +1,13 @@
 ---
 title: My best Slack emojis
-description: A curated list of the best reaction emojis that I have created for Slack
+description:
+  A curated list of the best reaction emojis that I have created for Slack
 date: 2022-01-04T12:00-0400
 tags:
-- Emojis
-- Garden
-- Slack
+  - Articles
+  - Emojis
+  - Garden
+  - Slack
 head: >-
   <style>
       table img {
@@ -14,7 +16,9 @@ head: >-
   </style>
 ---
 
-I like reaction emojis and have spent an embarrassing amount of time [making new ones for myself and my coworkers](./tools-for-custom-slack-emojis). These are some of my creations that were popular or just my favorites:
+I like reaction emojis and have spent an embarrassing amount of time
+[making new ones for myself and my coworkers](./tools-for-custom-slack-emojis).
+These are some of my creations that were popular or just my favorites:
 
 | Image                                                            | Name                             |
 | ---------------------------------------------------------------- | -------------------------------- |

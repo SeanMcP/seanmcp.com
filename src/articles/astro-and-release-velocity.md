@@ -3,8 +3,9 @@ title: "Astro and release velocity"
 description:
   Astro is a great framework, but it's frequent updates are overwhelming
 tags:
-- Astro
-- Software Engineering
+  - Articles
+  - Astro
+  - Software Engineering
 date: 2024-05-17T21:12-0400
 verse:
 ---

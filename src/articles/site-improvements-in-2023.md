@@ -4,9 +4,10 @@ description:
   An unordered list of things that I would like to change about this site in
   2023.
 tags:
-- Astro
-- Mastodon
-- Meta
+  - Articles
+  - Astro
+  - Mastodon
+  - Meta
 date: 2023-02-06T20:06-0400
 ---
 

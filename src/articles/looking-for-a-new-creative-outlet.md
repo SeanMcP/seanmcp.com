@@ -4,10 +4,11 @@ description:
   Programming has been my hobby since 2017, but I'm looking for a complementary
   hobby to encourage creativity instead of consumption
 tags:
-- Creativity
+  - Articles
+  - Creativity
 date: 2023-06-05T11:01-0400
 flags:
-- RSS-ONLY
+  - RSS-ONLY
 verse: Isaiah 40:28
 ---
 

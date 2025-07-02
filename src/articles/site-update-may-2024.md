@@ -4,7 +4,8 @@ description:
   tl;dr I removed dark mode, `/contact`, likes, analytics, Netlify, and changed
   random articles
 tags:
-- Meta
+  - Articles
+  - Meta
 date: 2024-05-04T14:29-0400
 verse: Hosea 6:3
 ---

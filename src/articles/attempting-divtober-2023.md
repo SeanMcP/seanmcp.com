@@ -3,9 +3,10 @@ title: "Attempting #divtober 2023"
 description:
   "#divtober seems like a fun alternative to Hacktoberfest for October"
 tags:
-- CSS
-- divtober
-- HTML
+  - Articles
+  - CSS
+  - divtober
+  - HTML
 date: 2023-10-10T09:17-0400
 verse: Mark 6:41
 ---

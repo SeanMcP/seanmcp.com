@@ -1,8 +1,10 @@
 ---
 title: Find and replace with Regex groups
-description: Create Regex groups with parentheses for powerful find/replace patterns
+description:
+  Create Regex groups with parentheses for powerful find/replace patterns
 tags:
-- Regex
+  - Articles
+  - Regex
 date: 2023-03-14T06:50-0400
 ---
 
@@ -20,13 +22,15 @@ environment.
 1. Open the search panel in VS Code
 2. Turn on Regex searches with the `.*` toggle
 3. Search with the following Regex pattern: `([\w-]+)/(.+)#(\d+)`
- - This looks for any text that matches the pattern of:
-   - `([\w-]+)` a word containing one more alphanumeric or hyphen characters,
-   - `/` a forward slash,
-   - `(.+)` one or more of any character,
-   - `#` a pound sign, and
-   - `(\d+)` one or more digits
- - It creates three groups (identified by the parentheses)
+
+- This looks for any text that matches the pattern of:
+  - `([\w-]+)` a word containing one more alphanumeric or hyphen characters,
+  - `/` a forward slash,
+  - `(.+)` one or more of any character,
+  - `#` a pound sign, and
+  - `(\d+)` one or more digits
+- It creates three groups (identified by the parentheses)
+
 4. Replace the matched text with the following pattern:
    `https://github.com/$1/$2/issues/$3`
 

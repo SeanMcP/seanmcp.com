@@ -3,7 +3,8 @@ title: Create a URL shortener with Netlify
 description: Build your very own shortener in six quick steps
 date: 2021-02-26T12:00-0400
 tags:
-- Netlify
+  - Articles
+  - Netlify
 verse: Luke 19:1-10
 ---
 

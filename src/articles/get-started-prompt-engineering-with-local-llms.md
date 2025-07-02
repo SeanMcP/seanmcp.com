@@ -4,11 +4,12 @@ description:
   Ollama makes it easy to run LLMs locally and provides experimental
   compatibility with OpenAI's APIs
 tags:
-- AI
-- LLMs
-- Llama2
-- Ollama
-- Python
+  - Articles
+  - AI
+  - LLMs
+  - Llama2
+  - Ollama
+  - Python
 date: 2024-02-16T14:59-0400
 verse:
 ---

@@ -5,7 +5,8 @@ description:
   MutationObserver API
 date: 2019-05-10T12:00-0400
 tags:
-- JavaScript
+  - Articles
+  - JavaScript
 ---
 
 🆕 **Update:** I created a

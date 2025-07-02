@@ -5,8 +5,9 @@ description:
   interface, but how much potential does this pattern have to change the way we
   interact with products?
 tags:
-- UI
-- Patterns
+  - Articles
+  - UI
+  - Patterns
 date: 2022-11-17T07:14-0400
 ---
 

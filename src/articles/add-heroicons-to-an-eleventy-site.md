@@ -5,8 +5,9 @@ description:
   projects
 date: 2021-03-09T12:00-0400
 tags:
-- Eleventy
-- Icons
+  - Articles
+  - Eleventy
+  - Icons
 ---
 
 In a recent [Eleventy](https://11ty.dev) project, I wanted an easy way to add
@@ -35,11 +36,13 @@ With that in place, you are ready to use the `heroicon` shortcode. Head over to
 a markdown or template file and try it out:
 
 {% raw %}
+
 ```md
 <!-- contact.md -->
 
 - {% heroicon "outline", "mail" %} Send me an email
 ```
+
 {% endraw %}
 
 **Note**: These examples are using Nunjucks syntax. If you are using Liquid, you
@@ -56,11 +59,13 @@ To save yourself a bit of time, you can use the `heroicon_outline` or
 the previous example with:
 
 {% raw %}
+
 ```md
 <!-- contact.md -->
 
 - {% heroicon_outline "mail" %} Send me an email
 ```
+
 {% endraw %}
 
 And it would work the same.
@@ -70,6 +75,7 @@ applied to the `svg` element. When alt text is provided, a `title` element is
 added as the first child to the `svg`:
 
 {% raw %}
+
 ```html
 <!-- Input -->
 {% heroicon_outline "heart", "Love" %}
@@ -92,6 +98,7 @@ added as the first child to the `svg`:
   />
 </svg>
 ```
+
 {% endraw %}
 
 This will enable screen-reader and other assistive technology users to
@@ -99,6 +106,7 @@ understand what the icon represents. Without an alt tag, you'll want to make
 sure that the meaning can be derived from context:
 
 {% raw %}
+
 ```html
 <button>
   {% heroicon_solid "plus" %}
@@ -110,6 +118,7 @@ sure that the meaning can be derived from context:
   <span class="visually-hidden">Close menu</span>
 </button>
 ```
+
 {% endraw %}
 
 All of the icons have `data-heroicon-name` and `data-heroicon-style` attributes

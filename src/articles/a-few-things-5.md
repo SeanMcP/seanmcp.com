@@ -4,7 +4,8 @@ description:
   Handwriting research, medieval fighting snails, wholesome comics, and banana
   price projections
 tags:
-- A Few Things
+  - Articles
+  - A Few Things
 date: 2024-02-17T06:55-0400
 verse: Colossians 4:18
 ---
@@ -30,10 +31,11 @@ Here are a few things that I found interesting this week:
 2. **[_The mystery of the medieval fighting snails_](https://www.bbc.com/future/article/20231221-the-mystery-of-the-medieval-fighting-snails)
    by Zaria Gorvett (BBC)**<br/>Gorvett looks into the history of medieval
    [illuminations](https://en.wikipedia.org/wiki/Illuminated_manuscript),
-   decorative illustrations that were added to the borders of a text. The subject of the illuminations did not need to match the text, and "for a
-   brief period in the late 13th Century, illuminators... across Europe embraced
-   a new obsession: fighting snails.". Gorvett explores the possible reasons for
-   the trend--none of which consider the possibility that there were megafauna
+   decorative illustrations that were added to the borders of a text. The
+   subject of the illuminations did not need to match the text, and "for a brief
+   period in the late 13th Century, illuminators... across Europe embraced a new
+   obsession: fighting snails.". Gorvett explores the possible reasons for the
+   trend--none of which consider the possibility that there were megafauna
    snails in the medieval period.
 
 3. **[Liz Climo Cartoons](https://www.gocomics.com/liz-climo-cartoons/2018/05/07)**<br/>I

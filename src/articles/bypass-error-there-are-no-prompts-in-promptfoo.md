@@ -4,8 +4,9 @@ description:
   Adding a space to the end of the prompt text appears to be a workaround for
   this error
 tags:
-- AI
-- promptfoo
+  - Articles
+  - AI
+  - promptfoo
 date: 2024-06-29T21:21-0400
 verse:
 ---
@@ -34,7 +35,7 @@ The only solution I found was to add a space to the end of the prompt text:
 
 ```yaml
 prompts:
-- "TEXT_OF_THE_PROMPT_THAT_I_TRIED_TO_EVALUATE "
+  - "TEXT_OF_THE_PROMPT_THAT_I_TRIED_TO_EVALUATE "
 ```
 
 This enabled promptfoo to run as expected. Definitely not ideal, but hopefully

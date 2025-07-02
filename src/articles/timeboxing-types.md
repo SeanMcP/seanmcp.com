@@ -4,9 +4,10 @@ description:
   In order to maximize the value of types and your time, consider timeboxing the
   amount of time that you spend writing any given type
 tags:
-- Programming
-- Type Systems
-- TypeScript
+  - Articles
+  - Programming
+  - Type Systems
+  - TypeScript
 date: 2023-08-02T06:14-0400
 verse: Romans 5:14-15
 image: /img/value-of-writing-types.png

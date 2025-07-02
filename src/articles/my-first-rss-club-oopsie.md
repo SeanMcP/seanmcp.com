@@ -4,11 +4,12 @@ description:
   I accidentally published the latest article to the public because I mixed up
   some frontmatter fields
 tags:
-- RSS
+  - Articles
+  - RSS
 date: 2023-07-04T07:49-0400
 verse:
 flags:
-- RSS-ONLY
+  - RSS-ONLY
 ---
 
 My latest article, [_Losing steam_](/articles/losing-steam), was supposed to be

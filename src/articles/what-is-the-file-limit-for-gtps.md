@@ -2,8 +2,9 @@
 title: What is the file limit for GTPs?
 description: As of November 15, 2023, the limit is 10 files.
 tags:
-- AI
-- GPTs
+  - Articles
+  - AI
+  - GPTs
 date: 2023-11-15T09:23-0400
 verse: Psalm 33:2
 ---

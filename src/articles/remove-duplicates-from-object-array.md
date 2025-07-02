@@ -3,7 +3,8 @@ title: How to remove duplicates from an object array?
 description: Not as easy as we'd like it, but not as hard as it could be
 date: 2020-02-03T12:00-0400
 tags:
-- JavaScript
+  - Articles
+  - JavaScript
 verse: Job 23:13
 ---
 

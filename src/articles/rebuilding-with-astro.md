@@ -2,6 +2,7 @@
 title: Rebuilding with Astro
 description: Detailing why and how I rebuilt this site with Astro.
 tags:
+  - Articles
   - Astro
   - Eleventy
   - Meta
@@ -11,7 +12,8 @@ verse: Psalm 19:1
 
 <call-out type="warn">
 
-This article was written when seanmcp.com was powered by Astro. I have left the content in place, but the component described no longer renders.
+This article was written when seanmcp.com was powered by Astro. I have left the
+content in place, but the component described no longer renders.
 
 </call-out>
 
