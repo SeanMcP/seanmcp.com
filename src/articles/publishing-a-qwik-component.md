@@ -4,7 +4,8 @@ description:
   The Qwik team has made creating and publish Qwik components a smooth and
   painless process.
 tags:
-- Qwik
+  - Articles
+  - Qwik
 date: 2023-02-13T07:25-0400
 ---
 

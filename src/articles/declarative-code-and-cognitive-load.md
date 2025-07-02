@@ -4,9 +4,10 @@ description:
   Maxi Ferreira in Frontend At Scale on how declarative code can reduce
   cognitive load.
 tags:
-- Cognitive Load
-- Declarative Code
-- Software Engineering
+  - Articles
+  - Cognitive Load
+  - Declarative Code
+  - Software Engineering
 date: 2023-10-25T11:03-0400
 verse: Isaiah 46:9
 ---

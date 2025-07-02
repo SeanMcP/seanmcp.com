@@ -4,8 +4,9 @@ description:
   After a lot of trial an error, I settled on Raspberry Pi OS and Firefox for my
   little Linux-powered computer.
 tags:
-- Computing
-- Linux
+  - Articles
+  - Computing
+  - Linux
 series: Trying Linux 2022
 date: 2022-11-02T08:55-0400
 ---

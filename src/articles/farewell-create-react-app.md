@@ -4,7 +4,8 @@ description:
   The React team is looking to transition Create React App from a project
   scaffold to a launcher that includes options other than client-side rendering
 tags:
-- React
+  - Articles
+  - React
 date: 2023-02-28T11:03-0400
 ---
 

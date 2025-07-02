@@ -36,7 +36,7 @@ export default function (eleventyConfig) {
   /** Collections */
   eleventyConfig.addCollection("rssArticles", function (collectionsAPI) {
     // QUESTION: Can we use filters here?
-    return collectionsAPI.getFilteredByTag("articles").filter((item) => {
+    return collectionsAPI.getFilteredByTag("Articles").filter((item) => {
       return (
         !(item.data.flags || []).includes("DRAFT") &&
         !item.inputPath.includes("index.md")

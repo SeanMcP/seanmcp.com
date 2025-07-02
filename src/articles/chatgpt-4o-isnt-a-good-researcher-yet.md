@@ -4,8 +4,9 @@ description:
   When asked, ChatGPT provides sources but they don't contain the information
   provided
 tags:
-- AI
-- ChatGPT
+  - Articles
+  - AI
+  - ChatGPT
 date: 2024-05-17T21:51-0400
 verse: Proverbs 2:3-5
 ---

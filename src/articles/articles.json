@@ -1,7 +1,4 @@
 {
   "layout": "page.liquid",
-  "tags": [
-    "articles"
-  ],
   "leaf": true
 }

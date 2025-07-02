@@ -4,6 +4,7 @@ date: 2025-01-14T06:50-0400
 description:
   Why I rewrote this site with Eleventy after a two-year sojourn with Astro.
 tags:
+  - Articles
   - Eleventy
   - Astro
   - Meta

@@ -3,7 +3,8 @@ title: Upgrading an Eleventy site to 1.0.0
 description: Make sure the you are using Node.js version 12 or later
 date: 2022-01-18T12:00-0400
 tags:
-- Eleventy
+  - Articles
+  - Eleventy
 ---
 
 I initially published a [note](/notes) about how easy it was to upgrade to

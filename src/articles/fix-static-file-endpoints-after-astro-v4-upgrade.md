@@ -4,8 +4,9 @@ description:
   I needed to change the name of the exported function and make sure that it was
   returning a Response or Promise<Response>.
 tags:
-- Astro
-- Fix
+  - Articles
+  - Astro
+  - Fix
 date: 2024-03-19T06:03-0400
 verse: Romans 3:23-24
 ---

@@ -4,8 +4,9 @@ description:
   A quick guide on using an Astro endpoint to generate the webfinger you need to
   use your domain on Mastodon.
 tags:
-- Astro
-- Mastodon
+  - Articles
+  - Astro
+  - Mastodon
 date: 2022-11-18T09:29-0400
 ---
 

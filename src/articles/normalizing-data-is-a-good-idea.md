@@ -4,7 +4,8 @@ description:
   By transforming your data into a consistent structure, you can reduce the
   complexity of your code
 tags:
-- Programming
+  - Articles
+  - Programming
 date: 2023-12-20T09:47-0400
 verse:
 ---

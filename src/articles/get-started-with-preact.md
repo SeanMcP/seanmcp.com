@@ -3,8 +3,9 @@ title: Get started with Preact
 description: This is a WIP that I probably will never finish.
 date: 2020-08-18T12:00-0400
 tags:
-- Preact
-- WIP
+  - Articles
+  - Preact
+  - WIP
 ---
 
 Preact is a lightweight alternative to React. It provides the same[^1] modern

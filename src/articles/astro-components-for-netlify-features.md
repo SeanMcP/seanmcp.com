@@ -4,9 +4,10 @@ description:
   Announcing astro-netlify-components, a library for using Netlify features in
   your Astro projects.
 tags:
-- Astro
-- Netlify
-- Open Source
+  - Articles
+  - Astro
+  - Netlify
+  - Open Source
 date: 2022-11-25T07:26-0400
 ---
 

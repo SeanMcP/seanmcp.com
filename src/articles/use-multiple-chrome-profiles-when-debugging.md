@@ -5,9 +5,10 @@ description:
   your favorite settings.
 date: 2022-06-06T12:00-0400
 tags:
-- Debugging
-- Chrome
-- Dev Tools
+  - Articles
+  - Debugging
+  - Chrome
+  - Dev Tools
 ---
 
 Awhile back, I read about using separate Chrome profiles[^1] for debugging. The

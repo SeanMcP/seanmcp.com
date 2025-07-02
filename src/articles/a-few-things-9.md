@@ -4,7 +4,8 @@ description:
   A reflection on silence contemplation, the art of bookmaking, semantic
   satiation, and soccer logo design
 tags:
-- A Few Things
+  - Articles
+  - A Few Things
 date: 2024-03-16T20:10-0400
 verse: Psalm 16:7
 ---

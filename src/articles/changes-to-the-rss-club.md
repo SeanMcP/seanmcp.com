@@ -3,10 +3,11 @@ title: Changes to the RSS Club
 description:
   There are now secret pages for RSS Club articles that you can save and share
 tags:
-- RSS
+  - Articles
+  - RSS
 date: 2023-03-30T16:31-0400
 flags:
-- RSS-ONLY
+  - RSS-ONLY
 ---
 
 Last month I created this RSS Club for special articles shared exclusively with

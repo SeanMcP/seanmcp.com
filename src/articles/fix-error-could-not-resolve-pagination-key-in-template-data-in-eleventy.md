@@ -6,8 +6,9 @@ description:
   Eleventy
 date: 2021-02-06T12:00-0400
 tags:
-- Debugging
-- Eleventy
+  - Articles
+  - Debugging
+  - Eleventy
 verse: Matthew 16:19
 ---
 

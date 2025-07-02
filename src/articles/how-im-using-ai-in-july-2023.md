@@ -4,7 +4,8 @@ description:
   Some more competitors are entering the ring, but GitHub Copilot remains the
   only AI-powered product that I use regularly
 tags:
-- AI
+  - Articles
+  - AI
 date: 2023-08-08T06:47-0400
 verse:
 series: How I Use AI

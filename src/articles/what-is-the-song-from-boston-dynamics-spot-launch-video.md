@@ -5,8 +5,9 @@ description:
   song as "Banana" by Stony Pony
 date: 2021-08-10T12:00-0400
 tags:
-- Detective Work
-- Music
+  - Articles
+  - Detective Work
+  - Music
 verse: 1 Chronicles 13:8
 ---
 

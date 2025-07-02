@@ -4,8 +4,9 @@ description:
   Learning the Go programming language for professionanl development has been an
   enjoyable experience
 tags:
-- Go
-- Professional Development
+  - Articles
+  - Go
+  - Professional Development
 date: 2023-05-09T06:44-0400
 verse: Luke 10:37
 ---

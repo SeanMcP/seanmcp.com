@@ -4,9 +4,10 @@ description:
   After a recommendation from Syntax.fm, I added a public page to see all of the
   components that I’ve created for this site
 tags:
-- Meta
-- Storybook
-- Testing
+  - Articles
+  - Meta
+  - Storybook
+  - Testing
 date: 2024-02-16T11:24-0400
 verse: 1 Corinthians 12:17-18
 ---

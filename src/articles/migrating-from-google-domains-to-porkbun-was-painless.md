@@ -4,8 +4,9 @@ description:
   I was able to transfer two domains from Google to Porkbun without any issues
   or downtime
 tags:
-- Porkbun
-- Registrars
+  - Articles
+  - Porkbun
+  - Registrars
 date: 2024-01-18T08:41-0400
 verse: Colossians 1:13
 ---

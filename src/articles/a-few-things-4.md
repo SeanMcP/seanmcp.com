@@ -4,7 +4,8 @@ description:
   An investigation in remote Madagascar, Parkinson's Law, writing letters to
   your future self, and a live shark tracker.
 tags:
-- A Few Things
+  - Articles
+  - A Few Things
 date: 2024-02-10T06:55-0400
 verse: Psalm 104:25
 ---

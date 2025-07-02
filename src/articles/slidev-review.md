@@ -2,9 +2,10 @@
 title: Sli.dev review
 description: A great tool that gets out of the way when creating slides
 tags:
-- Review
-- Slides
-- Slidev
+  - Articles
+  - Review
+  - Slides
+  - Slidev
 date: 2023-11-27T09:55-0400
 verse:
 ---

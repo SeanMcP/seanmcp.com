@@ -4,7 +4,8 @@ description:
   Nullish values are null and undefined, and it's important to thing of them
   separately from falsy values
 tags:
-- JavaScript
+  - Articles
+  - JavaScript
 date: 2023-05-11T12:00-0400
 verse: Genesis 1:2
 ---

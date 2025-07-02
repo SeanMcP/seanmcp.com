@@ -2,8 +2,9 @@
 title: Awesome browser extensions
 description: A curated list of helpful browser extensions.
 tags:
-- Garden
-- Extensions
+  - Articles
+  - Garden
+  - Extensions
 date: 2022-10-31T09:11-0400
 ---
 

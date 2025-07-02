@@ -4,7 +4,8 @@ description:
   Take a minute to review all photos from today's date and delete the ones you
   don't need
 tags:
-- Digital Life
+  - Articles
+  - Digital Life
 date: 2024-05-09T06:36-0400
 verse:
 ---

@@ -3,17 +3,21 @@ title: Make a web component
 description: How to make a custom web component with only a few lines of code
 date: 2022-01-14T12:00-0400
 tags:
-- JavaScript
-- Web Components
+  - Articles
+  - JavaScript
+  - Web Components
 ---
 
-To make a web component, you need to create a new class. You can extend an existing component class if you want to preserve some semantic behavior, but we'll go with the default `HTMLElement`:
+To make a web component, you need to create a new class. You can extend an
+existing component class if you want to preserve some semantic behavior, but
+we'll go with the default `HTMLElement`:
 
 ```js
 class HelloWorld extends HTMLElement {}
 ```
 
-Next, we need to add a `constructor` method and call the `super` function to ensure that our component is initialized with all the necessary information:
+Next, we need to add a `constructor` method and call the `super` function to
+ensure that our component is initialized with all the necessary information:
 
 ```js
 class HelloWorld extends HTMLElement {
@@ -23,7 +27,9 @@ class HelloWorld extends HTMLElement {
 }
 ```
 
-Now we need a DOM to build on. Web components use [a shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM), which we'll create by calling our class's `attachShadow` method:
+Now we need a DOM to build on. Web components use
+[a shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM),
+which we'll create by calling our class's `attachShadow` method:
 
 ```js
 class HelloWorld extends HTMLElement {
@@ -35,7 +41,8 @@ class HelloWorld extends HTMLElement {
 }
 ```
 
-With our shadow DOM declared, we can create a new element. Let's go with a span element with the content "Hello world!" and append it to our shadow:
+With our shadow DOM declared, we can create a new element. Let's go with a span
+element with the content "Hello world!" and append it to our shadow:
 
 ```js
 class HelloWorld extends HTMLElement {

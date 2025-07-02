@@ -5,6 +5,7 @@ description:
   tool?
 date: 2025-06-27T09:02-0400
 tags:
+  - Articles
   - Tools
   - Software
   - Mac

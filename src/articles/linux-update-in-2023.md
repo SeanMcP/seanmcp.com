@@ -4,8 +4,9 @@ description:
   After experimenting with Linux last year, I am happily using Ubuntu on a
   Lenovo Yoga as my personal computer
 tags:
-- Linux
-- Setup
+  - Articles
+  - Linux
+  - Setup
 date: 2023-05-16T08:49-0400
 verse: Psalm 8:1
 series: Trying Linux 2022

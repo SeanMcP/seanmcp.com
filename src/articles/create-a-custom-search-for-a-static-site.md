@@ -4,9 +4,10 @@ description:
   A high-level overview of why and how I built a URL-powered fuzzy search
   feature for this site
 tags:
-- Astro
-- Search
-- Static Sites
+  - Articles
+  - Astro
+  - Search
+  - Static Sites
 date: 2024-03-22T15:08-0400
 verse: Ezekiel 34:11
 ---

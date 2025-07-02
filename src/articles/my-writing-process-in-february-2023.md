@@ -4,8 +4,9 @@ description:
   The process involves mostly manual steps, and I am looking for a better
   solution.
 tags:
-- Meta
-- Writing
+  - Articles
+  - Meta
+  - Writing
 date: 2023-02-27T11:22-0400
 ---
 

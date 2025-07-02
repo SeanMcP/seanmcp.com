@@ -5,8 +5,9 @@ description:
   way to skin a cat"
 date: 2021-02-18T12:00-0400
 tags:
-- Language
-- Soap Box
+  - Articles
+  - Language
+  - Soap Box
 verse: Exodus 12:39
 ---
 

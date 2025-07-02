@@ -4,11 +4,12 @@ description:
   I feel a gravitational pull to write long-winded introductions to my articles,
   but it's time to break out of that orbit
 tags:
-- Writing
+  - Articles
+  - Writing
 date: 2023-05-15T06:50-0400
 verse:
 flags:
-- RSS-ONLY
+  - RSS-ONLY
 ---
 
 Recipe blogs infamously include a lot of text before the recipe. This apparently

@@ -4,7 +4,8 @@ description:
   A pink lake in Senegal, an Indian community that solved drought, and the
   strange origin of Idaho's name.
 tags:
-- A Few Things
+  - Articles
+  - A Few Things
 date: 2024-03-23T06:55-0400
 verse: Mark 4:1
 ---
@@ -23,9 +24,9 @@ More photos: https://africageographic.com/stories/pink-lake-retba-senegal/
 ## [How Farmers Reshaped a Region and Solved Drought](https://www.youtube.com/watch?v=79VUAFq2rbg) by Andrew Millison
 
 This is the second video that I've shared from Andrew Millison (see
-[A few things #6](/articles/a-few-things-6)). In this video, he learns about a community
-in northern India that used permaculture to transform environment for the better
-over the course of 45 years.
+[A few things #6](/articles/a-few-things-6)). In this video, he learns about a
+community in northern India that used permaculture to transform environment for
+the better over the course of 45 years.
 
 I was struck by the long-term commitment to collective action for the benefit of
 all. That's the stuff that it feels like we can only dream of here in the United

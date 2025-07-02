@@ -4,7 +4,8 @@ description:
   An app to help you travel, dispelling an American myth, reflection on
   creation, and a game that will make your head spin.
 tags:
-- A Few Things
+  - Articles
+  - A Few Things
 date: 2024-01-19T14:06-0400
 verse:
 ---

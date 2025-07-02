@@ -5,8 +5,9 @@ description:
   script to automate image processing for me.
 image: /img/warm-mountains.jpg
 tags:
-- Blogging
-- Meta
+  - Articles
+  - Blogging
+  - Meta
 date: 2022-12-13T06:52-0400
 ---
 

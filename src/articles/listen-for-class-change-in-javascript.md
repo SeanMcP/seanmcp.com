@@ -4,7 +4,8 @@ description:
   There isn’t an event for class list changes, but you can write a function that
   listens for class changes on an element with the MutationObserver API
 tags:
-- JavaScript
+  - Articles
+  - JavaScript
 date: 2023-03-09T07:00-0400
 foot:
   <script async
@@ -52,8 +53,8 @@ function onClassChange(node, callback) {
       changes to the `class` attribute.
    2. If we find one, then we compare the current class list as a string to the
       reference declared above.
-    - This comparison is necessary to prevent false class change positives,
-        _e.g_ adding the same class twice.
+   - This comparison is necessary to prevent false class change positives, _e.g_
+     adding the same class twice.
    3. If the class strings do not match, invoke the callback and update the
       class string reference.
    4. Break out of the loop if we have detected a change.

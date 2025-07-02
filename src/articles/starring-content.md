@@ -3,8 +3,9 @@ title: Starring content
 description: A write-up on the new star feature on seanmcp.com
 date: 2022-07-13T11:49-0400
 tags:
-- Meta
-- JavaScript
+  - Articles
+  - Meta
+  - JavaScript
 image: /img/nebula.jpg
 ---
 

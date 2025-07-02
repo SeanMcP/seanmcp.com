@@ -4,9 +4,10 @@ description:
   I needed to update dependencies, change a client directive, and then update
   configuration in Netlify
 tags:
-- Astro
-- Log
-- Meta
+  - Articles
+  - Astro
+  - Log
+  - Meta
 date: 2024-03-18T21:44-0400
 verse: Psalm 8:3
 ---

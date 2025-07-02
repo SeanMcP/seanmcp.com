@@ -4,8 +4,9 @@ description:
   Safari 16 has trouble with CSS animations on SVG child elements, but you can
   resolve them by using a combined transform property.
 tags:
-- Debugging
-- Safari
+  - Articles
+  - Debugging
+  - Safari
 date: 2023-03-10T06:45-0400
 foot:
   <script async

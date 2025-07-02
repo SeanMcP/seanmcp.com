@@ -3,6 +3,8 @@ title: "VIVO sit/stand desk"
 description: "Issues and solutions for my VIVO sit/stand desk"
 updateDate: 2024-06-27T14:34-0400
 date: 2024-06-27T14:09-0400
+tags:
+  - Articles
 verse: Psalm 139:2
 ---
 

@@ -4,6 +4,7 @@ description:
   This year started strong on writing, but I have found little motivation
   recently
 tags:
+  - Articles
   - Writing
 date: 2023-07-04T06:58-0400
 verse: Jeremiah 31:33

@@ -4,8 +4,9 @@ description:
   How developers can reduce opportunity costs and avoid the sunk-cost fallacy
 date: 2020-07-14T12:00-0400
 tags:
-- Economics
-- Software Engineering
+  - Articles
+  - Economics
+  - Software Engineering
 verse: Luke 14:28
 ---
 

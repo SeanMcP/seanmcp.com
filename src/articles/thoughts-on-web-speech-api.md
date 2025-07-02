@@ -4,8 +4,9 @@ description:
   Browser native text-to-speech is neat, but it lacks the polish that most users
   expect
 tags:
-- JavaScript
-- Text-to-Speech
+  - Articles
+  - JavaScript
+  - Text-to-Speech
 date: 2023-11-08T20:52-0400
 verse: 2 Corinthians 8:7
 ---

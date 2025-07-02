@@ -4,12 +4,13 @@ description:
   I didn't do it and I felt bad about it so I wrote this article and now I feel
   a little better
 tags:
-- CSS
-- divtober
+  - Articles
+  - CSS
+  - divtober
 date: 2023-11-21T06:36-0400
 verse:
 flags:
-- RSS-ONLY
+  - RSS-ONLY
 ---
 
 On October 10th, I boldly claimed that completing #divtober was "my goal for

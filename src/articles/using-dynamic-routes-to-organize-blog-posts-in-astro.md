@@ -4,7 +4,8 @@ description:
   If you want to display multiple blog posts on a single page, then you might
   want to use a dynamic route to generate pages for your content.
 tags:
-- Astro
+  - Articles
+  - Astro
 date: 2022-10-29T13:21-0400
 ---
 

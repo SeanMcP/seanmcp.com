@@ -4,7 +4,8 @@ description:
   Measuring twice, cut once is good advice for woodworking but maybe not for
   software engineering
 tags:
-- Software Engineering
+  - Articles
+  - Software Engineering
 date: 2024-04-24T13:24-0400
 verse: Luke 14:28
 ---

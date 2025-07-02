@@ -2,7 +2,8 @@
 title: "Render and effect call order in React"
 description: Renders are called top-down, but effects are called bottom-up.
 tags:
-- React
+  - Articles
+  - React
 date: 2024-05-17T20:43-0400
 verse: Exodus 20:12
 ---

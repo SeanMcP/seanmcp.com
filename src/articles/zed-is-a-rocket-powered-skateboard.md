@@ -4,9 +4,10 @@ description:
   Zed is a new Rust-powered editor by the creator of Atom that focuses on speed
   but lacks a lot of features
 tags:
-- Zed
-- Editor
-- Review
+  - Articles
+  - Zed
+  - Editor
+  - Review
 date: 2023-04-01T06:32-0400
 ---
 

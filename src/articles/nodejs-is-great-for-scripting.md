@@ -4,9 +4,10 @@ description:
   Node.js and JavaScript are a great option for scripting for the language
   features and the large ecosystem. Oh, and it's pretty fast too!
 tags:
-- JavaScript
-- Node.js
-- Scripting
+  - Articles
+  - JavaScript
+  - Node.js
+  - Scripting
 date: 2022-11-16T10:21-0400
 ---
 

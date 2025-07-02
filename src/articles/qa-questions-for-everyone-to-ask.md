@@ -4,8 +4,9 @@ description:
   Everyone on the product team should ask verifying, discovery, and critical
   questions to ensure quality
 tags:
-- Software Engineering
-- Quality Assurance
+  - Articles
+  - Software Engineering
+  - Quality Assurance
 date: 2023-05-10T14:04-0400
 verse: 1 Kings 10:1
 ---

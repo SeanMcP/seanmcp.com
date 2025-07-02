@@ -4,6 +4,7 @@ description:
   When you need to reference the previous state, pass a callback function to
   React's setState.
 tags:
+  - Articles
   - React
 date: 2024-06-27T21:17-0400
 verse: Lamentations 3:22-23

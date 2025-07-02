@@ -4,8 +4,9 @@ description:
   Using a shell script to add a line to every file with a given extension
 date: 2020-12-18T12:00-0400
 tags:
-- Scripting
-- Shell
+  - Articles
+  - Scripting
+  - Shell
 verse: Genesis 1:1
 ---
 

@@ -3,7 +3,8 @@ title: How I'm using AI in November 2023
 description:
   Chat GPT and Khanmigo join Copilot in the regular category this month
 tags:
-- AI
+  - Articles
+  - AI
 date: 2023-12-11T06:42-0400
 series: How I Use AI
 verse:

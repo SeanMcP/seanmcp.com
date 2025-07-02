@@ -4,7 +4,8 @@ description:
   You can use colons in the header row separator to align content in a Markdown
   table
 tags:
-- Markdown
+  - Articles
+  - Markdown
 date: 2024-06-07T06:47-0400
 verse: Exodus 25:30
 ---

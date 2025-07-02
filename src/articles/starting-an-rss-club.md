@@ -4,8 +4,9 @@ description:
   I can publish an article exclusively to the RSS feed with a special flag in
   the frontmatter
 tags:
-- Astro
-- RSS
+  - Articles
+  - Astro
+  - RSS
 date: 2023-02-28T10:42-0400
 ---
 

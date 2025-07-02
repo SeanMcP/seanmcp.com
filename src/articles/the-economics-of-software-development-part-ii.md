@@ -5,8 +5,9 @@ description:
   product
 date: 2020-07-22T12:00-0400
 tags:
-- Economics
-- Software Engineering
+  - Articles
+  - Economics
+  - Software Engineering
 verse: Mark 6:56
 ---
 

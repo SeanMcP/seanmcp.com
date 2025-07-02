@@ -5,8 +5,9 @@ description:
   registry.
 date: 2020-12-09T12:00-0400
 tags:
-- npm
-- CLI
+  - Articles
+  - npm
+  - CLI
 verse: Psalm 34:8
 ---
 

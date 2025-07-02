@@ -5,6 +5,7 @@ description:
   does–and not domain relation–what it is.
 date: 2025-06-30T14:30-0400
 tags:
+  - Articles
   - Software Engineering
   - Preferences
 flags:

@@ -1,16 +1,20 @@
 ---
 title: Sass converts hsla to hex incorrectly
-description: A simple solution to stop Sass from transparent hsla colors to opaque hex colors.
+description:
+  A simple solution to stop Sass from transparent hsla colors to opaque hex
+  colors.
 date: 2020-12-17T12:00-0400
 tags:
-- Sass
-- CSS
-- Styling
-- Bug
+  - Articles
+  - Sass
+  - CSS
+  - Styling
+  - Bug
 verse: Exodus 39:8
 ---
 
-I ran into an issue where Sass was converting `hsla()` values to hex incorrectly. It would take an input like this:
+I ran into an issue where Sass was converting `hsla()` values to hex
+incorrectly. It would take an input like this:
 
 ```css
 /* input.scss */
@@ -28,7 +32,8 @@ And convert it into:
 }
 ```
 
-That is **not** the same color. When processing the input styles, Sass ignores the alpha (opacity) value and converts it into a standard hex.
+That is **not** the same color. When processing the input styles, Sass ignores
+the alpha (opacity) value and converts it into a standard hex.
 
 You can see the different between the two values here:
 
@@ -58,11 +63,18 @@ You can see the different between the two values here:
     </div>
 </div>
 
-If you search around for an answer, you will find a few suggestions to [use strings for `hsl` values](https://github.com/sass/sass/issues/469#issuecomment-461675216) or [recreating the `hsl` and `hsla` functions in Sass](https://github.com/sass/sass/issues/469#issuecomment-77290544). Neither of those seemed an idea solution.
+If you search around for an answer, you will find a few suggestions to
+[use strings for `hsl` values](https://github.com/sass/sass/issues/469#issuecomment-461675216)
+or
+[recreating the `hsl` and `hsla` functions in Sass](https://github.com/sass/sass/issues/469#issuecomment-77290544).
+Neither of those seemed an idea solution.
 
-Instead of changing how you declare `hsl` value or recreating the function, you can fix this issue by **using decimal alpha values instead of percent**. Going back to the original example, change `10%` to `0.1`:
+Instead of changing how you declare `hsl` value or recreating the function, you
+can fix this issue by **using decimal alpha values instead of percent**. Going
+back to the original example, change `10%` to `0.1`:
 
 <!-- ```css/2 -->
+
 ```css
 /* Input Sass */
 .subtle-blue {
@@ -73,6 +85,7 @@ Instead of changing how you declare `hsl` value or recreating the function, you 
 And Sass will convert it to alpha-supporting `rgba`:
 
 <!-- ```css/2 -->
+
 ```css
 /* Output css */
 .subtle-blue {
@@ -80,7 +93,9 @@ And Sass will convert it to alpha-supporting `rgba`:
 }
 ```
 
-These values aren't identical because [math is required](https://stackoverflow.com/questions/31613667/hsl-to-rgb-conversion-math), but they're infinitely closer than the non-alpha hex value:
+These values aren't identical because
+[math is required](https://stackoverflow.com/questions/31613667/hsl-to-rgb-conversion-math),
+but they're infinitely closer than the non-alpha hex value:
 
 <div class="exs">
     <div class="ex" style="background-color:hsla(212, 50%, 50%, 0.1)">
@@ -91,8 +106,12 @@ These values aren't identical because [math is required](https://stackoverflow.c
     </div>
 </div>
 
-You can see this behavior for yourself in [this Sass playground](https://sass.js.org/) but not in [Sassmeister](https://www.sassmeister.com/). So it may depend on the flavor and version of Sass that you are using.
+You can see this behavior for yourself in
+[this Sass playground](https://sass.js.org/) but not in
+[Sassmeister](https://www.sassmeister.com/). So it may depend on the flavor and
+version of Sass that you are using.
 
-But for a quick fix that doesn't involve wading into the release notes of your dependencies, opt for decimal alpha values in `hsla`.
+But for a quick fix that doesn't involve wading into the release notes of your
+dependencies, opt for decimal alpha values in `hsla`.
 
 Happy styling!

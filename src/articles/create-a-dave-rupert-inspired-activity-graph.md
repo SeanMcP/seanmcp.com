@@ -2,14 +2,16 @@
 title: 'Create a "Dave Rupert"-inspired activity graph'
 description: A little code walk through a the new Activity Graph on my homepage.
 tags:
-- Astro
-- Meta
+  - Articles
+  - Astro
+  - Meta
 date: 2022-11-23T14:48-0400
 ---
 
 <call-out type="warn">
 
-This article was written when seanmcp.com was powered by Astro. I have left the content in place, but the activity graph described no longer renders.
+This article was written when seanmcp.com was powered by Astro. I have left the
+content in place, but the activity graph described no longer renders.
 
 </call-out>
 
@@ -37,7 +39,8 @@ const notes = getSortedContent(
 
 <call-out type="info">
 
-This code is all subject to change, so for the latest [checkout the source on GitHub](https://github.com/SeanMcP/seanmcp.com/blob/master/src/components/ActivityGraph.astro)
+This code is all subject to change, so for the latest
+[checkout the source on GitHub](https://github.com/SeanMcP/seanmcp.com/blob/master/src/components/ActivityGraph.astro)
 
 </call-out>
 
@@ -90,6 +93,7 @@ const multiplier = (16 * 4) / highest;
 With all that set up, all I needed to do was iterate:
 
 {% raw %}
+
 ```astro
 <ol>
   {
@@ -119,6 +123,7 @@ With all that set up, all I needed to do was iterate:
   }
 </ol>
 ```
+
 {% endraw %}
 
 There is certainly room for improvement, but I'm happy with how it turned out.

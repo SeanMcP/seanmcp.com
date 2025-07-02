@@ -3,7 +3,8 @@ title: Did OpenAI's Web Browser GPT leak its prompt?
 description:
   When given a simple prompt, OpenAI's Web Browser GPT seems to leak its prompt.
 tags:
-- GPTs
+  - Articles
+  - GPTs
 date: 2024-01-18T14:25-0400
 verse:
 ---

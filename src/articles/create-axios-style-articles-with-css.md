@@ -4,9 +4,12 @@ description:
   We can use inline blocks to bring subheadings on the same line as the
   following text while preserving the visual spacing
 tags:
-- CSS
+  - Articles
+  - CSS
 date: 2023-03-06T14:52-0400
-foot: <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+foot:
+  <script async
+  src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 ---
 
 You can style heading elements to look like the axioms in Axios articles with

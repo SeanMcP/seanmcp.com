@@ -4,8 +4,9 @@ description:
   Chrome, Edge, Firefox, and Safari all have built-in accessibility tools to
   help you create accessible experiences for all
 tags:
-- A11y
-- Dev Tools
+  - Articles
+  - A11y
+  - Dev Tools
 date: 2023-05-19T07:07-0400
 verse: Isaiah 1:17
 ---

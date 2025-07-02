@@ -2,7 +2,8 @@
 title: "Tweaking garden details"
 description: "A new way to visualize garden details"
 tags:
-- Meta
+  - Articles
+  - Meta
 date: 2024-05-17T13:58-0400
 verse: Genesis 2:15
 ---

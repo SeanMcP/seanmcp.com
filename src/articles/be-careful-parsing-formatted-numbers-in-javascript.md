@@ -5,7 +5,8 @@ description:
   comma-separated number strings.
 image: /img/caution.jpg
 tags:
-- JavaScript
+  - Articles
+  - JavaScript
 date: 2022-12-20T10:14-0400
 ---
 

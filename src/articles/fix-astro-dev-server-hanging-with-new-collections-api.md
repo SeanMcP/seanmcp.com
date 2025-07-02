@@ -3,8 +3,9 @@ title: Fix Astro dev server hanging with new collections API
 description:
   The issue for me was calling useCollection on an entry with a layout.
 tags:
-- Astro
-- Debugging
+  - Articles
+  - Astro
+  - Debugging
 date: 2023-02-11T13:08-0400
 ---
 
