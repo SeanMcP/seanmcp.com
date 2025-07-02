@@ -2,6 +2,9 @@
 title: Random Encounters
 description: Resources for adding random encounters to your adventure
 date: 2025-01-17T06:36-0400
+tags:
+  - Adventure Games
+  - Random Encounters
 ---
 
 This table is a template that you can create for every environment in your

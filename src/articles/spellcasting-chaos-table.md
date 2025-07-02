@@ -4,6 +4,9 @@ description:
   Adding a little chaos to spellcasting in your adventure games (TTRPGs)
 date: 2024-07-23T09:40-0400
 verse: Genesis 1:2
+tags:
+  - Adventure Games
+  - Spellcasting
 ---
 
 When I'm playing [adventure games](/adventure-games) I want magic to feel

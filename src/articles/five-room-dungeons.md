@@ -6,6 +6,10 @@ description:
 updatedDate: 2024-06-03T20:37-0400
 date: 2024-05-30T10:07-0400
 verse: Psalm 40:2
+tags:
+  - Adventure Games
+  - Dungeon Design
+  - Five-room Dungeons
 ---
 
 The five-room dungeon framework was designed by

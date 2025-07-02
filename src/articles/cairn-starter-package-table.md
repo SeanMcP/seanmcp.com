@@ -16,6 +16,9 @@ head: >-
       width: 5ch;
     }
   </style>
+tags:
+  - Adventure Games
+  - Cairn
 ---
 
 _Into the Odd_ by Chris McDowall has an interesting method for determining

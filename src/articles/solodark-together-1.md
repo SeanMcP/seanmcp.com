@@ -5,6 +5,10 @@ description:
   players
 date: 2025-04-23T06:00-0400
 verse:
+tags:
+  - Adventure Games
+  - Shadowdark
+  - SoloDark
 ---
 
 My brother and I play D&D regularly over Discord. Recently we decided to try

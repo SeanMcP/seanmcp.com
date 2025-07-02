@@ -4,6 +4,7 @@ description:
   A lesson in balancing realism and playability in your adventure games
 date: 2025-05-01T07:10-0400
 tags:
+  - Adventure Games
   - GM Mistakes
 flags:
 verse: Romans 3:23-24

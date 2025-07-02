@@ -4,11 +4,11 @@ description: Resources for table-top adventure games
 tagline: Resources for table-top adventure games
 # date: 2024-05-23T11:33-0400
 leaf: false
+layout: page.liquid
 ---
 
-Resources for table-top adventure games like Dungeons & Dragons.
-
-## Games/systems
+This is a collection of resources for table-top adventure games like Dungeons &
+Dragons. I prefer rules-light systems that focus on storytelling like:
 
 - [Cairn](https://cairnrpg.com/): A minimal ruleset for playing any table-top
   adventure game
@@ -20,5 +20,5 @@ Mythic Bastionland, and Knave.
 
 ## Pages
 
-{%- assign pages = collections["adventure-games"] | exclude_index | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse -%}
+{%- assign pages = collections["Adventure Games"] | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse -%}
 {% include "page-list" %}

@@ -3,6 +3,7 @@ title: Hazard table
 description:
 date: 2025-06-02T15:23-0400
 tags:
+  - Adventure Games
   - Hazard
   - Tables
 flags:

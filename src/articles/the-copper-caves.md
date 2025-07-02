@@ -5,6 +5,12 @@ description:
   Dungeons and Dragons
 date: 2025-05-06T13:30-0400
 verse:
+tags:
+  - Adventure Games
+  - Dungeon Design
+  - Copper Caves
+  - Dungeons and Dragons
+  - TTRPGs
 ---
 
 <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Titelhoofd_met_kruisspin_en_spinnenweb%2C_RP-P-1944-2688.jpg/1024px-Titelhoofd_met_kruisspin_en_spinnenweb%2C_RP-P-1944-2688.jpg" />
