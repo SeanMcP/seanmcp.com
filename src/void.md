@@ -9,6 +9,10 @@ head: >-
   <style>content hr { margin-block: 3em; }</style>
 ---
 
+**July 2, 2025** — "Multigrain" just means they added corn to your normal cereal.
+
+---
+
 **June 27, 2025** — Factor is just rebranded microwave dinners.
 
 ---
