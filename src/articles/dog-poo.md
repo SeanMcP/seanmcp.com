@@ -3,6 +3,7 @@ title: Dog Poo
 description: Axioms for home-owners and dog-owners to live peacefully together.
 date: 2025-07-02T14:07-0400
 tags:
+  - Web
   - Community
   - Dogs
 flags:
