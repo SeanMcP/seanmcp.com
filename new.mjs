@@ -55,5 +55,5 @@ const slug = title
   .replace(/[^a-z0-9-]/g, "");
 const filename = `${slug}.md`;
 
-fs.writeFileSync(path.join(__dirname, "src/articles", filename), template.replace("%TITLE%", title));
+fs.writeFileSync(path.join(__dirname, "src/content", filename), template.replace("%TITLE%", title));
 console.log(`Created new post: ${filename}`);

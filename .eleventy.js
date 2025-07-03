@@ -94,9 +94,6 @@ export default function (eleventyConfig) {
     }
     return pages;
   });
-  eleventyConfig.addFilter("exclude_index", function (pages) {
-    return pages.filter((page) => !page.inputPath.includes("index.md"));
-  });
   eleventyConfig.addFilter("render_title", function (page) {
     let title = page.data.title;
 
