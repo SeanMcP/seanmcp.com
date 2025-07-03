@@ -1,4 +1,5 @@
 ---
+layout: page.liquid
 title: Board Games
 leaf: false
 ---

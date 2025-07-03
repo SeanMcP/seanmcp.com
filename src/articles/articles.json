@@ -1,4 +1,5 @@
 {
   "layout": "page.liquid",
-  "leaf": true
+  "leaf": true,
+  "permalink": "/{{ tags[0] | slug }}/{{ title | slug }}/"
 }

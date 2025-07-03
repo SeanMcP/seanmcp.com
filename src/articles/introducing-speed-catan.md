@@ -6,7 +6,6 @@ description:
 date: 2025-01-18T14:30-0400
 tags:
   - Articles
-  - Board Games
   - Variations
 flags:
 verse: Matthew 19:14
