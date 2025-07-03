@@ -3,6 +3,8 @@ title: Fonts
 description: Fonts (typefaces) that I like and where to find them
 updatedDate: 2024-06-15T06:38-0600
 date: 2023-11-27T16:05-0400
+tags:
+  - Resources
 ---
 
 Technically this is a garden about typefaces, but I won't be pedantic if you

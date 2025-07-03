@@ -5,6 +5,8 @@ description:
 updatedDate: 2023-06-06T12:00-0400
 date: 2022-02-15T12:00-0400
 verse: Psalm 150:3
+tags:
+  - Resources
 ---
 
 Whenever I need to put my head down and focus on a coding task, I have found

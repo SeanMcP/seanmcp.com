@@ -3,6 +3,8 @@ title: Latin
 description: Latin phrases that are good to know
 updatedDate: 2024-06-03T21:07-0400
 date: 2021-06-07T12:00-0400
+tags:
+  - Resources
 ---
 
 This is a list of Latin phrases that are good to know:

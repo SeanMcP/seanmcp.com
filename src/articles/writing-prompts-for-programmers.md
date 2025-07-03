@@ -35,6 +35,8 @@ foot: >-
       this.prepend(button);
     }
   }) </script>
+tags:
+  - Resources
 ---
 
 > The most effective way I know to improve your writing is to do freewriting

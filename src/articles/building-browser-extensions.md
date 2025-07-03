@@ -2,6 +2,8 @@
 title: Building browser extensions
 description: Some resources and guides for making browser add-ons/extensions
 date: 2021-02-23T12:00-0400
+tags:
+  - Resources
 ---
 
 These are resources that I reference and guides that I follow while developing

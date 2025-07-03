@@ -2,6 +2,8 @@
 title: Browser extensions
 description: A curated list of helpful browser extensions.
 date: 2022-10-31T09:11:45-0400
+tags:
+  - Resources
 ---
 
 Extensions can slow down your browser, so I try to only add ones that are

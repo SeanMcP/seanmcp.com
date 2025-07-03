@@ -9,6 +9,8 @@ head: >-
           width: 32px
       }
   </style>
+tags:
+  - Resources
 ---
 
 I like reaction emojis and have spent an embarrassing amount of time

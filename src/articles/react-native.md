@@ -4,6 +4,8 @@ description:
   A growing list of terms you need to recognize when working in React Native
 date: 2021-10-07T12:00-0400
 verse: Psalm 19:14
+tags:
+  - Resources
 ---
 
 Building applications with React Native requires a high-level understanding of

@@ -2,6 +2,8 @@
 title: Podcasts
 description: A list of some of my favorite podcasts
 date: 2023-05-25T12:00-0400
+tags:
+  - Resources
 ---
 
 ## General Interest

@@ -5,6 +5,8 @@ description:
   generator.
 date: 2024-05-27T13:45-0400
 verse: Matthew 28:16
+tags:
+  - Resources
 ---
 
 Eleventy has ["Get Started" documentation](https://www.11ty.dev/docs/) that

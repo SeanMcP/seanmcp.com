@@ -2,6 +2,8 @@
 title: Git
 description: A garden all about Git
 date: 2021-05-04T12:00-0400
+tags:
+  - Resources
 ---
 
 Here are some of the git commands that I find useful when doing by work as a
