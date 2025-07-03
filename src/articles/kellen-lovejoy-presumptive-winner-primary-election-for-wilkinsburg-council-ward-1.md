@@ -8,6 +8,7 @@ description:
   Smith III. Final election results will be posted on Friday, May 23.
 date: 2025-05-21T06:43-0400
 tags:
+  - Local
   - Wilkinsburg
 flags:
 verse:
