@@ -7,7 +7,7 @@
         {% assign pageDescription = description | default: metadata.description %}
         {% assign pageImage = image | default: "/og-image.png" | url %}
         {% assign pageURL = "https://seanmcp.com" | append: page.url | url %}
-        <title>{{pageTitle}} - seanmcp.com</title>
+        <title>{{pageTitle}}{%- if pageTitle != "seanmcp.com" %} – seanmcp.com{%- endif -%}</title>
         <meta name="description" content="{{pageDescription}}">
 
         <meta property="og:site_name" content="seanmcp.com" />
@@ -40,11 +40,7 @@
         />
         <link rel="me" href="https://indieweb.social/@seanmcp" />
 
-        {% comment %} TODO: Serve whatever Google Fonts you settle on {% endcomment %}
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:wght@600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/fonts.css" />
         <link rel="stylesheet" href="/css/styles.css" />
         <link rel="stylesheet" href="/css/prism-theme.css" />
         <script type="module" src="/js/wc.js"></script>

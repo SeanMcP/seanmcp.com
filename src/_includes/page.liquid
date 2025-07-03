@@ -57,15 +57,17 @@ foot: >-
 
     header a {
         align-items: center;
-        background-image: url(/img/bg-pattern.svg);
         background-color: var(--accent-color);
+        background-image: var(--bg-image-diagonal-lines);
         color: var(--bg);
         display: inline-flex;
         font-weight: bold;
         font-size: var(--step-1);
         font-style: italic;
         justify-content: center;
-        padding: 0.15em 0.3em;
+        padding-block-start: 0.05em;
+        padding-block-end: 0.15em;
+        padding-inline: 0.3em;
         text-box: trim-both ex alphabetic;
         text-decoration: none;
 
@@ -133,6 +135,7 @@ foot: >-
 
     footer {
         color: var(--faint-text);
+        background-image: var(--bg-image-diagonal-lines);
         font-size: var(--step--1);
     }
 </style>
