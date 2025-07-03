@@ -2,6 +2,8 @@
 layout: page.liquid
 title: Board Games
 leaf: false
+permalink: /board-games/
+description: Recommendations and alternate rules for board games and card games.
 ---
 
 I enjoy playing board games with family and friends. They're a great vehicle for
@@ -55,5 +57,5 @@ These are some of my favorite games, broken down by category.
 
 ## Pages
 
-{%- assign pages = collections["Board Games"] | exclude_index | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse -%}
+{%- assign pages = collections["Board Games"] | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse -%}
 {% include "page-list" %}
