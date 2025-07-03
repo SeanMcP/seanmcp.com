@@ -5,6 +5,10 @@ description:
   game speed and simplicity for younger (or impatient) players.
 tagline: A faster and simpler way to play
 verse: Isaiah 41:3
+tags:
+  - Board Games
+  - Catan
+  - Speed Catan
 ---
 
 _Speed Catan_ is a variation of the popular board game _Catan_ that emphasizes

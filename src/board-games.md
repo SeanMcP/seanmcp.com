@@ -54,5 +54,5 @@ These are some of my favorite games, broken down by category.
 
 ## Pages
 
-{%- assign pages = collections["board-games"] | exclude_index | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse -%}
+{%- assign pages = collections["Board Games"] | exclude_index | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse -%}
 {% include "page-list" %}
