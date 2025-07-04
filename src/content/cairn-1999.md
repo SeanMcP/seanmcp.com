@@ -128,7 +128,7 @@ Every kid starts with a backpack and 2 items from the following table.
 | 13  | Pocket knife           |
 | 14  | Gameboy                |
 | 15  | Compass                |
-| 16  | Pet rock               |
+| 16  | School textbook        |
 | 17  | Binoculars             |
 | 18  | Discman & headphones   |
 | 19  | First-aid kit          |
