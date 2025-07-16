@@ -9,7 +9,16 @@ head: >-
   <style>content hr { margin-block: 3em; }</style>
 ---
 
-**July 2, 2025** — "Multigrain" just means they added corn to your normal cereal.
+**July 16, 2025** — I'm going to quote myself here:
+
+> **February 1, 2024** — It's easy to complain about things, and too often I
+> find myself taking the easy road. We have enough of that in the world: let's
+> pick a different path.
+
+---
+
+**July 2, 2025** — "Multigrain" just means they added corn to your normal
+cereal.
 
 ---
 
