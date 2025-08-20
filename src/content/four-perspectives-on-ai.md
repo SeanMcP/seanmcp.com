@@ -10,6 +10,7 @@ tags:
   - Articles
   - AI
 flags:
+image: /img/beliefs-about-ai.png
 verse: Romans 10:9
 prose: false
 ---
