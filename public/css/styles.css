@@ -169,6 +169,7 @@ blockquote>*:last-child {
   margin-block-end: 0;
 }
 
+pre,
 *:not(pre)>code,
 kbd {
   background-color: var(--off-bg);

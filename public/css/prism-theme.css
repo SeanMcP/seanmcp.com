@@ -33,7 +33,7 @@ code {
  */
 code[class*="language-"],
 pre[class*="language-"] {
-    background: var(--bg);
+    background: var(--off-bg);
     color: hsl(230, 8%, 24%);
     font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
     direction: ltr;
@@ -67,7 +67,7 @@ pre[class*="language-"] *::selection {
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre {
     padding: 1em;
     margin: 0.5em 0;
     overflow: auto;
