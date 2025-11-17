@@ -15,7 +15,7 @@
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11ty/eleventy-plugin-webc": "^0.11.2",
-    "cloudinary": "^2.5.1",
+    "cloudinary": "^2.7.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-footnote": "^4.0.0"
