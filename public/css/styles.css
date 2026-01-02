@@ -17,6 +17,7 @@
   --serif: Lora, Newsreader, Georgia, "Times New Roman", Times, serif;
   --sans: "Public Sans", "Source Sans 3", system-ui;
   --body-typeface: "Public Sans", var(--serif);
+  --mono: "Cascadia Code", "Source Code Pro", "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", Consolas, "Courier New", monospace;
 
   --bg: hsl(0, 0%, 100%);
   --off-bg: hsl(0, 0%, 95%);
