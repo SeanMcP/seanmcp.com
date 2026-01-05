@@ -1,46 +1,8 @@
 ---
 layout: base.liquid
 foot: >-
+    <script type="module" src="/js/keyboard-shortcuts.js"></script>
 ---
-<header>
-    <a aria-label="seanmcp.com" href="/">sm</a>
-</header>
-<main>
-{{ category }}
-    <layout-content style="padding-block: 3rem;">
-        <h1>{{ title }}</h1>
-        {%- if date -%}
-            <time datetime="{{ date }}">{{ date | readable_date }}</time>
-        {%- endif -%}
-        {%- if tagline -%}
-            <p style="color: var(--faint-text);">{{ tagline }}</p>
-        {%- endif -%}
-    </layout-content>
-    <layout-content id="content" class="{%- if prose -%}prose{%- endif -%}" style="padding-block-end: 8rem;">
-        {% if flags contains "RSS-ONLY" -%}
-        <call-out type="info">
-            This is a special article for <strong>the RSS Club</strong>, but feel
-            free to save or share this link. You can join by subscribing to <a href="/rss.xml">my RSS feed</a>.
-        </call-out>
-        {%- endif %}
-
-        {{ content }}
-
-        {% if leaf -%}
-        <div>
-            <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}" id="comment-link">Reply by email</a>
-            <bible-verse>{{verse | default: "Romans 5:8" }}</bible-verse>
-            {% assign url_chunks = page.url | split: "/" %}
-            {% assign category = url_chunks[1] %}
-            <span>More <a href="/{{category}}" data-url="{{page.url}}">{{category | readable_slug}}</a></span>
-        </div>
-        {%- endif %}
-    </layout-content>
-</main>
-<footer>
-    Since 2018 (SDG)
-</footer>
-
 <style>
     html {
         background-color: var(--bg);
@@ -55,32 +17,25 @@ foot: >-
         padding: 1rem;
     }
 
-    header a {
+    header {
         align-items: center;
-        background-color: var(--accent-color);
-        background-image: var(--bg-image-diagonal-lines);
-        color: var(--bg);
-        display: inline-flex;
-        font-weight: bold;
-        font-size: var(--step-1);
-        font-style: italic;
-        justify-content: center;
-        padding-block-start: 0.05em;
-        padding-block-end: 0.15em;
-        padding-inline: 0.3em;
-        text-box: trim-both ex alphabetic;
-        text-decoration: none;
+        border-bottom: 1px solid var(--off-bg);
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
 
-        &:is(:focus, :hover) {
-            background-color: var(--text);
+    header a {
+        font-size: var(--step--1);
+
+        &:not(:is(:focus, :hover)) {
+            color: var(--faint-text);
         }
     }
 
-    footer {
-        --bg-pattern-color: red;
-        xbackground-color: var(--off-bg);
-        background-image: url(/img/bg-pattern.svg);
-        text-align: center;
+    header nav {
+        display: flex;
+        column-gap: 1rem;
     }
 
     layout-content {
@@ -134,9 +89,51 @@ foot: >-
     }
 
     footer {
+        background-color: var(--off-bg);
         color: var(--faint-text);
-        background-image: var(--bg-image-diagonal-lines);
         font-size: var(--step--1);
+        text-align: center;
     }
 </style>
-<script type="module" src="/js/keyboard-shortcuts.js"></script>
+<header>
+    <a aria-label="seanmcp.com" href="/">SeanMcP</a>
+    <nav>
+        <a href="/about">About</a>
+        <a href="/search">Search</a>
+    </nav>
+</header>
+<main>
+    {{ category }}
+    <layout-content style="padding-block: 4rem 2rem;">
+        <h1>{{ title }}</h1>
+        {%- if date -%}
+            <time datetime="{{ date }}">{{ date | readable_date }}</time>
+        {%- endif -%}
+        {%- if tagline -%}
+            <p style="color: var(--faint-text);">{{ tagline }}</p>
+        {%- endif -%}
+    </layout-content>
+    <layout-content id="content" class="{%- if prose -%}prose{%- endif -%}" style="padding-block-end: 8rem;">
+        {% if flags contains "RSS-ONLY" -%}
+        <call-out type="info">
+            This is a special article for <strong>the RSS Club</strong>, but feel
+            free to save or share this link. You can join by subscribing to <a href="/rss.xml">my RSS feed</a>.
+        </call-out>
+        {%- endif %}
+
+        {{ content }}
+
+        {% if leaf -%}
+        <div>
+            <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}" id="comment-link">Reply by email</a>
+            <bible-verse>{{verse | default: "Romans 5:8" }}</bible-verse>
+            {% assign url_chunks = page.url | split: "/" %}
+            {% assign category = url_chunks[1] %}
+            <span>More <a href="/{{category}}" data-url="{{page.url}}">{{category | readable_slug}}</a></span>
+        </div>
+        {%- endif %}
+    </layout-content>
+</main>
+<footer>
+    Since 2018 (SDG)
+</footer>
