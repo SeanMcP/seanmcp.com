@@ -1,139 +1,140 @@
 ---
 layout: base.liquid
-foot: >-
+rootHead: >-
+    <style>
+        html {
+            background-color: var(--bg);
+        }
+        body {
+            display: grid;
+            grid-template-rows: max-content auto max-content;
+            min-height: 100vh;
+        }
+
+        header, footer {
+            padding: 1rem;
+        }
+
+        header {
+            align-items: center;
+            border-bottom: var(--stroke-width) solid var(--off-bg);
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        header a {
+            font-size: var(--step--1);
+
+            &:not(:is(:focus, :hover)) {
+                color: var(--faint-text);
+            }
+        }
+
+        header nav {
+            display: flex;
+            column-gap: 1rem;
+        }
+
+        layout-content {
+            display: block;
+            margin-inline: auto;
+            max-width: 70ch;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        #content {
+            font-family: var(--serif);
+            line-height: 1.4;
+        }
+
+        #content img {
+            display: block;
+            margin-inline: auto;
+            max-width: 100%;
+        }
+
+        #content>div:last-child {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+            margin-block-start: 4rem;
+        }
+        #content>div bible-verse {
+            justify-self: end;
+        }
+
+        h1 {
+            font-size: var(--step-4);
+            margin-block: 0;
+            margin-inline: auto;
+        }
+
+        h1:not(:last-child) {
+            margin-block-end: 0.5rem;
+        }
+
+        h1 + p {
+            margin-block-start: 0;
+        }
+
+        time {
+            display: block;
+            font-size: var(--step--1);
+            letter-spacing: 0.1ch;
+            text-transform: uppercase;
+        }
+
+        footer {
+            background-color: var(--off-bg);
+            color: var(--faint-text);
+            font-size: var(--step--1);
+            text-align: center;
+        }
+    </style>
+rootFoot: >-
     <script type="module" src="/js/keyboard-shortcuts.js"></script>
 ---
-<style>
-    html {
-        background-color: var(--bg);
-    }
-    body {
-        display: grid;
-        grid-template-rows: max-content auto max-content;
-        min-height: 100vh;
-    }
-
-    header, footer {
-        padding: 1rem;
-    }
-
-    header {
-        align-items: center;
-        border-bottom: 1px solid var(--off-bg);
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-    }
-
-    header a {
-        font-size: var(--step--1);
-
-        &:not(:is(:focus, :hover)) {
-            color: var(--faint-text);
-        }
-    }
-
-    header nav {
-        display: flex;
-        column-gap: 1rem;
-    }
-
-    layout-content {
-        display: block;
-        margin-inline: auto;
-        max-width: 70ch;
-        padding: 1rem;
-        width: 100%;
-    }
-
-    #content {
-        font-family: var(--serif);
-        line-height: 1.4;
-    }
-
-    #content img {
-        display: block;
-        margin-inline: auto;
-        max-width: 100%;
-    }
-
-    #content>div:last-child {
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: 1fr 1fr;
-        margin-block-start: 4rem;
-    }
-    #content>div bible-verse {
-        justify-self: end;
-    }
-
-    h1 {
-        font-size: var(--step-4);
-        margin-block: 0;
-        margin-inline: auto;
-    }
-
-    h1:not(:last-child) {
-        margin-block-end: 0.5rem;
-    }
-
-    h1 + p {
-        margin-block-start: 0;
-    }
-
-    time {
-        display: block;
-        font-size: var(--step--1);
-        letter-spacing: 0.1ch;
-        text-transform: uppercase;
-    }
-
-    footer {
-        background-color: var(--off-bg);
-        color: var(--faint-text);
-        font-size: var(--step--1);
-        text-align: center;
-    }
-</style>
 <header>
-    <a aria-label="seanmcp.com" href="/">SeanMcP</a>
-    <nav>
-        <a href="/about">About</a>
-        <a href="/search">Search</a>
-    </nav>
+  <a aria-label="seanmcp.com" href="/">SeanMcP</a>
+  <nav>
+    <a href="/about">About</a>
+    <a href="/search">Search</a>
+  </nav>
 </header>
 <main>
-    {{ category }}
-    <layout-content style="padding-block: 4rem 2rem;">
-        <h1>{{ title }}</h1>
-        {%- if date -%}
-            <time datetime="{{ date }}">{{ date | readable_date }}</time>
-        {%- endif -%}
-        {%- if tagline -%}
-            <p style="color: var(--faint-text);">{{ tagline }}</p>
-        {%- endif -%}
-    </layout-content>
-    <layout-content id="content" class="{%- if prose -%}prose{%- endif -%}" style="padding-block-end: 8rem;">
-        {% if flags contains "RSS-ONLY" -%}
-        <call-out type="info">
-            This is a special article for <strong>the RSS Club</strong>, but feel
-            free to save or share this link. You can join by subscribing to <a href="/rss.xml">my RSS feed</a>.
-        </call-out>
-        {%- endif %}
+  {{ category }}
+  <layout-content style="padding-block: 4rem 2rem;">
+    <h1>{{ title }}</h1>
+    {%- if date -%}
+      <time datetime="{{ date }}">{{ date | readable_date }}</time>
+    {%- endif -%}
+    {%- if tagline -%}
+      <p style="color: var(--faint-text);">{{ tagline }}</p>
+    {%- endif -%}
+  </layout-content>
+  <layout-content id="content" class="{%- if prose -%}prose{%- endif -%}" style="padding-block-end: 8rem;">
+    {% if flags contains 'RSS-ONLY' -%}
+      <call-out type="info">
+        This is a special article for <strong>the RSS Club</strong>, but feel free to save or share this link. You can
+        join by subscribing to <a href="/rss.xml">my RSS feed</a>.
+      </call-out>
+    {%- endif %}
 
-        {{ content }}
+    {{ content }}
 
-        {% if leaf -%}
-        <div>
-            <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}" id="comment-link">Reply by email</a>
-            <bible-verse>{{verse | default: "Romans 5:8" }}</bible-verse>
-            {% assign url_chunks = page.url | split: "/" %}
-            {% assign category = url_chunks[1] %}
-            <span>More <a href="/{{category}}" data-url="{{page.url}}">{{category | readable_slug}}</a></span>
-        </div>
-        {%- endif %}
-    </layout-content>
+    {% if leaf -%}
+      <div>
+        <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}" id="comment-link">Reply by email</a>
+        <bible-verse>{{ verse | default: 'Romans 5:8' }}</bible-verse>
+        {% assign url_chunks = page.url | split: '/' %}
+        {% assign category = url_chunks[1] %}
+        <span
+          >More <a href="/{{category}}" data-url="{{page.url}}">{{ category | readable_slug }}</a></span
+        >
+      </div>
+    {%- endif %}
+  </layout-content>
 </main>
-<footer>
-    Since 2018 (SDG)
-</footer>
+<footer>Since 2018 (SDG)</footer>
