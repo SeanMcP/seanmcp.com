@@ -7,7 +7,7 @@ permalink: /articles/
 description: Articles about mostly about software engineering, work, and life.
 ---
 
-To search for an article, use your browsers find feature or
+To search for an article, use your browser's find feature or
 [visit the search page](/search).
 
 ---
