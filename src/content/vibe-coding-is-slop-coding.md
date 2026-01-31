@@ -15,6 +15,8 @@ verse:
 prose: true
 ---
 
+<!-- Consider citing https://atmoio.substack.com/p/after-two-years-of-vibecoding-im -->
+
 Vibe coding has become the _de facto_ term for AI-driven software development.
 Some flavor it as spec-driven development (SpecDD) or classic test-driven
 development (TDD). In either case it is the AI that is driving; the actor
