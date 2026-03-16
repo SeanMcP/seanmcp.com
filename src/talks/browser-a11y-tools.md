@@ -1,12 +1,16 @@
 ---
 layout: page.liquid
 title: Browser A11y Tools
-description: Your favorite (and least favorite) browsers have accessibility tools built in that will help you create great experiences for everyone.
+description:
+  Your favorite (and least favorite) browsers have accessibility tools built in
+  that will help you create great experiences for everyone.
+date: 2023-01-01T12:00-0400
 ---
 
 <!-- Khan Academy GAAD Week 2023 -->
 
-Your favorite (and least favorite) browsers have accessibility tools built in that will help you create great experiences for everyone.
+Your favorite (and least favorite) browsers have accessibility tools built in
+that will help you create great experiences for everyone.
 
 ## Outline
 

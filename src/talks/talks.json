@@ -1,6 +1,4 @@
 {
   "layout": "page.liquid",
-  "tags": [
-    "talks"
-  ]
+  "tags": ["Talks"]
 }
