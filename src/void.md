@@ -9,6 +9,11 @@ head: >-
   <style>content hr { margin-block: 3em; }</style>
 ---
 
+**January 31, 2026** — Better is a little with righteousness than great revenues
+with injustice. Proverbs 16:8 (ESV)
+
+---
+
 **July 16, 2025** — I'm going to quote myself here:
 
 > **February 1, 2024** — It's easy to complain about things, and too often I
