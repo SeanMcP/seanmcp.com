@@ -46,6 +46,6 @@
         <script type="module" src="/js/wc.js"></script>
         {%- if head -%}{{head}}{%- endif -%}
     </head>
-    <body>{{ content }}</body>
+    <body data-category="{{ tags[0] }}">{{ content }}</body>
     {%- if foot -%}{{foot}}{%- endif -%}
 </html>
