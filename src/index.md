@@ -48,14 +48,14 @@ find a good organization system for it all.
 </article>
 
 <article class="category">
-<a href="/resources">Resources</a>
+<a href="/resources" style="--accent-color: var(--resources-color)">Resources</a>
 
 {%- assign pages = collections.Resources | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 3 -%}
 {% include "page-list" %}
 
 </article>
 
-<article class="category">
+<article class="category" style="--accent-color: var(--adventure-games-color)">
 <a href="/adventure-games">Adventure Games</a>
 
 {%- assign pages = collections["Adventure Games"] | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 3 -%}
@@ -63,7 +63,7 @@ find a good organization system for it all.
 
 </article>
 
-<article class="category">
+<article class="category" style="--accent-color: var(--board-games-color)">
 <a href="/board-games">Board Games</a>
 
 {%- assign pages = collections["Board Games"] | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 3 -%}
@@ -71,7 +71,7 @@ find a good organization system for it all.
 
 </article>
 
-<article class="category">
+<article class="category" style="--accent-color: var(--web-color)">
 <a href="/web">Web</a>
 
 {%- assign pages = collections.Web | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 3 -%}
@@ -79,7 +79,7 @@ find a good organization system for it all.
 
 </article>
 
-<article class="category">
+<article class="category" style="--accent-color: var(--local-color)">
 <a href="/local">Local</a>
 
 {%- assign pages = collections.Local | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 3 -%}
