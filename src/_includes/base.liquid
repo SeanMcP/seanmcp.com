@@ -7,8 +7,7 @@
     {% assign pageDescription = description | default: metadata.description %}
     {% assign pageImage = image | default: '/og-image.png' | url %}
     {% assign pageURL = 'https://seanmcp.com' | append: page.url | url %}
-    {% assign url_chunks = page.url | split: '/' %}
-    {% assign category = url_chunks[1] | default: 'None' %}
+    {% assign category = tags[0] | default: 'None' %}
     <title>
       {{ pageTitle }}
       {%- if pageTitle != 'seanmcp.com' %} – seanmcp.com{%- endif -%}

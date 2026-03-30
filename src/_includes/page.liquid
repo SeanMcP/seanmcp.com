@@ -61,13 +61,13 @@ rootHead: >-
             max-width: 100%;
         }
 
-        #content>div:last-child {
+        #content>.postscript:last-child {
             display: grid;
             gap: 1rem;
             grid-template-columns: 1fr 1fr;
             margin-block-start: 4rem;
         }
-        #content>div bible-verse {
+        #content>.postscript bible-verse {
             justify-self: end;
         }
 
@@ -98,6 +98,20 @@ rootHead: >-
             font-size: var(--step--1);
             text-align: center;
         }
+        
+        .attribution {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 4rem 1fr;
+
+            img {
+                border: var(--stroke-width) solid currentColor;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
     </style>
 rootFoot: >-
     <script type="module" src="/js/keyboard-shortcuts.js"></script>
@@ -108,10 +122,10 @@ rootFoot: >-
 <main>
   {{ category }}
   <layout-content style="padding-block: 4rem 2rem;">
-    <h1>{{ title }}</h1>
     {%- if date -%}
       <time datetime="{{ date }}">{{ date | readable_date }}</time>
     {%- endif -%}
+    <h1>{{ title }}</h1>
     {%- if tagline -%}
       <p style="color: var(--faint-text);">{{ tagline }}</p>
     {%- endif -%}
@@ -127,14 +141,22 @@ rootFoot: >-
     {{ content }}
 
     {% if leaf -%}
-      <div>
+      <div class="postscript">
         <a href="mailto:sean@seanmcp.com?subject=RE: {{ title }}" id="comment-link">Reply by email</a>
         <bible-verse>{{ verse | default: 'Romans 5:8' }}</bible-verse>
         {% assign url_chunks = page.url | split: '/' %}
-        {% assign category = url_chunks[1] %}
+        {% assign category = tags[0] %}
         <span
-          >More <a href="/{{category}}" data-url="{{page.url}}">{{ category | readable_slug }}</a></span
+          >More <a href="/{{category | slug}}" data-url="{{page.url}}">{{ category }}</a></span
         >
+      </div>
+      <hr>
+      <div class="attribution">
+        <img src="/img/seanmcp_thumbnail.png" alt="Photo of Sean McPherson">
+        <p>
+          <strong>Sean McPherson</strong> works as a software engineer at Khan Academy, and enjoys playing games and
+          watching soccer. He lives with family in Pittsburgh, PA.
+        </p>
       </div>
     {%- endif %}
   </layout-content>

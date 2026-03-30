@@ -1,13 +1,17 @@
 {% # sync: search.md %}
-<li class="page-list-item">
-    {%- if showCategory == true -%}
-    <a class="category" href="/{{ page.data.tags[0] }}">{{ page.data.tags[0] }}</a>
-    {%- endif -%}
-    <a href="{{ page.url }}">
-        {{- page | render_title | escape -}}
-    </a>
+<li class="page-list-item" data-category="{{ page.data.tags[0] }}">
+  <div class="page-list-item__meta">
     {%- if page.data.date -%}
-    <time datetime="{{ page.data.date }}">{{ page.data.date | readable_date }}</time>
-    {%- endif -%}
+      <time datetime="{{ page.data.date }}">{{ page.data.date | readable_date }}</time>
+      <i>in</i>
+    {% endif -%}
+    <a class="page-list-item__category" href="/{{ page.data.tags[0] | slug }}">{{ page.data.tags[0] }}</a>
+  </div>
+  <a class="page-list-item__title" href="{{ page.url }}">
+    {{- page | render_title | escape -}}
+  </a>
+  {%- if page.data.description -%}
+    <div>{{ page.data.description }}</div>
+  {%- endif -%}
 </li>
 {% # endsync %}

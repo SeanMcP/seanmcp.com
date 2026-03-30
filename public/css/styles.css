@@ -283,31 +283,34 @@ call-out div>*:last-child {
 
 .page-list {
   display: grid;
-  gap: 0.5rem;
+  gap: 2rem;
   list-style: none;
   padding: 0;
 }
 
 .page-list-item {
-  align-items: center;
+  /* align-items: center; */
   column-gap: 0.5em;
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
 
-  .category {
-    background-color: var(--accent-color);
-    color: var(--bg);
+  .page-list-item__meta {
     font-size: var(--step--2);
-    padding: 0.125rem 0.5rem;
+  }
 
-    &:not(:is(:focus, :hover)) {
-      text-decoration: none;
-    }
+  .page-list-item__category {
+    font-family: var(--sans);
+    letter-spacing: 0.1ch;
+    text-transform: uppercase;
   }
 
   & time {
     display: inline;
     font-size: var(--step--2);
+  }
+
+  .page-list-item__title {
+    font-size: var(--step-1);
   }
 }
 
