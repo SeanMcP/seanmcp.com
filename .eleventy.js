@@ -43,6 +43,24 @@ export default function (eleventyConfig) {
       );
     });
   });
+
+  eleventyConfig.addCollection("tags", function (collectionsAPI) {
+    const tagsSet = new Set();
+
+    collectionsAPI.getAll().forEach((item) => {
+      // Skip non-content items
+      if (!item.data || !Array.isArray(item.data.tags)) {
+        return;
+      }
+
+      item.data.tags.forEach((tag) => {
+        tagsSet.add(tag);
+      });
+    });
+
+    // Return sorted array of tag names for pagination
+    return Array.from(tagsSet).sort();
+  });
   /** Plugins */
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(feedPlugin, {
