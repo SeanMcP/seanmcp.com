@@ -294,6 +294,17 @@ call-out div>*:last-child {
   display: flex;
   flex-wrap: wrap;
 
+  .category {
+    background-color: var(--accent-color);
+    color: var(--bg);
+    font-size: var(--step--2);
+    padding: 0.125rem 0.5rem;
+
+    &:not(:is(:focus, :hover)) {
+      text-decoration: none;
+    }
+  }
+
   & time {
     display: inline;
     font-size: var(--step--2);

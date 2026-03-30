@@ -1,11 +1,18 @@
+---
+title: Overreact
+date: 2023-01-01T12:00-0400
+flags:
+  - DRAFT
+---
+
 <!-- Draft for Pittsburgh TechFest 2023 -->
 
 ## Outline
 
 - What is React?
-    - A JavaScript library for building user interfaces
-    - A component-based architecture
-    - A declarative approach to building UIs
+  - A JavaScript library for building user interfaces
+  - A component-based architecture
+  - A declarative approach to building UIs
 - Strengths
   - Community
     - Most popular front-end framework

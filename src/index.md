@@ -1,6 +1,6 @@
 ---
 layout: page.liquid
-title: Hey neighbor
+title: seanmcp.com
 description:
   The personal site of Sean McPherson (seanmcp), a software engineer in
   Pittsburgh, PA.
@@ -13,17 +13,14 @@ head: >-
     section[aria-label="Categories"] {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 2rem;
+      gap: 1rem;
       margin-block-start: 1rem;
     }
-    .category > a {
+    section[aria-label="Categories"] > a {
       background-color: var(--accent-color);
       color: var(--bg);
       display: block;
       padding: 0.75rem 1rem;
-    }
-    .category ol {
-      margin-block-end: 0;
     }
   </style>
 ---
@@ -38,53 +35,10 @@ find a good organization system for it all.
 <hr/>
 
 <section aria-label="Categories" id="categories">
-
-<article class="category">
 <a href="/articles">Software Engineering</a>
-
-{%- assign pages = collections.Articles | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 3 -%}
-{% include "page-list" %}
-
-</article>
-
-<article class="category">
 <a href="/resources" style="--accent-color: var(--resources-color)">Resources</a>
-
-{%- assign pages = collections.Resources | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 3 -%}
-{% include "page-list" %}
-
-</article>
-
-<article class="category" style="--accent-color: var(--adventure-games-color)">
-<a href="/adventure-games">Adventure Games</a>
-
-{%- assign pages = collections["Adventure Games"] | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 3 -%}
-{% include "page-list" %}
-
-</article>
-
-<article class="category" style="--accent-color: var(--board-games-color)">
-<a href="/board-games">Board Games</a>
-
-{%- assign pages = collections["Board Games"] | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 3 -%}
-{% include "page-list" %}
-
-</article>
-
-<article class="category" style="--accent-color: var(--web-color)">
-<a href="/web">Web</a>
-
-{%- assign pages = collections.Web | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 3 -%}
-{% include "page-list" %}
-
-</article>
-
-<article class="category" style="--accent-color: var(--local-color)">
-<a href="/local">Local</a>
-
-{%- assign pages = collections.Local | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse | slice: 0, 3 -%}
-{% include "page-list" %}
-
-</article>
-
+<a href="/adventure-games" style="--accent-color: var(--adventure-games-color)">Adventure Games</a>
+<a href="/board-games" style="--accent-color: var(--board-games-color)">Board Games</a>
+<a href="/web" style="--accent-color: var(--web-color)">Web</a>
+<a href="/local" style="--accent-color: var(--local-color)">Local</a>
 </section>

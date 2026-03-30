@@ -4,6 +4,7 @@ title: Thinking Outside the Bots
 description: A human-centric approach to model interactions
 type: conference
 slides: https://docs.google.com/presentation/d/1HKv77QBU5gYHO32eKOGsRDK9j5t2mu6YJC-3z_rHXqo/pub?start=false&loop=false&delayms=3000
+date: 2024-01-01T12:00-0400
 ---
 
 [Slides](https://docs.google.com/presentation/d/1HKv77QBU5gYHO32eKOGsRDK9j5t2mu6YJC-3z_rHXqo/pub?start=false&loop=false&delayms=3000)

@@ -16,18 +16,24 @@ rootHead: >-
         }
 
         header {
-            align-items: center;
-            border-bottom: var(--stroke-width) solid var(--off-bg);
-            display: flex;
-            justify-content: space-between;
-            text-align: center;
-        }
-
-        header a {
             font-size: var(--step--1);
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+            
+            & > a {
+                align-items: center;
+                background-color: var(--faint-text);
+                block-size: 3ch;   
+                color: var(--bg);
+                display: inline-flex;
+                inline-size: 3ch;
+                justify-content: center;
+                text-decoration: none;
 
-            &:not(:is(:focus, :hover)) {
-                color: var(--faint-text);
+                &:is(:focus, :hover) {
+                    background-color: var(--accent-color);
+                }
             }
         }
 
@@ -97,11 +103,7 @@ rootFoot: >-
     <script type="module" src="/js/keyboard-shortcuts.js"></script>
 ---
 <header>
-  <a aria-label="seanmcp.com" href="/">SeanMcP</a>
-  <nav>
-    <a href="/about">About</a>
-    <a href="/search">Search</a>
-  </nav>
+  <a aria-label="sean mcpherson" href="/">sm</a>
 </header>
 <main>
   {{ category }}

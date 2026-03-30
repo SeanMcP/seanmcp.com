@@ -1,11 +1,15 @@
 ---
 layout: page.liquid
 title: "Workshop: Publishing to npm"
+date: 2022-01-01T12:00-0400
 ---
 
 ## Overview
 
-In this workshop, we will learn about node modules and npm, the JavaScript package registry. We will create a simple module and then publish for the world to see. We will then learn about releasing updated packages by converting our original code from JavaScript to TypeScript.
+In this workshop, we will learn about node modules and npm, the JavaScript
+package registry. We will create a simple module and then publish for the world
+to see. We will then learn about releasing updated packages by converting our
+original code from JavaScript to TypeScript.
 
 ### Topics covered
 

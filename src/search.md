@@ -30,6 +30,8 @@ foot: >-
     data-readable-date="{{item.data.date | readable_date}}"
     data-title="{{ item | render_title | escape }}"
     data-tags="{{item.data.tags | join: ","}}"
+    data-category="{{item.data.tags[0]}}"
+    data-category-url="/{{item.data.tags[0] | slug}}"
     value="{{item.url}}"
 ></option>
 {%- endif -%}
@@ -42,6 +44,7 @@ foot: >-
 <!-- sync: page-list-item.liquid -->
 <template>
 <li class="page-list-item">
+    <a class="category" href="%CATEGORY_URL%">%CATEGORY%</a>
     <a href="%URL%">%TITLE%</a><time datetime="%DATETIME%">%READABLE_DATE%</time>
 </li>
 </template>

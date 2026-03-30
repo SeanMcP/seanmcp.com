@@ -10,6 +10,8 @@ customElements.define("fuzzy-search", class FuzzySearch extends HTMLElement {
     const data = []
     nodes.forEach(node => {
       data.push({
+        category: node.getAttribute("data-category"),
+        categoryURL: node.getAttribute("data-category-url"),
         datetime: node.getAttribute("data-datetime"),
         description: node.getAttribute("data-description"),
         label: node.getAttribute("data-label"),
@@ -53,6 +55,14 @@ customElements.define("fuzzy-search", class FuzzySearch extends HTMLElement {
       const clone = this.template.cloneNode(true);
       let html = clone.innerHTML.replace("%URL%", item.url)
         .replace("%TITLE%", item.title || item.url)
+      if (item.category && item.categoryURL) {
+        html = html
+          .replace("%CATEGORY_URL%", item.categoryURL)
+          .replace("%CATEGORY%", item.category);
+      } else {
+        // For items without a category, remove the category element
+        html = html.replace(/<a .*?class="category".*?<\/a>/, "")
+      }
       if (item.datetime) {
         html = html.replace("%DATETIME%", item.datetime).replace("%READABLE_DATE%", item.readableDate)
       } else {

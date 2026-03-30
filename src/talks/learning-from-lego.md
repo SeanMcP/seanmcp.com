@@ -1,9 +1,12 @@
 ---
 layout: page.liquid
 title: Learning from LEGO
-description: LEGO is a go-to analogy for programming, but what else can we learn from these little-plastic bricks on building quality software?
+description:
+  LEGO is a go-to analogy for programming, but what else can we learn from these
+  little-plastic bricks on building quality software?
 type: lightning
 slides: https://docs.google.com/presentation/d/1-aK0fRBYO-CNba8-FTgRmEcmEEM_6AbnNPDEFTcYBU0/edit?usp=sharing
+date: 2022-01-01T12:00-0400
 ---
 
 ## Outline
@@ -20,7 +23,8 @@ slides: https://docs.google.com/presentation/d/1-aK0fRBYO-CNba8-FTgRmEcmEEM_6Abn
 - Principles
   - Systematic
     - LEGO
-      - Every brick is designed to work within the LEGO System via a unifying "API"
+      - Every brick is designed to work within the LEGO System via a unifying
+        "API"
       - Input always equals output
       - Serves as a design constraint that simplifies iteration, expansion
     - Programming
@@ -28,23 +32,28 @@ slides: https://docs.google.com/presentation/d/1-aK0fRBYO-CNba8-FTgRmEcmEEM_6Abn
   - Composability
     - LEGO
       - Bricks can be combined into an infinite number of builds
-      - Each piece is designed to be used in conjunction with other unknown pieces
+      - Each piece is designed to be used in conjunction with other unknown
+        pieces
     - Programming
-      - Our functions need to be designed to work alongside and with unknown functions
+      - Our functions need to be designed to work alongside and with unknown
+        functions
   - Techniques
     - LEGO
       - Multiple building techniques to accomplish specific design challenges
-      - Each technique excels in a particular area, but may be ineffective in others
+      - Each technique excels in a particular area, but may be ineffective in
+        others
     - Programming
       - Learn and utilize different programming techniques and paradigms
       - Carefully choose the best technique for a given situation
-      - Resist the temptation to choose the inefficient familiar or clever option
+      - Resist the temptation to choose the inefficient familiar or clever
+        option
   - Testing
     - LEGO
       - Rigorous quality control to ensure that all bricks are high quality
       - Continual testing of connection strength when building
     - Programming
-      - Have systems in place at every level to verify the quality of production code
+      - Have systems in place at every level to verify the quality of production
+        code
       - Regularly stress test to ensure a high-quality product for users
   - Refactoring
     - LEGO

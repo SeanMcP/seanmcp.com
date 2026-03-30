@@ -1,7 +1,10 @@
 {% # sync: search.md %}
 <li class="page-list-item">
+    {%- if showCategory == true -%}
+    <a class="category" href="/{{ page.data.tags[0] }}">{{ page.data.tags[0] }}</a>
+    {%- endif -%}
     <a href="{{ page.url }}">
-        {{ page | render_title | escape }}
+        {{- page | render_title | escape -}}
     </a>
     {%- if page.data.date -%}
     <time datetime="{{ page.data.date }}">{{ page.data.date | readable_date }}</time>

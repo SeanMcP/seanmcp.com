@@ -1,8 +1,11 @@
 ---
 layout: page.liquid
 title: Intro to Deno
-description: This talk will introduce you to Deno, its features, and how it compares to Node.js. Then we'll illustrate some of those differences in a live demo.
+description:
+  This talk will introduce you to Deno, its features, and how it compares to
+  Node.js. Then we'll illustrate some of those differences in a live demo.
 type: lightning
+date: 2020-01-01T12:00-0400
 ---
 
 ## What is Deno?
