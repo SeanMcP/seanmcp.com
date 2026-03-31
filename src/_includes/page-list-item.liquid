@@ -2,10 +2,12 @@
 <li class="page-list-item" data-category="{{ page.data.tags[0] }}">
   <div class="page-list-item__meta">
     {%- if page.data.date -%}
-      <time datetime="{{ page.data.date }}">{{ page.data.date | readable_date }}</time>
-      {%- if showCategory %}
-        <i>in</i>
-      {% endif -%}
+      {%- unless page.data.flags contains "EVERGREEN" -%}
+        <time datetime="{{ page.data.date }}">{{ page.data.date | readable_date }}</time>
+        {%- if showCategory %}
+          <i>in</i>
+        {% endif -%}
+      {% endunless -%}
     {% endif -%}
     {%- if showCategory -%}
       <a class="page-list-item__category" href="/{{ page.data.tags[0] | slug }}">{{ page.data.tags[0] }}</a>

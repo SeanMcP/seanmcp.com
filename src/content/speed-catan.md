@@ -4,12 +4,15 @@ description:
   Speed Catan is a variation of the popular board game Catan that emphasizes
   game speed and simplicity for younger (or impatient) players.
 tagline: A faster and simpler way to play
+date: 2025-01-18T12:00:00-0400
 verse: Isaiah 41:3
 tags:
   - Games
   - Board Games
   - Catan
   - Speed Catan
+flags:
+  - EVERGREEN
 ---
 
 _Speed Catan_ is a variation of the popular board game _Catan_ that emphasizes

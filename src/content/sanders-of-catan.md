@@ -4,11 +4,14 @@ description:
   Sanders of Catan is a variation of the popular board game Catan that
   emphasizes game speed and competition, with a little bit of political humor.
 tagline: Playing the award-winning game like a true Socialist
+date: 2023-04-18T12:49:46-0400
 tags:
   - Games
   - Board Games
   - Catan
   - Sanders of Catan
+flags:
+  - EVERGREEN
 ---
 
 ## Improving on perfection

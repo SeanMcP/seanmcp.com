@@ -25,9 +25,9 @@ foot: >-
 {%- if item.data.title -%}
 
 <option
-    data-datetime="{{item.data.date}}"
+    data-datetime="{% unless item.data.flags contains 'EVERGREEN' %}{{item.data.date}}{% endunless %}"
     data-description="{{item.data.description | escape}}"
-    data-readable-date="{{item.data.date | readable_date}}"
+    data-readable-date="{% unless item.data.flags contains 'EVERGREEN' %}{{item.data.date | readable_date}}{% endunless %}"
     data-title="{{ item | render_title | escape }}"
     data-tags="{{item.data.tags | join: ","}}"
     data-category="{{item.data.tags[0]}}"
