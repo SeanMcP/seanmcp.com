@@ -31,19 +31,9 @@ export default function (eleventyConfig) {
           visuallyHiddenClass: "visually-hidden",
           wrapper: ['<div class="heading-container">', "</div>"],
         }),
-      })
+      }),
   );
   /** Collections */
-  eleventyConfig.addCollection("rssArticles", function (collectionsAPI) {
-    // QUESTION: Can we use filters here?
-    return collectionsAPI.getFilteredByTag("Articles").filter((item) => {
-      return (
-        !(item.data.flags || []).includes("DRAFT") &&
-        !item.inputPath.includes("index.md")
-      );
-    });
-  });
-
   eleventyConfig.addCollection("tags", function (collectionsAPI) {
     const tagsSet = new Set();
 
@@ -91,10 +81,52 @@ export default function (eleventyConfig) {
     // Convert sets to sorted arrays for easier use in templates
     const sortedTagsByCategory = {};
     for (const category in tagsByCategory) {
-      sortedTagsByCategory[category] = Array.from(tagsByCategory[category]).sort();
+      sortedTagsByCategory[category] = Array.from(
+        tagsByCategory[category],
+      ).sort();
     }
 
     return sortedTagsByCategory;
+  });
+
+  eleventyConfig.addCollection("rssArticles", function (collectionsAPI) {
+    // QUESTION: Can we use filters here?
+    return collectionsAPI.getFilteredByTag("Articles").filter((item) => {
+      return (
+        !(item.data.flags || []).includes("DRAFT") &&
+        !item.inputPath.includes("index.md")
+      );
+    });
+  });
+
+  eleventyConfig.addCollection("rssRPGs", function (collectionsAPI) {
+    // QUESTION: Can we use filters here?
+    return collectionsAPI.getFilteredByTag("RPGs").filter((item) => {
+      return (
+        !(item.data.flags || []).includes("DRAFT") &&
+        !item.inputPath.includes("index.md")
+      );
+    });
+  });
+
+  eleventyConfig.addCollection("rssGames", function (collectionsAPI) {
+    // QUESTION: Can we use filters here?
+    return collectionsAPI.getFilteredByTag("Games").filter((item) => {
+      return (
+        !(item.data.flags || []).includes("DRAFT") &&
+        !item.inputPath.includes("index.md")
+      );
+    });
+  });
+
+  eleventyConfig.addCollection("rssBlog", function (collectionsAPI) {
+    // QUESTION: Can we use filters here?
+    return collectionsAPI.getFilteredByTag("Blog").filter((item) => {
+      return (
+        !(item.data.flags || []).includes("DRAFT") &&
+        !item.inputPath.includes("index.md")
+      );
+    });
   });
 
   /** Plugins */
@@ -119,17 +151,95 @@ export default function (eleventyConfig) {
     },
   });
 
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "rss",
+    outputPath: "/rss.xml",
+    collection: {
+      name: "rssArticles",
+      limit: 0,
+    },
+    metadata: {
+      language: "en",
+      title: "seanmcp.com",
+      subtitle: "Technical guides, resources, and opinions from Sean McPherson",
+      base: "https://seanmcp.com/",
+      author: {
+        name: "Sean McPherson",
+        email: "sean@seanmcp.com",
+      },
+    },
+  });
+
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "rss",
+    outputPath: "/rpgs.xml",
+    collection: {
+      name: "rssRPGs",
+      limit: 0,
+    },
+    metadata: {
+      language: "en",
+      title: "seanmcp.com",
+      subtitle: "Table-top role-playing game content from Sean McPherson",
+      base: "https://seanmcp.com/",
+      author: {
+        name: "Sean McPherson",
+        email: "sean@seanmcp.com",
+      },
+    },
+  });
+
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "rss",
+    outputPath: "/games.xml",
+    collection: {
+      name: "rssGames",
+      limit: 0,
+    },
+    metadata: {
+      language: "en",
+      title: "seanmcp.com",
+      subtitle: "Board, card, and party game content from Sean McPherson",
+      base: "https://seanmcp.com/",
+      author: {
+        name: "Sean McPherson",
+        email: "sean@seanmcp.com",
+      },
+    },
+  });
+
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "rss",
+    outputPath: "/blog.xml",
+    collection: {
+      name: "rssBlog",
+      limit: 0,
+    },
+    metadata: {
+      language: "en",
+      title: "seanmcp.com",
+      subtitle: "Personal blog content from Sean McPherson",
+      base: "https://seanmcp.com/",
+      author: {
+        name: "Sean McPherson",
+        email: "sean@seanmcp.com",
+      },
+    },
+  });
   /** Filters */
   eleventyConfig.addFilter("debug_log", (value) => {
     console.log("🪲 DBG:", value);
   });
   eleventyConfig.addFilter("debug_dump", (value) => JSON.stringify(value));
   eleventyConfig.addFilter("readable_date", (datetime) =>
-    new Date(datetime).toLocaleDateString("en-US", localeDateStringConfig)
+    new Date(datetime).toLocaleDateString("en-US", localeDateStringConfig),
   );
-  eleventyConfig.addFilter("readable_slug", slug => {
-    return slug.split("-").map(word => word[0].toUpperCase() + word.slice(1)).join(" ");
-  })
+  eleventyConfig.addFilter("readable_slug", (slug) => {
+    return slug
+      .split("-")
+      .map((word) => word[0].toUpperCase() + word.slice(1))
+      .join(" ");
+  });
   eleventyConfig.addFilter("exclude_flag_in_prod", function (pages, ...flags) {
     if (this.eleventy.env.runMode === "build") {
       return pages.filter((page) => {
