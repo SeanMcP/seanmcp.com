@@ -2,7 +2,7 @@
 title: Read URL search parameters with JavaScript
 description:
   How to use URLSearchParams to parse any search parameters string like
-  window.location.search
+  window.location.search.
 date: 2021-05-01T12:00-0400
 tags:
   - Articles

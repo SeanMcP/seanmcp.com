@@ -1,6 +1,6 @@
 ---
 title: GPTs read text files better than markdown
-description: Use text files instead of markdown with OpenAI’s custom GPTs
+description: Use text files instead of markdown with OpenAI’s custom GPTs.
 tags:
   - Articles
   - AI

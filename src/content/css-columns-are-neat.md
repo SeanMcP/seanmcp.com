@@ -2,7 +2,7 @@
 title: CSS columns are neat
 description:
   The columns property is CSS divides content among a set number or width of
-  columns
+  columns.
 tags:
   - Articles
   - CSS

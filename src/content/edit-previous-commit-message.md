@@ -1,6 +1,6 @@
 ---
 title: Edit a previous commit message
-description: The steps to edit recent or ancient commit messages
+description: The steps to edit recent or ancient commit messages.
 date: 2019-08-23T12:00-0400
 tags:
   - Articles

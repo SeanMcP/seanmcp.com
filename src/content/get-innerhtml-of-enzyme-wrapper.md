@@ -2,7 +2,7 @@
 title: Get innerHTML of Enzyme wrapper
 description:
   Writing a little helper function to grab the HTML of all children of a shallow
-  wrapper in Enzyme
+  wrapper in Enzyme.
 date: 2021-07-12T12:00-0400
 tags:
   - Articles

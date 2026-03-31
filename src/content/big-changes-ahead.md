@@ -1,7 +1,7 @@
 ---
 title: "Big changes ahead"
 description:
-  Soon everything will be an article, and articles will be more like gardens
+  Soon everything will be an article, and articles will be more like gardens.
 tags:
   - Blog
 date: 2024-07-25T06:46-0400

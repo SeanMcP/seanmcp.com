@@ -32,6 +32,7 @@ export function getTimestamp(date) {
 
 const template = `---
 title: %TITLE%
+# A description should spoil the content with a complete sentence.
 description:
 date: ${getTimestamp()}
 tags:

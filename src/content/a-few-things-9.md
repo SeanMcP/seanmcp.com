@@ -2,7 +2,7 @@
 title: "A Few Things #9"
 description:
   A reflection on silence contemplation, the art of bookmaking, semantic
-  satiation, and soccer logo design
+  satiation, and soccer logo design.
 tags:
   - Blog
   - A Few Things

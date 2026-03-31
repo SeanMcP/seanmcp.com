@@ -2,7 +2,7 @@
 title: QA questions for everyone to ask
 description:
   Everyone on the product team should ask verifying, discovery, and critical
-  questions to ensure quality
+  questions to ensure quality.
 tags:
   - Articles
   - Software Engineering

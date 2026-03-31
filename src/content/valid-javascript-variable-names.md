@@ -2,7 +2,7 @@
 title: Valid JavaScript variable names
 description:
   Mathias Bynen has a handy tool for determining what characters are allowed in
-  a JS variable name
+  a JS variable name.
 tags:
   - Articles
   - JavaScript

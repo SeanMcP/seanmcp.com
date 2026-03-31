@@ -2,7 +2,7 @@
 title: Fix trailing whitespace in Astro components
 description:
   There is an issue with the Astro compiler that leaves unwanted whitespace in
-  your elements, and this workaround will solve the problem until it's resolved
+  your elements, and this workaround will solve the problem until it's resolved.
 tags:
   - Articles
   - Astro

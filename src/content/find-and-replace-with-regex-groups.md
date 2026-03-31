@@ -1,7 +1,7 @@
 ---
 title: Find and replace with Regex groups
 description:
-  Create Regex groups with parentheses for powerful find/replace patterns
+  Create Regex groups with parentheses for powerful find/replace patterns.
 tags:
   - Articles
   - Regex

@@ -2,7 +2,7 @@
 title: Suffering from recipe-blog syndrome
 description:
   I feel a gravitational pull to write long-winded introductions to my articles,
-  but it's time to break out of that orbit
+  but it's time to break out of that orbit.
 tags:
   - Blog
 date: 2023-05-15T06:50-0400

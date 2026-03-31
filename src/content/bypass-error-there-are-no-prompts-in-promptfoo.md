@@ -2,7 +2,7 @@
 title: 'Bypass "Error: There are no prompts" in promptfoo'
 description:
   Adding a space to the end of the prompt text appears to be a workaround for
-  this error
+  this error.
 tags:
   - Articles
   - AI

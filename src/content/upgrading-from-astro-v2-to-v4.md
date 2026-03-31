@@ -2,7 +2,7 @@
 title: "Upgrading from Astro v2 to v4"
 description:
   I needed to update dependencies, change a client directive, and then update
-  configuration in Netlify
+  configuration in Netlify.
 tags:
   - Blog
   - Astro

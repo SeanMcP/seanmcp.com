@@ -2,7 +2,7 @@
 title: Web-browser Accessibility Tools
 description:
   Chrome, Edge, Firefox, and Safari all have built-in accessibility tools to
-  help you create accessible experiences for all
+  help you create accessible experiences for all.
 tags:
   - Articles
   - A11y

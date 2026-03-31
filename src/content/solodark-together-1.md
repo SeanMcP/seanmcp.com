@@ -2,7 +2,7 @@
 title: "SoloDark Together: Session 1"
 description:
   Retelling the first session playing the SoloDark rules for Shadowdark with two
-  players
+  players.
 date: 2025-04-23T06:00-0400
 verse:
 tags:

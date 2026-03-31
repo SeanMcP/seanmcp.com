@@ -2,7 +2,7 @@
 title: Let's stop skinning cats
 description:
   Proposing an alternative, more constructive idiom to "there's more than one
-  way to skin a cat"
+  way to skin a cat".
 date: 2021-02-18T12:00-0400
 tags:
   - Articles

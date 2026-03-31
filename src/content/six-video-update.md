@@ -1,6 +1,6 @@
 ---
 title: Six video update
-description: Lessons learned from publishing six videos on YouTube
+description: Lessons learned from publishing six videos on YouTube.
 date: 2020-06-12T12:00-0400
 tags:
   - Articles

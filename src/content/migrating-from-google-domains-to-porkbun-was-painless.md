@@ -2,7 +2,7 @@
 title: Migrating from Google Domains to Porkbun was...
 description:
   I was able to transfer two domains from Google to Porkbun without any issues
-  or downtime
+  or downtime.
 tags:
   - Articles
   - Porkbun

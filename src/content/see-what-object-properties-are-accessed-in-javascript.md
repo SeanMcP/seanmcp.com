@@ -2,7 +2,7 @@
 title: See what object properties are accessed in JavaScript
 description:
   JavaScript's Proxy object can be used to watch an object and respond whenever
-  any of its properties are accessed or reassigned
+  any of its properties are accessed or reassigned.
 tags:
   - Articles
   - JavaScript

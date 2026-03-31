@@ -2,7 +2,7 @@
 title: Is it better to have one large file or multiple small files with GPTs?
 description:
   Using a single file seems to reduce response times, but there is more to the
-  story
+  story.
 tags:
   - Articles
   - AI

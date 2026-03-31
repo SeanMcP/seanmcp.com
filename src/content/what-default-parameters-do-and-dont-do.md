@@ -1,6 +1,6 @@
 ---
 title: "What default parameters do (and don't do)"
-description: Correcting my mental model
+description: Correcting my mental model.
 date: 2020-01-13T12:00-0400
 tags:
   - Articles

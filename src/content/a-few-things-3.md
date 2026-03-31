@@ -2,7 +2,7 @@
 title: "A Few Things #3"
 description:
   The Japanese art of repair, a movie/TV recommendation service, a relaxing
-  gardening game, and answering the question "Can elephants swim?"
+  gardening game, and answering the question "Can elephants swim?".
 tags:
   - Blog
   - A Few Things

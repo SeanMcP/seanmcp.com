@@ -1,7 +1,7 @@
 ---
 title: Migrating to IndieWeb.social
 description:
-  A little write-up about my migration from Fosstodon to IndieWeb.social
+  A little write-up about my migration from Fosstodon to IndieWeb.social.
 tags:
   - Articles
   - Mastodon

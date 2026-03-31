@@ -2,7 +2,7 @@
 title: "A Few Things #5"
 description:
   Handwriting research, medieval fighting snails, wholesome comics, and banana
-  price projections
+  price projections.
 tags:
   - Blog
   - A Few Things

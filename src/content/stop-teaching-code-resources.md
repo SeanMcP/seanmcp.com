@@ -2,7 +2,7 @@
 title: '"Stop Teaching Code" in JavaScript'
 description:
   A quick review of Jeff Olson's article on teaching code with translated
-  examples
+  examples.
 date: 2019-11-26T12:00-0400
 tags:
   - Articles

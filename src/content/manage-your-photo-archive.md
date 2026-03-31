@@ -2,7 +2,7 @@
 title: "Manage your photo archive"
 description:
   Take a minute to review all photos from today's date and delete the ones you
-  don't need
+  don't need.
 tags:
   - Articles
   - Digital Life

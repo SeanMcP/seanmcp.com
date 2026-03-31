@@ -2,7 +2,7 @@
 title: What is the song from Boston Dynamic's Spot Launch video?
 description:
   Using the Google app's music recognition feature, I was able to identify the
-  song as "Banana" by Stony Pony
+  song as "Banana" by Stony Pony.
 date: 2021-08-10T12:00-0400
 tags:
   - Blog

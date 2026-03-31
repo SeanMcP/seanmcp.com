@@ -2,7 +2,7 @@
 title: Fix failed Fastify deploy on Render
 description:
   To get a boilerplate Fastify app to deploy on Render.com, you need to read to
-  listen on PORT environment variable
+  listen on PORT environment variable.
 tags:
   - Articles
   - Debugging

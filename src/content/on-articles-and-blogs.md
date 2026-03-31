@@ -1,6 +1,6 @@
 ---
 title: "On articles and blogs"
-description: Thoughts on avoiding then embracing the word "blog"
+description: Thoughts on avoiding then embracing the word "blog".
 tags:
   - Blog
   - Blogging

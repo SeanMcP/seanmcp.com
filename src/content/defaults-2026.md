@@ -1,6 +1,6 @@
 ---
 title: Defaults 2026
-description: A list of the default apps that I use in 2026
+description: A list of the default apps that I use in 2026.
 date: 2026-01-28T09:48-0400
 tags:
   - Articles

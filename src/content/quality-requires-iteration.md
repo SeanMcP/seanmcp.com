@@ -2,7 +2,7 @@
 title: Quality requires iteration
 description:
   You're not going to write the perfect program on your first attempt; it's
-  going to take multiple iterations to arrive at the best solution
+  going to take multiple iterations to arrive at the best solution.
 tags:
   - Articles
   - Programming

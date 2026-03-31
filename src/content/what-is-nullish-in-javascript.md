@@ -2,7 +2,7 @@
 title: What is nullish in JavaScript?
 description:
   Nullish values are null and undefined, and it's important to thing of them
-  separately from falsy values
+  separately from falsy values.
 tags:
   - Articles
   - JavaScript

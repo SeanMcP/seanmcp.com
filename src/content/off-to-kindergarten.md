@@ -1,7 +1,7 @@
 ---
 title: Off to Kindergarten
 description:
-  My first born starts Kindergarten today and boy am I going to miss him
+  My first born starts Kindergarten today and boy am I going to miss him.
 tags:
   - Blog
   - Personal

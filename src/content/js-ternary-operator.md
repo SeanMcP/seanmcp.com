@@ -1,6 +1,6 @@
 ---
 title: "JS Basics: Ternary Operator"
-description: Demystifying the inline if statement
+description: Demystifying the inline if statement.
 date: 2019-02-08T12:00-0400
 tags:
   - Articles

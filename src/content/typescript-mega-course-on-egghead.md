@@ -1,6 +1,6 @@
 ---
 title: TypeScript mega-course on Egghead.io
-description: Creating a playlist to learn TypeScript
+description: Creating a playlist to learn TypeScript.
 date: 2020-06-15T12:00-0400
 tags:
   - Articles

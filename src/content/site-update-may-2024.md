@@ -2,7 +2,7 @@
 title: "Site update May 2024"
 description:
   tl;dr I removed dark mode, `/contact`, likes, analytics, Netlify, and changed
-  random articles
+  random articles.
 tags:
   - Blog
 date: 2024-05-04T14:29-0400

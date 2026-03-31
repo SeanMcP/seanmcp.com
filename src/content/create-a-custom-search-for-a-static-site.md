@@ -2,7 +2,7 @@
 title: "Create a custom search for a static site"
 description:
   A high-level overview of why and how I built a URL-powered fuzzy search
-  feature for this site
+  feature for this site.
 tags:
   - Articles
   - Astro

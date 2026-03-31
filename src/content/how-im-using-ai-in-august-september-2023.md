@@ -2,7 +2,7 @@
 title: How I'm using AI in August & September 2023
 description:
   GitHub Copilot and Warp are the only two AI-powered products that I used in
-  August and September, with Copilot being by far the most valuable
+  August and September, with Copilot being by far the most valuable.
 tags:
   - Articles
   - AI

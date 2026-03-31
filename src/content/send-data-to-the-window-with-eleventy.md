@@ -1,6 +1,6 @@
 ---
 title: Send data to the window with Eleventy
-description: How to create a shortcode to expose data for client-side scripts
+description: How to create a shortcode to expose data for client-side scripts.
 date: 2021-01-25T12:00-0400
 tags:
   - Articles

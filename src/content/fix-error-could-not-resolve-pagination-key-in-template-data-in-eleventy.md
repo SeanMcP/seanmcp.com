@@ -3,7 +3,7 @@ title:
   'Fix "Error: Could not resolve pagination key in template data" in Eleventy'
 description:
   Not a true fix, but a decent workaround when paginating collections in
-  Eleventy
+  Eleventy.
 date: 2021-02-06T12:00-0400
 tags:
   - Articles

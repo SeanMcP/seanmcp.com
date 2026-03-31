@@ -1,6 +1,6 @@
 ---
 title: 1000 commits
-description: This article marks the 1000th commit to this website's repository
+description: This article marks the 1000th commit to this website's repository.
 tags:
   - Blog
 date: 2023-08-11T06:50-0400

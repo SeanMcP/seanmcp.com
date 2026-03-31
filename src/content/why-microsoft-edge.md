@@ -1,7 +1,7 @@
 ---
 title: "Why Microsoft Edge?"
 description:
-  Edge has all of the features of Chrome with some additional features
+  Edge has all of the features of Chrome with some additional features.
 tags:
   - Articles
   - Browsers

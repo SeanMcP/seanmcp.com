@@ -2,7 +2,7 @@
 title: Farewell Create React App
 description:
   The React team is looking to transition Create React App from a project
-  scaffold to a launcher that includes options other than client-side rendering
+  scaffold to a launcher that includes options other than client-side rendering.
 tags:
   - Articles
   - React

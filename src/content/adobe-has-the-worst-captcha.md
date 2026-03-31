@@ -2,7 +2,7 @@
 title: "Adobe has the worst captcha"
 description:
   To create an Adobe account, you are required to count the value of a pile of
-  dice 120 times
+  dice 120 times.
 tags:
   - Blog
   - User Experience

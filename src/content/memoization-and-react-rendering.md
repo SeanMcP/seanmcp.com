@@ -1,6 +1,6 @@
 ---
 title: Memoization and React rendering
-description:
+description: How React re-rendering works and when memoization can help as your application grows.
 date: 2025-06-17T13:43-0400
 tags:
   - Articles

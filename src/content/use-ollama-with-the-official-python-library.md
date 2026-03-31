@@ -1,7 +1,7 @@
 ---
 title: "Use Ollama with the official Python library"
 description:
-  Get started working with AI, Ollama, and large-language models in four steps
+  Get started working with AI, Ollama, and large-language models in four steps.
 tags:
   - Articles
   - AI

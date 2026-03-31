@@ -2,7 +2,7 @@
 title: How I'm using AI in May 2023
 description:
   GitHub Copilot is the top product this month, but Bard, Bing, ChatGPT, and
-  Warp all have their uses
+  Warp all have their uses.
 tags:
   - Articles
   - AI

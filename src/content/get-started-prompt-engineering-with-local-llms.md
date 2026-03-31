@@ -2,7 +2,7 @@
 title: "Get started prompt engineering with local LLMs"
 description:
   Ollama makes it easy to run LLMs locally and provides experimental
-  compatibility with OpenAI's APIs
+  compatibility with OpenAI's APIs.
 tags:
   - Articles
   - AI

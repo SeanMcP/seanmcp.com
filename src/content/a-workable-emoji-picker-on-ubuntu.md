@@ -2,7 +2,7 @@
 title: A workable emoji picker on Ubuntu
 description:
   The default GNOME emoji picker is limited to certain applications, but you can
-  find copyable emojis in the Activities view
+  find copyable emojis in the Activities view.
 tags:
   - Articles
   - Linux

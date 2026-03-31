@@ -2,7 +2,7 @@
 title: "Measuring and cutting"
 description:
   Measuring twice, cut once is good advice for woodworking but maybe not for
-  software engineering
+  software engineering.
 tags:
   - Articles
   - Software Engineering

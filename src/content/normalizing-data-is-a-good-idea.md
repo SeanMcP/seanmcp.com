@@ -2,7 +2,7 @@
 title: Normalizing data is a good idea
 description:
   By transforming your data into a consistent structure, you can reduce the
-  complexity of your code
+  complexity of your code.
 tags:
   - Articles
   - Programming

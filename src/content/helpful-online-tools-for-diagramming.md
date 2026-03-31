@@ -2,7 +2,7 @@
 title: Helpful online tools for diagramming
 description:
   Features and examples for some of the tools that I use to create illustrations
-  and diagrams
+  and diagrams.
 date: 2021-12-15T12:00-0400
 tags:
   - Articles

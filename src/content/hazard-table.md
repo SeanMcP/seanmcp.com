@@ -1,6 +1,6 @@
 ---
 title: Hazard table
-description:
+description: A d6 hazard table lightly edited from the Necropraxis Productions Hazard System.
 date: 2025-06-02T15:23-0400
 tags:
   - RPGs

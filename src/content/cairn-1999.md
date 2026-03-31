@@ -1,6 +1,6 @@
 ---
 title: Cairn 1999
-description:
+description: A Cairn RPG hack inspired by Stranger Things and set in a small Pennsylvania town in the late 1990s.
 date: 2025-07-04T06:57-0400
 tags:
   - RPGs

@@ -2,7 +2,7 @@
 title: "Adding a components page"
 description:
   After a recommendation from Syntax.fm, I added a public page to see all of the
-  components that I’ve created for this site
+  components that I’ve created for this site.
 tags:
   - Blog
   - Storybook

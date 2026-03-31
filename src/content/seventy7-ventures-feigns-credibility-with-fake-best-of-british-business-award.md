@@ -4,7 +4,7 @@ title:
   award'
 description:
   The new majority shareholders of Inverness Caledonian Thistle FC are passing
-  sponsored content off as an award from the Independent
+  sponsored content off as an award from the Independent.
 tags:
   - Blog
   - Soccer

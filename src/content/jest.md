@@ -1,7 +1,7 @@
 ---
 title: Jest
 description:
-  A growing list of little things that make working with Jest a little better
+  A growing list of little things that make working with Jest a little better.
 date: 2022-10-06T11:58-0400
 verse: Acts 17:11
 tags:

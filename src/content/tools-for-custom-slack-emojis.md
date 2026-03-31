@@ -1,6 +1,6 @@
 ---
 title: Tools for custom Slack emojis
-description: The full toolbelt for making your own custom Slack emojis
+description: The full toolbelt for making your own custom Slack emojis.
 date: 2020-04-14T12:00-0400
 tags:
   - Articles

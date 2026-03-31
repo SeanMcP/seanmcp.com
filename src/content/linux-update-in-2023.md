@@ -2,7 +2,7 @@
 title: Linux Update in 2023
 description:
   After experimenting with Linux last year, I am happily using Ubuntu on a
-  Lenovo Yoga as my personal computer
+  Lenovo Yoga as my personal computer.
 tags:
   - Articles
   - Linux

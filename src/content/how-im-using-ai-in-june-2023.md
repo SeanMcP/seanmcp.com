@@ -2,7 +2,7 @@
 title: How I'm Using AI in June 2023
 description:
   GitHub Copilot has pulled away from the rest as the only AI product/service
-  that I use regularly
+  that I use regularly.
 tags:
   - Articles
   - AI

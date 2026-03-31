@@ -2,7 +2,7 @@
 title: TypeScript is misleading you about String.split
 description:
   TypeScript thinks String.prototype.split returns an array of strings, but the
-  reality is that
+  reality is that.
 date: 2026-01-08T16:18-0400
 tags:
   - Articles

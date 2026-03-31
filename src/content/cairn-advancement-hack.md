@@ -2,7 +2,7 @@
 title: Cairn Advancement Hack
 description:
   An additive hack for Cairn that enables characters to grow through failed
-  attribute saves
+  attribute saves.
 date: 2026-01-03T10:01-0400
 tags:
   - RPGs

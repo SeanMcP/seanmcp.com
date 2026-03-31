@@ -1,7 +1,7 @@
 ---
 title: "A Few Things #8"
 description:
-  Tree mails, disappearing cockroaches, and an entry in the game dev log genre
+  Tree mails, disappearing cockroaches, and an entry in the game dev log genre.
 tags:
   - Blog
   - A Few Things

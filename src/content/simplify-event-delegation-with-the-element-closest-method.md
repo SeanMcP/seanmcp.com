@@ -2,7 +2,7 @@
 title: "Simplify event delegation with the Element.closest method"
 description:
   Event delegation is a useful pattern for managing descendant interactions and
-  Element.closest helps with simple and robust code
+  Element.closest helps with simple and robust code.
 tags:
   - Articles
   - JavaScript

@@ -2,7 +2,7 @@
 title: "CSS nesting is (almost) ready"
 description:
   It's not quite ready for production use, but we are very close to getting
-  native CSS nesting
+  native CSS nesting.
 tags:
   - Articles
   - CSS

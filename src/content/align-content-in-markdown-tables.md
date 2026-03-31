@@ -2,7 +2,7 @@
 title: "Align content in Markdown tables"
 description:
   You can use colons in the header row separator to align content in a Markdown
-  table
+  table.
 tags:
   - Articles
   - Markdown

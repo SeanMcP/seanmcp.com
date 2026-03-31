@@ -2,7 +2,7 @@
 title: "Create a useIsOnline React hook"
 description:
   Using the Navigator's onLine property and online/offline events to create a
-  custom React hook
+  custom React hook.
 tags:
   - Articles
   - React

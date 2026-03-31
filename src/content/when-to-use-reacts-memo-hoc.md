@@ -2,7 +2,7 @@
 title: When to use React's memo HOC
 description:
   The memo higher-order component can prevent your component for re-rendering
-  unnecessarily, but you should use caution before using it
+  unnecessarily, but you should use caution before using it.
 date: 2022-04-28T12:00-0400
 tags:
   - Articles

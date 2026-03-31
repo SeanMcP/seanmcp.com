@@ -2,7 +2,7 @@
 title: "A Few Things #6"
 description:
   Reflections on digital waste, a great green wall, beautiful illuminations, and
-  a fun trivia game
+  a fun trivia game.
 tags:
   - Blog
   - A Few Things

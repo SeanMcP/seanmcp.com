@@ -1,6 +1,6 @@
 ---
 title: Hello RSS Club!
-description: This is the first article for the RSS Club
+description: This is the first article for the RSS Club.
 tags:
   - Blog
 date: 2023-02-28T07:10-0400

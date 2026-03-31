@@ -1,7 +1,7 @@
 ---
 title: "Spellcasting Chaos Table"
 description:
-  Adding a little chaos to spellcasting in your adventure games (TTRPGs)
+  Adding a little chaos to spellcasting in your adventure games (TTRPGs).
 date: 2024-07-23T09:40-0400
 verse: Genesis 1:2
 tags:

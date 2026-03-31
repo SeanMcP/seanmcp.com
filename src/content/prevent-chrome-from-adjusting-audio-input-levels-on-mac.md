@@ -2,7 +2,7 @@
 title: Prevent Chrome from adjusting audio input levels on Mac
 description:
   A clever extension can prevent Google Meet from muting your bluetooth
-  microphone
+  microphone.
 date: 2022-01-11T12:00-0400
 tags:
   - Articles

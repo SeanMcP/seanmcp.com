@@ -1,6 +1,6 @@
 ---
 title: What to do when you find a dead deer on the street in Allegheny County?
-description: Roadkill on state roads are disposed of by PennDOT
+description: Roadkill on state roads are disposed of by PennDOT.
 date: 2025-03-29T13:35-0400
 tags:
   - Blog

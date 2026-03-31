@@ -2,7 +2,7 @@
 title: "ChatGPT 4o isn't a good researcher yet"
 description:
   When asked, ChatGPT provides sources but they don't contain the information
-  provided
+  provided.
 tags:
   - Articles
   - AI

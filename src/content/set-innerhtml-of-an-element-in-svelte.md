@@ -1,6 +1,6 @@
 ---
 title: Set innerHTML of an element in Svelte
-description: You can use an HTML expression to add valid markup to an element
+description: You can use an HTML expression to add valid markup to an element.
 date: 2021-02-25T12:00-0400
 tags:
   - Articles

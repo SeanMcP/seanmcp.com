@@ -1,6 +1,7 @@
 ---
 title: Lost Stranger Things finale mid-credits scene
 description:
+  A totally-authentic screenplay discovered on a doorstep on New Year's Eve.
 date: 2026-01-01T09:55-0400
 tags:
   - Blog

@@ -1,6 +1,6 @@
 ---
 title: Find an iOS simulator identifier
-description: How to find a simulator ID using the Xcode UI or terminal
+description: How to find a simulator ID using the Xcode UI or terminal.
 date: 2021-10-04T12:00-0400
 tags:
   - Articles

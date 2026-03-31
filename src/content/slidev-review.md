@@ -1,6 +1,6 @@
 ---
 title: Sli.dev review
-description: A great tool that gets out of the way when creating slides
+description: A great tool that gets out of the way when creating slides.
 tags:
   - Articles
   - Review

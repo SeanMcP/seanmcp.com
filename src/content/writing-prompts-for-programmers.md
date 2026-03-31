@@ -2,7 +2,7 @@
 title: Writing Prompts for Programmers
 description:
   A list of software-engineering focused writing prompts to help programmers get
-  started writing
+  started writing.
 date: 2023-07-04T10:51-0400
 verse: Proverbs 3:3
 head: >-

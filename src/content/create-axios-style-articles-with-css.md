@@ -2,7 +2,7 @@
 title: Create Axios-style articles with CSS
 description:
   We can use inline blocks to bring subheadings on the same line as the
-  following text while preserving the visual spacing
+  following text while preserving the visual spacing.
 tags:
   - Articles
   - CSS

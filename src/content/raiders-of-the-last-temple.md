@@ -1,6 +1,6 @@
 ---
 title: Raiders of the Last Temple
-description: A light modification of Cairn for Indiana-Jones-inspired adventures
+description: A light modification of Cairn for Indiana-Jones-inspired adventures.
 date: 2025-06-02T21:08-0400
 tags:
   - RPGs

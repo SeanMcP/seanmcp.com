@@ -2,7 +2,7 @@
 title: Zed is a rocket-powered skateboard
 description:
   Zed is a new Rust-powered editor by the creator of Atom that focuses on speed
-  but lacks a lot of features
+  but lacks a lot of features.
 tags:
   - Articles
   - Zed

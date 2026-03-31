@@ -2,7 +2,7 @@
 title: "Switching from Ubuntu to Linux Mint"
 description:
   I switched for performance reasons on an older device, and so far Linux Mint
-  seems to be an improvement
+  seems to be an improvement.
 tags:
   - Articles
   - Linux

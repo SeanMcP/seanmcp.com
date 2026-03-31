@@ -2,7 +2,7 @@
 title: Listen for class change in JavaScript
 description:
   There isn’t an event for class list changes, but you can write a function that
-  listens for class changes on an element with the MutationObserver API
+  listens for class changes on an element with the MutationObserver API.
 tags:
   - Articles
   - JavaScript

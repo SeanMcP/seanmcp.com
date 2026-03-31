@@ -2,7 +2,7 @@
 title: Thoughts on Web Speech API
 description:
   Browser native text-to-speech is neat, but it lacks the polish that most users
-  expect
+  expect.
 tags:
   - Articles
   - JavaScript

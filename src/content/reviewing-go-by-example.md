@@ -3,7 +3,7 @@ title: Reviewing "Go By Example"
 description:
   Go By Example is a great resource for learning the syntax and patterns of Go,
   but you might need to supplement it with other resources to learn how to work
-  in the language
+  in the language.
 tags:
   - Articles
   - Go

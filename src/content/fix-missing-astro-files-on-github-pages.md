@@ -2,7 +2,7 @@
 title: "Fix missing Astro files on GitHub pages"
 description:
   Astro generated CSS files start with an underscore which causes them to be
-  ignored by GitHub Pages
+  ignored by GitHub Pages.
 tags:
   - Articles
   - Astro

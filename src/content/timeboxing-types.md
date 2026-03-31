@@ -2,7 +2,7 @@
 title: Timeboxing types
 description:
   In order to maximize the value of types and your time, consider timeboxing the
-  amount of time that you spend writing any given type
+  amount of time that you spend writing any given type.
 tags:
   - Articles
   - Programming

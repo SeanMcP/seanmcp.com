@@ -1,6 +1,6 @@
 ---
 title: Random Encounters
-description: Resources for adding random encounters to your adventure
+description: Resources for adding random encounters to your adventure.
 date: 2025-01-17T06:36-0400
 tags:
   - RPGs

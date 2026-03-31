@@ -1,6 +1,6 @@
 ---
 title: Arguments or parameters?
-description: An attempt to remember the difference between the two
+description: An attempt to remember the difference between the two.
 date: 2019-07-30T12:00-0400
 tags:
   - Articles

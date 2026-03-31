@@ -2,7 +2,7 @@
 title: Losing steam
 description:
   This year started strong on writing, but I have found little motivation
-  recently
+  recently.
 tags:
   - Blog
   - Writing

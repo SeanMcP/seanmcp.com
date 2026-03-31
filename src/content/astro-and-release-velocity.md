@@ -1,7 +1,7 @@
 ---
 title: "Astro and release velocity"
 description:
-  Astro is a great framework, but it's frequent updates are overwhelming
+  Astro is a great framework, but it's frequent updates are overwhelming.
 tags:
   - Articles
   - Astro

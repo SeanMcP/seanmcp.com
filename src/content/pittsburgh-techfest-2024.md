@@ -2,7 +2,7 @@
 title: "Pittsburgh TechFest 2024"
 description:
   Pittsburgh TechFest 2024 was a good experience and valuable opportunity to
-  connect with the local tech scene
+  connect with the local tech scene.
 tags:
   - Articles
   - Pittsburgh TechFest

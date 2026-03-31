@@ -2,7 +2,7 @@
 title: Learning Go
 description:
   Learning the Go programming language for professionanl development has been an
-  enjoyable experience
+  enjoyable experience.
 tags:
   - Articles
   - Go

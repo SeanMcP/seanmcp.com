@@ -1,6 +1,7 @@
 ---
 title: Shadowdark characters are fragile
 description:
+  If you don't treat low-level Shadowdark characters with care, they will die.
 date: 2025-07-07T06:39-0400
 tags:
   - RPGs

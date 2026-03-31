@@ -1,6 +1,6 @@
 ---
 title: It has everything
-description: Even a description
+description: Even a description.
 date: 2050-12-25T12:00-0400
 tags:
   - Articles

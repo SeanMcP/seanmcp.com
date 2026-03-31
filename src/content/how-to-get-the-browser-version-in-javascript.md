@@ -1,6 +1,6 @@
 ---
 title: How to get the browser and version in JavaScript
-description: A brief journey into the dangerous world of user agent sniffing
+description: A brief journey into the dangerous world of user agent sniffing.
 date: 2020-05-19T12:00-0400
 tags:
   - Articles

@@ -2,7 +2,7 @@
 title: The Copper Caves
 description:
   A simple dungeon-crawling setting for table-top role-playing games like
-  Dungeons and Dragons
+  Dungeons and Dragons.
 date: 2025-05-06T13:30-0400
 verse:
 tags:

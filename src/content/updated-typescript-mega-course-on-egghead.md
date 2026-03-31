@@ -1,6 +1,6 @@
 ---
 title: Updated TypeScript mega-course on Egghead.io
-description: Reviewing and updating my TypeScript mega-course on Egghead.io
+description: Reviewing and updating my TypeScript mega-course on Egghead.io.
 date: 2020-07-27T12:00-0400
 tags:
   - Articles

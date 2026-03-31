@@ -2,7 +2,7 @@
 title: Three new games on Toollama
 description:
   Turtle Guide, Paint Pig, and Spotlight all help children build computer
-  literacy
+  literacy.
 date: 2021-10-27T12:00-0400
 tags:
   - Articles

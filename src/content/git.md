@@ -1,6 +1,6 @@
 ---
 title: Git
-description: A practical resource for Git
+description: A practical resource for Git.
 date: 2021-05-04T12:00-0400
 tags:
   - Articles

@@ -2,7 +2,7 @@
 title: Nodemon for Deno
 description:
   Denon is a utility for Deno that provides source watching and process
-  restarting just like Nodemon
+  restarting just like Nodemon.
 date: 2020-07-01T12:00-0400
 tags:
   - Articles

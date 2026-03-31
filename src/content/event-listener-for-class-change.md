@@ -2,7 +2,7 @@
 title: Add event listener for class change
 description:
   How to create a custom event listener for class names using the
-  MutationObserver API
+  MutationObserver API.
 date: 2019-05-10T12:00-0400
 tags:
   - Articles

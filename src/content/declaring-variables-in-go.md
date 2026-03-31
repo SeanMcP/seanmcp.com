@@ -1,7 +1,7 @@
 ---
 title: Declaring variables in Go
 description:
-  You can declare variables with var, :=, and const depending on your use case
+  You can declare variables with var, :=, and const depending on your use case.
 tags:
   - Articles
   - Go

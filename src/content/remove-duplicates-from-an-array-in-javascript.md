@@ -1,6 +1,6 @@
 ---
 title: Remove duplicates from an array in JavaScript
-description: Using sets to de-dupe arrays of primitive and object-like values
+description: Using sets to de-dupe arrays of primitive and object-like values.
 tags:
   - Articles
   - JavaScript

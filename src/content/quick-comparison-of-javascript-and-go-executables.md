@@ -3,7 +3,7 @@ title: A quick comparison of JavaScript and Go executables
 description:
   Go is the superior for executables based file size and execution time, but Bun
   and Deno offer a competitive option for developers familiar with the
-  JavaScript ecosystem
+  JavaScript ecosystem.
 tags:
   - Articles
   - Bun

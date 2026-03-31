@@ -2,7 +2,7 @@
 title: Adding images to my articles
 description:
   How the right design and process for sourcing images made all the difference
-  for me
+  for me.
 date: 2020-06-30T12:00-0400
 tags:
   - Blog

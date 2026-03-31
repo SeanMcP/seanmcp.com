@@ -1,6 +1,6 @@
 ---
 title: Checkout the previous git branch
-description: Using a git shorthand to checkout the most recent branch
+description: Using a git shorthand to checkout the most recent branch.
 date: 2021-01-22T12:00-0400
 tags:
   - Articles

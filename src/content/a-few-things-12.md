@@ -2,7 +2,7 @@
 title: "A Few Things #12"
 description:
   A collaborative interactive, Toto on ocarina, a word-based strategy game, and
-  a classic infinite runner
+  a classic infinite runner.
 tags:
   - Blog
   - A Few Things

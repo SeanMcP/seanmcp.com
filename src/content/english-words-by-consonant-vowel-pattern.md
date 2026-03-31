@@ -2,7 +2,7 @@
 title: English words by consonant-vowel pattern
 description:
   A tool to look up common words by their consonant-vowel pattern and resources
-  for the rest
+  for the rest.
 date: 2022-03-03T12:00-0400
 tags:
   - Articles

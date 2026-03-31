@@ -2,7 +2,7 @@
 title: "Looking over the fence at Eleventy"
 description:
   Eleventy is looking better and better as an alternative to Astro for simple or
-  long-lived websites
+  long-lived websites.
 tags:
   - Articles
   - Astro

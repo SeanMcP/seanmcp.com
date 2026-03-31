@@ -1,6 +1,6 @@
 ---
 title: MagnoliaJS 2020 conference notes
-description: Some notes from the talks that I was able to attend
+description: Some notes from the talks that I was able to attend.
 date: 2020-04-16T12:00-0400
 tags:
   - Blog

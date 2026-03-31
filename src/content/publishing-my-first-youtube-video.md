@@ -1,6 +1,6 @@
 ---
 title: Publishing my first YouTube video
-description: Why I started a YouTube channel and what I learned in the process
+description: Why I started a YouTube channel and what I learned in the process.
 date: 2020-05-20T12:00-0400
 tags:
   - Articles

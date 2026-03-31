@@ -2,7 +2,7 @@
 title: Reviewing my Netlify Analytics
 description:
   Thanks to Netlify Analytics I know to focus on writing how-to articles, but it
-  has less data than I hoped
+  has less data than I hoped.
 tags:
   - Blog
   - Netlify

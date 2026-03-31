@@ -1,6 +1,6 @@
 ---
 title: Calculate the sum of everything up to a given number
-description: A little tool to calculate 5 + 4 + 3 + 2 + 1
+description: A little tool to calculate 5 + 4 + 3 + 2 + 1.
 date: 2022-04-23T12:00-0400
 foot: >-
   <script src="/js/cumulative-sum.js" type="module"></script>

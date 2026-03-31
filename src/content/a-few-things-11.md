@@ -2,7 +2,7 @@
 title: "A Few Things #11"
 description:
   A personal apologetic, assessing the world, Scotland's rainforests, and
-  finding new music
+  finding new music.
 tags:
   - Blog
   - A Few Things

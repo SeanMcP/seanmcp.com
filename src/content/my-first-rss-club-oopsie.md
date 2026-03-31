@@ -2,7 +2,7 @@
 title: My first RSS Club oopsie
 description:
   I accidentally published the latest article to the public because I mixed up
-  some frontmatter fields
+  some frontmatter fields.
 tags:
   - Blog
 date: 2023-07-04T07:49-0400

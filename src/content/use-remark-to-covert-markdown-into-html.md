@@ -1,6 +1,6 @@
 ---
 title: Use remark to covert markdown into HTML
-description: The missing "hello world" example to get up and running with remark
+description: The missing "hello world" example to get up and running with remark.
 date: 2021-07-03T12:00-0400
 tags:
   - Articles

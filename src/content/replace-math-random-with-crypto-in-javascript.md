@@ -2,7 +2,7 @@
 title: How to replace Math.random with crypto in JavaScript
 description:
   A drop-in replacement for Math.random that generates cryptographically strong
-  random values
+  random values.
 date: 2022-07-18T14:15-0400
 tags:
   - Articles

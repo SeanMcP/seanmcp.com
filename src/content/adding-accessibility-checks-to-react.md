@@ -1,6 +1,6 @@
 ---
 title: Adding accessibility checks to your React app
-description: A few tools to help you build more accessible React applications
+description: A few tools to help you build more accessible React applications.
 date: 2019-03-04T12:00-0400
 update: 2019-03-09
 tags:

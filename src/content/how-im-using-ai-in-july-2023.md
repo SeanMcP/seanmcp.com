@@ -2,7 +2,7 @@
 title: How I'm using AI in July 2023
 description:
   Some more competitors are entering the ring, but GitHub Copilot remains the
-  only AI-powered product that I use regularly
+  only AI-powered product that I use regularly.
 tags:
   - Articles
   - AI

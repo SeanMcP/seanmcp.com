@@ -1,6 +1,6 @@
 ---
 title: I have never reviewed a podcast
-description: Despite being a regular listener, I am unable to review podcasts
+description: Despite being a regular listener, I am unable to review podcasts.
 tags:
   - Blog
   - Podcasts
