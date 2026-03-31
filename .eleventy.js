@@ -141,26 +141,6 @@ export default function (eleventyConfig) {
     metadata: {
       language: "en",
       title: "seanmcp.com",
-      subtitle:
-        "The online home of Sean McPherson, an unremarkable man from Pittsburgh, PA",
-      base: "https://seanmcp.com/",
-      author: {
-        name: "Sean McPherson",
-        email: "sean@seanmcp.com",
-      },
-    },
-  });
-
-  eleventyConfig.addPlugin(feedPlugin, {
-    type: "rss",
-    outputPath: "/rss.xml",
-    collection: {
-      name: "rssArticles",
-      limit: 0,
-    },
-    metadata: {
-      language: "en",
-      title: "seanmcp.com",
       subtitle: "Technical guides, resources, and opinions from Sean McPherson",
       base: "https://seanmcp.com/",
       author: {
@@ -179,7 +159,7 @@ export default function (eleventyConfig) {
     },
     metadata: {
       language: "en",
-      title: "seanmcp.com",
+      title: "seanmcp.com RPGs",
       subtitle: "Table-top role-playing game content from Sean McPherson",
       base: "https://seanmcp.com/",
       author: {
@@ -198,7 +178,7 @@ export default function (eleventyConfig) {
     },
     metadata: {
       language: "en",
-      title: "seanmcp.com",
+      title: "seanmcp.com Games",
       subtitle: "Board, card, and party game content from Sean McPherson",
       base: "https://seanmcp.com/",
       author: {
@@ -217,7 +197,7 @@ export default function (eleventyConfig) {
     },
     metadata: {
       language: "en",
-      title: "seanmcp.com",
+      title: "seanmcp.com Blog",
       subtitle: "Personal blog content from Sean McPherson",
       base: "https://seanmcp.com/",
       author: {
