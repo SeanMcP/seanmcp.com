@@ -1,8 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
-
 function forceDigits(number) {
   const string = String(number);
   return string.length === 1 ? "0" + string : string;
@@ -57,7 +55,7 @@ const slug = title
 const filename = `${slug}.md`;
 
 fs.writeFileSync(
-  path.join(__dirname, "src/content", filename),
+  path.join("src/content", filename),
   template.replace("%TITLE%", title),
 );
 console.log(`Created new post: ${filename}`);

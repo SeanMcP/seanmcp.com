@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "rm -rf dist/ && eleventy --serve",
     "build": "rm -rf dist/ && eleventy",
-    "draft": "node new.mjs",
-    "image": "node --env-file=.env image.mjs",
-    "void": "node void.mjs",
-    "verify": "node verify.mjs"
+    "draft": "node scripts/new.mjs",
+    "image": "node --env-file=.env scripts/image.mjs",
+    "void": "node scripts/void.mjs",
+    "verify": "node scripts/verify.mjs"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",

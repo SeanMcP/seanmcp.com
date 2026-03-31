@@ -1,8 +1,5 @@
 import fs from "fs";
-import path from "path";
 import { execSync } from "child_process";
-
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 const text = process.argv[2];
 
@@ -19,7 +16,7 @@ const date = new Date().toLocaleDateString("en-US", {
 });
 
 const voidContent = fs.readFileSync(
-  path.join(__dirname, "src/void.md"),
+  "src/void.md",
   "utf-8"
 );
 const newEntry = `\n**${date}** — ${text}\n`;
@@ -35,7 +32,7 @@ console.log(newEntry);
 console.log("Send? (y/n)");
 process.stdin.once("data", (data) => {
   if (data.toString().trim() === "y") {
-    fs.writeFileSync(path.join(__dirname, "src/void.md"), nextContent);
+    fs.writeFileSync("src/void.md", nextContent);
 
     execSync("git pull");
     execSync("git add src/void.md");
