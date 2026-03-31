@@ -84,11 +84,9 @@ rootFoot: >-
         <bible-verse>{{ verse | default: 'Romans 5:8' }}</bible-verse>
         {% assign url_chunks = page.url | split: '/' %}
         {% assign category = tags[0] %}
-        {% comment %}
-          <span
-            >More <a href="/{{category | slug}}" data-url="{{page.url}}">{{ category }}</a></span
-          >
-        {% endcomment %}
+        <span
+          >Category <a href="/{{category | slug}}">{{ category }}</a></span
+        >
       </div>
       <hr>
       <div class="attribution">
