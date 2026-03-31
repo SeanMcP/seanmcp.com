@@ -1,7 +1,11 @@
-/gardens/*    /articles/:splat
-/note/*       /void
-/notes/*      /void
-/sam          https://boyo.seanmcp.com
-/ezra         https://boyo.seanmcp.com
+/gardens/*          /articles/:splat
+/note/*             /void
+/notes/*            /void
+/sam                https://boyo.seanmcp.com
+/ezra               https://boyo.seanmcp.com
 
-/articles/getting-started-with-eleventy/    /resources/getting-started-with-eleventy/
+/resources/*        /articles/:splat
+/adventure-games/*  /rpgs/:splat
+/board-games/*      /games/:splat
+/web/*              /blog/:splat
+/local/*            /blog/:splat

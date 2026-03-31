@@ -1,0 +1,29 @@
+---
+layout: site.liquid
+---
+<layout-content class="category" style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+  <section aria-label="Introduction" class="category" style="grid-column: 1 / span 2">
+    {{ content }}
+    <hr style="margin-block-end: 0;">
+  </section>
+  <main class="category">
+    <h2>Posts</h2>
+    {%- assign pages = collections[category]
+      | exclude_flag_in_prod: 'RSS-ONLY', 'DRAFT'
+      | where: 'data.leaf'
+      | reverse
+    -%}
+    {% include 'page-list' %}
+  </main>
+  <aside class="category">
+    <h2>Search</h2>
+    <form action="/search/?category={{ category }}" class="search">
+      <input type="hidden" name="category" value="{{ category }}">
+      <input type="search" name="q" placeholder="Search..." aria-label="Search through posts">
+      <button type="submit">Search</button>
+    </form>
+    <h2>Tags</h2>
+    {%- assign tags = collections.tagsByCategory[category] -%}
+    {% include 'tag-list' %}
+  </aside>
+</layout-content>

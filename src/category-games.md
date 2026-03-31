@@ -1,10 +1,13 @@
 ---
-layout: page.liquid
-title: Board Games
+layout: category.liquid
+title: Games
 leaf: false
-permalink: /board-games/
+permalink: /games/
 description: Recommendations and alternate rules for board games and card games.
+category: Games
 ---
+
+# Games
 
 I enjoy playing board games with family and friends. They're a great vehicle for
 creating memorable experiences and building relationships.
@@ -54,8 +57,3 @@ These are some of my favorite games, broken down by category.
 
 - [Fishbowl](https://fishbowl-game.com/): The best game for a large group is
   three games in one: taboo, password, and charades.
-
-## Pages
-
-{%- assign pages = collections["Board Games"] | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse -%}
-{% include "page-list" %}

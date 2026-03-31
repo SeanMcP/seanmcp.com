@@ -1,45 +1,11 @@
 ---
-layout: base.liquid
+layout: site.liquid
 rootHead: >-
     <style>
-        html {
-            background-color: var(--bg);
-        }
         body {
             display: grid;
             grid-template-rows: max-content auto max-content;
             min-height: 100vh;
-        }
-
-        header, footer {
-            padding: 1rem;
-        }
-
-        header {
-            font-size: var(--step--1);
-            font-style: italic;
-            font-weight: bold;
-            text-align: center;
-            
-            & > a {
-                align-items: center;
-                background-color: var(--faint-text);
-                block-size: 3ch;   
-                color: var(--bg);
-                display: inline-flex;
-                inline-size: 3ch;
-                justify-content: center;
-                text-decoration: none;
-
-                &:is(:focus, :hover) {
-                    background-color: var(--accent-color);
-                }
-            }
-        }
-
-        header nav {
-            display: flex;
-            column-gap: 1rem;
         }
 
         layout-content {
@@ -50,24 +16,13 @@ rootHead: >-
             width: 100%;
         }
 
-        #content {
-            font-family: var(--serif);
-            line-height: 1.4;
-        }
-
-        #content img {
-            display: block;
-            margin-inline: auto;
-            max-width: 100%;
-        }
-
-        #content>.postscript {
+        .postscript {
             display: grid;
             gap: 1rem;
             grid-template-columns: 1fr 1fr;
             margin-block-start: 4rem;
         }
-        #content>.postscript bible-verse {
+        .postscript bible-verse {
             justify-self: end;
         }
 
@@ -83,20 +38,6 @@ rootHead: >-
 
         h1 + p {
             margin-block-start: 0;
-        }
-
-        time {
-            display: block;
-            font-size: var(--step--1);
-            letter-spacing: 0.1ch;
-            text-transform: uppercase;
-        }
-
-        footer {
-            background-color: var(--off-bg);
-            color: var(--faint-text);
-            font-size: var(--step--1);
-            text-align: center;
         }
         
         .attribution {
@@ -116,9 +57,6 @@ rootHead: >-
 rootFoot: >-
     <script type="module" src="/js/keyboard-shortcuts.js"></script>
 ---
-<header>
-  <a aria-label="sean mcpherson" href="/">sm</a>
-</header>
 <main>
   {{ category }}
   <layout-content style="padding-block: 4rem 2rem;">
@@ -163,4 +101,3 @@ rootFoot: >-
     {%- endif %}
   </layout-content>
 </main>
-<footer>Since 2018 (SDG)</footer>

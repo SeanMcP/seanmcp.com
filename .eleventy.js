@@ -61,6 +61,42 @@ export default function (eleventyConfig) {
     // Return sorted array of tag names for pagination
     return Array.from(tagsSet).sort();
   });
+
+  eleventyConfig.addCollection("tagsByCategory", function (collectionsAPI) {
+    // The first tag in the tags frontmatter is the "category" tag. This collection
+    // groups the other tags by that category.
+    const tagsByCategory = {};
+
+    collectionsAPI.getAll().forEach((item) => {
+      // Skip non-content items
+      if (!item.data || !Array.isArray(item.data.tags)) {
+        return;
+      }
+
+      const [category, ...tags] = item.data.tags;
+
+      if (!category) {
+        return;
+      }
+
+      if (!tagsByCategory[category]) {
+        tagsByCategory[category] = new Set();
+      }
+
+      tags.forEach((tag) => {
+        tagsByCategory[category].add(tag);
+      });
+    });
+
+    // Convert sets to sorted arrays for easier use in templates
+    const sortedTagsByCategory = {};
+    for (const category in tagsByCategory) {
+      sortedTagsByCategory[category] = Array.from(tagsByCategory[category]).sort();
+    }
+
+    return sortedTagsByCategory;
+  });
+
   /** Plugins */
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(feedPlugin, {

@@ -43,9 +43,14 @@ foot: >-
 
 <!-- sync: page-list-item.liquid -->
 <template>
-<li class="page-list-item">
-    <a class="category" href="%CATEGORY_URL%">%CATEGORY%</a>
-    <a href="%URL%">%TITLE%</a><time datetime="%DATETIME%">%READABLE_DATE%</time>
+<li class="page-list-item" data-category="%CATEGORY_DATA%">
+    <div class="page-list-item__meta">
+        <time datetime="%DATETIME%">%READABLE_DATE%</time>
+        <i>in</i>
+        <a class="page-list-item__category" href="%CATEGORY_URL%">%CATEGORY%</a>
+    </div>
+    <a class="page-list-item__title" href="%URL%">%TITLE%</a>
+    <div>%DESCRIPTION%</div>
 </li>
 </template>
 <!-- endsync -->

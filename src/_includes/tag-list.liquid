@@ -1,0 +1,11 @@
+<ol class="tag-list">
+  {%- for tag in tags -%}
+    {%- assign public = collections[tag] | exclude_flag_in_prod: 'RSS-ONLY', 'DRAFT' -%}
+    {%- if public.size > 0 -%}
+      <li>
+        <a href="/tags/{{ tag | slug }}/{% if category %}?category={{ category }}{% endif %}">{{ tag }}</a>
+        <span class="tag-list__count">({{ public.size }})</span>
+      </li>
+    {%- endif -%}
+  {%- endfor -%}
+</ol>

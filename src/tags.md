@@ -25,14 +25,4 @@ head: >-
 
 <p>Browse articles by their tags:</p>
 
-<ol class="tags-list">
-{%- for tag in collections.tags -%}
-  {%- assign publicItems = collections[tag] | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" -%}
-  {%- if publicItems.size > 0 -%}
-    <li>
-      <a href="/tags/{{ tag | slug }}/">{{ tag }}</a>
-      <span class="tags-list__count">({{ publicItems.size }})</span>
-    </li>
-  {%- endif -%}
-{%- endfor -%}
-</ol>
+{%- assign tags = collections.tags -%}{% include "tag-list" %}

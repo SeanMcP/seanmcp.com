@@ -1,16 +1,14 @@
 ---
-layout: page.liquid
+layout: category.liquid
 prose: false
-title: Articles
+title: Tech articles
 leaf: false
 permalink: /articles/
-description: Articles about mostly about software engineering, work, and life.
+description:
+  Guides, resources, and opinions software engineering and working in tech
+category: Articles
 ---
 
-To search for an article, use your browser's find feature or
-[visit the search page](/search).
+# {{ title }}
 
----
-
-{%- assign pages = collections.Articles | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | reverse %}
-{% include "page-list" %}
+{{ description }}
