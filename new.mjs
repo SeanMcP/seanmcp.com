@@ -35,13 +35,13 @@ title: %TITLE%
 description:
 date: ${getTimestamp()}
 tags:
-  - Articles
+  - Blog
 flags:
 verse:
 prose: true
 ---
 
-`
+`;
 
 const title = process.argv[2];
 if (!title) {
@@ -55,5 +55,8 @@ const slug = title
   .replace(/[^a-z0-9-]/g, "");
 const filename = `${slug}.md`;
 
-fs.writeFileSync(path.join(__dirname, "src/content", filename), template.replace("%TITLE%", title));
+fs.writeFileSync(
+  path.join(__dirname, "src/content", filename),
+  template.replace("%TITLE%", title),
+);
 console.log(`Created new post: ${filename}`);
