@@ -161,8 +161,8 @@ console.log(deDupe(["a", "b", "c", "b"]));
 console.log(
   deDupe(
     [{ id: "a" }, { id: "b" }, { id: "c" }, { id: "b" }],
-    (item) => item.id
-  )
+    (item) => item.id,
+  ),
 );
 // [{ id: "a" }, { id: "b" }, { id: "c" }]
 ```

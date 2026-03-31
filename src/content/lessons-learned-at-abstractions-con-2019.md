@@ -4,7 +4,7 @@ description:
   Some notes and thoughts from Pittsburgh's cross-discipline software conference
 date: 2019-08-27T12:00-0400
 tags:
-  - Articles
+  - Blog
   - Conferences
 verse: Proverbs 1:5
 ---

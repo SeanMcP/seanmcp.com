@@ -3,8 +3,7 @@ title: "Big changes ahead"
 description:
   Soon everything will be an article, and articles will be more like gardens
 tags:
-  - Articles
-  - Meta
+  - Blog
 date: 2024-07-25T06:46-0400
 verse: Jeremiah 29:5
 flags:

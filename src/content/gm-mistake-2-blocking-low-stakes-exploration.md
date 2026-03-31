@@ -5,7 +5,7 @@ description:
   good for morale and the game.
 date: 2025-08-22T13:59-0400
 tags:
-  - Adventure Games
+  - RPGs
   - Exploration
   - Shadowdark
 flags:

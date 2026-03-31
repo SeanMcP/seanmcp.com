@@ -28,7 +28,7 @@ const maybeWindow = typeof window === "undefined" ? null : window;
 export default function useIsOnline() {
   const [isOnline, setIsOnline] = React.useState(
     // Read onLine value from navigator if available, otherwise fallback to true
-    maybeWindow?.navigator.onLine ?? true
+    maybeWindow?.navigator.onLine ?? true,
   );
 
   useEffect(() => {

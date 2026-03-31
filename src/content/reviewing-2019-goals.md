@@ -3,7 +3,7 @@ title: Reviewing 2019 goals
 description: Checking in on the goals I set for myself in 2019
 date: 2020-01-08T12:00-0400
 tags:
-  - Articles
+  - Blog
   - Growth
 verse: Job 23:13
 ---

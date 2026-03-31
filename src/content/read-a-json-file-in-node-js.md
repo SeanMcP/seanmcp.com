@@ -25,7 +25,7 @@ In action, they look like:
 const fs = require("fs");
 
 fs.readFile("./data.json", (error, data) =>
-  error ? console.error(error) : console.log(data)
+  error ? console.error(error) : console.log(data),
 );
 
 try {
@@ -56,7 +56,7 @@ object:
 const fs = require("fs");
 
 fs.readFile("./data.json", (error, data) =>
-  error ? console.error(error) : console.log(JSON.parse(data))
+  error ? console.error(error) : console.log(JSON.parse(data)),
 );
 
 try {

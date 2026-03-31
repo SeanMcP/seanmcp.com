@@ -4,7 +4,6 @@ description: A little code walk through a the new Activity Graph on my homepage.
 tags:
   - Articles
   - Astro
-  - Meta
 date: 2022-11-23T14:48-0400
 ---
 
@@ -30,10 +29,10 @@ function:
 
 ```ts
 const articles = getSortedContent(
-  await Astro.glob("../pages/articles/*.{md,mdx}")
+  await Astro.glob("../pages/articles/*.{md,mdx}"),
 );
 const notes = getSortedContent(
-  await Astro.glob("../../content/notes/*.{md,mdx}")
+  await Astro.glob("../../content/notes/*.{md,mdx}"),
 );
 ```
 
@@ -84,7 +83,7 @@ and then use that when calculating the individual `span` heights. And thanks to
 
 ```ts
 const highest = Math.max(
-  ...Object.values(yearCount).map((record) => record.articles + record.notes)
+  ...Object.values(yearCount).map((record) => record.articles + record.notes),
 );
 // 16 * 4 or 64 is the maximum height for a year
 const multiplier = (16 * 4) / highest;

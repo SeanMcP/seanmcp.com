@@ -6,7 +6,7 @@ description:
 date: 2025-04-23T06:00-0400
 verse:
 tags:
-  - Adventure Games
+  - RPGs
   - Shadowdark
   - SoloDark
 ---

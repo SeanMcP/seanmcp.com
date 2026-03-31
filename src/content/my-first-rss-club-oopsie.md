@@ -4,8 +4,7 @@ description:
   I accidentally published the latest article to the public because I mixed up
   some frontmatter fields
 tags:
-  - Articles
-  - RSS
+  - Blog
 date: 2023-07-04T07:49-0400
 verse:
 flags:

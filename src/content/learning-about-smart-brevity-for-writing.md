@@ -5,8 +5,7 @@ description:
   concise. I'm interested in learning whether I can provide more value through
   direct and informative writing.
 tags:
-  - Articles
-  - Meta
+  - Blog
   - Smart Brevity
   - Writing
 date: 2023-02-27T10:23-0400

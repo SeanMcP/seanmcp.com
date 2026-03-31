@@ -6,7 +6,7 @@ description:
   next child!
 date: 2025-12-30T14:06-0400
 tags:
-  - Adventure Games
+  - RPGs
   - Random Tables
 flags:
 verse: Matthew 1:21
@@ -22,8 +22,8 @@ With data sampled from Wikipedia
 and
 [feminine names](https://en.wikipedia.org/wiki/Category:German_feminine_given_names)),
 I reduced the list to 100 of each that _felt_ German to me^[An American who
-studied German for a few years in school, _i.e._ a source of questionable reliability].
-Enjoy!
+studied German for a few years in school, _i.e._ a source of questionable
+reliability]. Enjoy!
 
 | d100 | Masculine |  Feminine  |
 | :--: | :-------: | :--------: |

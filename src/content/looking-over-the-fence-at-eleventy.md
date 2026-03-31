@@ -44,6 +44,7 @@ a bunch of HTML with linked CSS and JavaScript, Eleventy seems like the better
 option of the two.
 
 [^1]: At the time of writing, I am five minor releases behind and counting.
+
 [^2]:
     I think the answer is no. They have received venture capital and need to
     find some way to make a return on that investment. Since I'm not a paying

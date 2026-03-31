@@ -6,7 +6,7 @@ description:
 date: 2025-04-23T06:45-0400
 verse: Isaiah 11:6
 tags:
-  - Adventure Games
+  - RPGs
   - Wolves
   - Folklore
 ---

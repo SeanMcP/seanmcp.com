@@ -3,7 +3,7 @@ title: MagnoliaJS 2020 conference notes
 description: Some notes from the talks that I was able to attend
 date: 2020-04-16T12:00-0400
 tags:
-  - Articles
+  - Blog
   - Conferences
 verse: Isaiah 40:8
 ---
@@ -136,20 +136,16 @@ of my notes:
 **Speaker**: Justin Samuels | @ThugDebugger
 
 - Three keys of asking a good question in a tweet:
-
   1. Ask: Is this a relevant question? Is it clear? Is it concise?
-
      - People have stuff to do, minimize the amount of time they need to take to
        help you
 
   2. Pour: Share with others the knowledge that has been shared with you
 
      > A candle doesn't lose it's intensity by lighting another
-
      - Offer to help other people
 
   3. Effort: This is the hardest part
-
      - Don't make excuses; do the thing
 
 - Another acronym, ATL: ask the question, teach others, and learn new things

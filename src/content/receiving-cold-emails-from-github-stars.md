@@ -4,7 +4,7 @@ description:
   I've started receiving cold-emails from maintainers after starring a
   repository on GitHub, and I don't like it.
 tags:
-  - Articles
+  - Blog
   - GitHub
 date: 2024-01-26T06:44-0400
 verse: Proverbs 28:6

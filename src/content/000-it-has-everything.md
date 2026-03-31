@@ -4,7 +4,6 @@ description: Even a description
 date: 2050-12-25T12:00-0400
 tags:
   - Articles
-  - Meta
   - Blogging
 verse: John 3:16
 image: /img/photograph.min.jpg

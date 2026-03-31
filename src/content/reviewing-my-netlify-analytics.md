@@ -4,8 +4,7 @@ description:
   Thanks to Netlify Analytics I know to focus on writing how-to articles, but it
   has less data than I hoped
 tags:
-  - Articles
-  - Meta
+  - Blog
   - Netlify
 date: 2023-03-08T06:53-0400
 ---

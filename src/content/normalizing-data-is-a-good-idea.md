@@ -71,7 +71,7 @@ Once all of the content is normalized, rendering is simpler:
         {item.description && <p>{item.description}</p>}
       </article>
     );
-  }
+  },
 );
 ```
 

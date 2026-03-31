@@ -4,7 +4,7 @@ description:
   A pink lake in Senegal, an Indian community that solved drought, and the
   strange origin of Idaho's name.
 tags:
-  - Articles
+  - Blog
   - A Few Things
 date: 2024-03-23T06:55-0400
 verse: Mark 4:1

@@ -4,7 +4,7 @@ description:
   A collaborative interactive, Toto on ocarina, a word-based strategy game, and
   a classic infinite runner
 tags:
-  - Articles
+  - Blog
   - A Few Things
 date: 2024-04-06T21:05-0400
 verse:

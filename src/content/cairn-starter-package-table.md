@@ -17,7 +17,7 @@ head: >-
     }
   </style>
 tags:
-  - Adventure Games
+  - RPGs
   - Cairn
 ---
 

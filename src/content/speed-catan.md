@@ -6,6 +6,7 @@ description:
 tagline: A faster and simpler way to play
 verse: Isaiah 41:3
 tags:
+  - Games
   - Board Games
   - Catan
   - Speed Catan

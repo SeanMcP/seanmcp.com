@@ -3,7 +3,7 @@ title: "Making a video game with my kids"
 description:
   My experiences after one week of building a game with my kids using Kaboom.js
 tags:
-  - Articles
+  - Blog
   - Kaboom.js
   - Parenting
   - Video Games

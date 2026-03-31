@@ -3,9 +3,8 @@ title: Why a blog?
 description: An effort to preserve my content on the ever-changing web
 date: 2018-12-04T12:00-0400
 tags:
-  - Articles
+  - Blog
   - Blogging
-  - Meta
 ---
 
 For over a year and half I have been happily blogging on Medium. I was quick to

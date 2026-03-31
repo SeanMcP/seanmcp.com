@@ -5,7 +5,7 @@ description:
 date: 2022-10-06T11:58-0400
 verse: Acts 17:11
 tags:
-  - Resources
+  - Articles
 ---
 
 Since 2017, I have only used Jest for JavaScript application testing. And while
@@ -39,7 +39,7 @@ properties/values are present on the object without needing to mock all of them.
 expect(mockFn).toHaveBeenCalledWith(
   expect.objectContaining({
     example: true,
-  })
+  }),
 );
 ```
 

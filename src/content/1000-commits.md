@@ -2,9 +2,7 @@
 title: 1000 commits
 description: This article marks the 1000th commit to this website's repository
 tags:
-  - Articles
   - Blog
-  - Meta
 date: 2023-08-11T06:50-0400
 verse: Psalm 90:4
 image: https://res.cloudinary.com/seanmcp/image/upload/v1691751660/contribution-graph_i3pdcb.png

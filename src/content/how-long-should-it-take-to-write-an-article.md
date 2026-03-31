@@ -4,7 +4,7 @@ description:
   Can I write articles in five minutes that are worth my and my reader's time? I
   don't know, but I think it's worth exploring.
 tags:
-  - Articles
+  - Blog
   - Writing
 date: 2023-02-27T11:37-0400
 ---

@@ -1,11 +1,10 @@
 ---
 title: "Python Reference"
 description: A quick reference guide for working in Python
-updatedDate: 2024-02-17T09:25-0400
 date: 2024-02-06T20:19-0400
 verse: Isaiah 11:8
 tags:
-  - Resources
+  - Articles
 ---
 
 <table-of-contents></table-of-contents>

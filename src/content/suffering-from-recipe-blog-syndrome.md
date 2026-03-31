@@ -4,8 +4,7 @@ description:
   I feel a gravitational pull to write long-winded introductions to my articles,
   but it's time to break out of that orbit
 tags:
-  - Articles
-  - Writing
+  - Blog
 date: 2023-05-15T06:50-0400
 verse:
 flags:

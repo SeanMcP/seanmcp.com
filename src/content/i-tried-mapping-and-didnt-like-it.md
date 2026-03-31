@@ -5,7 +5,7 @@ description:
   story. Next time I'll try reviewing the map one room at a time.
 date: 2026-01-03T10:54-0400
 tags:
-  - Adventure Games
+  - RPGs
   - Review
   - Mapping
 flags:

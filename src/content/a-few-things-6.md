@@ -4,7 +4,7 @@ description:
   Reflections on digital waste, a great green wall, beautiful illuminations, and
   a fun trivia game
 tags:
-  - Articles
+  - Blog
   - A Few Things
 date: 2024-02-24T16:40-0400
 verse: Genesis 1:12

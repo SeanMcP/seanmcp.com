@@ -3,7 +3,7 @@ title: Lost Stranger Things finale mid-credits scene
 description:
 date: 2026-01-01T09:55-0400
 tags:
-  - Web
+  - Blog
   - Stranger Things
   - Fan fiction
 flags:

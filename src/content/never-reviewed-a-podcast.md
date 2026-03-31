@@ -2,7 +2,7 @@
 title: I have never reviewed a podcast
 description: Despite being a regular listener, I am unable to review podcasts
 tags:
-  - Articles
+  - Blog
   - Podcasts
 date: 2023-05-25T07:27-0400
 verse: Proverbs 1:8

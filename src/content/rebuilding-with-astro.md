@@ -2,10 +2,9 @@
 title: Rebuilding with Astro
 description: Detailing why and how I rebuilt this site with Astro.
 tags:
-  - Articles
+  - Blog
   - Astro
   - Eleventy
-  - Meta
 date: 2022-10-13T12:00-0400
 verse: Psalm 19:1
 ---

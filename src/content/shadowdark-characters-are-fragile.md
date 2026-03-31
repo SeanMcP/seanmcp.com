@@ -3,7 +3,7 @@ title: Shadowdark characters are fragile
 description:
 date: 2025-07-07T06:39-0400
 tags:
-  - Adventure Games
+  - RPGs
   - Shadowdark
 flags:
 verse: Psalm 32:7

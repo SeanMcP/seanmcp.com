@@ -5,7 +5,7 @@ description:
   attribute saves
 date: 2026-01-03T10:01-0400
 tags:
-  - Adventure Games
+  - RPGs
   - Cairn
   - Hack
 flags:

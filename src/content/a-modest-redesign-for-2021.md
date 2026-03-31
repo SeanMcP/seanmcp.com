@@ -3,10 +3,8 @@ title: A modest redesign for 2021
 description: Freshening up SeanMcP.com for the new year
 date: 2021-06-15T12:00-0400
 tags:
-  - Articles
-  - Blogging
+  - Blog
   - Design
-  - Meta
 verse: Ecclesiastes 1:9
 ---
 

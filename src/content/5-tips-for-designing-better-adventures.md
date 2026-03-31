@@ -5,7 +5,7 @@ description:
   villain.
 date: 2025-06-02T15:18-0400
 tags:
-  - Adventure Games
+  - RPGs
   - Adventure Design
 flags:
 verse:

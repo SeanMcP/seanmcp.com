@@ -4,7 +4,7 @@ description:
   Closings are lovely in letters but unnecessary online. I'm going to try to
   omit closings from my articles.
 tags:
-  - Articles
+  - Blog
   - Writing
 date: 2023-02-27T14:56-0400
 ---

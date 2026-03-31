@@ -2,8 +2,7 @@
 title: I'm not dead yet!
 description: It has been a long hiatus, but I'm back!
 tags:
-  - Articles
-  - RSS Club
+  - Blog
 date: 2023-09-25T06:03-0400
 flags:
   - RSS-ONLY

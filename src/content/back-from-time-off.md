@@ -2,8 +2,7 @@
 title: Back from time off
 description: Reflecting on taking a break for all of January 2023
 tags:
-  - Articles
-  - Meta
+  - Blog
 date: 2023-02-01T13:47-0400
 ---
 

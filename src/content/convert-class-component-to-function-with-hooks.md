@@ -140,15 +140,15 @@ errors, so let's call it `url`.
 <!-- ```js/1,3-6 -->
 
 ```js
-const FunctionalComponent = props => {
-  const url // We'll change this later
+const FunctionalComponent = (props) => {
+  const url; // We'll change this later
   return (
     <section>
       <h2>Doggo!</h2>
       {url ? <img src={url} alt="A cute dog" /> : <p>Fetching</p>}
     </section>
-  )
-}
+  );
+};
 ```
 
 ### useEffect
@@ -168,20 +168,20 @@ array for now.
 <!-- ```js/2-6 -->
 
 ```js
-const FunctionalComponent = props => {
-  const url
+const FunctionalComponent = (props) => {
+  const url;
   React.useEffect(() => {
-    fetch('https://random.dog/woof.json')
-      .then(raw => raw.json())
-      .then(res => console.log(res))
-  }, [])
+    fetch("https://random.dog/woof.json")
+      .then((raw) => raw.json())
+      .then((res) => console.log(res));
+  }, []);
   return (
     <section>
       <h2>Doggo!</h2>
       {url ? <img src={url} alt="A cute dog" /> : <p>Fetching</p>}
     </section>
-  )
-}
+  );
+};
 ```
 
 If you are coding along, you should see something like the following in your

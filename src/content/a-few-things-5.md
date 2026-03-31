@@ -4,7 +4,7 @@ description:
   Handwriting research, medieval fighting snails, wholesome comics, and banana
   price projections
 tags:
-  - Articles
+  - Blog
   - A Few Things
 date: 2024-02-17T06:55-0400
 verse: Colossians 4:18

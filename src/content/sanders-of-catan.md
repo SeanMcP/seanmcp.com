@@ -5,6 +5,7 @@ description:
   emphasizes game speed and competition, with a little bit of political humor.
 tagline: Playing the award-winning game like a true Socialist
 tags:
+  - Games
   - Board Games
   - Catan
   - Sanders of Catan

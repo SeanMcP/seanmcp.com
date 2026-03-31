@@ -4,7 +4,7 @@ description:
   Moving into mobile development at Niche and looking back on how I got here
 date: 2021-08-18T12:00-0400
 tags:
-  - Articles
+  - Blog
   - Career
   - Mobile
   - Personal

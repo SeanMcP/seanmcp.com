@@ -4,8 +4,7 @@ description:
   After a recommendation from Syntax.fm, I added a public page to see all of the
   components that I’ve created for this site
 tags:
-  - Articles
-  - Meta
+  - Blog
   - Storybook
   - Testing
 date: 2024-02-16T11:24-0400

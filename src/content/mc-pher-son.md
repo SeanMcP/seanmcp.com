@@ -4,7 +4,7 @@ description:
   We know how to pronounce "er", "her", and "pher", so why is it hard to
   pronounce "McPherson"?
 tags:
-  - Articles
+  - Blog
   - Joke
   - Personal
   - Pronunciation

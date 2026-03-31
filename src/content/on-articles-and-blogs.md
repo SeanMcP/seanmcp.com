@@ -2,9 +2,8 @@
 title: "On articles and blogs"
 description: Thoughts on avoiding then embracing the word "blog"
 tags:
-  - Articles
+  - Blog
   - Blogging
-  - Meta
 date: 2024-03-09T15:07-0400
 verse:
 ---

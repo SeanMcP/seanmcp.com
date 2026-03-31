@@ -9,6 +9,13 @@ head: >-
   <style>content hr { margin-block: 3em; }</style>
 ---
 
+**March 30, 2026** — A little Bash script to rename all files from `.jsx` to
+`.tsx`:
+
+```shell
+for f in *.jsx; do mv -- "$f" "${f%.jsx}.tsx"; done
+```
+
 **January 31, 2026** — Better is a little with righteousness than great revenues
 with injustice. Proverbs 16:8 (ESV)
 

@@ -4,7 +4,7 @@ description:
   7 million syllabi, trash bag testing, a skeleton gardener, and jokes that
   probably aren't that funny.
 tags:
-  - Articles
+  - Blog
   - A Few Things
 date: 2024-03-02T16:40-0400
 verse: Acts 17:11

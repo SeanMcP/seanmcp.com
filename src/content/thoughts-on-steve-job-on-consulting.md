@@ -4,7 +4,7 @@ description:
   Steve Jobs had some opinions on consulting, and it sparked a few thoughts of
   my own. What makes a valuable consultant? Experience.
 tags:
-  - Articles
+  - Blog
   - Professional Development
   - Thoughts
 date: 2022-11-17T09:43-0400

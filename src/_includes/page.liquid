@@ -61,7 +61,7 @@ rootHead: >-
             max-width: 100%;
         }
 
-        #content>.postscript:last-child {
+        #content>.postscript {
             display: grid;
             gap: 1rem;
             grid-template-columns: 1fr 1fr;
@@ -146,9 +146,11 @@ rootFoot: >-
         <bible-verse>{{ verse | default: 'Romans 5:8' }}</bible-verse>
         {% assign url_chunks = page.url | split: '/' %}
         {% assign category = tags[0] %}
-        <span
-          >More <a href="/{{category | slug}}" data-url="{{page.url}}">{{ category }}</a></span
-        >
+        {% comment %}
+          <span
+            >More <a href="/{{category | slug}}" data-url="{{page.url}}">{{ category }}</a></span
+          >
+        {% endcomment %}
       </div>
       <hr>
       <div class="attribution">

@@ -4,7 +4,7 @@ description:
   Our older son struggled with training wheels, but after switching to a balance
   bike he and his younger brother learned in no time.
 tags:
-  - Articles
+  - Blog
   - Bicycling
   - Parenting
 date: 2024-11-23T14:28-0400

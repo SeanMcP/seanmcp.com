@@ -5,9 +5,7 @@ description:
   for me
 date: 2020-06-30T12:00-0400
 tags:
-  - Articles
-  - Blogging
-  - Meta
+  - Blog
 verse: Colossians 1:15
 image: /img/photograph.min.jpg
 ---

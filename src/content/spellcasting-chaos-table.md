@@ -5,7 +5,7 @@ description:
 date: 2024-07-23T09:40-0400
 verse: Genesis 1:2
 tags:
-  - Adventure Games
+  - RPGs
   - Spellcasting
 ---
 

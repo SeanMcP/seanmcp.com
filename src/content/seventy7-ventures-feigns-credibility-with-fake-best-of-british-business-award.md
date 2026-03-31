@@ -6,7 +6,7 @@ description:
   The new majority shareholders of Inverness Caledonian Thistle FC are passing
   sponsored content off as an award from the Independent
 tags:
-  - Articles
+  - Blog
   - Soccer
   - Inverness Caledonian Thistle FC
   - Seventy7 Ventures

@@ -6,7 +6,7 @@ description:
 date: 2025-05-06T13:30-0400
 verse:
 tags:
-  - Adventure Games
+  - RPGs
   - Dungeon Design
   - Copper Caves
   - Dungeons and Dragons

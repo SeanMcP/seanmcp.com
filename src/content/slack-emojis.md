@@ -10,7 +10,7 @@ head: >-
       }
   </style>
 tags:
-  - Resources
+  - Blog
 ---
 
 I like reaction emojis and have spent an embarrassing amount of time

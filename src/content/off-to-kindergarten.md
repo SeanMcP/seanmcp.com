@@ -3,7 +3,7 @@ title: Off to Kindergarten
 description:
   My first born starts Kindergarten today and boy am I going to miss him
 tags:
-  - Articles
+  - Blog
   - Personal
 date: 2023-08-23T06:59-0400
 verse: John 10:29

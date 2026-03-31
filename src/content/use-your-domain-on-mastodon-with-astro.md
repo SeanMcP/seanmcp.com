@@ -36,7 +36,7 @@ const USERNAME = "seanmcp";
  */
 export async function get() {
   const response = await fetch(
-    `https://${INSTANCE}/.well-known/webfinger?resource=acct:${USERNAME}@${INSTANCE}`
+    `https://${INSTANCE}/.well-known/webfinger?resource=acct:${USERNAME}@${INSTANCE}`,
   );
   const data = await response.json();
   return { body: JSON.stringify(data, null, 2) };

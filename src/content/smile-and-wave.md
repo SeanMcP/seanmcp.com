@@ -4,8 +4,7 @@ description:
   To dissuade drivers from speeding down my neighborhood street, I make the
   choice to smile and wave at them.
 tags:
-  - Articles
-  - Life
+  - Blog
 date: 2024-10-18T13:54-0400
 verse: 1 Corinthians 13:4-5
 prose: true
