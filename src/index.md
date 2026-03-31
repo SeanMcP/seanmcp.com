@@ -43,3 +43,9 @@ find a good organization system for it all.
 <a href="/games" style="--accent-color: var(--games-color)">Games</a>
 <a href="/blog" style="--accent-color: var(--blog-color)">Blog</a>
 </section>
+
+## Recent posts
+
+{%- assign showCategory = true -%}
+{%- assign pages = collections.all | exclude_flag_in_prod: "RSS-ONLY", "DRAFT" | where: "data.tags" | where: "data.leaf" | reverse | slice: 0, 5 -%}
+{% include "page-list" %}
