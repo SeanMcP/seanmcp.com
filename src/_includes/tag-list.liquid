@@ -1,6 +1,9 @@
 <ol class="tag-list">
   {%- for tag in tags -%}
     {%- assign public = collections[tag] | exclude_flag_in_prod: 'RSS-ONLY', 'DRAFT' -%}
+    {%- if category -%}
+      {%- assign public = public | where: "data.tags[0]", category -%}
+    {%- endif -%}
     {%- if public.size > 0 -%}
       <li>
         <a href="/tags/{{ tag | slug }}/{% if category %}?category={{ category }}{% endif %}">{{ tag }}</a>
