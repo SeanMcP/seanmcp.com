@@ -441,7 +441,7 @@ call-out div > *:last-child {
     color: var(--faint-text);
     flex: 1;
     flex-direction: column-reverse;
-    gap: 0.5rem;
+    gap: 2px;
     margin: 0;
   }
 }
