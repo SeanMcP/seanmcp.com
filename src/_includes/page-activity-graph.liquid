@@ -1,0 +1,14 @@
+<ol class="page-activity-graph">
+{%- assign years = pages | sort_by_year -%}
+{%- for year in years -%}
+{%- assign count = year[1].length -%}
+  <li>
+    {%- if forloop.first or forloop.last -%}
+    {{ year[0] }}
+    {%- else -%}
+    ’{{ year[0] |  slice: 2, 4 }}
+    {%- endif -%}
+    <span aria-label="{{count}} pages" title="{{count}} pages" style="block-size: {{count}}px"></span>
+  </li>
+{%- endfor -%}
+</ol>

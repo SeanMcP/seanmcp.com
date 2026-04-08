@@ -25,5 +25,7 @@ layout: site.liquid
     <h2>Tags</h2>
     {%- assign tags = collections.tagsByCategory[category] -%}
     {% include 'tag-list' %}
+    <h2>Activity</h2>
+    {% include 'page-activity-graph' %}
   </aside>
 </layout-content>

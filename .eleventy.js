@@ -251,6 +251,27 @@ export default function (eleventyConfig) {
 
     return title;
   });
+  eleventyConfig.addFilter("sort_by_year", function (pages) {
+    const unsortedYears = {};
+    for (const page of pages) {
+      const date = new Date(page.date || page.data.date);
+      if (!date) continue;
+      const year = date.getFullYear();
+      if (!unsortedYears[year]) {
+        unsortedYears[year] = [];
+      }
+      unsortedYears[year].push(page);
+    }
+
+    const sortedYears = Object.keys(unsortedYears)
+      .sort((a, b) => b - a)
+      .reduce((acc, year) => {
+        acc[year] = unsortedYears[year];
+        return acc;
+      }, {});
+
+    return sortedYears;
+  });
 
   return {
     dir: {

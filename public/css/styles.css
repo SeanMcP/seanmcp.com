@@ -423,6 +423,29 @@ call-out div > *:last-child {
   }
 }
 
+.page-activity-graph {
+  display: flex;
+  font-size: var(--step--2);
+  list-style-type: none;
+  padding: 0;
+
+  span {
+    background-color: var(--accent-color);
+    display: inline-block;
+    inline-size: 100%;
+  }
+
+  li {
+    align-items: center;
+    display: flex;
+    color: var(--faint-text);
+    flex: 1;
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+    margin: 0;
+  }
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;
