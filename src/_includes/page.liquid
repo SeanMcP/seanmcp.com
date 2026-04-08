@@ -61,7 +61,7 @@ rootFoot: >-
 <main>
   {{ category }}
   <layout-content style="padding-block: 4rem 2rem;">
-    {%- if date -%}
+    {%- if date and flags contains "EVERGREEN" == false -%}
       <time datetime="{{ date }}">{{ date | readable_date }}</time>
     {%- endif -%}
     <h1>{{ title }}</h1>
