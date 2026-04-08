@@ -122,8 +122,8 @@ li ul li ul {
   font-size: 4.5em;
   font-weight: bold;
   float: inline-start;
-  margin-block-start: -0.22em;
-  margin-block-end: -0.3em;
+  /* margin-block-start: -0.22em; */
+  /* margin-block-end: -0.3em; */
   margin-inline-end: 0.1em;
 }
 
@@ -293,13 +293,29 @@ layout-content.category {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
-}
+  max-inline-size: 80ch;
 
-aside.category {
-  h2:not(:first-of-type) {
-    margin-block-start: 1rem;
+  section {
+    grid-column: 1 / span 2;
+  }
+
+  aside {
+    h2:not(:first-of-type) {
+      margin-block-start: 1rem;
+    }
   }
 }
+
+@media screen and (max-width: 768px) {
+  layout-content.category {
+    grid-template-columns: 1fr;
+
+    section {
+      grid-column: unset;
+    }
+  }
+}
+
 
 /* Utility classes */
 .visually-hidden {
