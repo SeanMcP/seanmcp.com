@@ -11,6 +11,7 @@ tags:
   - Card games
   - Cooperative
 flags:
+  - EVERGREEN
 verse: Proverbs 17:28
 prose: false
 ---
