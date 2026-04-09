@@ -5,6 +5,8 @@ description: An educational chemical-compound-building card game
 date: 2026-04-08T06:43-0400
 tags:
   - Games
+  - Card games
+  - Educational
 flags:
   - EVERGREEN
   - WIP
