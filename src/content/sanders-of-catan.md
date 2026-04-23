@@ -12,6 +12,7 @@ tags:
   - Sanders of Catan
 flags:
   - EVERGREEN
+verse: John 10:10
 ---
 
 ## Improving on perfection
