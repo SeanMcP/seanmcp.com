@@ -58,10 +58,15 @@ rootHead: >-
 rootFoot: >-
     <script type="module" src="/js/keyboard-shortcuts.js"></script>
 ---
+{% assign showDate = true %}
+{% if date == null or flags contains "EVERGREEN" %}
+  {% assign showDate = false %}
+{% endif %}
+
 <main>
   {{ category }}
   <layout-content style="padding-block: 4rem 2rem;">
-    {%- if flags contains "EVERGREEN" -%}{%- else -%}
+    {%- if showDate -%}
       <time datetime="{{ date }}">{{ date | readable_date }}</time>
     {%- endif -%}
     <h1>{{ title }}</h1>
