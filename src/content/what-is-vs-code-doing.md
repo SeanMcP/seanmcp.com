@@ -11,7 +11,7 @@ tags:
   - Lament
 flags:
 verse: Daniel 5:16
-prose: false
+prose: true
 ---
 
 I have been a VS Code user for many years now. It was a soft landing from Atom
@@ -42,8 +42,8 @@ At one point in time VS Code was the undeniable king of cross-platform code
 editors. Then AI took over the engineering world and forks drew some folks away.
 I've enjoyed a lot of the AI-focused features that VS Code has implemented over
 the years – he first few generations of GitHub Copilot were truly magic and
-transformative for my work. But these most recent changes feel like crossing
-the Rubicon. The progress _ad cacatum_ has begun and there is no going back.
+transformative for my work. But these most recent changes feel like crossing the
+Rubicon. The progress _ad cacatum_ has begun and there is no going back.
 
 I'm writing this in exile from Zed. I don't want to be here; I want my editor
 back. But I'm afraid that the writing is on the wall. /Lamentation
