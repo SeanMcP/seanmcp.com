@@ -117,14 +117,16 @@ li ul li ul {
   list-style: circle;
 }
 
-.prose > p:first-of-type:first-letter {
+.prose > p:first-of-type::first-letter {
+  background-color: var(--text);
+  color: var(--bg);
   /* Takes up three lines of text */
   font-size: 4.5em;
   font-weight: bold;
   float: inline-start;
-  /* margin-block-start: -0.22em; */
-  /* margin-block-end: -0.3em; */
-  margin-inline-end: 0.1em;
+  line-height: 1;
+  margin-inline-end: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 h1,
