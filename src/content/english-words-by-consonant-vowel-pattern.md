@@ -66,7 +66,7 @@ have a tool to look up shorter words by their consonant-vowel pattern.
     <form>
         <label for="pattern">Pattern</label>
         <p id="pattern-help">Searching with a capital C or V matches any consonant or vowel, respectively, while lowercase letters are exact matches.<br><br><i>E.g.</i> "CVt" will search for any consonant, any vowel, and "t" to return results like "bit", "cat", and "set".</p>
-        <input aria-describedby="pattern-help" id="pattern" name="pattern" placeholder="Try CVC or CCVCe type="text" />
+        <input aria-describedby="pattern-help" id="pattern" name="pattern" placeholder="Try CVC or CCVCe" type="text" />
         <button>Search</button>
     </form>
     <output></output>
