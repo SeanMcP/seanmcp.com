@@ -52,8 +52,10 @@ into categories. One such grouping is by consonant-vowel patterns, which
 represent words by the letters that they contain.
 
 With consonant-vowel patterns, we can put words like "bun", "cat", and "dip"
-into one bucket as "cvc" words; they are all made up of a consonant, followed by
-a vowel, and ending in a consonant.
+into one bucket as "CVC" words; they are all made up of a consonant, followed by
+a vowel, and ending in a consonant. Other patterns like "CVCe" match on words
+with a consonant, vowel, consonant, and end with the letter "e": "bike", "gate",
+and "were".
 
 I put together
 [a list of all English words sorted by their consonant-vowel pairs](https://github.com/SeanMcP/reading/tree/master/consonant-vowel-patterns).
