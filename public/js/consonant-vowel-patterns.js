@@ -14,7 +14,8 @@ customElements.define(
       this.output.innerHTML = "Loading...";
 
       const usp = new URLSearchParams(location.search);
-      const pattern = usp.get("pattern");
+      const urlPattern = usp.get("pattern");
+      const pattern = this.urlPatternToPattern(urlPattern);
       const filename = this.patternToFilename(pattern);
       this.input.value = pattern || "";
 
@@ -91,6 +92,10 @@ customElements.define(
     }
 
     patternToFilename(pattern) {
+      if (pattern.toLowerCase() === "cvce") {
+        // This is a special case in the data that we want to handle.
+        return "cvce";
+      }
       const filename = pattern.split("").map((char) => {
         const lower = char.toLowerCase();
         if (lower === "v" || lower === "c") {
@@ -103,6 +108,23 @@ customElements.define(
         }
       });
       return filename.join("");
+    }
+
+    urlPatternToPattern(urlPattern) {
+      // For historical reasons, URL patterns used to be all lowercase.
+      // If a URL pattern is all lowercase c's and v's, then we assume
+      // that it's a pattern from the old system and capitalize it.
+      if (urlPattern === "cvce") {
+        // This is a special case in the data that we want to handle.
+        return "CVCe";
+      }
+      const isLowercasePattern = urlPattern
+        .split("")
+        .every((char) => char === "c" || char === "v");
+      if (isLowercasePattern) {
+        return urlPattern.toUpperCase();
+      }
+      return urlPattern;
     }
 
     testWord(word, query) {
