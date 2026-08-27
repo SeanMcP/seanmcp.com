@@ -15,18 +15,26 @@ head: >-
           margin-block: 2rem;
           padding: 1rem;
       }
-      consonant-vowel-patterns :is(form, label) {
-          align-items: center;
-          display: flex;
-          gap: 0.5rem;
+      consonant-vowel-patterns form {
+        display: grid;
+        gap: 0.5rem;
       }
-      consonant-vowel-patterns :is(label, select) {
-          flex: 1;
+      consonant-vowel-patterns label {
+        font-weight: bold;
+      }
+      consonant-vowel-patterns p {
+          font-size: smaller;
+          margin-block: 0;
+      }
+      consonant-vowel-patterns button {
+        justify-self: end;
       }
       consonant-vowel-patterns output {
+        border-block-start: 2px solid var(--off-bg);
           display: grid;
           gap: 0.5rem;
-          margin-block-start: 1rem;
+          margin-block-start: 0.5rem;
+          padding-block-start: 0.5rem;
       }
       consonant-vowel-patterns output:empty {
           display: none;
@@ -54,10 +62,9 @@ have a tool to look up shorter words by their consonant-vowel pattern.
 
 <consonant-vowel-patterns>
     <form>
-        <label>
-            <b>Pattern</b>
-            <select name="pattern"></select>
-        </label>
+        <label for="pattern">Pattern</label>
+        <p id="pattern-help">Searching with a capital C or V matches any consonant or vowel, respectively, while lowercase letters are exact matches.<br><br><i>E.g.</i> "CVt" will search for any consonant, any vowel, and "t" to return results like "bit", "cat", and "set".</p>
+        <input aria-describedby="pattern-help" id="pattern" name="pattern" placeholder="Try CVC or CCVCe type="text" />
         <button>Search</button>
     </form>
     <output></output>
