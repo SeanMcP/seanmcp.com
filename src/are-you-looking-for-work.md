@@ -16,8 +16,8 @@ head: >-
   </style>
 ---
 
-<div class="answer">Nope.</div>
+<div class="answer">Yes!</div>
 
-Thank you for reaching out, but I am happy in my current position. Feel free to
-connect with me on [LinkedIn](https://linkedin.com/in/seanmcp) and check back
-later.
+Thank you for reaching out! I'm not interested in a new opportunity. Feel free
+to [send me an email](mailto:sean@seanmcp.com) or connect with me on
+[LinkedIn](https://linkedin.com/in/seanmcp).
