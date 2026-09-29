@@ -28,8 +28,8 @@ head: >-
   </style>
 ---
 
-My name is Sean McPherson or seanmcp, and I work as a software engineer at Khan
-Academy from Pittsburgh, PA.
+My name is Sean McPherson or seanmcp, and I'm a software engineer from
+Pittsburgh, PA.
 
 This website is a poorly-organized collection of articles that I have written
 over the years about working in tech, RPGs, games, and miscellany. Someday I may
