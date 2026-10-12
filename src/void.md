@@ -9,6 +9,14 @@ head: >-
   <style>content hr { margin-block: 3em; }</style>
 ---
 
+**October 12, 2026** -
+[Brandolini's Law](https://en.wikipedia.org/wiki/Brandolini%27s_law) (censored):
+
+> The amount of energy needed to refute _nonsense_ is an order of magnitude
+> bigger than that needed to produce it.
+
+---
+
 **March 30, 2026** — A little Bash script to rename all files from `.jsx` to
 `.tsx`:
 
