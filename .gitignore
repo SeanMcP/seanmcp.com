@@ -19,3 +19,6 @@ pnpm-debug.log*
 
 # Local Netlify folder
 .netlify
+
+# Search Console exports
+seanmcp.com-Coverage*

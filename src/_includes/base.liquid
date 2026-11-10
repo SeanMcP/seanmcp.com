@@ -27,6 +27,9 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{pageURL}}">
+    {%- if page.url != '/404.html' %}
+    <link rel="canonical" href="{{pageURL}}">
+    {%- endif %}
     <meta name="twitter:card" content="summary">
 
     <link rel="shortcut icon" href="/favicon.png" type="image/png">

@@ -23,7 +23,7 @@ part of Fosstodon was intriguing.
 What I did not realize at the time is that FOSS is its own thing. There was tons
 of discussion about Linux distros and desktop environments that went way over my
 head.
-[I’m a general fan in free and open-source software](/series#trying-linux-2022)
+[I’m a general fan in free and open-source software](/tags/linux/)
 but not big enough.
 
 I’m more interested in the indie-web scene than FOSS, so I’m thinking that the

@@ -47,6 +47,6 @@ name: semantic satiation.
 
 ## [Matthew Wolff Design](https://matthewwolff.com/)
 
-I really like [soccer](/soccer), and I really like logo design. I was pleasantly
+I really like [soccer](/tags/soccer/), and I really like logo design. I was pleasantly
 surprised to learn that almost all of my favorite American soccer logos were
 designed by the same guy: Matthew Wolf.

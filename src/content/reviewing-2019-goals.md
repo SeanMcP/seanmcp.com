@@ -9,7 +9,7 @@ verse: Job 23:13
 ---
 
 To kick-off 2019, I wrote an article in which I
-[set some goals for 2019](./2018-into-2019). I had planned to check in on those
+[set some goals for 2019](/blog/2018-into-2019/). I had planned to check in on those
 goals more frequently:
 
 > I am going to check back on these goals throughout the year and track my

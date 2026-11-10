@@ -27,7 +27,7 @@ and was stuck at the normal speed. Not a good use of my time.
 Since online audio and video are played through native HTML elements, we have
 the ability to customize their behavior with the developer console.
 
-First [open the dev tools with your favorite method](./how-to-open-dev-tools),
+First [open the dev tools with your favorite method](/articles/how-to-open-dev-tools/),
 and click on the "Console" tab. Then enter and run the following script[^1]:
 
 ```js
